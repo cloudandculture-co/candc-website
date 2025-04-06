@@ -1,0 +1,7 @@
+make a responsive website using boostrap 5, the menu bar should be transparent but become dark when the user scrolls, the menu should have home, about, app sections, the menu bar should have a 
+  logo on the top left. The main section under the menu should be a carousel. Underneath that should be a short description of the app and to the right of that an image of the app. Underneath that 
+  should be a shadowed card spanning the entire page with a large quote on the left and a grid to the right with text and icons describing various features of the app. Make the website very 
+  appealing and make use of the following colours YELLOW R: 247 G: 188 B: 0
+  HEX: E5910C , COBALT BLUE: HEX 0D55EA, CERULEAN: 009FEB, BLACK, WHITE and TURQUOISE: 00DAEB, at the bottom put the relevant sections for privacy, terms etc
+
+  Only use stable releases of libraries.

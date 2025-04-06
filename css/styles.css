@@ -1,0 +1,431 @@
+/* Custom Variables */
+:root {
+    --yellow: #E5910C;
+    --cobalt-blue: #0D55EA;
+    --cerulean: #009FEB;
+    --turquoise: #00DAEB;
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-800: #343a40;
+}
+
+/* General Styles */
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    color: var(--gray-800);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.section-title {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--cobalt-blue);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--yellow);
+}
+
+.btn {
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--cobalt-blue);
+    border-color: var(--cobalt-blue);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--cerulean);
+    border-color: var(--cerulean);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-primary {
+    color: var(--cobalt-blue);
+    border-color: var(--cobalt-blue);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--cobalt-blue);
+    border-color: var(--cobalt-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Styles */
+#mainNav {
+    transition: all 0.5s ease;
+    background-color: transparent;
+    padding: 1rem 0;
+}
+
+#mainNav.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 0.5rem 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--white);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--yellow);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover:after,
+.navbar-dark .navbar-nav .active:after {
+    width: 70%;
+}
+
+/* Carousel Section */
+.carousel-section {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 500px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+    filter: brightness(0.6);
+}
+
+.carousel-caption {
+    bottom: 20%;
+    z-index: 10;
+}
+
+.carousel-caption h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* About Section */
+#about {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.app-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.app-image {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 8px solid white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.app-image:hover {
+    transform: translateY(-10px);
+}
+
+.floating-badge {
+    position: absolute;
+    padding: 10px 15px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.badge-users {
+    top: -15px;
+    right: 20px;
+    color: var(--cobalt-blue);
+}
+
+.badge-rating {
+    bottom: 20px;
+    left: -15px;
+    color: var(--yellow);
+}
+
+.badge-users i, .badge-rating i {
+    font-size: 1.2rem;
+}
+
+/* Features Section */
+.features-section {
+    background-color: var(--gray-100);
+    padding: 100px 0;
+}
+
+.features-section .card {
+    border-radius: 15px;
+    border: none;
+    overflow: hidden;
+}
+
+.quote-box {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fa-quote-left {
+    color: var(--yellow);
+    opacity: 0.2;
+    margin-bottom: 1rem;
+}
+
+.blockquote {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.blockquote-footer {
+    color: var(--cobalt-blue);
+    font-weight: 500;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+.feature-item:hover {
+    background-color: rgba(0, 159, 235, 0.05);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.feature-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    font-size: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.feature-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--cobalt-blue), var(--cerulean));
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.feature-item:nth-child(1) .feature-icon::before {
+    background: linear-gradient(135deg, var(--yellow), #FFA41B);
+}
+
+.feature-item:nth-child(2) .feature-icon::before {
+    background: linear-gradient(135deg, var(--cobalt-blue), #3D73DD);
+}
+
+.feature-item:nth-child(3) .feature-icon::before {
+    background: linear-gradient(135deg, var(--cerulean), #26B4FF);
+}
+
+.feature-item:nth-child(4) .feature-icon::before {
+    background: linear-gradient(135deg, var(--turquoise), #4DE5F1);
+}
+
+.feature-item:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.feature-item h4 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--cobalt-blue);
+}
+
+/* Call to Action Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--cobalt-blue), var(--cerulean));
+    color: white;
+    padding: 80px 0;
+}
+
+.cta-section h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.cta-section .btn-primary {
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+}
+
+.cta-section .btn-primary:hover {
+    background-color: #d38509;
+    border-color: #d38509;
+}
+
+.cta-section .btn-outline-primary {
+    color: white;
+    border-color: white;
+}
+
+.cta-section .btn-outline-primary:hover {
+    background-color: white;
+    color: var(--cobalt-blue);
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+}
+
+footer h5 {
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--yellow);
+}
+
+footer .social-icons a {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+footer .social-icons a:hover {
+    transform: translateY(-3px);
+    background-color: var(--cobalt-blue);
+    color: white;
+}
+
+footer hr {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .carousel-caption h1 {
+        font-size: 2.5rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+    
+    .blockquote {
+        font-size: 1.2rem;
+    }
+    
+    .feature-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+    
+    #about, .features-section {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        bottom: 10%;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+    
+    #about, .features-section, .cta-section {
+        padding: 60px 0;
+    }
+    
+    .quote-box {
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+    }
+    
+    .floating-badge {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .badge-users i, .badge-rating i {
+        font-size: 1rem;
+    }
+}
