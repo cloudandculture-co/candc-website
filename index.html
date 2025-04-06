@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Modern app landing page showcasing our innovative application">
-    <meta name="keywords" content="app, landing page, technology, software">
-    <title>App Website | Modern & Innovative Solutions</title>
+    <meta name="description" content="A mobile and web app providing curated cultural content in the form of digital exhibitions, walking tours, podcasts and other media content">
+    <meta name="keywords" content="museum, cultural, exhibitions, walking tours, podcasts, arts, heritage, cultural content">
+    <title>Pocket Museum | Curated Cultural Experiences</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -65,7 +65,7 @@
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <div style="background-color: #E5910C; color: white; padding: 5px 15px; border-radius: 5px; font-weight: 700; letter-spacing: 1px;">AppName</div>
+                <img src="images/logo.png" alt="Pocket Museum Logo" width="237" class="navbar-logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -99,32 +99,26 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="placeholder-image d-block w-100" style="height: 100vh;">
-                        <span>Slide 1 - Add your image here</span>
-                    </div>
+                    <img src="images/slide-1.jpg" class="d-block w-100" alt="Visitors exploring a digital art exhibition">
                     <div class="carousel-caption">
-                        <h1 data-aos="fade-up" data-aos-delay="100">Welcome to Our App</h1>
-                        <p data-aos="fade-up" data-aos-delay="200">Transform your experience with our innovative solution</p>
-                        <button class="btn btn-primary btn-lg rounded-pill" data-aos="fade-up" data-aos-delay="300">Get Started</button>
+                        <h1 data-aos="fade-up" data-aos-delay="100">Explore Culture in Your Pocket</h1>
+                        <p data-aos="fade-up" data-aos-delay="200">Discover curated digital exhibitions, walking tours, and cultural podcasts</p>
+                        <button class="btn btn-primary btn-lg rounded-pill" data-aos="fade-up" data-aos-delay="300">Start Exploring</button>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="placeholder-image d-block w-100" style="height: 100vh;">
-                        <span>Slide 2 - Add your image here</span>
-                    </div>
+                    <img src="images/slide-1.jpg" class="d-block w-100" alt="Person enjoying a museum audio tour">
                     <div class="carousel-caption">
-                        <h1>Powerful Features</h1>
-                        <p>Discover what makes our app special</p>
-                        <button class="btn btn-primary btn-lg rounded-pill">Learn More</button>
+                        <h1>Immersive Experiences</h1>
+                        <p>Engage with culture through interactive tours and captivating storytelling</p>
+                        <button class="btn btn-primary btn-lg rounded-pill">View Exhibitions</button>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="placeholder-image d-block w-100" style="height: 100vh;">
-                        <span>Slide 3 - Add your image here</span>
-                    </div>
+                    <img src="images/slide-3.jpg" class="d-block w-100" alt="Group enjoying a guided cultural tour">
                     <div class="carousel-caption">
-                        <h1>Join Our Community</h1>
-                        <p>Connect with thousands of satisfied users</p>
+                        <h1>Join Our Cultural Community</h1>
+                        <p>Connect with art enthusiasts and cultural institutions around the world</p>
                         <button class="btn btn-primary btn-lg rounded-pill">Sign Up Now</button>
                     </div>
                 </div>
@@ -145,9 +139,12 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
-                    <h2 class="section-title">About Our App</h2>
-                    <p class="lead">Our app is designed to revolutionize how you interact with technology. With intuitive features and seamless integration, we're changing the game.</p>
-                    <p>Experience the future of digital interaction with our cutting-edge application. Designed with user experience at its core, our app provides seamless functionality across all devices, ensuring you stay connected and productive wherever you go.</p>
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="images/pocket-museum-logo.png" alt="Pocket Museum Logo" width="100" class="me-3 logo-img">
+                        <h2 class="section-title mb-0">About Pocket Museum</h2>
+                    </div>
+                    <p class="lead">Pocket Museum brings cultural experiences directly to your device, making art and heritage accessible anytime, anywhere.</p>
+                    <p>Our curated collection of digital exhibitions, audio tours, walking routes, and cultural podcasts connects you with museums, galleries, and cultural sites worldwide. Whether you're at home or exploring a new city, Pocket Museum enhances your cultural journey with expert commentary, immersive storytelling, and beautifully crafted content.</p>
                     <div class="mt-4">
                         <a href="#" class="btn btn-primary rounded-pill me-2">Download Now</a>
                         <a href="#" class="btn btn-outline-primary rounded-pill">Learn More</a>
@@ -155,16 +152,34 @@
                 </div>
                 <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                     <div class="app-image-container">
-                        <div class="placeholder-image app-image img-fluid rounded" style="height: 500px; width: 100%;">
-                            <span>App Screenshot - Add your image here</span>
+                        <div class="app-image-wrapper img-fluid rounded p-4" style="height: 500px; width: 100%; background-color: #f8f9fa; border: 8px solid white; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <img src="images/pocket-museum-logo.png" alt="Pocket Museum Logo" style="max-width: 200px; margin-bottom: 2rem;" class="logo-img">
+                            <div class="app-screens d-flex justify-content-center">
+                                <div class="phone-mockup me-4" style="background-color: #e9ecef; width: 150px; height: 300px; border-radius: 25px; position: relative; overflow: hidden;">
+                                    <div style="background: linear-gradient(135deg, rgba(13, 85, 234, 0.2), rgba(0, 218, 235, 0.2)); height: 100%; padding: 20px; display: flex; flex-direction: column; align-items: center;">
+                                        <div style="width: 50px; height: 50px; border-radius: 10px; background-color: rgba(255,255,255,0.8); margin-bottom: 20px;"></div>
+                                        <div style="width: 100%; height: 20px; border-radius: 4px; background-color: rgba(255,255,255,0.8); margin-bottom: 10px;"></div>
+                                        <div style="width: 100%; height: 20px; border-radius: 4px; background-color: rgba(255,255,255,0.8); margin-bottom: 10px;"></div>
+                                        <div style="width: 100%; height: 20px; border-radius: 4px; background-color: rgba(255,255,255,0.8);"></div>
+                                    </div>
+                                </div>
+                                <div class="phone-mockup" style="background-color: #e9ecef; width: 150px; height: 300px; border-radius: 25px; position: relative; overflow: hidden;">
+                                    <div style="background: linear-gradient(135deg, rgba(229, 145, 12, 0.2), rgba(255, 191, 0, 0.2)); height: 100%; padding: 20px; display: flex; flex-direction: column; align-items: center;">
+                                        <div style="width: 50px; height: 50px; border-radius: 10px; background-color: rgba(255,255,255,0.8); margin-bottom: 20px;"></div>
+                                        <div style="width: 100%; height: 20px; border-radius: 4px; background-color: rgba(255,255,255,0.8); margin-bottom: 10px;"></div>
+                                        <div style="width: 100%; height: 20px; border-radius: 4px; background-color: rgba(255,255,255,0.8); margin-bottom: 10px;"></div>
+                                        <div style="width: 100%; height: 20px; border-radius: 4px; background-color: rgba(255,255,255,0.8);"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="floating-badge badge-users">
                             <i class="fas fa-users"></i>
-                            <span>10k+ Users</span>
+                            <span>50k+ Users</span>
                         </div>
                         <div class="floating-badge badge-rating">
                             <i class="fas fa-star"></i>
-                            <span>4.9 Rating</span>
+                            <span>4.8 Rating</span>
                         </div>
                     </div>
                 </div>
@@ -182,8 +197,8 @@
                             <div class="quote-box">
                                 <i class="fas fa-quote-left display-1 text-primary"></i>
                                 <blockquote class="blockquote">
-                                    <p class="mb-0">The app completely transformed how I manage my daily tasks. I couldn't imagine going back to my old workflow.</p>
-                                    <footer class="blockquote-footer mt-3">Sarah Johnson, <cite title="Source Title">Tech Lead at InnovateCorp</cite></footer>
+                                    <p class="mb-0">Pocket Museum has completely transformed how I experience art and culture. Having expert commentary and curated exhibitions in my pocket has deepened my appreciation for cultural heritage.</p>
+                                    <footer class="blockquote-footer mt-3">Maria Rodriguez, <cite title="Source Title">Art Historian & Museum Visitor</cite></footer>
                                 </blockquote>
                             </div>
                         </div>
@@ -192,31 +207,31 @@
                             <div class="row g-4">
                                 <div class="col-md-6 feature-item" data-aos="fade-up" data-aos-delay="100">
                                     <div class="feature-icon">
-                                        <i class="fas fa-bolt"></i>
+                                        <i class="fas fa-walking"></i>
                                     </div>
-                                    <h4>Lightning Fast</h4>
-                                    <p>Optimized for speed and performance to save you time and boost productivity.</p>
+                                    <h4>Walking Tours</h4>
+                                    <p>GPS-guided routes with fascinating stories about cultural landmarks and hidden gems.</p>
                                 </div>
                                 <div class="col-md-6 feature-item" data-aos="fade-up" data-aos-delay="200">
                                     <div class="feature-icon">
-                                        <i class="fas fa-shield-alt"></i>
+                                        <i class="fas fa-headphones"></i>
                                     </div>
-                                    <h4>Secure</h4>
-                                    <p>Advanced encryption and security protocols to protect your data at all times.</p>
+                                    <h4>Audio Guides</h4>
+                                    <p>Expert narration and immersive soundscapes that bring exhibitions to life.</p>
                                 </div>
                                 <div class="col-md-6 feature-item" data-aos="fade-up" data-aos-delay="300">
                                     <div class="feature-icon">
-                                        <i class="fas fa-mobile-alt"></i>
+                                        <i class="fas fa-podcast"></i>
                                     </div>
-                                    <h4>Mobile-Friendly</h4>
-                                    <p>Access our app anywhere on any device with a responsive interface.</p>
+                                    <h4>Cultural Podcasts</h4>
+                                    <p>Engaging discussions and stories from curators, artists, and cultural experts.</p>
                                 </div>
                                 <div class="col-md-6 feature-item" data-aos="fade-up" data-aos-delay="400">
                                     <div class="feature-icon">
-                                        <i class="fas fa-chart-line"></i>
+                                        <i class="fas fa-vr-cardboard"></i>
                                     </div>
-                                    <h4>Analytics</h4>
-                                    <p>Comprehensive insights and reports to make data-driven decisions.</p>
+                                    <h4>Virtual Exhibitions</h4>
+                                    <p>Digitally curated art and heritage collections with interactive elements.</p>
                                 </div>
                             </div>
                         </div>
@@ -231,8 +246,8 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8" data-aos="fade-up">
-                    <h2>Ready to transform your experience?</h2>
-                    <p class="lead mb-4">Join thousands of satisfied users and start your journey today.</p>
+                    <h2>Unlock Cultural Experiences Anywhere</h2>
+                    <p class="lead mb-4">Join our community of culture lovers and start your digital exploration today.</p>
                     <div class="d-flex justify-content-center gap-3">
                         <a href="#" class="btn btn-lg btn-primary rounded-pill">
                             <i class="fab fa-apple me-2"></i>App Store
@@ -252,7 +267,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4 mb-md-0">
                     <h5>About Us</h5>
-                    <p>We are dedicated to creating innovative solutions that improve your digital life.</p>
+                    <p>We are dedicated to making art and cultural heritage accessible to everyone through digital technology.</p>
                     <div class="social-icons">
                         <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
                         <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
@@ -281,8 +296,8 @@
                 <div class="col-md-3">
                     <h5>Contact</h5>
                     <address>
-                        <p><i class="fas fa-map-marker-alt me-2"></i>123 App Street, Tech City, 10001</p>
-                        <p><i class="fas fa-envelope me-2"></i><a href="mailto:info@appwebsite.com">info@appwebsite.com</a></p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>45 Museum Avenue, Cultural District, 10001</p>
+                        <p><i class="fas fa-envelope me-2"></i><a href="mailto:hello@pocketmuseum.com">hello@pocketmuseum.com</a></p>
                         <p><i class="fas fa-phone me-2"></i><a href="tel:+11234567890">+1 (123) 456-7890</a></p>
                     </address>
                 </div>
@@ -290,7 +305,7 @@
             <hr class="mt-4 mb-4">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <p class="mb-0">© 2025 App Website. All rights reserved.</p>
+                    <p class="mb-0">© 2025 Pocket Museum. All rights reserved.</p>
                 </div>
             </div>
         </div>

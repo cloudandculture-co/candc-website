@@ -155,7 +155,7 @@ window.addEventListener('scroll', function() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
     if (scrollTop < window.innerHeight) {
-        document.querySelectorAll('.carousel-item .placeholder-image').forEach(img => {
+        document.querySelectorAll('.carousel-item img').forEach(img => {
             img.style.transform = 'translateY(' + scrollTop * 0.3 + 'px)';
         });
     }
