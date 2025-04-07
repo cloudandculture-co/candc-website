@@ -406,6 +406,20 @@ footer hr {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Custom Button Styles */
+.btn-cobalt {
+    background-color: var(--cobalt-blue);
+    border-color: var(--cobalt-blue);
+    color: white;
+}
+
+.btn-cobalt:hover, .btn-cobalt:focus {
+    background-color: var(--bright-blue);
+    border-color: var(--bright-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 /* Responsive Adjustments */
 @media (max-width: 992px) {
     .carousel-caption h1 {
