@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A mobile and web app providing curated cultural content in the form of digital exhibitions, walking tours, podcasts and other media content">
+    <meta name="keywords" content="museum, cultural, exhibitions, walking tours, podcasts, arts, heritage, cultural content">
+    <title>About Us | Pocket Museum</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Production Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Placeholder Images Styles -->
+    <style>
+        .placeholder-image {
+            position: relative;
+            background-color: #f8f9fa;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .placeholder-image::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(13, 85, 234, 0.2), rgba(0, 218, 235, 0.2));
+        }
+        
+        .placeholder-image span {
+            position: relative;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 500;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Black Navigation bar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="mainNav" style="background-color: black;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Pocket Museum Logo" width="237" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#app">App</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary btn-sm rounded-pill px-3" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Banner -->
+    <section class="page-header text-white py-5" style="margin-top: 76px; background-color: black;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="display-4 fw-bold">Our Team</h1>
+                    <p class="lead">Meet the visionaries behind Pocket Museum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-4">About Us</h2>
+                    <p class="lead">Cloud and Culture was founded with a clear vision: to make cultural experiences accessible to everyone, anywhere in the world.</p>
+                    <p>Our flagship product, Pocket Museum, brings together technology and culture to create immersive digital experiences that connect people with art, history, and heritage. Based in London, our team combines expertise in technology, museum curation, and storytelling to create engaging cultural content for the digital age.</p>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Leadership</h2>
+                    <p class="lead">The directors behind Cloud and Culture</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Director 1 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="800">
+                    <div class="card border-0 shadow-lg h-100 overflow-hidden">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <div class="h-100" style="min-height: 300px; overflow: hidden;">
+                                    <img src="images/xenia.jpg" alt="Dr. Xenia Gleissner" class="img-fluid h-100 w-100" style="object-fit: cover;">
+                                </div>
+                                <div class="position-absolute top-0 start-0 p-2" style="background-color: rgba(0, 85, 155, 0.8); color: white; border-bottom-right-radius: 8px;">
+                                    <i class="fas fa-award me-1"></i> CEO
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title">Dr. Xenia Gleissner</h3>
+                                    <p class="text-muted mb-3">Co-Founder & CEO</p>
+                                    <p class="card-text">Xenia brings over 15 years of experience in cultural heritage. With a Ph.D. in Islamic Studies from the University of Exeter, she has worked as a consultant senior curator in the MENA and UK before founding Cloud and Culture.</p>
+<!--                                    &lt;!&ndash; Social links commented out-->
+                                    <div class="social-links mt-3">
+                                        <a href="https://uk.linkedin.com/in/xgleissner" target="_blank" class="me-2 text-primary"><i class="fab fa-linkedin"></i></a>
+
+                                    </div>
+<!--                                    &ndash;&gt;-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Director 2 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="card border-0 shadow-lg h-100 overflow-hidden">
+                        <div class="row g-0">
+                            <div class="col-md-4 position-relative">
+                                <div class="h-100" style="min-height: 300px; overflow: hidden;">
+                                    <img src="images/dev.jpeg" alt="Dev Lakhani" class="img-fluid h-100 w-100" style="object-fit: cover;">
+                                </div>
+                                <div class="position-absolute top-0 start-0 p-2" style="background-color: rgba(242, 81, 81, 0.8); color: white; border-bottom-right-radius: 8px;">
+                                    <i class="fas fa-award me-1"></i> CEO
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title">Dev Lakhani</h3>
+                                    <p class="text-muted mb-3">Co-Founder & CEO</p>
+                                    <p class="card-text">Dev has more than two decades of experience in the software, cloud and technology sector. He has worked with a number of bank, retail and travel companies in the past. </p>
+<!--                                    &lt;!&ndash; Social links commented out-->
+                                    <div class="social-links mt-3">
+                                        <a href="https://uk.linkedin.com/in/devlakhani" target="_blank" class="me-2 text-primary"><i class="fab fa-linkedin"></i></a>
+<!--                                        <a href="#" class="me-2 text-primary"><i class="fab fa-github"></i></a>-->
+                                    </div>
+<!--                                    &ndash;&gt;-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-5">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h3 class="h4 mb-4">Our Mission</h3>
+                                    <p>At Cloud and Culture, we believe that cultural experiences should be accessible to everyone, regardless of geographical location, physical ability, or economic means. We're dedicated to breaking down barriers and creating digital pathways to art, history, and cultural heritage.</p>
+                                    <p class="mb-0">Through thoughtful technology and expert curation, we aim to enrich lives, foster understanding, and preserve cultural heritage for future generations.</p>
+                                </div>
+                                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                    <img src="images/logo.png" alt="Pocket Museum Logo" class="img-fluid logo-img" style="max-width: 150px; border: 1px solid #f0f0f0;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Team Section -->
+    <!--
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <h2 class="section-title">Join Our Team</h2>
+                    <p class="lead mb-4">We're always looking for passionate people to help us on our mission</p>
+                    <a href="#" class="btn btn-primary btn-lg rounded-pill px-4">View Open Positions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>About Us</h5>
+                    <p>We are dedicated to making art and cultural heritage accessible to everyone through digital technology.</p>
+                    <!-- Social icons (commented out)
+                    <div class="social-icons">
+                        <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    -->
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#app">App</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5>Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact</h5>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>7 Bell Yard, London, WC2A 2JR</p>
+                        <p><i class="fas fa-envelope me-2"></i><a href="mailto:support@cloudandculture.com">support@cloudandculture.com</a></p>
+                        <p><i class="fas fa-phone me-2"></i><a href="tel:+442071234567">+44 (0)20 7123 4567</a></p>
+                    </address>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="mb-0">© 2025 Cloud and Culture Ltd. All rights reserved.</p>
+                    <p class="small mt-2">Cloud and Culture is a limited company registered in England and Wales. Registered number: 15128080. Registered office: 7 Bell Yard, London, WC2A 2JR.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper (production version) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init();
+        });
+    </script>
+</body>
+</html>
