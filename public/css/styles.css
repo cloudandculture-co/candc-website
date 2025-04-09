@@ -445,6 +445,49 @@ footer hr {
     }
 }
 
+/* Contact Page Styles */
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--blue), var(--bright-blue));
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contact-info {
+    border-left: 4px solid var(--blue);
+    background-color: rgba(0, 85, 155, 0.05);
+    border-radius: 0 15px 15px 0;
+}
+
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Form styling */
+.form-control {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--gray-300);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(0, 85, 155, 0.2);
+    border-color: var(--blue);
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--gray-800);
+}
+
 @media (max-width: 768px) {
     .carousel-caption {
         bottom: 10%;
@@ -470,5 +513,9 @@ footer hr {
     
     .badge-users i, .badge-rating i {
         font-size: 1rem;
+    }
+    
+    .contact-info {
+        margin-bottom: 2rem;
     }
 }
