@@ -8,7 +8,7 @@ const functions = require('@google-cloud/functions-framework');
 const nodemailer = require('nodemailer');
 const axios = require('axios');
 const cors = require('cors')({
-  origin: ['https://cloudandculture.com', 'https://www.cloudandculture.com'],
+  origin: ['https://cloudandculture.co', 'https://www.cloudandculture.co'],
   methods: ['POST']
 });
 
@@ -93,7 +93,7 @@ functions.http('contact-form-handler', (req, res) => {
       // Prepare email content
       const mailOptions = {
         from: process.env.EMAIL_USER,
-        to: process.env.CONTACT_EMAIL || 'support@cloudandculture.com',
+        to: process.env.CONTACT_EMAIL || 'support@cloudandculture.co',
         subject: `Contact Form: ${subject || 'New Message from Website'}`,
         text: `
           Name: ${name}

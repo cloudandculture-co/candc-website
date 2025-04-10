@@ -59,7 +59,7 @@ wrangler publish --env production
 Update the contact form's fetch URL in `contact.html` to point to your Cloudflare Worker endpoint:
 
 ```javascript
-fetch('https://api.cloudandculture.com/contact', {
+fetch('https://api.cloudandculture.co/contact', {
   // ... rest of the fetch configuration
 })
 ```

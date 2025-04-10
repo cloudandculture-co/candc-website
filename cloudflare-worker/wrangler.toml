@@ -7,7 +7,7 @@ compatibility_flags = [ "nodejs_compat" ]
 
 [vars]
 # Public environment variables (not sensitive)
-CONTACT_EMAIL = "support@cloudandculture.com"
+CONTACT_EMAIL = "support@cloudandculture.co"
 
 # For local testing
 [env.dev]
@@ -15,13 +15,25 @@ workers_dev = true
 
 [env.production]
 # Production environment
-route = { pattern = "api.cloudandculture.com/contact", zone_name = "cloudandculture.com" }
+route = { pattern = "form.cloudandculture.co", custom_domain = true }
+
+[[unsafe.bindings]]
+name = "MY_RATE_LIMITER"
+type = "ratelimit"
+namespace_id = "1001"
+
+# 1500 requests - calls to limit() increment this
+simple = { limit = 1500, period = 60 }
 
 # Sensitive environment variables (secrets) - these must be set using Wrangler CLI
 # wrangler secret put EMAIL_USER --env production
 # wrangler secret put TURNSTILE_SECRET_KEY --env production
 
 # Use Cloudflare's Email Workers for mail delivery
-[[env.production.services]]
-binding = "Email"
-type = "email"
+#[[env.production.services]]
+#binding = "Email"
+#type = "email"
+
+# wrangler.toml (wrangler v3.88.0^)
+[observability.logs]
+enabled = false
