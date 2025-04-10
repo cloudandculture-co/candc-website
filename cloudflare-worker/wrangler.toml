@@ -1,0 +1,27 @@
+name = "contact-form-handler"
+main = "worker.js"
+compatibility_date = "2023-04-15"
+
+# Use the latest Workers runtime
+compatibility_flags = [ "nodejs_compat" ]
+
+[vars]
+# Public environment variables (not sensitive)
+CONTACT_EMAIL = "support@cloudandculture.com"
+
+# For local testing
+[env.dev]
+workers_dev = true
+
+[env.production]
+# Production environment
+route = { pattern = "api.cloudandculture.com/contact", zone_name = "cloudandculture.com" }
+
+# Sensitive environment variables (secrets) - these must be set using Wrangler CLI
+# wrangler secret put EMAIL_USER --env production
+# wrangler secret put TURNSTILE_SECRET_KEY --env production
+
+# Use Cloudflare's Email Workers for mail delivery
+[[env.production.services]]
+binding = "Email"
+type = "email"

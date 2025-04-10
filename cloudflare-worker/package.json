@@ -1,0 +1,16 @@
+{
+  "name": "contact-form-handler",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for handling contact form submissions",
+  "main": "worker.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "publish": "wrangler publish",
+    "deploy:prod": "wrangler publish --env production"
+  },
+  "author": "Cloud and Culture Ltd",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
