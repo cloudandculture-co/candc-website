@@ -95,7 +95,6 @@
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -107,18 +106,10 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images/slide-1.jpg" class="d-block w-100" alt="Person enjoying a museum audio tour">
-                    <div class="carousel-caption">
-                        <h1>Immersive Experiences</h1>
-                        <p>Engage with culture through interactive tours and captivating storytelling</p>
-                        <button class="btn btn-primary btn-lg rounded-pill">View Exhibitions</button>
-                    </div>
-                </div>
-                <div class="carousel-item">
                     <img src="images/slide-3.jpg" class="d-block w-100" alt="Group enjoying a guided cultural tour">
                     <div class="carousel-caption">
-                        <h1>Join Our Cultural Community</h1>
-                        <p>Connect with art enthusiasts and cultural institutions from around the world</p>
+                        <h1>Curate Your Story</h1>
+                        <p>Curate your story: Create exhibitions and share your voice with a global cultural community</p>
 <!--                        <button class="btn btn-primary btn-lg rounded-pill">Sign Up Now</button>-->
                     </div>
                 </div>
@@ -319,6 +310,34 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             AOS.init();
+        });
+    </script>
+    
+    <!-- Cookie Notification -->
+    <script src="js/cookie-notification.js"></script>
+    
+    <!-- Cookie Banner (Directly in HTML) -->
+    <div id="cookie-banner" class="cookie-notification show" style="transform: translateY(0);">
+        <div class="container">
+            <div class="cookie-content">
+                <p>We use cookies to enhance your experience on our website. By continuing to use our site, you consent to our use of cookies. 
+                Learn more in our <a href="./docs/Cookie_Policy.txt" target="_blank">Cookie Policy</a> and 
+                <a href="./docs/Cloud%20And%20Culture%20-%20Privacy%20Policy%20-%202025-04-06.pdf" target="_blank">Privacy Policy</a>.</p>
+                <button id="accept-cookies-direct" class="btn btn-primary btn-sm rounded-pill">Accept</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Check if cookies were previously accepted
+        if (localStorage.getItem('cookiesAccepted') === 'true') {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+        
+        // Add event listener to the accept button
+        document.getElementById('accept-cookies-direct').addEventListener('click', function() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
         });
     </script>
 </body>
