@@ -105,8 +105,8 @@
     <section id="contact" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="800">
-                    <div class="contact-info p-4 h-100">
+                <div class="col-lg-8 mx-auto" data-aos="fade-right" data-aos-duration="800">
+                    <div class="contact-info p-4">
                         <h2 class="section-title mb-4">Get In Touch</h2>
                         <p class="lead mb-4">Whether you have questions about Pocket Museum, partnership inquiries, or just want to say hello, we'd love to hear from you.</p>
                         
@@ -136,46 +136,6 @@
                             <h5 class="mb-3">Business Hours</h5>
                             <p>Monday - Friday: 9:00 AM - 5:00 PM GMT<br>
                             Saturday & Sunday: Closed</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
-                    <div class="card border-0 shadow-lg">
-                        <div class="card-body p-4 p-md-5">
-                            <h3 class="card-title text-center mb-4">Send a Message</h3>
-                            
-                            <form id="contactForm">
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
-                                </div>
-                                
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email Address</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your email" required>
-                                </div>
-                                
-                                <div class="mb-3">
-                                    <label for="subject" class="form-label">Subject</label>
-                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
-                                </div>
-                                
-                                <div class="mb-4">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message" required></textarea>
-                                </div>
-                                
-                                <div class="mb-4">
-                                    <div class="cf-turnstile" data-sitekey="0x4AAAAAABHbo48AgypbPtMo" data-callback="turnstileCallback"></div>
-                                </div>
-                                
-                                <div class="mb-3" id="formStatus" style="display: none;"></div>
-                                
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-primary btn-lg rounded-pill px-4" id="submitButton" disabled>Send Message</button>
-                                </div>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -234,9 +194,6 @@
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
-    <!-- Cloudflare Turnstile -->
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    
     <!-- Custom JS -->
     <script src="js/scripts.js"></script>
     
@@ -245,80 +202,33 @@
         document.addEventListener('DOMContentLoaded', function() {
             AOS.init();
         });
-        
-        // Turnstile callback
-        function turnstileCallback(token) {
-            // Enable the submit button when Turnstile verification is complete
-            document.getElementById('submitButton').disabled = false;
+    </script>
+    
+    <!-- Cookie Notification -->
+    <script src="js/cookie-notification.js"></script>
+    
+    <!-- Cookie Banner (Directly in HTML) -->
+    <div id="cookie-banner" class="cookie-notification show" style="transform: translateY(0);">
+        <div class="container">
+            <div class="cookie-content">
+                <p>We use cookies to enhance your experience on our website. By continuing to use our site, you consent to our use of cookies. 
+                Learn more in our <a href="./docs/Cookie_Policy.txt" target="_blank">Cookie Policy</a> and 
+                <a href="./docs/Cloud%20And%20Culture%20-%20Privacy%20Policy%20-%202025-04-06.pdf" target="_blank">Privacy Policy</a>.</p>
+                <button id="accept-cookies-direct" class="btn btn-primary btn-sm rounded-pill">Accept</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Check if cookies were previously accepted
+        if (localStorage.getItem('cookiesAccepted') === 'true') {
+            document.getElementById('cookie-banner').style.display = 'none';
         }
         
-        // Form submission handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const form = this;
-            const formStatus = document.getElementById('formStatus');
-            const submitButton = document.getElementById('submitButton');
-            
-            // Get form data
-            const formData = new FormData(form);
-            const formDataObj = Object.fromEntries(formData);
-            
-            // Get the Cloudflare Turnstile token
-            const turnstileResponse = formData.get('cf-turnstile-response');
-            if (!turnstileResponse) {
-                formStatus.style.display = 'block';
-                formStatus.className = 'mb-3 alert alert-danger';
-                formStatus.textContent = 'Please complete the Cloudflare Turnstile verification.';
-                return;
-            }
-            
-            // Add token to form data
-            formDataObj['cf-turnstile-response'] = turnstileResponse;
-            
-            // Disable submit button and show loading message
-            submitButton.disabled = true;
-            formStatus.style.display = 'block';
-            formStatus.className = 'mb-3 alert alert-info';
-            formStatus.textContent = 'Sending your message...';
-            
-            // Send the form data to the Cloudflare Worker
-            fetch('https://form.cloudandculture.co', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formDataObj)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                // Show success message
-                formStatus.className = 'mb-3 alert alert-success';
-                formStatus.textContent = 'Thank you for your message! We will get back to you soon.';
-                form.reset();
-                
-                // Reset Turnstile widget
-                window.turnstile.reset();
-                submitButton.disabled = true;
-            })
-            .catch(error => {
-                // Show error message
-                formStatus.className = 'mb-3 alert alert-danger';
-                formStatus.textContent = 'Sorry, there was an error sending your message. Please try again later.';
-                console.error('Error:', error);
-                
-                // Reset Turnstile widget
-                window.turnstile.reset();
-            })
-            .finally(() => {
-                // Re-enable submit button
-                submitButton.disabled = false;
-            });
+        // Add event listener to the accept button
+        document.getElementById('accept-cookies-direct').addEventListener('click', function() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
         });
     </script>
 </body>

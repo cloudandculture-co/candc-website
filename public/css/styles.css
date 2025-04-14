@@ -519,3 +519,52 @@ footer hr {
         margin-bottom: 2rem;
     }
 }
+
+/* Cookie Notification Styles */
+.cookie-notification {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(33, 37, 41, 0.95);
+    color: white;
+    padding: 15px 0;
+    z-index: 9999;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.cookie-notification.show {
+    transform: translateY(0);
+}
+
+.cookie-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cookie-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.cookie-content a {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+.cookie-content a:hover {
+    color: var(--bright-blue);
+}
+
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+}
