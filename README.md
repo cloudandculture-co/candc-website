@@ -57,3 +57,5 @@ To modify colors, edit the `:root` variables in `css/styles.css`.
 ## License
 
 This project is open source under the MIT license.
+
+firebase deploy --only hosting
