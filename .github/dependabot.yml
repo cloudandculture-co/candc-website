@@ -1,0 +1,68 @@
+version: 2
+updates:
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "@cloudandculture/devops"
+    labels:
+      - "dependencies"
+      - "github-actions"
+
+  # Docker
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "@cloudandculture/devops"
+    labels:
+      - "dependencies"
+      - "docker"
+
+  # Terraform
+  - package-ecosystem: "terraform"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "@cloudandculture/devops"
+    labels:
+      - "dependencies"
+      - "terraform"
+
+  # npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "@cloudandculture/frontend"
+    labels:
+      - "dependencies"
+      - "javascript"
+
+  # pip
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "@cloudandculture/backend"
+    labels:
+      - "dependencies"
+      - "python"
+
+  # Go modules
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "@cloudandculture/backend"
+    labels:
+      - "dependencies"
+      - "go"
