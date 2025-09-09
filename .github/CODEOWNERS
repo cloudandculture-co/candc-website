@@ -1,0 +1,28 @@
+# Global owners
+* @cloudandculture/developers
+
+# Frontend specific
+*.tsx @cloudandculture/frontend
+*.jsx @cloudandculture/frontend
+*.css @cloudandculture/frontend
+*.scss @cloudandculture/frontend
+
+# Backend specific
+*.go @cloudandculture/backend
+*.py @cloudandculture/backend
+*.java @cloudandculture/backend
+
+# Infrastructure
+terraform/ @cloudandculture/devops
+*.tf @cloudandculture/devops
+k8s/ @cloudandculture/platform
+kubernetes/ @cloudandculture/platform
+
+# CI/CD
+.github/ @cloudandculture/devops
+.gitlab-ci.yml @cloudandculture/devops
+Jenkinsfile @cloudandculture/devops
+
+# Documentation
+docs/ @cloudandculture/technical-writers
+*.md @cloudandculture/technical-writers
