@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support Pocket Museum - Download, use, subscribe, and invest in the future of cultural experiences">
+    <meta name="keywords" content="support, pocket museum, download, subscribe, invest, cultural app">
+    <title>Support Us | Pocket Museum</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Production Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Support page specific styles -->
+    <style>
+        .support-step {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .support-step.step-1 {
+            border-color: var(--blue);
+        }
+
+        .support-step.step-2 {
+            border-color: var(--bright-blue);
+        }
+
+        .support-step.step-3 {
+            border-color: var(--turquoise);
+        }
+
+        .support-step.step-4 {
+            border-color: var(--bright-red);
+        }
+
+        .step-number {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .step-1 .step-number {
+            background-color: var(--blue);
+        }
+
+        .step-2 .step-number {
+            background-color: var(--bright-blue);
+        }
+
+        .step-3 .step-number {
+            background-color: var(--turquoise);
+        }
+
+        .step-4 .step-number {
+            background-color: var(--bright-red);
+        }
+
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step-1 .step-icon {
+            background: linear-gradient(135deg, var(--blue), var(--bright-blue));
+        }
+
+        .step-2 .step-icon {
+            background: linear-gradient(135deg, var(--bright-blue), var(--turquoise));
+        }
+
+        .step-3 .step-icon {
+            background: linear-gradient(135deg, var(--turquoise), #4DE5F1);
+        }
+
+        .step-4 .step-icon {
+            background: linear-gradient(135deg, var(--bright-red), var(--yellow));
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin: 0 5px;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            color: white;
+        }
+
+        .facebook { background-color: #1877F2; }
+        .twitter { background-color: #1DA1F2; }
+        .instagram { background: linear-gradient(45deg, #F56040, #E1306C, #C13584, #833AB4); }
+        .linkedin { background-color: #0A66C2; }
+        .youtube { background-color: #FF0000; }
+        .tiktok { background-color: #000000; }
+
+        .support-header {
+            background: linear-gradient(135deg, var(--blue), var(--bright-blue));
+            color: white;
+            padding: 120px 0 80px;
+            margin-top: 76px;
+        }
+
+        .support-steps {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        }
+
+        .pricing-highlight {
+            background: linear-gradient(135deg, rgba(0, 218, 235, 0.1), rgba(86, 207, 226, 0.1));
+            border: 2px solid var(--turquoise);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .investment-cta {
+            background: linear-gradient(135deg, var(--bright-red), var(--yellow));
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="mainNav" style="background-color: black;">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Pocket Museum Logo" width="237" class="navbar-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="support.html">Support Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#app">App</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header Section -->
+<section class="support-header text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                <h1 class="display-4 fw-bold mb-4">Support Pocket Museum</h1>
+                <p class="lead">Join us on our journey to make cultural experiences accessible to everyone. Here's how you can support our mission:</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Support Steps Section -->
+<section class="support-steps">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- Step 1: Download & Use -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="support-step step-1 p-4 h-100">
+                    <div class="step-number">1</div>
+                    <div class="text-center">
+                        <div class="step-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Download & Experience</h3>
+                        <p class="mb-4">Start your cultural journey by downloading Pocket Museum from the app stores or accessing it via our website. Use the app and share your feedback with us.</p>
+
+                        <div class="d-flex justify-content-center gap-3 mb-3">
+                            <div class="btn btn-lg btn-primary rounded-pill">
+                                <i class="fab fa-apple me-2"></i>Coming Soon
+                            </div>
+                            <div class="btn btn-lg btn-cobalt rounded-pill">
+                                <i class="fab fa-google-play me-2"></i>Coming Soon
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <div class="btn btn-outline-primary rounded-pill">
+                                <i class="fas fa-globe me-2"></i>Web App Coming Soon
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Follow & Subscribe -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="support-step step-2 p-4 h-100">
+                    <div class="step-number">2</div>
+                    <div class="text-center">
+                        <div class="step-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Follow & Connect</h3>
+                        <p class="mb-4">Stay connected with our community by following us on social media. Get updates on new exhibitions, walking tours, and cultural content.</p>
+
+                        <div class="social-links d-flex justify-content-center flex-wrap mb-3">
+                            <a href="#" class="social-link facebook" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link twitter" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link linkedin" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link youtube" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="social-link tiktok" target="_blank">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+
+                        <p class="small text-muted">Social links coming soon - follow us for cultural insights and app updates!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Subscribe to Supporter Plan -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="support-step step-3 p-4 h-100">
+                    <div class="step-number">3</div>
+                    <div class="text-center">
+                        <div class="step-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Become a Supporter</h3>
+                        <p class="mb-3">Subscribe to our Supporter Plan and get premium access to exclusive content, early releases, and special features.</p>
+
+                        <div class="pricing-highlight">
+                            <h4 class="text-primary mb-2">Supporter Plan</h4>
+                            <div class="mb-2">
+                                <span class="h2 text-decoration-line-through text-muted">£9.99</span>
+                                <span class="h2 text-primary ms-2">£4.99</span>
+                                <span class="text-muted">/month</span>
+                            </div>
+                            <p class="small mb-3"><strong>50% off for the first year!</strong></p>
+                            <ul class="list-unstyled text-start small">
+                                <li><i class="fas fa-check text-success me-2"></i>Unlimited access to all exhibitions</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Premium walking tours with GPS</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Exclusive cultural podcasts</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Early access to new content</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Offline downloads</li>
+                            </ul>
+                        </div>
+
+                        <div class="btn btn-primary btn-lg rounded-pill">
+                            Subscribe Coming Soon
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Invest -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="support-step step-4 p-4 h-100">
+                    <div class="step-number">4</div>
+                    <div class="text-center">
+                        <div class="step-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Invest in Our Future</h3>
+                        <p class="mb-4">Join our Angel investment round and become part of the Cultural revolution. SEIS pre-approved for UK tax benefits.</p>
+
+                        <div class="investment-cta">
+                            <h4 class="mb-3">Angel Investment Round</h4>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="fas fa-check me-2"></i>SEIS pre-approved</li>
+                                <li><i class="fas fa-check me-2"></i>Tax benefits for UK investors</li>
+                                <li><i class="fas fa-check me-2"></i>Be part of the cultural tech revolution</li>
+                                <li><i class="fas fa-check me-2"></i>Support democratising cultural access</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-light btn-lg rounded-pill">
+                                Learn More About Investing
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section text-center py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8" data-aos="fade-up">
+                <h2 class="mb-4">Ready to Support Cultural Innovation?</h2>
+                <p class="lead mb-4">Every step of support helps us build a more accessible cultural world. Start your journey with us today.</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="contact.html" class="btn btn-lg btn-light rounded-pill">
+                        Get In Touch
+                    </a>
+                    <a href="about.html" class="btn btn-lg btn-outline-light rounded-pill">
+                        Learn More About Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5>About Us</h5>
+                <p>We are dedicated to making art and cultural heritage accessible to everyone through digital technology.</p>
+            </div>
+            <div class="col-md-2 mb-4 mb-md-0">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="support.html">Support Us</a></li>
+                    <li><a href="index.html#app">App</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4 mb-md-0">
+                <h5>Legal</h5>
+                <ul class="list-unstyled">
+                    <li><a target="_blank" href="./docs/Cloud%20And%20Culture%20-%20Privacy%20Policy%20-%202025-04-06.pdf">Privacy Policy</a></li>
+                    <li><a target="_blank" href="./docs/Terms%20and%20Conditions%20-%205th%20April%202025%20.pdf">Terms of Service</a></li>
+                    <li><a target="_blank" href="./docs/Cookie%20Policy.txt">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Contact</h5>
+                <address>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>7 Bell Yard, London, WC2A 2JR</p>
+                    <p><i class="fas fa-envelope me-2"></i><a href="mailto:support@cloudandculture.co">support@cloudandculture.co</a></p>
+                    <p><i class="fas fa-phone me-2"></i><a href="tel:+447907223158">+44(0)7921 815772</a></p>
+                    <p><i class="fas fa-building me-2"></i><a href="https://find-and-update.company-information.service.gov.uk/company/15128080" target="_blank">Companies House Record</a></p>
+                </address>
+            </div>
+        </div>
+        <hr class="mt-4 mb-4">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="mb-0">© 2025 Cloud and Culture. All rights reserved.</p>
+                <p class="small mt-2">Cloud and Culture is a limited company registered in England and Wales. Registered number: 15128080. Registered office: 7 Bell Yard, London, WC2A 2JR.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap 5 JS Bundle with Popper (production version) -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- AOS Animation Library -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Custom JS -->
+<script src="js/scripts.js"></script>
+
+<!-- Initialize AOS -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init();
+    });
+</script>
+
+<!-- Cookie Notification -->
+<script src="js/cookie-notification.js"></script>
+
+<!-- Cookie Banner (Directly in HTML) -->
+<div id="cookie-banner" class="cookie-notification show" style="transform: translateY(0);">
+    <div class="container">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience on our website. By continuing to use our site, you consent to our use of cookies.
+                Learn more in our <a href="./docs/Cookie_Policy.txt" target="_blank">Cookie Policy</a> and
+                <a href="./docs/Cloud%20And%20Culture%20-%20Privacy%20Policy%20-%202025-04-06.pdf" target="_blank">Privacy Policy</a>.</p>
+            <button id="accept-cookies-direct" class="btn btn-primary btn-sm rounded-pill">Accept</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Check if cookies were previously accepted
+    if (localStorage.getItem('cookiesAccepted') === 'true') {
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    // Add event listener to the accept button
+    document.getElementById('accept-cookies-direct').addEventListener('click', function() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        document.getElementById('cookie-banner').style.display = 'none';
+    });
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"f8dc3ba4538f402e9a39c31260f9e56f","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>a
