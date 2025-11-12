@@ -1,0 +1,87 @@
+{
+  "version": "1.0",
+  "description": "Module metadata and build configuration",
+  "default_settings": {
+    "java_version": "21",
+    "gradle_version": "8.1.1",
+    "default_version": "2.6.0-SNAPSHOT",
+    "artifact_registry": "europe-west2-maven.pkg.dev/cac-devops-central-project/devops-java-repo",
+    "build_timeout_minutes": 30,
+    "test_timeout_minutes": 20
+  },
+  "repository_urls": {
+    "parent": "https://github.com/cloudandculture-co/parent",
+    "datamodel-api": "https://github.com/cloudandculture-co/datamodel-api",
+    "secrets-service": "https://github.com/cloudandculture-co/secrets-service",
+    "logandtrace": "https://github.com/cloudandculture-co/logandtrace",
+    "rest-api": "https://github.com/cloudandculture-co/rest-api",
+    "serde-service": "https://github.com/cloudandculture-co/serde-service",
+    "parent-database-model": "https://github.com/cloudandculture-co/parent-database-model",
+    "configuration": "https://github.com/cloudandculture-co/configuration",
+    "user-service": "https://github.com/cloudandculture-co/user-service",
+    "database-service": "https://github.com/cloudandculture-co/database-service",
+    "ai": "https://github.com/cloudandculture-co/ai",
+    "rest-service": "https://github.com/cloudandculture-co/rest-service",
+    "user-controllers": "https://github.com/cloudandculture-co/user-controller",
+    "backend-data-model": "https://github.com/cloudandculture-co/gimmeback-backend-data-model",
+    "test-framework": "https://github.com/cloudandculture-co/test-framework",
+    "auth-service": "https://github.com/cloudandculture-co/auth-service",
+    "entrypoint": "https://github.com/cloudandculture-co/entrypoint",
+    "mail-service": "https://github.com/cloudandculture-co/mail-service",
+    "tools": "https://github.com/cloudandculture-co/tools",
+    "billing-service": "https://github.com/cloudandculture-co/billing-service",
+    "jooby-api": "https://github.com/cloudandculture-co/jooby-api"
+  },
+  "module_configs": {
+    "datamodel-api": {
+      "build_priority": "high",
+      "test_required": true,
+      "publish_required": true,
+      "has_dependents": true
+    },
+    "secrets-service": {
+      "build_priority": "high",
+      "test_required": true,
+      "publish_required": true,
+      "has_dependents": true,
+      "security_scan": true
+    },
+    "configuration": {
+      "build_priority": "high",
+      "test_required": true,
+      "publish_required": true,
+      "has_dependents": true
+    },
+    "database-service": {
+      "build_priority": "medium",
+      "test_required": true,
+      "publish_required": true,
+      "has_dependents": true,
+      "integration_tests": true
+    },
+    "rest-service": {
+      "build_priority": "medium",
+      "test_required": true,
+      "publish_required": true,
+      "has_dependents": true,
+      "integration_tests": true
+    },
+    "test-framework": {
+      "build_priority": "low",
+      "test_required": true,
+      "publish_required": true,
+      "has_dependents": false
+    }
+  },
+  "build_order_notes": {
+    "stage_1": "Foundation modules with no dependencies - can build in parallel",
+    "stage_2": "Core services that depend only on foundation - can build in parallel",
+    "stage_3": "Configuration layer - single dependency",
+    "stage_4": "User service - depends on configuration",
+    "stage_5": "Database and AI services - can build in parallel",
+    "stage_6": "REST service - depends on many layers",
+    "stage_7": "Application controllers and data models - can build in parallel",
+    "stage_8": "Test framework - depends on almost everything",
+    "stage_9": "Standalone services - no dependencies, can build anytime"
+  }
+}
