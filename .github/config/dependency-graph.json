@@ -1,0 +1,291 @@
+{
+  "version": "1.0",
+  "generated": "2025-11-12",
+  "description": "Dependency graph for cloudandculture-co Java modules",
+  "modules": {
+    "parent": {
+      "path": "parent",
+      "group": "co.cloudandculture",
+      "version": "1.6.0",
+      "dependencies": [],
+      "dependents": []
+    },
+    "datamodel-api": {
+      "path": "datamodel-api",
+      "group": "co.cloudandculture.datamodel",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": [],
+      "dependents": [
+        "rest-api",
+        "serde-service",
+        "parent-database-model",
+        "configuration",
+        "user-service",
+        "database-service",
+        "rest-service",
+        "user-controllers",
+        "backend-data-model",
+        "test-framework"
+      ]
+    },
+    "secrets-service": {
+      "path": "secrets-service",
+      "group": "co.cloudandculture.secrets",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": [],
+      "dependents": [
+        "configuration",
+        "user-service",
+        "database-service",
+        "rest-service",
+        "user-controllers",
+        "test-framework"
+      ]
+    },
+    "logandtrace": {
+      "path": "logandtrace",
+      "group": "co.cloudandculture.logandtrace",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": [],
+      "dependents": [
+        "database-service",
+        "rest-service"
+      ]
+    },
+    "rest-api": {
+      "path": "rest-api",
+      "group": "co.cloudandculture.restapi",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": ["datamodel-api"],
+      "dependents": [
+        "backend-data-model",
+        "database-service",
+        "rest-service",
+        "user-controllers",
+        "test-framework",
+        "ai"
+      ]
+    },
+    "serde-service": {
+      "path": "serde-service",
+      "group": "co.cloudandculture.serde",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": ["datamodel-api"],
+      "dependents": [
+        "configuration",
+        "database-service",
+        "rest-service",
+        "user-controllers",
+        "test-framework",
+        "ai"
+      ]
+    },
+    "parent-database-model": {
+      "path": "parent-database-model",
+      "group": "co.cloudandculture",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": ["datamodel-api"],
+      "dependents": []
+    },
+    "configuration": {
+      "path": "configuration",
+      "group": "co.cloudandculture.configuration",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": ["secrets-service", "serde-service"],
+      "dependents": [
+        "user-service",
+        "database-service",
+        "rest-service",
+        "user-controllers",
+        "test-framework",
+        "ai"
+      ]
+    },
+    "user-service": {
+      "path": "user-service",
+      "group": "co.cloudandculture.auth",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": ["configuration", "datamodel-api", "secrets-service"],
+      "dependents": [
+        "rest-service",
+        "user-controllers",
+        "test-framework"
+      ]
+    },
+    "database-service": {
+      "path": "database-service",
+      "group": "co.cloudandculture.database",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": [
+        "datamodel-api",
+        "serde-service",
+        "rest-api",
+        "configuration",
+        "secrets-service",
+        "logandtrace"
+      ],
+      "dependents": [
+        "rest-service",
+        "user-controllers",
+        "test-framework"
+      ]
+    },
+    "ai": {
+      "path": "ai",
+      "group": "co.cloudandculture",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": ["serde-service", "configuration", "rest-api"],
+      "dependents": []
+    },
+    "rest-service": {
+      "path": "rest-service",
+      "group": "co.cloudandculture.rest",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": [
+        "datamodel-api",
+        "configuration",
+        "database-service",
+        "rest-api",
+        "logandtrace",
+        "secrets-service",
+        "user-service",
+        "serde-service"
+      ],
+      "dependents": [
+        "user-controllers",
+        "test-framework"
+      ]
+    },
+    "user-controllers": {
+      "path": "user-controllers",
+      "group": "co.cloudandculture",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": [
+        "datamodel-api",
+        "database-service",
+        "user-service",
+        "rest-api",
+        "rest-service",
+        "secrets-service",
+        "serde-service",
+        "configuration"
+      ],
+      "dependents": [
+        "test-framework"
+      ]
+    },
+    "backend-data-model": {
+      "path": "backend-data-model",
+      "group": "co.cloudandculture.gimmeback",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": ["rest-api", "datamodel-api"],
+      "dependents": []
+    },
+    "test-framework": {
+      "path": "test-framework",
+      "group": "co.cloudandculture.test",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": [
+        "secrets-service",
+        "configuration",
+        "datamodel-api",
+        "database-service",
+        "user-service",
+        "rest-api",
+        "rest-service",
+        "serde-service",
+        "user-controllers"
+      ],
+      "dependents": []
+    },
+    "auth-service": {
+      "path": "auth-service",
+      "group": "co.cloudandculture",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": [],
+      "dependents": []
+    },
+    "entrypoint": {
+      "path": "entrypoint",
+      "group": "co.cloudandculture",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": [],
+      "dependents": []
+    },
+    "mail-service": {
+      "path": "mail-service",
+      "group": "co.cloudandculture",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": [],
+      "dependents": []
+    },
+    "tools": {
+      "path": "tools",
+      "group": "co.cloudandculture",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": [],
+      "dependents": []
+    },
+    "billing-service": {
+      "path": "billing-service",
+      "group": "co.cloudandculture",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": [],
+      "dependents": []
+    },
+    "jooby-api": {
+      "path": "jooby-api",
+      "group": "co.cloudandculture.gimmeback.server.jooby",
+      "version": "2.6.0-SNAPSHOT",
+      "dependencies": [],
+      "dependents": []
+    }
+  },
+  "build_stages": [
+    {
+      "stage": 1,
+      "description": "Foundation layer - no internal dependencies",
+      "modules": ["parent", "datamodel-api", "secrets-service", "logandtrace"]
+    },
+    {
+      "stage": 2,
+      "description": "Core services - depend on foundation",
+      "modules": ["rest-api", "serde-service", "parent-database-model"]
+    },
+    {
+      "stage": 3,
+      "description": "Configuration layer",
+      "modules": ["configuration"]
+    },
+    {
+      "stage": 4,
+      "description": "Business logic - user service",
+      "modules": ["user-service"]
+    },
+    {
+      "stage": 5,
+      "description": "Business logic - database and AI",
+      "modules": ["database-service", "ai"]
+    },
+    {
+      "stage": 6,
+      "description": "REST service layer",
+      "modules": ["rest-service"]
+    },
+    {
+      "stage": 7,
+      "description": "Application layer",
+      "modules": ["user-controllers", "backend-data-model"]
+    },
+    {
+      "stage": 8,
+      "description": "Testing framework",
+      "modules": ["test-framework"]
+    },
+    {
+      "stage": 9,
+      "description": "Standalone services - no dependencies",
+      "modules": ["auth-service", "entrypoint", "mail-service", "tools", "billing-service", "jooby-api"]
+    }
+  ]
+}
