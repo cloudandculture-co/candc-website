@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+        @@include('./partials/head-includes.html')
+        <!-- Main CSS -->
+        <link href="assets/css/theme.min.css" rel="stylesheet">
+
+        <title>Assan 4</title>
+    </head>
+
+    <body>
+        @@include('./partials/preloader.html')
+        <!--Header Start-->
+        <header class="z-fixed header-transparent header-absolute-top pt-lg-3">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container position-relative">
+                    <!--:Logo:-->
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo/logo.svg" alt="" class="width-10x navbar-brand-light mb-5">
+                        <img src="assets/img/logo/logo-white.svg" alt="" class="width-10x navbar-brand-dark mb-5">
+                    </a>
+
+                    <div class="d-flex align-items-center navbar-no-collapse-items order-lg-last">
+                        <button class="navbar-toggler order-last" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                                <i></i>
+                            </span>
+                        </button>
+                        <div class="nav-item me-3 me-lg-0">
+                            <a href="#" class="btn btn-secondary btn-sm">Purchase</a>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="mainNavbarTheme">
+                        @@include('./partials/headers/default-navbar-items.html',{"page": "pages"})
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--Main content-->
+        <main>
+            <!--page-hero-->
+            <section class="position-relative">
+                <div class="bg-pattern text-primary text-opacity-50 opacity-25 w-100 h-100 start-0 top-0 position-absolute"></div>
+                <div class="bg-gradientwhite flip-y w-50 h-100 start-50 top-0 translate-middle-x position-absolute"></div>
+                <div class="container pt-11 pt-lg-14 pb-9 pb-lg-11 position-relative z-1">
+                    <div class="row align-items-center justify-content-center">
+                        <div class=" col-xl-4 col-lg-5 col-md-6 col-sm-8 z-2">
+
+                            <h2 class="mb-1 display-6">
+                                Hello!
+                            </h2>
+                            <p class="mb-4 text-body-secondary">
+                                To get started, Please signup with details...
+                            </p>
+                            <div class="position-relative">
+                                <div>
+                                    <form class="needs-validation" novalidate>
+
+                                        <!--input-with-icon-->
+                                        <div class="input-icon-group mb-3">
+                                            <span class="input-icon">
+                                              <i class="bi ib-person"></i>
+                                            </span>
+                                            <input type="text" class="form-control" required id="signUpName" autofocus
+                                                placeholder="Your full name">
+                                        </div>
+
+                                        <!--input-with-icon-->
+                                        <div class="input-icon-group mb-3">
+                                            <span class="input-icon">
+                                                <i class="bi bi-envelope"></i>
+                                            </span>
+                                            </span>
+                                            <input type="email" class="form-control" required id="signUpMail"
+                                                placeholder="Your email address">
+                                        </div>
+                                        <!--input-with-icon-->
+                                        <div class="input-icon-group mb-3">
+                                            <span class="input-icon">
+                                                <i class="bi bi-unlock"></i>
+                                            </span>
+                                            </span>
+                                            <input type="password" class="form-control" required id="signUpPassword"
+                                                placeholder="Enter password">
+                                        </div>
+                                        <!--input-with-icon-->
+                                        <div class="input-icon-group mb-3">
+                                            <span class="input-icon">
+                                                <i class="bi bi-unlock"></i>
+                                            </span>
+                                            </span>
+                                            <input type="password" class="form-control" required id="signUpConfirmPassword"
+                                                placeholder="Confirm password">
+                                        </div>
+                                        <!--Checkbox-->
+                                        <div class="mb-3 d-flex justify-content-between">
+                                            <div class="form-check">
+                                                <input class="form-check-input" required type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label small text-body-secondary" for="flexCheckDefault">
+                                                    Agree to <a href="#!" class="fw-semibold link-decoration">Terms & conditions</a>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-grid">
+                                            <button class="btn btn-primary" type="submit">
+                                                Sign Up
+                                            </button>
+                                        </div>
+                                    </form>
+
+                                    <!---->
+                                    <p class="pt-3 small text-body-tertiary">
+                                        Already have an account? <a href="page-account-signin.html"
+                                            class="ms-2 fw-semibold link-underline">Sign in</a>
+                                    </p>
+                                    <!--Divider-->
+                                    <div class="d-flex align-items-center py-3">
+                                        <span class="flex-grow-1 border-bottom pt-1"></span>
+                                        <span
+                                            class="d-inline-flex flex-center mx-1 lh-1 width-2x height-2x rounded-circle bg-body text-mono">or</span>
+                                        <span class="flex-grow-1 border-bottom pt-1"></span>
+                                    </div>
+                                    <div class="d-grid">
+                                        <a href="#!"
+                                            class="d-flex hover-lift btn-secondary mb-2 btn position-relative flex-center">
+                                            <!--Main Icon-->
+                                            <div class="position-relative d-flex align-items-center">
+                                                <img src="assets/img/brands/google.svg" alt="" class="width-2x me-2">
+                                                <span>sign up with google</span>
+                                            </div>
+                                        </a>
+                                        <a href="#!"
+                                            class="d-flex hover-lift btn-secondary btn position-relative flex-center">
+                                            <!--Main Icon-->
+                                            <div class="position-relative d-flex align-items-center">
+                                                <img src="assets/img/brands/facebook.svg" alt="" class="width-2x me-2">
+                                                <span>sign up with facebook</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        
+        @@include('./partials/footers/footer-1.html')
+
+        <!-- begin Back to Top button -->
+        <a href="#" class="toTop"><svg class="progress-circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="0, 251.2"></circle>
+</svg>
+<i class="bi bi-chevron-up fs-5"></i>
+        </a>
+        <!-- scripts -->
+        <script src="assets/js/theme.bundle.min.js"></script>
+    </body>
+
+</html>

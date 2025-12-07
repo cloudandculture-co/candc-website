@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assan Tailwindcss Admin</title>
+
+  @@include('./partials/head-includes.html')
+</head>
+
+<body
+  class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+  @@include('./partials/app-preloader.html')
+
+  @@include('./partials/sidebar.html',{"page": "ui-components","components_collapse":
+  "show","component_collapse_active": "active"})
+
+  <main class="relative flex flex-col lg:ms-64">
+    @@include('./partials/header-default.html')
+    <!--:Page Header:-->
+    <div class="px-4 lg:px-6 xl:px-12 py-4">
+      <div class="flex flex-wrap items-center">
+        <div class="flex-grow">
+          <h4 class="text-2xl font-semibold">Collapse</h4>
+          <p class="text-sm opacity-60">Bootstrap js required!</p>
+        </div>
+        <div class="shrink-0">
+          <!--:Breadcrumb:-->
+          <nav aria-label="breadcrumb">
+            <ol class="flex items-center">
+              <li class="breadcrumb-item"><a href="index.html"
+                  class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+              </li>
+               <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+              <li class="breadcrumb-item active"><a
+                  class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                  href="ui-component-alerts.html">Components</a></li>
+               <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+              <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Collapse
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="content px-4 lg:px-6 xl:px-12">
+      <div class="grid grid-cols-1 gap-4 mb-4">
+        <div>
+          <p class="mb-2">Collapse Example Group</p>
+          <!--:Card stats:-->
+          <div class="accordion space-y-4" id="accordionExampleGroup">
+            <!--:Collapse item:-->
+            <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card">
+              <!--:Collapse button:-->
+              <div role="button" class="flex p-4 items-center justify-between" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <h4 class="text-lg font-semibold truncate pr-3">Collapse item #1</h4>
+                <!--:Collapse arrow:-->
+                <span class="collapse-arrow">
+                  <span class="icon-[tabler--chevron-up] text-lg"></span>
+                </span>
+              </div>
+              <!--:Collapse content:-->
+              <div id="collapseOne" class="collapse show" data-bs-parent="#accordionExampleGroup">
+                <div class="pt-0 p-4">
+                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
+                  plugin adds the appropriate classes that we use to style each element. These classes control the
+                  overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
+                  can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <!--:Collapse item:-->
+            <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card">
+              <div role="button" class="flex p-4 items-center justify-between collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                aria-controls="collapseTwo">
+                <h4 class="text-lg font-semibold truncate pr-3">Collapse item #2</h4>
+                <!--:Collapse arrow:-->
+                <span class="collapse-arrow">
+                  <span class="icon-[tabler--chevron-up] text-lg"></span>
+                </span>
+              </div>
+              <div id="collapseTwo" class="collapse" data-bs-parent="#accordionExampleGroup">
+                <div class="pt-0 p-4">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
+                  plugin adds the appropriate classes that we use to style each element. These classes control the
+                  overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
+                  can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <!--:Collapse item:-->
+            <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card">
+              <div role="button" class="flex p-4 items-center justify-between collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                aria-controls="collapseThree">
+                <h4 class="text-lg font-semibold truncate pr-3">Collapse item #3</h4>
+                <!--:Collapse arrow:-->
+                <span class="collapse-arrow">
+                  <span class="icon-[tabler--chevron-up] text-lg"></span>
+                </span>
+              </div>
+              <div id="collapseThree" class="collapse" data-bs-parent="#accordionExampleGroup">
+                <div class="pt-0 p-4">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                  plugin adds the appropriate classes that we use to style each element. These classes control the
+                  overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
+                  can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="mb-2">Collapse Example With Icon</p>
+          <!--:Collapse item:-->
+          <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card">
+            <div role="button" class="flex p-4 items-center justify-between collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseIcon1" aria-expanded="false"
+              aria-controls="collapseIcon1">
+              <!--:Icon:-->
+              <span class="mr-4">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M18.5 16C20.433 16 22 13.0899 22 9.5C22 5.91015 20.433 3 18.5 3M18.5 16C16.567 16 15 13.0899 15 9.5C15 5.91015 16.567 3 18.5 3M18.5 16L5.44354 13.6261C4.51605 13.4575 4.05231 13.3731 3.67733 13.189C2.91447 12.8142 2.34636 12.1335 2.11414 11.3159C2 10.914 2 10.4427 2 9.5C2 8.5573 2 8.08595 2.11414 7.68407C2.34636 6.86649 2.91447 6.18577 3.67733 5.81105C4.05231 5.62685 4.51605 5.54254 5.44354 5.3739L18.5 3M5 14L5.39386 19.514C5.43126 20.0376 5.44996 20.2995 5.56387 20.4979C5.66417 20.6726 5.81489 20.8129 5.99629 20.9005C6.20232 21 6.46481 21 6.98979 21H8.7722C9.37234 21 9.67242 21 9.89451 20.8803C10.0897 20.7751 10.2443 20.6081 10.3342 20.4055C10.4365 20.1749 10.4135 19.8757 10.3675 19.2773L10 14.5"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h4 class="text-lg font-semibold truncate flex-grow pr-3">Collapse item with icon</h4>
+              <!--:Collapse arrow:-->
+              <span class="collapse-arrow">
+                <span class="icon-[tabler--chevron-up] text-lg"></span>
+              </span>
+            </div>
+            <div id="collapseIcon1" class="collapse">
+              <div class="pt-0 p-4">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="mb-2">Collapse Example With Icon</p>
+          <!--:Collapse item:-->
+          <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card">
+            <div role="button" class="flex p-4 items-center justify-between collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseIconSubText1" aria-expanded="false"
+              aria-controls="collapseIconSubText1">
+              <!--:Icon:-->
+              <span
+                class="mr-4 w-10 h-10 rounded-full bg-primary-500/20 text-primary-500 flex items-center justify-center shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M18.5 16C20.433 16 22 13.0899 22 9.5C22 5.91015 20.433 3 18.5 3M18.5 16C16.567 16 15 13.0899 15 9.5C15 5.91015 16.567 3 18.5 3M18.5 16L5.44354 13.6261C4.51605 13.4575 4.05231 13.3731 3.67733 13.189C2.91447 12.8142 2.34636 12.1335 2.11414 11.3159C2 10.914 2 10.4427 2 9.5C2 8.5573 2 8.08595 2.11414 7.68407C2.34636 6.86649 2.91447 6.18577 3.67733 5.81105C4.05231 5.62685 4.51605 5.54254 5.44354 5.3739L18.5 3M5 14L5.39386 19.514C5.43126 20.0376 5.44996 20.2995 5.56387 20.4979C5.66417 20.6726 5.81489 20.8129 5.99629 20.9005C6.20232 21 6.46481 21 6.98979 21H8.7722C9.37234 21 9.67242 21 9.89451 20.8803C10.0897 20.7751 10.2443 20.6081 10.3342 20.4055C10.4365 20.1749 10.4135 19.8757 10.3675 19.2773L10 14.5"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <div class="pr-3 flex-grow overflow-hidden">
+                <h4 class="text-lg font-semibold truncate leading-tight">Collapse item with icon + sub text</h4>
+                <p class="block truncate opacity-60">Sub text goes here about collapse</p>
+              </div>
+              <!--:Collapse arrow:-->
+              <span class="collapse-arrow">
+                <span class="icon-[tabler--chevron-up] text-lg"></span>
+              </span>
+            </div>
+            <div id="collapseIconSubText1" class="collapse">
+              <div class="pt-0 p-4">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <!--:Main Script:-->
+  <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

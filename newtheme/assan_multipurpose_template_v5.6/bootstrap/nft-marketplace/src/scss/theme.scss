@@ -1,0 +1,18 @@
+@import "./node_modules/bootstrap/scss/functions";
+@import "./custom/variables";
+@import "./custom/variables-dark";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/variables-dark";
+@import "./node_modules/bootstrap/scss/maps";
+@import "./node_modules/bootstrap/scss/mixins";
+@import "./node_modules/bootstrap/scss/utilities";
+@import "./custom/utilities/utilities";
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+//Utilities
+@import "./custom/utilities/root";
+@import "./custom/utilities/typography";
+@import "./custom/components/components";
+@import "./custom/utilities/switch-modes";
+@import "./custom/forms/forms";

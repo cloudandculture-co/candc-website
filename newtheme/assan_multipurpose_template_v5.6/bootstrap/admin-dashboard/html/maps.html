@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assan-Admin</title>
+
+        @@include('./partials/fonts.html')
+        <!--Simplebar css-->
+        <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+        <!--Choices css-->
+        <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+
+        <!--Map style-->
+        <link rel="stylesheet" href="assets/vendor/css/jsvectormap.min.css">
+
+        <!--Main style-->
+        <link rel="stylesheet" href="assets/css/style.min.css">
+    </head>
+
+    <body>
+        @@include('./partials/preloader.html')
+        <!--App Start-->
+        <div class="d-flex flex-column flex-root">
+            <!--Page-->
+            <div class="page d-flex flex-row flex-column-fluid">
+                @@include('./partials/sidebars/sidebar-default.html',{"page": "maps"} )
+
+                <!--///////////Page content wrapper///////////////-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+
+                    @@include('./partials/header/header-default.html')
+
+
+                    <!--//Page Toolbar//-->
+                    <div class="toolbar px-3 px-lg-6 py-3">
+                        <div class="position-relative container-fluid px-0">
+                            <div class="row align-items-center position-relative">
+                                <div class="col-md-8 mb-4 mb-md-0">
+                                    <h3 class="mb-2">JsVectorMap</h3>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="#!">Home</a></li>
+                                            <li class="breadcrumb-item active">Maps</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                                <div class="col-md-4 text-md-end">
+                                    <a href="https://jvm-docs.vercel.app/" target="_blank">Learn More
+                                        <span class="material-symbols-rounded ms-1 align-middle">
+                                            open_in_new
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page Toolbar End//-->
+
+                    <!--//Page content//-->
+                    <div class="content pt-3 px-3 px-lg-6 d-flex flex-column-fluid">
+                        <div class="container-fluid px-0">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <div class="card overflow-hidden">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Visitors Map</h5>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <div id="world-map" style="width: 100%; height: 400px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page content End//-->
+
+                    @@include('./partials/footer.html')
+                </main>
+                <!--///////////Page content wrapper End///////////////-->
+            </div>
+        </div>
+        @@include('./partials/core-scripts.html')
+
+        <!--Map-->
+        <script src="assets/vendor/jsvectormap.min.js"></script>
+        <script src="assets/vendor/world.js"></script>
+        <script>
+             // Visitor data
+        const visitorsData = {
+            US: 69584,
+            IN: 6948382,
+            DE: 7968,
+            ES: 9202,
+            MX: 3928
+        };
+
+        // Create the map
+        const map = new jsVectorMap({
+            selector: '#world-map',
+            map: 'world',
+            markers: [
+                { name: [visitorsData.US + ' visitors'], coords: [37.0902, -95.7129] },
+                { name: [visitorsData.IN + ' visitors'], coords: [20.5937, 78.9629] },
+                { name: [visitorsData.DE + ' visitors'], coords: [51.1657, 10.4515]},
+                { name: [visitorsData.ES + ' visitors'], coords: [40.4637, -3.7492] },
+                { name: [visitorsData.MX + ' visitors'], coords: [23.6345, -102.5528]},
+            ],
+            markerStyle: {
+    initial: {
+      stroke: 'var(--bs-primary)',
+      strokeWidth: 0,
+      fill: 'var(--bs-primary)',
+      fillOpacity: 1
+    },
+  },
+        });
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,641 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+      <!--Icons-->
+      <link rel="stylesheet" href="assets/fonts/bootstrap-icons/bootstrap-icons.min.css">
+      <!--Iconsmind Icons-->
+      <link rel="stylesheet" href="assets/fonts/iconsmind/iconsmind.css">
+
+
+      <!--Google fonts-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+      <!--Main theme style-->
+      <link rel="stylesheet" href="assets/css/style.css">
+     <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+     <!--Preloader Spinner-->
+     <div class="spinner-loader bg-primary text-white">
+        <span class="relative flex h-16 w-16">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-16 w-16 bg-indigo-500"></span>
+          </span>
+    </div>
+
+    <!--begin:Header-->
+ <header class="header-transparent sticky-fixed">
+
+   <!--begin:navbar-->
+   <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+     <!--Navbar-fixed-background-->
+     <div class="navbar-fixed-bg absolute"></div>
+     <div class="container relative flex flex-wrap items-center justify-center relative">
+       <!--begin:logo-->
+       <a class="navbar-brand relative w-24 block" href="index.html">
+         <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+         <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+       </a>
+       <!--end:logo-->
+
+       <!--begin:navbar-no-collapse-items-->
+       <div class="flex items-center shrink-0 ml-auto lg:order-last">
+         <!--Navbar toggler button-->
+         <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+           data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+           aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon">
+             <i></i>
+           </span>
+         </button>
+         <!--Button-->
+         <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+           <a href="#"
+             class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+         </div>
+       </div>
+       <!--end:navbar-no-collapse-items-->
+
+       <!--begin:navbar-collapse-->
+       <div
+         class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+         id="mainNavbarTheme">
+         
+         <!--begin:Navbar items-->
+         <ul class="navbar-nav flex flex-col lg:flex-row bg-white dark:bg-black lg:!bg-transparent w-full p-2 lg:p-0 shadow-lg lg:shadow-none">
+
+           <!--begin:landings-->
+           <li class="nav-item group dropdown relative">
+             <a class="nav-link dropdown-toggle " href="index.html" role="button"
+               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Landings
+               <!--:Arrow:-->
+               <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                 <i class="bi bi-chevron-down"></i>
+               </span>
+             </a>
+             <div class="dropdown-menu !p-0 overflow-hidden lg:w-[44rem]">
+               <div class="overflow-hidden rounded-end">
+                 <div class="flex flex-wrap mx-0">
+                   <div class="w-full lg:w-2/5 px-3 relative">
+                     <div class="py-1 lg:py-3 lg:flex flex-col">
+                       <a href="index.html" class="dropdown-item">Welcome</a>
+                       <a href="index-landing-classic.html" class="dropdown-item">Classic Landing</a>
+                       <a href="index-landing-creative.html" class="dropdown-item">Creative</a>
+                       <a href="index-landing-agency.html" class="dropdown-item">Agency</a>
+                       <a href="index-landing-business.html" class="dropdown-item">Business</a>
+                       <a href="index-landing-startup.html" class="dropdown-item">Startup</a>
+                       <a href="index-landing-consultancy.html" class="dropdown-item">Consultancy</a>
+                       <a href="index-landing-saas-webapp.html" class="dropdown-item">Saas WebApp</a>
+                       <a href="index-landing-personal-portfolio.html" class="dropdown-item">Personal Portfolio</a>
+                     </div>
+                   </div>
+                   <!--/.col-->
+                   <div class="w-full lg:w-3/5 hidden lg:block rounded-end overflow-hidden px-0 relative bg-no-repeat bg-cover bg-center"
+                     style="background-image: url('assets/img/960x1140/3.jpg')">
+                     <div class="absolute rounded-r-lg w-full h-full top-0 left-0 bg-gradient-to-tr from-indigo-500 to-purple-500 opacity-90">
+                     </div>
+                     <div
+                       class="p-4 flex flex-col items-center text-center z-[1] justify-center h-full py-5 relative text-white">
+                       <h5 class="text-4xl lg:text-5xl font-medium mb-4">Build stunning website ease</h5>
+                       <p class="mb-5 text-white/75">Over 7000+ users & 7+ years of regular updates</p>
+                       <a href="#!" class="btn btn-lg bg-white text-gray-700 hover:text-indigo-500">Purchase Now</a>
+                     </div>
+                   </div>
+                   <!--/.col-->
+                 </div>
+                 <!--/.row-->
+               </div>
+             </div>
+           </li>
+           <!--end:landings-->
+
+           <!--begin:portfolio-->
+           <li class="nav-item group dropdown relative">
+             <a class="nav-link dropdown-toggle " href="#" role="button"
+               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">Portfolio
+               <!--:Arrow:-->
+               <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                 <i class="bi bi-chevron-down"></i>
+               </span>
+             </a>
+             <div class="dropdown-menu">
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                   Classic <i class="bi bi-chevron-right ml-3 text-sm"></i></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="portfolio-classic-2-col.html">2 Col</a>
+                   <a class="dropdown-item" href="portfolio-classic-3-col.html">3 Col</a>
+                   <a class="dropdown-item" href="portfolio-classic-4-col.html">4 Col</a>
+                   <a class="dropdown-item" href="portfolio-classic-masonry.html">Masonry</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Grid
+                   Overlay <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="portfolio-grid-overlay-2-col.html">2 Col</a>
+                   <a class="dropdown-item" href="portfolio-grid-overlay-3-col.html">3 Col</a>
+                   <a class="dropdown-item" href="portfolio-grid-overlay-4-col.html">4 Col</a>
+                   <a class="dropdown-item" href="portfolio-grid-overlay-masonry.html">Masonry</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Full
+                   width <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="portfolio-full-width-3-col.html">3 Col</a>
+                   <a class="dropdown-item" href="portfolio-full-width-4-col.html">4 Col</a>
+                   <a class="dropdown-item" href="portfolio-full-width-masonry.html">Masonry</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Project
+                   Layouts <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="portfolio-case-study.html">Case Study</a>
+                   <a class="dropdown-item" href="portfolio-single-classic.html">classic</a>
+                 </div>
+               </div>
+             </div>
+           </li>
+           <!--end:portfolio-->
+
+           <!--begin:blog-->
+           <li class="nav-item group dropdown relative">
+             <a class="nav-link dropdown-toggle " href="#" role="button"
+               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">Blog
+               <!--:Arrow:-->
+               <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                 <i class="bi bi-chevron-down"></i>
+               </span>
+             </a>
+             <div class="dropdown-menu">
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Blog
+                   Layouts <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="blog-classic.html">Blog classic</a>
+                   <a class="dropdown-item" href="blog-standard.html">Blog standard</a>
+                   <a class="dropdown-item" href="blog-masonry.html">Blog Masonry</a>
+                   <a class="dropdown-item" href="blog-sidebar.html">Blog Sidebar</a>
+                   <a class="dropdown-item" href="blog-magazine.html">Blog magazine</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Article
+                   Layouts <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="blog-article-basic.html">Basic</a>
+                   <a class="dropdown-item" href="blog-article-video.html">Video</a>
+                   <a class="dropdown-item" href="blog-article-gallery.html">Gallery</a>
+                   <a class="dropdown-item" href="blog-article-parallax.html">Parallax
+                     Header</a>
+                 </div>
+               </div>
+             </div>
+           </li>
+           <!--end:blog-->
+
+           <!--begin:pages-->
+           <li class="nav-item group dropdown relative">
+             <a class="nav-link dropdown-toggle " href="#" role="button"
+               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">Pages
+               <!--:Arrow:-->
+               <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                 <i class="bi bi-chevron-down"></i>
+               </span>
+             </a>
+             <div class="dropdown-menu">
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#">
+                   About <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="page-about.html">About Company</a>
+                   <a class="dropdown-item" href="page-about-modern.html">About modern</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" href="#" aria-expanded="false" data-bs-toggle="dropdown">
+                   Services <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="page-services.html">Services</a>
+                   <a class="dropdown-item" href="page-services-modern.html">Services
+                     Modern</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                   Career <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="page-careers.html">careers</a>
+                   <a class="dropdown-item" href="page-career-single.html">career single</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                   Customers <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="page-customers.html">Customers</a>
+                   <a class="dropdown-item" href="page-customer-story.html">Customer Story</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                   Account <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="page-profile.html">Profile</a>
+                   <a class="dropdown-item" href="page-account-signin.html">Sign In</a>
+                   <a class="dropdown-item" href="page-account-signin-alt.html">Sign In alt</a>
+                   <a class="dropdown-item" href="page-account-signup.html">Sign Up</a>
+                   <a class="dropdown-item" href="page-account-signup-alt.html">Sign Up Alt</a>
+                   <a class="dropdown-item" href="page-account-forget-password.html">Forget Password</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                   Misc <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="page-misc-error-404.html">Error 404</a>
+                   <a class="dropdown-item" href="page-misc-coming-soon.html">Coming Soon</a>
+                   <a class="dropdown-item" href="page-misc-maintenance.html">Maintenance</a>
+                   <a class="dropdown-item" href="page-misc-success-message.html">Success Message</a>
+                   <a class="dropdown-item" href="page-misc-policy.html">Privacy Policy</a>
+                 </div>
+               </div>
+               <a class="dropdown-item" href="page-pricing.html">Pricing Plans</a>
+               <a class="dropdown-item" href="page-faq.html">Faqs</a>
+               <a class="dropdown-item" href="page-knowladge-base.html">Knowladge Base</a>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                   Contact <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="page-contact-us-1.html">Contact Us 1</a>
+                   <a class="dropdown-item" href="page-contact-us-2.html">Contact Us 2</a>
+                 </div>
+               </div>
+             </div>
+           </li>
+           <!--end:pages-->
+
+           <!--begin:components-->
+           <li class="nav-item group dropdown static">
+             <a class="nav-link dropdown-toggle " href="#" role="button"
+               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components
+               <!--:Arrow:-->
+               <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                 <i class="bi bi-chevron-down"></i>
+               </span>
+             </a>
+             <div class="dropdown-menu left-0 top-full w-full p-0">
+              <div class="dropdown-scroll-lg lg:p-4">
+               <div class="flex flex-wrap mx-lg-0 justify-content-lg-around">
+                 <!--Dropdown-grid-Col-->
+                 <div class="w-full px-3 lg:w-1/4">
+                   <div class="h-full">
+                     <div>
+                       <a class="dropdown-item" href="component-accordion.html">Accordion</a>
+                       <a class="dropdown-item" href="component-alerts.html">Alerts</a>
+                       <a class="dropdown-item" href="component-animations.html">Animations</a>
+                       <a class="dropdown-item" href="component-avatar.html">Avatar</a>
+                       <a class="dropdown-item" href="component-breadcrumb.html">Breadcrumb</a>
+                       <a class="dropdown-item" href="component-badge.html">Badge</a>
+                       <a class="dropdown-item" href="component-blockquote.html">Blockquote</a>
+                       <a class="dropdown-item" href="component-buttons.html">Buttons</a>
+                       <a class="dropdown-item" href="component-card-image.html">card image</a>
+                       <a class="dropdown-item" href="component-card-icon.html">card icon</a>
+                       <a class="dropdown-item" href="component-call-to-action.html">Call to action</a>
+                     </div>
+                   </div>
+                 </div>
+
+                 <!--Dropdown-grid-Col-->
+                 <div class="w-full px-3 lg:w-1/4">
+                   <div class="h-full">
+                     <div>
+                       <a class="dropdown-item" href="component-colors.html">Colors</a>
+                       <a class="dropdown-item" href="component-collapse.html">Collapse</a>
+                       <a class="dropdown-item" href="component-counteup.html">Countup</a>
+                       <a class="dropdown-item" href="component-count-down.html">Countdown</a>
+                       <a class="dropdown-item" href="component-clients.html">Clients</a>
+                       <a class="dropdown-item" href="component-dropdowns.html">Dropdown</a>
+                       <a class="dropdown-item" href="component-form-components.html">Form components</a>
+                       <a class="dropdown-item" href="component-grid-system.html">Grid system</a>
+                       <a class="dropdown-item" href="component-icons-social-brands.html">Icons Social</a>
+                       <a class="dropdown-item" href="component-icons-bootstrap.html">Icons Bootstrap</a>
+                       <a class="dropdown-item" href="component-iconsmind.html">Iconsmind</a>
+                     </div>
+                   </div>
+                 </div>
+                 <!--Dropdown-grid-Col-->
+                 <div class="w-full px-3 lg:w-1/4">
+                   <div class="h-full">
+                     <div>
+                       <a class="dropdown-item" href="component-isotope-filter.html">Isotope filter</a>
+                       <a class="dropdown-item" href="component-lightbox.html">Lightbox</a>
+                       <a class="dropdown-item" href="component-list.html">List</a>
+                       <a class="dropdown-item" href="component-link.html">Link</a>
+                       <a class="dropdown-item" href="component-modal.html">Modal</a>
+                       <a class="dropdown-item" href="component-masonry.html">Masonry</a>
+                       <a class="dropdown-item" href="component-map-box.html">Map</a>
+                       <a class="dropdown-item" href="component-navs.html">Navs</a>
+                       <a class="dropdown-item" href="component-offcanvas.html">Offcanvas</a>
+                       <a class="dropdown-item" href="component-pagination.html">Pagination</a>
+                       <a class="dropdown-item" href="component-progress.html">Progress</a>
+                     </div>
+                   </div>
+                 </div>
+                 <!--Dropdown-grid-Col-->
+                 <div class="w-full px-3 lg:w-1/4">
+                   <div class="h-full">
+                     <div>
+                       <a class="dropdown-item" href="component-page-header.html">Page Header</a>
+                       <a class="dropdown-item" href="component-parallax.html">Parallax</a>
+                       <a class="dropdown-item" href="component-pricing.html">Pricing</a>
+                       <a class="dropdown-item" href="component-tabbbed-content.html">Tabbed Content</a>
+                       <a class="dropdown-item" href="component-tooltip.html">Tooltip</a>
+                       <a class="dropdown-item" href="component-testimonials.html">Testimonials</a>
+                       <a class="dropdown-item" href="component-timeline.html">Timeline</a>
+                       <a class="dropdown-item" href="component-typed-text.html">Typed Text</a>
+                       <a class="dropdown-item" href="component-typography.html">Typography</a>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+              </div>
+             </div>
+           </li>
+           <!--end:components-->
+
+           <!--begin:features-->
+           <li class="nav-item group dropdown static">
+             <a class="nav-link dropdown-toggle active" href="#" role="button"
+               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Features
+               <!--:Arrow:-->
+               <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                 <i class="bi bi-chevron-down"></i>
+               </span>
+             </a>
+             <div class="dropdown-menu left-0 p-0 w-full">
+               <div class="dropdown-scroll-lg lg:p-4">
+                 <div class="flex flex-wrap mx-lg-0">
+                   <div class="w-full lg:w-2/5 px-3 mb-4 lg:mb-0">
+                     <h5 class="text-xs pl-4 text-gray-400 mb-3 pt-3">
+                       Header & footers Styles <span class="bg-blue-500 text-white text-xs leading-tight inline-block px-2 py-1 ml-2 rounded-full">15+</span></h5>
+                     <div class="flex flex-wrap -mx-3 g-0">
+                       <div class="w-full px-3 lg:w-1/2">
+                         <a href="header-default.html" class="dropdown-item">Default</a>
+                         <a href="header-info-bar.html" class="dropdown-item">info bar</a>
+                         <a href="header-no-navbar.html" class="dropdown-item">No Navbar</a>
+                         <a href="header-sticky-down.html" class="dropdown-item">Sticky down</a>
+                         <a href="header-sticky-up.html" class="dropdown-item">Sticky up</a>
+                         <a href="header-sticky-boxed.html" class="dropdown-item">Sticky Boxed</a>
+                         <a href="header-search-bar.html" class="dropdown-item">Search</a>
+                       </div>
+                       <!--/.col-sm-6-->
+                       <div class="w-full px-3 lg:w-1/2">
+                         <div class="text-xs pl-4 text-gray-400 mb-3 pt-3">Footer Styles <span class="badge ms-2 bg-info">9+</span></div>
+                         <a href="footer-1.html" class="dropdown-item">Footer 1</a>
+                         <a href="footer-2.html" class="dropdown-item">Footer 2</a>
+                         <a href="footer-3.html" class="dropdown-item">Footer 3</a>
+                         <a href="footer-4.html" class="dropdown-item">Footer 4</a>
+                         <a href="footer-5.html" class="dropdown-item">Footer 5</a>
+                         <a href="footer-6.html" class="dropdown-item">Footer 6</a>
+                         <a href="footer-7.html" class="dropdown-item">Footer 7</a>
+                       </div>
+                     </div>
+                     <!--/.row-->
+                   </div>
+                   <!--/.End col-->
+                   <div class="w-full lg:w-2/5 px-3 mb-4 lg:mb-0">
+                     <h5 class="text-xs pl-4 text-gray-400 mb-3 pt-3">
+                       Hero Covers Slider</h5>
+                     <div class="flex flex-wrap -mx-3">
+                       <div class="w-full px-3 lg:w-1/2">
+                         <a href="hero-simple.html" class="dropdown-item">Hero Simple</a>
+                         <a href="hero-parallax.html" class="dropdown-item">Hero Parallax</a>
+                         <a href="hero-parallax-element.html" class="dropdown-item"> Parallax Element</a>
+                         <a href="hero-fullscreen.html" class="dropdown-item">Hero Fullscreen</a>
+                         <a href="hero-newsletter.html" class="dropdown-item">Hero Newsletter</a>
+                         <a href="hero-signup.html" class="dropdown-item">Form SignUp</a>
+                         <a href="hero-pricing.html" class="dropdown-item">Form Pricing</a>
+                         <a href="hero-video-button.html" class="dropdown-item">Video popup</a>
+                         <a href="hero-youtube-video.html" class="dropdown-item">Youtube Video</a>
+                         <a href="hero-vimeo-video.html" class="dropdown-item">Vimeo Video</a>
+                         <a href="hero-html5-video.html" class="dropdown-item">HTML5 Video</a>
+                       </div>
+                       <div class="w-full px-3 lg:w-1/2">
+                         <a href="hero-bg-shape.html" class="dropdown-item">BG Shape</a>
+                         <a href="hero-shape-image.html" class="dropdown-item">Shape Image</a>
+                         <a href="hero-tiles.html" class="dropdown-item">Image tiles</a>
+                         <a href="hero-media-player.html" class="dropdown-item">Media Player </a>
+                         <a href="hero-typed-text.html" class="dropdown-item">Typed Text</a>
+                         <a href="hero-slider-swiper.html" class="dropdown-item">Swiper slider</a>
+                         <a href="hero-slider-master.html" class="dropdown-item">Master Slider</a>
+                         <a href="hero-slider-master-alt.html" class="dropdown-item">Master Slider Alt</a>
+                         <a href="hero-particles.html" class="dropdown-item">Particles</a>
+                       </div>
+                     </div>
+                   </div>
+                   <!--/.End col-->
+  
+                   <div class="w-full lg:w-1/5 px-3 mb-4 lg:mb-0">
+                     <h5 class="text-xs pl-4 text-gray-400 mb-3 pt-3">
+                       Others</h5>
+                     <a class="dropdown-item" target="_blank" href="layout-blank.html">layout Blank</a>
+           
+                
+                         <a href="feature-sticky-cards.html" class="dropdown-item">Sticky Cards
+                           <span class="inline-block ms-2 text-xs px-2 py-1 leading-tight bg-amber-500 text-white rounded-full">New</span>
+                         </a>
+                         <a href="feature-image-reveal.html" class="dropdown-item">Image Reveal
+                           <span class="inline-block ms-2 text-xs px-2 py-1 leading-tight bg-amber-500 text-white rounded-full">New</span>
+                         </a>
+                   </div>
+                   <!--/.End col-->
+                 </div>
+               </div>
+             </div>
+           </li>
+           <!--end:features-->
+         </ul>
+         <!--end:Navbar items-->
+
+       </div>
+       <!--end:navbar-collapse-->
+     </div>
+
+   </nav>
+   <!--end:navbar-->
+ </header>
+ <!--end:header-->
+
+ 
+<main class="main-content" id="main-content">
+    <section class="relative bg-gradient-to-tr from-indigo-500 to-gray-900 text-white">
+        <div class="container relative pb-12 lg:pb-24 pt-32 lg:pt-48">
+            <div class="flex flex-wrap -mx-3 items-center">
+                <div class="w-full mx-auto px-3 lg:w-8/12  relative z-[1]">
+                   <h1 class="text-3xl lg:text-6xl text-center font-medium mb-7">Footer 7</h1>
+                <!--:Breadcrumbs:-->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb flex items-center justify-center">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li><i class="bi bi-chevron-right mx-3 text-sm opacity-50"></i></li>
+                      <li class="breadcrumb-item"><a href="#">Components</a></li>
+                      <li><i class="bi bi-chevron-right mx-3 text-sm opacity-50"></i></li>
+                      <li class="breadcrumb-item active [&.active]:opacity-50" aria-current="page">Footer 7</li>
+                    </ol>
+                  </nav>   
+                </div>
+                </div>
+            </div>
+            <!--/.row-->
+
+    </section>
+
+    <section class="relative">
+        <div class="container py-16 lg:py-24">
+            <div class="w-full mx-auto">
+
+                <p class="text-xl text-gray-400 font-medium">Footer style 7</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+   
+    <!--Footer Start-->
+    <!--begin:Footer-->
+    <footer id="footer" class="relative footer overflow-hidden bg-white dark:bg-black">
+        <div class="container pt-12 lg:pt-16 pb-7">
+            <div class="flex flex-wrap -mx-3">
+                <div class="w-full px-3 md:w-3/12 sm:w-6/12 mb-7">
+                    <h5 class="mb-5 text-lg font-medium">We're here</h5>
+                    <p class="text-gray-600 dark:text-gray-300">124 Monali Street,</p>
+                    <p class="text-gray-600 dark:text-gray-300">Rosemary,&nbsp; California</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">302012, USA</p>
+                    <p class="mb-5">
+                        <a href="#!" class="link-underline">View on Map</a>
+                    </p>
+                    <p class="mb-0">
+                        <h2 data-countup="160000" data-suffix="+"
+                            class="text-3xl font-medium mb-2"></h2> <span class="text-gray-400">Users</span>
+                    </p>
+                </div>
+                <div class="md:w-4/12 sm:-6/12 w-full px-3 mb-7">
+                    <h5 class="mb-5 text-lg font-medium">Say g’day</h5>
+                    <div class="footer-info-details">
+                        <p class="mb-3">
+                            <a href="mailus@domain.com" class="link-underline">mailus@domain.com</a>
+                        </p>
+                        <p class="mb-0"><a class="link-underline" href="tel:+1123456789">(01) 1123 56789</a>
+                        </p>
+                    </div>
+
+                    <hr class="my-7 border-gray-200 dark:border-gray-900">
+                    <h6 class="mb-5 text-lg font-medium">Follow us</h6>
+                    <div class="flex items-center gap-4 mb-7">
+                        <!-- Social button -->
+                        <a href="#!" class="text-gray-400 hover:text-indigo-500 inline-block">
+                            <i class="bi bi-facebook text-xl leading-[1]"></i>
+                         </a>
+                        <!-- Social button -->
+                        <a href="#!" class="text-gray-400 hover:text-indigo-500 inline-block">
+                            <i class="bi bi-twitter-x text-xl leading-[1]"></i>
+                          </a>
+                        <!-- Social button -->
+                        <a href="#!" class="text-gray-400 hover:text-indigo-500 inline-block">
+                            <i class="bi bi-linkedin text-xl leading-[1]"></i>
+                          </a>
+                        <!-- Social button -->
+                        <a href="#!" class="text-gray-400 hover:text-indigo-500 inline-block">
+                            <i class="bi bi-instagram text-xl leading-[1]"></i>
+                            </a>
+                    </div>
+                    <!--:Dark Mode:-->
+                    <button data-bs-toggle="tooltip" data-bs-title="toggle theme" data-bs-placement="left"
+                    class="toggle-mode w-10 h-10 rounded-full transition-all bg-white shadow-lg text-gray-700 dark:text-white dark:bg-gray-700 hover:bg-indigo-500 hover:text-white dark:hover:bg-indigo-500 flex items-center justify-center"
+                    type="button">
+                    <span class="dark:block hidden">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 2V4M12 20V22M4 12H2M6.31412 6.31412L4.8999 4.8999M17.6859 6.31412L19.1001 4.8999M6.31412 17.69L4.8999 19.1042M17.6859 17.69L19.1001 19.1042M22 12H20M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <span class="block dark:hidden">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M21.9548 12.9564C20.5779 15.3717 17.9791 17.0001 15 17.0001C10.5817 17.0001 7 13.4184 7 9.00008C7 6.02072 8.62867 3.42175 11.0443 2.04492C5.96975 2.52607 2 6.79936 2 11.9998C2 17.5227 6.47715 21.9998 12 21.9998C17.2002 21.9998 21.4733 18.0305 21.9548 12.9564Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    </button>
+                </div>
+                <div class="md:w-5/12 px-3 w-full mb-7">
+                    <div class="py-7 px-4 lg:px-6 bg-indigo-500 rounded-2xl text-white">
+                        <h3 class="mb-3 text-xl font-medium">Request a free quote</h3>
+                        <p class="mb-4 opacity-75">Drop us a line below and we’ll find a way to help you and your team out.
+                        </p>
+                        <a class="btn btn-lg !rounded-full bg-white text-gray-700 hover:bg-gray-200" href="#!">
+                            <i class="bi bi-chat me-2"></i>
+                            Chat with us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="mb-5 mt-0 border-gray-100 dark:border-gray-900">
+            <div class="flex flex-wrap -mx-3 items-center">
+                <div class="sm:w-7/12 w-full px-3 mb-4 sm:mb-0">
+                    <div class="flex text-sm items-center space-x-4">
+                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#">Work</a>
+                        <a class="nav-link" href="#">Contact</a>
+                    </div>
+                </div>
+                <div class="sm:w-5/12 w-full px-3 sm:text-right">
+                    <span class="text-gray-400 text-sm">&copy; Copyright
+                        <script>
+                            document.write(new Date().getFullYear())
+
+                        </script>. Assan
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--end:Footer-->
+
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    @@include('./partials/head-includes.html')
+    <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+    <!--begin:Header-->
+    <header class="header-transparent sticky-fixed">
+
+        <!--begin:navbar-->
+        <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+            <!--Navbar-fixed-background-->
+            <div class="navbar-fixed-bg absolute"></div>
+            <div class="container relative flex flex-wrap items-center justify-center relative">
+                <!--begin:logo-->
+                <a class="navbar-brand relative w-24 block" href="index.html">
+                    <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+                    <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+                </a>
+                <!--end:logo-->
+
+                <!--begin:navbar-no-collapse-items-->
+                <div class="flex items-center shrink-0 ml-auto lg:order-last">
+                    <!--Navbar toggler button-->
+                    <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i></i>
+                        </span>
+                    </button>
+                    <!--Button-->
+                    <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+                        <a href="#" class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+                    </div>
+                </div>
+                <!--end:navbar-no-collapse-items-->
+
+                <!--begin:navbar-collapse-->
+                <div class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+                    id="mainNavbarTheme">
+                    @@include('./partials/headers/default-navbar-items.html',{"page": "blog"})
+                </div>
+                <!--end:navbar-collapse-->
+            </div>
+
+        </nav>
+        <!--end:navbar-->
+    </header>
+    <!--end:header-->
+
+
+    <main class="main-content" id="main-content">
+        <section class="relative bg-gradient-to-tr from-indigo-500 to-gray-900 text-white overflow-hidden">
+            <!--:Blur Background:-->
+            <img src="assets/img/backgrounds/bg-blur.png" class="absolute right-0 top-0 w-full h-auto" alt="">
+            <div class="container relative pb-12 lg:pb-24 pt-32 lg:pt-48">
+                <div class="flex flex-wrap -mx-3 items-center">
+                    <div class="w-full px-3 lg:w-8/12 relative z-[1]">
+                        <h1 class="text-4xl lg:text-6xl font-medium" data-text-split>Insights, thoughts & announcements from us</h1>
+                    </div>
+                </div>
+            </div>
+            <!--/.row-->
+        </section>
+
+        <section class="relative">
+            <div class="container z-[1] relative py-16 lg:py-24">
+                <div class="flex flex-wrap -mx-3">
+                    <div class="w-full px-3 md:w-4/12 lg:w-3/12">
+                        <!--/.widget-->
+                        <div class="pb-9">
+                            <h5 class="text-xl font-medium mb-6">Recent Posts</h5>
+                            <article class="flex mb-4 items-stretch">
+                                <div class="mr-4 shrink-0">
+                                    <a href="#!" class="block">
+                                        <img src="assets/img/960x900/1.jpg" alt="Image" class="w-20 h-auto rounded-2xl">
+                                    </a>
+                                </div>
+                                <div class="flex flex-col lg:justify-between">
+                                    <a href="#!" class="hover:text-indigo-500">
+                                        <h6 class="mb-0 text-reset font-medium">
+                                            Explain how all this mistaken idea
+                                        </h6>
+                                    </a>
+                                    <div class="flex pt-2 justify-between">
+                                        <small class="mb-0">
+                                            <a href="#!">Tech</a>
+                                        </small>
+                                        <small class="text-gray-400">24 Sep. 024 </small>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="flex mb-4 items-stretch">
+                                <div class="mr-4 shrink-0">
+                                    <a href="#!" class="block">
+                                        <img src="assets/img/960x900/2.jpg" alt="Image" class="w-20 h-auto rounded-2xl">
+                                    </a>
+                                </div>
+                                <div class="flex flex-col lg:justify-between">
+                                    <a href="#!" class="hover:text-indigo-500">
+                                        <h6 class="mb-0 text-reset font-medium">
+                                            Lorem Ipsum is free injected humour
+                                        </h6>
+                                    </a>
+                                    <div class="flex pt-2 justify-between">
+                                        <small class="mb-0">
+                                            <a href="#!">Business</a>
+                                        </small>
+                                        <small class="text-gray-400">21 Sep. 024 </small>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="flex items-stretch">
+                                <div class="mr-4 shrink-0">
+                                    <a href="#!" class="block">
+                                        <img src="assets/img/960x900/3.jpg" alt="Image" class="w-20 h-auto rounded-2xl">
+                                    </a>
+                                </div>
+                                <div class="flex flex-col lg:justify-between">
+                                    <a href="#!" class="hover:text-indigo-500">
+                                        <h6 class="mb-0 text-reset font-medium">
+                                            It uses a dictionary of over 200 Latin words
+                                        </h6>
+                                    </a>
+                                    <div class="flex pt-2 justify-between">
+                                        <small class="mb-0">
+                                            <a href="#!">Design</a>
+                                        </small>
+                                        <small class="text-gray-400 ms-auto">19 Aug. 024 </small>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!--/.widget-->
+                        <div class="pb-9">
+                            <h5 class="text-xl font-medium mb-6">Tags</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="#!"
+                                    class="px-3 py-1 text-sm rounded-full font-medium border border-gray-200 dark:border-gray-800 hover:shadow-lg">
+                                    Bootstrap
+                                </a>
+                                <a href="#!"
+                                    class="px-3 py-1 text-sm rounded-full font-medium border border-gray-200 dark:border-gray-800 hover:shadow-lg">
+                                    Jquery
+                                </a>
+                                <a href="#!"
+                                    class="px-3 py-1 text-sm rounded-full font-medium border border-gray-200 dark:border-gray-800 hover:shadow-lg">
+                                    Sass
+                                </a>
+                                <a href="#!"
+                                    class="px-3 py-1 text-sm rounded-full font-medium border border-gray-200 dark:border-gray-800 hover:shadow-lg">
+                                    Gulp
+                                </a>
+                                <a href="#!"
+                                    class="px-3 py-1 text-sm rounded-full font-medium border border-gray-200 dark:border-gray-800 hover:shadow-lg">
+                                    Elements
+                                </a>
+                                <a href="#!"
+                                    class="px-3 py-1 text-sm rounded-full font-medium border border-gray-200 dark:border-gray-800 hover:shadow-lg">
+                                    Price
+                                </a>
+                                <a href="#!"
+                                    class="px-3 py-1 text-sm rounded-full font-medium border border-gray-200 dark:border-gray-800 hover:shadow-lg">
+                                    Updates
+                                </a>
+                            </div>
+                        </div>
+                        <!--/.widget-->
+                        <div class="sticky top-24 pb-9">
+                            <a href="#"
+                                class="bg-indigo-500/10 rounded p-4 flex items-center justify-content-center min-height-2x">
+                                <span class="text-small text-gray-400">Advertisement</span>
+                            </a>
+                        </div>
+                        <!--/.widget-->
+                    </div>
+                    <div class="w-full px-3 md:w-8/12 lg:w-9/12">
+                        <div class="md:ps-4">
+                            <article class="flex flex-col md:flex-row items-stretch mb-9">
+                                <div class="w-full lg:w-5/12 shrink-0">
+                                    <a href="#!" class="block rounded-5 overflow-hidden hover-shadow-lg hover-lift">
+                                        <img src="assets/img/960x900/4.jpg" alt="" class="max-w-full rounded-2xl">
+                                    </a>
+                                </div>
+                                <div class="p-4 lg:pl-7 flex-grow">
+                                    <div class="flex mb-4 justify-between">
+                                        <span class="inline-flex items-center text-sm text-gray-400">
+                                            <i class="bi bi-calendar-check me-2"></i>
+                                            <span>16 November</span>
+                                        </span>
+                                        <a href="#!"
+                                            class="font-medium text-xs rounded-full bg-gray-600 text-white px-3 py-1">Business</a>
+                                    </div>
+                                    <h3 class="text-3xl mb-4 font-medium">
+                                        <a href="#!" class="block">
+                                            What are the 3 most important things needed for effective teamwork?
+                                        </a>
+                                    </h3>
+                                    <p
+                                        class="mb-4 flex-grow hidden lg:block line-clamp-2 text-gray-600 dark:text-gray-300">
+                                        It uses a dictionary of over 200 Latin words, combined with a handful of
+                                        model
+                                        sentence structures, to generate Lorem Ipsum which looks reasonable.
+                                    </p>
+                                    <div class="flex mb-0 text-sm items-center">
+                                        <img src="assets/img/avatar/3.jpg" alt="" class="w-9 rounded-full mr-3">
+                                        <span class="text-gray-400 inline-block">By <a href="#!">Andrew</a></span>
+                                    </div>
+                                </div>
+                                <!--/.card-body-->
+                            </article>
+                            <!--/.article-->
+                            <article class="flex flex-col md:flex-row items-stretch mb-9">
+                                <div class="w-full lg:w-5/12 shrink-0">
+                                    <a href="#!" class="block">
+                                        <img src="assets/img/960x900/1.jpg" alt="" class="max-w-full rounded-2xl">
+                                    </a>
+                                </div>
+                                <div class="p-4 lg:pl-7 flex-grow">
+                                    <div class="flex mb-4 justify-between">
+                                        <span class="inline-flex items-center text-sm text-gray-400">
+                                            <i class="bi bi-calendar-check me-2"></i>
+                                            <span>3 January</span>
+                                        </span>
+                                        <a href="#!"
+                                            class="font-medium text-xs rounded-full bg-gray-600 text-white px-3 py-1">Design</a>
+                                    </div>
+                                    <h3 class="text-3xl mb-4 font-medium">
+                                        <a href="#!" class="block">
+                                            5 most popular google fonts you should use into your next project
+                                        </a>
+                                    </h3>
+                                    <p
+                                        class="mb-4 flex-grow hidden lg:block line-clamp-2 text-gray-600 dark:text-gray-300">
+                                        All the Lorem Ipsum generators on the Internet tend to repeat predefined
+                                        chunks
+                                        as necessary...
+                                    </p>
+                                    <div class="flex mb-0 text-sm items-center">
+                                        <img src="assets/img/avatar/7.jpg" alt="" class="w-9 rounded-full mr-3">
+                                        <span class="text-gray-400 inline-block">By <a href="#!">Anjum
+                                                Al Habib</a></span>
+                                    </div>
+                                </div>
+                                <!--/.card-body-->
+                            </article>
+                            <!--/.article-->
+
+                            <article
+                                class="flex flex-col mb-9 rounded-2xl overflow-hidden relative py-9 px-6 bg-black text-white">
+                                <img src="assets/img/1200x600/1.jpg" alt=""
+                                    class="absolute w-full h-full left-0 top-0 object-cover object-top opacity-25 rounded-3">
+                                <div class="flex flex-col relative">
+                                    <div class="flex mb-0 justify-between small mb-4">
+                                        <span class="inline-flex items-center text-white/75">
+                                            <i class="bi bi-calendar-check mr-2"></i>
+                                            <span class="text-sm">25 Days ago</span>
+                                        </span>
+                                        <a href="#!">
+                                            Quotes
+                                        </a>
+                                    </div>
+                                    <div class="flex flex-col justify-between">
+                                        <h3 class="text-3xl font-medium mb-4 flex-grow">
+                                            <a href="#!" class="text-white line-height-base block">
+                                                I Really enjoy their company just as people. You
+                                                couldn't ask for a better work environment.
+                                            </a>
+                                        </h3>
+                                        <div class="flex mb-0 small items-center">
+                                            <img src="assets/img/avatar/10.jpg" alt="" class="w-9 rounded-full mr-2">
+                                            <span class="text-gray-400 text-sm">By <a href="#!"
+                                                    class="text-white hover:underline">Drew
+                                                    Carey</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/.card-body-->
+                            </article>
+                            <!--/.article-->
+
+                            <article class="flex flex-col md:flex-row items-stretch mb-9">
+                                <div class="w-full lg:w-5/12 shrink-0">
+                                    <a href="#!" class="block">
+                                        <img src="assets/img/960x900/5.jpg" alt="" class="max-w-full rounded-2xl">
+                                    </a>
+                                </div>
+                                <div class="p-4 lg:pl-7 flex-grow">
+                                    <div class="flex mb-4 justify-between">
+                                        <span class="inline-flex items-center text-sm text-gray-400">
+                                            <i class="bi bi-calendar-check me-2"></i>
+                                            <span>12 October</span>
+                                        </span>
+                                        <a href="#!"
+                                            class="font-medium text-xs rounded-full bg-gray-600 text-white px-3 py-1">Food</a>
+                                    </div>
+                                    <h3 class="text-3xl mb-4 font-medium">
+                                        <a href="#!" class="block">
+                                            How to order outside your culinary comfort zone in Sydney?
+                                        </a>
+                                    </h3>
+                                    <p
+                                        class="mb-4 flex-grow hidden lg:block line-clamp-2 text-gray-600 dark:text-gray-300">
+                                        All the Lorem Ipsum generators on the Internet tend to repeat predefined
+                                        chunks
+                                        as necessary...
+                                    </p>
+                                    <div class="flex mb-0 text-sm items-center">
+                                        <img src="assets/img/avatar/7.jpg" alt="" class="w-9 rounded-full mr-3">
+                                        <span class="text-gray-400 inline-block">By <a href="#!">Anjum
+                                                Al Habib</a></span>
+                                    </div>
+                                </div>
+                                <!--/.card-body-->
+                            </article>
+                            <!--/.article-->
+
+                            <article class="flex flex-col md:flex-row items-stretch mb-9">
+                                <div class="w-full lg:w-5/12 shrink-0">
+                                    <a href="#!" class="block">
+                                        <img src="assets/img/960x900/4.jpg" alt="" class="max-w-full rounded-2xl">
+                                    </a>
+                                </div>
+                                <div class="p-4 lg:pl-7 flex-grow">
+                                    <div class="flex mb-4 justify-between">
+                                        <span class="inline-flex items-center text-sm text-gray-400">
+                                            <i class="bi bi-calendar-check me-2"></i>
+                                            <span>18 September</span>
+                                        </span>
+                                        <a href="#!"
+                                            class="font-medium text-xs rounded-full bg-gray-600 text-white px-3 py-1">Food</a>
+                                    </div>
+                                    <h3 class="text-3xl mb-4 font-medium">
+                                        <a href="#!" class="block">
+                                            How to make a responsive portfolio website using bootstrap5?
+                                        </a>
+                                    </h3>
+                                    <p
+                                        class="mb-4 flex-grow hidden lg:block line-clamp-2 text-gray-600 dark:text-gray-300">
+                                        All the Lorem Ipsum generators on the Internet tend to repeat predefined
+                                        chunks
+                                        as necessary...
+                                    </p>
+                                    <div class="flex mb-0 text-sm items-center">
+                                        <img src="assets/img/avatar/4.jpg" alt="" class="w-9 rounded-full mr-3">
+                                        <span class="text-gray-400 inline-block">By <a href="#!">Nikita</a></span>
+                                    </div>
+                                </div>
+                                <!--/.card-body-->
+                            </article>
+                            <!--/.article-->
+                        </div>
+
+                        <div class="pt-7 flex justify-end">
+                            <nav class="mb-0" aria-label="Page navigation example">
+                                <ul class="pagination flex items-center gap-2 mb-0">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <i class="bi bi-chevron-left"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <i class="bi bi-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!--/.Pagination-row-->
+                    </div>
+                    <!--/.col-->
+
+                </div>
+                <!--/.blog-row-->
+            </div>
+        </section>
+
+        <!--:Newsletter:-->
+        <section class="relative dark">
+            <div class="container relative z-[1] -mb-16">
+                <div class="px-6 lg:px-9 py-12 lg:py-16 bg-gray-800 rounded-2xl text-white overflow-hidden relative">
+                    <img src="assets/img/backgrounds/bg-blur2.png"
+                        class="h-auto w-full md:w-10/12 absolute right-0 top-0 -translate-y-2/3" alt="">
+
+                    <div class="relative">
+                        <h3 class="text-4xl lg:text-5xl font-medium mb-7" data-text-split>Get stories direct to your
+                            inbox</h3>
+                        <form>
+                            <div class="flex flex-col md:flex-row md:items-center gap-2 lg:w-7/12 mb-4">
+                                <input type="email" name="email" class="input input-lg" placeholder="Email Address"
+                                    required="">
+                                <button type="submit" class="btn btn-lg bg-white text-gray-700 hover:text-indigo-500">
+                                    <span>Subscribe</span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <p class="text-xs text-white/75 mb-0">
+                            We’ll never share your details.
+                            View our <a href="#!" class="link-hover-underline inline-block relative">Privacy Policy</a>
+                            for more info.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-5.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- end:Back to Top button -->
+    <!--:Gsap plugins - required before theme js for animations:-->
+    <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+    <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+    <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+    <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+    <!-- Theme script -->
+    <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

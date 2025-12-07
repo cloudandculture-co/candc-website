@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+        @@include('./partials/head-includes.html')
+        <!--Prism css snippets-->
+        <link rel="stylesheet" href="assets/vendor/node_modules/css/prism-tomorrow.css">
+        <!-- Main CSS -->
+        <link href="assets/css/theme.min.css" rel="stylesheet">
+
+        <title>Assan 4</title>
+    </head>
+
+    <body>
+        @@include('./partials/preloader.html')
+        <!--Header Start-->
+        <header class="z-fixed header-transparent header-absolute-top sticky-reverse">
+            <nav class="navbar navbar-expand-lg navbar-light navbar-link-white">
+                <div class="container position-relative">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+                        <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+                    </a>
+                    <div class="d-flex align-items-center navbar-no-collapse-items order-lg-last">
+                        <button class="navbar-toggler order-last" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                                <i></i>
+                            </span>
+                        </button>
+                        <div class="nav-item me-3 me-lg-0">
+                            <a href="#" class="btn btn-success btn-sm rounded-pill">Purchase</a>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="mainNavbarTheme">
+                        @@include('./partials/headers/default-navbar-items.html',{"page": "components"})
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--Main content-->
+
+        <main>
+           <!--page-hero-->
+           <section class="bg-gradient-primary text-white position-relative">
+            <div class="container pt-14 pb-9 pb-lg-12 position-relative z-1">
+                <div class="row pt-lg-5 align-items-center justify-content-center text-center">
+                        <div class="col-lg-10 col-xl-7 z-2">
+                            <div class="position-relative">
+                                <div>
+                                    <nav class="d-flex justify-content-center" aria-label="breadcrumb">
+                                        <div class="mb-4">
+                                            <ol class="breadcrumb mb-0">
+                                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                                <li class="breadcrumb-item active">Components</li>
+                                                <li class="breadcrumb-item active" aria-current="page">Typed Text</li>
+                                            </ol>
+                                        </div>
+                                    </nav>
+                                    <h1 class="mb-0 display-4">
+                                        Typed Text
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="position-relative bg-body-tertiary">
+                <div class="py-9 py-lg-11 container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                           <div class="card mb-7 card-body overflow-hidden">
+                             <!--Typed text-->
+                             <h2 class="mb-3 position-relative">I'm <span class="text-primary"
+                                data-typed='{"strings": ["John Doe", "UI Designer", "Creative Designer", "Pet lover"]}'></span>
+                        </h2>
+                          <!--Clipboard-->
+                <div class="position-relative" style="max-height: 80vh; overflow-y: auto;">
+                    <button
+                        class="btn btn-sm position-absolute end-0 top-0 me-3 mt-3 z-1 btn-primary copy-link"
+                        data-clipboard-target="#copyTyped1" data-clipboard-action="copy" id="copyTyped">Copy
+                        code</button>
+<pre id="copyTyped1" class="language-markup bg-secondary text-white-50 rounded-3" data-lang="html">
+<code>
+&lt;!--Typed text-->
+&lt;h2 class="mb-5 position-relative">I'm &lt;span class="text-primary"
+data-typed='{"strings": ["John Doe", "UI Designer", "Creative Designer", "Pet lover"]}'>&lt;/span>
+&lt;/h2>
+</code>
+</pre>
+                </div>
+                           </div>
+                           <p class="mb-0 text-center">Learn more about <a href="https://mattboldt.com/demos/typed-js/" target="_blank">Typed.js</a></p>
+                        </div>
+                    </div>
+
+                  
+                </div>
+            </section>
+            <section class="position-relative overflow-hidden bg-primary text-white">
+                <div class="container py-9 py-lg-11">
+                    <div class="row align-items-end justify-content-around text-center text-md-start">
+                        <div class="col-lg-8 col-md-7">
+                            <p data-aos="zoom-in" class="mb-4 opacity-75">Are you interested?</p>
+                            <h2 class="mb-4 mb-md-0 display-5 fw-lighter" data-aos="zoom-in-up" data-aos-delay="100">
+                                Build <span class="text-warning font-serif"
+                                    data-typed='{"strings": ["Stunning", "Amazing", "Responsive", "Working"]}'></span>
+                                Website
+                            </h2>
+                        </div>
+                        <!--End Col-->
+                        <div class="col-lg-4 col-md-5 text-md-end">
+
+                            <div data-aos="fade-left" data-aos-delay="200">
+                                <a href="#!" class="btn btn-white rounded-pill">
+                                    Get started
+
+                                </a>
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div> <!-- / .container -->
+            </section>
+        </main>
+        @@include('./partials/footers/footer-2.html')
+
+        <!-- begin Back to Top button -->
+        <a href="#" class="toTop"><svg class="progress-circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="0, 251.2"></circle>
+</svg>
+            <i class="bi bi-chevron-up"></i>
+        </a>
+        <!-- scripts -->
+        <script src="assets/js/theme.bundle.min.js"></script>
+
+        <!--Copy to clipboard + prismJs-->
+        <script src="assets/vendor/node_modules/js/prism.js"></script>
+        <script src="assets/vendor/node_modules/js/clipboard.min.js"></script>
+        <script>
+            /* Clipboard JS - Copy code button */
+            var cl = document.querySelector('.copy-link');
+            if (typeof !!cl && (cl) != 'undefined' && cl != null) {
+                var cle = document.querySelectorAll('.copy-link');
+                cle.forEach(el => {
+                    el.addEventListener("click", function () {
+                        var theButton = this;
+                        var copyId = this.getAttribute('id');
+                        var clipboard = new ClipboardJS('#' + copyId);
+
+                        clipboard.on('success', function (e) {
+                            e.clearSelection();
+                            theButton.innerHTML = 'Copied!';
+                            setTimeout(function () {
+                                theButton.innerHTML = 'Copy code';
+                            }, 5000);
+                        });
+                    });
+                });
+            }
+
+        </script>
+    </body>
+
+</html>

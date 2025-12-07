@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    <!--Swiper slider-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+    
+    <!--Icons-->
+    <link rel="stylesheet" href="assets/fonts/bootstrap-icons/bootstrap-icons.min.css">
+    <!--Iconsmind Icons-->
+    <link rel="stylesheet" href="assets/fonts/iconsmind/iconsmind.css">
+
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <!--Main theme style-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+     <!--Preloader Spinner-->
+     <div class="spinner-loader bg-primary text-white">
+        <span class="relative flex h-16 w-16">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-16 w-16 bg-indigo-500"></span>
+          </span>
+    </div>
+
+     <!--begin:Header-->
+  <header class="header-transparent sticky-fixed">
+
+    <!--begin:navbar-->
+    <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+      <!--Navbar-fixed-background-->
+      <div class="navbar-fixed-bg absolute"></div>
+      <div class="container relative flex flex-wrap items-center justify-center relative">
+        <!--begin:logo-->
+        <a class="navbar-brand relative w-24 block" href="index.html">
+          <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+          <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+        </a>
+        <!--end:logo-->
+
+        <!--begin:navbar-no-collapse-items-->
+        <div class="flex items-center shrink-0 ml-auto lg:order-last">
+          <!--Navbar toggler button-->
+          <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <i></i>
+            </span>
+          </button>
+          <!--Button-->
+          <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+            <a href="#"
+              class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+          </div>
+        </div>
+        <!--end:navbar-no-collapse-items-->
+
+        <!--begin:navbar-collapse-->
+        <div
+          class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+          id="mainNavbarTheme">
+          
+          <!--begin:Navbar items-->
+          <ul class="navbar-nav flex flex-col lg:flex-row bg-white dark:bg-black lg:!bg-transparent w-full p-2 lg:p-0 shadow-lg lg:shadow-none">
+
+            <!--begin:landings-->
+            <li class="nav-item group dropdown relative">
+              <a class="nav-link dropdown-toggle " href="index.html" role="button"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Landings
+                <!--:Arrow:-->
+                <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </a>
+              <div class="dropdown-menu !p-0 overflow-hidden lg:w-[44rem]">
+                <div class="overflow-hidden rounded-end">
+                  <div class="flex flex-wrap mx-0">
+                    <div class="w-full lg:w-2/5 px-3 relative">
+                      <div class="py-1 lg:py-3 lg:flex flex-col">
+                        <a href="index.html" class="dropdown-item">Welcome</a>
+                        <a href="index-landing-classic.html" class="dropdown-item">Classic Landing</a>
+                        <a href="index-landing-creative.html" class="dropdown-item">Creative</a>
+                        <a href="index-landing-agency.html" class="dropdown-item">Agency</a>
+                        <a href="index-landing-business.html" class="dropdown-item">Business</a>
+                        <a href="index-landing-startup.html" class="dropdown-item">Startup</a>
+                        <a href="index-landing-consultancy.html" class="dropdown-item">Consultancy</a>
+                        <a href="index-landing-saas-webapp.html" class="dropdown-item">Saas WebApp</a>
+                        <a href="index-landing-personal-portfolio.html" class="dropdown-item">Personal Portfolio</a>
+                      </div>
+                    </div>
+                    <!--/.col-->
+                    <div class="w-full lg:w-3/5 hidden lg:block rounded-end overflow-hidden px-0 relative bg-no-repeat bg-cover bg-center"
+                      style="background-image: url('assets/img/960x1140/3.jpg')">
+                      <div class="absolute rounded-r-lg w-full h-full top-0 left-0 bg-gradient-to-tr from-indigo-500 to-purple-500 opacity-90">
+                      </div>
+                      <div
+                        class="p-4 flex flex-col items-center text-center z-[1] justify-center h-full py-5 relative text-white">
+                        <h5 class="text-4xl lg:text-5xl font-medium mb-4">Build stunning website ease</h5>
+                        <p class="mb-5 text-white/75">Over 7000+ users & 7+ years of regular updates</p>
+                        <a href="#!" class="btn btn-lg bg-white text-gray-700 hover:text-indigo-500">Purchase Now</a>
+                      </div>
+                    </div>
+                    <!--/.col-->
+                  </div>
+                  <!--/.row-->
+                </div>
+              </div>
+            </li>
+            <!--end:landings-->
+
+            <!--begin:portfolio-->
+            <li class="nav-item group dropdown relative">
+              <a class="nav-link dropdown-toggle " href="#" role="button"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">Portfolio
+                <!--:Arrow:-->
+                <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </a>
+              <div class="dropdown-menu">
+                <div class="dropend">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                    Classic <i class="bi bi-chevron-right ml-3 text-sm"></i></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="portfolio-classic-2-col.html">2 Col</a>
+                    <a class="dropdown-item" href="portfolio-classic-3-col.html">3 Col</a>
+                    <a class="dropdown-item" href="portfolio-classic-4-col.html">4 Col</a>
+                    <a class="dropdown-item" href="portfolio-classic-masonry.html">Masonry</a>
+                  </div>
+                </div>
+                <div class="dropend">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Grid
+                    Overlay <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="portfolio-grid-overlay-2-col.html">2 Col</a>
+                    <a class="dropdown-item" href="portfolio-grid-overlay-3-col.html">3 Col</a>
+                    <a class="dropdown-item" href="portfolio-grid-overlay-4-col.html">4 Col</a>
+                    <a class="dropdown-item" href="portfolio-grid-overlay-masonry.html">Masonry</a>
+                  </div>
+                </div>
+                <div class="dropend">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Full
+                    width <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="portfolio-full-width-3-col.html">3 Col</a>
+                    <a class="dropdown-item" href="portfolio-full-width-4-col.html">4 Col</a>
+                    <a class="dropdown-item" href="portfolio-full-width-masonry.html">Masonry</a>
+                  </div>
+                </div>
+                <div class="dropend">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Project
+                    Layouts <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="portfolio-case-study.html">Case Study</a>
+                    <a class="dropdown-item" href="portfolio-single-classic.html">classic</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!--end:portfolio-->
+
+            <!--begin:blog-->
+            <li class="nav-item group dropdown relative">
+              <a class="nav-link dropdown-toggle " href="#" role="button"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">Blog
+                <!--:Arrow:-->
+                <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </a>
+              <div class="dropdown-menu">
+                <div class="dropend">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Blog
+                    Layouts <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="blog-classic.html">Blog classic</a>
+                    <a class="dropdown-item" href="blog-standard.html">Blog standard</a>
+                    <a class="dropdown-item" href="blog-masonry.html">Blog Masonry</a>
+                    <a class="dropdown-item" href="blog-sidebar.html">Blog Sidebar</a>
+                    <a class="dropdown-item" href="blog-magazine.html">Blog magazine</a>
+                  </div>
+                </div>
+                <div class="dropend">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Article
+                    Layouts <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="blog-article-basic.html">Basic</a>
+                    <a class="dropdown-item" href="blog-article-video.html">Video</a>
+                    <a class="dropdown-item" href="blog-article-gallery.html">Gallery</a>
+                    <a class="dropdown-item" href="blog-article-parallax.html">Parallax
+                      Header</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!--end:blog-->
+
+            <!--begin:pages-->
+            <li class="nav-item group dropdown relative">
+              <a class="nav-link dropdown-toggle active" href="#" role="button"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">Pages
+                <!--:Arrow:-->
+                <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </a>
+              <div class="dropdown-menu">
+                <div class="dropend">
+                  <a class="dropdown-item dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#">
+                    About <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="page-about.html">About Company</a>
+                    <a class="dropdown-item" href="page-about-modern.html">About modern</a>
+                  </div>
+                </div>
+                <div class="dropend">
+                  <a class="dropdown-item dropdown-toggle" href="#" aria-expanded="false" data-bs-toggle="dropdown">
+                    Services <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="page-services.html">Services</a>
+                    <a class="dropdown-item" href="page-services-modern.html">Services
+                      Modern</a>
+                  </div>
+                </div>
+                <div class="dropend">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                    Career <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="page-careers.html">careers</a>
+                    <a class="dropdown-item" href="page-career-single.html">career single</a>
+                  </div>
+                </div>
+                <div class="dropend">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                    Customers <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="page-customers.html">Customers</a>
+                    <a class="dropdown-item" href="page-customer-story.html">Customer Story</a>
+                  </div>
+                </div>
+                <div class="dropend">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                    Account <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="page-profile.html">Profile</a>
+                    <a class="dropdown-item" href="page-account-signin.html">Sign In</a>
+                    <a class="dropdown-item" href="page-account-signin-alt.html">Sign In alt</a>
+                    <a class="dropdown-item" href="page-account-signup.html">Sign Up</a>
+                    <a class="dropdown-item" href="page-account-signup-alt.html">Sign Up Alt</a>
+                    <a class="dropdown-item" href="page-account-forget-password.html">Forget Password</a>
+                  </div>
+                </div>
+                <div class="dropend">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                    Misc <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="page-misc-error-404.html">Error 404</a>
+                    <a class="dropdown-item" href="page-misc-coming-soon.html">Coming Soon</a>
+                    <a class="dropdown-item" href="page-misc-maintenance.html">Maintenance</a>
+                    <a class="dropdown-item" href="page-misc-success-message.html">Success Message</a>
+                    <a class="dropdown-item" href="page-misc-policy.html">Privacy Policy</a>
+                  </div>
+                </div>
+                <a class="dropdown-item" href="page-pricing.html">Pricing Plans</a>
+                <a class="dropdown-item" href="page-faq.html">Faqs</a>
+                <a class="dropdown-item" href="page-knowladge-base.html">Knowladge Base</a>
+                <div class="dropend">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                    Contact <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="page-contact-us-1.html">Contact Us 1</a>
+                    <a class="dropdown-item" href="page-contact-us-2.html">Contact Us 2</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!--end:pages-->
+
+            <!--begin:components-->
+            <li class="nav-item group dropdown static">
+              <a class="nav-link dropdown-toggle " href="#" role="button"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components
+                <!--:Arrow:-->
+                <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </a>
+              <div class="dropdown-menu left-0 top-full w-full p-0">
+               <div class="dropdown-scroll-lg lg:p-4">
+                <div class="flex flex-wrap mx-lg-0 justify-content-lg-around">
+                  <!--Dropdown-grid-Col-->
+                  <div class="w-full px-3 lg:w-1/4">
+                    <div class="h-full">
+                      <div>
+                        <a class="dropdown-item" href="component-accordion.html">Accordion</a>
+                        <a class="dropdown-item" href="component-alerts.html">Alerts</a>
+                        <a class="dropdown-item" href="component-animations.html">Animations</a>
+                        <a class="dropdown-item" href="component-avatar.html">Avatar</a>
+                        <a class="dropdown-item" href="component-breadcrumb.html">Breadcrumb</a>
+                        <a class="dropdown-item" href="component-badge.html">Badge</a>
+                        <a class="dropdown-item" href="component-blockquote.html">Blockquote</a>
+                        <a class="dropdown-item" href="component-buttons.html">Buttons</a>
+                        <a class="dropdown-item" href="component-card-image.html">card image</a>
+                        <a class="dropdown-item" href="component-card-icon.html">card icon</a>
+                        <a class="dropdown-item" href="component-call-to-action.html">Call to action</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--Dropdown-grid-Col-->
+                  <div class="w-full px-3 lg:w-1/4">
+                    <div class="h-full">
+                      <div>
+                        <a class="dropdown-item" href="component-colors.html">Colors</a>
+                        <a class="dropdown-item" href="component-collapse.html">Collapse</a>
+                        <a class="dropdown-item" href="component-counteup.html">Countup</a>
+                        <a class="dropdown-item" href="component-count-down.html">Countdown</a>
+                        <a class="dropdown-item" href="component-clients.html">Clients</a>
+                        <a class="dropdown-item" href="component-dropdowns.html">Dropdown</a>
+                        <a class="dropdown-item" href="component-form-components.html">Form components</a>
+                        <a class="dropdown-item" href="component-grid-system.html">Grid system</a>
+                        <a class="dropdown-item" href="component-icons-social-brands.html">Icons Social</a>
+                        <a class="dropdown-item" href="component-icons-bootstrap.html">Icons Bootstrap</a>
+                        <a class="dropdown-item" href="component-iconsmind.html">Iconsmind</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Dropdown-grid-Col-->
+                  <div class="w-full px-3 lg:w-1/4">
+                    <div class="h-full">
+                      <div>
+                        <a class="dropdown-item" href="component-isotope-filter.html">Isotope filter</a>
+                        <a class="dropdown-item" href="component-lightbox.html">Lightbox</a>
+                        <a class="dropdown-item" href="component-list.html">List</a>
+                        <a class="dropdown-item" href="component-link.html">Link</a>
+                        <a class="dropdown-item" href="component-modal.html">Modal</a>
+                        <a class="dropdown-item" href="component-masonry.html">Masonry</a>
+                        <a class="dropdown-item" href="component-map-box.html">Map</a>
+                        <a class="dropdown-item" href="component-navs.html">Navs</a>
+                        <a class="dropdown-item" href="component-offcanvas.html">Offcanvas</a>
+                        <a class="dropdown-item" href="component-pagination.html">Pagination</a>
+                        <a class="dropdown-item" href="component-progress.html">Progress</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Dropdown-grid-Col-->
+                  <div class="w-full px-3 lg:w-1/4">
+                    <div class="h-full">
+                      <div>
+                        <a class="dropdown-item" href="component-page-header.html">Page Header</a>
+                        <a class="dropdown-item" href="component-parallax.html">Parallax</a>
+                        <a class="dropdown-item" href="component-pricing.html">Pricing</a>
+                        <a class="dropdown-item" href="component-tabbbed-content.html">Tabbed Content</a>
+                        <a class="dropdown-item" href="component-tooltip.html">Tooltip</a>
+                        <a class="dropdown-item" href="component-testimonials.html">Testimonials</a>
+                        <a class="dropdown-item" href="component-timeline.html">Timeline</a>
+                        <a class="dropdown-item" href="component-typed-text.html">Typed Text</a>
+                        <a class="dropdown-item" href="component-typography.html">Typography</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               </div>
+              </div>
+            </li>
+            <!--end:components-->
+
+            <!--begin:features-->
+            <li class="nav-item group dropdown static">
+              <a class="nav-link dropdown-toggle " href="#" role="button"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Features
+                <!--:Arrow:-->
+                <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </a>
+              <div class="dropdown-menu left-0 p-0 w-full">
+                <div class="dropdown-scroll-lg lg:p-4">
+                  <div class="flex flex-wrap mx-lg-0">
+                    <div class="w-full lg:w-2/5 px-3 mb-4 lg:mb-0">
+                      <h5 class="text-xs pl-4 text-gray-400 mb-3 pt-3">
+                        Header & footers Styles <span class="bg-blue-500 text-white text-xs leading-tight inline-block px-2 py-1 ml-2 rounded-full">15+</span></h5>
+                      <div class="flex flex-wrap -mx-3 g-0">
+                        <div class="w-full px-3 lg:w-1/2">
+                          <a href="header-default.html" class="dropdown-item">Default</a>
+                          <a href="header-info-bar.html" class="dropdown-item">info bar</a>
+                          <a href="header-no-navbar.html" class="dropdown-item">No Navbar</a>
+                          <a href="header-sticky-down.html" class="dropdown-item">Sticky down</a>
+                          <a href="header-sticky-up.html" class="dropdown-item">Sticky up</a>
+                          <a href="header-sticky-boxed.html" class="dropdown-item">Sticky Boxed</a>
+                          <a href="header-search-bar.html" class="dropdown-item">Search</a>
+                        </div>
+                        <!--/.col-sm-6-->
+                        <div class="w-full px-3 lg:w-1/2">
+                          <div class="text-xs pl-4 text-gray-400 mb-3 pt-3">Footer Styles <span class="badge ms-2 bg-info">9+</span></div>
+                          <a href="footer-1.html" class="dropdown-item">Footer 1</a>
+                          <a href="footer-2.html" class="dropdown-item">Footer 2</a>
+                          <a href="footer-3.html" class="dropdown-item">Footer 3</a>
+                          <a href="footer-4.html" class="dropdown-item">Footer 4</a>
+                          <a href="footer-5.html" class="dropdown-item">Footer 5</a>
+                          <a href="footer-6.html" class="dropdown-item">Footer 6</a>
+                          <a href="footer-7.html" class="dropdown-item">Footer 7</a>
+                        </div>
+                      </div>
+                      <!--/.row-->
+                    </div>
+                    <!--/.End col-->
+                    <div class="w-full lg:w-2/5 px-3 mb-4 lg:mb-0">
+                      <h5 class="text-xs pl-4 text-gray-400 mb-3 pt-3">
+                        Hero Covers Slider</h5>
+                      <div class="flex flex-wrap -mx-3">
+                        <div class="w-full px-3 lg:w-1/2">
+                          <a href="hero-simple.html" class="dropdown-item">Hero Simple</a>
+                          <a href="hero-parallax.html" class="dropdown-item">Hero Parallax</a>
+                          <a href="hero-parallax-element.html" class="dropdown-item"> Parallax Element</a>
+                          <a href="hero-fullscreen.html" class="dropdown-item">Hero Fullscreen</a>
+                          <a href="hero-newsletter.html" class="dropdown-item">Hero Newsletter</a>
+                          <a href="hero-signup.html" class="dropdown-item">Form SignUp</a>
+                          <a href="hero-pricing.html" class="dropdown-item">Form Pricing</a>
+                          <a href="hero-video-button.html" class="dropdown-item">Video popup</a>
+                          <a href="hero-youtube-video.html" class="dropdown-item">Youtube Video</a>
+                          <a href="hero-vimeo-video.html" class="dropdown-item">Vimeo Video</a>
+                          <a href="hero-html5-video.html" class="dropdown-item">HTML5 Video</a>
+                        </div>
+                        <div class="w-full px-3 lg:w-1/2">
+                          <a href="hero-bg-shape.html" class="dropdown-item">BG Shape</a>
+                          <a href="hero-shape-image.html" class="dropdown-item">Shape Image</a>
+                          <a href="hero-tiles.html" class="dropdown-item">Image tiles</a>
+                          <a href="hero-media-player.html" class="dropdown-item">Media Player </a>
+                          <a href="hero-typed-text.html" class="dropdown-item">Typed Text</a>
+                          <a href="hero-slider-swiper.html" class="dropdown-item">Swiper slider</a>
+                          <a href="hero-slider-master.html" class="dropdown-item">Master Slider</a>
+                          <a href="hero-slider-master-alt.html" class="dropdown-item">Master Slider Alt</a>
+                          <a href="hero-particles.html" class="dropdown-item">Particles</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!--/.End col-->
+  
+                    <div class="w-full lg:w-1/5 px-3 mb-4 lg:mb-0">
+                      <h5 class="text-xs pl-4 text-gray-400 mb-3 pt-3">
+                        Others</h5>
+                      <a class="dropdown-item" target="_blank" href="layout-blank.html">layout Blank</a>
+           
+                
+                          <a href="feature-sticky-cards.html" class="dropdown-item">Sticky Cards
+                            <span class="inline-block ms-2 text-xs px-2 py-1 leading-tight bg-amber-500 text-white rounded-full">New</span>
+                          </a>
+                          <a href="feature-image-reveal.html" class="dropdown-item">Image Reveal
+                            <span class="inline-block ms-2 text-xs px-2 py-1 leading-tight bg-amber-500 text-white rounded-full">New</span>
+                          </a>
+                    </div>
+                    <!--/.End col-->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!--end:features-->
+          </ul>
+          <!--end:Navbar items-->
+
+        </div>
+        <!--end:navbar-collapse-->
+      </div>
+
+    </nav>
+    <!--end:navbar-->
+  </header>
+  <!--end:header-->
+
+ <!--Main content-->
+ <main class="main-content" id="main-content">
+    <section class="relative overflow-hidden bg-black text-white">
+        <!--Video-->
+        <div class="w-full h-full opacity-30 absolute right-0 top-0 bg-cover bg-no-repeat bg-center"
+            style="background-image: url(assets/videos/officeloop-cover.jpg);">
+            <div class="jarallax bg-black h-full w-full" data-speed=".2" data-video-src="mp4:./assets/videos/officeloop.mp4">
+            </div>
+        </div>
+        <!--:Decoration bg:-->
+        <img src="assets/img/backgrounds/bg-blur2.png" class="w-1/2 h-auto absolute left-1/2 -translate-x-1/2 top-0 opacity-20" alt="">
+        <!--divider-->
+        <svg class="absolute right-0 bottom-0 text-white dark:text-black" fill="currentColor" width="100%" height="80"
+            preserveAspectRatio="none" viewBox="0 0 1440 150">
+            <path
+                d="M0,139.588931 C152,152.720009 299.666667,139.401344 443,99.6329343 C658,39.9803202 681,66.1486839 905,90.6287661 C1129,115.108848 1222,59.3955578 1293,37.4478979 C1340.33333,22.8161246 1389.33333,16.1567919 1440,17.4698997 L1440,150 L0,150 L0,139.588931 Z">
+            </path>
+            <path
+                d="M0,117.980769 C152,145.786435 299.666667,138.940533 443,97.4430619 C658,35.1968558 697,56.6671048 921,82.2115385 C1145,107.755972 1222,55.4562342 1293,32.5543282 C1340.33333,17.2863909 1389.33333,10.337522 1440,11.7077215 L1440,150 L0,150 L0,117.980769 Z"
+                fill-opacity="0.3"></path>
+            <path
+                d="M0,106.034486 C156.666667,132.662839 291.666667,129.406134 405,96.2643713 C575,46.5517277 637,36.0308187 861,62.6436817 C1085,89.2565447 1215,51.1586623 1286,27.2988541 C1333.33333,11.3923153 1384.66667,2.2926973 1440,1.13686838e-13 L1440,150 L0,150 L0,106.034486 Z"
+                fill-opacity="0.3"></path>
+        </svg>
+
+        <div class="container relative z-[1] pt-12 lg:pt-24 pb-24 lg:pb-36">
+            <div class="flex flex-wrap -mx-3 py-12">
+                <div class="w-full px-3 mx-auto text-center lg:w-8/12 mx-auto">
+                    <h1 class="text-4xl lg:text-7xl font-medium mb-7">We are a brand of collective & creativity</h1>
+                    <div class="flex items-center justify-center">
+                        <!--play button-->
+                        <a href="https://vimeo.com/353105087" data-glightbox data-gallery="gallery07"
+                        class="flex items-center justify-center w-24 h-24 rounded-full relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-300 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-24 w-24 flex items-center justify-center bg-indigo-500 text-white"> <i class="bi bi-play text-4xl leading-[1]"></i></span>
+                       
+                    </a>
+                        <small class="text-white/50 font-serif italic ml-3">Watch story </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/.row-->
+    </section>
+    <section class="relative border-b border-gray-200 dark:border-gray-800 overflow-hidden" id="next">
+        <div class="container py-16 lg:py-24">
+            <div class="flex flex-wrap -mx-3 items-center">
+                <div class="w-full px-3 lg:w-6/12 mb-7 lg:mb-0">
+                    <h6 class="italic font-serif text-gray-400 mb-4">
+                        Realise your potential </h6>
+                    <h1 class="text-4xl lg:text-5xl font-medium mb-5" data-text-split>
+                        We create digital design experiences
+                    </h1>
+                    <p class="mb-7 text-gray-600 dark:text-gray-300">
+                        We are a professional digital studio based in California, Usa. We make good
+                        designs for small to large businesses, Building good designs is our passion. Drop us a
+                        line and say hello to us without any hesitation. We would love to discuss about your
+                        next project.
+                    </p>
+                    <div>
+                        <a href="#" class="btn bg-indigo-500 text-white hover:bg-indigo-600"><span>What we
+                                offer</span></a>
+                    </div>
+                </div>
+                <div class="w-full px-3 lg:w-6/12 relative xl:w-5/12 xl:ml-auto">
+                    <div class="relative">
+                     
+                        <div class="relative pl-9 lg:pl-24 pb-9 pr-5 pt-5">
+                            <img src="assets/img/960x1140/4.jpg" alt=""
+                                class="max-w-full rounded-2xl shadow-lg relative">
+                            <img data-animation-y src="assets/img/960x900/4.jpg" alt=""
+                                class="max-w-full absolute shadow-lg rounded-2xl top-1/2 -mt-12 start-0 w-6/12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="relative">
+        <div class="container pt-12 lg:pt-16 pb-9">
+            <div class="flex flex-wrap -mx-3">
+                <div class="md:w-4/12 w-full px-3 mb-7 md:mb-0">
+                    <h6 class="italic font-serif mb-4 text-gray-400">We have been</h6>
+                    <h5 class="mb-4 text-4xl lg:text-5xl font-medium">
+                        <span data-countup="9" data-suffix="+" class="display-5 text-primary"></span>
+                    </h5>
+                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                        <strong>Years of experience</strong> adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="md:w-4/12 w-full px-3 mb-7 md:mb-0">
+                    <h6 class="italic font-serif mb-4 text-gray-400">Accuracy</h6>
+                    <h5 class="mb-4 text-4xl lg:text-5xl font-medium">
+                        <span data-countup="99.9" data-suffix="%" class="display-5 text-primary"></span>
+                    </h5>
+                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                        Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="md:w-4/12 w-full px-3">
+                    <h6 class="italic font-serif mb-4 text-gray-400">Sales</h6>
+                    <h5 class="mb-4 text-4xl lg:text-5xl font-medium">
+                        <span data-countup="16000" data-suffix="+" class="display-5 text-primary"></span>
+                    </h5>
+                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                        Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="relative bg-green-500/10 overflow-hidden">
+        <!--Divider shape-->
+        <svg class="absolute start-0 bottom-0 w-full text-white dark:text-black" preserveAspectRatio="none" width="1200"
+            height="80" viewBox="0 0 1200 167" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M1200 39.6228L1133 26.8851C1067 14.1473 933 -11.3281 800 5.65554C667 22.6392 533 82.0819 400 99.0655C267 116.049 133 90.5737 67 77.836L0 65.0982V167H67C133 167 267 167 400 167C533 167 667 167 800 167C933 167 1067 167 1133 167H1200V39.6228Z"
+                fill="currentColor" />
+        </svg>
+        <!--Divider shape-top-->
+        <svg class="absolute start-0 flip-y top-0 w-full rotate-180 text-white dark:text-black" preserveAspectRatio="none" width="1200"
+            height="80" viewBox="0 0 1200 167" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M1200 39.6228L1133 26.8851C1067 14.1473 933 -11.3281 800 5.65554C667 22.6392 533 82.0819 400 99.0655C267 116.049 133 90.5737 67 77.836L0 65.0982V167H67C133 167 267 167 400 167C533 167 667 167 800 167C933 167 1067 167 1133 167H1200V39.6228Z"
+                fill="currentColor" />
+        </svg>
+        <div class="container relative">
+            <div class="relative pb-16 pt-24">
+                <div class="flex flex-wrap -mx-3 py-16 lg:py-24">
+                    <div class="w-full lg:w-8/12 px-3 mx-auto">
+                        <figure class="mb-0 relative">
+                            <div class="relative mb-7">
+                                <!--Avatar Image-->
+                                <img class="relative w-24 rounded-full shadow"
+                                    src="assets/img/avatar/12.jpg" alt="">
+                            </div>
+                            <div>
+                                <blockquote>
+                                    <h2 data-text-split class="text-4xl lg:text-5xl mb-7">
+                                        " They're very responsive and go above and beyond to meet our needs. We
+                                        continue working with them, which is the best sign of our satisfaction.
+                                        "
+                                    </h2>
+                                </blockquote>
+                                <figcaption>
+                                    <h5 class="mb-2 text-xl font-medium text-indigo-500">
+                                        Joseph Foxx
+                                    </h5>
+                                    <span class="opacity-50">
+                                        Staff Engineer, Any inc.
+                                    </span>
+                                </figcaption>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="relative">
+        <div class="container py-16 lg:py-24">
+            <div class="flex-wrap flex -mx-3 mb-12">
+                <div class="lg:w-7/12 w-full px-3 mx-auto text-center">
+                    <h2 class="text-4xl lg:text-5xl font-medium" data-text-split>Meet our dedicated highly skilled super team</h2>
+                </div>
+            </div>
+            <div class="flex-wrap flex -mx-3">
+                <div class="lg:w-4/12 w-full px-3 mb-9 mt-auto text-center" data-animation="fadeInUp" data-delay=".1"
+                    >
+                    <div class="relative mb-4 overflow-hidden w-32 h-32 mx-auto rounded-full">
+                        <img src="assets/img/team/1.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-xl font-medium">
+                            Jordy Eubanks
+                        </h5>
+                        <p class="mb-3 font-serif italic text-indigo-500">Creative director</p>
+                        <p class="lg:w-8/12 text-gray-600 dark:text-gray-300 mx-auto mb-2">
+                            Duis aute irure dolor in velit esse cillum fugiat nulla pariatur.
+                        </p>
+                        <small class="text-gray-400">London, UK</small>
+                    </div>
+                </div>
+                <div class="lg:w-4/12 w-full px-3 mb-9 mt-auto text-center" data-animation="fadeInUp" data-delay=".15"
+                    >
+                    <div class="relative mb-4 overflow-hidden w-32 h-32 mx-auto rounded-full">
+                        <img src="assets/img/team/2.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-xl font-medium">
+                            Olive Mathews
+                        </h5>
+                        <p class="mb-3 font-serif italic text-indigo-500">Visual designer</p>
+                        <p class="lg:w-8/12 text-gray-600 dark:text-gray-300 mx-auto mb-2">
+                            Duis aute irure dolor in velit esse cillum fugiat nulla pariatur.
+                        </p>
+                        <small class="text-gray-400">Texas, US</small>
+                    </div>
+                </div>
+                <div class="lg:w-4/12 w-full px-3 mb-9 mt-auto text-center" data-animation="fadeInUp" data-delay=".2"
+                    >
+                    <div class="relative mb-5 overflow-hidden w-32 h-32 mx-auto rounded-full">
+                        <img src="assets/img/team/3.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-xl font-medium">
+                            Aarav Lynn
+                        </h5>
+                        <p class="mb-3 font-serif italic text-indigo-500">Developer</p>
+                        <p class="lg:w-8/12 text-gray-600 dark:text-gray-300 mx-auto mb-2">
+                            Duis aute irure dolor in velit esse cillum fugiat nulla pariatur.
+                        </p>
+                        <small class="text-gray-400">Wellington, NZ</small>
+                    </div>
+                </div>
+                <div class="py-4"></div>
+                <div class="lg:w-4/12 w-full px-3 mb-9 lg:mb-0 mt-auto text-center" data-animation="fadeInUp" data-delay=".25"
+                    >
+                    <div class="relative mb-5 overflow-hidden w-32 h-32 mx-auto rounded-full">
+                        <img src="assets/img/team/5.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-xl font-medium">
+                            Eva Calvert
+                        </h5>
+                        <p class="mb-3 font-serif italic text-indigo-500">Motion designer</p>
+                        <p class="lg:w-8/12 text-gray-600 dark:text-gray-300 mx-auto mb-2">
+                            Duis aute irure dolor in velit esse cillum fugiat nulla pariatur.
+                        </p>
+                        <small class="text-gray-400">Paris, FR</small>
+                    </div>
+                </div>
+                <div class="lg:w-4/12 w-full px-3 mb-7 lg:mb-0 mt-auto text-center" data-animation="fadeInUp" data-delay=".3">
+                    <div class="relative mb-5 overflow-hidden w-32 h-32 mx-auto rounded-full">
+                        <img src="assets/img/team/6.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-xl font-medium">
+                            Amiya Potts
+                        </h5>
+                        <p class="mb-3 font-serif italic text-indigo-500">Strategist / Copywriter</p>
+                        <p class="lg:w-8/12 text-gray-600 dark:text-gray-300 mx-auto mb-2">
+                            Duis aute irure dolor in velit esse cillum fugiat nulla pariatur.
+                        </p>
+                        <small class="text-gray-400">California, USA</small>
+                    </div>
+                </div>
+                <div class="lg:w-4/12 w-full px-3" data-animation="fadeInUp" data-delay=".35">
+                    <div class="relative overflow-hidden h-full">
+                        <div class="relative flex-grow flex flex-col h-full text-center">
+                            <div
+                                class="w-32 h-32 mb-5 mx-auto bg-indigo-500 text-white shadow relative rounded-full flex flex-col items-center justify-center">
+                               <small class="block mb-2 opacity-50">New opening</small>
+                                <h3 class="mb-0"> Visual <br>designer</h3>
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="text-xl font-medium lg:w-8/12 mx-auto">
+                                    Become a member of our super team
+                                </h3>
+                            </div>
+                            <div class="p-4">
+                                <a href="#!" class="link-underline h6 text-dark pb-1">View Job Openings
+                                    <i class="bi bi-arrow-right fs-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</main>
+
+
+
+    <!--Footer Start-->
+    <!--begin:Footer-->
+    <footer id="footer" class="bg-black text-gray-300 footer relative">
+        <div class="container pt-12 lg:pt-16">
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full lg:w-3/12 px-4 mb-7 h-full me-auto">
+                    <!--Title-->
+                    <h2 class="text-2xl lg:text-3xl leading-[1.25] font-medium text-white mb-0 relative">
+                        Work with us
+                    </h2>
+                    <div class="pt-3 mb-7">
+                        <a class="inline-block relative link-hover-underline text-white text-lg" href="mailto:mail@doamin.com">mail@domain.com</a>
+                    </div>
+                    <!--:Dark Mode:-->
+                    <button data-bs-toggle="tooltip" data-bs-title="toggle theme" data-bs-placement="left"
+                    class="toggle-mode w-10 h-10 rounded-full transition-all bg-white shadow-lg text-gray-700 dark:text-white dark:bg-gray-700 hover:bg-indigo-500 hover:text-white dark:hover:bg-indigo-500 flex items-center justify-center"
+                    type="button">
+                    <span class="dark:block hidden">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 2V4M12 20V22M4 12H2M6.31412 6.31412L4.8999 4.8999M17.6859 6.31412L19.1001 4.8999M6.31412 17.69L4.8999 19.1042M17.6859 17.69L19.1001 19.1042M22 12H20M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <span class="block dark:hidden">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M21.9548 12.9564C20.5779 15.3717 17.9791 17.0001 15 17.0001C10.5817 17.0001 7 13.4184 7 9.00008C7 6.02072 8.62867 3.42175 11.0443 2.04492C5.96975 2.52607 2 6.79936 2 11.9998C2 17.5227 6.47715 21.9998 12 21.9998C17.2002 21.9998 21.4733 18.0305 21.9548 12.9564Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    </button>
+                </div>
+                <div class="w-full lg:w-2/12 md:w-4/12 px-4 mb-7 ms-auto h-full">
+                    <!--Title-->
+                    <h6 class="small mb-3 mb-lg-4 text-gray-400">Learn</h6>
+                    <!--Nav-->
+                    <ul class="flex flex-col space-y-2 mb-0">
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Design</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Digital</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Development</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Branding</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Graphics</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Process</a></li>
+                    </ul>
+                </div>
+                <!--/.Col-->
+                <div class="w-full lg:w-2/12 md:w-4/12 px-4 mb-7 h-full">
+                    <!--Title-->
+                    <h6 class="small mb-3 mb-lg-4 text-gray-400">Resources</h6>
+                    <!--Nav-->
+                    <ul class="flex flex-col space-y-2 mb-0">
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Elements</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Features</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Credits</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Updates</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Help center</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Events</a></li>
+                    </ul>
+                </div>
+                <!--/.Col-->
+                <div class="w-full lg:w-2/12 md:w-4/12 px-4 mb-7 h-full">
+                    <!--Title-->
+                    <h6 class="small mb-3 mb-lg-4 text-gray-400">Company</h6>
+                    <!--Nav-->
+                    <ul class="flex flex-col space-y-2 mb-0">
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Awwards</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link py-1 block text-white" href="#!">Careers
+                                <span class="badge badge-pill ms-1 bg-indigo-500 text-xs font-medium rounded-full px-2 py-1 text-white">Hiring</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Customers</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Affiliate</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Contact us</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Terms of use</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <!--/.Col-->
+            </div>
+            <hr class="mb-5 mt-0 border-gray-800">
+        </div> <!-- / .container -->
+        <div class="pb-7">
+            <div class="container">
+                <div class="flex flex-wrap -mx-4 justify-between items-center">
+                    <div class="flex gap-2 mb-4 md:mb-0 w-full px-4 md:w-6/12">
+                        <!-- Social button -->
+                        <a href="#!" class="w-10 h-10 border relative group overflow-hidden flex items-center justify-center rounded-full hover:bg-[#3b5998] hover:border-[#3b5998] hover:text-white">
+                            <i class="bi bi-facebook fs-6 block transition-all group-hover:-translate-y-full group-hover:opacity-0"></i>
+                            <i class="bi bi-facebook fs-6 block transition-all translate-y-full opacity-0 absolute group-hover:opacity-100 group-hover:translate-y-0"></i>
+                        </a>
+                        <!-- Social button -->
+                        <a href="#!" class="w-10 h-10 border relative group overflow-hidden flex items-center justify-center rounded-full hover:bg-[#1da1f2] hover:border-[#1da1f2] hover:text-white">
+                            <i class="bi bi-twitter-x fs-6 block transition-all group-hover:-translate-y-full group-hover:opacity-0"></i>
+                            <i class="bi bi-twitter-x fs-6 block transition-all translate-y-full opacity-0 absolute group-hover:opacity-100 group-hover:translate-y-0"></i>
+                        </a>
+                        <!-- Social button -->
+                        <a href="#!" class="w-10 h-10 border relative group overflow-hidden flex items-center justify-center rounded-full hover:bg-[#0077b5] hover:border-[#0077b5] hover:text-white">
+                            <i class="bi bi-linkedin fs-6 block transition-all group-hover:-translate-y-full group-hover:opacity-0"></i>
+                            <i class="bi bi-linkedin fs-6 block transition-all translate-y-full opacity-0 absolute group-hover:opacity-100 group-hover:translate-y-0"></i>
+                        </a>
+                        <!-- Social button -->
+                        <a href="#!" class="w-10 h-10 border relative group overflow-hidden flex items-center justify-center rounded-full hover:bg-[#e1306c] hover:border-[#e1306c] hover:text-white">
+                            <i class="bi bi-instagram fs-6 block transition-all group-hover:-translate-y-full group-hover:opacity-0"></i>
+                            <i class="bi bi-instagram fs-6 block transition-all translate-y-full opacity-0 absolute group-hover:opacity-100 group-hover:translate-y-0"></i>
+                        </a>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 md:text-right">
+                        <span class="block text-xs text-gray-400">© Copyright
+                            <script>
+                                document.write(new Date().getFullYear())
+
+                            </script>. Assan
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--end:Footer-->
+
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+   
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme js -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+    
+</body>
+
+</html>

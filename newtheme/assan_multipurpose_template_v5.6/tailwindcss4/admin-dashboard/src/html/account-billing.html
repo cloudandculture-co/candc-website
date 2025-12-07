@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assan Tailwindcss Admin</title>
+
+  <!--:Flatpickr:-->
+  <link rel="stylesheet" href="vendor/css/flatpickr.min.css">
+
+  @@include('./partials/head-includes.html')
+</head>
+
+<body
+  class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+@@include('./partials/app-preloader.html')
+
+  @@include('./partials/sidebar.html',{"page": "account","account_collapse":
+  "show", "account_billing": "active"} )
+
+  <main class="relative flex flex-col lg:ms-64">
+    @@include('./partials/header-default.html')
+    <!--:Page Header:-->
+    <div class="px-4 lg:px-6 xl:px-12 py-4">
+      <div class="flex flex-wrap items-center">
+        <div class="flex-grow">
+          <h4 class="text-2xl font-semibold">Billing</h4>
+        </div>
+        <div class="shrink-0">
+          <!--:Breadcrumb:-->
+          <nav aria-label="breadcrumb">
+            <ol class="flex items-center">
+              <li class="breadcrumb-item"><a href="index.html"
+                  class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+              </li>
+              <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+              <li class="breadcrumb-item active"><a
+                  class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                  href="account-overview.html">Account</a></li>
+              <li class="px-2 opacity-20 flex items-center">
+                <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+              <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Billing
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="content px-4 lg:px-6 xl:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-4">
+        <div class="md:col-span-4 lg:col-span-3">
+          <!--Account nav-->
+              <ul class="flex flex-col space-y-4">
+                <li class="nav-item">
+                  <a href="account-overview.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                    <span class="icon-[carbon--user-settings] me-2"></span>
+                    Overview
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-billing.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500 active">
+                    <span class="icon-[carbon--money] me-2"></span> Billing
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-contacts.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                    <span class="icon-[carbon--user-multiple] me-2"></span> Contacts
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-security.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                    <span class="icon-[carbon--rule-locked] me-2"></span> Security
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-permissions.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                    <span class="icon-[carbon--notification-new] me-2"></span> Permissions
+                  </a>
+                </li>
+              </ul>
+        </div>
+        <div class="md:col-span-8 lg:col-span-9">
+          <div class="grid grid-cols-1 gap-4 mb-4">
+            <div>
+              <div
+                class="flex flex-col border border-gray-200 dark:border-gray-900 sm:flex-row items-center p-4 h-full bg-white dark:bg-gray-900 rounded-lg shadow-card">
+                <div class="flex-grow mb-4 sm:mb-0">
+                  <h5 class="text-lg font-semibold">Your current plan</h5>
+                </div>
+                <div class="shrink-0 space-x-1">
+                  <a href="#!" class="btn btn-sm btn-primary">Cancel Plan</a>
+                  <a href="#!" class="btn btn-sm btn-success">Upgrade Plan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <!--:Payment card:-->
+              <div
+                class="p-4 border border-gray-200 dark:border-gray-900 bg-white rounded-lg shadow-card dark:bg-gray-900 flex flex-col h-full relative">
+                <div class="flex items-center">
+                  <!--:Logo:-->
+                  <div class="bg-gray-100 dark:bg-gray-700 w-12 h-12 flex items-center justify-center rounded-md mr-4">
+                    <img src="img/brand-logos/mastercard.svg" class="w-8 h-auto" alt="">
+                  </div>
+                  <div class="flex-grow">
+                    <span class="d-block font-semibold">****0786</span>
+                    <div class="d-flex mb-2">
+                      <small class="opacity-60 mr-2">Expiry date:</small>
+                      <span class="d-inline-block">09/026</span>
+                    </div>
+                    <span class="badge bg-primary-500 text-white">Primary</span>
+                  </div>
+                  <!--:Action Dropdown:-->
+                  <div class="relative">
+                    <button
+                      class="hover:bg-primary-500 hover:text-white rounded-full w-8 h-8 inline-flex items-center justify-center"
+                      data-bs-toggle="dropdown">
+                      <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                    </button>
+                    <!--:Dropdown:-->
+                    <div class="dropdown-menu min-w-40 absolute left-auto right-0 py-2 hidden [&.show]:block">
+                      <a href="#!" class="dropdown-item">
+                        Action
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Another action
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Something else here
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <!--:Payment card:-->
+              <div
+                class="p-4 border border-gray-200 dark:border-gray-900 bg-white rounded-lg shadow-card dark:bg-gray-900 flex flex-col h-full relative">
+                <div class="flex items-center h-full">
+                  <!--:Logo:-->
+                  <div class="bg-gray-100 dark:bg-gray-800 w-12 h-12 flex items-center justify-center rounded-md mr-4">
+                    <img src="img/brand-logos/visa.svg" class="w-8 h-auto" alt="">
+                  </div>
+                  <div class="flex-grow">
+                    <span class="d-block font-semibold">****0786</span>
+                    <div class="d-flex mb-1">
+                      <small class="text-body-secondary mr-2">Expiry date:</small>
+                      <span class="d-inline-block">09/026</span>
+                    </div>
+                  </div>
+                  <!--:Action Dropdown:-->
+                  <div class="relative">
+                    <button
+                      class="hover:bg-primary-500 hover:text-white rounded-full w-8 h-8 inline-flex items-center justify-center"
+                      data-bs-toggle="dropdown">
+                      <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                    </button>
+                    <!--:Dropdown:-->
+                    <div class="dropdown-menu min-w-40 py-2 hidden [&.show]:block">
+                      <a href="#!" class="dropdown-item">
+                        Action
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Another action
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Something else here
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 gap-4">
+            <div>
+              <div
+                class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 shadow-card rounded-lg overflow-hidden">
+
+                <div class="px-4 py-3">
+                  <!-- Title -->
+                  <h5 class="mb-0 text-lg font-semibold">
+                    Invoices
+                  </h5>
+                </div>
+                <div class="overflow-x-auto">
+                  <table class="w-full border-collase text-nowrap mb-0 text-left">
+                    <thead class="text-sm bg-gray-50 dark:bg-black text-gray-400">
+                      <tr class="border-t border-gray-200 dark:border-gray-800">
+                        <th class="px-4 py-3">Invoice ID</th>
+                        <th class="px-4 py-3">Date</th>
+                        <th class="px-4 py-3">Amount</th>
+                        <th class="px-4 py-3">Status</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody class="fs-base">
+                      <tr class="border-t border-gray-200 dark:border-gray-800">
+                        <td class="px-4 py-3">
+                          <a href="invoice.html" class="text-primary-500">Invoice #56756</a>
+                        </td>
+                        <td class="px-4 py-3">
+                          <time datetime="2020-04-24">Sep. 24, 2024</time>
+                        </td>
+                        <td class="px-4 py-3">
+                          $29.00
+                        </td>
+                        <td class="px-4 py-3">
+                          <span class="badge !rounded-full bg-warning-500/20 text-warning-500">Pending</span>
+                        </td>
+                        <td>
+                          <a href="#!"
+                            class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-primary-500 hover:text-white">
+                           <span class="icon-[tabler--download]"></span>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="border-t border-gray-200 dark:border-gray-800">
+                        <td class="px-4 py-3">
+                          <a href="invoice.html" class="text-primary-500">Invoice #56894</a>
+                        </td>
+                        <td class="px-4 py-3">
+                          <time datetime="2020-03-24">Aug. 04, 2024</time>
+                        </td>
+                        <td class="px-4 py-3">
+                          $29.00
+                        </td>
+                        <td class="px-4 py-3">
+                          <span class="badge !rounded-full bg-success-500/20 text-success-500">Paid</span>
+                        </td>
+                        <td>
+                          <a href="#!"
+                            class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-primary-500 hover:text-white">
+                            <span class="icon-[tabler--download]"></span>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="border-t border-gray-200 dark:border-gray-800">
+                        <td class="px-4 py-3">
+                          <a href="invoice.html" class="text-primary-500">Invoice #57890</a>
+                        </td>
+                        <td class="px-4 py-3">
+                          <time datetime="2020-02-24">Jun. 13, 2024</time>
+                        </td>
+                        <td class="px-4 py-3">
+                          $29.00
+                        </td>
+                        <td class="px-4 py-3">
+                          <span class="badge !rounded-full bg-success-500/20 text-success-500">Paid</span>
+                        </td>
+                        <td>
+                          <a href="#!"
+                            class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-primary-500 hover:text-white">
+                           <span class="icon-[tabler--download]"></span>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="border-t border-gray-200 dark:border-gray-800">
+                        <td class="px-4 py-3">
+                          <a href="invoice.html" class="text-primary-500">Invoice #57980</a>
+                        </td>
+                        <td class="px-4 py-3">
+                          <time datetime="2020-01-24">Apr. 03, 2024</time>
+                        </td>
+                        <td class="px-4 py-3">
+                          $29.00
+                        </td>
+                        <td class="px-4 py-3">
+                          <span class="badge !rounded-full bg-primary-500/20 text-primary-500">Processing...</span>
+                        </td>
+                        <td>
+                          <a href="#!"
+                            class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-primary-500 hover:text-white">
+                            <span class="icon-[tabler--download]"></span>
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </main>
+  <!--:Main Script:-->
+  <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+
+    <!--:Flatpickr:-->
+    <link rel="stylesheet" href="vendor/css/flatpickr.min.css">
+
+    @@include('./partials/head-includes.html')
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+      @@include('./partials/app-preloader.html')
+
+
+    @@include('./partials/sidebar.html',{"page": "projects"} )
+
+    <main class="relative flex flex-col lg:ms-64">
+        @@include('./partials/header-default.html')
+        <div class="content relative pt-4 px-4 lg:px-6 xl:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-4">
+             
+              <div class="md:col-span-7">
+                <!--:Project card:-->
+                <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg p-4 mb-4">
+                  <div class="mb-3 flex items-center">
+                      <!--Due date-->
+                      <small class="mr-2">Due Date</small>
+                      <span class="badge bg-danger-500 text-white flex-shrink">05 Oct. 2024</span>
+                    </div>
+                  <div class="flex mb-4">
+                      
+                     
+                      <div class="mr-3 flex-grow overflow-hidden">
+                        <h3 class="mb-1 text-2xl font-semibold">Tokotok Ecommerce App</h3>
+                        <p>
+                          #1 Tool to get started with Web Apps any Kind & size
+                        </p>
+                      </div>
+                      <div class="shrink-0">
+                        <span class="badge text-white bg-success-500">In Progress</span>
+        
+                      </div>
+                    </div>
+                     <!--Members-->
+                      <div class="flex items-center mb-4">
+                        <a href="#!.html" class="w-10 h-10 border-2 border-white dark:border-gray-900 rounded-full relative block"
+                          data-tippy-content="Gabriel H">
+                          <img src="img/avatars/m1.jpg" alt="..." class="max-w-full rounded-full">
+                        </a>
+                        <a href="#!.html" class="w-10 h-10 border-2 border-white dark:border-gray-900 rounded-full relative -ml-4 block"
+                          data-tippy-content="Emily Doe">
+                          <img src="img/avatars/w1.jpg" alt="..." class="max-w-full rounded-full">
+                        </a>
+                        <a href="#!.html" class="w-10 border-2 border-white dark:border-gray-900 h-10 rounded-full relative -ml-4 block"
+                          data-tippy-content="Adam Howkins">
+                          <img src="img/avatars/m3.jpg" alt="..." class="max-w-full rounded-full">
+                        </a>
+                        <a href="#!.html"
+                          class="px-4 h-10 bg-primary-500 border-2 border-white dark:border-gray-900 text-white rounded-full relative -ml-4 flex items-center justify-center"
+                          data-tippy-content="6 more members">
+                          <b>+6</b>
+                        </a>
+                      </div>
+        
+                    <!--Description text-->
+                    <p class="mb-0">
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                      nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                      mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+                  <div>
+                      <!--:Card:-->
+                    <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg p-4 flex flex-col gap-4">
+                      <div class="flex-shrink w-10 h-10 bg-danger-500 text-white flex items-center justify-center rounded-full mr-3">
+                         <span class="icon-[tabler--basket-dollar] text-2xl"></span>
+                      </div>
+                      <div class="flex-grow">
+                        <span class="block mb-1 text-gray-400">Budget Spent</span>
+                        <h4 class="mb-0 text-lg font-semibold">$9125</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                      <!--:Card:-->
+                      <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg p-4 flex flex-col gap-4">
+                          <div class="flex-shrink w-10 h-10 bg-primary-500 text-white flex items-center justify-center rounded-full mr-3">
+                            <span class="icon-[tabler--device-watch-stats] text-2xl"></span>
+                          </div>
+                          <div class="flex-grow">
+                            <span class="block mb-1 text-gray-400">Hours Spent</span>
+                            <h4 class="mb-0 text-lg font-semibold">120</h4>
+                          </div>
+                        </div>
+                  </div>
+                  <div>
+                     <!--:Card:-->
+                     <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg p-4 flex flex-col gap-4">
+                       <!--:Progress:-->
+                <div class="js-progress relative shrink-0 mr-4" data-progress="84">
+                  <svg class="progress-circle" width="36" height="36" viewBox="0 0 36 36">
+                    <path fill="none" stroke="currentColor" stroke-width="3" class="progress-bg text-success-500/20" d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path cl fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="rounded" class="progress-bar text-success-500"
+                      stroke-dasharray="0, 100" d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  </svg>
+                  <!--:Overlay Text:-->
+                  <div class="progress-value hidden absolute w-full h-full left-0 top-0 flex items-center justify-center">
+                    <span class="progress-value-text text-sm">50</span>%
+                  </div>
+                </div>
+                      <div class="flex-grow">
+                        <span class="block mb-1 text-gray-400">Progress</span>
+                        <h4 class="mb-0 text-lg font-semibold">84%</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg">
+                  <div class="p-4">
+                      <h5 class="text-lg font-semibold">Project Overview</h5>
+                      <p class="text-gray-400">Weekly reports</p>
+                  </div>
+                  <div class="px-4">
+                      <div id="chartOverview"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                  <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg mb-4">
+                    <div class="flex px-4 py-3 items-center justify-between">
+                      <h5 class="mb-0 mr-3 flex-grow font-semibold text-lg">Recent Activity</h5>
+                      <a href="#!" class="text-primary-500 dark:text-white border-b border-dashed hover:text-current">View All</a>
+                    </div>
+                    <!--:Activity timeline:-->
+                    <ul class="step list-unstyled mb-0 px-4 py-3">
+                      <!--.activity item-->
+                      <li class="relative pb-6 before:ml-4 before:content-[''] before:absolute before:top-0 before:bottom-0 before:mt-10 before:mb-2 before:w-px before:border-s before:border-gray-200 before:border-dashed dark:before:border-gray-700">
+                        <div class="flex items-start">
+                          <span class="shrink-0 block relative z-1 mr-4">
+                            <!--Avatar-->
+                            <span class="w-8 h-8 relative rounded-full bg-primary-500 text-primary-100 flex items-center justify-center">
+                              <b>R</b>
+                            </span>
+                          </span>
+        
+                          <div class="flex-grow overflow-hidden">
+                            <div class="flex items-center mb-1">
+                              <h6 class="font-semibold flex-grow truncate">Raymond Atkins</h6>
+                              <small class="block text-gray-400 shrink-0">20m</small>
+                            </div>
+                            <span class="lh-sm block mb-1">Added <a href="#!">Felipe Grace</a> to project
+                              group</span>
+                          </div>
+                        </div>
+        
+                      </li>
+                      <!--.activity item-->
+                      <li class="relative pb-6 before:ml-4 before:content-[''] before:absolute before:top-0 before:bottom-0 before:mt-10 before:mb-2 before:w-px before:border-s before:border-gray-200 before:border-dashed dark:before:border-gray-700">
+                        <div class="flex items-start">
+                          <span class="shrink-0 relative z-1 mr-4">
+                            <!--Avatar-->
+                            <span class="block rounded-full w-8 h-8">
+                              <img src="img/avatars/m3.jpg" class="rounded-full max-w-full" alt="">
+                            </span>
+                          </span>
+        
+                          <div class="flex-grow overflow-hidden">
+                            <div class="flex items-center overflow-hidden mb-1">
+                              <h6 class="font-semibold flex-grow truncate">Adam Voges</h6>
+                              <small class="block text-gray-400 shrink-0 pl-3">3h</small>
+                            </div>
+                            <span class="block">Created a new task <a href="#!" class="text-black dark:text-white hover:underline">#235</a></span>
+        
+                          </div>
+                        </div>
+        
+                      </li>
+                      <!--.activity item-->
+                      <li class="relative pb-6 before:ml-4 before:content-[''] before:absolute before:top-0 before:bottom-0 before:mt-10 before:mb-2 before:w-px before:border-s before:border-gray-200 before:border-dashed dark:before:border-gray-700">
+                        <div class="flex items-start">
+                          <span class="shrink-0 relative z-1 mr-4">
+                            <!--Avatar-->
+                            <span class="block rounded-full w-8 h-8">
+                              <img src="img/avatars/w1.jpg" class="rounded-full max-w-full" alt="">
+                            </span>
+                          </span>
+        
+                          <div class="flex-grow overflow-hidden">
+                            <div class="flex items-center mb-1">
+                              <h6 class="font-semibold flex-grow truncate">Jessica</h6>
+                              <small class="block text-gray-400 shrink-0">2d</small>
+                            </div>
+                            <span class="block mb-2 text-sm">Added CSS file</span>
+                            <!--Post-->
+                            <div class="p-3 border border-gray-200 dark:border-gray-800 border-dashed rounded-md flex items-center">
+                              <img src="img/icons/files/css.svg" class="w-6 mr-3 shrink-0 h-auto" alt="">
+                              <div class="flex-grow overflow-hidden">
+                                <p class="mb-1 leading-tight truncate">tooltip-popover.css</p>
+                                <div class="flex items-center justify-between">
+                                  <small class="text-sm text-gray-400">4KB</small>
+                                  <a href="#!" class="hover:text-black dark:hover:text-white">
+                                    <span class="icon-[tabler--download]"></span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+        
+                          </div>
+                        </div>
+        
+                      </li>
+        
+                      <!--.activity item-->
+                      <li class="relative pb-6 before:ml-4 before:content-[''] before:absolute before:top-0 before:bottom-0 before:mt-10 before:mb-2 before:w-px before:border-s before:border-gray-200 before:border-dashed dark:before:border-gray-700">
+                        <div class="flex items-start">
+                          <span class="shrink-0 relative z-1 mr-4">
+                            <!--Avatar-->
+                            <span class="block rounded-full w-8 h-8">
+                              <img src="img/avatars/w3.jpg" class="rounded-full max-w-full" alt="">
+                            </span>
+                          </span>
+        
+                          <div class="flex-grow overflow-hidden mb-1">
+                            <div class="flex items-center">
+                              <h6 class="font-semibold flex-grow truncate">Nikita</h6>
+                              <small class="block text-gray-400 shrink-0">3d</small>
+                            </div>
+                            <span class="lh-sm block mb-2">Reassigned a tasked to <a href="#!" class="text-black dark:text-white hover:underline">Jessica</a></span>
+        
+                          </div>
+                        </div>
+        
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg">
+                    <div class="flex justify-between items-center px-4 py-3">
+                      <h5 class="mb-0 mr-3 text-lg font-semibold">Files</h5>
+                      <a href="#!" class="text-primary-500 border-b border-dashed hover:text-current">View All</a>
+                    </div>
+                    <div class="card-body p-0">
+                      <!--Files list-->
+                      <ul class="divide-y divide-gray-100 dark:divide-gray-800">
+                  
+                        <!--File-->
+                        <li class="flex items-center px-4 py-3">
+                          <img src="img/icons/files/pdf.svg" class="w-8 h-auto shrink-0 mr-3" alt="">
+                          <a class="flex-grow text-inherit block overflow-hidden" href="#!">
+                            <h6 class="truncate">Project requirments</h6>
+                            <small class="opacity-60">200KB</small>
+                          </a>
+                          <!-- Dropdown -->
+                          <div
+                             class="relative shrink-0">
+                            <a href="#" class="
+                                    w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                                    " data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                            </a>
+                            
+                              <div x-ref="popperRoot" class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                                >
+                                <a href="#!" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Something else
+                                </a>
+                              </div>
+                            
+                          </div>
+                        </li>
+                        <!--File-->
+                        <li class="flex items-center px-4 py-3">
+                          <img src="img/icons/files/doc.svg" class="w-8 h-auto shrink-0 mr-3" alt="">
+                          <a class="flex-grow text-inherit block overflow-hidden" href="#!">
+                            <h6 class="truncate">Docs</h6>
+                            <small class="opacity-60">40KB</small>
+                          </a>
+                          <!-- Dropdown -->
+                          <div
+                             class="relative shrink-0">
+                            <a href="#" class="
+                                    w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                            </a>
+                            
+                              <div x-ref="popperRoot" class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                                >
+                                <a href="#!" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Something else
+                                </a>
+                              </div>
+                            
+                          </div>
+                        </li>
+                  
+                        <!--File-->
+                        <li class="flex items-center px-4 py-3">
+                          <img src="img/icons/files/css.svg" class="w-8 h-auto shrink-0 mr-3" alt="">
+                          <a class="flex-grow text-inherit block overflow-hidden" href="#!">
+                            <h6 class="truncate">Tooltips &amp; popover style</h6>
+                            <small class="opacity-60">4KB</small>
+                          </a>
+                          <!-- Dropdown -->
+                          <div
+                             class="relative shrink-0">
+                            <a href="#" class="
+                                    w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                            </a>
+                            
+                              <div x-ref="popperRoot" class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                                >
+                                <a href="#!" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Something else
+                                </a>
+                              </div>
+                            
+                          </div>
+                        </li>
+                  
+                        <!--File-->
+                        <li class="flex items-center px-4  py-3">
+                          <img src="img/icons/files/sql.svg" class="w-8 h-auto shrink-0 mr-3" alt="">
+                          <a class="flex-grow text-inherit block overflow-hidden" href="#!">
+                            <h6 class="truncate">CRM Database</h6>
+                            <small class="opacity-60">69MB</small>
+                          </a>
+                          <!-- Dropdown -->
+                          <div
+                             class="relative shrink-0">
+                            <a href="#" class="
+                                    w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                            </a>
+                            
+                              <div x-ref="popperRoot" class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                                >
+                                <a href="#!" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Something else
+                                </a>
+                              </div>
+                            
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+    </main>
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+
+     <!--:Chart:-->
+ <script src="vendor/apexcharts.min.js"></script>
+ <script>
+   function getTailwindColor(className, property) {
+     const element = document.createElement('div');
+     element.classList.add(className);
+     document.body.appendChild(element);
+     const style = getComputedStyle(element);
+     const color = style.getPropertyValue(property);
+     document.body.removeChild(element);
+     return color;
+   }
+   const primaryColor = getTailwindColor('text-primary-500', 'color');
+   const warningColor = getTailwindColor('text-warning-500', 'color');
+   const successColor = getTailwindColor('text-success-500', 'color');
+   const infoColor = getTailwindColor('text-info-500', 'color');
+   const grayColor = getTailwindColor('text-gray-400', 'color');
+   const dangerColor = getTailwindColor('text-danger-500', 'color');
+   const secondaryColor = getTailwindColor('text-primary-300', 'color');
+   const tritaryColor = getTailwindColor('text-gray-400', 'color');
+   var options = {
+        colors:[primaryColor,warningColor],
+          series: [{
+          name: 'Working Hours',
+          data: [48, 36, 29, 39, 54]
+        },{
+          name: 'Tasks Completed',
+          data: [214, 198, 121, 111, 139]
+        }],
+          chart: {
+            fontFamily:'inherit',
+          height: 350,
+          type: 'bar',
+          toolbar:{
+            show:false
+          },
+          zoom:{
+            enabled:false
+          }
+        },
+        stroke: {
+          width: 0,
+          dashArray: [4,0],
+          curve: 'smooth'
+        },
+      plotOptions:{
+        bar:{
+          borderRadiusApplication: 'around',
+          borderRadiusWhenStacked: 'last',
+          columnWidth: '60%',
+        }
+      },
+        legend:{
+          position:'top'
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shade: 'dark',
+            gradientToColors: [ primaryColor, warningColor],
+            shadeIntensity: .1,
+            type: 'horizontal',
+            opacityFrom: .95,
+            opacityTo: 1,
+            stops: [0, 100, 100, 100]
+          },
+        },
+        xaxis: {
+          type: 'category',
+          categories: ['Mon', 'Tue', 'Wed', 'Thr', 'Fri'],
+          tickAmount: 5,
+          
+          tooltip: {
+            enabled: false
+          },
+          axisTicks: {
+            show: false,
+          },
+          axisBorder: {
+            show: false,
+          },
+          labels:{
+            offsetX:0
+          }
+        },
+        yaxis: {
+          max: 260,
+          min:0,
+          axisTicks: {
+            show: false,
+          },
+          axisBorder: {
+            show: false,
+          },
+          labels:{
+            offsetX: -16,
+          }
+        },
+        grid:{
+          show:true,
+          strokeDashArray: 5,
+          padding:{
+            left:0,
+            bottom:0,
+            right:0,
+            top:0,
+          },
+          xaxis:{
+            lines: {
+              show: false,
+            }
+          },
+          yaxis:{
+            lines: {
+              show: false,
+            }
+          }
+        },
+        tooltip: {
+          shared: true,
+          intersect: false,
+          y: [{
+              formatter: function (y) {
+                if (typeof y !== 'undefined') {
+                  return ' : ' + y.toFixed(0) + 'h';
+                }
+                return y;
+              },
+            },
+            {
+              formatter: function (y) {
+                if (typeof y !== 'undefined') {
+                  return ' : ' + y.toFixed(0) + ' Tasks';
+                }
+                return y;
+              },
+            },
+          ],
+        },
+        }
+        var chart = new ApexCharts(document.querySelector("#chartOverview"), options);
+        chart.render();
+  </script>
+</body>
+
+</html>

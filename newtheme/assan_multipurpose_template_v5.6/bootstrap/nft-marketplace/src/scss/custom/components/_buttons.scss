@@ -1,0 +1,20 @@
+.btn{
+    text-transform: capitalize;
+    letter-spacing: $letter-spacing-body;
+    --#{$prefix}btn-focus-box-shadow: 0px 4px 11px rgba(var(--#{$prefix}btn-focus-shadow-rgb), .175);
+    &:hover{
+        box-shadow: var(--#{$prefix}btn-focus-box-shadow);
+    }
+}
+
+//Btn hover arrow
+.btn-hover{
+    .hover-translate{
+        transition: transform .25s;
+    }
+    &:hover{
+        .hover-translate{
+            transform: translateX(5px);
+        }
+    }
+}

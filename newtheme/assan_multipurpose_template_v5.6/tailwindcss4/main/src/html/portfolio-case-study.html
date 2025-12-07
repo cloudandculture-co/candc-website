@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    @@include('./partials/head-includes.html')
+    <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+    <!--begin:Header-->
+    <header class="header-transparent sticky-fixed">
+
+        <!--begin:navbar-->
+        <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+            <!--Navbar-fixed-background-->
+            <div class="navbar-fixed-bg absolute"></div>
+            <div class="container relative flex flex-wrap items-center justify-center relative">
+                <!--begin:logo-->
+                <a class="navbar-brand relative w-24 block" href="index.html">
+                    <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+                    <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+                </a>
+                <!--end:logo-->
+
+                <!--begin:navbar-no-collapse-items-->
+                <div class="flex items-center shrink-0 ml-auto lg:order-last">
+                    <!--Navbar toggler button-->
+                    <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i></i>
+                        </span>
+                    </button>
+                    <!--Button-->
+                    <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+                        <a href="#" class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+                    </div>
+                </div>
+                <!--end:navbar-no-collapse-items-->
+
+                <!--begin:navbar-collapse-->
+                <div class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+                    id="mainNavbarTheme">
+                    @@include('./partials/headers/default-navbar-items.html',{"page": "portfolio"})
+                </div>
+                <!--end:navbar-collapse-->
+            </div>
+
+        </nav>
+        <!--end:navbar-->
+    </header>
+    <!--end:header-->
+
+
+    <main class="main-content" id="main-content">
+        <section class="relative overflow-hidden bg-black rounded-b-2xl text-white">
+            <!--:Decoration bg:-->
+            <img src="assets/img/backgrounds/bg8.jpg"
+                class="w-full h-full object-cover absolute opacity-25 right-0 top-0" alt="">
+
+            <div class="container relative pb-12 lg:pb-24 pt-32 lg:pt-48">
+                <div class="flex flex-wrap -mx-3 items-center pb-32">
+                    <div class="lg:order-last w-full mx-auto px-3 lg:w-8/12 text-center relative z-[1]">
+                        <h6 class="text-white text-xl mb-5">Case Study</h6>
+                        <h1 class="text-5xl lg:text-6xl text-center font-medium mb-7" data-text-split>Funky bakers</h1>
+                        <p class="text-xl">
+                            A minimalist site where intuitiveness is prized. Lorem ipsum is placeholder text commonly
+                            used in the graphic and industries for previewing visual mockups.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/.row-->
+            <svg class="absolute lft-0 bottom-0 text-white dark:text-black" preserveAspectRatio="none" width="100%"
+                height="96" viewBox="0 0 1460 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M122 22.8261L0 0V120H1460V0L1338 22.8261C1217 44.1304 973 88.2609 730 88.2609C487 88.2609 243 44.1304 122 22.8261Z"
+                    fill="currentColor"></path>
+            </svg>
+        </section>
+        <section class="relative">
+            <div class="container pb-16 lg:pb-24">
+                <div class="relative -mt-32 mb-16">
+
+                    <div class="relative md:pl-16" data-animation="fadeInUp" data-delay=".1">
+                        <img src="assets/img/projects/case1.jpg" alt=""
+                            class="max-w-full rounded-3xl shadow-lg relative">
+                    </div>
+                    <div class="lg:w-6/12 md:w-5/12 ml-auto relative mr-12 -mt-16">
+                        <div class="p-5 shadow-lg rounded-3xl bg-white dark:bg-gray-800 relative me-3"
+                            data-animation="fadeInUp" data-delay=".2">
+                            <p class="mb-3 flex items-center">Category - <b><a href="#" class="ml-2 link-underline">UI
+                                        UX Design</a></b></p>
+                            <p class="mb-3 flex items-center">Client - <b><a href="#" class="ml-2 link-underline">Funky
+                                        bakers</a></b></p>
+                            <p class="mb-3">Year - <b>2025-2025</b></p>
+                            <p class="mb-0">Country - <b>Ohio, USA</b></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lg:w-9/12 mx-auto">
+                    <h2 class="mb-9 text-3xl font-medium" data-text-split>What we did</h2>
+                    <ul class="list-unstyled mb-16 lg:mb-24 text-gray-600 dark:text-gray-300">
+                        <li data-animation="fadeInUp" data-delay=".1" class="mb-5 flex items-stretch">
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-full flex items-center justify-center text-2xl font-medium bg-indigo-500 text-white mr-4">
+                                    1
+                                </div>
+                            </div>
+                            <div>
+                                <p class="mb-0 text-lg lg:text-xl">Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                    ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </li>
+                        <li data-animation="fadeInUp" data-delay=".2" class="mb-5 flex items-stretch">
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-full flex items-center justify-center text-2xl font-medium bg-indigo-500 text-white mr-4">
+                                    2
+                                </div>
+                            </div>
+                            <div>
+                                <p class="mb-0 text-lg lg:text-xl">Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum dolore eu
+                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id
+                                    est laborum.</p>
+                            </div>
+                        </li>
+                        <li data-animation="fadeInUp" data-delay=".3" class="flex items-stretch">
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-full flex items-center justify-center text-2xl font-medium bg-indigo-500 text-white mr-4">
+                                    3
+                                </div>
+                            </div>
+                            <div>
+                                <p class="mb-0 text-lg lg:text-xl">Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div>
+                        <h2 class="mb-7 text-3xl font-medium" data-text-split>The problem
+                        </h2>
+                        <p class="mb-12 text-lg text-gray-600 dark:text-gray-300" data-animation="fadeInUp"
+                            data-delay=".1">
+                            Lorem ipsum dolor sit amet adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat. Duis aute irure dolor in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                            occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum.
+                        </p>
+                        <h2 class="mb-7 text-3xl font-medium" data-text-split>The solution
+                        </h2>
+                        <p class="mb-7 text-gray-600 dark:text-gray-300" data-animation="fadeInUp" data-delay=".1">
+                            It has roots in a piece of classical Latin literature making it over 2000 years old.
+                            Richard a Latin professor at Hampden-Sydney College in Virginia, looked up one of
+                            the
+                            more obscure <strong>consectetur</strong>, from a
+                            Lorem Ipsum passage, and going through the
+                            cites of the word in classical literature, discovered the undoubtable source. Lorem
+                            Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The
+                            Extremes
+                            of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                            ethics, very popular during.
+                        </p>
+                        <p class="mb-12 text-lg text-gray-600 dark:text-gray-300" data-animation="fadeInUp"
+                            data-delay=".2">
+                            Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+                            (The
+                            Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the
+                            theory of ethics, very popular during the Renaissance.
+                        </p>
+                    </div>
+                    <figure class="text-center mb-12 relative" data-animation="fadeInUp" data-delay=".3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="78" height="172" viewBox="0 0 78 172" fill="none"
+                            class="text-orange-500 hidden md:block -mr-10 absolute right-0 top-1/2 -translate-y-1/2 w-16 h-auto"
+                            data-inject-svg="">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M20.836 165.774c1.475 0 2.67 1.207 2.67 2.695 0 1.489-1.195 2.695-2.67 2.695-1.476 0-2.672-1.206-2.672-2.695 0-1.488 1.196-2.695 2.672-2.695zm-18.165 0c1.476 0 2.671 1.207 2.671 2.695 0 1.489-1.195 2.695-2.67 2.695-1.476 0-2.672-1.206-2.672-2.695 0-1.488 1.196-2.695 2.671-2.695zm36.329 0c1.475 0 2.671 1.207 2.671 2.695 0 1.489-1.196 2.695-2.671 2.695-1.475 0-2.671-1.206-2.671-2.695 0-1.488 1.196-2.695 2.671-2.695zm18.164 0c1.476 0 2.672 1.207 2.672 2.695 0 1.489-1.196 2.695-2.672 2.695-1.475 0-2.67-1.206-2.67-2.695 0-1.488 1.195-2.695 2.67-2.695zm18.165 0c1.475 0 2.671 1.207 2.671 2.695 0 1.489-1.196 2.695-2.671 2.695-1.475 0-2.671-1.206-2.671-2.695 0-1.488 1.195-2.695 2.67-2.695zm-54.493-18.326c1.475 0 2.67 1.206 2.67 2.695 0 1.488-1.195 2.695-2.67 2.695-1.476 0-2.672-1.207-2.672-2.695 0-1.489 1.196-2.695 2.672-2.695zm-18.165 0c1.476 0 2.671 1.206 2.671 2.695 0 1.488-1.195 2.695-2.67 2.695-1.476 0-2.672-1.207-2.672-2.695 0-1.489 1.196-2.695 2.671-2.695zm36.329 0c1.475 0 2.671 1.206 2.671 2.695 0 1.488-1.196 2.695-2.671 2.695-1.475 0-2.671-1.207-2.671-2.695 0-1.489 1.196-2.695 2.671-2.695zm18.164 0c1.476 0 2.672 1.206 2.672 2.695 0 1.488-1.196 2.695-2.672 2.695-1.475 0-2.67-1.207-2.67-2.695 0-1.489 1.195-2.695 2.67-2.695zm18.165 0c1.475 0 2.671 1.206 2.671 2.695 0 1.488-1.196 2.695-2.671 2.695-1.475 0-2.671-1.207-2.671-2.695 0-1.489 1.195-2.695 2.67-2.695zm-54.493-18.327c1.475 0 2.67 1.207 2.67 2.695 0 1.489-1.195 2.695-2.67 2.695-1.476 0-2.672-1.206-2.672-2.695 0-1.488 1.196-2.695 2.672-2.695zm-18.165 0c1.476 0 2.671 1.207 2.671 2.695 0 1.489-1.195 2.695-2.67 2.695-1.476 0-2.672-1.206-2.672-2.695 0-1.488 1.196-2.695 2.671-2.695zm36.329 0c1.475 0 2.671 1.207 2.671 2.695 0 1.489-1.196 2.695-2.671 2.695-1.475 0-2.671-1.206-2.671-2.695 0-1.488 1.196-2.695 2.671-2.695zm18.164 0c1.476 0 2.672 1.207 2.672 2.695 0 1.489-1.196 2.695-2.672 2.695-1.475 0-2.67-1.206-2.67-2.695 0-1.488 1.195-2.695 2.67-2.695zm18.165 0c1.475 0 2.671 1.207 2.671 2.695 0 1.489-1.196 2.695-2.671 2.695-1.475 0-2.671-1.206-2.671-2.695 0-1.488 1.195-2.695 2.67-2.695zM2.67 110.795c1.476 0 2.671 1.206 2.671 2.695 0 1.488-1.195 2.695-2.67 2.695-1.476 0-2.672-1.207-2.672-2.695 0-1.489 1.196-2.695 2.671-2.695zm36.329 0c1.475 0 2.671 1.206 2.671 2.695 0 1.488-1.196 2.695-2.671 2.695-1.475 0-2.671-1.207-2.671-2.695 0-1.489 1.196-2.695 2.671-2.695zm18.164 0c1.476 0 2.672 1.206 2.672 2.695 0 1.488-1.196 2.695-2.672 2.695-1.475 0-2.67-1.207-2.67-2.695 0-1.489 1.195-2.695 2.67-2.695zm18.165 0c1.475 0 2.671 1.206 2.671 2.695 0 1.488-1.196 2.695-2.671 2.695-1.475 0-2.671-1.207-2.671-2.695 0-1.489 1.195-2.695 2.67-2.695zm-54.493 0c1.475 0 2.67 1.206 2.67 2.695 0 1.488-1.195 2.695-2.67 2.695-1.476 0-2.672-1.207-2.672-2.695 0-1.489 1.196-2.695 2.672-2.695zm54.493-18.327c1.475 0 2.671 1.207 2.671 2.695 0 1.489-1.196 2.695-2.671 2.695-1.475 0-2.671-1.206-2.671-2.695 0-1.488 1.195-2.695 2.67-2.695zm-54.493 0c1.475 0 2.67 1.207 2.67 2.695 0 1.489-1.195 2.695-2.67 2.695-1.476 0-2.672-1.206-2.672-2.695 0-1.488 1.196-2.695 2.672-2.695zm-18.165 0c1.476 0 2.671 1.207 2.671 2.695 0 1.489-1.195 2.695-2.67 2.695C1.195 97.858 0 96.652 0 95.163c0-1.488 1.196-2.695 2.671-2.695zm36.329 0c1.475 0 2.671 1.207 2.671 2.695 0 1.489-1.196 2.695-2.671 2.695-1.475 0-2.671-1.206-2.671-2.695 0-1.488 1.196-2.695 2.671-2.695zm18.164 0c1.476 0 2.672 1.207 2.672 2.695 0 1.489-1.196 2.695-2.672 2.695-1.475 0-2.67-1.206-2.67-2.695 0-1.488 1.195-2.695 2.67-2.695zM20.836 74.142c1.475 0 2.67 1.206 2.67 2.695 0 1.488-1.195 2.695-2.67 2.695-1.476 0-2.672-1.207-2.672-2.695 0-1.489 1.196-2.695 2.672-2.695zm36.328 0c1.476 0 2.672 1.206 2.672 2.695 0 1.488-1.196 2.695-2.672 2.695-1.475 0-2.67-1.207-2.67-2.695 0-1.489 1.195-2.695 2.67-2.695zm-54.493 0c1.476 0 2.671 1.206 2.671 2.695 0 1.488-1.195 2.695-2.67 2.695C1.195 79.532 0 78.325 0 76.837c0-1.489 1.196-2.695 2.671-2.695zm36.329 0c1.475 0 2.671 1.206 2.671 2.695 0 1.488-1.196 2.695-2.671 2.695-1.475 0-2.671-1.207-2.671-2.695 0-1.489 1.196-2.695 2.671-2.695zm36.329 0c1.475 0 2.671 1.206 2.671 2.695 0 1.488-1.196 2.695-2.671 2.695-1.475 0-2.671-1.207-2.671-2.695 0-1.489 1.195-2.695 2.67-2.695zm0-18.327c1.475 0 2.671 1.207 2.671 2.695 0 1.489-1.196 2.695-2.671 2.695-1.475 0-2.671-1.206-2.671-2.695 0-1.488 1.195-2.695 2.67-2.695zm-36.329 0c1.475 0 2.671 1.207 2.671 2.695 0 1.489-1.196 2.695-2.671 2.695-1.475 0-2.671-1.206-2.671-2.695 0-1.488 1.196-2.695 2.671-2.695zm-18.164 0c1.475 0 2.67 1.207 2.67 2.695 0 1.489-1.195 2.695-2.67 2.695-1.476 0-2.672-1.206-2.672-2.695 0-1.488 1.196-2.695 2.672-2.695zm-18.165 0c1.476 0 2.671 1.207 2.671 2.695 0 1.489-1.195 2.695-2.67 2.695A2.682 2.682 0 010 58.51c0-1.488 1.196-2.695 2.671-2.695zm54.493 0c1.476 0 2.672 1.207 2.672 2.695 0 1.489-1.196 2.695-2.672 2.695-1.475 0-2.67-1.206-2.67-2.695 0-1.488 1.195-2.695 2.67-2.695zm0-18.326c1.476 0 2.672 1.206 2.672 2.695 0 1.488-1.196 2.695-2.672 2.695-1.475 0-2.67-1.207-2.67-2.695 0-1.489 1.195-2.695 2.67-2.695zm18.165 0c1.475 0 2.671 1.206 2.671 2.695 0 1.488-1.196 2.695-2.671 2.695-1.475 0-2.671-1.207-2.671-2.695 0-1.489 1.195-2.695 2.67-2.695zm-72.658 0c1.476 0 2.671 1.206 2.671 2.695 0 1.488-1.195 2.695-2.67 2.695C1.195 42.879 0 41.672 0 40.184c0-1.489 1.196-2.695 2.671-2.695zm18.165 0c1.475 0 2.67 1.206 2.67 2.695 0 1.488-1.195 2.695-2.67 2.695-1.476 0-2.672-1.207-2.672-2.695 0-1.489 1.196-2.695 2.672-2.695zm18.164 0c1.475 0 2.671 1.206 2.671 2.695 0 1.488-1.196 2.695-2.671 2.695-1.475 0-2.671-1.207-2.671-2.695 0-1.489 1.196-2.695 2.671-2.695zM20.836 19.162c1.475 0 2.67 1.207 2.67 2.695 0 1.489-1.195 2.695-2.67 2.695-1.476 0-2.672-1.206-2.672-2.695 0-1.488 1.196-2.695 2.672-2.695zm18.164 0c1.475 0 2.671 1.207 2.671 2.695 0 1.489-1.196 2.695-2.671 2.695-1.475 0-2.671-1.206-2.671-2.695 0-1.488 1.196-2.695 2.671-2.695zm18.164 0c1.476 0 2.672 1.207 2.672 2.695 0 1.489-1.196 2.695-2.672 2.695-1.475 0-2.67-1.206-2.67-2.695 0-1.488 1.195-2.695 2.67-2.695zm18.165 0c1.475 0 2.671 1.207 2.671 2.695 0 1.489-1.196 2.695-2.671 2.695-1.475 0-2.671-1.206-2.671-2.695 0-1.488 1.195-2.695 2.67-2.695zm-72.658 0c1.476 0 2.671 1.207 2.671 2.695 0 1.489-1.195 2.695-2.67 2.695C1.195 24.552 0 23.346 0 21.857c0-1.488 1.196-2.695 2.671-2.695zM20.836.836c1.475 0 2.67 1.206 2.67 2.695 0 1.488-1.195 2.695-2.67 2.695-1.476 0-2.672-1.207-2.672-2.695 0-1.489 1.196-2.695 2.672-2.695zM39 .836c1.475 0 2.671 1.206 2.671 2.695 0 1.488-1.196 2.695-2.671 2.695-1.475 0-2.671-1.207-2.671-2.695 0-1.489 1.196-2.695 2.671-2.695zm18.164 0c1.476 0 2.672 1.206 2.672 2.695 0 1.488-1.196 2.695-2.672 2.695-1.475 0-2.67-1.207-2.67-2.695 0-1.489 1.195-2.695 2.67-2.695zm18.165 0C76.804.836 78 2.042 78 3.53s-1.196 2.695-2.671 2.695c-1.475 0-2.671-1.207-2.671-2.695 0-1.489 1.195-2.695 2.67-2.695zM2.67.836c1.476 0 2.671 1.206 2.671 2.695 0 1.488-1.195 2.695-2.67 2.695C1.195 6.226 0 5.019 0 3.53 0 2.042 1.196.836 2.671.836z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <img src="assets/img/projects/case3.jpg" alt="Image"
+                            class="max-w-full shadow-lg rounded-3xl mb-4 relative">
+                        <figcaption class="text-xs text-gray-400">Caption goes here</figcaption>
+                    </figure>
+                    <blockquote
+                        class="py-7 px-6 lg:px-9 bg-gray-100 dark:bg-gray-800 border-l-4 border-indigo-500 rounded-3xl relative mb-16"
+                        data-animation="fadeInUp" data-delay=".1">
+
+                        <div class="">
+                            <p class="mb-9 text-2xl lg:text-3xl leading-[1.3]">
+                                The new designs are more consistent and more true to who we are as a company.
+                                Very fresh, light and easy to deal with. So exciting seeing the design for the
+                                new site go live. Great work!
+                            </p>
+
+                            <div class="flex items-center">
+                                <img src="assets/img/avatar/4.jpg" alt="Image"
+                                    class="w-12 shadow-lg rounded-full mr-3 shrink-0">
+                                <div>
+                                    <h5 class="mb-0 text-lg font-medium">
+                                        Gunjan Sharma
+                                    </h5>
+                                    <small class="text-gray-400">Team Funky Bakers</small>
+                                </div>
+                            </div>
+                        </div>
+                    </blockquote>
+                    <div class="flex flex-wrap -mx-3">
+                        <div class="sm:w-5/12 w-full px-3 mb-4 sm:mb-0">
+                            <a href="#!" class="link-underline">
+                                Visit Project
+                                <i class="bi bi-globe ml-1"></i>
+                            </a>
+                        </div>
+                        <div class="sm:w-7/12 w-full px-3 sm:text-right">
+                            <ul class="mb-0 inline-flex items-center gap-4">
+                                <li class="hidden md:block">
+                                    <small class="text-gray-400">Share</small>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <a href="#!" class="text-gray-500 hover:text-indigo-500">
+                                        <i class="bi bi-facebook text-xl"></i>
+                                    </a>
+                                    <a href="#!" class="text-gray-500 hover:text-indigo-500">
+                                        <i class="bi bi-twitter-x text-xl"></i>
+                                    </a>
+                                    <a href="#!" class="text-gray-500 hover:text-indigo-500">
+                                        <i class="bi bi-linkedin text-xl"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-t border-gray-200 dark:border-gray-800 overflow-hidden relative">
+            <div class="container py-16 lg:py-24">
+                <div class="flex flex-wrap -mx-3">
+                    <div class="w-full px-3 lg:w-8/12 mx-auto">
+                        <a data-image="assets/img/projects/1.jpg" href="javascript:void(0);"
+                            class="flex link-hover-underline relative items-end justify-between pb-2">
+                            <div>
+                                <h2 class="me-4 mb-0 text-4xl lg:text-5xl font-medium">
+                                    Print design
+                                </h2>
+                                <small class="block text-2xl">Next
+                                    project</small>
+                            </div>
+                            <i class="bi bi-arrow-right text-3xl"></i>
+                        </a>
+                        <div id="imageReveal" class="pointer-events-none fixed opacity-0 top-0 start-0 z-[999]"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/.End section-->
+
+
+        <section
+            class="bg-gradient-to-r from-indigo-700 to-purple-600 text-white relative py-16 lg:py-24 overflow-hidden">
+            <div class="container">
+                <div class="px-4 md:w-10/12 mx-auto md:flex md:items-center">
+                    <div class="mb-7 md:mb-0 md:pr-12 lg:pr-16 flex-grow">
+                        <h5 class="text-4xl lg:text-5xl font-medium mb-5">Build stunning website faster than ever</h5>
+                        <p class="opacity-75 mb-0">Your business deserve a stunning website. </p>
+                    </div>
+                    <a class="btn btn-lg bg-white text-gray-700 hover:text-indigo-500 shrink-0" href="#"><span>Purchase
+                            Now</span></a>
+                </div>
+            </div>
+            <!-- / .End container -->
+        </section>
+
+    </main>
+
+
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-1.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+
+    <!--:Gsap plugins - required before theme js for animations:-->
+    <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+    <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+    <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+    <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+    <!-- Theme script -->
+    <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

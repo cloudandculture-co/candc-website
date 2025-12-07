@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="assets/fonts/bootstrap-icons/bootstrap-icons.min.css">
+
+    <!--Iconsmind Icons-->
+    <link rel="stylesheet" href="assets/fonts/iconsmind/iconsmind.css">
+
+    <!-- Aos Animations CSS -->
+    <link href="assets/vendor/node_modules/css/aos.css" rel="stylesheet">
+
+    <!--Select css-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/choices.min.css">
+
+     <!-- Google fonts CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!-- Main CSS -->
+    <link href="assets/css/theme-green.min.css" rel="stylesheet">
+    <title>Assan 4</title>
+  </head>
+
+  <body>
+     <!--Preloader Spinner-->
+     <div class="spinner-loader bg-primary text-white">
+        <div class="spinner-border" role="status">
+        </div>
+    </div>
+         <!--Header Start-->
+     <header class="z-fixed header-absolute-top header-transparent sticky-reverse">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container position-relative">
+           <!--:Brand Logo:-->
+           <a class="navbar-brand" href="demo-jobs.html">
+            <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-light">
+            <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-dark">
+            <sub class="d-none d-sm-inline-block position-absolute end-0 bottom-0 me-n2 mb-n2">Jobs</sub>
+        </a>
+            <div class="d-flex align-items-center navbar-no-collapse-items order-lg-last">
+                <div class="nav-item btn-group me-2 me-lg-0">
+                    <a href="demo-jobs-post-job.html" class="btn btn-outline-info btn-sm py-1 px-3">Post Job</a>
+                    <a href="#!" class="btn btn-sm btn-outline-info py-1 px-3"><i class="bi bi-person-circle me-1"></i>SignUp</a> 
+                </div>
+              <button class="navbar-toggler order-last" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                  <i></i>
+                </span>
+              </button>
+              
+            </div>
+            <div class="collapse navbar-collapse" id="mainNavbarTheme">
+                
+             <ul class="navbar-nav me-lg-3 ms-lg-auto">
+                 <li class="nav-item">
+                     <a href="demo-jobs.html" class="nav-link">Home</a>
+                 </li>
+                 <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jobs listing</a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="demo-jobs-listing.html">Lisitng Row</a>
+                      <a class="dropdown-item" href="demo-jobs-listing-grid.html">Lisitng Grid</a>
+                  </div>
+                 </li>
+                 <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="demo-jobs-job-detail.html">Job Details</a>
+                      <a class="dropdown-item active" href="demo-jobs-job-apply.html">Apply for Job</a>
+                      <a class="dropdown-item" href="demo-jobs-employer.html">Employer</a>
+                  </div>
+                 </li>
+              <li class="nav-item">
+                  <a href="demo-jobs-upload-resume.html" class="nav-link">Upload Resume</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">Eng</a>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <a href="#!" class="active dropdown-item">
+                        <img src="assets/img/country/us.svg" class="me-2" width="20" alt="">
+                        <small>English</small>
+                    </a>
+                    <a href="#!" class="dropdown-item">
+                        <img src="assets/img/country/pt.svg" class="me-2" width="20" alt="">
+                        <small>Portuguese</small>
+                    </a>
+                    <a href="#!" class="dropdown-item">
+                        <img src="assets/img/country/de.svg" class="me-2" width="20" alt="">
+                        <small>German</small>
+                    </a>
+                    <a href="#!" class="dropdown-item">
+                        <img src="assets/img/country/fr.svg" class="me-2" width="20" alt="">
+                        <small>French</small>
+                    </a>
+                    <a href="#!" class="dropdown-item">
+                        <img src="assets/img/country/dk.svg" class="me-2" width="20" alt="">
+                        <small>Danish</small>
+                    </a>
+                    <a href="#!" class="dropdown-item">
+                        <img src="assets/img/country/es.svg" class="me-2" width="20" alt="">
+                        <small>Española</small>
+                    </a>
+                    <a href="#!" class="dropdown-item">
+                        <img src="assets/img/country/nl.svg" class="me-2" width="20" alt="">
+                        <small>Dutch</small>
+                    </a>
+                    <a href="#!" class="dropdown-item">
+                        <img src="assets/img/country/jp.svg" class="me-2" width="20" alt="">
+                        <small>japanese</small>
+                    </a>
+                </div>
+            </li>
+          
+             </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <!--Main content-->
+    <main>
+        
+      <section class="position-relative">
+        <div class="container pt-12 pt-lg-15 pb-7 pb-lg-12 position-relative">
+           <div class="row align-items-center">
+               <div class="col-lg-10 mx-auto">
+                   <div class="alert alert-info mb-5">
+                       <div class="d-flex align-items-center">
+                           <i class="bi bi-info-circle fs-5 me-2"></i>
+                           <span>You can submit upto 2 applications every 15 days</span>
+                       </div>
+                   </div>
+                <div class="d-flex align-items-center mb-5">
+                    <img src="assets/img/companies/prosperops.svg" class="width-5x h-auto flex-shrink-0" alt="">
+                <div class="flex-grow-1 ms-3">
+                    <div class="d-flex justify-content-md-end flex-column flex-md-row">
+                        <div class="flex-grow-1">
+                            <h2 class="mb-2">Front End Developer</h2>
+                            <p>Prosperops</p>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <a href="#!" class="d-inline-flex align-items-center"><i class="bi bi-star me-2"></i> Save this job</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+                <form class="needs-validation" novalidate>
+                    <div class="card card-body p-4 p-lg-5 mb-4">
+                        <div>
+                            <h5 class="mb-2">Resume</h5>
+                        <p class="mb-3">
+                            To apply for this job, upload your resume in English as DOCX or PDF with a maximum size of 3 MB.
+                        </p>
+                        <div class="mb-0">
+                            <label for="applicantResume" class="btn btn-primary">Upload resume</label>
+                            <input class="form-control d-none" required="" type="file" id="applicantResume">
+                            <span class="invalid-feedback">Pls upload correct file formate, eg. - .zip, .rar, .pdf</span>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card card-body p-4 p-lg-5 mb-4">
+                        <h5 class="mb-5">Personal Information</h5>
+                    <div class="row justify-content-center">
+                        <div class="mb-4 col-sm-6 col-md-5">
+                            <label for="applicantFirstName" class="form-label">First name <span class="form-helper text-primary">*</span></label>
+                            <div class="input-group-icon">
+                                <input type="text" required="" class="form-control" id="applicantFirstName">
+                                <span class="invalid-feedback">Enter your first name</span>
+                            </div>
+                        </div>
+                        <div class="mb-4 col-sm-6 col-md-5">
+                            <label for="applicantLastName" class="form-label">Last name <span class="form-helper text-primary">*</span></label>
+                            <div class="input-group-icon">
+                                <input type="text" required="" class="form-control" id="applicantLastName">
+                                <span class="invalid-feedback">Enter your last name</span>
+                            </div>
+                        </div>
+                        
+                    <div class="mb-4 col-sm-6 col-md-5">
+                        <label for="applicantEmailAddress" class="form-label">Email id <span class="form-helper text-primary">*</span></label>
+                        <div class="input-group-icon">
+                            <input type="email" required="" class="form-control" id="applicantEmailAddress">
+                            <span class="invalid-feedback">Please enter a valid email address</span>
+                        </div>
+                    </div>
+                    <div class="mb-4 col-sm-6 col-md-5">
+                        <label for="applicantPhoneNumber" class="form-label">Phone</label>
+                        <div class="input-group-icon">
+                            <input required type="text" class="form-control" data-format="custom" id="cphone" data-delimiter="-"
+                            data-blocks="3 3 4" placeholder="012-345-7890" id="applicantPhoneNumber">
+                        </div>
+                    </div>
+                    <div class="mb-4 col-12 col-md-10">
+                        <label for="applicantWebsite" class="form-label">Personal website / portfolio
+                            link</label>
+                        <div class="input-group-icon">
+                            <input type="text" class="form-control" id="applicantWebsite">
+                        </div>
+                    </div>
+                    <div class="mb-0 col-12 col-md-10">
+                        <label for="applicantCoverLetter" class="form-label">Cover letter</label>
+                        <textarea class="form-control" rows="2" id="applicantCoverLetter"></textarea>
+                    </div>
+                    </div>
+                    
+                   
+                    </div>
+                    <div class="card card-body p-lg-5 p-4 mb-4">
+                        <h5 class="mb-4 pb-3">Supporting Information</h5>
+                        <div class="row justify-content-center">
+                            <div class="mb-4 col-md-10">
+                                <label for="SourceOfJobInformation" class="form-label">How did you hear about
+                                    this opening? (e.g., the Website) <span class="form-helper text-primary">*</span></label>
+                                <div class="input-group-icon">
+                                    <input type="text" required="" class="form-control" id="SourceOfJobInformation">
+                                    <span class="invalid-feedback">Enter the source</span>
+                                </div>
+                            </div>
+                            <div class="mb-4 col-md-10">
+                                <label for="applicantLocation" required="" class="form-label">Where do you currently live?
+                                    [City, Country] <span class="form-helper text-primary">*</span></label>
+                                <div class="input-group-icon">
+                                    <input type="text" required="" class="form-control" id="applicantLocation">
+                                    <span class="invalid-feedback">Enter your current city or country</span>
+                                </div>
+                            </div>
+                            <div class="mb-4 col-md-10">
+                                <label for="applicantExperience" class="form-label">Are you authorized to work
+                                    lawfully in the United States? <span class="form-helper text-primary">*</span></label>
+                                <div class="d-flex">
+                                    <div class="form-check me-3">
+                                        <input class="form-check-input" type="radio" name="applicantLangSkills" id="flexRadioYes" checked="">
+                                        <label class="form-check-label small" for="flexRadioYes">
+                                            Yes
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="applicantLangSkills" id="flexRadioNo">
+                                        <label class="form-check-label small" for="flexRadioNo">
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4 col-md-10">
+                                <label for="applicantLocation" class="form-label">Preferred Pronouns</label>
+                                <select class="form-control" required data-choices='{"position":"auto","searchEnabled":false,"allowHTML":true,"itemSelectText":""}'>
+                                    <option value="">Please select</option>
+                                    <option>She/her</option>
+                                    <option>He/him</option>
+                                    <option>They/them</option>
+                                    <option>Not represented here</option>
+                                    <option>Prefer not to say</option>
+                                </select>  
+                            </div>
+                            <div class="col-md-10">
+                                <div class="form-check mb-0">
+                                    <input class="form-check-input" required="" type="checkbox" value="" id="applicantTerms">
+                                    <label class="form-check-label text-body-secondary small" for="applicantTerms">
+                                        I agree that you can keep my data for an extended time period so that it will be easier for you to contact me about job opportunities.
+                                    </label>
+                                    <span class="invalid-feedback">You must agree to terms and conditions</span>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <button type="button" class="me-2 btn btn-gray-200">Save</button>
+                        <button type="submit" class="btn btn-primary">Submit application</button>
+                    </div>
+                </form>
+               </div>
+           </div>
+        </div>
+      </section>      
+      
+    </main>
+
+    <!--begin:Footer-->
+    <footer class="bg-dark footer text-white" data-bs-theme="dark">
+        <div class="container px-xl-7 pt-9 pt-lg-11 pb-7">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                    
+                    <div class="col-lg-3 col-md-12 mb-7 mb-lg-0">
+                        <a href="demo-jobs.html">
+                            <img src="assets/img/logo/logo-white.svg" alt="Assan Logo" class="width-8x">
+                            <sub>Jobs</sub>
+                         </a>
+                         <div class="position-relative">
+                            <!--:Dark Mode:-->
+                            <div class="d-inline-flex width-13x align-items-center dropup mt-6">
+                                <button class="btn border text-body p-0 width-3x height-3x d-flex justify-content-center align-items-center"
+                                    id="assan-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                                    data-bs-display="static">
+                                    <span class="theme-icon-active">
+                                        <i class="bi align-middle"></i>
+                                    </span>
+                                </button>
+                                <!--:Dark Mode Options:-->
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="assan-theme" style="--bs-dropdown-min-width: 9rem;">
+                                    <li class="mb-1">
+                                        <button type="button" class="dropdown-item d-flex align-items-center active"
+                                            data-bs-theme-value="light">
+                                            <span class="theme-icon">
+                                                <i class="bi bi-sun align-middle"> </i>
+                                            </span>
+                                            <span class="ms-2">Light</span>
+                                        </button>
+                                    </li>
+                                    <li class="mb-1">
+                                        <button type="button" class="dropdown-item d-flex align-items-center"
+                                            data-bs-theme-value="dark">
+                                            <span class="theme-icon">
+                                                <i class="bi bi-moon align-middle"></i>
+                                            </span>
+                                            <span class="ms-2">Dark</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item d-flex align-items-center"
+                                            data-bs-theme-value="auto">
+                                            <span class="theme-icon d-flex align-items-center">
+                                                <i class="bi bi-paint-bucket align-middle"></i>
+                                            </span>
+                                            <span class="ms-2">Auto</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="col-lg-2 col-sm-5 col-md-3 mb-7 mb-md-0">
+                            <h6 class="mb-4">Company</h6>
+                            <a href="#" class="d-block mb-2 mb-lg-3">Jobs</a>
+                            <a href="#" class="d-block mb-2 mb-lg-3">Press</a>
+                            <a href="#" class="d-block mb-2 mb-lg-3">Companies</a>
+                            <a href="#" class="d-block mb-2 mb-lg-3">Pricing</a>
+                            <a href="#" class="d-block mb-2 mb-lg-3">Updates</a>
+                            <a href="#" class="d-block mb-2 mb-lg-3">Community</a>
+                            <a href="#" class="d-block mb-2 mb-lg-3">Terms</a>
+                            <a href="#" class="d-block">Privacy</a>
+                        </div>
+                        <div class="col-md-4 col-sm-7 col-lg-3 mb-7 mb-md-0">
+                            <h6 class="mb-4">Top Categories</h6>
+                            <a href="#" class="d-block mb-2 mb-lg-3">Business Management</a>
+                            <a href="#" class="d-block mb-2 mb-lg-3">Developers</a>
+                            <a href="#" class="d-block mb-2 mb-lg-3">Sales & Marketing</a>
+                            <a href="#" class="d-block mb-2 mb-lg-3">Designer</a>
+                            <a href="#" class="d-block mb-2 mb-lg-3">Finance</a>
+                            <a href="#" class="d-block mb-2 mb-lg-3">Data Science</a>
+                            <a href="#" class="d-block mb-2 mb-lg-3">Content Creator</a>
+                            <a href="#" class="d-block">Legal Adviser</a>
+                        </div>
+                        <div class="col-lg-4 col-md-5">
+                            <h6 class="mb-4">Contact</h6>
+                            <div class="mb-2"><a href="tel:+1123456789" class="fs-5 link-hover-underline">+1 1234 56789</a>
+                            </div>
+                            <div><a href="mailto:hello@domain.com?subject=Hello!" class="fs-5 link-hover-underline">support@domain.com</a>
+                            </div>
+                            <hr class="my-4 my-sm-5">
+                            <h6 class="mb-4">Follow us</h6>
+                            <div class="mb-5 d-flex">
+                                <!-- Social button -->
+                                <a href="#!" class="d-inline-block mb-1 me-2 si rounded-pill si-hover-facebook">
+                                    <i class="bi bi-facebook fs-6"></i>
+                                    <i class="bi bi-facebook fs-6"></i>
+                                </a>
+                                <!-- Social button -->
+                                <a href="#!" class="d-inline-block mb-1 me-2 si rounded-pill si-hover-twitter">
+                                    <i class="bi bi-twitter-x fs-6"></i>
+                                    <i class="bi bi-twitter-x fs-6"></i>
+                                </a>
+                                <!-- Social button -->
+                                <a href="#!" class="d-inline-block mb-1 me-2 si rounded-pill si-hover-linkedin">
+                                    <i class="bi bi-linkedin fs-6"></i>
+                                    <i class="bi bi-linkedin fs-6"></i>
+                                </a>
+                                <!-- Social button -->
+                                <a href="#!" class="d-inline-block mb-1 si rounded-pill si-hover-instagram">
+                                    <i class="bi bi-instagram fs-6"></i>
+                                    <i class="bi bi-instagram fs-6"></i>
+                                </a>
+                            </div>
+                        
+                        <span class="d-block lh-sm small text-body-secondary">© Copyright
+                            <script>
+                                document.write(new Date().getFullYear())
+    
+                            </script>. Assan
+                        </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--end:Footer-->
+      <!-- begin:Back to Top button -->
+      <a href="#" class="toTop"><svg class="progress-circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="0, 251.2"></circle>
+      </svg>
+            <i class="bi bi-chevron-up"></i>
+          </a>
+          <!--/end:Back to Top button -->
+    <!-- scripts -->
+    <script src="assets/js/theme.bundle.min.js"></script>
+
+    <!--Select scripts-->
+    <script src="assets/vendor/node_modules/js/choices.min.js"></script>
+    <script>
+        var cSelect = document.querySelectorAll("[data-choices]");
+        cSelect.forEach(el => {
+            const t = {
+                ...el.dataset.choices ? JSON.parse(el.dataset.choices) : {}, ...{
+                    classNames: {
+                        containerInner: el.className,
+                        input: "form-control",
+                        inputCloned: "form-control-sm",
+                        listDropdown: "dropdown-menu",
+                        itemChoice: "dropdown-item",
+                        activeState: "show",
+                        selectedState: "active"
+                    }
+                }
+            }
+            new Choices(el, t)
+        }
+        );
+    </script>
+            <script src="assets/vendor/node_modules/js/cleave.min.js"></script>
+            <script>
+                //cleave form formats
+    var inputFormatter = function () {
+        var input = document.querySelectorAll('[data-format]');
+        if (input.length === 0) return;
+    
+        for (var i = 0; i < input.length; i++) {
+            var inputFormat = input[i].dataset.format,
+                blocks = input[i].dataset.blocks,
+                delimiter = input[i].dataset.delimiter;
+            blocks = blocks !== undefined ? blocks.split(' ').map(Number) : '';
+            delimiter = delimiter !== undefined ? delimiter : ' ';
+    
+            switch (inputFormat) {
+                case 'card':
+                    var card = new Cleave(input[i], {
+                        creditCard: true
+                    });
+                    break;
+                    case 'phone':
+                    var phone = new Cleave(input[i], {
+                        numericOnly: true,
+                        blocks: [0, 3, 3, 4],
+                        delimiters: ["(", ") ", "-"]
+                    });
+                    break;
+                case 'cvc':
+                    var cvc = new Cleave(input[i], {
+                        numeral: true,
+                        numeralIntegerScale: 3
+                    });
+                    break;
+                case 'date':
+                    var date = new Cleave(input[i], {
+                        date: true,
+                        datePattern: ['m', 'y']
+                    });
+                    break;
+    
+                case 'date-long':
+                    var dateLong = new Cleave(input[i], {
+                        date: true,
+                        datePattern: ['Y', 'm', 'd']
+                    });
+                    break;
+    
+                case 'time':
+                    var time = new Cleave(input[i], {
+                        time: true,
+                        timePattern: ['h', 'm']
+                    });
+                    break;
+                    case 'time-long':
+                        var time = new Cleave(input[i], {
+                            time: true,
+                            timePattern: ['h', 'm', 's']
+                        });
+                        break;
+                case 'custom':
+                    var custom = new Cleave(input[i], {
+                        delimiter: delimiter,
+                        blocks: blocks
+                    });
+                    break;
+    
+                default:
+                    console.error('Sorry, your format ' + inputFormat + ' is not available. You can add it to the theme object method - inputFormatter in src/js/theme.js or choose one from the list of available formats: card, cvc, date, date-long, time or custom.');
+            }
+        }
+    }();
+            </script>
+
+            <!--Autosize textarea-->
+            <script src="assets/vendor/node_modules/js/autosize.min.js"></script>
+            <script>
+                var ta = document.querySelector('textarea');
+ta.style.display = 'none';
+autosize(ta);
+// Change layout
+ta.style.display = 'block';
+autosize.update(ta);
+            </script>
+  </body>
+
+</html>

@@ -1,0 +1,12 @@
+import './custom/jquery.global';
+import './custom/bootstrap.custom';
+import './custom/page-sidebar';
+import './custom/validation';
+import './custom/choices';
+import 'simplebar';
+import './custom/dark-mode';
+import './custom/tippy';
+import './custom/preloader';
+import './custom/header';
+import './custom/card-refresh';
+import './custom/checkboxes';

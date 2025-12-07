@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assan | Blog</title>
+    @@include('./partials/head.html')
+</head>
+
+<body>
+    <div class="d-flex flex-column flex-root">
+        <!--Page-->
+        <div class="page-lg d-flex flex-row flex-column-fluid">
+
+            @@include('./partials/page-sidebar.html')
+
+            <!--:Page content:-->
+            <main class="page-content d-flex flex-column flex-row-fluid">
+                @@include('./partials/header-default.html',{'page':'writers'})
+                <!--::Page content with sidebar::-->
+                <div class="content d-flex flex-column-fluid position-relative">
+
+                    <!--:Content inner layout:-->
+                    <div class="d-flex flex-column flex-md-row h-100 w-100">
+                        <!--:Content inner Content:-->
+                        <div class="col-md-7 col-lg-8 layout-content d-flex justify-content-center flex-column h-100">
+                            <div class="position-relative px-3 px-xl-8 py-5 mx-auto w-100">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <h2 class="display-6 mb-2">Writers</h2>
+                                        <p class="text-body-secondary mb-0">Writers to follow</p>
+                                    </div>
+                                    <div class="ms-auto flex-shrink-0 width-9x">
+                                        <select name="filterTopics" id="filterTopics"
+                                            class="choices__fw btn text-body bg-body-tertiary"
+                                            data-choices='{"searchEnabled":false,"shouldSort":false,"itemSelectText":""}'>
+                                            <option selected value="Popular">Popular</option>
+                                            <option value="Trending">Trending</option>
+                                            <option value="Newest">Newest</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!--:Writers list:-->
+                                <div class="row">
+                                    <div class="col-sm-6 mx-auto mt-5" data-sal="zoom-in" data-sal-delay="50" data-sal-duration="600">
+                                        <!--:Writer Card:-->
+                                        <div class="card text-center card-body p-4">
+                                            <!--:Avatar:-->
+                                            <img src="assets/img/avatar/1.jpg"
+                                                class="width-7x h-auto d-block mx-auto mb-3 rounded-circle" alt="">
+                                            <!--:Title:-->
+                                            <a href="page-writer.html">
+                                                <h5 class="mb-3">Margaret Pane</h5>
+                                            </a>
+                                            <div class="hstack gap-2 small justify-content-center">
+                                                <span>41K Followers</span>
+                                                <span class="vr"></span>
+                                                <span>268 Articles</span>
+                                            </div>
+                                            <!--:Description:-->
+                                            <p class="clamp-2 pt-3">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Sollicitudin aliquam
+                                                ultrices sagittis orci a. Fringilla urna porttitor rhoncus dolor purus.
+                                                Id consectetur purus ut faucibus pulvinar.
+                                            </p>
+                                            <!--:Action buttons:-->
+                                            <div>
+                                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                                    <a href="#!" class="btn btn-primary btn-sm">Follow</a>
+                                                    <a data-tippy-placement="top"
+                                                        data-tippy-content="Subscribe to get updates" href="#!"
+                                                        class="btn btn-outline-secondary p-0 width-3x height-3x d-flex align-items-center justify-content-center rounded-circle">
+                                                        <i class="bi bi-envelope"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 mx-auto mt-5" data-sal="zoom-in" data-sal-delay="100" data-sal-duration="600">
+                                        <!--:Writer Card:-->
+                                        <div class="card text-center card-body p-4">
+                                            <!--:Avatar:-->
+                                            <img src="assets/img/avatar/4.jpg"
+                                                class="width-7x h-auto d-block mx-auto mb-3 rounded-circle" alt="">
+                                            <!--:Title:-->
+                                            <a href="page-writer.html">
+                                                <h5 class="mb-3">Camila Rodri</h5>
+                                            </a>
+                                            <div class="hstack gap-2 small justify-content-center">
+                                                <span>39K Followers</span>
+                                                <span class="vr"></span>
+                                                <span>128 Articles</span>
+                                            </div>
+                                            <!--:Description:-->
+                                            <p class="clamp-2 pt-3">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Sollicitudin aliquam
+                                                ultrices sagittis orci a. Fringilla urna porttitor rhoncus dolor purus.
+                                                Id consectetur purus ut faucibus pulvinar.
+                                            </p>
+                                            <!--:Action buttons:-->
+                                            <div>
+                                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                                    <a href="#!" class="btn btn-primary btn-sm">Follow</a>
+                                                    <a data-tippy-placement="top"
+                                                        data-tippy-content="Subscribe to get updates" href="#!"
+                                                        class="btn btn-outline-secondary p-0 width-3x height-3x d-flex align-items-center justify-content-center rounded-circle">
+                                                        <i class="bi bi-envelope"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 mx-auto mt-5" data-sal="zoom-in" data-sal-delay="150" data-sal-duration="600">
+                                        <!--:Writer Card:-->
+                                        <div class="card text-center card-body p-4">
+                                            <!--:Avatar:-->
+                                            <img src="assets/img/avatar/3.jpg"
+                                                class="width-7x h-auto d-block mx-auto mb-3 rounded-circle" alt="">
+                                            <!--:Title:-->
+                                            <a href="page-writer.html">
+                                                <h5 class="mb-3">Monika Smith</h5>
+                                            </a>
+                                            <div class="hstack gap-2 small justify-content-center">
+                                                <span>29K Followers</span>
+                                                <span class="vr"></span>
+                                                <span>168 Articles</span>
+                                            </div>
+                                            <!--:Description:-->
+                                            <p class="clamp-2 pt-3">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Sollicitudin aliquam
+                                                ultrices sagittis orci a. Fringilla urna porttitor rhoncus dolor purus.
+                                                Id consectetur purus ut faucibus pulvinar.
+                                            </p>
+                                            <!--:Action buttons:-->
+                                            <div>
+                                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                                    <a href="#!" class="btn btn-primary btn-sm">Follow</a>
+                                                    <a data-tippy-placement="top"
+                                                        data-tippy-content="Subscribe to get updates" href="#!"
+                                                        class="btn btn-outline-secondary p-0 width-3x height-3x d-flex align-items-center justify-content-center rounded-circle">
+                                                        <i class="bi bi-envelope"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 mx-auto mt-5" data-sal="zoom-in" data-sal-delay="200" data-sal-duration="600">
+                                        <!--:Writer Card:-->
+                                        <div class="card text-center card-body p-4">
+                                            <!--:Avatar:-->
+                                            <img src="assets/img/avatar/7.jpg"
+                                                class="width-7x h-auto d-block mx-auto mb-3 rounded-circle" alt="">
+                                            <!--:Title:-->
+                                            <a href="page-writer.html">
+                                                <h5 class="mb-3">Kim Asano</h5>
+                                            </a>
+                                            <div class="hstack gap-2 small justify-content-center">
+                                                <span>22K Followers</span>
+                                                <span class="vr"></span>
+                                                <span>144 Articles</span>
+                                            </div>
+                                            <!--:Description:-->
+                                            <p class="clamp-2 pt-3">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Sollicitudin aliquam
+                                                ultrices sagittis orci a. Fringilla urna porttitor rhoncus dolor purus.
+                                                Id consectetur purus ut faucibus pulvinar.
+                                            </p>
+                                            <!--:Action buttons:-->
+                                            <div>
+                                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                                    <a href="#!" class="btn btn-primary btn-sm">Follow</a>
+                                                    <a data-tippy-placement="top"
+                                                        data-tippy-content="Subscribe to get updates" href="#!"
+                                                        class="btn btn-outline-secondary p-0 width-3x height-3x d-flex align-items-center justify-content-center rounded-circle">
+                                                        <i class="bi bi-envelope"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 mx-auto mt-5" data-sal="zoom-in" data-sal-delay="250" data-sal-duration="600">
+                                        <!--:Writer Card:-->
+                                        <div class="card text-center card-body p-4">
+                                            <!--:Avatar:-->
+                                            <img src="assets/img/avatar/6.jpg"
+                                                class="width-7x h-auto d-block mx-auto mb-3 rounded-circle" alt="">
+                                            <!--:Title:-->
+                                            <a href="page-writer.html">
+                                                <h5 class="mb-3">Bukayo Smith</h5>
+                                            </a>
+                                            <div class="hstack gap-2 small justify-content-center">
+                                                <span>15K Followers</span>
+                                                <span class="vr"></span>
+                                                <span>122 Articles</span>
+                                            </div>
+                                            <!--:Description:-->
+                                            <p class="clamp-2 pt-3">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Sollicitudin aliquam
+                                                ultrices sagittis orci a. Fringilla urna porttitor rhoncus dolor purus.
+                                                Id consectetur purus ut faucibus pulvinar.
+                                            </p>
+                                            <!--:Action buttons:-->
+                                            <div>
+                                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                                    <a href="#!" class="btn btn-primary btn-sm">Follow</a>
+                                                    <a data-tippy-placement="top"
+                                                        data-tippy-content="Subscribe to get updates" href="#!"
+                                                        class="btn btn-outline-secondary p-0 width-3x height-3x d-flex align-items-center justify-content-center rounded-circle">
+                                                        <i class="bi bi-envelope"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 mx-auto mt-5" data-sal="zoom-in" data-sal-delay="300" data-sal-duration="600">
+                                        <!--:Writer Card:-->
+                                        <div class="card text-center card-body p-4">
+                                            <!--:Avatar:-->
+                                            <img src="assets/img/avatar/2.jpg"
+                                                class="width-7x h-auto d-block mx-auto mb-3 rounded-circle" alt="">
+                                            <!--:Title:-->
+                                            <a href="page-writer.html">
+                                                <h5 class="mb-3">Emily Doe</h5>
+                                            </a>
+                                            <div class="hstack gap-2 small justify-content-center">
+                                                <span>13K Followers</span>
+                                                <span class="vr"></span>
+                                                <span>148 Articles</span>
+                                            </div>
+                                            <!--:Description:-->
+                                            <p class="clamp-2 pt-3">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Sollicitudin aliquam
+                                                ultrices sagittis orci a. Fringilla urna porttitor rhoncus dolor purus.
+                                                Id consectetur purus ut faucibus pulvinar.
+                                            </p>
+                                            <!--:Action buttons:-->
+                                            <div>
+                                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                                    <a href="#!" class="btn btn-primary btn-sm">Follow</a>
+                                                    <a data-tippy-placement="top"
+                                                        data-tippy-content="Subscribe to get updates" href="#!"
+                                                        class="btn btn-outline-secondary p-0 width-3x height-3x d-flex align-items-center justify-content-center rounded-circle">
+                                                        <i class="bi bi-envelope"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--:Loading:-->
+                                <div class="pt-5 d-flex justify-content-center align-items-center">
+                                    <div class="spinner-grow me-2" role="status"></div>
+                                    <span class="small text-body-secondary">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--:Content inner Sidebar:-->
+                        <div
+                            class="col-md-5 col-lg-4 bg-body-tertiary content-inner-sidebar d-flex flex-column h-100 border-start position-relative">
+
+                            <div class="position-sticky top-0">
+                                <!--:Topics:-->
+                                <div class="position-relative py-5 px-3 px-xl-5 border-top">
+                                    <h6 class="mb-4"><i class="bi bi-tags me-2"></i> Popular Topics</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <a href="#!"
+                                            class="btn btn-sm btn-outline-secondary rounded-pill">Photography</a>
+                                        <a href="#!"
+                                            class="btn btn-sm btn-outline-secondary rounded-pill">Technology</a>
+                                        <a href="#!" class="btn btn-sm btn-outline-secondary rounded-pill">Business</a>
+                                        <a href="#!" class="btn btn-sm btn-outline-secondary rounded-pill">Health</a>
+                                        <a href="#!" class="btn btn-sm btn-outline-secondary rounded-pill">Fashion</a>
+                                        <a href="#!" class="btn btn-sm btn-outline-secondary rounded-pill">NFT</a>
+                                        <a href="#!" class="btn btn-sm btn-outline-secondary rounded-pill">Politics</a>
+                                        <a href="#!" class="btn btn-sm btn-outline-secondary rounded-pill">Sports</a>
+                                        <a href="#!" class="btn btn-sm btn-outline-secondary rounded-pill">Code</a>
+                                        <a href="#!" class="btn btn-sm btn-outline-secondary rounded-pill">Marketing</a>
+                                        <a href="#!" class="btn btn-sm btn-outline-secondary rounded-pill">Nature</a>
+                                        <a href="#!" class="btn btn-sm btn-outline-secondary rounded-pill">Travels</a>
+                                        <a href="#!" class="btn btn-sm btn-outline-secondary rounded-pill">Holiday</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--:Footer:-->
+                @@include('./partials/footer-default.html')
+            </main>
+
+        </div>
+    </div>
+    <!--script-->
+    <script src="assets/js/theme.bundle.min.js"></script>
+    <!--Select scripts-->
+    <script src="assets/vendor/node_modules/js/choices.min.js"></script>
+    <script>
+        var cSelect = document.querySelectorAll("[data-choices]");
+        cSelect.forEach(el => {
+            const t = {
+                ...el.dataset.choices ? JSON.parse(el.dataset.choices) : {},
+                ...{
+                    classNames: {
+                        containerInner: el.className,
+                        input: "form-control",
+                        inputCloned: "form-control-sm",
+                        listDropdown: "dropdown-menu",
+                        itemChoice: "dropdown-item",
+                        activeState: "show",
+                        selectedState: "active"
+                    }
+                }
+            }
+            new Choices(el, t)
+        });
+
+    </script>
+
+</body>
+
+</html>

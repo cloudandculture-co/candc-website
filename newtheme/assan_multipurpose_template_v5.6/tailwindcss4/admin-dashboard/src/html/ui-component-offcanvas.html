@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+
+    @@include('./partials/head-includes.html')
+</head>
+
+<body
+    class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+      @@include('./partials/app-preloader.html')
+
+
+    @@include('./partials/sidebar.html',{"page": "ui-components","components_collapse":
+    "show","component_offcanvas_active": "active"})
+
+    <main class="relative flex flex-col lg:ms-64">
+        @@include('./partials/header-default.html')
+        <!--:Page Header:-->
+        <div class="px-4 lg:px-6 xl:px-12 py-4">
+            <div class="flex flex-wrap items-center">
+                <div class="flex-grow">
+                    <h4 class="text-2xl font-semibold">Offcanvas</h4>
+                    <p class="text-sm opacity-60">Bootstrap Js required</p>
+                </div>
+                <div class="shrink-0">
+                    <!--:Breadcrumb:-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="flex items-center">
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                            </li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active"><a
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                    href="ui-component-alerts.html">Components</a></li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Offcanvas
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content px-4 lg:px-6 xl:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div>
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="text-lg font-semibold mb-4">Offcanvas Left</h5>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            Button with data-bs-target
+                          </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="text-lg font-semibold mb-4">Offcanvas Right</h5>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightExample" aria-controls="offcanvasRightExample">
+                            Button with data-bs-target
+                          </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!--:Offcanvas Left:-->
+    <div class="fixed left-0 top-0 w-72 h-full z-[70] bg-white dark:bg-gray-900 shadow-sm transition-all -translate-x-full [&.show]:translate-x-0" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="flex flex-col h-full">
+            <div class="flex items-center justify-between shrink-0 px-4 py-3 border-b border-gray-200 dark:border-gray-800">
+                <h5 class="text-lg font-semibold" id="offcanvasExampleLabel">Offcanvas Left</h5>
+                <button type="button" class="text-gray-400 hover:text-inherit" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasExample" aria-label="Close">
+                  <span class="icon-[tabler--x] text-lg"></span>
+                </button>
+              </div>
+              <div class="offcanvas-body flex-grow overflow-y-auto px-4 py-3">
+                <div>
+                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+              </div>
+              <!--:Footer:-->
+              <div class="shrink-0 py-3 px-4 border-t border-gray-200 dark:border-gray-800">
+                Footer
+              </div>
+        </div>
+      </div>
+
+       <!--:Offcanvas Right:-->
+    <div class="fixed right-0 top-0 w-72 h-full z-[70] bg-white dark:bg-gray-900 shadow-sm transition-all translate-x-full [&.show]:translate-x-0" tabindex="-1" id="offcanvasRightExample" aria-labelledby="offcanvasRightExampleLabel">
+        <div class="flex flex-col h-full">
+            <div class="flex items-center justify-between shrink-0 px-4 py-3 border-b border-gray-200 dark:border-gray-800">
+                <h5 class="text-lg font-semibold" id="offcanvasExampleLabel">Offcanvas Right</h5>
+                <button type="button" class="text-gray-400 hover:text-inherit" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasRightExample" aria-label="Close">
+                  <span class="icon-[tabler--x] text-lg"></span>
+                </button>
+              </div>
+              <div class="offcanvas-body flex-grow overflow-y-auto px-4 py-3">
+                <div>
+                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+              </div>
+              <!--:Footer:-->
+              <div class="shrink-0 py-3 px-4 border-t border-gray-200 dark:border-gray-800">
+                Footer
+              </div>
+        </div>
+      </div>
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

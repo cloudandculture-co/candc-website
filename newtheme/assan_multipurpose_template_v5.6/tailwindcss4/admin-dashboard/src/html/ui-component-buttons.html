@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+
+    @@include('./partials/head-includes.html')
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+      @@include('./partials/app-preloader.html')
+
+
+    @@include('./partials/sidebar.html',{"page": "ui-components","components_collapse":
+    "show","component_buttons_active": "active"})
+
+    <main class="relative flex flex-col lg:ms-64">
+        @@include('./partials/header-default.html')
+        <!--:Page Header:-->
+        <div class="px-4 lg:px-6 xl:px-12 py-4">
+            <div class="flex flex-wrap items-center">
+                <div class="flex-grow">
+                    <h4 class="text-2xl font-semibold">Buttons</h4>
+                </div>
+                <div class="shrink-0">
+                    <!--:Breadcrumb:-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="flex items-center">
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                            </li>
+                            <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active"><a
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                    href="ui-component-alerts.html">Components</a></li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Buttons</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content px-4 lg:px-6 xl:px-12">
+            <div class="grid grid-cols-1 gap-4 mb-4">
+                <div>
+                    <!--:Card:-->
+                    <div class="p-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-card">
+                        <p class="mb-4">Fill Buttons</p>
+                        
+                        <div class="flex flex-wrap gap-2">
+                          <button type="button" class="btn btn-default">Default</button>
+                          <button type="button" class="btn btn-primary">Primary</button>
+                          <button type="button" class="btn btn-success">Success</button>
+                          <button type="button" class="btn btn-warning">Warning</button>
+                          <button type="button" class="btn btn-danger">Danger</button>
+                          <button type="button" class="btn btn-info">Info</button>
+                          <button type="button" class="btn btn-gray">Gray</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div>
+                  <!--:Card:-->
+                  <div class="p-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-card">
+                      <p class="mb-4">Outline Buttons</p>
+                      <div class="flex flex-wrap gap-2">
+                        <button type="button" class="btn btn-outline-default">Default</button>
+                        <button type="button" class="btn btn-outline-primary">Primary</button>
+                        <button type="button" class="btn btn-outline-success">Success</button>
+                        <button type="button" class="btn btn-outline-warning">Warning</button>
+                        <button type="button" class="btn btn-outline-danger">Danger</button>
+                        <button type="button" class="btn btn-outline-info">Info</button>
+                        <button type="button" class="btn btn-outline-gray">Gray</button>
+                      </div>
+                  </div>
+                  
+              </div>
+              <div>
+                <!--:Card:-->
+                <div class="p-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-card">
+                    <p class="mb-4">Subtle Buttons</p>
+                    
+                    <div class="flex flex-wrap gap-2">
+                      <button type="button" class="btn btn-subtle-primary">Primary</button>
+                      <button type="button" class="btn btn-subtle-success">Success</button>
+                      <button type="button" class="btn btn-subtle-warning">Warning</button>
+                      <button type="button" class="btn btn-subtle-danger">Danger</button>
+                      <button type="button" class="btn btn-subtle-info">Info</button>
+                    </div>
+                </div>
+                
+            </div>
+              <div>
+                <!--:Card:-->
+                <div class="p-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-card">
+                    <p class="mb-4">Button States</p>
+                    <div class="gap-2 flex flex-wrap mb-3">
+                      <button disabled="" type="button" class="btn btn-primary disabled:opacity-70 disabled:pointer-events-none">Disabled</button>
+                      <button disabled="" type="button" class="btn btn-outline-primary disabled:opacity-70 disabled:pointer-events-none">Disabled</button>
+                    </div>
+                    <div class="gap-2 flex-flex-wrap">
+                      <button disabled="" type="button" class="btn btn-primary active [&amp;.active]:bg-primary-600 [&amp;.active]:border-primary-600 [&amp;.active]:shadow-md [&amp;.active]:pointer-events-none">Active</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div>
+              <!--:Card:-->
+              <div class="p-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-card">
+                  <p class="mb-4">Icon Buttons</p>
+                  
+                  <div class="gap-2 flex flex-wrap">
+                    <button type="button" class="btn btn-default !inline-flex items-center">
+                     <span class="icon-[tabler--activity] me-2"></span>
+                      Activity</button>
+                      <button type="button" class="btn btn-outline-primary inline-flex items-center relative !pr-10 group">
+                       
+                        Activity <span class="absolute right-0 top-0 h-full border-l group-hover:border-white/10 border-primary-500 w-8 flex items-center justify-center">
+                          <span class="icon-[tabler--activity]"></span>
+                        </span></button>
+                  </div>
+              </div>
+              
+          </div>
+            </div>
+
+        </div>
+    </main>
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+<!--:Sidebar:-->
+<aside id="offcanvasSidebarMain"
+class="app-sidebar offcanvas-lg absolute lg:fixed w-64 h-full top-0 bg-white dark:bg-black lg:z-[60] z-[70] -translate-x-full [&.show]:-translate-x-0 lg:translate-x-0 transition-all border-r border-gray-200 dark:border-gray-800">
+<div class="flex flex-col h-full">
+
+  <!--:App Logo:-->
+  <div class="flex-shrink-0 py-3 px-6 flex items-center">
+    <a class="flex items-center" href="index.html">
+      <span
+        class="me-3 size-8 flex items-center justify-center text-sm font-semibold text-white mr-2 rounded-full bg-primary-500">
+        <svg width="16" viewBox="0 0 32 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.49072 8.66002C8.09029 5.65678 9.38962 2.0869 12.3929 0.686464C15.3961 -0.71397 18.966 0.585362 20.3664 3.5886L30.5093 25.34C31.9097 28.3432 30.6104 31.9131 27.6071 33.3135C24.6039 34.714 21.034 33.4146 19.6336 30.4114L9.49072 8.66002Z" fill="currentColor"/>
+<path d="M1.53571 30.5093C0.135274 27.506 1.4346 23.9361 4.43784 22.5357C7.44108 21.1353 11.011 22.4346 12.4114 25.4379C13.8118 28.4411 12.5125 32.011 9.50926 33.4114C6.50602 34.8118 2.93614 33.5125 1.53571 30.5093Z" fill="currentColor"/>
+</svg>
+
+      </span>
+      <h5 class="text-3xl font-semibold">Assan</h5>
+    </a>
+  </div>
+
+  <!--:App Sidebar Menu Items:-->
+  <div class="flex-grow overflow-y-auto sidebar-scroll">
+    <nav class="flex-grow-1 h-100" id="page-navbar">
+        <!--:Sidebar nav-->
+        <ul class="nav flex-column collapse-group collapse flex space-y-1 px-4 py-4">
+          <li class="nav-item px-3 pb-1 flex items-center sidebar-title truncate">
+            <span class="sidebar-text text-sm text-gray-400 font-semibold">Main</span>
+          </li>
+          <li class="nav-item">
+            <a data-bs-toggle="collapse"
+              class="nav-link flex items-center truncate @@if (context.page === 'dashboards') {active}"
+              aria-expanded="false" href="#dashboards">
+              <span class="me-3 sidebar-icon">
+                <span class="icon-[tabler--chart-bar]"></span>
+              </span>
+              <!--Sidebar nav text-->
+              <span class="sidebar-text">Dashboard</span>
+              <!--:Collapse Arrow:-->
+              <span class="icon-[tabler--chevron-up] sidebar-arrow ms-auto"></span>
+            </a>
+            <ul id="dashboards" class="sidebar-dropdown list-unstyled collapse @@dashboard_collapse">
+                  <li class="sidebar-item">
+                    <a class="sidebar-link @@dashboard_ecommerce" href="index.html">Ecommerce</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="sidebar-link @@dashboard_analytics" href="index-analytics.html">Analytics</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="sidebar-link @@dashboard_crm" href="index-crm.html">CRM</a>
+                  </li>  
+            </ul>
+          </li>
+          
+          <li class="nav-item">
+            <a href="widgets.html"
+              class="nav-link flex items-center truncate @@if (context.page === 'widgets') {active}">
+              <span class="me-3 sidebar-icon">
+                <span class="icon-[tabler--wand]"></span>
+              </span>
+              <span class="sidebar-text">Widgets </span>
+              <span class="text-sm px-1 py-0.5 rounded-md bg-success-500 text-white ms-auto">30+</span>
+            </a>
+          </li>
+         
+          <li class="nav-item px-3 flex items-center pt-3 pb-1 sidebar-title truncate">
+            <span class="sidebar-text text-sm text-gray-400 font-semibold">Apps</span>
+          </li>
+          <li class="nav-item">
+            <a href="app-inbox.html"
+              class="nav-link flex items-center truncate @@if (context.page === 'inbox') {active}">
+              <span class="me-3 sidebar-icon">
+                <span class="icon-[tabler--inbox]"></span>
+              </span>
+              <span class="sidebar-text flex-grow flex justify-between items-center">Inbox 
+                <span class="size-2 block rounded-full bg-primary-500"></span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="app-chat.html"
+              class="nav-link flex items-center truncate @@if (context.page === 'chat') {active}">
+              <span class="me-3 sidebar-icon">
+               <span class="icon-[tabler--message]"></span>
+              </span>
+              <span class="sidebar-text">Chat</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="app-projects.html"
+              class="nav-link flex items-center truncate @@if (context.page === 'projects') {active}">
+              <span class="me-3 sidebar-icon">
+                <span class="icon-[tabler--folders]"></span>
+              </span>
+              <span class="sidebar-text">Projects</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="app-tasks.html"
+              class="nav-link flex items-center truncate @@if (context.page === 'tasks') {active}">
+              <span class="me-3 sidebar-icon">
+                <span class="icon-[tabler--subtask]"></span>
+              </span>
+              <span class="sidebar-text">Tasks</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="app-calendar.html"
+              class="nav-link flex items-center truncate @@if (context.page === 'calendar') {active}">
+              <span class="me-3 sidebar-icon">
+                <span class="icon-[tabler--calendar-month]"></span>
+              </span>
+              <span class="sidebar-text">Calendar</span>
+            </a>
+          </li>
+          <li class="nav-item px-3 flex items-center pt-3 pb-1 sidebar-title truncate">
+            <span class="sidebar-text text-sm text-gray-400 font-semibold">Pages</span>
+          </li>
+          <li class="nav-item">
+            <a data-bs-toggle="collapse"
+              class="nav-link flex items-center truncate @@if (context.page === 'pages') {active}"
+              aria-expanded="false" href="#ui-pages">
+              <span class="me-3 sidebar-icon">
+                <span class="icon-[tabler--file-description]"></span>
+              </span>
+              <!--Sidebar nav text-->
+              <span class="sidebar-text">Pages</span>
+              <!--:Collapse Arrow:-->
+              <span class="icon-[tabler--chevron-up] sidebar-arrow ms-auto"></span>
+            </a>
+            <ul id="ui-pages" class="sidebar-dropdown list-unstyled collapse @@pages_collapse">
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="page-signin.html">Sign In</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="sidebar-link" href="page-signup.html">Sign Up</a>
+                  </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a data-bs-toggle="collapse"
+              class="nav-link flex items-center truncate @@if (context.page === 'account') {active}"
+              aria-expanded="false" href="#ui-account">
+              <span class="me-3 sidebar-icon">
+                <span class="icon-[tabler--user-circle]"></span>
+              </span>
+              <!--Sidebar nav text-->
+              <span class="sidebar-text">Account</span>
+              <!--:Collapse Arrow:-->
+              <span class="icon-[tabler--chevron-up] sidebar-arrow ms-auto"></span>
+            </a>
+            <ul id="ui-account" class="sidebar-dropdown list-unstyled collapse @@account_collapse">
+                <li class="sidebar-item">
+                    <a class="sidebar-link @@account_overview" href="account-overview.html">Overview</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="sidebar-link @@account_billing" href="account-billing.html">Billing</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="sidebar-link @@account_contacts" href="account-contacts.html">Contacts</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="sidebar-link @@account_permissions" href="account-permissions.html">Permissions</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="sidebar-link @@account_security" href="account-security.html">Security</a>
+                  </li>  
+            </ul>
+          </li>
+          <li class="nav-item px-3 flex items-center pt-3 pb-1 sidebar-title truncate">
+            <span class="sidebar-text text-sm text-gray-400 font-semibold">Features</span>
+          </li>
+          <li class="nav-item">
+            <a href="#ui-components" data-bs-toggle="collapse" aria-expanded="false"
+              class="nav-link flex items-center truncate @@if (context.page === 'ui-components') {active}">
+              <span class="me-3 sidebar-icon">
+                <span class="icon-[tabler--components]"></span>
+              </span>
+              <!--Sidebar nav text-->
+              <span class="sidebar-text">UI Components</span>
+              <!--:Collapse Arrow:-->
+              <span class="icon-[tabler--chevron-up] sidebar-arrow ms-auto"></span>
+            </a>
+            <ul id="ui-components" class="sidebar-dropdown list-unstyled collapse @@components_collapse">
+              
+              <li class="sidebar-item"><a class="sidebar-link @@component_avatars_active" href="ui-component-avatars.html">Avatars</a></li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_anim_spinners_active" href="ui-component-animations-spinners.html">Animations & Spinners</a> </li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_alerts_active" href="ui-component-alerts.html">Alerts</a></li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_badges_active" href="ui-component-badges.html">Badges</a></li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_buttons_active" href="ui-component-buttons.html">Buttons</a></li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_breadcrumb_active" href="ui-component-breadcrumb.html">Breadcrumb</a></li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_cards_active" href="ui-component-cards.html">Cards</a></li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_collapse_active" href="ui-component-collapse.html">Collapse</a> </li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_dropdown_active" href="ui-component-dropdown.html">Dropdowns</a> </li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_flatpickr_active" href="ui-component-flatpickr.html">Flatpickr</a></li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_modals_active" href="ui-component-modals.html">Modal</a> </li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_offcanvas_active" href="ui-component-offcanvas.html">Offcanvas</a></li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_icons_active" href="ui-component-icons.html">Icons</a></li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_progress_active" href="ui-component-progress.html">Progress</a></li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_paginations_active" href="ui-component-paginations.html">Pagintions</a></li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_typo_active" href="ui-component-typography.html">Typography</a></li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_toast_active" href="ui-component-toast.html">Toast</a></li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_tooltips_active" href="ui-component-tooltips-popovers.html">Tooltips & Popovers</a></li>
+              <li class="sidebar-item"><a class="sidebar-link @@component_tom_select_active" href="ui-component-tom-select.html">Tom Select</a></li>
+             </ul>
+          </li>
+          <li class="nav-item">
+            <a href="forms.html"
+              class="nav-link flex items-center truncate @@if (context.page === 'forms') {active}">
+              <span class="me-3 sidebar-icon">
+                <span class="icon-[tabler--edit]"></span>
+              </span>
+              <span class="sidebar-text">Forms</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="charts.html"
+              class="nav-link flex items-center truncate @@if (context.page === 'charts') {active}">
+              <span class="me-3 sidebar-icon">
+                <span class="icon-[tabler--chart-area]"></span>
+              </span>
+              <span class="sidebar-text">Charts</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="tables.html"
+              class="nav-link flex items-center truncate @@if (context.page === 'tables') {active}">
+              <span class="me-3 sidebar-icon">
+                <span class="icon-[tabler--table]"></span>
+              </span>
+              <span class="sidebar-text">Tables</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link flex items-center truncate" href="#multi-level" data-bs-toggle="collapse" aria-expanded="false">
+                <span class="me-3 sidebar-icon">
+                  <span class="icon-[tabler--layers-subtract]"></span>
+                </span>
+                <span class="sidebar-text">Multi level</span>
+                <!--:Collapse Arrow:-->
+              <span class="icon-[tabler--chevron-up] sidebar-arrow ms-auto"></span>
+            </a>
+            <ul id="multi-level" class="collapse sidebar-dropdown list-unstyled mb-0">
+              <li class="sidebar-item">
+                <a href="#level-2" data-bs-toggle="collapse" aria-expanded="false" class="sidebar-link flex items-center">Level
+                  Two
+                  <span class="icon-[tabler--chevron-up] sidebar-arrow ms-auto"></span>
+                </a>
+                <ul id="level-2" class="collapse sidebar-dropdown list-unstyled mb-0">
+
+                  <li class="sidebar-item">
+                    <a href="#level-3" data-bs-toggle="collapse" aria-expanded="false" class="sidebar-link flex items-center">Level
+                      two item 2
+                      <span class="icon-[tabler--chevron-up] sidebar-arrow ms-auto"></span>
+                    </a>
+                    <ul id="level-3" class="collapse sidebar-dropdown list-unstyled mb-0">
+                      <li class="sidebar-item">
+                        <a href="#!" class="sidebar-link">Level three item 1</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <hr class="border-gray-200 dark:border-gray-800 mt-4">
+          <li class="nav-item px-3 flex items-center pt-3 pb-1 sidebar-title truncate">
+            <span class="sidebar-text text-sm text-gray-400 font-semibold">Documentations</span>
+          </li>
+          <li class="nav-item">
+            <a href="documentation.html"
+              class="nav-link flex items-center truncate @@if (context.page === 'docs') {active}">
+              <span class="me-3 sidebar-icon">
+               <span class="icon-[tabler--lifebuoy]"></span>
+              </span>
+              <span class="sidebar-text">Getting started</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+  </div>
+  
+  <!--:dropdown for user:-->
+  <div class="px-4 py-3 border-t border-gray-200 dark:border-gray-800">
+    <div class="relative user-dropdown">
+      <a href="#" data-bs-toggle="dropdown" data-bs-display="static"
+        class="flex flex-nowrap items-center p-1 rounded-md">
+        <img src="img/avatars/m1.jpg" class="h-9 w-auto rounded-full mr-3 shrink-0" alt="">
+        <div class="flex-grow leading-tight h-full">
+          <h5 class="font-semibold mb-1">John Doe</h5>
+          <small class="text-gray-400 block">john@doe.com</small>
+        </div>
+      </a>
+      <div 
+        class="absolute left-0 bottom-full w-48 lg:w-56 py-2 mb-2 dropdown-menu translate-y-2 invisible opacity-0 [&.show]:opacity-100 [&.show]:visible [&.show]:-translate-y-0 transition-all duration-300">
+        <a href="#!" class="dropdown-item">
+          <span class="icon-[tabler--user-circle] text-lg"></span>
+          Profile
+        </a>
+        <a href="#!" class="dropdown-item">
+          <span class="icon-[tabler--settings] text-lg"></span>
+          Settings
+        </a>
+        <a href="#!" class="dropdown-item">
+           <span class="icon-[tabler--credit-card] text-lg"></span>
+          Payments
+        </a>
+        <a href="page-signin.html" class="dropdown-item">
+          <span class="icon-[tabler--logout] text-lg"></span>
+          Logout
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</aside>

@@ -1,0 +1,19 @@
+//Offcanvas scss
+.offcanvas-filter{
+    z-index: 1100;
+}
+
+.offcanvas-filter.offcanvas {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      $next: breakpoint-next($breakpoint, $grid-breakpoints);
+      $infix: breakpoint-infix($next, $grid-breakpoints);
+  
+      // stylelint-disable-next-line scss/selector-no-union-class-name
+      &#{$infix} {
+        @include media-breakpoint-up($next) {
+            max-height: 100vh;
+            overflow-y: auto;
+        }
+    }
+}
+}

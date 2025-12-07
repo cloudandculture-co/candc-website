@@ -1,0 +1,165 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+      @@include('./partials/head-includes.html')
+     <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+    <!--begin:Header-->
+ <header class="header-transparent sticky-fixed">
+
+   <!--begin:navbar-->
+   <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+     <!--Navbar-fixed-background-->
+     <div class="navbar-fixed-bg absolute"></div>
+     <div class="container relative flex flex-wrap items-center justify-center relative">
+       <!--begin:logo-->
+       <a class="navbar-brand relative w-24 block" href="index.html">
+         <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+         <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+       </a>
+       <!--end:logo-->
+
+       <!--begin:navbar-no-collapse-items-->
+       <div class="flex items-center shrink-0 ml-auto lg:order-last">
+         <!--Navbar toggler button-->
+         <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+           data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+           aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon">
+             <i></i>
+           </span>
+         </button>
+         <!--Button-->
+         <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+           <a href="#"
+             class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+         </div>
+       </div>
+       <!--end:navbar-no-collapse-items-->
+
+       <!--begin:navbar-collapse-->
+       <div
+         class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+         id="mainNavbarTheme">
+         @@include('./partials/headers/default-navbar-items.html',{"page": "components"})
+       </div>
+       <!--end:navbar-collapse-->
+     </div>
+
+   </nav>
+   <!--end:navbar-->
+ </header>
+ <!--end:header-->
+
+ 
+<main class="main-content" id="main-content">
+    <section class="relative bg-gradient-to-tr from-indigo-500 to-gray-900 text-white">
+        <div class="container relative pb-12 lg:pb-24 pt-32 lg:pt-48">
+            <div class="flex flex-wrap -mx-3 items-center">
+                <div class="w-full mx-auto px-3 lg:w-8/12  relative z-[1]">
+                   <h1 class="text-3xl lg:text-6xl text-center font-medium mb-7">Avatars</h1>
+                <!--:Breadcrumbs:-->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb flex items-center justify-center">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li><i class="bi bi-chevron-right mx-3 text-sm opacity-50"></i></li>
+                      <li class="breadcrumb-item"><a href="#">Components</a></li>
+                      <li><i class="bi bi-chevron-right mx-3 text-sm opacity-50"></i></li>
+                      <li class="breadcrumb-item active [&.active]:opacity-50" aria-current="page">Avatars</li>
+                    </ol>
+                  </nav>   
+                </div>
+                </div>
+            </div>
+            <!--/.row-->
+
+    </section>
+
+    <section class="relative">
+        <div class="container py-16 lg:py-24">
+            <div class="w-full lg:w-8/12 mx-auto">
+               <!--:Card:-->
+               <div class="p-6 rounded-2xl border border-gray-200 dark:border-gray-800 mb-6">
+                <h6 class="text-lg font-medium mb-7">Sizing</h6>
+                <div class="flex flex-wrap gap-2 items-center">
+                 <img src="assets/img/avatar/1.jpg" class="w-6 h-6 rounded-full" alt="">
+                 <img src="assets/img/avatar/1.jpg" class="w-8 h-8 rounded-full" alt="">
+                 <img src="assets/img/avatar/1.jpg" class="w-10 h-10 rounded-full" alt="">
+                 <img src="assets/img/avatar/1.jpg" class="w-12 h-12 rounded-full" alt="">
+                 <img src="assets/img/avatar/1.jpg" class="w-14 h-14 rounded-full" alt="">
+                 <img src="assets/img/avatar/1.jpg" class="w-16 h-16 rounded-full" alt="">
+                 <img src="assets/img/avatar/1.jpg" class="w-20 h-20 rounded-full" alt="">
+                </div>
+              </div>
+               <!--:Card:-->
+               <div class="p-6 rounded-2xl border border-gray-200 dark:border-gray-800 mb-6">
+                <h6 class="text-lg font-medium mb-7">Placeholder</h6>
+                <div class="flex flex-wrap gap-2 items-center">
+                 <span class="flex items-center w-6 h-6 text-sm font-medium leading-[1] shrink-0 justify-center bg-gray-400 text-white rounded-full">F</span>
+                 <span class="flex items-center w-8 h-8 text-sm font-medium leading-[1] shrink-0 justify-center bg-gray-400 text-white rounded-full">F</span>
+                 <span class="flex items-center w-10 h-10 font-medium leading-[1] shrink-0 justify-center bg-gray-400 text-white rounded-full">F</span>
+                 <span class="flex items-center w-12 h-12 text-lg font-medium leading-[1] shrink-0 justify-center bg-gray-400 text-white rounded-full">F</span>
+                 <span class="flex items-center w-14 h-14 text-xl font-medium leading-[1] shrink-0 justify-center bg-gray-400 text-white rounded-full">F</span>
+                </div>
+              </div>
+               <!--:Card:-->
+               <div class="p-6 rounded-2xl border border-gray-200 dark:border-gray-800 mb-6">
+                <h6 class="text-lg font-medium mb-7">Group</h6>
+                <div class="flex flex-wrap -space-x-2 items-center mb-4">
+                 <img src="assets/img/avatar/1.jpg" class="w-10 h-10 rounded-full border-2 border-white dark:border-black" alt="">
+                 <img src="assets/img/avatar/3.jpg" class="w-10 h-10 rounded-full relative border-2 border-white dark:border-black" alt="">
+                 <img src="assets/img/avatar/5.jpg" class="w-10 h-10 rounded-full relative border-2 border-white dark:border-black" alt="">
+                 <img src="assets/img/avatar/7.jpg" class="w-10 h-10 rounded-full relative border-2 border-white dark:border-black" alt="">
+                 <img src="assets/img/avatar/9.jpg" class="w-10 h-10 rounded-full relative border-2 border-white dark:border-black" alt="">
+                 <span class="w-10 h-10 flex items-center justify-center bg-gray-600 text-white rounded-full relative text-xs font-medium border-2 border-white dark:border-black">+10</span>
+                </div>
+                <div class="flex flex-wrap -space-x-2 items-center">
+                  <img src="assets/img/avatar/1.jpg" class="w-10 h-10 rounded-full border-2 border-white dark:border-black" alt="">
+                  <img src="assets/img/avatar/3.jpg" class="w-10 h-10 rounded-full relative border-2 border-white dark:border-black" alt="">
+                  <img src="assets/img/avatar/5.jpg" class="w-10 h-10 rounded-full relative border-2 border-white dark:border-black" alt="">
+                  <img src="assets/img/avatar/7.jpg" class="w-10 h-10 rounded-full relative border-2 border-white dark:border-black" alt="">
+                  <img src="assets/img/avatar/9.jpg" class="w-10 h-10 rounded-full relative border-2 border-white dark:border-black" alt="">
+                  <span class="px-3 h-10 flex items-center justify-center bg-gray-600 text-white rounded-full relative text-xs font-medium border-2 border-white dark:border-black">+20k users</span>
+                 </div>
+              </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+   
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-1.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- end:Back to Top button -->
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

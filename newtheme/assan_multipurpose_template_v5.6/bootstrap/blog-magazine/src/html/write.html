@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Assan | Blog</title>
+        <!--:Quill editor css:-->
+        <link href="assets/vendor/node_modules/css/quill.snow.css" rel="stylesheet">
+        @@include('./partials/head.html')
+    </head>
+
+    <body>
+        <div class="d-flex flex-column flex-root">
+            <!--Page-->
+            <div class="page-lg d-flex flex-row flex-column-fluid">
+
+                @@include('./partials/page-sidebar.html',{'page':'write'})
+
+                <!--:Page content:-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+                    @@include('./partials/header-default.html')
+                    <!--::Page content with sidebar::-->
+                    <div class="content d-flex flex-column-fluid position-relative">
+
+                        <!--:Content inner layout:-->
+                        <div class="d-flex flex-column flex-md-row h-100 w-100">
+                            <!--:Content inner Content:-->
+                            <div class="col-md-7 col-lg-8 layout-content d-flex flex-column h-100">
+                                <div class="position-relative px-3 px-xl-7 py-5 mx-auto w-100">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <h2 class="display-6 mb-2">Write an Article</h2>
+                                            <p class="text-body-secondary mb-4">Lorem ipsum dolor sit amet</p>
+                                        </div>
+                                    </div>
+                                    <!-- Editor container -->
+                                    <form action="#">
+                                        <div id="scrolling-container">
+                                            <div id="editor" dangerouslySetInnerHTML={{__html: htmlContent}} >
+                                            
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column flex-sm-row align-items-md-center gap-2 pt-3 justify-content-end">
+                                            <button type="button" class="btn btn-outline-secondary">Save 
+                                               <i class="bi bi-save ms-1"></i></button>
+                                            <button type="button" class="btn btn-outline-secondary">Save & Preview
+                                                <i class="bi bi-eye ms-1"></i></button>
+                                            <button type="submit" class="btn btn-primary">Submit for Review</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--:Content inner Sidebar:-->
+                            <div
+                                class="col-md-5 col-lg-4 bg-body-tertiary content-inner-sidebar d-flex flex-column h-100 border-start position-relative">
+
+                                <div class="position-sticky top-0">
+                                   <div class="py-5 px-3">
+                                    <h6 class="mb-4">Hints and shortcuts</h6>
+                                    <ul>
+                                        <li>Select text and choose options from toolbar to change <strong>formatting</strong>, add headers, or create links.</li>
+                                        <li>Add <strong>images</strong> and other media by starting a new line and clicking on image icon from toolbar</li>
+                                    </ul>
+                                   </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+  <!--:Footer:-->
+  @@include('./partials/footer-default.html')
+                </main>
+
+            </div>
+        </div>
+        <!--script-->
+        <script src="assets/js/theme.bundle.min.js"></script>
+        <!--Select scripts-->
+        <script src="assets/vendor/node_modules/js/choices.min.js"></script>
+        <script>
+            var cSelect = document.querySelectorAll("[data-choices]");
+            cSelect.forEach(el => {
+                const t = {
+                    ...el.dataset.choices ? JSON.parse(el.dataset.choices) : {},
+                    ...{
+                        classNames: {
+                            containerInner: el.className,
+                            input: "form-control",
+                            inputCloned: "form-control-sm",
+                            listDropdown: "dropdown-menu",
+                            itemChoice: "dropdown-item",
+                            activeState: "show",
+                            selectedState: "active"
+                        }
+                    }
+                }
+                new Choices(el, t)
+            });
+
+        </script>
+        <script src="assets/vendor/node_modules/js/quill.js"></script>
+        <script>
+            var toolbarOptions = [
+            [{ 'header': 1 }, { 'header': 2 }],  
+  ['bold', 'italic', 'underline',],
+  ['blockquote', 'link','image'],
+  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+];
+            var quill = new Quill('#editor', {
+                modules: {
+                    toolbar: toolbarOptions
+                },
+                scrollingContainer: '#scrolling-container',
+                placeholder: 'Start writing here...',
+  theme: 'snow'  // or 'bubble'
+            });
+
+        </script>
+    </body>
+
+</html>

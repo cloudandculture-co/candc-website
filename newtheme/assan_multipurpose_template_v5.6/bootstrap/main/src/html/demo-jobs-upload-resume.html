@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+
+        <!--Bootstrap Icons-->
+        <link rel="stylesheet" href="assets/fonts/bootstrap-icons/bootstrap-icons.min.css">
+        <!--Iconsmind Icons-->
+        <link rel="stylesheet" href="assets/fonts/iconsmind/iconsmind.css">
+        <!--Select box-->
+        <link rel="stylesheet" href="assets/vendor/node_modules/css/choices.min.css">
+        <!--Form steps css-->
+        <link rel="stylesheet" href="assets/vendor/node_modules/css/bs-stepper.min.css">
+        <!--Flatpickr-->
+        <link rel="stylesheet" href="assets/vendor/node_modules/css/flatpickr.min.css">
+        <!-- Aos Animations CSS -->
+        <link href="assets/vendor/node_modules/css/aos.css" rel="stylesheet">
+        <!-- Google fonts CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <link href="assets/css/theme-green.min.css" rel="stylesheet">
+
+        <title>Assan 4</title>
+    </head>
+
+    <body>
+        @@include('./partials/preloader.html')
+        <!--Header Start-->
+        <header class="z-fixed header-absolute-top header-transparent sticky-reverse">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container position-relative">
+                     <!--:Brand Logo:-->
+                     <a class="navbar-brand" href="demo-jobs.html">
+                        <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-light">
+                        <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-dark">
+                        <sub class="d-none d-sm-inline-block position-absolute end-0 bottom-0 me-n2 mb-n2">Jobs</sub>
+                    </a>
+                    <div class="d-flex align-items-center navbar-no-collapse-items order-lg-last">
+                        <div class="nav-item btn-group me-2 me-lg-0">
+                            <a href="demo-jobs-post-job.html" class="btn btn-outline-info btn-sm py-1 px-3">Post Job</a>
+                            <a href="#!" class="btn btn-sm btn-outline-info py-1 px-3"><i
+                                    class="bi bi-person-circle me-1"></i>SignUp</a>
+                        </div>
+                        <button class="navbar-toggler order-last" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                                <i></i>
+                            </span>
+                        </button>
+
+                    </div>
+                    <div class="collapse navbar-collapse" id="mainNavbarTheme">
+
+                        <ul class="navbar-nav me-lg-3 ms-lg-auto">
+                            <li class="nav-item">
+                                <a href="demo-jobs.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jobs listing</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="demo-jobs-listing.html">Lisitng Row</a>
+                                    <a class="dropdown-item" href="demo-jobs-listing-grid.html">Lisitng Grid</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="demo-jobs-job-detail.html">Job Details</a>
+                                    <a class="dropdown-item" href="demo-jobs-job-apply.html">Apply for Job</a>
+                                    <a class="dropdown-item" href="demo-jobs-employer.html">Employer</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="demo-jobs-upload-resume.html" class="nav-link active">Upload Resume</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">Eng</a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="#!" class="active dropdown-item">
+                                        <img src="assets/img/country/us.svg" class="me-2" width="20" alt="">
+                                        <small>English</small>
+                                    </a>
+                                    <a href="#!" class="dropdown-item">
+                                        <img src="assets/img/country/pt.svg" class="me-2" width="20" alt="">
+                                        <small>Portuguese</small>
+                                    </a>
+                                    <a href="#!" class="dropdown-item">
+                                        <img src="assets/img/country/de.svg" class="me-2" width="20" alt="">
+                                        <small>German</small>
+                                    </a>
+                                    <a href="#!" class="dropdown-item">
+                                        <img src="assets/img/country/fr.svg" class="me-2" width="20" alt="">
+                                        <small>French</small>
+                                    </a>
+                                    <a href="#!" class="dropdown-item">
+                                        <img src="assets/img/country/dk.svg" class="me-2" width="20" alt="">
+                                        <small>Danish</small>
+                                    </a>
+                                    <a href="#!" class="dropdown-item">
+                                        <img src="assets/img/country/es.svg" class="me-2" width="20" alt="">
+                                        <small>Española</small>
+                                    </a>
+                                    <a href="#!" class="dropdown-item">
+                                        <img src="assets/img/country/nl.svg" class="me-2" width="20" alt="">
+                                        <small>Dutch</small>
+                                    </a>
+                                    <a href="#!" class="dropdown-item">
+                                        <img src="assets/img/country/jp.svg" class="me-2" width="20" alt="">
+                                        <small>japanese</small>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--Main content-->
+        <main>
+
+            <section class="bg-body-tertiary rounded-bottom-4 position-relative overflow-hidden">
+                <div class="container position-relative pb-7 pt-12 pt-lg-15">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="display-5 mb-0">Upload your resume</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="position-relative">
+                <div class="container pb-9 pb-lg-12 pt-7 pt-lg-12">
+                    <div class="bs-stepper" id="stepperDemo">
+
+                        <!--Stepper header start-->
+                        <div class="bs-stepper-header px-0 pb-3 d-flex flex-column flex-md-row align-items-md-center align-items-start"
+                            role="tablist">
+                             <div class="step active" data-target="#stepper-step-1">
+                                    <button type="button" class="step-trigger ps-0 py-2 flex-nowrap" role="tab"
+                                        id="stepperDemotrigger1" aria-controls="stepper-step-1" aria-selected="true">
+                                        <span class="bs-stepper-circle rounded-2">
+                                            <i class="bi bi-person"></i>
+                                        </span>
+                                        <span
+                                            class="flex-grow-1 flex-wrap d-flex flex-column jusitfy-content-start text-start">
+                                            <span class="bs-stepper-label h6 m-0">Bio</span>
+                                            <small class="opacity-75 small">Your personal information</small>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="step-line px-xl-3 d-none d-lg-block">
+                                    <i class="bi bi-chevrons-right"></i>
+                                </div>
+                                <div class="step" data-target="#stepper-step-2">
+                                    <button type="button" class="step-trigger ps-0 ps-md-2 py-2 flex-nowrap" role="tab"
+                                        id="stepperDemotrigger2" aria-controls="stepper-step-2" aria-selected="false">
+                                        <span class="bs-stepper-circle rounded-2">
+                                            <i class="bi bi-braces"></i>
+                                        </span>
+                                        <span
+                                            class="flex-grow-1 flex-wrap d-flex flex-column jusitfy-content-start text-start">
+                                            <span class="bs-stepper-label h6 m-0">Expertise</span>
+                                            <small class="opacity-75 small">Your expertise</small>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="step-line px-xl-3 d-none d-lg-block">
+                                    <i class="bi bi-chevrons-right"></i>
+                                </div>
+                                <div class="step" data-target="#stepper-step-3">
+                                    <button type="button" class="step-trigger ps-0 ps-md-2 py-2 flex-nowrap" role="tab"
+                                        id="stepperDemotrigger3" aria-controls="stepper-step-3" aria-selected="false">
+                                        <span class="bs-stepper-circle rounded-2">
+                                            <i class="bi bi-bullseye"></i>
+                                        </span>
+                                        <span
+                                            class="flex-grow-1 flex-wrap d-flex flex-column jusitfy-content-start text-start">
+                                            <span class="bs-stepper-label h6 m-0">Experience & resume</span>
+                                            <small class="opacity-75 small">Add experience & resume</small>
+                                        </span>
+                                    </button>
+                                </div>
+                        </div>
+                        <!--Stepper header end-->
+
+                        <!--Stepper content start-->
+                        <div class="bs-stepper-content p-0">
+                            <div class="card card-body p-0 h-100">
+                                <form class="h-100 d-flex flex-column" action="#">
+                                    <!--Step-1-->
+                                    <div id="stepper-step-1" class="content h-100" aria-labelledby="stepper-step-1">
+                                        <div class="d-flex flex-column h-100">
+                                            <!--Step Title-->
+                                            <div class="flex-shrink-0 p-4 border-bottom">
+                                                <h6 class="mb-1">Bio</h6>
+                                                <p class="text-body-secondary small mb-0">Your personal information</p>
+                                            </div>
+
+                                            <!--Step main content-->
+                                            <div class="flex-grow-1 p-4">
+                                                <div class="row">
+                                                    <!--Form group-->
+                                                    <div class="col-md-6 mb-4">
+                                                        <label class="form-label" for="resume_f_name">First Name</label>
+                                                        <input type="text" id="resume_f_name" class="form-control"
+                                                            placeholder="eg. Henry">
+                                                    </div>
+                                                    <!--Form group-->
+                                                    <div class="col-md-6 mb-4">
+                                                        <label class="form-label" for="resume_l_name">Last Name</label>
+                                                        <input type="text" id="resume_l_name" class="form-control"
+                                                            placeholder="eg. Elanga">
+                                                    </div>
+                                                    <!--Form group-->
+                                                    <div class="col-md-12 mb-4">
+                                                        <label class="form-label" for="resume_email">Email ID</label>
+                                                        <input type="email" id="resume_email" class="form-control"
+                                                            placeholder="eg. henry@domain.com">
+                                                    </div>
+                                                    <!--Form group-->
+                                                    <div class="col-md-12 mb-4">
+                                                        <label class="form-label" for="resume_country">Country</label>
+                                                        <select id="resume_country" class="form-control choices__countries">
+                                                            <option value="" selected disabled>Choose country</option>
+                                                          </select>
+                                                    </div>
+                                                    <!--Form group-->
+                                                    <div class="col-md-12 mb-2">
+                                                        <label class="form-label" for="resume_phone">Phone</label>
+                                                        <input type="text" id="resume_phone" class="form-control"
+                                                            placeholder="">
+                                                    </div>
+                                                     <!--Form group-->
+                                                     <div class="col-md-12 mb-4">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" id="resume_phone_check" class="form-check-input">
+                                                        <label class="form-check-label text-body-tertiary" for="resume_phone_check"><small class="lh-sm">Call and send me text messages at this number</small></label>
+                                                        </div>
+                                                    </div>
+                                                    <!--Form group-->
+                                                    <div class="col-12 mb-0">
+                                                        <label class="form-label" for="resume_bio">Your Bio</label>
+                                                        <textarea name="resume_bio" id="resume_bio" rows="5"
+                                                            class="form-control"
+                                                            placeholder="Enter your bio here"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Step footer-->
+                                            <div class="d-flex p-4 border-top justify-content-end">
+                                                <button type="button" class="btn btn-primary" onclick="stepDemo.next()">
+                                                    Save & Next <i class="bi bi-arrow-right ms-1"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Step-2-->
+                                    <div id="stepper-step-2" class="content h-100" aria-labelledby="stepper-step-2">
+                                        <div class="d-flex flex-column h-100">
+                                            <!--Step Title-->
+                                            <div class="flex-shrink-0 p-4 border-bottom">
+                                                <h6 class="mb-1">Expertise</h6>
+                                                <p class="text-body-secondary small mb-0">Your skills and expertise</p>
+                                            </div>
+                                            <!--Step main content-->
+                                            <div class="flex-grow-1 p-4">
+                                                <div class="mb-4">
+                                                    <label for="experience" class="form-label">Years of
+                                                        experience</label> <select id="experience" class="form-control"
+                                                        data-choices='{"searchEnabled":false, "allowHTML":true,"itemSelectText":""}'>
+                                                        <option selected value="Less than 1 Year">Less than 1 Year</option>
+                                                        <option value="2+ Years">2+ Years</option>
+                                                        <option value="3+ Years">3+ Years</option>
+                                                        <option value="4+ Years">4+ Years</option>
+                                                        <option value="5+ Years">5+ Years</option>
+                                                        <option value="10+ Years">10+ Years</option>
+                                                    </select>
+
+                                                </div>
+                                                <label for="" class="form-label">Expertise</label>
+                                                <!--Expertise option-->
+                                                <div class="form-control mb-2 p-2">
+                                                    <div class="form-check mb-0">
+                                                        <input id="web_design" type="radio" name="expertise"
+                                                            class="form-check-input">
+                                                        <label for="web_design" class="form-check-label">Web
+                                                            Design</label>
+                                                    </div>
+                                                </div>
+                                                <!--Expertise option-->
+                                                <div class="form-control p-2 mb-2">
+                                                    <div class="form-check mb-0">
+                                                        <input id="web_development" type="radio" name="expertise"
+                                                            class="form-check-input">
+                                                        <label for="web_development" class="form-check-label">Web
+                                                            Development</label>
+                                                    </div>
+                                                </div>
+                                                <!--Expertise option-->
+                                                <div class="form-control mb-2 p-2">
+                                                    <div class="form-check mb-0">
+                                                        <input id="graphic_design" type="radio" name="expertise"
+                                                            class="form-check-input">
+                                                        <label for="graphic_design" class="form-check-label">Graphic
+                                                            Design</label>
+                                                    </div>
+                                                </div>
+                                                <!--Expertise option-->
+                                                <div class="form-control mb-2 p-2">
+                                                    <div class="form-check mb-0">
+                                                        <input id="content_management" type="radio" name="expertise"
+                                                            class="form-check-input">
+                                                        <label for="content_management" class="form-check-label">Content
+                                                            Management</label>
+                                                    </div>
+                                                </div>
+                                                <!--Expertise option-->
+                                                <div class="form-control mb-4 p-2">
+                                                    <div class="form-check mb-0">
+                                                        <input id="expertise_others" type="radio" name="expertise"
+                                                            class="form-check-input">
+                                                        <label for="expertise_others"
+                                                            class="form-check-label">Others</label>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-0">
+                                                    <label for="skills" class="form-label">Skills</label>
+
+
+                                                    <!--Multiple select-->
+                                                    <input type="text" id="skills" class="form-control"
+                                                        data-choices='{"silent": true,"removeItems": "true","removeItemButton": "true", "allowHTML":true}'>
+                                                    <small class="text-body-secondary d-block pt-2">*Type skill name and hit
+                                                        enter</small>
+                                                </div>
+                                            </div>
+                                            <!--Step footer-->
+                                            <div class="d-flex p-4 border-top justify-content-between">
+                                                <button type="button" class="btn btn-secondary"
+                                                    onclick="stepDemo.previous()">
+                                                    <i class="bi bi-arrow-left"></i> Back
+                                                </button>
+                                                <button type="button" class="btn btn-primary" onclick="stepDemo.next()">
+                                                    Save & Next <i class="bi bi-arrow-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Step-3-->
+                                    <div id="stepper-step-3" class="content h-100" aria-labelledby="stepper-step-3">
+                                        <div class="d-flex h-100 flex-column">
+
+                                            <!--Step Title-->
+                                            <div class="flex-shrink-0 p-4 border-bottom">
+                                                <h6 class="mb-0">Experience & resume</h6>
+                                                <p class="text-body-secondary small mb-0">Add experience and resume</p>
+                                            </div>
+                                            <!--Step main content-->
+                                            <div class="flex-grow-1 p-4">
+                                                
+                                                <div class="mb-4">
+                                                    <label class="form-label" for="applicantExperienceJob">Job Title</label>
+                                                    <input type="text" id="applicantExperienceJob" class="form-control" placeholder="eg. Angular Developer">
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6 mb-4">
+                                                        <label for="applicantExperienceJobStartDate" class="form-label">Job start date</label>
+                                                        <input type="text" class="form-control bg-transparent" id="applicantExperienceJobStartDate" data-flatpickr='{"maxDate": "today"}'>
+                                                    </div>
+                                                    <div class="col-sm-6 mb-4">
+                                                        <label for="applicantExperienceJobEndDate" class="form-label">Job end date</label>
+                                                        <input type="text" class="form-control bg-transparent" id="applicantExperienceJobEndDate" data-flatpickr='{"maxDate": "today"}'>
+                                                         <small class="text-body-secondary">Leave end date empty if you're currently working there</small>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label class="form-label" for="applicantExperienceJobCompany">Company Name</label>
+                                                    <input type="text" id="applicantExperienceJobCompany" class="form-control" placeholder="eg. Airbnb">
+                                                </div>
+                                                <div class="mb-0">
+                                                   <label class="form-label" for="applicantResume">Upload Resume</label>
+                                                   <div class="mb-0">
+                                                    <label for="applicantResume" class="btn btn-gray-200">Upload resume</label>
+                                                    <input class="form-control d-none" required="" type="file" id="applicantResume">
+                                                    <span class="invalid-feedback">Pls upload correct file formate, eg. - .zip, .rar, .pdf</span>
+                                                   </div>
+                                                </div>
+                                            </div>
+
+                                            <!--Step footer-->
+                                            <div class="d-flex p-4 border-top justify-content-between">
+                                                <button type="button" class="btn btn-secondary"
+                                                    onclick="stepDemo.previous()">
+                                                    <i class="bi bi-arrow-left me-1"></i> Back
+                                                </button>
+                                                <button type="submit" class="btn btn-primary">
+                                                    Submit <i class="bi bi-send ms-1"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="position-relative border-top">
+                <!--Sparkles-->
+                <div class="position-absolute w-100 start-0 mt-7 top-0 d-flex justify-content-center">
+                    <img src="assets/img/vectors/sparkles.svg" class="fill-primary w-100 w-lg-50 h-auto" data-inject-svg
+                        alt="">
+                </div>
+                <div class="container py-9 py-lg-11 position-relative">
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-10 mx-auto position-relative">
+                            <h2 class="display-6 mb-3 position-relative text-center">Get jobs direct to your Inbox </h2>
+                            <p class="mb-5 text-center text-body-secondary">Subscribe to our newsletter</p>
+                            <form novalidate class="needs-validation w-lg-75 mx-lg-auto">
+                                <div class=" d-flex flex-md-row flex-column">
+                                    <input type="email" placeholder="Enter Email Address" required
+                                        class="form-control form-control-lg mb-2 mb-md-0 me-md-2 flex-grow-1">
+                                    <button type="submit" class="btn btn-info btn-lg">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('./partials/footers/footer-jobs.html')
+          <!-- begin:Back to Top button -->
+    <a href="#" class="toTop"><svg class="progress-circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="0, 251.2"></circle>
+      </svg>
+            <i class="bi bi-chevron-up"></i>
+          </a>
+          <!-- begin:Back to Top button -->
+        <!-- scripts -->
+        <script src="assets/js/theme.bundle.js"></script>
+        <!--Select scripts-->
+        <script src="assets/vendor/node_modules/js/choices.min.js"></script>
+        <script>
+            var cSelect = document.querySelectorAll("[data-choices]");
+            cSelect.forEach(el => {
+                const t = {
+                    ...el.dataset.choices ? JSON.parse(el.dataset.choices) : {},
+                    ...{
+                        classNames: {
+                            containerInner: el.className,
+                            input: "form-control",
+                            inputCloned: "form-control-sm",
+                            listDropdown: "dropdown-menu",
+                            itemChoice: "dropdown-item",
+                            activeState: "show",
+                            selectedState: "active"
+                        }
+                    }
+                }
+                new Choices(el, t)
+            });
+
+        </script>
+
+<!--Country select with flags-->
+<script>
+    var countries = [
+      { value: 'Afghanistan', text: 'AF' },
+      { value: 'Åland Islands', text: 'AX' },
+      { value: 'Albania', text: 'AL' },
+      { value: 'Algeria', text: 'DZ' },
+      { value: 'American Samoa', text: 'AS' },
+      { value: 'Andorra', text: 'AD' },
+      { value: 'Angola', text: 'AO' },
+      { value: 'Anguilla', text: 'AI' },
+      { value: 'Antarctica', text: 'AQ' },
+      { value: 'Antigua and Barbuda', text: 'AG' },
+      { value: 'Argentina', text: 'AR' },
+      { value: 'Armenia', text: 'AM' },
+      { value: 'Aruba', text: 'AW' },
+      { value: 'Australia', text: 'AU' },
+      { value: 'Austria', text: 'AT' },
+      { value: 'Azerbaijan', text: 'AZ' },
+      { value: 'Bahamas', text: 'BS' },
+      { value: 'Bahrain', text: 'BH' },
+      { value: 'Bangladesh', text: 'BD' },
+      { value: 'Barbados', text: 'BB' },
+      { value: 'Belarus', text: 'BY' },
+      { value: 'Belgium', text: 'BE' },
+      { value: 'Belize', text: 'BZ' },
+      { value: 'Benin', text: 'BJ' },
+      { value: 'Bermuda', text: 'BM' },
+      { value: 'Bhutan', text: 'BT' },
+      { value: 'Bolivia', text: 'BO' },
+      { value: 'Bosnia and Herzegovina', text: 'BA' },
+      { value: 'Botswana', text: 'BW' },
+      { value: 'Bouvet Island', text: 'BV' },
+      { value: 'Brazil', text: 'BR' },
+      { value: 'British Indian Ocean Territory', text: 'IO' },
+      { value: 'Brunei Darussalam', text: 'BN' },
+      { value: 'Bulgaria', text: 'BG' },
+      { value: 'Burkina Faso', text: 'BF' },
+      { value: 'Burundi', text: 'BI' },
+      { value: 'Cambodia', text: 'KH' },
+      { value: 'Cameroon', text: 'CM' },
+      { value: 'Canada', text: 'CA' },
+      { value: 'Cape Verde', text: 'CV' },
+      { value: 'Cayman Islands', text: 'KY' },
+      { value: 'Central African Republic', text: 'CF' },
+      { value: 'Chad', text: 'TD' },
+      { value: 'Chile', text: 'CL' },
+      { value: 'China', text: 'CN' },
+      { value: 'Christmas Island', text: 'CX' },
+      { value: 'Cocos (Keeling) Islands', text: 'CC' },
+      { value: 'Colombia', text: 'CO' },
+      { value: 'Comoros', text: 'KM' },
+      { value: 'Congo', text: 'CG' },
+      { value: 'Congo, The Democratic Republic of the', text: 'CD' },
+      { value: 'Cook Islands', text: 'CK' },
+      { value: 'Costa Rica', text: 'CR' },
+      { value: "Cote D'Ivoire", text: 'CI' },
+      { value: 'Croatia', text: 'HR' },
+      { value: 'Cuba', text: 'CU' },
+      { value: 'Cyprus', text: 'CY' },
+      { value: 'Czech Republic', text: 'CZ' },
+      { value: 'Denmark', text: 'DK' },
+      { value: 'Djibouti', text: 'DJ' },
+      { value: 'Dominica', text: 'DM' },
+      { value: 'Dominican Republic', text: 'DO' },
+      { value: 'Ecuador', text: 'EC' },
+      { value: 'Egypt', text: 'EG' },
+      { value: 'El Salvador', text: 'SV' },
+      { value: 'Equatorial Guinea', text: 'GQ' },
+      { value: 'Eritrea', text: 'ER' },
+      { value: 'Estonia', text: 'EE' },
+      { value: 'Ethiopia', text: 'ET' },
+      { value: 'Falkland Islands (Malvinas)', text: 'FK' },
+      { value: 'Faroe Islands', text: 'FO' },
+      { value: 'Fiji', text: 'FJ' },
+      { value: 'Finland', text: 'FI' },
+      { value: 'France', text: 'FR' },
+      { value: 'French Guiana', text: 'GF' },
+      { value: 'French Polynesia', text: 'PF' },
+      { value: 'French Southern Territories', text: 'TF' },
+      { value: 'Gabon', text: 'GA' },
+      { value: 'Gambia', text: 'GM' },
+      { value: 'Georgia', text: 'GE' },
+      { value: 'Germany', text: 'DE' },
+      { value: 'Ghana', text: 'GH' },
+      { value: 'Gibraltar', text: 'GI' },
+      { value: 'Greece', text: 'GR' },
+      { value: 'Greenland', text: 'GL' },
+      { value: 'Grenada', text: 'GD' },
+      { value: 'Guadeloupe', text: 'GP' },
+      { value: 'Guam', text: 'GU' },
+      { value: 'Guatemala', text: 'GT' },
+      { value: 'Guernsey', text: 'GG' },
+      { value: 'Guinea', text: 'GN' },
+      { value: 'Guinea-Bissau', text: 'GW' },
+      { value: 'Guyana', text: 'GY' },
+      { value: 'Haiti', text: 'HT' },
+      { value: 'Heard Island and Mcdonald Islands', text: 'HM' },
+      { value: 'Holy See (Vatican City State)', text: 'VA' },
+      { value: 'Honduras', text: 'HN' },
+      { value: 'Hong Kong', text: 'HK' },
+      { value: 'Hungary', text: 'HU' },
+      { value: 'Iceland', text: 'IS' },
+      { value: 'India', text: 'IN' },
+      { value: 'Indonesia', text: 'ID' },
+      { value: 'Iran, Islamic Republic Of', text: 'IR' },
+      { value: 'Iraq', text: 'IQ' },
+      { value: 'Ireland', text: 'IE' },
+      { value: 'Isle of Man', text: 'IM' },
+      { value: 'Israel', text: 'IL' },
+      { value: 'Italy', text: 'IT' },
+      { value: 'Jamaica', text: 'JM' },
+      { value: 'Japan', text: 'JP' },
+      { value: 'Jersey', text: 'JE' },
+      { value: 'Jordan', text: 'JO' },
+      { value: 'Kazakhstan', text: 'KZ' },
+      { value: 'Kenya', text: 'KE' },
+      { value: 'Kiribati', text: 'KI' },
+      { value: "Korea, Democratic People'S Republic of", text: 'KP' },
+      { value: 'Korea, Republic of', text: 'KR' },
+      { value: 'Kuwait', text: 'KW' },
+      { value: 'Kyrgyzstan', text: 'KG' },
+      { value: "Lao People'S Democratic Republic", text: 'LA' },
+      { value: 'Latvia', text: 'LV' },
+      { value: 'Lebanon', text: 'LB' },
+      { value: 'Lesotho', text: 'LS' },
+      { value: 'Liberia', text: 'LR' },
+      { value: 'Libyan Arab Jamahiriya', text: 'LY' },
+      { value: 'Liechtenstein', text: 'LI' },
+      { value: 'Lithuania', text: 'LT' },
+      { value: 'Luxembourg', text: 'LU' },
+      { value: 'Macao', text: 'MO' },
+      { value: 'Macedonia, The Former Yugoslav Republic of', text: 'MK' },
+      { value: 'Madagascar', text: 'MG' },
+      { value: 'Malawi', text: 'MW' },
+      { value: 'Malaysia', text: 'MY' },
+      { value: 'Maldives', text: 'MV' },
+      { value: 'Mali', text: 'ML' },
+      { value: 'Malta', text: 'MT' },
+      { value: 'Marshall Islands', text: 'MH' },
+      { value: 'Martinique', text: 'MQ' },
+      { value: 'Mauritania', text: 'MR' },
+      { value: 'Mauritius', text: 'MU' },
+      { value: 'Mayotte', text: 'YT' },
+      { value: 'Mexico', text: 'MX' },
+      { value: 'Micronesia, Federated States of', text: 'FM' },
+      { value: 'Moldova, Republic of', text: 'MD' },
+      { value: 'Monaco', text: 'MC' },
+      { value: 'Mongolia', text: 'MN' },
+      { value: 'Montserrat', text: 'MS' },
+      { value: 'Morocco', text: 'MA' },
+      { value: 'Mozambique', text: 'MZ' },
+      { value: 'Myanmar', text: 'MM' },
+      { value: 'Namibia', text: 'NA' },
+      { value: 'Nauru', text: 'NR' },
+      { value: 'Nepal', text: 'NP' },
+      { value: 'Netherlands', text: 'NL' },
+      { value: 'Netherlands Antilles', text: 'AN' },
+      { value: 'New Caledonia', text: 'NC' },
+      { value: 'New Zealand', text: 'NZ' },
+      { value: 'Nicaragua', text: 'NI' },
+      { value: 'Niger', text: 'NE' },
+      { value: 'Nigeria', text: 'NG' },
+      { value: 'Niue', text: 'NU' },
+      { value: 'Norfolk Island', text: 'NF' },
+      { value: 'Northern Mariana Islands', text: 'MP' },
+      { value: 'Norway', text: 'NO' },
+      { value: 'Oman', text: 'OM' },
+      { value: 'Pakistan', text: 'PK' },
+      { value: 'Palau', text: 'PW' },
+      { value: 'Palestinian Territory, Occupied', text: 'PS' },
+      { value: 'Panama', text: 'PA' },
+      { value: 'Papua New Guinea', text: 'PG' },
+      { value: 'Paraguay', text: 'PY' },
+      { value: 'Peru', text: 'PE' },
+      { value: 'Philippines', text: 'PH' },
+      { value: 'Pitcairn', text: 'PN' },
+      { value: 'Poland', text: 'PL' },
+      { value: 'Portugal', text: 'PT' },
+      { value: 'Puerto Rico', text: 'PR' },
+      { value: 'Qatar', text: 'QA' },
+      { value: 'Reunion', text: 'RE' },
+      { value: 'Romania', text: 'RO' },
+      { value: 'Russian Federation', text: 'RU' },
+      { value: 'RWANDA', text: 'RW' },
+      { value: 'Saint Helena', text: 'SH' },
+      { value: 'Saint Kitts and Nevis', text: 'KN' },
+      { value: 'Saint Lucia', text: 'LC' },
+      { value: 'Saint Pierre and Miquelon', text: 'PM' },
+      { value: 'Saint Vincent and the Grenadines', text: 'VC' },
+      { value: 'Samoa', text: 'WS' },
+      { value: 'San Marino', text: 'SM' },
+      { value: 'Sao Tome and Principe', text: 'ST' },
+      { value: 'Saudi Arabia', text: 'SA' },
+      { value: 'Senegal', text: 'SN' },
+      { value: 'Serbia and Montenegro', text: 'RS' },
+      { value: 'Seychelles', text: 'SC' },
+      { value: 'Sierra Leone', text: 'SL' },
+      { value: 'Singapore', text: 'SG' },
+      { value: 'Slovakia', text: 'SK' },
+      { value: 'Slovenia', text: 'SI' },
+      { value: 'Solomon Islands', text: 'SB' },
+      { value: 'Somalia', text: 'SO' },
+      { value: 'South Africa', text: 'ZA' },
+      { value: 'South Georgia and the South Sandwich Islands', text: 'GS' },
+      { value: 'Spain', text: 'ES' },
+      { value: 'Sri Lanka', text: 'LK' },
+      { value: 'Sudan', text: 'SD' },
+      { value: 'Suriname', text: 'SR' },
+      { value: 'Svalbard and Jan Mayen', text: 'SJ' },
+      { value: 'Swaziland', text: 'SZ' },
+      { value: 'Sweden', text: 'SE' },
+      { value: 'Switzerland', text: 'CH' },
+      { value: 'Syrian Arab Republic', text: 'SY' },
+      { value: 'Taiwan, Province of China', text: 'TW' },
+      { value: 'Tajikistan', text: 'TJ' },
+      { value: 'Tanzania, United Republic of', text: 'TZ' },
+      { value: 'Thailand', text: 'TH' },
+      { value: 'Timor-Leste', text: 'TL' },
+      { value: 'Togo', text: 'TG' },
+      { value: 'Tokelau', text: 'TK' },
+      { value: 'Tonga', text: 'TO' },
+      { value: 'Trinidad and Tobago', text: 'TT' },
+      { value: 'Tunisia', text: 'TN' },
+      { value: 'Turkey', text: 'TR' },
+      { value: 'Turkmenistan', text: 'TM' },
+      { value: 'Turks and Caicos Islands', text: 'TC' },
+      { value: 'Tuvalu', text: 'TV' },
+      { value: 'Uganda', text: 'UG' },
+      { value: 'Ukraine', text: 'UA' },
+      { value: 'United Arab Emirates', text: 'AE' },
+      { value: 'United Kingdom', text: 'GB' },
+      {
+        value: 'United States',
+        text: 'US',
+        synonym: ['USA', 'United States of America'],
+      },
+      { value: 'United States Minor Outlying Islands', text: 'UM' },
+      { value: 'Uruguay', text: 'UY' },
+      { value: 'Uzbekistan', text: 'UZ' },
+      { value: 'Vanuatu', text: 'VU' },
+      { value: 'Venezuela', text: 'VE' },
+      { value: 'Viet Nam', text: 'VN' },
+      { value: 'Virgin Islands, British', text: 'VG' },
+      { value: 'Virgin Islands, U.S.', text: 'VI' },
+      { value: 'Wallis and Futuna', text: 'WF' },
+      { value: 'Western Sahara', text: 'EH' },
+      { value: 'Yemen', text: 'YE' },
+      { value: 'Zambia', text: 'ZM' },
+      { value: 'Zimbabwe', text: 'ZW' },
+    ];
+
+    for (var i = 0; i < countries.length; i++) {
+      countries[i].image =
+        'https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/' + countries[i].text.toLowerCase() + '.svg';
+       countries[i].label = `<img src="${countries[i].image}" class="width-2x h-auto me-2" alt=""/>` + countries[i].value;
+    }
+    const element = document.querySelector('.choices__countries');
+    const choices = new Choices(element, {
+      choices: countries,
+      values: null,
+      allowHTML: true,
+      placeholder:true,
+      itemSelectText:"",
+      classNames: {
+        containerInner: element.className,
+        input: 'form-control',
+        inputCloned: 'form-control-xs',
+        listDropdown: 'dropdown-menu',
+        itemChoice: 'dropdown-item',
+        activeState: 'show',
+        selectedState: 'active',
+      },
+    });
+  </script>
+
+        <!--Bs-Stepper script-->
+        <script src="assets/vendor/node_modules/js/bs-stepper.min.js"></script>
+        <script>
+            var stepDemo = new Stepper(document.querySelector('#stepperDemo'));
+            stepDemo.next();
+            stepDemo.previous()
+
+        </script>
+        <!--Autosize textarea-->
+        <script src="assets/vendor/node_modules/js/autosize.min.js"></script>
+        <script>
+            var ta = document.querySelector('textarea');
+            ta.style.display = 'none';
+            autosize(ta);
+            // Change layout
+            ta.style.display = 'block';
+            autosize.update(ta);
+
+        </script>
+
+        <!--Datepickr-->
+        <script src="assets/vendor/node_modules/js/flatpickr.min.js"></script>
+        <script>
+            let pickr = document.querySelectorAll("[data-flatpickr]");
+            pickr.forEach(el => {
+                const t = {
+                    ...el.dataset.flatpickr ? JSON.parse(el.dataset.flatpickr) : {},
+                }
+                new flatpickr(el, t)
+            }
+            );</script>
+    </body>
+
+</html>

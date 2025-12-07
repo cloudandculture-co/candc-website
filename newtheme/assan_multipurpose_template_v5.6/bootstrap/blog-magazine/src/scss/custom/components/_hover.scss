@@ -1,0 +1,15 @@
+//Hover styles
+
+.hover-lift{
+    transition: all .25s;
+    &:hover{
+        transform: translateY(-4px);
+    }
+    &:not(.btn):not(.shadow-lg){
+       &:hover{
+        box-shadow: $box-shadow-lg!important;
+       }
+    }
+}
+
+

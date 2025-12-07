@@ -1,0 +1,37 @@
+
+@import './choices';
+@import './custom-check';
+@import './dropzone';
+@import './form-validation';
+
+//textarea auto size based on content
+textarea{
+    resize: none;
+}
+
+
+//Form control
+.form-control{
+    --#{$prefix}input-color:#{$input-color};
+    --#{$prefix}input-bg:#{$input-bg};
+    --#{$prefix}input-border-color:#{$input-border-color};
+    --#{$prefix}input-focus-color:#{$input-focus-color};
+    --#{$prefix}input-focus-bg:#{$input-focus-bg};
+    --#{$prefix}input-focus-border-color:#{$input-focus-border-color};
+    background-color: var(--#{$prefix}input-bg);
+    color: var(--#{$prefix}input-color);
+    border-color: var(--#{$prefix}input-border-color);
+    &:focus{
+        background-color: var(--#{$prefix}input-focus-bg);
+        color: var(--#{$prefix}input-focus-color);
+        border-color: var(--#{$prefix}input-focus-border-color);
+    }
+}
+
+//form check
+.form-check-input{
+    --#{$prefix}form-check-input-bg:#{$form-check-input-bg};
+    --#{$prefix}form-check-input-border:#{$input-border-width} solid #{$input-border-color};
+    background-color: var(--#{$prefix}form-check-input-bg);
+    border: var(--#{$prefix}form-check-input-border);
+}

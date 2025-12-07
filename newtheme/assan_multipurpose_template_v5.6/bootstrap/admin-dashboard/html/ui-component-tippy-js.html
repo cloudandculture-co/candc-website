@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assan-Admin</title>
+
+        @@include('./partials/fonts.html')
+
+        <!--Simplebar css-->
+        <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+        <!--Main style-->
+        <link rel="stylesheet" href="assets/css/style.min.css">
+    </head>
+
+    <body>
+      @@include('./partials/preloader.html')
+      <!--App Start-->
+        <div class="d-flex flex-column flex-root">
+            <!--Page-->
+            <div class="page d-flex flex-row flex-column-fluid">
+
+                @@include('./partials/sidebars/sidebar-default.html',{page:"components","components_collapse": "show","component_tippy_active": "active"})
+
+                <!--///////////Page content wrapper///////////////-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+
+
+                    @@include('./partials/header/header-default.html')
+
+                    <!--//Page Toolbar//-->
+                    <div class="toolbar px-3 px-lg-6 py-3">
+                        <div class="position-relative container-fluid px-0">
+                            <div class="row align-items-center position-relative">
+                                <div class="col-md-8">
+                                    <h3 class="mb-2">Tippy tooltips</h3>
+
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                            <li class="breadcrumb-item active">UI Components</li>
+                                            <li class="breadcrumb-item active">Tippy js</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page Toolbar End//-->
+
+                    <!--//Page content//-->
+                    <div class="content pt-3 px-3 px-lg-6 d-flex flex-column-fluid">
+                        <div class="container-fluid px-0">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="alert alert-info">
+                                     Visit <a href="https://atomiks.github.io/tippyjs/" class="alert-link" target="_blank">official tippy</a> for detailed documentation
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <div class="card">
+                                        <div
+                                            class="card-header d-flex align-items-center justify-content-between">
+                                            <h5 class="mb-0">Placement</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="mb-1">Init <code>data-tippy-content="Content goes here"</code></p>
+                                            <p>Placement <code>data-tippy-placement="[...]"</code></p>
+                                            <div class="d-flex flex-wrap">
+                                                <button type="button" data-tippy-content="Top alignment" data-tippy-placement="top" class="btn btn-secondary m-1">Top</button>
+                                            <button type="button" data-tippy-content="Left alignment" data-tippy-placement="left" class="btn btn-secondary m-1">left</button>
+                                            <button type="button" data-tippy-content="Right alignment" data-tippy-placement="right" class="btn btn-secondary m-1">right</button>
+                                            <button type="button" data-tippy-content="Bottom alignment" data-tippy-placement="bottom" class="btn btn-secondary m-1">bottom</button>
+                                            <button type="button" data-tippy-content="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups." data-tippy-placement="top-start" class="btn btn-secondary m-1">Top start</button>
+                                            <button type="button" data-tippy-content="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups." data-tippy-placement="top-end" class="btn btn-secondary m-1">Top end</button>
+                                            <button type="button" data-tippy-content="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups." data-tippy-placement="bottom-start" class="btn btn-secondary m-1">bottom start</button>
+                                            <button type="button" data-tippy-content="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups." data-tippy-placement="bottom-end" class="btn btn-secondary m-1">bottom end</button>
+                                            <button type="button" data-tippy-content="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups." data-tippy-placement="left-start" class="btn btn-secondary m-1">left start</button>
+                                            <button type="button" data-tippy-content="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups." data-tippy-placement="left-end" class="btn btn-secondary m-1">left end</button>
+                                            <button type="button" data-tippy-content="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups." data-tippy-placement="right-start" class="btn btn-secondary m-1">right start</button>
+                                            <button type="button" data-tippy-content="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups." data-tippy-placement="right-end" class="btn btn-secondary m-1">right end</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <div class="card">
+                                        <div
+                                            class="card-header d-flex align-items-center justify-content-between">
+                                            <h5 class="mb-0">Html Content + Link</h5>
+                                        </div>
+                                        <div class="card-body">
+                                           <p>Add <code>data-tippy-interactive="true"</code> for make link clickable</p>
+                                            <button type="button" data-tippy-interactive="true" data-tippy-content="<strong>Lorem ipsum</strong> is <span class='text-body-secondary'>placeholder</span> text commonly used in the <span class='text-decoration-underline'>graphic, print, and publishing industries</span> for <a class='fw-bolder text-primary' href='#!'>previewing layouts</a> and visual mockups." data-tippy-placement="top" class="btn btn-secondary m-1">Content with link</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <div class="card">
+                                        <div
+                                            class="card-header d-flex align-items-center justify-content-between">
+                                            <h5 class="mb-0">Trigger on click</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Add <code>data-tippy-trigger="click"</code> for trigger on click</p>
+                                            <button type="button" data-tippy-trigger="click" data-tippy-interactive="true" data-tippy-content="I am not comfortable with mouseover, Can you please click to show hide me?" data-tippy-placement="top" class="btn btn-secondary m-1">Click me</button>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page content End//-->
+
+                    @@include('./partials/footer.html')
+                </main>
+                <!--///////////Page content wrapper End///////////////-->
+            </div>
+        </div>
+        @@include('./partials/core-scripts.html')
+
+    </body>
+
+</html>

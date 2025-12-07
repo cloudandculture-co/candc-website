@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Assan | Blog</title>
+        
+        <!--FavIcon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet">
+        <!--Bootstrap icons-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!--Aos Animations-->
+        <link href="assets/vendor/node_modules/css/sal.css" rel="stylesheet">
+
+        <!--Main Style-->
+        <link href="assets/css/theme.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="d-flex flex-column flex-root">
+            <!--Page-->
+            <div class="page-lg d-flex flex-row flex-column-fluid">
+
+                <!--:Sidebar Menu:-->
+                <aside class="page-sidebar">
+                    <div class="offcanvas-lg offcanvas-start" id="offcanvas-sidebar">
+                        <div class="offcanvas-header d-block p-0">
+                            <a class="sidebar-brand flex-shrink-0 d-flex justify-content-center height-6x w-100 align-items-center"
+                                href="index.html">
+                                <img src="assets/img/logo-a.svg" alt="" class="img-fluid logo-light">
+                                <img src="assets/img/logo-a-white.svg" alt="" class="img-fluid logo-dark">
+                            </a>
+                        </div>
+                        <!--:Sidenav:-->
+                        <div class="offcanvas-body flex-grow-1 p-0">
+                            <nav class="flex-grow-1 d-flex flex-column justify-content-center gap-1 gap-lg-2 align-items-center py-3">
+                                <a data-tippy-placement="right" data-tippy-content="Home" href="index.html"
+                                    class="width-4x height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link  ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" width="24" height="24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                    </svg>
+
+                                </a>
+                                <div class="dropdown">
+                                    <a href="notifications.html" data-tippy-placement="right" data-tippy-content="Notifications"
+                                        class="width-4x tippy-dropdown height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor" width="24" height="24">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                                        </svg>
+
+                                    </a>
+                                </div>
+                                <a data-tippy-placement="right" data-tippy-content="Bookmarks" href="bookmarks.html"
+                                    class="width-4x height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" width="24" height="24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                                    </svg>
+
+                                </a>
+                                <a data-tippy-placement="right" data-tippy-content="Topics" href="topics.html"
+                                    class="width-4x height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" width="24" height="24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
+                                    </svg>
+
+                                </a>
+                                <a data-tippy-placement="right" data-tippy-content="Write Post" href="write.html"
+                                    class="width-4x height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" width="24" height="24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                                    </svg>
+
+                                </a>
+                            </nav>
+                        </div>
+                        <div class="mt-auto offcanvas-footer">
+
+                        </div>
+                    </div>
+                </aside>
+
+                <!--:Page content:-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+                    
+                    <!--::Page content with sidebar::-->
+                    <div class="content d-flex flex-column-fluid position-relative">
+
+                        <!--:Content inner layout:-->
+                        <div class="d-flex flex-column flex-md-row h-100 w-100">
+                            <!--:Content inner Content:-->
+                            <div class="col-md-7 col-lg-8 layout-content d-flex justify-content-center flex-column h-100">
+                                <div class="position-relative px-3 px-xl-7 py-8 w-100 w-md-75 mx-auto">
+                                  
+                                <div>
+                                    <h2 class="mb-1">
+                                        Hello!
+                                    </h2>
+                                    <p class="mb-4 text-body-secondary">
+                                        To get started, Please signup with details...
+                                    </p>
+                                    <form class="needs-validation" novalidate>
+
+                                        <!--input-with-icon-->
+                                        <div class="mb-3">
+                                            <label class="small form-label" for="signUpName">Your full name</label>
+                                            <input type="text" required class="form-control" id="signUpName" autofocus>
+                                        </div>
+
+                                        <!--input-with-icon-->
+                                        <div class="mb-3">
+                                            <label class="small form-label" for="signUpMail">Your email address</label>
+                                            <input type="email" required class="form-control" id="signUpMail">
+                                        </div>
+                                        <!--input-with-icon-->
+                                        <div class="mb-3">
+                                            <label class="small form-label" for="signUpPassword">Enter password</label>
+                                            <input type="password" required class="form-control" id="signUpPassword">
+                                        </div>
+                                        <!--input-with-icon-->
+                                        <div class="mb-3">
+                                            <label class="small form-label" for="signUpConfirmPassword">Confirm
+                                                password</label>
+                                            <input type="password" required class="form-control" id="signUpConfirmPassword">
+                                        </div>
+                                        <!--Checkbox-->
+                                        <div class="mb-3 d-flex justify-content-between">
+                                            <div class="form-check">
+                                                <input class="form-check-input" required type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label small text-body-secondary" for="flexCheckDefault">
+                                                    Agree to <a href="#!" class="fw-semibold">Terms & conditions</a>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-grid">
+                                            <button class="btn btn-primary" type="submit">
+                                                Sign Up
+                                            </button>
+                                        </div>
+                                    </form>
+
+                                    <!---->
+                                    <p class="pt-3 mb-4 small text-body-secondary">
+                                        Already have an account? <a href="page-sign-in.html"
+                                            class="ms-2 fw-semibold link-underline">Sign in</a>
+                                    </p>
+                                    <!--Divider-->
+                                    <div class="d-flex align-items-center mb-4">
+                                        <span class="flex-grow-1 border-bottom pt-1"></span>
+                                        <span
+                                            class="d-inline-flex flex-center mx-2">or</span>
+                                        <span class="flex-grow-1 border-bottom pt-1"></span>
+                                    </div>
+                                    <div class="d-grid">
+                                        <a href="#!"
+                                            class="btn btn-outline-secondary">
+                                            <svg class="width-2x height-2x me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+                                            <span>sign up with facebook</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <!--:Content inner Sidebar:-->
+                            <div class="col-md-5 col-lg-4 bg-body-tertiary content-inner-sidebar d-flex flex-column h-100 border-start position-relative">
+                               
+                               <div class="position-sticky top-0">
+                                <!--:CTA:-->
+                                <div class="position-relative py-5 px-3 px-xl-5">
+                                    <h6 class="mb-4">💎 Unlock endless posibilities</h6>
+                                    <a href="page-plans.html" class="btn btn-secondary">Upgrade to Pro</a>
+                                </div>
+                               </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--:Footer:-->
+                    <!-- Back to Top button -->
+                    <a data-tippy-placement="left" data-tippy-content="Scroll to Top" href="#"
+                        class="toTop btn text-body bg-primary-subtle border-0 p-0 width-3x height-3x shadow d-flex align-items-center justify-content-center">
+                        <i class="bi bi-chevron-up"></i>
+                    </a>
+
+
+                    <!--Footer Start-->
+                    <footer id="footer" class="footer border-top position-relative">
+                        <div class="container pt-9 pb-5 position-relative z-index-1">
+                            <div class="row">
+                                <!--Footer col-->
+                                <div class="col-md-7 col-lg-3 mb-7">
+                                    <a href="#" class="d-block width-3x mb-5">
+                                        <img src="assets/img/logo-a.svg" class="img-fluid footer-logo-light" alt="">
+                                        <img src="assets/img/logo-a-white.svg" class="img-fluid footer-logo-dark" alt="">
+                                    </a>
+                                    <hr>
+                                    <small class="text-body-secondary mb-2 d-block">
+                                        Enquiries
+                                    </small>
+                                    <ul class="list-unstyled mb-0">
+                                        <li>
+                                            <a href="#!mailto:yourmail.domain.com">info@domian.com</a>
+                                        </li>
+                                    </ul>
+                                    <hr>
+                                    <small class="text-body-secondary mb-3 d-block">
+                                        Join Us Today
+                                    </small>
+                                    <a href="page-plans.html" class="btn btn-secondary">Upgrade to Pro</a>
+                                </div>
+                                <!--Footer col-->
+                                <div class="col-md-4 col-lg-2 ms-md-auto mb-7 col-7">
+                                    <h6 class="mb-4">Links</h6>
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                About us
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                Newsletter
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                Contact
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                Career <span class="badge bg-success rounded-pill ms-1">Hiring</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                Privacy policy
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                Terms & conditions
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--Footer col-->
+                                <div class="col-md-4 col-lg-2 ms-lg-auto mb-7 col-5">
+                                    <h6 class="mb-4">Topics</h6>
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                Design
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                Development
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                Fashion
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                Business
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                Nature
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                Travel
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--Footer col-->
+                                <div class="col-md-8 col-lg-4 mb-7">
+                                    <h6 class="mb-4">Popular Articles</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="d-flex card-hover mb-4 align-items-center">
+                                            <div class="me-3">
+                                                <a href="#!" class="d-block width-6x rounded-3 overflow-hidden">
+                                                    <img src="assets/img/sm2.jpg" alt="" class="img-fluid img-zoom">
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#!" class="lh-sm d-block mb-2">Tips for creating a long-lasting
+                                                    partnership with your startup</a>
+                                                <span class="d-block small text-body-tertiary">02 Sep 2025</span>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex card-hover mb-4 align-items-center">
+                                            <div class="me-3">
+                                                <a href="#!" class="d-block width-6x rounded-3 overflow-hidden">
+                                                    <img src="assets/img/sm1.jpg" alt="" class="img-fluid img-zoom">
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#!" class="lh-sm d-block mb-2">Functional programming in python for
+                                                    beginners</a>
+                                                <span class="d-block small text-body-tertiary">18 Sep 2025</span>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex card-hover align-items-center">
+                                            <div class="me-3">
+                                                <a href="#!" class="d-block width-6x rounded-3 overflow-hidden">
+                                                    <img src="assets/img/sm3.jpg" alt="" class="img-fluid img-zoom">
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#!" class="lh-sm d-block mb-2">Modern and well coded bootstrap themes you should
+                                                    buy</a>
+                                                <span class="d-block small text-body-tertiary">19 Aug 2025</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr class="mb-5 mt-0">
+                            <div class="row">
+                                <div class="col-sm-7 mb-3 mb-sm-0">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="dropup d-table">
+                                            <a href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false"
+                                                class="dropdown-toggle small">
+                                                United States (English)
+                                            </a>
+
+                                            <!--Dropdown lang menu-->
+                                            <div class="dropdown-menu mb-3 dropdown-menu-lg-start" style="margin: 0px;">
+                                                <a href="#!" class="d-flex align-items-center dropdown-item active">
+                                                    <img src="assets/img/country/us.svg" class="width-2x me-2" alt="">
+                                                    English (US)
+                                                </a>
+                                                <a href="#!" class="d-flex align-items-center dropdown-item">
+                                                    <img src="assets/img/country/es.svg" class="width-2x me-2" alt="">
+                                                    Spanish
+                                                </a>
+                                                <a href="#!" class="d-flex align-items-center dropdown-item">
+                                                    <img src="assets/img/country/gb.svg" class="width-2x me-2" alt="">
+                                                    English (UK)
+                                                </a>
+                                                <a href="#!" class="d-flex align-items-center dropdown-item">
+                                                    <img src="assets/img/country/fr.svg" class="width-2x me-2" alt="">
+                                                    French
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-5 small text-sm-end">
+                                    <span class="d-block lh-sm text-body-secondary">© Copyright
+                                        <script>
+                                            document.write(new Date().getFullYear())
+
+                                        </script>. Assan
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--container-->
+                    </footer>
+                </main>
+
+            </div>
+        </div>
+        <!--script-->
+        <script src="assets/js/theme.bundle.min.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,129 @@
+//Date range picker plugin style override
+
+.daterangepicker{
+        --#{$prefix}dropdown-border-radius: #{$dropdown-border-radius};
+        --#{$prefix}dropdown-border-color: #{$dropdown-border-color};
+        --#{$prefix}dropdown-color: #{$dropdown-color};
+        --#{$prefix}dropdown-header-color: #{$dropdown-header-color};
+        --#{$prefix}dropdown-link-color: #{$dropdown-link-color};
+        --#{$prefix}dropdown-link-hover-color: #{$dropdown-link-hover-color};
+        --#{$prefix}dropdown-link-hover-bg: #{$dropdown-link-hover-bg};
+        --#{$prefix}dropdown-link-active-color: #{$dropdown-link-active-color};
+        --#{$prefix}dropdown-link-active-bg: #{$dropdown-link-active-bg};
+        --#{$prefix}dropdown-box-shadow: #{$dropdown-box-shadow};
+    border-color: var(--#{$prefix}dropdown-border-color);
+    background-color: var(--#{$prefix}body-bg);
+    margin-top: 2px;
+    color: var(--#{$prefix}dropdown-link-color);
+    border-radius: var(--#{$prefix}dropdown-border-radius);
+    font-family: $font-family-base;
+    box-shadow: var(--#{$prefix}dropdown-box-shadow);
+    padding: $spacer * .5;
+    &::before,&::after{
+        display: none;
+    }
+    .ranges li{
+       border-radius: $dropdown-border-radius;
+       margin-bottom: $spacer * .125;
+    }
+    &.show-calendar .ranges {
+        margin-right: .5rem;
+    }
+
+.calendar-table{
+    background-color: var(--#{$prefix}dropdown-bg);
+    border:0px!important;
+}
+.calendar-table .next span, .calendar-table .prev span{
+    border:0px!important;
+}
+td.off{
+    color: var(--#{$prefix}dropdown-link-disabled-color);
+}
+td.off.today{
+    color:var(--#{$prefix}dropdown-link-active-color);
+    background-color:var(--#{$prefix}dropdown-link-active-bg);
+    &:hover{
+    color:var(--#{$prefix}dropdown-link-active-color);
+    background-color:var(--#{$prefix}dropdown-link-active-bg);
+    }
+}
+&.show-ranges.ltr .drp-calendar.left{
+    border:0px!important;
+}
+.drp-buttons{
+    border:0px!important;
+    .btn{
+        font-weight: $btn-font-weight;
+        &.btn-default{
+           @extend .btn-light
+        }
+    }
+}
+
+td.active, td.active:hover, .ranges li.active, td.in-range.end-date{
+    background-color:var(--#{$prefix}dropdown-link-active-bg);
+    color:var(--#{$prefix}dropdown-link-active-color);
+    pointer-events: none;
+}
+ .ranges li:hover{
+    background-color: var(--#{$prefix}dropdown-link-hover-bg);
+    
+}
+ td.in-range{
+    color:var(--#{$prefix}dropdown-link-hover-color);
+}
+ td.available:hover, th.available:hover{
+    background-color: var(--#{$prefix}dropdown-link-active-bg);
+    color: var(--#{$prefix}dropdown-link-active-color);
+}
+.monthselect,.yearselect{
+border-color: $input-border-color;
+background-color: transparent;
+color: var(--#{$prefix}body-color);
+option{
+    color: $secondary;
+}
+}
+td.off, td.off.in-range, td.off.start-date, td.off.end-date{
+    background-color: transparent;
+    color: $text-muted;
+}
+
+//Prev next arrow buttons
+
+    .prev.available,.next.available{
+        >span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transform: none;
+            background-color: transparent;
+            color: var(--#{$prefix}body-color);
+            border: $border-width solid var(--#{$prefix}border-color);
+            &::after{
+                font-family: bootstrap-icons!important;
+                font-weight: normal;
+                line-height: 1;
+            }
+        }
+    }
+    .prev.available span::after{
+        content: "\f284";
+    }
+    .next.available span::after{
+        content: "\f285";
+    }
+}
+.daterangepicker select.monthselect, .daterangepicker select.yearselect{
+    border: 0px;
+}
+//dark mode
+[data-bs-theme=dark]{
+    .daterangepicker{
+        td.in-range:not(.active){
+            background-color:var(--#{$prefix}gray-700);
+        }
+    }
+}

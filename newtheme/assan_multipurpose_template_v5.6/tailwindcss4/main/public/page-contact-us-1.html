@@ -1,0 +1,859 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+     <!--Swiper slider-->
+     <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+     
+     
+     <!--Icons-->
+     <link rel="stylesheet" href="assets/fonts/bootstrap-icons/bootstrap-icons.min.css">
+     <!--Iconsmind Icons-->
+     <link rel="stylesheet" href="assets/fonts/iconsmind/iconsmind.css">
+
+
+     <!--Google fonts-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+     <!--Main theme style-->
+     <link rel="stylesheet" href="assets/css/style.css">
+     <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+     <!--Preloader Spinner-->
+     <div class="spinner-loader bg-primary text-white">
+        <span class="relative flex h-16 w-16">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-16 w-16 bg-indigo-500"></span>
+          </span>
+    </div>
+
+    <!--begin:Header-->
+ <header class="header-transparent sticky-fixed">
+
+   <!--begin:navbar-->
+   <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+     <!--Navbar-fixed-background-->
+     <div class="navbar-fixed-bg absolute"></div>
+     <div class="container relative flex flex-wrap items-center justify-center relative">
+       <!--begin:logo-->
+       <a class="navbar-brand relative w-24 block" href="index.html">
+         <img src="assets/img/logo/logo.svg" alt="" class="max-w-full navbar-brand-sticky">
+         <img src="assets/img/logo/logo-white.svg" alt="" class="max-w-full navbar-brand-transparent">
+       </a>
+       <!--end:logo-->
+
+       <!--begin:navbar-no-collapse-items-->
+       <div class="flex items-center shrink-0 ml-auto lg:order-last">
+         <!--Navbar toggler button-->
+         <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+           data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+           aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon">
+             <i></i>
+           </span>
+         </button>
+         <!--Button-->
+         <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+           <a href="#"
+             class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+         </div>
+       </div>
+       <!--end:navbar-no-collapse-items-->
+
+       <!--begin:navbar-collapse-->
+       <div
+         class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+         id="mainNavbarTheme">
+         
+         <!--begin:Navbar items-->
+         <ul class="navbar-nav flex flex-col lg:flex-row bg-white dark:bg-black lg:!bg-transparent w-full p-2 lg:p-0 shadow-lg lg:shadow-none">
+
+           <!--begin:landings-->
+           <li class="nav-item group dropdown relative">
+             <a class="nav-link dropdown-toggle " href="index.html" role="button"
+               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Landings
+               <!--:Arrow:-->
+               <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                 <i class="bi bi-chevron-down"></i>
+               </span>
+             </a>
+             <div class="dropdown-menu !p-0 overflow-hidden lg:w-[44rem]">
+               <div class="overflow-hidden rounded-end">
+                 <div class="flex flex-wrap mx-0">
+                   <div class="w-full lg:w-2/5 px-3 relative">
+                     <div class="py-1 lg:py-3 lg:flex flex-col">
+                       <a href="index.html" class="dropdown-item">Welcome</a>
+                       <a href="index-landing-classic.html" class="dropdown-item">Classic Landing</a>
+                       <a href="index-landing-creative.html" class="dropdown-item">Creative</a>
+                       <a href="index-landing-agency.html" class="dropdown-item">Agency</a>
+                       <a href="index-landing-business.html" class="dropdown-item">Business</a>
+                       <a href="index-landing-startup.html" class="dropdown-item">Startup</a>
+                       <a href="index-landing-consultancy.html" class="dropdown-item">Consultancy</a>
+                       <a href="index-landing-saas-webapp.html" class="dropdown-item">Saas WebApp</a>
+                       <a href="index-landing-personal-portfolio.html" class="dropdown-item">Personal Portfolio</a>
+                     </div>
+                   </div>
+                   <!--/.col-->
+                   <div class="w-full lg:w-3/5 hidden lg:block rounded-end overflow-hidden px-0 relative bg-no-repeat bg-cover bg-center"
+                     style="background-image: url('assets/img/960x1140/3.jpg')">
+                     <div class="absolute rounded-r-lg w-full h-full top-0 left-0 bg-gradient-to-tr from-indigo-500 to-purple-500 opacity-90">
+                     </div>
+                     <div
+                       class="p-4 flex flex-col items-center text-center z-[1] justify-center h-full py-5 relative text-white">
+                       <h5 class="text-4xl lg:text-5xl font-medium mb-4">Build stunning website ease</h5>
+                       <p class="mb-5 text-white/75">Over 7000+ users & 7+ years of regular updates</p>
+                       <a href="#!" class="btn btn-lg bg-white text-gray-700 hover:text-indigo-500">Purchase Now</a>
+                     </div>
+                   </div>
+                   <!--/.col-->
+                 </div>
+                 <!--/.row-->
+               </div>
+             </div>
+           </li>
+           <!--end:landings-->
+
+           <!--begin:portfolio-->
+           <li class="nav-item group dropdown relative">
+             <a class="nav-link dropdown-toggle " href="#" role="button"
+               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">Portfolio
+               <!--:Arrow:-->
+               <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                 <i class="bi bi-chevron-down"></i>
+               </span>
+             </a>
+             <div class="dropdown-menu">
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                   Classic <i class="bi bi-chevron-right ml-3 text-sm"></i></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="portfolio-classic-2-col.html">2 Col</a>
+                   <a class="dropdown-item" href="portfolio-classic-3-col.html">3 Col</a>
+                   <a class="dropdown-item" href="portfolio-classic-4-col.html">4 Col</a>
+                   <a class="dropdown-item" href="portfolio-classic-masonry.html">Masonry</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Grid
+                   Overlay <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="portfolio-grid-overlay-2-col.html">2 Col</a>
+                   <a class="dropdown-item" href="portfolio-grid-overlay-3-col.html">3 Col</a>
+                   <a class="dropdown-item" href="portfolio-grid-overlay-4-col.html">4 Col</a>
+                   <a class="dropdown-item" href="portfolio-grid-overlay-masonry.html">Masonry</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Full
+                   width <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="portfolio-full-width-3-col.html">3 Col</a>
+                   <a class="dropdown-item" href="portfolio-full-width-4-col.html">4 Col</a>
+                   <a class="dropdown-item" href="portfolio-full-width-masonry.html">Masonry</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Project
+                   Layouts <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="portfolio-case-study.html">Case Study</a>
+                   <a class="dropdown-item" href="portfolio-single-classic.html">classic</a>
+                 </div>
+               </div>
+             </div>
+           </li>
+           <!--end:portfolio-->
+
+           <!--begin:blog-->
+           <li class="nav-item group dropdown relative">
+             <a class="nav-link dropdown-toggle " href="#" role="button"
+               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">Blog
+               <!--:Arrow:-->
+               <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                 <i class="bi bi-chevron-down"></i>
+               </span>
+             </a>
+             <div class="dropdown-menu">
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Blog
+                   Layouts <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="blog-classic.html">Blog classic</a>
+                   <a class="dropdown-item" href="blog-standard.html">Blog standard</a>
+                   <a class="dropdown-item" href="blog-masonry.html">Blog Masonry</a>
+                   <a class="dropdown-item" href="blog-sidebar.html">Blog Sidebar</a>
+                   <a class="dropdown-item" href="blog-magazine.html">Blog magazine</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Article
+                   Layouts <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="blog-article-basic.html">Basic</a>
+                   <a class="dropdown-item" href="blog-article-video.html">Video</a>
+                   <a class="dropdown-item" href="blog-article-gallery.html">Gallery</a>
+                   <a class="dropdown-item" href="blog-article-parallax.html">Parallax
+                     Header</a>
+                 </div>
+               </div>
+             </div>
+           </li>
+           <!--end:blog-->
+
+           <!--begin:pages-->
+           <li class="nav-item group dropdown relative">
+             <a class="nav-link dropdown-toggle active" href="#" role="button"
+               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">Pages
+               <!--:Arrow:-->
+               <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                 <i class="bi bi-chevron-down"></i>
+               </span>
+             </a>
+             <div class="dropdown-menu">
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#">
+                   About <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="page-about.html">About Company</a>
+                   <a class="dropdown-item" href="page-about-modern.html">About modern</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" href="#" aria-expanded="false" data-bs-toggle="dropdown">
+                   Services <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="page-services.html">Services</a>
+                   <a class="dropdown-item" href="page-services-modern.html">Services
+                     Modern</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                   Career <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="page-careers.html">careers</a>
+                   <a class="dropdown-item" href="page-career-single.html">career single</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                   Customers <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="page-customers.html">Customers</a>
+                   <a class="dropdown-item" href="page-customer-story.html">Customer Story</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                   Account <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="page-profile.html">Profile</a>
+                   <a class="dropdown-item" href="page-account-signin.html">Sign In</a>
+                   <a class="dropdown-item" href="page-account-signin-alt.html">Sign In alt</a>
+                   <a class="dropdown-item" href="page-account-signup.html">Sign Up</a>
+                   <a class="dropdown-item" href="page-account-signup-alt.html">Sign Up Alt</a>
+                   <a class="dropdown-item" href="page-account-forget-password.html">Forget Password</a>
+                 </div>
+               </div>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                   Misc <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="page-misc-error-404.html">Error 404</a>
+                   <a class="dropdown-item" href="page-misc-coming-soon.html">Coming Soon</a>
+                   <a class="dropdown-item" href="page-misc-maintenance.html">Maintenance</a>
+                   <a class="dropdown-item" href="page-misc-success-message.html">Success Message</a>
+                   <a class="dropdown-item" href="page-misc-policy.html">Privacy Policy</a>
+                 </div>
+               </div>
+               <a class="dropdown-item" href="page-pricing.html">Pricing Plans</a>
+               <a class="dropdown-item" href="page-faq.html">Faqs</a>
+               <a class="dropdown-item" href="page-knowladge-base.html">Knowladge Base</a>
+               <div class="dropend">
+                 <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                   Contact <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item" href="page-contact-us-1.html">Contact Us 1</a>
+                   <a class="dropdown-item" href="page-contact-us-2.html">Contact Us 2</a>
+                 </div>
+               </div>
+             </div>
+           </li>
+           <!--end:pages-->
+
+           <!--begin:components-->
+           <li class="nav-item group dropdown static">
+             <a class="nav-link dropdown-toggle " href="#" role="button"
+               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components
+               <!--:Arrow:-->
+               <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                 <i class="bi bi-chevron-down"></i>
+               </span>
+             </a>
+             <div class="dropdown-menu left-0 top-full w-full p-0">
+              <div class="dropdown-scroll-lg lg:p-4">
+               <div class="flex flex-wrap mx-lg-0 justify-content-lg-around">
+                 <!--Dropdown-grid-Col-->
+                 <div class="w-full px-3 lg:w-1/4">
+                   <div class="h-full">
+                     <div>
+                       <a class="dropdown-item" href="component-accordion.html">Accordion</a>
+                       <a class="dropdown-item" href="component-alerts.html">Alerts</a>
+                       <a class="dropdown-item" href="component-animations.html">Animations</a>
+                       <a class="dropdown-item" href="component-avatar.html">Avatar</a>
+                       <a class="dropdown-item" href="component-breadcrumb.html">Breadcrumb</a>
+                       <a class="dropdown-item" href="component-badge.html">Badge</a>
+                       <a class="dropdown-item" href="component-blockquote.html">Blockquote</a>
+                       <a class="dropdown-item" href="component-buttons.html">Buttons</a>
+                       <a class="dropdown-item" href="component-card-image.html">card image</a>
+                       <a class="dropdown-item" href="component-card-icon.html">card icon</a>
+                       <a class="dropdown-item" href="component-call-to-action.html">Call to action</a>
+                     </div>
+                   </div>
+                 </div>
+
+                 <!--Dropdown-grid-Col-->
+                 <div class="w-full px-3 lg:w-1/4">
+                   <div class="h-full">
+                     <div>
+                       <a class="dropdown-item" href="component-colors.html">Colors</a>
+                       <a class="dropdown-item" href="component-collapse.html">Collapse</a>
+                       <a class="dropdown-item" href="component-counteup.html">Countup</a>
+                       <a class="dropdown-item" href="component-count-down.html">Countdown</a>
+                       <a class="dropdown-item" href="component-clients.html">Clients</a>
+                       <a class="dropdown-item" href="component-dropdowns.html">Dropdown</a>
+                       <a class="dropdown-item" href="component-form-components.html">Form components</a>
+                       <a class="dropdown-item" href="component-grid-system.html">Grid system</a>
+                       <a class="dropdown-item" href="component-icons-social-brands.html">Icons Social</a>
+                       <a class="dropdown-item" href="component-icons-bootstrap.html">Icons Bootstrap</a>
+                       <a class="dropdown-item" href="component-iconsmind.html">Iconsmind</a>
+                     </div>
+                   </div>
+                 </div>
+                 <!--Dropdown-grid-Col-->
+                 <div class="w-full px-3 lg:w-1/4">
+                   <div class="h-full">
+                     <div>
+                       <a class="dropdown-item" href="component-isotope-filter.html">Isotope filter</a>
+                       <a class="dropdown-item" href="component-lightbox.html">Lightbox</a>
+                       <a class="dropdown-item" href="component-list.html">List</a>
+                       <a class="dropdown-item" href="component-link.html">Link</a>
+                       <a class="dropdown-item" href="component-modal.html">Modal</a>
+                       <a class="dropdown-item" href="component-masonry.html">Masonry</a>
+                       <a class="dropdown-item" href="component-map-box.html">Map</a>
+                       <a class="dropdown-item" href="component-navs.html">Navs</a>
+                       <a class="dropdown-item" href="component-offcanvas.html">Offcanvas</a>
+                       <a class="dropdown-item" href="component-pagination.html">Pagination</a>
+                       <a class="dropdown-item" href="component-progress.html">Progress</a>
+                     </div>
+                   </div>
+                 </div>
+                 <!--Dropdown-grid-Col-->
+                 <div class="w-full px-3 lg:w-1/4">
+                   <div class="h-full">
+                     <div>
+                       <a class="dropdown-item" href="component-page-header.html">Page Header</a>
+                       <a class="dropdown-item" href="component-parallax.html">Parallax</a>
+                       <a class="dropdown-item" href="component-pricing.html">Pricing</a>
+                       <a class="dropdown-item" href="component-tabbbed-content.html">Tabbed Content</a>
+                       <a class="dropdown-item" href="component-tooltip.html">Tooltip</a>
+                       <a class="dropdown-item" href="component-testimonials.html">Testimonials</a>
+                       <a class="dropdown-item" href="component-timeline.html">Timeline</a>
+                       <a class="dropdown-item" href="component-typed-text.html">Typed Text</a>
+                       <a class="dropdown-item" href="component-typography.html">Typography</a>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+              </div>
+             </div>
+           </li>
+           <!--end:components-->
+
+           <!--begin:features-->
+           <li class="nav-item group dropdown static">
+             <a class="nav-link dropdown-toggle " href="#" role="button"
+               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Features
+               <!--:Arrow:-->
+               <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                 <i class="bi bi-chevron-down"></i>
+               </span>
+             </a>
+             <div class="dropdown-menu left-0 p-0 w-full">
+               <div class="dropdown-scroll-lg lg:p-4">
+                 <div class="flex flex-wrap mx-lg-0">
+                   <div class="w-full lg:w-2/5 px-3 mb-4 lg:mb-0">
+                     <h5 class="text-xs pl-4 text-gray-400 mb-3 pt-3">
+                       Header & footers Styles <span class="bg-blue-500 text-white text-xs leading-tight inline-block px-2 py-1 ml-2 rounded-full">15+</span></h5>
+                     <div class="flex flex-wrap -mx-3 g-0">
+                       <div class="w-full px-3 lg:w-1/2">
+                         <a href="header-default.html" class="dropdown-item">Default</a>
+                         <a href="header-info-bar.html" class="dropdown-item">info bar</a>
+                         <a href="header-no-navbar.html" class="dropdown-item">No Navbar</a>
+                         <a href="header-sticky-down.html" class="dropdown-item">Sticky down</a>
+                         <a href="header-sticky-up.html" class="dropdown-item">Sticky up</a>
+                         <a href="header-sticky-boxed.html" class="dropdown-item">Sticky Boxed</a>
+                         <a href="header-search-bar.html" class="dropdown-item">Search</a>
+                       </div>
+                       <!--/.col-sm-6-->
+                       <div class="w-full px-3 lg:w-1/2">
+                         <div class="text-xs pl-4 text-gray-400 mb-3 pt-3">Footer Styles <span class="badge ms-2 bg-info">9+</span></div>
+                         <a href="footer-1.html" class="dropdown-item">Footer 1</a>
+                         <a href="footer-2.html" class="dropdown-item">Footer 2</a>
+                         <a href="footer-3.html" class="dropdown-item">Footer 3</a>
+                         <a href="footer-4.html" class="dropdown-item">Footer 4</a>
+                         <a href="footer-5.html" class="dropdown-item">Footer 5</a>
+                         <a href="footer-6.html" class="dropdown-item">Footer 6</a>
+                         <a href="footer-7.html" class="dropdown-item">Footer 7</a>
+                       </div>
+                     </div>
+                     <!--/.row-->
+                   </div>
+                   <!--/.End col-->
+                   <div class="w-full lg:w-2/5 px-3 mb-4 lg:mb-0">
+                     <h5 class="text-xs pl-4 text-gray-400 mb-3 pt-3">
+                       Hero Covers Slider</h5>
+                     <div class="flex flex-wrap -mx-3">
+                       <div class="w-full px-3 lg:w-1/2">
+                         <a href="hero-simple.html" class="dropdown-item">Hero Simple</a>
+                         <a href="hero-parallax.html" class="dropdown-item">Hero Parallax</a>
+                         <a href="hero-parallax-element.html" class="dropdown-item"> Parallax Element</a>
+                         <a href="hero-fullscreen.html" class="dropdown-item">Hero Fullscreen</a>
+                         <a href="hero-newsletter.html" class="dropdown-item">Hero Newsletter</a>
+                         <a href="hero-signup.html" class="dropdown-item">Form SignUp</a>
+                         <a href="hero-pricing.html" class="dropdown-item">Form Pricing</a>
+                         <a href="hero-video-button.html" class="dropdown-item">Video popup</a>
+                         <a href="hero-youtube-video.html" class="dropdown-item">Youtube Video</a>
+                         <a href="hero-vimeo-video.html" class="dropdown-item">Vimeo Video</a>
+                         <a href="hero-html5-video.html" class="dropdown-item">HTML5 Video</a>
+                       </div>
+                       <div class="w-full px-3 lg:w-1/2">
+                         <a href="hero-bg-shape.html" class="dropdown-item">BG Shape</a>
+                         <a href="hero-shape-image.html" class="dropdown-item">Shape Image</a>
+                         <a href="hero-tiles.html" class="dropdown-item">Image tiles</a>
+                         <a href="hero-media-player.html" class="dropdown-item">Media Player </a>
+                         <a href="hero-typed-text.html" class="dropdown-item">Typed Text</a>
+                         <a href="hero-slider-swiper.html" class="dropdown-item">Swiper slider</a>
+                         <a href="hero-slider-master.html" class="dropdown-item">Master Slider</a>
+                         <a href="hero-slider-master-alt.html" class="dropdown-item">Master Slider Alt</a>
+                         <a href="hero-particles.html" class="dropdown-item">Particles</a>
+                       </div>
+                     </div>
+                   </div>
+                   <!--/.End col-->
+  
+                   <div class="w-full lg:w-1/5 px-3 mb-4 lg:mb-0">
+                     <h5 class="text-xs pl-4 text-gray-400 mb-3 pt-3">
+                       Others</h5>
+                     <a class="dropdown-item" target="_blank" href="layout-blank.html">layout Blank</a>
+           
+                
+                         <a href="feature-sticky-cards.html" class="dropdown-item">Sticky Cards
+                           <span class="inline-block ms-2 text-xs px-2 py-1 leading-tight bg-amber-500 text-white rounded-full">New</span>
+                         </a>
+                         <a href="feature-image-reveal.html" class="dropdown-item">Image Reveal
+                           <span class="inline-block ms-2 text-xs px-2 py-1 leading-tight bg-amber-500 text-white rounded-full">New</span>
+                         </a>
+                   </div>
+                   <!--/.End col-->
+                 </div>
+               </div>
+             </div>
+           </li>
+           <!--end:features-->
+         </ul>
+         <!--end:Navbar items-->
+
+       </div>
+       <!--end:navbar-collapse-->
+     </div>
+
+   </nav>
+   <!--end:navbar-->
+ </header>
+ <!--end:header-->
+
+<!--Main content-->
+
+<main class="main-content" id="main-content">
+    <section class="relative bg-gradient-to-tr from-indigo-500 to-gray-900 text-white">
+        <!--divider-->
+        <svg class="absolute left-0 bottom-0 rotate-180 text-white dark:text-black" width="100%"
+            height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 152" fill="none"
+            preserveAspectRatio="none">
+            <path
+                d="M126.597 138.74C99.8867 127.36 76.6479 109.164 59.2161 85.9798L0 3.05176e-05L1440 0C1440 0 1419.98 25.8404 1380.15 32.9584L211.382 150.811C182.549 154.283 153.308 150.12 126.597 138.74Z"
+                fill="currentColor" />
+        </svg>
+        <div class="container relative pt-24 lg:pt-48 pb-12 lg:pb-16">
+            <div class="flex flex-wrap -mx-3 items-center pb-16">
+                <div class="lg:w-10/12 w-full px-3">
+                    <h1 class="text-4xl lg:text-6xl font-medium mb-3" data-text-split>
+                        Get in touch with us
+                    </h1>
+                    <p class="mb-0 text-lg text-white/75 lg:w-8/12">Do you have questions about our products or need a quote? Use
+                        the
+                        contact form below and we will get back to you.</p>
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.content-->
+    </section>
+    <!--/section-->
+
+    <section class="relative">
+        <div class="container py-16 lg:py-24">
+            <div class="flex flex-wrap -mx-3">
+                <div class="w-full px-3 lg:w-8/12 order-last lg:order-1">
+                    <div class="relative">
+                        <h2 class="text-3xl font-medium mb-3">
+                            Contact form
+                        </h2>
+                        <p class="mb-3 lg:w-8/12 text-gray-600 dark:text-gray-300">
+                            Use the contact form if you have questions about our products. Our sales team will
+                            be happy to help you:
+                        </p>
+                        <div class="w-16 pt-1 bg-indigo-500 mb-9"></div>
+                        <!-- Contacts Form -->
+
+                        <form id="contactForm" action="assets/contact/send_mail.php" method="post" role="form"
+                            class="needs-validation mb-7">
+                            <div class="flex flex-wrap -mx-3">
+                                <!-- Input -->
+                                <div class="w-full px-3 md:w-6/12 mb-3">
+                                    <label class="block text-gray-600 dark:text-gray-300 mb-2" for="name">Your name</label>
+                                    <input type="text" name="name" class="input" id="name"
+                                        placeholder="John Doe" required>
+                                </div>
+
+                                <!-- Input -->
+                                <div class="w-full px-3 md:w-6/12 mb-3">
+                                    <label class="block text-gray-600 dark:text-gray-300 mb-2" for="email">Your email address</label>
+                                    <input type="email" class="input" name="email" id="email"
+                                        placeholder="john@gmail.com" aria-label="jackwayley@gmail.com" required>
+                                    
+                                </div>
+
+                                <!-- Input -->
+
+                                <!-- Services -->
+                                <div class="w-full px-3 mb-3">
+                                    <label class="block text-gray-600 dark:text-gray-300 mb-2" for="subject">Subject</label>
+                                    <input type="text" class="input" name="subject" id="subject"
+                                        placeholder="Web Design" required>
+                                </div>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="mb-3">
+                                <label for="message" class="block text-gray-600 dark:text-gray-300 mb-2">Message</label>
+                                <textarea class="input min-h-48" name="message" placeholder="Hi there...."
+                                    required=""></textarea>
+                            </div>
+
+                            <div class="md:flex justify-between items-center">
+                                <p class="text-xs mb-4 text-gray-400 mb-md-0">We'll get back to you in 1-2
+                                    business days.</p>
+                                <input type="submit" name="submit" value="Submit message" id="sendBtn"
+                                    class="btn btn-lg bg-indigo-500 text-white hover:bg-indigo-600 cursor-pointer">
+                            </div>
+                        </form>
+
+                        <!--Card-->
+                        <div class="relative px-6 py-7 rounded-2xl border border-gray-200 dark:border-gray-800"
+                             data-animation="fadeInUp">
+                            <div class="relative">
+
+                                <h3 class="mb-4 text-3xl lg:text-400 font-medium">Need customer support?</h3>
+                                <p class="lg:w-8/12 text-gray-600 dark:text-gray-300">
+                                    If you are already a customer with us, we will be happy to help you in our
+                                    Customer Support.
+                                </p>
+                                <div class="width-6x pt-1 bg-success mb-5"></div>
+                                <a href="#" class="btn btn-lg bg-indigo-500 hover:bg-indigo-600 text-white">
+                                    Customer support
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-3 lg:w-3/12 lg:ml-auto order-1 lg:order-last mb-9 lg:mb-0">
+                    <div>
+                        <h4 class="mb-0 text-2xl font-medium">Global Offices</h4>
+                        <div class="border-t border-gray-200 dark:border-gray-800 mb-4 mt-2"></div>
+                    </div>
+                    <div data-animation="fadeInUp">
+                        <h5 class="text-lg font-medium mb-2">USA</h5>
+                        <div class="relative">
+                            <p class="mb-3"><b class="font-medium">Brooklyn </b><br>Street name 21, Ipsum,<br> 12345,&nbsp;New York
+                                City</p>
+                            <p>Phone:&nbsp;+01 1234 456 678<br>Fax: +01 1234 567 890<br>Website: <a rel="noopener"
+                                    href="#!" class="text-indigo-500">www.site.se</a><br>Email: <a rel="noopener"
+                                    href="#!" class="text-indigo-500">info@yourmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-200 dark:border-gray-800 my-4 my-lg-5"></div>
+                    <div data-animation="fadeInUp" data-delay=".2">
+                        <h5 class="text-lg font-medium mb-2">Sweden</h5>
+                        <div class="relative">
+                            <p class="mb-3"><b class="font-medium">Stockholm </b><br>Street name 21, Danderyd,<br>
+                                SE-12345,&nbsp;Sweden</p>
+                            <p>Phone:&nbsp;+46 1234 56789<br>Fax: +46 123 123456<br>Website: <a rel="noopener"
+                                    href="#!" class="text-indigo-500">www.site.se</a><br>Email: <a rel="noopener"
+                                    href="#!" class="text-indigo-500">info@yourmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-200 dark:border-gray-800 my-4 my-lg-5"></div>
+                    <div class="pb-0" data-animation="fadeInUp" data-delay=".1">
+                        <h5 class="text-lg font-medium mb-2">South Korea</h5>
+                        <div class="relative">
+                            <p class="mb-3">373 Gangnam-daero<br> Seocho-gu, Seoul, 06621,<br> South Korea</p>
+                            <p>Phone:&nbsp;+82 1234 56789<br>Fax: +82 123 123456<br>Website: <a rel="noopener"
+                                    href="#!" class="text-indigo-500">www.site.se</a><br>Email: <a rel="noopener"
+                                    href="#!" class="text-indigo-500">info@yourmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="border-t border-gray-200 dark:border-gray-800 overflow-hidden relative">
+        <div class="container py-12 lg:py-16">
+            <div class="flex flex-wrap -mx-3 items-end relative">
+                <div class="w-full px-3 lg:w-7/12 text-center lg:text-left">
+                    <h5 class="mb-3 text-gray-400">Let's start building</h5>
+                    <h1 class="mb-5 lg:mb-0 text-4xl lg:text-5xl font-medium" data-text-split>Stunning websites ease</h1>
+                </div>
+                <div class="w-full px-3 lg:w-5/12 lg:text-right text-center flex gap-2 flex-col sm:flex-row justify-center lg:justify-end">
+                    <a href="#!" class="btn btn-lg bg-indigo-500 text-white hover:bg-indigo-600">Contact sales</a>
+                    <a href="#!" class="btn btn-lg bg-green-500 text-white hover:bg-green-600">Purchase Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+   
+    <!--Footer Start-->
+    <!--begin:Footer-->
+    <footer id="footer" class="bg-black text-gray-300 footer relative">
+        <div class="container pt-12 lg:pt-16">
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full lg:w-3/12 px-4 mb-7 h-full me-auto">
+                    <!--Title-->
+                    <h2 class="text-2xl lg:text-3xl leading-[1.25] font-medium text-white mb-0 relative">
+                        Work with us
+                    </h2>
+                    <div class="pt-3 mb-7">
+                        <a class="inline-block relative link-hover-underline text-white text-lg" href="mailto:mail@doamin.com">mail@domain.com</a>
+                    </div>
+                    <!--:Dark Mode:-->
+                    <button data-bs-toggle="tooltip" data-bs-title="toggle theme" data-bs-placement="left"
+                    class="toggle-mode w-10 h-10 rounded-full transition-all bg-white shadow-lg text-gray-700 dark:text-white dark:bg-gray-700 hover:bg-indigo-500 hover:text-white dark:hover:bg-indigo-500 flex items-center justify-center"
+                    type="button">
+                    <span class="dark:block hidden">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 2V4M12 20V22M4 12H2M6.31412 6.31412L4.8999 4.8999M17.6859 6.31412L19.1001 4.8999M6.31412 17.69L4.8999 19.1042M17.6859 17.69L19.1001 19.1042M22 12H20M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <span class="block dark:hidden">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M21.9548 12.9564C20.5779 15.3717 17.9791 17.0001 15 17.0001C10.5817 17.0001 7 13.4184 7 9.00008C7 6.02072 8.62867 3.42175 11.0443 2.04492C5.96975 2.52607 2 6.79936 2 11.9998C2 17.5227 6.47715 21.9998 12 21.9998C17.2002 21.9998 21.4733 18.0305 21.9548 12.9564Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    </button>
+                </div>
+                <div class="w-full lg:w-2/12 md:w-4/12 px-4 mb-7 ms-auto h-full">
+                    <!--Title-->
+                    <h6 class="small mb-3 mb-lg-4 text-gray-400">Learn</h6>
+                    <!--Nav-->
+                    <ul class="flex flex-col space-y-2 mb-0">
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Design</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Digital</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Development</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Branding</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Graphics</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Process</a></li>
+                    </ul>
+                </div>
+                <!--/.Col-->
+                <div class="w-full lg:w-2/12 md:w-4/12 px-4 mb-7 h-full">
+                    <!--Title-->
+                    <h6 class="small mb-3 mb-lg-4 text-gray-400">Resources</h6>
+                    <!--Nav-->
+                    <ul class="flex flex-col space-y-2 mb-0">
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Elements</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Features</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Credits</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Updates</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Help center</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Events</a></li>
+                    </ul>
+                </div>
+                <!--/.Col-->
+                <div class="w-full lg:w-2/12 md:w-4/12 px-4 mb-7 h-full">
+                    <!--Title-->
+                    <h6 class="small mb-3 mb-lg-4 text-gray-400">Company</h6>
+                    <!--Nav-->
+                    <ul class="flex flex-col space-y-2 mb-0">
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Awwards</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link py-1 block text-white" href="#!">Careers
+                                <span class="badge badge-pill ms-1 bg-indigo-500 text-xs font-medium rounded-full px-2 py-1 text-white">Hiring</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Customers</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Affiliate</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Contact us</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Terms of use</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <!--/.Col-->
+            </div>
+            <hr class="mb-5 mt-0 border-gray-800">
+        </div> <!-- / .container -->
+        <div class="pb-7">
+            <div class="container">
+                <div class="flex flex-wrap -mx-4 justify-between items-center">
+                    <div class="flex gap-2 mb-4 md:mb-0 w-full px-4 md:w-6/12">
+                        <!-- Social button -->
+                        <a href="#!" class="w-10 h-10 border relative group overflow-hidden flex items-center justify-center rounded-full hover:bg-[#3b5998] hover:border-[#3b5998] hover:text-white">
+                            <i class="bi bi-facebook fs-6 block transition-all group-hover:-translate-y-full group-hover:opacity-0"></i>
+                            <i class="bi bi-facebook fs-6 block transition-all translate-y-full opacity-0 absolute group-hover:opacity-100 group-hover:translate-y-0"></i>
+                        </a>
+                        <!-- Social button -->
+                        <a href="#!" class="w-10 h-10 border relative group overflow-hidden flex items-center justify-center rounded-full hover:bg-[#1da1f2] hover:border-[#1da1f2] hover:text-white">
+                            <i class="bi bi-twitter-x fs-6 block transition-all group-hover:-translate-y-full group-hover:opacity-0"></i>
+                            <i class="bi bi-twitter-x fs-6 block transition-all translate-y-full opacity-0 absolute group-hover:opacity-100 group-hover:translate-y-0"></i>
+                        </a>
+                        <!-- Social button -->
+                        <a href="#!" class="w-10 h-10 border relative group overflow-hidden flex items-center justify-center rounded-full hover:bg-[#0077b5] hover:border-[#0077b5] hover:text-white">
+                            <i class="bi bi-linkedin fs-6 block transition-all group-hover:-translate-y-full group-hover:opacity-0"></i>
+                            <i class="bi bi-linkedin fs-6 block transition-all translate-y-full opacity-0 absolute group-hover:opacity-100 group-hover:translate-y-0"></i>
+                        </a>
+                        <!-- Social button -->
+                        <a href="#!" class="w-10 h-10 border relative group overflow-hidden flex items-center justify-center rounded-full hover:bg-[#e1306c] hover:border-[#e1306c] hover:text-white">
+                            <i class="bi bi-instagram fs-6 block transition-all group-hover:-translate-y-full group-hover:opacity-0"></i>
+                            <i class="bi bi-instagram fs-6 block transition-all translate-y-full opacity-0 absolute group-hover:opacity-100 group-hover:translate-y-0"></i>
+                        </a>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 md:text-right">
+                        <span class="block text-xs text-gray-400">© Copyright
+                            <script>
+                                document.write(new Date().getFullYear())
+
+                            </script>. Assan
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--end:Footer-->
+
+<!--::Success message Modal::-->
+<div id="successModal" class="modal fade">
+    <div class="modal-dialog modal-dialog-xs modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body py-5 px-4 text-center">
+                <div class="w-16 h-16 mb-4 mx-auto flex items-center justify-center bg-green-500 text-white rounded-full">
+                     <i class="bi bi-check text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-medium mb-3">Message Sent</h3>
+                <p class="mb-6 text-gray-400">We'll get back to you in 1-2 business days! </p>
+                <button type="button" class="btn bg-red-500 text-white hover:bg-red-600" data-bs-dismiss="modal"
+                    aria-label="Close">Dismiss</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+    
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+
+        <!--:Contact form:-->
+        <script>
+            // Wait for the DOM to load
+            document.addEventListener('DOMContentLoaded', function () {
+                // Get the form element
+                const form = document.getElementById('contactForm');
+                const successModal = document.getElementById('successModal')
+    
+    
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    const formControls = form.querySelectorAll('.input');
+                    if (form.checkValidity()) {
+                        const formData = new FormData(form);
+                        fetch(form.action, {
+                            method: form.method,
+                            body: formData
+                        })
+                            .then(response => {
+                                const toastBootstrap = bootstrap.Modal.getOrCreateInstance(
+                                    successModal)
+                                toastBootstrap.show()
+                                // Clear validation feedback
+                                formControls.forEach(function (control) {
+                                    control.value = '';
+                                });
+                            })
+                            .catch(error => {
+                                console.error(error);
+                            });
+                    }
+                });
+            });
+    
+        </script>
+    <!--Autosize textarea-->
+    <script src="assets/vendor/node_modules/js/autosize.min.js"></script>
+    <script>
+        var ta = document.querySelector('textarea');
+        ta.style.display = 'none';
+        autosize(ta);
+        // Change layout
+        ta.style.display = 'block';
+        autosize.update(ta);
+
+    </script>
+</body>
+
+</html>

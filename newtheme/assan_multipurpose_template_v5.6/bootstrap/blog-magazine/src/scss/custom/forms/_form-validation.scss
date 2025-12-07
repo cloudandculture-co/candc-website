@@ -1,0 +1,22 @@
+.form-control{
+    &.is-error{
+        border-color: $danger;
+        box-shadow:0 0 $input-btn-focus-blur $input-focus-width rgba($danger,$input-btn-focus-color-opacity);
+    }
+}
+label.is-error{
+    display: block;
+    padding: .25rem .5rem;
+    background-color: tint-color($danger,85%);
+    color: $danger;
+    border-radius: $border-radius;
+    font-size: $font-size-sm;
+
+    margin-bottom: $spacer * .5;
+    &:last-child{
+        margin-bottom: $spacer * 1.5;
+    }
+}
+.form-check-input.is-error{
+    border-color: $danger;
+}

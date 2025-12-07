@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    <!--Swiper slider-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+
+    @@include('./partials/head-includes.html')
+    <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+    <!--begin:Header-->
+    <header class="header-transparent sticky-fixed">
+
+        <!--begin:navbar-->
+        <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+            <!--Navbar-fixed-background-->
+            <div class="navbar-fixed-bg absolute"></div>
+            <div class="container relative flex flex-wrap items-center justify-center relative">
+                <!--begin:logo-->
+                <a class="navbar-brand relative w-24 block" href="index.html">
+                    <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+                    <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+                </a>
+                <!--end:logo-->
+
+                <!--begin:navbar-no-collapse-items-->
+                <div class="flex items-center shrink-0 ml-auto lg:order-last">
+                    <!--Navbar toggler button-->
+                    <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i></i>
+                        </span>
+                    </button>
+                    <!--Button-->
+                    <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+                        <a href="#" class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+                    </div>
+                </div>
+                <!--end:navbar-no-collapse-items-->
+
+                <!--begin:navbar-collapse-->
+                <div class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+                    id="mainNavbarTheme">
+                    @@include('./partials/headers/default-navbar-items.html',{"page": "pages"})
+                </div>
+                <!--end:navbar-collapse-->
+            </div>
+
+        </nav>
+        <!--end:navbar-->
+    </header>
+    <!--end:header-->
+
+
+    <main class="main-content" id="main-content">
+        <section class="relative bg-gradient-to-tr from-indigo-500 to-violet-900 text-white z-[1]">
+            <svg class="absolute text-white end-0 bottom-0" preserveAspectRatio="none" width="80%" height="80%"
+                viewBox="0 0 352 352" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.05"
+                    d="M352 0C258.644 -1.11326e-06 169.111 37.0856 103.098 103.098C37.0856 169.111 8.16146e-06 258.644 0 352L352 352V0Z"
+                    fill="currentColor" />
+                <path opacity="0.05"
+                    d="M352 26.7681C265.743 26.7681 183.019 61.0335 122.026 122.026C61.0335 183.019 26.7681 265.743 26.7681 352L352 352V26.7681Z"
+                    fill="currentColor" />
+                <path opacity="0.025"
+                    d="M352 53.5361C272.842 53.5361 196.927 84.9813 140.954 140.954C84.9813 196.927 53.5361 272.842 53.5361 352L352 352V53.5361Z"
+                    fill="currentColor" />
+            </svg>
+            <div class="container relative py-16 lg:py-24">
+                <div class="flex flex-wrap -mx-3 items-center pb-9 lg:pb-0 pt-12 lg:pt-24">
+                    <div class="lg:w-10/12 w-full px-3 text-center text-center mx-auto relative z-[1]">
+                        <span class="bg-white/10 rounded-full mb-9 inline-block py-1 px-4">Postmates success
+                            story</span>
+                        <p class="text-4xl lg:text-5xl mb-9" data-text-split>
+                            “ Loved working with the beautiful theme. Everything clean and professional,
+                            also very helpful throughout the customisation.”
+                        </p>
+                        <div>
+                            <h5 class="mb-2 text-xl font-medium">
+                                Carrie Blount</h5>
+                            <small class="block text-white/75"> at postmates</small>
+                        </div>
+                    </div>
+                </div>
+                <!--/.row-->
+            </div>
+            <!--/.content-->
+
+        </section>
+        <section class="relative">
+            <div class="container py-12 lg:py-16 relative z-[1]">
+                <div class="flex flex-wrap -mx-3">
+                    <div class="lg:w-4/12 px-3 w-full xl:w-3/12 xl:mr-auto mb-7 lg:mb-0">
+                        <div class="sticky top-0 lg:top-24">
+                            <div
+                                class="rounded-xl bg-white dark:bg-gray-900 shadow-lg h-full p-3 -mt-24 lg:-mt-36 relative">
+                                <div class="pb-4 mb-4 border-b border-gray-200 dark:border-gray-800">
+                                    <img src="assets/img/partners/dark/postmates.svg" alt=""
+                                        class="w-36 h-auto mx-auto dark:hidden">
+                                    <img src="assets/img/partners/white/postmates.svg" alt=""
+                                        class="w-36 h-auto mx-auto dark:block hidden">
+                                </div>
+                                <ul class="list-unstyled small mb-0">
+                                    <li
+                                        class="flex justify-between items-stretch pb-3 mb-3 border-b border-gray-200 dark:border-gray-800">
+                                        <span class="pr-3 text-gray-400">Industry</span>
+                                        <p class="fw-normal mb-0">Co-working space</p>
+                                    </li>
+                                    <li
+                                        class="flex justify-between items-stretch pb-3 mb-3 border-b border-gray-200 dark:border-gray-800">
+                                        <span class="pr-3 text-gray-400">Location</span>
+                                        <p class="fw-normal mb-0">The Netherlands</p>
+                                    </li>
+                                    <li
+                                        class="flex justify-between items-stretch pb-3 mb-3 border-b border-gray-200 dark:border-gray-800">
+                                        <span class="pr-3 text-gray-400">Year</span>
+                                        <p class="fw-normal mb-0">2025</p>
+                                    </li>
+                                    <li
+                                        class="flex justify-between items-stretch pb-3 mb-3 border-b border-gray-200 dark:border-gray-800">
+                                        <span class="pr-3 text-gray-400">Services</span>
+                                        <p class="fw-normal mb-0">Development, Seo</p>
+                                    </li>
+                                    <li class="flex justify-between items-stretch">
+                                        <span class="pr-3 text-gray-400">Website</span>
+                                        <a class="fw-normal mb-0" href="#">https://site.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-8/12 px-3 w-full">
+                        <div class="lg:pt-12 h-full flex flex-col">
+                            <h3 class="mb-5 text-2xl font-medium">Lorem ipsum dolor sit amet</h3>
+                            <p class="mb-7 text-lg text-gray-600 dark:text-gray-300">
+                                Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                            <img src="assets/img/1200x600/1.jpg" class="max-w-full rounded-2xl shadow-xl my-12" alt="">
+                            <p class="text-lg text-gray-600 dark:text-gray-300">
+                                Mattis pellentesque id nibh tortor id aliquet lectus proin nibh. Donec ultrices
+                                tincidunt arcu non sodales neque sodales. Luctus accumsan tortor posuere ac ut consequat
+                                semper. Non enim praesent elementum facilisis leo. Quam quisque id diam vel quam
+                                elementum pulvinar. Lobortis feugiat vivamus at augue. Est ante in nibh mauris cursus
+                                mattis molestie a iaculis. Ultrices mi tempus imperdiet nulla malesuada pellentesque
+                                elit eget. Scelerisque varius morbi enim nunc faucibus a. A scelerisque purus semper
+                                eget duis at tellus at urna. Neque viverra justo nec ultrices dui sapien eget mi. Id
+                                volutpat lacus laoreet non curabitur. Risus at ultrices mi tempus. Nunc sed id semper
+                                risus in hendrerit gravida rutrum quisque.
+                            </p>
+                            <img src="assets/img/1200x600/2.jpg" class="max-w-full rounded-2xl shadow-xl my-12" alt="">
+                            <blockquote class="blockquote pl-3 border-l-2 border-indigo-500 mb-9">
+                                <div class="ms-3">
+                                    <div data-fill="currentColor" data-src="assets/img/vectors/quote-sign.svg"
+                                        alt="quote" class="w-12 h-auto text-indigo-500 opacity-50 mb-3 svg-container">
+                                    </div>
+
+                                    <p class="mb-0 text-2xl italic font-serif">
+                                        The new designs are more consistent... more true to who we are as a company.
+                                        Very fresh, light and easy to deal with. So exciting seeing the design for the
+                                        new site go live. Great work!
+                                    </p>
+                                </div>
+                            </blockquote>
+                            <p class="mb-0 text-lg text-gray-600 dark:text-gray-300">
+                                Praesent facilisis leo vel fringilla est ullamcorper eget nulla. Aliquam ultrices
+                                sagittis orci a scelerisque purus. Ornare lectus sit amet est. Dignissim cras tincidunt
+                                lobortis feugiat vivamus. Aenean et tortor at risus viverra adipiscing at in tellus.
+                                Pharetra vel turpis nunc eget lorem dolor sed viverra. Felis donec et odio pellentesque
+                                diam. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et. Id
+                                aliquet risus feugiat in ante. Parturient montes nascetur ridiculus mus mauris vitae
+                                ultricies. Vitae suscipit tellus mauris a diam maecenas sed enim ut. Cursus mattis
+                                molestie a iaculis at erat pellentesque adipiscing. Pellentesque nec nam aliquam sem.
+                                Maecenas ultricies mi eget mauris pharetra et ultrices neque ornare.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative bg-gray-100 dark:bg-gray-900">
+            <div class="container py-16 lg:py-24">
+                <h1 class="text-center text-4xl lg:text-5xl font-medium mb-9" data-text-split>More customer stories</h1>
+                <div class="flex flex-wrap -mx-3">
+                    <div class="lg:w-4/12 px-3 w-full b-7 lg:mb-0" data-animation="fadeInUp">
+                        <!--Card-->
+                        <div class="transition-all duration-200 hover:-translatey-200 rounded-2xl relative bg-white dark:bg-black">
+                            <div class="relative rounded-t-2xl overflow-hidden">
+                                <img src="assets/img/960x640/1.jpg" class="max-w-full" alt="">
+                                <div class="absolute bottom-0 left-0 px-6">
+                                    <div class="bg-white dark:bg-black pt-4 px-4 rounded-t-2xl">
+                                        <span
+                                            class="w-[24px] h-[48px] rounded-br-3xl shadow-[0_24px_0_0_rgba(255,255,255,1)] dark:shadow-[0_24px_0_0_rgba(0,0,0,1)] absolute left-0 bottom-0 block"></span>
+                                        <span
+                                            class="w-[24px] h-[48px] rounded-bl-3xl shadow-[0_24px_0_0_rgba(255,255,255,1)] dark:shadow-[0_24px_0_0_rgba(0,0,0,1)] absolute right-0 bottom-0 block"></span>
+                                        <img src="assets/img/partners/amazon.svg" class="h-6 w-auto dark:hidden" alt="">
+                                        <img src="assets/img/partners/white/amazon.svg" class="h-6 hidden dark:block"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-lg pb-4 border-b border-gray-200 dark:border-gray-800 pb-4 mb-4">
+                                    “ Felis donec et odio pellentesque diam. Pellentesque pulvinar pellentesque habitant
+                                    morbi tristique senectus et. Id aliquet risus feugiat in ante.”
+                                </p>
+                                <div class="text-end">
+                                    <a href="#!" class="btn bg-gray-700 text-white hover:bg-gray-800">Read story</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-4/12 px-3 w-full b-7 lg:mb-0" data-animation="fadeInUp" data-delay=".1">
+                       <!--Card-->
+                        <div class="transition-all duration-200 hover:-translatey-200 rounded-2xl relative bg-white dark:bg-black">
+                            <div class="relative rounded-t-2xl overflow-hidden">
+                                <img src="assets/img/960x640/2.jpg" class="max-w-full" alt="">
+                                <div class="absolute bottom-0 left-0 px-6">
+                                    <div class="bg-white dark:bg-black pt-4 px-4 rounded-t-2xl">
+                                        <span
+                                            class="w-[24px] h-[48px] rounded-br-3xl shadow-[0_24px_0_0_rgba(255,255,255,1)] dark:shadow-[0_24px_0_0_rgba(0,0,0,1)] absolute left-0 bottom-0 block"></span>
+                                        <span
+                                            class="w-[24px] h-[48px] rounded-bl-3xl shadow-[0_24px_0_0_rgba(255,255,255,1)] dark:shadow-[0_24px_0_0_rgba(0,0,0,1)] absolute right-0 bottom-0 block"></span>
+                                        <img src="assets/img/partners/didi.svg" class="h-6 w-auto dark:hidden" alt="">
+                                        <img src="assets/img/partners/white/didi.svg" class="h-6 hidden dark:block"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-lg pb-4 border-b border-gray-200 dark:border-gray-800 pb-4 mb-4">
+                                    “ Felis donec et odio pellentesque diam. Pellentesque pulvinar pellentesque habitant
+                                    morbi tristique senectus et. Id aliquet risus feugiat in ante.”
+                                </p>
+                                <div class="text-end">
+                                    <a href="#!" class="btn bg-gray-700 text-white hover:bg-gray-800">Read story</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-4/12 px-3 w-full" data-animation="fadeInUp" data-delay=".2">
+                        <!--Card-->
+                        <div class="transition-all duration-200 hover:-translatey-200 rounded-2xl relative bg-white dark:bg-black">
+                            <div class="relative rounded-t-2xl overflow-hidden">
+                                <img src="assets/img/960x640/3.jpg" class="max-w-full" alt="">
+                                <div class="absolute bottom-0 left-0 px-6">
+                                    <div class="bg-white dark:bg-black pt-4 px-4 rounded-t-2xl">
+                                        <span
+                                            class="w-[24px] h-[48px] rounded-br-3xl shadow-[0_24px_0_0_rgba(255,255,255,1)] dark:shadow-[0_24px_0_0_rgba(0,0,0,1)] absolute left-0 bottom-0 block"></span>
+                                        <span
+                                            class="w-[24px] h-[48px] rounded-bl-3xl shadow-[0_24px_0_0_rgba(255,255,255,1)] dark:shadow-[0_24px_0_0_rgba(0,0,0,1)] absolute right-0 bottom-0 block"></span>
+                                        <img src="assets/img/partners/slack.svg" class="h-6 w-auto dark:hidden" alt="">
+                                        <img src="assets/img/partners/white/slack.svg" class="h-6 hidden dark:block"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-lg pb-4 border-b border-gray-200 dark:border-gray-800 pb-4 mb-4">
+                                    “ Felis donec et odio pellentesque diam. Pellentesque pulvinar pellentesque habitant
+                                    morbi tristique senectus et. Id aliquet risus feugiat in ante.”
+                                </p>
+                                <div class="text-end">
+                                    <a href="#!" class="btn bg-gray-700 text-white hover:bg-gray-800">Read story</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-1.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+   
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+:root{
+    --#{$prefix}form-control-bg: var(--#{$prefix}white);
+}
+@if $enable-dark-mode {
+    @include color-mode(dark, true) {
+        --#{$prefix}form-control-bg: var(--#{$prefix}body-bg);
+    }
+}

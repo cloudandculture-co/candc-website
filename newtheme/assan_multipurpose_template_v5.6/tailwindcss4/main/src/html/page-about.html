@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    @@include('./partials/head-includes.html')
+
+    <!--Swiper slider-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+    <!--G-lightbox-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/glightbox.min.css" />
+    <title>Assan - TailwindCss Template</title>
+  </head>
+
+  <body class="leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+    <!--Header Start-->
+    <header class="z-fixed top-0 left-0 absolute header-sticky z-[999] w-full">
+      <nav class="navbar py-4 lg:py-0 shadow-none navbar-expand-lg navbar-light">
+        <div class="container relative flex flex-wrap items-center justify-center">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo/logo.svg" alt="" class="w-24 dark:hidden">
+            <img src="assets/img/logo/logo-white.svg" alt="" class="w-24 hidden dark:block">
+        </a>
+          <div class="flex items-center shrink-0 ml-auto lg:order-last">
+            <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon">
+                <i></i>
+              </span>
+            </button>
+            <div class="nav-item me-3 me-lg-0 ms-lg-3">
+              <a href="#" class="btn bg-orange-500 text-white hover:bg-orange-600">
+                Get started</a>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent" id="mainNavbarTheme">
+            @@include('./partials/headers/default-navbar-items.html',{"page":
+            "pages"})
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Main content-->
+    <main class="main-content" id="main-content">
+        <section class="relative">
+            <div class="container relative py-12 lg:py-16">
+                <div class="row pt-12 lg:pt-16 items-end">
+                    <div class="col-12 col-xl-9 mx-auto text-center">
+                        <h1 class="text-5xl lg:text-6xl font-medium mb-2" data-text-split>Who we are</h1>
+                        <p class="text-xl text-gray-600 dark:text-gray-300 mb-0 mx-auto">
+                            We create websites that help brands to
+                            increase conversion and build trust.
+                        </p>
+                    </div>
+
+                </div>
+                <!--/.row-->
+            </div>
+            <!--/.content-->
+        </section>
+        <section class="relative overflow-hidden">
+            <div class="container relative">
+                <div class="flex flex-wrap -mx-3 sm:items-center md:items-start relative z-[1]">
+                    <div class="w-6/12 sm:w-3/12 px-3 mb-6 sm:mb-0" data-animation="fadeInUp">
+                        <img src="assets/img/960x1140/4.jpg" class="max-w-full rounded-xl" alt="">
+                    </div>
+                    <div class="w-6/12 sm:w-3/12 px-3 mb-6 sm:mb-0" data-animation="fadeInUp">
+                        <img src="assets/img/960x640/4.jpg" class="max-w-full rounded-xl mb-6" alt="">
+                        <img src="assets/img/960x640/2.jpg" class="max-w-full rounded-xl" alt="">
+                    </div>
+                    <div class="sm:w-3/12 w-5/12 px-3" data-animation="fadeInUp">
+                        <img src="assets/img/960x900/2.jpg" class="max-w-full rounded-xl" alt="">
+                    </div>
+                    <div class="sm:w-3/12 w-7/12 px-3" data-animation="fadeInUp">
+                        <img src="assets/img/960x900/1.jpg" class="max-w-full rounded-xl" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="container py-16 lg:py-24 relative">
+                <div class="flex flex-wrap -mx-3">
+                    <div class="md:w-4/12 w-full px-3">
+                        <h2 class="mb-5 text-3xl lg:text-4xl font-medium" data-text-split>About Company</h2>
+                    </div>
+                    <div class="md:w-8/12 xl:w-7/12 xl:ml-auto w-full px-3">
+                        <p class="text-lg text-gray-600 dark:text-gray-300 mb-4" data-animation="fadeInUp" data-delay=".1">
+                            Howdy, We are a professional digital studio based in California, Usa. We make good
+                            designs for small to large businesses, Building good designs is our passion. Drop us a
+                            line and say hello to us without any hesitation. We would love to discuss about your
+                            next project.
+                        </p>
+                        <p class="text-lg text-gray-600 dark:text-gray-300" data-animation="fadeInUp" data-delay=".2">
+                            Condimentum blandit nunc risus nulla ante maecenas suspendisse in penatibus rutrum
+                            ultrices varius eget turpis urna. Id elementum justo, egestas in aliquam turpis mi
+                            in. Aenean viverra sit massa morbi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="overflow-hidden bg-gray-50 dark:bg-gray-900 relative">
+            <div class="container py-16 lg:py-24 relative z-[1]">
+                <div class="row mb-9">
+                    <div class="col-12">
+                        <h2 class="mb-0 text-3xl lg:text-4xl font-medium" data-text-split>A brief history</h2>
+                    </div>
+                </div>
+                <!--History swiper slider-->
+                <div class="swiper-history swiper-container overflow-visible">
+                    <!--Slider wrapper-->
+                    <div class="swiper-wrapper">
+                        <!--Slide-->
+                        <div class="swiper-slide">
+                            <div>
+                                <div class="pe-5 pb-3 pe-lg-7">
+                                    <!--Time-->
+                                    <p class="text-gray-400 mb-3">At Present</p>
+                                    <!--Year-->
+                                    <h2 class="text-4xl lg:text-5xl font-medium">2025</h2>
+                                </div>
+                                <!--Divider line-->
+                                <div class="w-full my-4 h-1 bg-indigo-500 relative
+                                before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2
+                                 before:w-5 before:h-5 before:rounded-full before:bg-indigo-500 before:border-4 before:border-white dark:before:border-black
+
+                                "></div>
+                                <!--Text-->
+                                <div class="pe-7 pt-3 pe-lg-7">
+                                    <h5 class="mb-4 text-xl font-medium">Whole new look with bootstrap5</h5>
+                                    <p class="text-gray-600 dark:text-gray-300">Lorem ipsum is text commonly used in the graphic, print, and publishing
+                                        industries for previewing layouts and visual mockups.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Slide-->
+                        <div class="swiper-slide">
+                            <div>
+                                <div class="pe-5 pb-3 pe-lg-7">
+                                    <!--Time-->
+                                    <p class="text-gray-400 mb-3">May</p>
+                                    <!--Year-->
+                                    <h2 class="text-4xl lg:text-5xl font-medium">2020</h2>
+                                </div>
+                                <!--Divider line-->
+                                <div class="w-full my-4 h-1 bg-indigo-400 relative
+                                before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2
+                                 before:w-5 before:h-5 before:rounded-full before:bg-indigo-400 before:border-4 before:border-white dark:before:border-black
+
+                                "></div>
+                                <!--Text-->
+                                <div class="pe-7 pt-3 pe-lg-7">
+                                    <h5 class="mb-4 text-xl font-medium">Finished 5000 Sales</h5>
+                                    <p class="text-gray-600 dark:text-gray-300">Lorem ipsum is text commonly used in the graphic, print, and publishing
+                                        industries for previewing layouts and visual mockups.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Slide-->
+                        <div class="swiper-slide">
+                            <div>
+                                <div class="pe-5 pb-3 pe-lg-7">
+                                    <!--Time-->
+                                    <p class="text-gray-400 mb-3">June</p>
+                                    <!--Year-->
+                                    <h2 class="text-4xl lg:text-5xl font-medium">2018</h2>
+                                </div>
+                                <!--Divider line-->
+                                <div class="w-full my-4 h-1 bg-indigo-300 relative
+                                before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2
+                                 before:w-5 before:h-5 before:rounded-full before:bg-indigo-300 before:border-4 before:border-white dark:before:border-black
+
+                                "></div>
+                                <!--Text-->
+                                <div class="pe-7 pt-3 pe-lg-7">
+                                    <h5 class="mb-4 text-xl font-medium">Converted into Bootstrap 4</h5>
+                                    <p class="text-gray-600 dark:text-gray-300">Lorem ipsum is text commonly used in the graphic, print, and publishing
+                                        industries for previewing layouts and visual mockups.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Slide-->
+                        <div class="swiper-slide">
+                            <div>
+                                <div class="pe-5 pb-3 pe-lg-7">
+                                    <!--Time-->
+                                    <p class="text-gray-400 mb-3">July</p>
+                                    <!--Year-->
+                                    <h2 class="text-4xl lg:text-5xl font-medium">2016</h2>
+                                </div>
+                                <!--Divider line-->
+                                <div class="w-full my-4 h-1 bg-indigo-200 relative
+                                before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2
+                                 before:w-5 before:h-5 before:rounded-full before:bg-indigo-200 before:border-4 before:border-white dark:before:border-black
+
+                                "></div>
+                                <!--Text-->
+                                <div class="pe-7 pt-3 pe-lg-7">
+                                    <h5 class="mb-4 text-xl font-medium">Finished 2000 Sales</h5>
+                                    <p class="text-gray-600 dark:text-gray-300">Lorem ipsum is text commonly used in the graphic, print, and publishing
+                                        industries for previewing layouts and visual mockups.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Slide-->
+                        <div class="swiper-slide">
+                            <div>
+                                <div class="pe-5 pb-3 pe-lg-7">
+                                    <!--Time-->
+                                    <p class="text-gray-400 mb-3">August</p>
+                                    <!--Year-->
+                                    <h2 class="text-4xl lg:text-5xl font-medium">2014</h2>
+                                </div>
+                                <!--Divider line-->
+                                <div class="w-full my-4 h-1 bg-indigo-100 relative
+                                before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2
+                                 before:w-5 before:h-5 before:rounded-full before:bg-indigo-100 before:border-4 before:border-white dark:before:border-black
+
+                                "></div>
+                                <!--Text-->
+                                <div class="pe-7 pt-3 pe-lg-7">
+                                    <h5 class="mb-4 text-xl font-medium">Launched Assan Theme</h5>
+                                    <p class="text-gray-600 dark:text-gray-300">Lorem ipsum is text commonly used in the graphic, print, and publishing
+                                        industries for previewing layouts and visual mockups.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="relative bg-primary-subtle">
+            <div class="container py-16 lg:py-24">
+                <div class="flex flex-wrap -mx-3 py-5 relative items-center justify-between z-[1]">
+
+                    <!--Countup Numbers col-->
+                    <div class="md:w-4/12 lg:pr-16 w-full px-3 mb-7 md:mb-0">
+                        <h2 class="text-4xl lg:text-5xl font-medium mb-5" data-countup="185" data-suffix="+">
+                        </h2>
+                        <p class="mb-0 text-lg text-gray-600 dark:text-gray-300"><strong>Well coded layouts</strong> blandit nunc risus nulla ante
+                            maecenas suspendisse in penatibus rutrum ultrices varius eget turpis urna.</p>
+                    </div>
+
+                    <div class="md:w-4/12 w-full px-3 mb-7 md:mb-0">
+                        <div class="relative">
+                            <img src="assets/img/960x1140/4.jpg" class="rounded-xl shadow-xl img-fluid" alt="">
+                            <div class="absolute left-0 top-0 w-full h-full flex justify-center items-center">
+                                <!--play button-->
+                                <a href="https://vimeo.com/353105087" data-glightbox data-gallery="gallery07"
+                                    class="flex items-center justify-center w-24 h-24 rounded-full relative">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-300 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-24 w-24 flex items-center justify-center bg-indigo-500 text-white"> <i class="bi bi-play text-4xl leading-[1]"></i></span>
+                                   
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Countup Numbers col-->
+                    <div class="md:w-4/12 lg:pl-16 w-full px-3">
+                        <h2 class="text-4xl lg:text-5xl font-medium mb-5" data-countup="500" data-suffix="+">
+                        </h2>
+                        <p class="mb-0 text-gray-600 dark:text-gray-300"><strong>Re-usable components</strong> blandit nunc risus nulla ante
+                            maecenas suspendisse in penatibus rutrum ultrices varius eget turpis urna.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="relative">
+            <div class="container py-16 lg:py-24 relative z-[1]">
+               <h2 data-text-split class="mb-3 text-3xl lg:text-4xl font-medium text-center">Meet the super team</h2>
+                <div class="flex flex-wrap -mx-3 justify-center">
+                    <div class="lg:w-3/12 sm:w-6/12 w-full px-3 mt-6">
+                        <div
+                            class="relative shadow-sm group overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-200 rounded-xl">
+                            <div class="block overflow-hidden relative">
+                                <img src="assets/img/team/1.jpg" alt="" class="max-w-full">
+                                <div
+                                    class="absolute left-0 top-0 w-full h-full flex items-end justify-center bg-gradient-to-t from-black to-black/10 opacity-0 transition-opacity group-hover:opacity-100 duration-200">
+                                    <ul class="flex items-center list-inline pb-5 overlay-items">
+                                        <li class="mr-3 text-white transition-all duration-[600ms] opacity-0 translate-y-4 group-hover:translate-y-0 group-hover:opacity-100">
+                                            <a href="#!" class="block text-xl">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="mr-3 text-white transition-all duration-[600ms] opacity-0 translate-y-4 group-hover:translate-y-0 group-hover:delay-100 group-hover:opacity-100">
+                                            <a href="#!" class="block text-xl">
+                                                <i class="bi bi-twitter-x"></i>
+                                            </a>
+                                        </li>
+                                        <li class="text-white transition-all duration-[600ms] opacity-0 translate-y-4 group-hover:translate-y-0 group-hover:delay-200 group-hover:opacity-100">
+                                            <a href="#!" class="block text-xl">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--/.overlay-->
+                            </div>
+                            <!--/.image and overlay-->
+                            <div class="p-5">
+                                <h5 class="text-xl font-medium mb-2">Emily Howkins</h5>
+                                <p class="mb-0 text-gray-400">Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-3/12 sm:w-6/12 w-full px-3 mt-6">
+                        <div
+                            class="relative shadow-sm group overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-200 rounded-xl">
+                            <div class="block overflow-hidden relative">
+                                <img src="assets/img/team/2.jpg" alt="" class="max-w-full">
+                                <div
+                                    class="absolute left-0 top-0 w-full h-full flex items-end justify-center bg-gradient-to-t from-black to-black/10 opacity-0 transition-opacity group-hover:opacity-100 duration-200">
+                                    <ul class="flex items-center list-inline pb-5 overlay-items">
+                                        <li class="mr-3 text-white transition-all opacity-0 duration-[600ms] translate-y-4 group-hover:translate-y-0 group-hover:opacity-100">
+                                            <a href="#!" class="block text-xl">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="mr-3 text-white transition-all opacity-0 duration-[600ms] translate-y-4 group-hover:translate-y-0 group-hover:delay-100 group-hover:opacity-100">
+                                            <a href="#!" class="block text-xl">
+                                                <i class="bi bi-twitter-x"></i>
+                                            </a>
+                                        </li>
+                                        <li class="text-white transition-all opacity-0 duration-[600ms] translate-y-4 group-hover:translate-y-0 group-hover:delay-200 group-hover:opacity-100">
+                                            <a href="#!" class="block text-xl">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!--card hover-transition-list+items-->
+                                </div>
+                                <!--/.overlay-->
+                            </div>
+                            <!--/.image and overlay-->
+                            <div class="p-5">
+                                <h5 class="text-xl font-medium mb-2">Matt Henary</h5>
+                                <p class="mb-0 text-gray-400">Senior developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-3/12 sm:w-6/12 w-full px-3 mt-6">
+                        <div
+                            class="relative shadow-sm group overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-200 rounded-xl">
+                            <div class="block overflow-hidden relative">
+                                <img src="assets/img/team/3.jpg" alt="" class="max-w-full">
+                                <div
+                                    class="absolute left-0 top-0 w-full h-full flex items-end justify-center bg-gradient-to-t from-black to-black/10 opacity-0 transition-opacity group-hover:opacity-100 duration-200">
+                                    <ul class="flex items-center list-inline pb-5 overlay-items">
+                                        <li class="mr-3 text-white transition-all opacity-0 duration-[600ms] translate-y-4 group-hover:translate-y-0 group-hover:opacity-100">
+                                            <a href="#!" class="block text-xl">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="mr-3 text-white transition-all opacity-0 duration-[600ms] translate-y-4 group-hover:translate-y-0 group-hover:delay-100 group-hover:opacity-100">
+                                            <a href="#!" class="block text-xl">
+                                                <i class="bi bi-twitter-x"></i>
+                                            </a>
+                                        </li>
+                                        <li class="text-white transition-all opacity-0 duration-[600ms] translate-y-4 group-hover:translate-y-0 group-hover:delay-200 group-hover:opacity-100">
+                                            <a href="#!" class="block text-xl">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!--card hover-transition-list+items-->
+                                </div>
+                                <!--/.overlay-->
+                            </div>
+                            <!--/.image and overlay-->
+                            <div class="p-5">
+                                <h5 class="text-xl font-medium mb-2">John Doe</h5>
+                                <p class="mb-0 text-gray-400">Front end developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-3/12 sm:w-6/12 w-full px-3 mt-6">
+                        <div
+                            class="shadow rounded-xl transition-all hover:-translate-y-1 hover:shadow-lg relative h-full">
+                            <div class="relative overflow-hidden">
+                                <img src="assets/img/team/3.jpg" alt="" class="max-w-full opacity-0">
+                                <div
+                                    class="w-20 h-20 bg-indigo-500 flex items-center justify-center text-white rounded-full shadow-lg absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    <i class="text-2xl bi bi-plus"></i>
+                                </div>
+                            </div>
+                            <!--/.image and overlay-->
+                            <div class="p-5">
+                                <h5 class="text-xl font-medium mb-2">Join the Team?</h5>
+                                  <a href="#!" class="link-underline">Upload CV</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="bg-gray-50 dark:bg-gray-900 relative">
+            <!--Divider-->
+
+            <svg class="absolute bottom-0 left-0 text-black" width="100%" height="32"
+                preserveAspectRatio="none" viewBox="0 0 1200 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1200 96H0L1200 0V96Z" fill="currentColor" />
+            </svg>
+            <div class="container py-16 lg:py-24 relative z-[1]">
+                <div class="flex flex-wrap -mx-3 pb-5 items-center">
+                    <div class="lg:w-5/12 xl:w-6/12 w-full px-3 mb-7 mb-lg-0" data-animation="fadeInDown" data-delay=".1">
+                        <h6 class="mb-4 text-gray-400">Careers</h6>
+                        <h2 class="text-4xl lg:text-5xl font-medium">Want to create a lasting impact in people's lives?</h2>
+                    </div>
+                    <div class="lg:w-7/12 xl:w-6/12 w-full px-3 xl:ml-auto"  data-animation="fadeInUp" data-delay=".2">
+                        <p class="mb-5 text-gray-600 dark:text-gray-300">
+                            We're always looking for new and amazing features to add the Assan, quis nostrud ullamco
+                            laboris nisi ut aliquip ex ea commodo. Duis aute irure dolor in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <a href="#" class="link-hover-underline inline-block relative">View Open Positions
+                            <i class="bi bi-arrow-right text-xl align-middle leading-[1]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+   
+
+    @@include('./partials/footers/footer-1.html')
+
+   <!-- begin:Back to Top button -->
+   <a href="#" class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+    <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="0, 251.2">
+      </circle>
+    </svg>
+    <i class="bi bi-chevron-up"></i>
+  </a>
+  <!-- begin:Back to Top button -->
+    
+    <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+
+    <!--Swiper slider-->
+    <script src="assets/vendor/node_modules/js/swiper-bundle.min.js"></script>
+    <script>
+        // init Swiper:
+        const swiper = new Swiper('.swiper-history', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            autoHeight: true,
+            breakpoints: {
+                // when window width is >= 480px
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 0
+                },
+                // when window width is >= 640px
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+
+    </script>
+  </body>
+
+</html>

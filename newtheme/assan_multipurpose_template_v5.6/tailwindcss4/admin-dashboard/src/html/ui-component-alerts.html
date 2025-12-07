@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+
+    @@include('./partials/head-includes.html')
+</head>
+
+<body
+    class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+    @@include('./partials/app-preloader.html')
+
+
+    @@include('./partials/sidebar.html',{"page": "ui-components","components_collapse":
+    "show","component_alerts_active": "active"})
+
+    <main class="relative flex flex-col lg:ms-64">
+        @@include('./partials/header-default.html')
+        <!--:Page Header:-->
+        <div class="px-4 lg:px-6 xl:px-12 py-4">
+            <div class="flex flex-wrap items-center">
+                <div class="flex-grow">
+                    <h4 class="text-2xl font-semibold">Alerts</h4>
+                </div>
+                <div class="shrink-0">
+                    <!--:Breadcrumb:-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="flex items-center">
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                            </li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active"><a
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                    href="ui-component-alerts.html">Components</a></li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Alerts</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content relative pt-4 px-4 lg:px-6 xl:px-12">
+            <div class="grid grid-cols-1 gap-4 mb-4">
+                <div>
+                    <!--:card:-->
+                    <div
+                        class="bg-white space-y-2 dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900 p-4">
+                        <h5 class="text-lg font-semibold mb-4">Default Alerts</h5>
+                        <!--:Alert:-->
+                        <div
+                            class="px-4 py-3 rounded-lg bg-gray-500/20 border border-gray-500/25 text-gray-900 dark:text-gray-300">
+                            A simple default alert
+                        </div>
+                        <!--:Alert:-->
+                        <div
+                            class="px-4 py-3 rounded-lg bg-primary-500/20 border border-primary-500/25 text-primary-900 dark:text-primary-300">
+                            A simple primary alert
+                        </div>
+                        <!--:Alert:-->
+                        <div
+                            class="px-4 py-3 rounded-lg bg-warning-500/20 border border-warning-500/25 text-warning-900 dark:text-warning-300">
+                            A simple warning alert
+                        </div>
+                        <!--:Alert:-->
+                        <div
+                            class="px-4 py-3 rounded-lg bg-info-500/20 border border-info-500/25 text-info-900 dark:text-info-300">
+                            A simple warning alert
+                        </div>
+                        <!--:Alert:-->
+                        <div
+                            class="px-4 py-3 rounded-lg bg-success-500/20 border border-success-500/25 text-success-900 dark:text-success-300">
+                            A simple success alert
+                        </div>
+                        <!--:Alert:-->
+                        <div
+                            class="px-4 py-3 rounded-lg bg-danger-500/20 border border-danger-500/25 text-danger-900 dark:text-danger-300">
+                            A simple danger alert
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--card-->
+                    <div
+                        class="bg-white space-y-2 dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900 p-4">
+                        <h5 class="text-lg font-semibold mb-4">Fill Alerts</h5>
+                        <!--:Alert:-->
+                        <div class="px-4 py-3 rounded-lg bg-gray-500 text-white">
+                            A simple default alert
+                        </div>
+                        <!--:Alert:-->
+                        <div class="px-4 py-3 rounded-lg bg-primary-500 text-white">
+                            A simple primary alert
+                        </div>
+                        <!--:Alert:-->
+                        <div class="px-4 py-3 rounded-lg bg-warning-500 text-white">
+                            A simple warning alert
+                        </div>
+                        <!--:Alert:-->
+                        <div class="px-4 py-3 rounded-lg bg-info-500 text-white">
+                            A simple warning alert
+                        </div>
+                        <!--:Alert:-->
+                        <div class="px-4 py-3 rounded-lg bg-success-500 text-white">
+                            A simple success alert
+                        </div>
+                        <!--:Alert:-->
+                        <div class="px-4 py-3 rounded-lg bg-danger-500 text-white">
+                            A simple danger alert
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--card-->
+                    <div
+                        class="bg-white space-y-2 dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900 p-4">
+                        <h5 class="text-lg font-semibold mb-4">Custom styled Alerts</h5>
+                        <!--:Alert:-->
+                        <div
+                            class="px-4 py-3 rounded-lg bg-gray-500/20 border-l-4 border-gray-500/25 text-gray-900 dark:text-gray-300">
+                            A simple default alert
+                        </div>
+                        <!--:Alert:-->
+                        <div
+                            class="px-4 py-3 rounded-lg bg-primary-500/20 border-l-4 border-primary-500/25 text-primary-900 dark:text-primary-300">
+                            A simple primary alert
+                        </div>
+                        <!--:Alert:-->
+                        <div
+                            class="px-4 py-3 rounded-lg bg-warning-500/20 border-l-4 border-warning-500/25 text-warning-900 dark:text-warning-300">
+                            A simple warning alert
+                        </div>
+                        <!--:Alert:-->
+                        <div
+                            class="px-4 py-3 rounded-lg bg-info-500/20 border-l-4 border-info-500/25 text-info-900 dark:text-info-300">
+                            A simple warning alert
+                        </div>
+                        <!--:Alert:-->
+                        <div
+                            class="px-4 py-3 rounded-lg bg-success-500/20 border-l-4 border-success-500/25 text-success-900 dark:text-success-300">
+                            A simple success alert
+                        </div>
+                        <!--:Alert:-->
+                        <div
+                            class="px-4 py-3 rounded-lg bg-danger-500/20 border-l-4 border-danger-500/25 text-danger-900 dark:text-danger-300">
+                            A simple danger alert
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--card-->
+                    <div
+                        class="bg-white space-y-2 dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900 p-4">
+                        <h5 class="text-lg font-semibold mb-4">Icon Alert example</h5>
+                        <!--:Alert:-->
+                        <div
+                            class="px-4 py-3 flex items-center rounded-lg bg-gray-500/20 border border-gray-500/25 text-gray-900 dark:text-gray-300">
+                            <span class="icon-[tabler--alert-square-rounded] text-2xl shrink-0"></span>
+                            <div class="flex-grow ps-3">
+                                A simple icon alert
+                            </div>
+                        </div>
+                        <!--:Alert:-->
+                        <div
+                            class="px-4 py-3 flex items-center rounded-lg bg-primary-500/20 border-l-4 border-primary-500/25 text-primary-900 dark:text-primary-300">
+                            <span class="icon-[tabler--alert-square-rounded] text-2xl shrink-0"></span>
+                            <div class="flex-grow ps-3">
+                                A simple icon alert
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <!--:card:-->
+                    <div
+                        class="bg-white space-y-2 dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900 p-4">
+                        <h5 class="text-lg font-semibold mb-4">Additional content alert example</h5>
+
+                        <!--:Alert:-->
+                        <div
+                            class="px-4 py-3 flex items-start rounded-lg bg-primary-500/20 border border-primary-500/25 text-primary-900 dark:text-primary-300">
+                            <span class="flex items-center rounded-full bg-black/10 shrink-0 justify-center w-8 h-8">
+                               <span class="icon-[tabler--alert-square-rounded] text-2xl shrink-0"></span>
+                            </span>
+                            <div class="flex-grow pl-3">
+                                <h5 class="text-lg mb-1 !text-inherit font-semibold">Atention needed!</h5>
+                                <p>Aww yeah, you successfully read this important alert message. This example text is
+                                    going to run a bit longer so that you can see how spacing within an alert works with
+                                    this kind of content.</p>
+                                <hr class="dark:border-white/20 border-black/10 my-2">
+                                <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things
+                                    nice and tidy.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <!--card-->
+                    <div class="bg-white space-y-2 dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900 p-4">
+                        <div>
+                            <h5 class="text-lg font-semibold">Dismissing Alert example</h5>
+                            <p class="text-sm opacity-60 mb-4">Bootstrap Js required</p>
+                            <!--:Alert:-->
+                            <div role="alert"
+                                class="px-4 alert fade show py-3 pr-9 relative flex items-center rounded-lg bg-gray-500/20 border border-gray-500/25 text-gray-900 dark:text-gray-300">
+                                <button data-bs-dismiss="alert" aria-label="Close"
+                                    class="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full">
+                                    <span class="icon-[tabler--x] text-lg"></span>
+                                </button>
+                                  <span class="icon-[tabler--alert-square-rounded] text-xl shrink-0"></span>
+                                <div class="flex-grow pl-3">
+                                    A simple icon alert
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--:Alert fixed on right:-->
+    <!--:Alert:-->
+    <div role="alert"
+        class="px-4 fixed right-0 top-0 mr-3 mt-3 z-[999] w-72 alert fade show py-3 pr-9 flex items-center rounded-md bg-success-500 shadow-xl text-white">
+        <!--:Alert close button:-->
+        <button data-bs-dismiss="alert" aria-label="Close"
+            class="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full">
+             <span class="icon-[tabler--x] text-lg"></span>
+        </button>
+
+        <!--:Alert icon:-->
+        <span class="icon-[tabler--user-circle] text-xl"></span>
+        <div class="flex-grow pl-3">
+            Welcome back! <strong>John Doe</strong>
+        </div>
+    </div>
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+
+</body>
+
+</html>

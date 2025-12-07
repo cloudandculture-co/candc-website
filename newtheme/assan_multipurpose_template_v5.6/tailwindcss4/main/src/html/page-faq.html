@@ -1,0 +1,266 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+     <!--Swiper slider-->
+     <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+     
+     
+     @@include('./partials/head-includes.html')
+     <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+    <!--begin:Header-->
+ <header class="header-transparent sticky-fixed">
+
+   <!--begin:navbar-->
+   <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+     <!--Navbar-fixed-background-->
+     <div class="navbar-fixed-bg absolute"></div>
+     <div class="container relative flex flex-wrap items-center justify-center relative">
+       <!--begin:logo-->
+       <a class="navbar-brand relative w-24 block" href="index.html">
+         <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+         <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+       </a>
+       <!--end:logo-->
+
+       <!--begin:navbar-no-collapse-items-->
+       <div class="flex items-center shrink-0 ml-auto lg:order-last">
+         <!--Navbar toggler button-->
+         <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+           data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+           aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon">
+             <i></i>
+           </span>
+         </button>
+         <!--Button-->
+         <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+           <a href="#"
+             class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+         </div>
+       </div>
+       <!--end:navbar-no-collapse-items-->
+
+       <!--begin:navbar-collapse-->
+       <div
+         class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+         id="mainNavbarTheme">
+         @@include('./partials/headers/default-navbar-items.html',{"page": "pages"})
+       </div>
+       <!--end:navbar-collapse-->
+     </div>
+
+   </nav>
+   <!--end:navbar-->
+ </header>
+ <!--end:header-->
+
+ 
+<main class="main-content" id="main-content">
+    <section class="relative bg-gradient-to-tr from-indigo-500 to-gray-900 text-white">
+        <div class="container relative pb-12 lg:pb-24 pt-32 lg:pt-48">
+            <div class="flex flex-wrap -mx-3 items-center">
+                <div class="lg:order-last w-full mx-auto px-3 lg:w-6/12 me-auto relative z-[1]">
+                   <h1 class="text-3xl lg:text-6xl text-center font-medium" data-text-split>Frequently asked questions</h1>
+                    </div>
+                </div>
+            </div>
+            <!--/.row-->
+
+    </section>
+    <section class="relative">
+        <div class="container py-16 lg:py-24">
+            <div class="flex flex-wrap -mx-3 mb-9 mb-lg-11">
+                <div class="w-full px-3 lg:w-8/12 mx-auto">
+
+                    <h2 data-animation="fadeInLeft" class="text-2xl lg:text-3xl font-medium mb-4">General Questions</h2>
+                    <div class="w-16 h-1 bg-indigo-500 mb-9"></div>
+                    <!--Faq box-->
+                    <div class="py-6 px-4 lg:px-6 rounded-xl border border-gray-200 dark:border-gray-800 mb-7" data-animation="fadeInUp" data-delay=".1">
+                        <h5 class="mb-4 text-xl font-medium">Which license should i buy for multi projects?</h5>
+                        <p class="mb-0 text-gray-600 dark:text-gray-300">
+                            Eiusmod tempor dolore magna aliqua amet consectetur adipiscing elit ut. Facilisi
+                            etiam
+                            dignissim diam quis.
+                        </p>
+                    </div>
+
+                     <!--Faq box-->
+                     <div class="py-6 px-4 lg:px-6 rounded-xl border border-gray-200 dark:border-gray-800 mb-7" data-animation="fadeInUp" data-delay=".2">
+                        <h5 class="mb-4 text-xl font-medium">How do i use sass and browserify?</h5>
+                        <p class="mb-0 text-gray-600 dark:text-gray-300">
+                            Eiusmod tempor dolore magna aliqua amet consectetur adipiscing elit ut. Facilisi
+                            etiam
+                            dignissim diam quis. Urna molestie at elementum eu facilisis sed odio morbi. Vivamus
+                            at
+                            augue eget arcu dictum varius duis at. Condimentum mattis pellentesque id nibh
+                            tortor id
+                            aliquet lectus proin. Morbi tincidunt ornare massa eget egestas.
+                        </p>
+                    </div>
+
+                    <!--Faq box-->
+                    <div class="py-6 px-4 lg:px-6 rounded-xl border border-gray-200 dark:border-gray-800 mb-7" data-animation="fadeInUp" data-delay=".1">
+                        <h5 class="mb-4 text-xl font-medium">Can i change the footer copyright text?</h5>
+                        <p class="mb-4 text-gray-600 dark:text-gray-300">
+                            Eiusmod tempor dolore magna aliqua <mark class="highlight">amet consectetur</mark> adipiscing elit ut. Facilisi
+                            etiam
+                            dignissim diam quis.
+                        </p>
+                        <ul class="list-disc pl-4 text-gray-600 dark:text-gray-300">
+                            <li class="mb-2">
+                                Magna aliqua amet adipiscing elit ut.
+                            </li>
+                            <li class="mb-2">
+                                Tempor dolore magna aliqua amet adipiscing elit ut.
+                            </li>
+                            <li class="mb-2">
+                                Dolore magna aliqua amet consectetur.
+                            </li>
+                        </ul>
+                    </div>
+                     <!--Faq box-->
+                     <div class="py-6 px-4 lg:px-6 rounded-xl border border-gray-200 dark:border-gray-800 mb-7" data-animation="fadeInUp" data-delay=".2">
+                        <h5 class="mb-4 text-xl font-medium">Which license should i buy for multi projects?</h5>
+                        <p class="mb-0 text-gray-600 dark:text-gray-300">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                    </div>
+
+                     <!--Faq box-->
+                     <div class="py-6 px-4 lg:px-6 rounded-xl border border-gray-200 dark:border-gray-800 mb-7" data-animation="fadeInUp" data-delay=".1">
+                        <h5 class="mb-4 text-xl font-medium">How do i use sass and browserify?</h5>
+                        <p class="mb-0 text-gray-600 dark:text-gray-300">
+                            Eiusmod tempor dolore magna aliqua amet consectetur adipiscing elit ut. Facilisi
+                            etiam
+                            dignissim diam quis. Urna molestie at elementum eu facilisis sed odio morbi. Vivamus
+                            at
+                            augue eget arcu <a href="#" class="link-decoration">dictum</a> varius duis at. Condimentum mattis pellentesque id nibh
+                            tortor id
+                            aliquet lectus proin. Morbi tincidunt ornare massa eget egestas.
+                        </p>
+                    </div>
+
+                    <!--Faq box-->
+                    <div class="py-6 px-4 lg:px-6 rounded-xl border border-gray-200 dark:border-gray-800 mb-7" data-animation="fadeInUp" data-delay=".2">
+                        <h5 class="mb-4 text-xl font-medium">Can i change the footer copyright text?</h5>
+                        
+                        <p class="mb-4 text-gray-600 dark:text-gray-300">
+                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De <mark class="highlight">Finibus</mark> Bonorum et Malorum for use in a type specimen book.   
+                        </p>
+                        <p class="mb-0 text-gray-600 dark:text-gray-300">
+                            Eiusmod tempor dolore magna aliqua <mark class="highlight">amet consectetur</mark> adipiscing elit ut. Facilisi
+                            etiam
+                            dignissim diam quis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-7 mb-lg-9">
+                <div class="w-full px-3 lg:w-8/12 mx-auto">
+
+                    <h2  data-animation="fadeInLeft" data-delay=".1" class="text-2xl lg:text-3xl font-medium mb-4">Other Questions</h2>
+                    <div class="w-16 h-1 bg-indigo-500 mb-9"></div>
+                    <!--Faq box-->
+                    <div class="py-6 px-4 lg:px-6 rounded-xl border border-gray-200 dark:border-gray-800 mb-7" data-animation="fadeInUp" data-delay=".1">
+                        <h5 class="mb-4 text-xl font-medium">Eiusmod tempor dolore magna aliqua?</h5>
+                        <p class="mb-0 text-gray-600 dark:text-gray-300">
+                            Eiusmod tempor dolore magna aliqua amet consectetur adipiscing elit ut. Facilisi
+                            etiam
+                            dignissim diam quis.
+                        </p>
+                    </div>
+
+                     <!--Faq box-->
+                     <div class="py-6 px-4 lg:px-6 rounded-xl border border-gray-200 dark:border-gray-800 mb-7" data-animation="fadeInUp" data-delay=".2">
+                        <h5 class="mb-4 text-xl font-medium">Eiusmod tempor dolore magna?</h5>
+                        <p class="mb-0 text-gray-600 dark:text-gray-300">
+                            Eiusmod tempor dolore magna aliqua amet consectetur adipiscing elit ut. Facilisi
+                            etiam
+                            dignissim diam quis. Urna molestie at elementum eu facilisis sed odio morbi. Vivamus
+                            at
+                            augue eget arcu dictum varius duis at. Condimentum mattis pellentesque id nibh
+                            tortor id
+                            aliquet lectus proin. Morbi tincidunt ornare massa eget egestas.
+                        </p>
+                    </div>
+
+                    <!--Faq box-->
+                    <div class="py-6 px-4 lg:px-6 rounded-xl border border-gray-200 dark:border-gray-800 mb-7" data-animation="fadeInUp" data-delay=".1">
+                        <h5 class="mb-4 text-xl font-medium">Eiusmod tempor dolore magna aliqua?</h5>
+                        <p class="mb-4 text-gray-600 dark:text-gray-300">
+                            Eiusmod tempor dolore magna aliqua <mark class="highlight">amet consectetur</mark> adipiscing elit ut. Facilisi
+                            etiam
+                            dignissim diam quis.
+                        </p>
+                        <ul class="list-disc pl-4 text-gray-600 dark:text-gray-300">
+                            <li class="mb-2">
+                                Magna aliqua amet adipiscing elit ut.
+                            </li>
+                            <li class="mb-2">
+                                Tempor dolore magna aliqua amet adipiscing elit ut.
+                            </li>
+                            <li class="mb-2">
+                                Dolore magna aliqua amet consectetur.
+                            </li>
+                        </ul>
+                    </div>
+                     <!--Faq box-->
+                     <div class="py-6 px-4 lg:px-6 rounded-xl border border-gray-200 dark:border-gray-800 mb-7" data-animation="fadeInUp" data-delay=".2">
+                        <h5 class="mb-4 text-xl font-medium">Dolore magna aliqua amet consectetur?</h5>
+                        <p class="mb-0 text-gray-600 dark:text-gray-300">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-wrap -mx-3">
+                <div class="lg:w-8/12 w-full px-3 mx-auto">
+                    <div class="border-t border-gray-200 dark:border-gray-800 pt-9"  data-animation="fadeInUp" data-delay=".1">
+                        <h5 class="text-2xl lg:text-3xl font-medium mb-4">Still no Luck? </h5>
+                        <p class="mb-0 flex flex-wrap items-center">We’re here to help! Please email <a href="mailto:mymail@domain.com" class="link-underline ml-2">mymail@domain.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+   
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-1.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+    
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

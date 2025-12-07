@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    @@include('./partials/head-includes.html')
+
+    <!--Swiper slider-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+    <!--G-lightbox-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/glightbox.min.css" />
+    <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+    <!--Header Start-->
+    <header class="z-fixed top-0 left-0 absolute header-sticky z-[999] w-full">
+        <nav class="navbar py-4 lg:py-0 shadow-none navbar-expand-lg navbar-light">
+            <div class="container relative flex flex-wrap items-center justify-center">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo/logo.svg" alt="" class="w-24 dark:hidden">
+                    <img src="assets/img/logo/logo-white.svg" alt="" class="w-24 hidden dark:block">
+                </a>
+                <div class="flex items-center shrink-0 ml-auto lg:order-last">
+                    <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i></i>
+                        </span>
+                    </button>
+                    <div class="nav-item me-3 me-lg-0 ms-lg-3">
+                        <a href="#" class="btn bg-orange-500 text-white hover:bg-orange-600">
+                            Get started</a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+                    id="mainNavbarTheme">
+                    @@include('./partials/headers/default-navbar-items.html',{"page":
+                    "pages"})
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Main content-->
+    <!--Main content-->
+    <main>
+        <section class="relative overflow-hidden">
+            <!--:shape bg:-->
+            <div class="absolute left-10 top-1/2 -translate-y-1/2">
+                <img src="assets/img/graphics/illustration/shape1.png" class="w-20 h-auto" alt="" data-animation-y-2>
+            </div>
+            <!--:shape bg:-->
+            <div class="absolute right-10 top-1/2">
+                <img src="assets/img/graphics/illustration/shape5.png" class="w-24 h-auto" alt="" data-animation-y>
+            </div>
+            <div class="container pt-24 lg:pt-32 pb-16 lg:pb-20 relative z-[1]">
+                <div class="flex flex-wrap -mx-3 items-center">
+                    <div class="lg:w-8/12 mx-auto text-center">
+                        <h1 class="text-5xl lg:text-6xl font-medium mb-4">
+                            We make good designs for Web and Mobile
+                        </h1>
+                        <p class="text-lg lg:w-9/12 mx-auto text-gray-600 dark:text-gray-300 mx-auto mb-9 lg:mb-12">
+                            Creative designs and user-friendly interfaces can contribute to
+                            your business success in web and mobile</p>
+                        <a href="#next" class="inline-block">
+                            <div
+                                class="animate-bounce w-16 h-16 rounded-full border shadow-lg flex items-center justify-center bg-white dark:bg-gray-700 dark:border-gray-800 mx-auto">
+                                <i class="bi bi-arrow-down fs-4"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--/.end-row--->
+            </div>
+            <!--/.End-content-->
+        </section>
+        <section class="relative overflow-hidden" id="next">
+            <div class="container py-16 lg:py-24">
+                <div class="flex flex-wrap justify-around -mx-3 mb-12 items-center">
+                    <div class="md:w-6/12 xl:w-5/12 w-full px-3 mb-7 md:mb-0" data-animation="fadeInLeft" data-delay=".1">
+                        <!--imask image-->
+                        <div class="bg-mask">
+                            <img src="assets/img/960x1140/1.jpg" class="mask-blob mask-image" alt="">
+                        </div>
+                    </div>
+                    <div class="md:w-5/12 w-full px-3" data-animation="fadeInRight" data-delay=".2">
+                        <div class="flex items-center mb-4">
+                            <h2 class="mb-0 text-3xl font-medium">
+                                Design
+                            </h2>
+                        </div>
+                        <p class="mb-7 lg:text-lg text-gray-600 dark:text-gray-300">
+                            Quis nostrud ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="flex items-center mb-3">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Brand identity</span>
+                            </li>
+                            <li class="flex items-center mb-3">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Illustration</span>
+                            </li>
+                            <li class="flex items-center mb-3">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Packaging and labelling</span>
+                            </li>
+                            <li class="flex items-center mb-3">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Editorial design</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Promotional marketing</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/.End Col-->
+                </div>
+                <div class="flex flex-wrap justify-around -mx-3 mb-12 items-center">
+
+                    <div class="md:w-6/12 xl:w-5/12 w-full px-3 mb-7 md:mb-0 md:order-last" data-animation="fadeInLeft" data-delay=".1">
+                        <!--imask image-->
+                        <div class="bg-mask">
+                            <img src="assets/img/960x1140/2.jpg" class="mask-blob mask-image" alt="">
+                        </div>
+                    </div>
+                    <div class="md:w-5/12 w-full px-3" data-animation="fadeInLeft" data-delay=".2">
+                        <div class="flex items-center mb-4">
+                            <h2 class="mb-0 text-3xl font-medium">
+                                Digital
+                            </h2>
+                        </div>
+                        <p class="mb-7 lg:text-lg text-gray-600 dark:text-gray-300">
+                            Quis nostrud ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="flex items-center mb-3">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Web design</span>
+                            </li>
+                            <li class="flex items-center mb-3">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>UI/UX design &amp; prototyping</span>
+                            </li>
+                            <li class="flex items-center mb-3">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>App design</span>
+                            </li>
+                            <li class="flex items-center mb-3">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Front- and backend coding</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Seo and marketing</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/.End Col-->
+                </div>
+                <div class="flex flex-wrap justify-around -mx-3 mb-12 items-center">
+                    <div class="md:w-6/12 p-3 xl:w-5/12 mb-7 lg:mb-0" data-animation="fadeInLeft" data-delay=".1">
+                        <!--imask image-->
+                        <div class="bg-mask">
+                            <img src="assets/img/960x1140/3.jpg" class="mask-blob mask-image" alt="">
+                        </div>
+                    </div>
+                    <div class="md:w-5/12 w-full px-3" data-animation="fadeInRight" data-delay=".2">
+                        <div class="flex items-center mb-4">
+                            <h2 class="mb-0 text-3xl font-medium">
+                                Content
+                            </h2>
+                        </div>
+
+                        <p class="mb-7 lg:text-lg text-gray-600 dark:text-gray-300">
+                            Quis nostrud ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                        <ul class="list-unstyled mb-0">
+                            <li class="flex items-center mb-3">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Content creation</span>
+                            </li>
+                            <li class="flex items-center mb-3">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Copywriting</span>
+                            </li>
+                            <li class="flex items-center mb-3">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Content analysis</span>
+                            </li>
+                            <li class="flex items-center mb-3">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Content strategy</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Content management systems (CMS)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/.End Col-->
+                </div>
+                <!--/.End service Row-->
+                <div class="flex flex-wrap justify-around -mx-3 items-center">
+
+                    <div class="md:w-6/12 xl:w-5/12 px-3 mb-7 lg:md-0 md:order-last"  data-animation="fadeInLeft" data-delay=".1">
+                        <!--imask image-->
+                        <div class="bg-mask">
+                            <img src="assets/img/960x1140/4.jpg" class="mask-blob mask-image" alt="">
+                        </div>
+                    </div>
+                    <div class="md:w-5/12 w-full px-3 lg:order-1"  data-animation="fadeInRight" data-delay=".2">
+                        <div class="flex items-center mb-4">
+                            <h2 class="mb-0 text-3xl font-medium">
+                                Campaign
+                            </h2>
+                        </div>
+                        <p class="mb-7 lg:text-lg text-gray-600 dark:text-gray-300">
+                            Quis nostrud ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                        <ul class="list-unstyled mb-0">
+                            <li class="flex items-center mb-3">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Digital marketing</span>
+                            </li>
+                            <li class="flex items-center mb-3">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Print advertising</span>
+                            </li>
+                            <li class="flex items-center mb-3">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Campaign visuals</span>
+                            </li>
+                            <li class="flex items-center mb-3">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Editorial design</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle text-2xl opacity-50 me-4"></i>
+                                <span>Label and package design</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/.End Col-->
+                </div>
+                <!--/.End service Row-->
+            </div>
+
+        </section>
+
+        <section class="relative bg-gray-900 text-white overflow-hidden">
+
+            <!--Divider shape top-->
+            <svg class="absolute left-0 top-0 text-white dark:text-black rotate-180" width="100%" height="48"
+                preserveAspectRatio="none" viewBox="0 0 1870 210" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor"
+                    d="M977.9,76.2 C475.2,-17.4 0.2,132.5 0.2,132.5 L0.2,275.5 L1891.3,275.5 L1891.3,0.7 C1891.3,0.7 1480.6,169.8 977.9,76.2 Z">
+                </path>
+            </svg>
+            <!--Divider shape bottom-->
+            <svg class="absolute start-0 bottom-0 text-white dark:text-black" width="100%" height="48"
+                preserveAspectRatio="none" viewBox="0 0 1870 210" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor"
+                    d="M977.9,76.2 C475.2,-17.4 0.2,132.5 0.2,132.5 L0.2,275.5 L1891.3,275.5 L1891.3,0.7 C1891.3,0.7 1480.6,169.8 977.9,76.2 Z">
+                </path>
+            </svg>
+            <div class="container relative z-[1] py-24 lg:py-32">
+                <h2 class="text-4xl lg:text-5xl font-medium mb-9 lg:mb-14" data-text-split>We also assist you with</h2>
+                <div class="flex flex-wrap -mx-3 pb-9 justify-center">
+                    <div class="lg:w-4/12 px-3 w-full mb-9 lg:mb-0" data-animation="fadeInUp" data-delay=".1">
+                        <div class="h-full">
+                            <h5 class="mb-4 text-xl font-medium">API Development</h5>
+                            <p class="mb-5 flex-grow text-white/75 lg:w-10/12">
+                                Condimentum blandit nunc risus nulla ante maecenas in penatibus
+                                rutrum
+                                ultrices varius eget turpis urna.
+                            </p>
+                            <div class="inline-flex items-center">
+                                <a href="#!" class="link-underline">Learn More
+                                    <i class="bi bi-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-4/12 px-3 w-full mb-9 lg:mb-0" data-animation="fadeInUp" data-delay=".2">
+                        <div class="h-full">
+                            <h5 class="mb-4 text-xl font-medium">QA & Testing</h5>
+                            <p class="mb-5 flex-grow text-white/75 lg:w-10/12">
+                                Blandit nunc risus nulla ante maecenas suspendisse in penatibus
+                                rutrum
+                                ultrices varius eget turpis urna.
+                            </p>
+                            <div class="inline-flex items-center">
+                                <a href="#!" class="link-underline">Learn More
+                                    <i class="bi bi-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-4/12 px-3 w-full" data-animation="fadeInUp" data-delay=".3">
+                        <div class="h-full">
+                            <h5 class="mb-4 text-xl font-medium">Support & Maintenance</h5>
+                            <p class="mb-5 flex-grow text-white/75 lg:w-10/12">
+                                Condimentum blandit nunc risus nulla ante suspendisse in penatibus
+                                rutrum
+                                ultrices varius eget turpis urna.
+                            </p>
+                            <div class="inline-flex items-center">
+                                <a href="#!" class="link-underline">Learn More
+                                    <i class="bi bi-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End container-->
+        </section>
+        <section class="relative">
+
+            <div class="container relative py-12 py-lg-11">
+                <div class="flex flex-wrap -mx-3 justify-around">
+                    <div class="md:w-6/12 xl:w-5/12 w-full px-3 mb-12 md:mb-0">
+                        <div class="relative" data-animation="fadeInUp" data-delay=".1">
+                            <div class="mb-5">
+                                <div class="mb-3 text-orange-500">
+                                    <i class="bi bi-star-fill small"></i>
+                                    <i class="bi bi-star-fill small"></i>
+                                    <i class="bi bi-star-fill small"></i>
+                                    <i class="bi bi-star-fill small"></i>
+                                    <i class="bi bi-star-fill small"></i>
+                                </div>
+                                <p class="text-2xl font-serif text-gray-600 dark:text-gray-300">
+                                    “ Loved working with the beautiful theme. Everything clean and professional,
+                                    also very helpful throughout the customisation. Looking forward to buy more
+                                    license of Assan again in the future.”
+                                </p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="relative mr-4">
+                                    <!--Avatar Image-->
+                                    <img class="relative w-16 rounded-2xl shadow" src="assets/img/avatar/6.jpg" alt="">
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Jacob Ginnish</h5>
+                                    <small class="text-gray-400">Founder of YOYO</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-6/12 xl:w-5/12 w-full px-3">
+                        <div class="relative" data-animation="fadeInUp" data-delay=".2">
+                            <div class="mb-5">
+                                <div class="mb-3 text-orange-500">
+                                    <i class="bi bi-star-fill small"></i>
+                                    <i class="bi bi-star-fill small"></i>
+                                    <i class="bi bi-star-fill small"></i>
+                                    <i class="bi bi-star-fill small"></i>
+                                    <i class="bi bi-star-fill small"></i>
+                                </div>
+                                <p class="text-2xl font-serif text-gray-600 dark:text-gray-300">
+                                    “ Their design delivery framework is fantastic and it really helped us all get
+                                    on the same page from day one. Designer’s technical and commercial knowledge and his
+                                    obvious design talent has delivered a strong brand identity and a seamless UI
+                                    which we can’t wait to put live and begin testing. ”
+                                </p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="relative mr-4">
+                                    <!--Avatar Image-->
+                                    <img class="relative w-16 rounded-2xl shadow" src="assets/img/avatar/4.jpg" alt="">
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Samayra Sharma</h5>
+                                    <small class="text-gray-400">Founder of Zolo</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="relative bg-black text-white overflow-hidden jarallax" data-speed=".2">
+            <img src="assets/img/backgrounds/bg8.jpg" alt="" class="jarallax-img opacity-20">
+            <!--Divider shape top-->
+            <svg class="absolute left-0 top-0 text-white dark:text-black rotate-180" width="100%" height="64"
+                preserveAspectRatio="none" viewBox="0 0 1870 210" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor"
+                    d="M977.9,76.2 C475.2,-17.4 0.2,132.5 0.2,132.5 L0.2,275.5 L1891.3,275.5 L1891.3,0.7 C1891.3,0.7 1480.6,169.8 977.9,76.2 Z">
+                </path>
+            </svg>
+            <div class="container relative py-24 lg:py-32">
+                <div class="flex flex-wrap -mx-3 pt-9">
+                    <div class="w-full px-3 lg:w-10/12 mx-auto text-center">
+                        <div class="relative">
+                            <h2 class="text-4xl lg:text-6xl font-medium mb-6">
+                                <span class="font-light">Here to </span> help you move faster
+                            </h2>
+                            <p class="mb-9 text-lg">
+                                Get in touch with us for a quick quote
+                            </p>
+                            <div>
+                                <a href="#!" class="btn btn-lg bg-white hover:bg-gray-200 text-gray-700">
+                                    <span>Contact us</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    @@include('./partials/footers/footer-1.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+    
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

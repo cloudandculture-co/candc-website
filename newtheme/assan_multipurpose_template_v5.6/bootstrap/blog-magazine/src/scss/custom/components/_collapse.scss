@@ -1,0 +1,13 @@
+//Replies show hide text update
+.replies-collapse{
+    position: relative;
+   .bi{
+    display: inline-block;
+    transition: all .2s;
+   }
+   &[aria-expanded=true]{
+    .bi{
+        transform: rotate(180deg);
+    }
+   }
+}

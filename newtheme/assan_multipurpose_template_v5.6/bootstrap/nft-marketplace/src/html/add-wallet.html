@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>NFT</title>
+        @@include('./partials/head.html')
+    </head>
+
+    <body>
+        @@include('./partials/navbar-default.html',{"page": "add-wallet", "pagesitckyClass" : "navbar-sticky"})
+       <section class="position-relative bg-style-1 overflow-hidden">
+
+        <div class="container position-relative pt-10 pt-lg-12 pb-8 pb-lg-11">
+            <div class="row pt-lg-5 pb-4 align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="mb-4 display-4">Connect your wallet.</h1>
+                    <p class="mb-0 px-lg-12 lead">Connect with one of our available wallet providers or create a new wallet account.</p>
+                </div>
+            </div>
+
+        </div>
+       </section>
+
+       <section class="position-relative">
+        <div class="container pb-5 pb-lg-7 mt-n8 position-relative">
+            <div class="row justify-content-center">
+                <!--column-->
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <!--card-->
+                    <a href="#!" class="card hover-lift text-body card-hover">
+                        <div class="card-body p-4">
+                            <div class="size-5x bg-warning-subtle rounded-4 mb-4 d-flex align-items-center justify-content-center">
+                                <img src="assets/img/wallet/metamask.svg" class="img-fluid p-2" alt="metamask">
+                            </div>
+                            <!--title-->
+                            <h5 class="mb-3">MetaMask</h5>
+                            <span>Connect with MetaMask
+                                <span class="material-icons hover-arrow align-middle ms-2">arrow_forward</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                 <!--column-->
+                 <div class="col-lg-4 col-sm-6 mb-5">
+                    <!--card-->
+                    <a href="#!" class="card hover-lift text-body card-hover">
+                        <div class="card-body p-4">
+                            <div class="size-5x bg-primary-subtle rounded-4 mb-4 d-flex align-items-center justify-content-center">
+                                <img src="assets/img/wallet/trustwallet.svg" class="img-fluid" alt="metamask">
+                            </div>
+                            <!--title-->
+                            <h5 class="mb-3">TrustWallet</h5>
+                            <span>Connect with Glow
+                                <span class="material-icons hover-arrow align-middle ms-2">arrow_forward</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <!--divider-->
+                <div class="col-12 d-none d-lg-block"></div>
+                 <!--column-->
+                 <div class="col-lg-4 col-sm-6 mb-5">
+                    <!--card-->
+                    <a href="#!" class="card hover-lift text-body card-hover">
+                        <div class="card-body p-4">
+                            <div class="size-5x bg-primary-subtle rounded-4 mb-4 d-flex align-items-center justify-content-center">
+                                <img src="assets/img/wallet/coinbase.svg" class="img-fluid" alt="metamask">
+                            </div>
+                            <!--title-->
+                            <h5 class="mb-3">Coinbase</h5>
+                            <span>Connect with Coinbase
+                                <span class="material-icons hover-arrow align-middle ms-2">arrow_forward</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                 <!--column-->
+                 <div class="col-lg-4 col-sm-6 mb-5">
+                    <!--card-->
+                    <a href="#!" class="card hover-lift text-body card-hover">
+                        <div class="card-body p-4">
+                            <div class="size-5x bg-light rounded-4 mb-4 d-flex align-items-center justify-content-center">
+                                <img src="assets/img/wallet/ledger.svg" class="img-fluid" alt="metamask">
+                            </div>
+                            <!--title-->
+                            <h5 class="mb-3">Ledger</h5>
+                            <span>Connect with Ledger
+                                <span class="material-icons hover-arrow align-middle ms-2">arrow_forward</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <!--divider-->
+                <div class="col-12 d-none d-lg-block"></div>
+                 <!--column-->
+                 <div class="col-lg-4 col-sm-6 mb-5">
+                    <!--card-->
+                    <a href="#!" class="card hover-lift text-body card-hover">
+                        <div class="card-body p-4">
+                            <div class="size-5x bg-warning-subtle rounded-4 mb-4 d-flex align-items-center justify-content-center">
+                                <img src="assets/img/wallet/argent.svg" class="img-fluid" alt="metamask">
+                            </div>
+                            <!--title-->
+                            <h5 class="mb-3">Argent</h5>
+                            <span>Connect with Argent
+                                <span class="material-icons hover-arrow align-middle ms-2">arrow_forward</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <!--column-->
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <!--card-->
+                    <a href="#!" class="card hover-lift text-body card-hover">
+                        <div class="card-body p-4">
+                            <div class="size-5x bg-info-subtle rounded-4 mb-4 d-flex align-items-center justify-content-center">
+                                <img src="assets/img/wallet/gnosis.svg" class="img-fluid" alt="metamask">
+                            </div>
+                            <!--title-->
+                            <h5 class="mb-3">Gnosis</h5>
+                            <span>Connect with Gnosis
+                                <span class="material-icons hover-arrow align-middle ms-2">arrow_forward</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <!--divider-->
+                <div class="col-12 d-none d-lg-block"></div>
+            </div>
+        </div>
+       </section>
+
+       @@include('./partials/footer-default.html')
+        <!--script-->
+        <script src="assets/js/theme.bundle.min.js"></script>
+    </body>
+
+</html>

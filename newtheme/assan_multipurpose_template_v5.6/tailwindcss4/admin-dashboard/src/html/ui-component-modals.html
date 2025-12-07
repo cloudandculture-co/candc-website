@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+
+    @@include('./partials/head-includes.html')
+</head>
+
+<body
+    class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+      @@include('./partials/app-preloader.html')
+
+
+    @@include('./partials/sidebar.html',{"page": "ui-components","components_collapse":
+    "show","component_modals_active": "active"})
+
+    <main class="relative flex flex-col lg:ms-64">
+        @@include('./partials/header-default.html')
+        <!--:Page Header:-->
+        <div class="px-4 lg:px-6 xl:px-12 py-4">
+            <div class="flex flex-wrap items-center">
+                <div class="flex-grow">
+                    <h4 class="text-2xl font-semibold">Modals</h4>
+                    <p class="text-sm opacity-60">Bootstrap Js required</p>
+                </div>
+                <div class="shrink-0">
+                    <!--:Breadcrumb:-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="flex items-center">
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                            </li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active"><a
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                    href="ui-component-alerts.html">Components</a></li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Modals</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content px-4 lg:px-6 xl:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div>
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="text-lg font-semibold mb-4">Default modal</h5>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Launch demo modal
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="text-lg font-semibold mb-4">Static modal</h5>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleStaticModal">
+                            Launch Static modal
+                        </button>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="text-lg font-semibold mb-4">Modal Centered</h5>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleCenterModal">
+                            Launch demo modal
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="text-lg font-semibold mb-4">Modal Scroll</h5>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleScrollModal">
+                            Launch demo modal
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="text-lg font-semibold mb-4">Modal Center Scroll</h5>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleScrollCenterModal">
+                            Launch demo modal
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!--:Default modal example:-->
+    <div class="modal fade z-[70] fixed left-0 top-0 w-full h-full hidden [&.show]:block overflow-y-auto overflow-x-hidden"
+        id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog pointer-events-none relative w-full md:w-3/5 xl:w-2/5 mx-auto my-8 px-4">
+
+            <div class="modal-content pointer-events-auto bg-white dark:bg-gray-900 rounded-md relative">
+
+                <div class="modal-header flex items-center justify-between border-b border-gray-200 dark:border-gray-800 p-4">
+                    <h3 class="text-xl font-semibold truncate mr-3" id="exampleModalLabel">Modal title</h3>
+                    <!--:Close:-->
+                    <button type="button" class="text-gray-400 hover:text-inherit flex items-center" data-bs-dismiss="modal">
+                        <span class="icon-[tabler--x] text-xl"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--:Centered modal example:-->
+    <div class="modal fade z-[70] fixed left-0 top-0 w-full h-full hidden [&.show]:block overflow-y-auto overflow-x-hidden"
+        id="exampleCenterModal" tabindex="-1" aria-labelledby="exampleCenterLabel" aria-hidden="true">
+
+        <div
+            class="modal-dialog pointer-events-none flex items-center min-h-[calc(100%-4rem)] relative w-full md:w-3/5 xl:w-2/5 mx-auto my-8 px-4">
+
+            <div class="modal-content pointer-events-auto bg-white dark:bg-gray-900 rounded-md relative">
+
+                <div class="modal-header flex items-center justify-between border-b border-gray-200 dark:border-gray-800 p-4">
+                    <h3 class="text-xl font-semibold truncate mr-3" id="exampleCenterLabel">Modal title</h3>
+                    <!--:Close:-->
+                    <button type="button" class="text-gray-400 hover:text-inherit flex items-center" data-bs-dismiss="modal">
+                        <span class="icon-[tabler--x] text-xl"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--:Static modal example:-->
+    <div class="modal fade z-[70] fixed left-0 top-0 w-full h-full hidden [&.show]:block overflow-y-auto overflow-x-hidden"
+        id="exampleStaticModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="exampleStaticModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog pointer-events-none relative w-full md:w-3/5 xl:w-2/5 mx-auto my-8 px-4">
+
+            <div class="modal-content pointer-events-auto bg-white dark:bg-gray-900 rounded-md relative">
+
+                <div class="modal-header flex items-center justify-between border-b border-gray-200 dark:border-gray-800 p-4">
+                    <h3 class="text-xl font-semibold truncate mr-3" id="exampleStaticModalLabel">Static Modal title</h3>
+                    <!--:Close:-->
+                    <button type="button" class="text-gray-400 hover:text-inherit flex items-center" data-bs-dismiss="modal">
+                        <span class="icon-[tabler--x] text-xl"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--:Scroll modal example:-->
+    <div class="modal fade z-[70] fixed left-0 top-0 w-full h-full hidden [&.show]:block overflow-y-auto overflow-x-hidden"
+        id="exampleScrollModal" tabindex="-1" aria-labelledby="exampleScrollLabel" aria-hidden="true">
+
+        <div
+            class="modal-dialog pointer-events-none flex items-center min-h-[calc(100%-4rem)] relative w-full md:w-4/5 mx-auto my-8 px-4">
+
+            <div class="modal-content pointer-events-auto bg-white dark:bg-gray-900 rounded-md relative">
+
+                <div class="modal-header flex items-center justify-between border-b border-gray-200 dark:border-gray-800 p-4">
+                    <h3 class="text-xl font-semibold truncate mr-3" id="exampleScrollLabel">Modal Scroll title</h3>
+                    <!--:Close:-->
+                    <button type="button" class="text-gray-400 hover:text-inherit flex items-center" data-bs-dismiss="modal">
+                        <span class="icon-[tabler--x] text-xl"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Netus et malesuada fames ac turpis egestas integer. Nec
+                        ullamcorper sit amet risus nullam eget. Metus aliquam eleifend mi in nulla posuere sollicitudin
+                        aliquam ultrices. Amet nisl purus in mollis nunc sed id semper risus. Dictum non consectetur a
+                        erat nam at lectus urna. Viverra adipiscing at in tellus. Leo urna molestie at elementum eu
+                        facilisis sed odio morbi. Lectus sit amet est placerat in egestas. Eleifend quam adipiscing
+                        vitae proin sagittis nisl rhoncus mattis. Gravida dictum fusce ut placerat orci nulla. Convallis
+                        tellus id interdum velit laoreet id donec ultrices tincidunt. Risus at ultrices mi tempus
+                        imperdiet nulla malesuada. Facilisis leo vel fringilla est ullamcorper eget nulla facilisi
+                        etiam. Amet cursus sit amet dictum sit.
+
+                        Lacinia at quis risus sed vulputate odio ut enim. Suspendisse potenti nullam ac tortor. Risus
+                        quis varius quam quisque id diam vel quam. Nam at lectus urna duis convallis. Accumsan tortor
+                        posuere ac ut consequat semper viverra. Fringilla est ullamcorper eget nulla facilisi. Tellus
+                        cras adipiscing enim eu turpis egestas pretium aenean pharetra. Massa placerat duis ultricies
+                        lacus sed turpis tincidunt id aliquet. Viverra suspendisse potenti nullam ac tortor vitae.
+                        Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper.
+
+                        Vitae suscipit tellus mauris a diam maecenas. Curabitur vitae nunc sed velit dignissim. Sed
+                        risus pretium quam vulputate dignissim suspendisse. Ultrices dui sapien eget mi proin sed.
+                        Aliquam etiam erat velit scelerisque in. Viverra tellus in hac habitasse platea dictumst. Mauris
+                        cursus mattis molestie a iaculis. Faucibus a pellentesque sit amet porttitor. Id aliquet risus
+                        feugiat in ante metus. Nunc congue nisi vitae suscipit. Aliquet lectus proin nibh nisl
+                        condimentum id. Senectus et netus et malesuada fames ac. Scelerisque purus semper eget duis at.
+
+                        Enim facilisis gravida neque convallis a cras. Felis donec et odio pellentesque diam volutpat
+                        commodo. Id consectetur purus ut faucibus pulvinar elementum integer enim. Tellus at urna
+                        condimentum mattis pellentesque id nibh tortor. Id velit ut tortor pretium viverra suspendisse
+                        potenti. Tortor id aliquet lectus proin nibh nisl condimentum id venenatis. Risus feugiat in
+                        ante metus dictum. Phasellus faucibus scelerisque eleifend donec pretium. Donec et odio
+                        pellentesque diam volutpat. Ac placerat vestibulum lectus mauris ultrices eros in cursus turpis.
+                        Diam vulputate ut pharetra sit amet. Platea dictumst quisque sagittis purus sit amet. Lorem
+                        ipsum dolor sit amet consectetur adipiscing elit.
+
+                        Felis eget nunc lobortis mattis aliquam faucibus purus. Pellentesque sit amet porttitor eget
+                        dolor morbi non. Elementum integer enim neque volutpat. Sed sed risus pretium quam vulputate
+                        dignissim suspendisse. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Egestas
+                        erat imperdiet sed euismod. Tristique senectus et netus et. Cursus turpis massa tincidunt dui.
+                        Adipiscing bibendum est ultricies integer quis. Eu feugiat pretium nibh ipsum consequat nisl. Eu
+                        ultrices vitae auctor eu augue. Scelerisque mauris pellentesque pulvinar pellentesque habitant.
+                        In ornare quam viverra orci sagittis eu volutpat odio facilisis. Nascetur ridiculus mus mauris
+                        vitae ultricies leo. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur.
+                        Cursus euismod quis viverra nibh cras pulvinar mattis nunc. Diam donec adipiscing tristique
+                        risus nec feugiat in. Massa id neque aliquam vestibulum morbi blandit. Id eu nisl nunc mi ipsum
+                        faucibus.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Netus et malesuada fames ac turpis egestas integer. Nec
+                        ullamcorper sit amet risus nullam eget. Metus aliquam eleifend mi in nulla posuere sollicitudin
+                        aliquam ultrices. Amet nisl purus in mollis nunc sed id semper risus. Dictum non consectetur a
+                        erat nam at lectus urna. Viverra adipiscing at in tellus. Leo urna molestie at elementum eu
+                        facilisis sed odio morbi. Lectus sit amet est placerat in egestas. Eleifend quam adipiscing
+                        vitae proin sagittis nisl rhoncus mattis. Gravida dictum fusce ut placerat orci nulla. Convallis
+                        tellus id interdum velit laoreet id donec ultrices tincidunt. Risus at ultrices mi tempus
+                        imperdiet nulla malesuada. Facilisis leo vel fringilla est ullamcorper eget nulla facilisi
+                        etiam. Amet cursus sit amet dictum sit.
+
+                        Lacinia at quis risus sed vulputate odio ut enim. Suspendisse potenti nullam ac tortor. Risus
+                        quis varius quam quisque id diam vel quam. Nam at lectus urna duis convallis. Accumsan tortor
+                        posuere ac ut consequat semper viverra. Fringilla est ullamcorper eget nulla facilisi. Tellus
+                        cras adipiscing enim eu turpis egestas pretium aenean pharetra. Massa placerat duis ultricies
+                        lacus sed turpis tincidunt id aliquet. Viverra suspendisse potenti nullam ac tortor vitae.
+                        Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper.
+
+                        Vitae suscipit tellus mauris a diam maecenas. Curabitur vitae nunc sed velit dignissim. Sed
+                        risus pretium quam vulputate dignissim suspendisse. Ultrices dui sapien eget mi proin sed.
+                        Aliquam etiam erat velit scelerisque in. Viverra tellus in hac habitasse platea dictumst. Mauris
+                        cursus mattis molestie a iaculis. Faucibus a pellentesque sit amet porttitor. Id aliquet risus
+                        feugiat in ante metus. Nunc congue nisi vitae suscipit. Aliquet lectus proin nibh nisl
+                        condimentum id. Senectus et netus et malesuada fames ac. Scelerisque purus semper eget duis at.
+
+                        Enim facilisis gravida neque convallis a cras. Felis donec et odio pellentesque diam volutpat
+                        commodo. Id consectetur purus ut faucibus pulvinar elementum integer enim. Tellus at urna
+                        condimentum mattis pellentesque id nibh tortor. Id velit ut tortor pretium viverra suspendisse
+                        potenti. Tortor id aliquet lectus proin nibh nisl condimentum id venenatis. Risus feugiat in
+                        ante metus dictum. Phasellus faucibus scelerisque eleifend donec pretium. Donec et odio
+                        pellentesque diam volutpat. Ac placerat vestibulum lectus mauris ultrices eros in cursus turpis.
+                        Diam vulputate ut pharetra sit amet. Platea dictumst quisque sagittis purus sit amet. Lorem
+                        ipsum dolor sit amet consectetur adipiscing elit.
+
+                        Felis eget nunc lobortis mattis aliquam faucibus purus. Pellentesque sit amet porttitor eget
+                        dolor morbi non. Elementum integer enim neque volutpat. Sed sed risus pretium quam vulputate
+                        dignissim suspendisse. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Egestas
+                        erat imperdiet sed euismod. Tristique senectus et netus et. Cursus turpis massa tincidunt dui.
+                        Adipiscing bibendum est ultricies integer quis. Eu feugiat pretium nibh ipsum consequat nisl. Eu
+                        ultrices vitae auctor eu augue. Scelerisque mauris pellentesque pulvinar pellentesque habitant.
+                        In ornare quam viverra orci sagittis eu volutpat odio facilisis. Nascetur ridiculus mus mauris
+                        vitae ultricies leo. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur.
+                        Cursus euismod quis viverra nibh cras pulvinar mattis nunc. Diam donec adipiscing tristique
+                        risus nec feugiat in. Massa id neque aliquam vestibulum morbi blandit. Id eu nisl nunc mi ipsum
+                        faucibus.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--: Scroll Center modal example:-->
+    <div class="modal fade z-[70] fixed left-0 top-0 w-full h-full hidden [&.show]:block overflow-y-auto overflow-x-hidden"
+        id="exampleScrollCenterModal" tabindex="-1" aria-labelledby="exampleScrollCenterModalLabel" aria-hidden="true">
+
+        <div
+            class="modal-dialog pointer-events-none flex items-center min-h-[calc(100%-4rem)] relative w-full md:w-4/5 lg:w-4/6 mx-auto my-8 px-4">
+
+            <div class="modal-content pointer-events-auto bg-white dark:bg-gray-900 rounded-md relative">
+
+                <div class="modal-header flex items-center justify-between border-b border-gray-200 dark:border-gray-800 p-4">
+                    <h3 class="text-xl font-semibold truncate mr-3" id="exampleScrollCenterModalLabel">Modal Scroll
+                        Centered title</h3>
+                    <!--:Close:-->
+                    <button type="button" class="text-gray-400 hover:text-inherit flex items-center" data-bs-dismiss="modal">
+                        <span class="icon-[tabler--x] text-xl"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4 max-h-72 overflow-y-auto">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Netus et malesuada fames ac turpis egestas integer. Nec
+                        ullamcorper sit amet risus nullam eget. Metus aliquam eleifend mi in nulla posuere sollicitudin
+                        aliquam ultrices. Amet nisl purus in mollis nunc sed id semper risus. Dictum non consectetur a
+                        erat nam at lectus urna. Viverra adipiscing at in tellus. Leo urna molestie at elementum eu
+                        facilisis sed odio morbi. Lectus sit amet est placerat in egestas. Eleifend quam adipiscing
+                        vitae proin sagittis nisl rhoncus mattis. Gravida dictum fusce ut placerat orci nulla. Convallis
+                        tellus id interdum velit laoreet id donec ultrices tincidunt. Risus at ultrices mi tempus
+                        imperdiet nulla malesuada. Facilisis leo vel fringilla est ullamcorper eget nulla facilisi
+                        etiam. Amet cursus sit amet dictum sit.
+
+                        Lacinia at quis risus sed vulputate odio ut enim. Suspendisse potenti nullam ac tortor. Risus
+                        quis varius quam quisque id diam vel quam. Nam at lectus urna duis convallis. Accumsan tortor
+                        posuere ac ut consequat semper viverra. Fringilla est ullamcorper eget nulla facilisi. Tellus
+                        cras adipiscing enim eu turpis egestas pretium aenean pharetra. Massa placerat duis ultricies
+                        lacus sed turpis tincidunt id aliquet. Viverra suspendisse potenti nullam ac tortor vitae.
+                        Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper.
+
+                        Vitae suscipit tellus mauris a diam maecenas. Curabitur vitae nunc sed velit dignissim. Sed
+                        risus pretium quam vulputate dignissim suspendisse. Ultrices dui sapien eget mi proin sed.
+                        Aliquam etiam erat velit scelerisque in. Viverra tellus in hac habitasse platea dictumst. Mauris
+                        cursus mattis molestie a iaculis. Faucibus a pellentesque sit amet porttitor. Id aliquet risus
+                        feugiat in ante metus. Nunc congue nisi vitae suscipit. Aliquet lectus proin nibh nisl
+                        condimentum id. Senectus et netus et malesuada fames ac. Scelerisque purus semper eget duis at.
+
+                        Enim facilisis gravida neque convallis a cras. Felis donec et odio pellentesque diam volutpat
+                        commodo. Id consectetur purus ut faucibus pulvinar elementum integer enim. Tellus at urna
+                        condimentum mattis pellentesque id nibh tortor. Id velit ut tortor pretium viverra suspendisse
+                        potenti. Tortor id aliquet lectus proin nibh nisl condimentum id venenatis. Risus feugiat in
+                        ante metus dictum. Phasellus faucibus scelerisque eleifend donec pretium. Donec et odio
+                        pellentesque diam volutpat. Ac placerat vestibulum lectus mauris ultrices eros in cursus turpis.
+                        Diam vulputate ut pharetra sit amet. Platea dictumst quisque sagittis purus sit amet. Lorem
+                        ipsum dolor sit amet consectetur adipiscing elit.
+
+                        Felis eget nunc lobortis mattis aliquam faucibus purus. Pellentesque sit amet porttitor eget
+                        dolor morbi non. Elementum integer enim neque volutpat. Sed sed risus pretium quam vulputate
+                        dignissim suspendisse. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Egestas
+                        erat imperdiet sed euismod. Tristique senectus et netus et. Cursus turpis massa tincidunt dui.
+                        Adipiscing bibendum est ultricies integer quis. Eu feugiat pretium nibh ipsum consequat nisl. Eu
+                        ultrices vitae auctor eu augue. Scelerisque mauris pellentesque pulvinar pellentesque habitant.
+                        In ornare quam viverra orci sagittis eu volutpat odio facilisis. Nascetur ridiculus mus mauris
+                        vitae ultricies leo. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur.
+                        Cursus euismod quis viverra nibh cras pulvinar mattis nunc. Diam donec adipiscing tristique
+                        risus nec feugiat in. Massa id neque aliquam vestibulum morbi blandit. Id eu nisl nunc mi ipsum
+                        faucibus.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Netus et malesuada fames ac turpis egestas integer. Nec
+                        ullamcorper sit amet risus nullam eget. Metus aliquam eleifend mi in nulla posuere sollicitudin
+                        aliquam ultrices. Amet nisl purus in mollis nunc sed id semper risus. Dictum non consectetur a
+                        erat nam at lectus urna. Viverra adipiscing at in tellus. Leo urna molestie at elementum eu
+                        facilisis sed odio morbi. Lectus sit amet est placerat in egestas. Eleifend quam adipiscing
+                        vitae proin sagittis nisl rhoncus mattis. Gravida dictum fusce ut placerat orci nulla. Convallis
+                        tellus id interdum velit laoreet id donec ultrices tincidunt. Risus at ultrices mi tempus
+                        imperdiet nulla malesuada. Facilisis leo vel fringilla est ullamcorper eget nulla facilisi
+                        etiam. Amet cursus sit amet dictum sit.
+
+                        Lacinia at quis risus sed vulputate odio ut enim. Suspendisse potenti nullam ac tortor. Risus
+                        quis varius quam quisque id diam vel quam. Nam at lectus urna duis convallis. Accumsan tortor
+                        posuere ac ut consequat semper viverra. Fringilla est ullamcorper eget nulla facilisi. Tellus
+                        cras adipiscing enim eu turpis egestas pretium aenean pharetra. Massa placerat duis ultricies
+                        lacus sed turpis tincidunt id aliquet. Viverra suspendisse potenti nullam ac tortor vitae.
+                        Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper.
+
+                        Vitae suscipit tellus mauris a diam maecenas. Curabitur vitae nunc sed velit dignissim. Sed
+                        risus pretium quam vulputate dignissim suspendisse. Ultrices dui sapien eget mi proin sed.
+                        Aliquam etiam erat velit scelerisque in. Viverra tellus in hac habitasse platea dictumst. Mauris
+                        cursus mattis molestie a iaculis. Faucibus a pellentesque sit amet porttitor. Id aliquet risus
+                        feugiat in ante metus. Nunc congue nisi vitae suscipit. Aliquet lectus proin nibh nisl
+                        condimentum id. Senectus et netus et malesuada fames ac. Scelerisque purus semper eget duis at.
+
+                        Enim facilisis gravida neque convallis a cras. Felis donec et odio pellentesque diam volutpat
+                        commodo. Id consectetur purus ut faucibus pulvinar elementum integer enim. Tellus at urna
+                        condimentum mattis pellentesque id nibh tortor. Id velit ut tortor pretium viverra suspendisse
+                        potenti. Tortor id aliquet lectus proin nibh nisl condimentum id venenatis. Risus feugiat in
+                        ante metus dictum. Phasellus faucibus scelerisque eleifend donec pretium. Donec et odio
+                        pellentesque diam volutpat. Ac placerat vestibulum lectus mauris ultrices eros in cursus turpis.
+                        Diam vulputate ut pharetra sit amet. Platea dictumst quisque sagittis purus sit amet. Lorem
+                        ipsum dolor sit amet consectetur adipiscing elit.
+
+                        Felis eget nunc lobortis mattis aliquam faucibus purus. Pellentesque sit amet porttitor eget
+                        dolor morbi non. Elementum integer enim neque volutpat. Sed sed risus pretium quam vulputate
+                        dignissim suspendisse. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Egestas
+                        erat imperdiet sed euismod. Tristique senectus et netus et. Cursus turpis massa tincidunt dui.
+                        Adipiscing bibendum est ultricies integer quis. Eu feugiat pretium nibh ipsum consequat nisl. Eu
+                        ultrices vitae auctor eu augue. Scelerisque mauris pellentesque pulvinar pellentesque habitant.
+                        In ornare quam viverra orci sagittis eu volutpat odio facilisis. Nascetur ridiculus mus mauris
+                        vitae ultricies leo. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur.
+                        Cursus euismod quis viverra nibh cras pulvinar mattis nunc. Diam donec adipiscing tristique
+                        risus nec feugiat in. Massa id neque aliquam vestibulum morbi blandit. Id eu nisl nunc mi ipsum
+                        faucibus.
+                    </p>
+                </div>
+                <div class="p-4 border-t border-gray-200 dark:border-gray-800">
+                    Footer
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

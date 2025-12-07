@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assan-Admin</title>
+
+        @@include('./partials/fonts.html')
+
+        <!--Simplebar css-->
+        <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+        <!--Quill style-->
+        <link href="assets/vendor/css/quill.snow.css" rel="stylesheet">
+        <!--Choices css-->
+        <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+
+        <!--Main style-->
+        <link rel="stylesheet" href="assets/css/style.min.css">
+    </head>
+
+    <body class="app-chat">
+        @@include('./partials/preloader.html')
+        <!--App Start-->
+        <div class="d-flex flex-column flex-root">
+            <!--Page-->
+            <div class="page d-flex flex-row flex-column-fluid">
+                @@include('./partials/sidebars/sidebar-default.html',{"page": "inbox"} )
+
+                <!--///////////Page content wrapper///////////////-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+
+                    @@include('./partials/header/header-default.html')
+
+
+
+                    <!--//Page content//-->
+                    <div class="px-3 px-lg-6">
+                        <div class="content content-wrapper content-expand-md">
+                            <!--Content-wrapper-overlay when sidebar open for 768px down width-->
+                            <div class="content-wrapper-overlay"></div>
+                            <!--Content-sidebar-->
+                            <div class="content-left">
+                                <div class="content-sidebar card align-items-stretch h-100"
+                                    id="content-sidebar">
+                                    <!--content-sidebar-header-->
+                                    <div class="content-sidebar-header border-bottom d-flex p-4 align-items-center position-relative">
+
+                                        <a href="#modal_compose" data-bs-toggle="modal"
+                                            class="btn me-5 me-md-0 btn-outline-danger d-flex flex-grow-1 justify-content-center align-items-center">
+                                            <span class="material-symbols-rounded fs-5 align-middle me-2">
+                                                edit
+                                                </span>
+                                            <span class="">Compose</span></a>
+                                        <button type="button"
+                                            class="btn d-md-none content_sidebar_toggler p-0 size-30 rounded-circle flex-center position-absolute shadow-none end-0 me-2 top-50 translate-middle-y text-body">
+                                            <span class="material-symbols-rounded align-middle">
+                                                close
+                                                </span>
+                                        </button>
+                                    </div>
+
+                                    <!--content-sidebar-body-->
+                                    <div class="content-sidebar-body card-body">
+                                        <div class="nav nav-pills nav-vertical mb-5 flex-column">
+                                            <a href="app-inbox.html" class="nav-link mb-1 active">
+                                                <span class="material-symbols-rounded align-middle me-2 fs-5">
+                                                    inbox
+                                                    </span>
+                                                Inbox
+                                            </a>
+                                            <a href="#!" class="nav-link mb-1">
+                                                <span class="material-symbols-rounded align-middle me-2 fs-5">
+                                                    star
+                                                    </span>
+                                                Starred
+                                            </a>
+                                            <a href="#!" class="nav-link mb-1">
+                                                <span class="material-symbols-rounded align-middle me-2 fs-5">
+                                                    mark_email_unread
+                                                    </span>
+                                                Unread
+                                            </a>
+                                            <a href="#!" class="nav-link mb-1">
+                                                <span class="material-symbols-rounded align-middle me-2 fs-5">
+                                                    send
+                                                    </span>
+                                                Sent
+                                            </a>
+                                            <a href="#!" class="nav-link mb-1">
+                                                <span class="material-symbols-rounded align-middle me-2 fs-5">
+                                                    draft
+                                                    </span>
+                                                Draft
+                                            </a>
+                                            <a href="#!" class="nav-link">
+                                                <span class="material-symbols-rounded align-middle me-2 fs-5">
+                                                    delete
+                                                    </span>
+                                                Trash
+                                            </a>
+                                        </div>
+                                        <span class="small text-body-secondary d-block mb-4">Labels</span>
+                                        <div class="nav nav-pills nav-vertical flex-column">
+                                            <a href="#!" class="nav-link d-flex align-items-center">
+                                               <span class="size-10 me-3 rounded-circle bg-success"></span>
+                                               Work
+                                            </a>
+                                            <a href="#!" class="nav-link d-flex align-items-center">
+                                                <span class="size-10 me-3 rounded-circle bg-danger"></span>
+                                                Friends
+                                             </a>
+                                             <a href="#!" class="nav-link d-flex align-items-center ">
+                                                <span class="size-10 me-3 rounded-circle bg-info"></span>
+                                                Family
+                                             </a>
+                                             <a href="#!" class="nav-link d-flex align-items-center">
+                                                <span class="size-10 me-3 rounded-circle bg-warning"></span>
+                                                Others
+                                             </a>
+                                            </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!--content-right-->
+                            <div id="mailList" class="content-right card align-items-stretch h-100">
+
+                                <!--content right Header-->
+                                <div class="content-right-header card-header px-4">
+                                    <div class="d-flex w-100 align-items-center">
+                                        <div class="d-flex align-items-center pe-2 pe-lg-5">
+                                            <!--check-->
+                                            <div class="form-check mb-0 me-1" data-check-id="1">
+                                                <input type="checkbox" class="form-check-input js-check-all" id="check_all">
+                                                <label for="check_all" class="form-check-label"></label>
+                                            </div>
+                                            <!--Selected mails action-->
+                                            <div class="d-sm-flex d-none align-items-center">
+                                                <small class="flex-shrink-0 me-1 me-md-2 text-body-secondary d-none d-md-block">2
+                                                    Selected</small>
+                                                <div class="me-1 me-md-0 ms-md-2 btn-group btn-group-sm" role="group">
+                                                    <a href="#" class="btn btn-outline-secondary">
+                                                        <span class="material-symbols-rounded align-middle fs-5">
+                                                            archive
+                                                            </span>
+                                                    </a>
+                                                    <a href="#" class="btn btn-outline-secondary">
+                                                        <span class="material-symbols-rounded align-middle fs-5">
+                                                            delete
+                                                            </span>
+                                                    </a>
+                                                    <a href="#" class="btn btn-outline-secondary">
+                                                        <span class="material-symbols-rounded align-middle fs-5">
+                                                            folder
+                                                            </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-grow-1 align-items-center">
+                                            <form action="" class="position-relative flex-grow-1 me-1 me-lg-2">
+                                                <!--Icon-->
+                                                <span class="material-symbols-rounded opacity-50 align-middle fs-5 position-absolute start-0 top-50 translate-middle-y ms-2">
+                                                    search
+                                                    </span>
+                                                <input type="text" class="form-control search ps-6 py-1"
+                                                    placeholder="Search email by label, name...">
+                                            </form>
+                                            <div class="dropdown">
+                                                <a href="#" class="btn btn-sm btn-outline-secondary px-1" data-bs-toggle="dropdown">
+                                                    <span class="material-symbols-rounded align-middle fs-5">
+                                                        more_horiz
+                                                        </span>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a href="#!" class="dropdown-item">All</a>
+                                                    <a href="#!" class="dropdown-item">Unread</a>
+                                                    <a href="#!" class="dropdown-item">Starred</a>
+                                                    <a href="#!" class="dropdown-item">Archived</a>
+                                                    <a href="#!" class="dropdown-item">Spam</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="ms-2 d-md-none">
+                                            <button type="button"
+                                                class="content_sidebar_toggler btn btn-sm btn-primary px-1">
+                                                <span class="material-symbols-rounded align-middle fs-5">
+                                                   menu_open
+                                                    </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--content-right body-->
+                                <div class="content-right-body card-body flex-column p-0">
+                                    <div class="flex-row-fluid">
+                                        <!--Inbox mail list-->
+                                        <ul class="list-group list-group-flush list">
+                                            <!--Inbox-item-->
+                                            <li
+                                                class="list-group-item list-group-item-action unread px-4">
+                                                <div class="d-flex align-items-center">
+                                                    <!--check-->
+                                                    <div class="form-check shrink-0 mb-0 me-1 position-relative z-2" data-check-id="1">
+                                                        <input type="checkbox" class="form-check-input js-checkbox" id="check_inbox_1">
+                                                        <label for="check_inbox_1" class="form-check-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="form-star shrink-0 mb-0 me-2 d-md-flex d-none position-relative z-2">
+                                                        <input type="checkbox" class="form-star-input" id="starred_1">
+                                                        <label for="starred_1" class="form-star-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="shrink-0 d-flex flex-grow-1 ms-1 overflow-hidden align-items-center justify-content-start">
+                                                        <div
+                                                            class="size-35 me-2 me-lg-3 d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 overflow-hidden">
+                                                            <img src="assets/media/avatars/02.jpg"
+                                                                class="img-fluid rounded-circle" alt="">
+                                                        </div>
+                                                        <div class="flex-grow-1 overflow-hidden pe-4">
+                                                            <!--name class for search results-->
+                                                            <div class="d-flex align-items-center mb-0">
+                                                                <div class="mb-0 me-2 fw-medium flex-shrink-0 name">Helena Markita
+                                                                </div>
+                                                                <span
+                                                                    class="badge label bg-danger flex-shrink-0 rounded-pill ms-auto">Friends</span>
+                                                            </div>
+                                                            <p class="small fw-medium mb-0"></p>
+                                                            <p class="lh-sm text-truncate mb-0">
+
+                                                                <span class="fw-bold me-2 me-lg-4">New Event
+                                                                    Created</span>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sed do eiusmod tempor incididunt ut labore et dolore
+                                                                magna aliqua.
+                                                            </p>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <div class="d-flex flex-column align-items-end">
+                                                                <!--New indicator-->
+                                                                <div class="d-flex align-items-center mb-2">
+                                                                    <span class="material-symbols-rounded align-middle fs-6 me-2">
+                                                                        attachment
+                                                                        </span>
+                                                                    <span
+                                                                        class="size-10 bg-primary rounded-circle d-inline-block mb-2"></span>
+                                                                </div>
+                                                                <!--Time-->
+                                                                <span class="block small text-body-secondary">Just Now</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--Link-->
+                                                <a href="app-inbox-detail.html" class="stretched-link"></a>
+                                            </li>
+                                            <!--Inbox-item-->
+                                            <li
+                                                class="list-group-item list-group-item-action px-4">
+                                                <div class="d-flex align-items-center">
+                                                    <!--check-->
+                                                    <div class="form-check shrink-0 mb-0 me-1 position-relative z-2" data-check-id="1">
+                                                        <input type="checkbox" class="form-check-input js-checkbox" id="check_2">
+                                                        <label for="check_2" class="form-check-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="form-star shrink-0 mb-0 me-2 d-md-flex d-none position-relative z-2">
+                                                        <input type="checkbox" class="form-star-input" id="starred_2">
+                                                        <label for="starred_2" class="form-star-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="shrink-0 d-flex flex-grow-1 ms-1 overflow-hidden align-items-center justify-content-start">
+                                                        <div
+                                                            class="size-35 me-2 me-lg-3 d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 overflow-hidden">
+                                                            <img src="assets/media/avatars/03.jpg"
+                                                                class="img-fluid rounded-circle" alt="">
+                                                        </div>
+                                                        <div class="flex-grow-1 overflow-hidden pe-4">
+                                                            <!--name class for search results-->
+                                                            <div class="d-flex align-items-center mb-0">
+                                                                <div class="mb-0 me-2 flex-shrink-0 name fw-semibold">Jason
+                                                                    Greenwood</div>
+                                                                <span
+                                                                    class="badge label bg-success flex-shrink-0 rounded-pill ms-auto">Work</span>
+                                                            </div>
+                                                            <p class="small fw-medium mb-0"></p>
+                                                            <p class="lh-sm text-truncate mb-0">
+
+                                                                <span class="fw-normal me-2 me-lg-4">Replace images for
+                                                                    Project Gama</span>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sed do eiusmod tempor incididunt ut labore et dolore
+                                                                magna aliqua.
+                                                            </p>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <div class="d-flex flex-column align-items-end">
+                                                                <!--New indicator-->
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-end mb-2">
+                                                                    <span class="material-symbols-rounded align-middle fs-6">
+                                                                        image
+                                                                        </span>
+                                                                    <!-- <span class="size-10 bg-primary rounded-circle d-inline-block mb-2"></span> -->
+                                                                </div>
+                                                                <!--Time-->
+                                                                <span class="block small text-body-secondary">2d</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--Link-->
+                                                <a href="app-inbox-detail.html" class="stretched-link"></a>
+                                            </li>
+                                            <!--Inbox-item-->
+                                            <li
+                                                class="list-group-item list-group-item-action px-4">
+                                                <div class="d-flex align-items-center">
+                                                    <!--check-->
+                                                    <div class="form-check shrink-0 mb-0 me-1 position-relative z-2" data-check-id="1">
+                                                        <input type="checkbox" class="form-check-input js-checkbox" id="check_3">
+                                                        <label for="check_3" class="form-check-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="form-star shrink-0 mb-0 me-2 d-md-flex d-none position-relative z-2">
+                                                        <input type="checkbox" class="form-star-input" id="starred_3">
+                                                        <label for="starred_3" class="form-star-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="shrink-0 d-flex flex-grow-1 ms-1 overflow-hidden align-items-center justify-content-start">
+                                                        <div
+                                                            class="size-35 me-2 me-lg-3 d-flex align-items-center p-1 justify-content-center rounded-circle flex-shrink-0 overflow-hidden">
+                                                            <img src="assets/media/brand-logos/bootstrap.svg"
+                                                                class="w-100 flex-shrink-0 h-auto" alt="">
+                                                        </div>
+                                                        <div class="flex-grow-1 overflow-hidden pe-4">
+                                                            <!--name class for search results-->
+                                                            <div class="d-flex align-items-center mb-0">
+                                                                <div class="mb-0 me-2 flex-shrink-0 name fw-semibold">Bootstrap
+                                                                </div>
+                                                                <span
+                                                                    class="badge label bg-warning flex-shrink-0 rounded-pill ms-auto">Others</span>
+                                                            </div>
+                                                            <p class="small fw-medium mb-0"></p>
+                                                            <p class="lh-sm text-truncate mb-0">
+
+                                                                <span class="fw-normal me-2 me-lg-4">New update v5.1.3
+                                                                    Avaialable</span>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sed do eiusmod tempor incididunt ut labore et dolore
+                                                                magna aliqua.
+                                                            </p>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <div class="d-flex flex-column align-items-end">
+                                                                <!--New indicator-->
+                                                                <div class="d-flex align-items-center mb-2">
+                                                                    <!--  <span class="material-symbols-rounded align-middle fs-5 me-3">
+                                                                        attach_file
+                                                                        </span>
+                                                        <span class="size-10 bg-primary rounded-circle d-inline-block mb-2"></span> -->
+                                                                </div>
+                                                                <!--Time-->
+                                                                <span class="block small text-body-secondary">22 Feb.</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--Link-->
+                                                <a href="app-inbox-detail.html" class="stretched-link"></a>
+                                            </li>
+                                            <!--Inbox-item-->
+                                            <li
+                                                class="list-group-item list-group-item-action px-4">
+                                                <div class="d-flex align-items-center">
+                                                    <!--check-->
+                                                    <div class="form-check shrink-0 mb-0 me-1 position-relative z-2" data-check-id="1">
+                                                        <input type="checkbox" class="form-check-input js-checkbox" id="check_4">
+                                                        <label for="check_4" class="form-check-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="form-star shrink-0 mb-0 me-2 d-md-flex d-none position-relative z-2">
+                                                        <input type="checkbox" class="form-star-input" id="starred_4">
+                                                        <label for="starred_4" class="form-star-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="shrink-0 d-flex flex-grow-1 ms-1 overflow-hidden align-items-center justify-content-start">
+                                                        <div
+                                                            class="size-35 me-2 me-lg-3 d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 overflow-hidden">
+                                                            <img src="assets/media/avatars/04.jpg"
+                                                                class="img-fluid rounded-circle" alt="">
+                                                        </div>
+                                                        <div class="flex-grow-1 overflow-hidden pe-4">
+                                                            <!--name class for search results-->
+                                                            <div class="d-flex align-items-center mb-0">
+                                                                <div class="mb-0 me-2 flex-shrink-0 name fw-semibold">Mark oto</div>
+                                                                <span
+                                                                    class="badge label bg-info flex-shrink-0 rounded-pill ms-auto">Family</span>
+                                                            </div>
+                                                            <p class="small fw-medium mb-0"></p>
+                                                            <p class="lh-sm text-truncate mb-0">
+
+                                                                <span class="fw-normal me-2 me-lg-4">Shared tour images
+                                                                    to family group</span>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sed do eiusmod tempor incididunt ut labore et dolore
+                                                                magna aliqua.
+                                                            </p>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <div class="d-flex flex-column align-items-end">
+                                                                <!--New indicator-->
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-end mb-2">
+                                                                    <span class="material-symbols-rounded align-middle fs-5">
+                                                                        image
+                                                                        </span>
+                                                                    <!-- <span class="size-10 bg-info rounded-circle d-inline-block mb-2"></span> -->
+                                                                </div>
+                                                                <!--Time-->
+                                                                <span class="block small text-body-secondary">16 Feb.</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--Link-->
+                                                <a href="app-inbox-detail.html" class="stretched-link"></a>
+                                            </li>
+                                            <!--Inbox-item-->
+                                            <li
+                                                class="list-group-item list-group-item-action px-4">
+                                                <div class="d-flex align-items-center">
+                                                    <!--check-->
+                                                    <div class="form-check shrink-0 mb-0 me-1 position-relative z-2" data-check-id="1">
+                                                        <input type="checkbox" class="form-check-input js-checkbox" id="check_5">
+                                                        <label for="check_5" class="form-check-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="form-star shrink-0 mb-0 me-2 d-md-flex d-none position-relative z-2">
+                                                        <input type="checkbox" class="form-star-input" id="starred_5">
+                                                        <label for="starred_5" class="form-star-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="shrink-0 d-flex flex-grow-1 ms-1 overflow-hidden align-items-center justify-content-start">
+                                                        <div
+                                                            class="size-35 me-2 me-lg-3 d-flex align-items-center p-1 justify-content-center rounded-circle flex-shrink-0 overflow-hidden">
+                                                            <img src="assets/media/brand-logos/dropbox.svg"
+                                                                class="img-fluid" alt="">
+                                                        </div>
+                                                        <div class="flex-grow-1 overflow-hidden pe-4">
+                                                            <!--name class for search results-->
+                                                            <div class="d-flex align-items-center mb-0">
+                                                                <div class="mb-0 me-2 flex-shrink-0 name fw-semibold">Dropbox</div>
+                                                                <span
+                                                                    class="badge label bg-warning flex-shrink-0 rounded-pill ms-auto">others</span>
+                                                            </div>
+                                                            <p class="small fw-medium mb-0"></p>
+                                                            <p class="lh-sm text-truncate mb-0">
+
+                                                                <span class="fw-normal me-2 me-lg-4">Subscription</span>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sed do eiusmod tempor incididunt ut labore et dolore
+                                                                magna aliqua.
+                                                            </p>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <div class="d-flex flex-column align-items-end">
+                                                                <!--New indicator-->
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-end mb-2">
+                                                                    <span class="material-symbols-rounded align-middle fs-5">
+                                                                        info
+                                                                        </span>
+                                                                    <!-- <span class="size-10 bg-primary rounded-circle d-inline-block mb-2"></span> -->
+                                                                </div>
+                                                                <!--Time-->
+                                                                <span class="block small text-body-secondary">20 Jan</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--Link-->
+                                                <a href="app-inbox-detail.html" class="stretched-link"></a>
+                                            </li>
+                                            <!--Inbox-item-->
+                                            <li
+                                                class="list-group-item list-group-item-action px-4">
+                                                <div class="d-flex align-items-center">
+                                                    <!--check-->
+                                                    <div class="form-check shrink-0 mb-0 me-1 position-relative z-2" data-check-id="1">
+                                                        <input type="checkbox" class="form-check-input js-checkbox" id="check_6">
+                                                        <label for="check_6" class="form-check-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="form-star shrink-0 mb-0 me-2 d-md-flex d-none position-relative z-2">
+                                                        <input type="checkbox" class="form-star-input" checked
+                                                            id="starred_6">
+                                                        <label for="starred_6" class="form-star-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="shrink-0 d-flex flex-grow-1 ms-1 overflow-hidden align-items-center justify-content-start">
+                                                        <div
+                                                            class="size-35 me-2 me-lg-3 d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 overflow-hidden">
+                                                            <img src="assets/media/avatars/05.jpg"
+                                                                class="img-fluid rounded-circle" alt="">
+                                                        </div>
+                                                        <div class="flex-grow-1 overflow-hidden pe-4">
+                                                            <!--name class for search results-->
+                                                            <div class="d-flex align-items-center mb-0">
+                                                                <div class="mb-0 me-2 flex-shrink-0 name fw-semibold">Tahila Mooney
+                                                                </div>
+                                                                <span
+                                                                    class="badge label bg-danger flex-shrink-0 rounded-pill ms-auto">Friends</span>
+                                                            </div>
+                                                            <p class="small fw-medium mb-0"></p>
+                                                            <p class="lh-sm text-truncate mb-0">
+
+                                                                <span class="fw-normal me-2 me-lg-4">Invitation for
+                                                                    weekend party</span>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sed do eiusmod tempor incididunt ut labore et dolore
+                                                                magna aliqua.
+                                                            </p>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <div class="d-flex flex-column align-items-end">
+                                                                <!--New indicator-->
+                                                                <div class="d-flex align-items-center mb-2">
+                                                                    <span class="material-symbols-rounded align-middle fs-5">
+                                                                        event
+                                                                        </span>
+                                                                    <!-- <span class="size-10 bg-primary rounded-circle d-inline-block mb-2"></span> -->
+                                                                </div>
+                                                                <!--Time-->
+                                                                <span class="block small text-body-secondary">31 Dec 21</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--Link-->
+                                                <a href="app-inbox-detail.html" class="stretched-link"></a>
+                                            </li>
+                                            <!--Inbox-item-->
+                                            <li
+                                                class="list-group-item list-group-item-action px-4">
+                                                <div class="d-flex align-items-center">
+                                                    <!--check-->
+                                                    <div class="form-check shrink-0 mb-0 me-1 position-relative z-2" data-check-id="1">
+                                                        <input type="checkbox" class="form-check-input js-checkbox" id="check_7">
+                                                        <label for="check_7" class="form-check-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="form-star shrink-0 mb-0 me-2 d-md-flex d-none position-relative z-2">
+                                                        <input type="checkbox" class="form-star-input" checked
+                                                            id="starred_7">
+                                                        <label for="starred_7" class="form-star-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="shrink-0 d-flex flex-grow-1 ms-1 overflow-hidden align-items-center justify-content-start">
+                                                        <div
+                                                            class="size-35 me-2 me-lg-3 d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 overflow-hidden">
+                                                            <img src="assets/media/avatars/06.jpg"
+                                                                class="img-fluid rounded-circle" alt="">
+                                                        </div>
+                                                        <div class="flex-grow-1 overflow-hidden pe-4">
+                                                            <!--name class for search results-->
+                                                            <div class="d-flex align-items-center mb-0">
+                                                                <div class="mb-0 me-2 flex-shrink-0 name fw-semibold">Diana
+                                                                    Hazelwood</div>
+                                                                <span
+                                                                    class="badge label bg-success flex-shrink-0 rounded-pill ms-auto">Work</span>
+                                                            </div>
+                                                            <p class="small fw-medium mb-0"></p>
+                                                            <p class="lh-sm text-truncate mb-0">
+
+                                                                <span class="fw-normal me-2 me-lg-4">New Task
+                                                                    Assigned</span>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sed do eiusmod tempor incididunt ut labore et dolore
+                                                                magna aliqua.
+                                                            </p>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <div class="d-flex flex-column align-items-end">
+                                                                <!--New indicator-->
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-end mb-2">
+                                                                    <span class="material-symbols-rounded align-middle fs-5">
+                                                                        list
+                                                                        </span>
+                                                                    <!-- <span class="size-10 bg-primary rounded-circle d-inline-block mb-2"></span> -->
+                                                                </div>
+                                                                <!--Time-->
+                                                                <span class="block small text-body-secondary">24 Dec 21</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--Link-->
+                                                <a href="app-inbox-detail.html" class="stretched-link"></a>
+                                            </li>
+                                            <!--Inbox-item-->
+                                            <li
+                                                class="list-group-item list-group-item-action px-4">
+                                                <div class="d-flex align-items-center">
+                                                    <!--check-->
+                                                    <div class="form-check shrink-0 mb-0 me-1 position-relative z-2" data-check-id="1">
+                                                        <input type="checkbox" class="form-check-input js-checkbox" id="check_8">
+                                                        <label for="check_8" class="form-check-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="form-star shrink-0 mb-0 me-2 d-md-flex d-none position-relative z-2">
+                                                        <input type="checkbox" class="form-star-input" id="starred_8">
+                                                        <label for="starred_8" class="form-star-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="shrink-0 d-flex flex-grow-1 ms-1 overflow-hidden align-items-center justify-content-start">
+                                                        <div
+                                                            class="size-35 me-2 me-lg-3 d-flex align-items-center p-1 justify-content-center rounded-circle flex-shrink-0 overflow-hidden">
+                                                            <img src="assets/media/brand-logos/dribbble.svg"
+                                                                class="w-100 h-auto" alt="">
+                                                        </div>
+                                                        <div class="flex-grow-1 overflow-hidden pe-4">
+                                                            <!--name class for search results-->
+                                                            <div class="d-flex align-items-center mb-0">
+                                                                <div class="mb-0 me-2 flex-shrink-0 name fw-semibold">Dribbble</div>
+                                                                <span
+                                                                    class="badge label bg-warning flex-shrink-0 rounded-pill ms-auto">Others</span>
+                                                            </div>
+                                                            <p class="small fw-medium mb-0"></p>
+                                                            <p class="lh-sm text-truncate mb-0">
+
+                                                                <span class="fw-normal me-2 me-lg-4">Adriana liked your
+                                                                    shot</span>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sed do eiusmod tempor incididunt ut labore et dolore
+                                                                magna aliqua.
+                                                            </p>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <div class="d-flex flex-column align-items-end">
+                                                                <!--New indicator-->
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-end mb-2">
+                                                                    <span class="material-symbols-rounded align-middle fs-5">
+                                                                        favorite
+                                                                        </span>
+                                                                    <!-- <span class="size-10 bg-primary rounded-circle d-inline-block mb-2"></span> -->
+                                                                </div>
+                                                                <!--Time-->
+                                                                <span class="block small text-body-secondary">02 Dec 21</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--Link-->
+                                                <a href="app-inbox-detail.html" class="stretched-link"></a>
+                                            </li>
+                                            <!--Inbox-item-->
+                                            <li
+                                                class="list-group-item list-group-item-action px-4">
+                                                <div class="d-flex align-items-center">
+                                                    <!--check-->
+                                                    <div class="form-check shrink-0 mb-0 me-1 position-relative z-2" data-check-id="1">
+                                                        <input type="checkbox" class="form-check-input js-checkbox" id="check_9">
+                                                        <label for="check_9" class="form-check-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="form-star shrink-0 mb-0 me-2 d-md-flex d-none position-relative z-2">
+                                                        <input type="checkbox" class="form-star-input" id="starred_9">
+                                                        <label for="starred_9" class="form-star-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="shrink-0 d-flex flex-grow-1 ms-1 overflow-hidden align-items-center justify-content-start">
+                                                        <div
+                                                            class="size-35 me-2 me-lg-3 d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 overflow-hidden">
+                                                            <img src="assets/media/brand-logos/paypal.svg"
+                                                                class="w-100 h-auto" alt="">
+                                                        </div>
+                                                        <div class="flex-grow-1 overflow-hidden pe-4">
+                                                            <!--name class for search results-->
+                                                            <div class="d-flex align-items-center mb-0">
+                                                                <div class="mb-0 me-2 flex-shrink-0 name fw-semibold">Paypal</div>
+                                                                <span
+                                                                    class="badge label bg-warning flex-shrink-0 rounded-pill ms-auto">Others</span>
+                                                            </div>
+                                                            <p class="small fw-medium mb-0"></p>
+                                                            <p class="lh-sm text-truncate mb-0">
+
+                                                                <span class="fw-normal me-2 me-lg-4">Action
+                                                                    required</span>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sed do eiusmod tempor incididunt ut labore et dolore
+                                                                magna aliqua.
+                                                            </p>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <div class="d-flex flex-column align-items-end">
+                                                                <!--New indicator-->
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-end mb-2">
+                                                                    <span class="material-symbols-rounded align-middle fs-5">
+                                                                        info
+                                                                        </span>
+                                                                    <!-- <span class="size-10 bg-primary rounded-circle d-inline-block mb-2"></span> -->
+                                                                </div>
+                                                                <!--Time-->
+                                                                <span class="block small text-body-secondary">21 Nov 21</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--Link-->
+                                                <a href="app-inbox-detail.html" class="stretched-link"></a>
+                                            </li>
+                                            <!--Inbox-item-->
+                                            <li
+                                                class="list-group-item list-group-item-action px-4">
+                                                <div class="d-flex align-items-center">
+                                                    <!--check-->
+                                                    <div class="form-check shrink-0 mb-0 me-1 position-relative z-2" data-check-id="1">
+                                                        <input type="checkbox" class="form-check-input js-checkbox" id="check_10">
+                                                        <label for="check_10" class="form-check-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="form-star shrink-0 mb-0 me-2 d-md-flex d-none position-relative z-2">
+                                                        <input type="checkbox" class="form-star-input" id="starred_10">
+                                                        <label for="starred_10" class="form-star-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="shrink-0 d-flex flex-grow-1 ms-1 overflow-hidden align-items-center justify-content-start">
+                                                        <div
+                                                            class="size-35 me-2 me-lg-3 d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 overflow-hidden">
+                                                            <img src="assets/media/avatars/08.jpg"
+                                                                class="img-fluid rounded-circle" alt="">
+                                                        </div>
+                                                        <div class="flex-grow-1 overflow-hidden pe-4">
+                                                            <!--name class for search results-->
+                                                            <div class="d-flex align-items-center mb-0">
+                                                                <div class="mb-0 me-2 flex-shrink-0 name fw-semibold">Dusan Vlahovic
+                                                                </div>
+                                                                <span
+                                                                    class="badge label bg-success flex-shrink-0 rounded-pill ms-auto">Work</span>
+                                                            </div>
+                                                            <p class="small fw-medium mb-0"></p>
+                                                            <p class="lh-sm text-truncate mb-0">
+
+                                                                <span class="fw-normal me-2 me-lg-4">Request for Payment
+                                                                    Approval</span>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sed do eiusmod tempor incididunt ut labore et dolore
+                                                                magna aliqua.
+                                                            </p>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <div class="d-flex flex-column align-items-end">
+                                                                <!--New indicator-->
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-end mb-2">
+                                                                    <span class="material-symbols-rounded align-middle fs-5">
+                                                                        attach_money
+                                                                        </span>
+                                                                    <!-- <span class="size-10 bg-primary rounded-circle d-inline-block mb-2"></span> -->
+                                                                </div>
+                                                                <!--Time-->
+                                                                <span class="block small text-body-secondary">13 Nov 21</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--Link-->
+                                                <a href="app-inbox-detail.html" class="stretched-link"></a>
+                                            </li>
+                                            <!--Inbox-item-->
+                                            <li
+                                                class="list-group-item list-group-item-action px-4">
+                                                <div class="d-flex align-items-center">
+                                                    <!--check-->
+                                                    <div class="form-check shrink-0 mb-0 me-1 position-relative z-2" data-check-id="1">
+                                                        <input type="checkbox" class="form-check-input js-checkbox" id="check_11">
+                                                        <label for="check_11" class="form-check-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="form-star shrink-0 mb-0 me-2 d-md-flex d-none position-relative z-2">
+                                                        <input type="checkbox" class="form-star-input" id="starred_11">
+                                                        <label for="starred_11" class="form-star-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="shrink-0 d-flex flex-grow-1 ms-1 overflow-hidden align-items-center justify-content-start">
+                                                        <div
+                                                            class="size-35 me-2 me-lg-3 d-flex align-items-center p-1 justify-content-center rounded-circle flex-shrink-0 overflow-hidden">
+                                                            <img src="assets/media/brand-logos/dribbble.svg"
+                                                                class="w-100 h-auto" alt="">
+                                                        </div>
+                                                        <div class="flex-grow-1 overflow-hidden pe-4">
+                                                            <!--name class for search results-->
+                                                            <div class="d-flex align-items-center mb-0">
+                                                                <div class="mb-0 me-2 flex-shrink-0 name fw-semibold">Dribbble</div>
+                                                                <span
+                                                                    class="badge label bg-warning flex-shrink-0 rounded-pill ms-auto">Others</span>
+                                                            </div>
+                                                            <p class="small fw-medium mb-0"></p>
+                                                            <p class="lh-sm text-truncate mb-0">
+
+                                                                <span class="fw-normal me-2 me-lg-4">Adriana liked your
+                                                                    shot</span>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sed do eiusmod tempor incididunt ut labore et dolore
+                                                                magna aliqua.
+                                                            </p>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <div class="d-flex flex-column align-items-end">
+                                                                <!--New indicator-->
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-end mb-2">
+                                                                    <span class="material-symbols-rounded align-middle fs-5">
+                                                                        favorite
+                                                                        </span>
+                                                                    <!-- <span class="size-10 bg-primary rounded-circle d-inline-block mb-2"></span> -->
+                                                                </div>
+                                                                <!--Time-->
+                                                                <span class="block small text-body-secondary">28 Oct 21</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--Link-->
+                                                <a href="app-inbox-detail.html" class="stretched-link"></a>
+                                            </li>
+                                            <!--Inbox-item-->
+                                            <li
+                                                class="list-group-item list-group-item-action px-4">
+                                                <div class="d-flex align-items-center">
+                                                    <!--check-->
+                                                    <div class="form-check shrink-0 mb-0 me-1 position-relative z-2" data-check-id="1">
+                                                        <input type="checkbox" class="form-check-input js-checkbox" id="check_12">
+                                                        <label for="check_12" class="form-check-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="form-star shrink-0 mb-0 me-2 d-md-flex d-none position-relative z-2">
+                                                        <input type="checkbox" class="form-star-input" id="starred_12">
+                                                        <label for="starred_12" class="form-star-label"></label>
+                                                    </div>
+                                                    <div
+                                                        class="shrink-0 d-flex flex-grow-1 ms-1 overflow-hidden align-items-center justify-content-start">
+                                                        <div
+                                                            class="size-35 me-2 me-lg-3 d-flex align-items-center p-1 justify-content-center rounded-circle flex-shrink-0 overflow-hidden">
+                                                            <img src="assets/media/brand-logos/dribbble.svg"
+                                                                class="w-100 h-auto" alt="">
+                                                        </div>
+                                                        <div class="flex-grow-1 overflow-hidden pe-4">
+                                                            <!--name class for search results-->
+                                                            <div class="d-flex align-items-center mb-0">
+                                                                <div class="mb-0 me-2 flex-shrink-0 name fw-semibold">Dribbble</div>
+                                                                <span
+                                                                    class="badge label bg-warning flex-shrink-0 rounded-pill ms-auto">Others</span>
+                                                            </div>
+                                                            <p class="small fw-medium mb-0"></p>
+                                                            <p class="lh-sm text-truncate mb-0">
+
+                                                                <span class="fw-normal me-2 me-lg-4">Adriana liked your
+                                                                    shot</span>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sed do eiusmod tempor incididunt ut labore et dolore
+                                                                magna aliqua.
+                                                            </p>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <div class="d-flex flex-column align-items-end">
+                                                                <!--New indicator-->
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-end mb-2">
+                                                                    <span class="material-symbols-rounded align-middle fs-5">
+                                                                        favorite
+                                                                        </span>
+                                                                    <!-- <span class="size-10 bg-primary rounded-circle d-inline-block mb-2"></span> -->
+                                                                </div>
+                                                                <!--Time-->
+                                                                <span class="block small text-body-secondary">17 Oct 21</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                                <!--content right footer-->
+                                <div class="content-right-footer card-footer">
+                                    <!--Footer for emails-->
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <div class="progress mb-1" style="height: 4px;">
+                                                <div class="progress-bar bg-success" aria-valuemax="100"
+                                                    aria-valuenow="20" style="width: 20%;">
+
+                                                </div>
+                                            </div>
+                                            <small>4 GB <span class="d-none d-sm-inline-block">(20%) </span> of 20 GB
+                                                used</small>
+                                        </div>
+                                        <div>
+                                            <small>1-12 of 999</small>
+                                            <div class="btn-group btn-group-sm ms-3">
+                                                <button disabled class="btn btn-outline-secondary px-1" type="button">
+                                                    <span class="material-symbols-rounded fs-5 align-middle">
+                                                        arrow_back
+                                                        </span>
+                                                </button>
+                                                <button class="btn btn-outline-secondary px-1" type="button">
+                                                    <span class="material-symbols-rounded fs-5 align-middle">
+                                                        arrow_forward
+                                                        </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page content End//-->
+
+
+                </main>
+                <!--///////////Page content wrapper End///////////////-->
+            </div>
+        </div>
+
+        <!--Mail Compose Modal-->
+        <div class="modal search_modal fade" id="modal_compose" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div
+                        class="position-relative d-flex rounded-top px-4 py-3 align-items-center justify-content-between bg-primary text-white">
+                        <h5 class="mb-0">New Message</h5>
+                        <button class="btn text-white shadow-none small" data-bs-dismiss="modal"
+                            type="button">Discard</button>
+                    </div>
+                    <div class="p-4 modal-body">
+                        <form>
+                            <input type="text" class="form-control mb-3" placeholder="To">
+                            <input type="text" class="form-control mb-3" placeholder="Subject">
+                            <!--Quill editor-->
+                            <div class="mb-3" data-quill='{"placeholder": "Enter your message here..."}'>
+
+                            </div>
+                            <div class="d-flex justify-content-end pt-4">
+                                <button type="button" class="btn btn-outline-secondary btn-sm">Save to Draft</button>
+                                <button type="button" class="btn btn-outline-primary btn-sm ms-2">Send message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        @@include('./partials/core-scripts.html')
+
+        <!--Chat sidebar toggler-->
+        <script>
+            $('.content_sidebar_toggler,.content-wrapper-overlay').on("click", function (e) {
+                $('.content-expand-md').toggleClass("content_sidebar_show");
+            });
+
+        </script>
+
+        <!--Search email -->
+        <script src="assets/vendor/list.min.js"></script>
+        <script>
+            var options = {
+                valueNames: ['name', 'ilabel', ]
+            };
+
+            var userList = new List('mailList', options);
+
+        </script>
+
+        <!--Compose message editor-->
+        <script src="assets/vendor/quill.js"></script>
+        <script>
+            var initQuill = document.querySelectorAll("[data-quill]");
+            initQuill.forEach((qe) => {
+                const qt = {
+                    ...(qe.dataset.quill ? JSON.parse(qe.dataset.quill) : {}),
+                    modules: {
+                        toolbar: [
+                            [{
+                                header: [1, 2, false]
+                            }],
+                            ["bold", "underline"],
+                            ["link", "image"]
+                        ]
+                    },
+                    theme: "snow"
+                };
+                new Quill(qe, qt);
+            });
+
+        </script>
+    </body>
+
+</html>

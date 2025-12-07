@@ -1,0 +1,244 @@
+
+
+
+// Extend bootstrap Utilities
+
+$utilities: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$utilities: map-merge(( // scss-docs-start utils-Width in px
+        "width-px": (property: width,
+            class: width,
+            values: (
+              1x:1rem,
+    2x:2rem,
+    3x:3rem,
+    4x:4rem,
+    5x:5rem,
+    6x:6rem,
+    7x:7rem,
+    8x:8rem,
+    9x:9rem,
+    10x:10rem,
+    11x:11rem,
+    12x:12rem,
+            )),
+
+        // scss-docs-start utils-Height in px
+        "height-px": (property: height,
+            class: height,
+            values: (
+              1x:1rem,
+    2x:2rem,
+    3x:3rem,
+    4x:4rem,
+    5x:5rem,
+    6x:6rem,
+    7x:7rem,
+    8x:8rem,
+    9x:9rem,
+    10x:10rem,
+    11x:11rem,
+    12x:12rem,
+            )),
+// scss-docs-start utils-Height in px
+"size-width": (property: width,
+class: size,
+values: (
+    1x:1rem,
+    2x:2rem,
+    3x:3rem,
+    4x:4rem,
+    5x:5rem,
+    6x:6rem,
+    7x:7rem,
+    8x:8rem,
+    9x:9rem,
+    10x:10rem,
+    11x:11rem,
+    12x:12rem,
+)),
+// scss-docs-start utils-Height in px
+"size-height": (property: height,
+class: size,
+values: (
+    1x:1rem,
+    2x:2rem,
+    3x:3rem,
+    4x:4rem,
+    5x:5rem,
+    6x:6rem,
+    7x:7rem,
+    8x:8rem,
+    9x:9rem,
+    10x:10rem,
+    11x:11rem,
+    12x:12rem,
+)),
+"vh-viewport": (
+      property: height,
+      class: vh,
+      values: (
+          25:25vh,
+          50:50vh,
+          75:75vh,
+          100: 100vw
+          )
+    ),
+    "width-percentage": (
+      property: width,
+      responsive:true,
+      class: w,
+      values: (
+          25:25%,
+          30:30%,
+          35:35%,
+          40:40%,
+          50:50%,
+          60:60%,
+          75:75%,
+          80:80%,
+          100: 100%
+          )
+    ),
+    "rounded-top": (
+      property: border-top-left-radius border-top-right-radius,
+      class: rounded-top,
+      values: (
+        0: 0,
+        null: var(--#{$prefix}border-radius)
+        )
+    ),
+    "rounded-end": (
+      property: border-top-right-radius border-bottom-right-radius,
+      class: rounded-end,
+      values: (
+        0: 0,
+        null: var(--#{$prefix}border-radius)
+        )
+    ),
+    "rounded-bottom": (
+      property: border-bottom-right-radius border-bottom-left-radius,
+      class: rounded-bottom,
+      values: (
+        0: 0,
+        null: var(--#{$prefix}border-radius)
+        )
+    ),
+    "rounded-start": (
+      property: border-bottom-left-radius border-top-left-radius,
+      class: rounded-start,
+      values: (
+        0: 0,
+        null: var(--#{$prefix}border-radius)
+        )
+    ),
+    "rounded-top-start": (
+      property:border-top-left-radius,
+      class: rounded-top-start,
+      values: (
+        0: 0,
+        4: var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-2xl)
+        )
+    ),
+    "rounded-top-end": (
+      property:border-top-right-radius,
+      class: rounded-top-end,
+      values: (
+        0: 0,
+        4: var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-2xl)
+        )
+    ),
+    "rounded-bottom-start": (
+      property:border-bottom-left-radius,
+      class: rounded-bottom-start,
+      values: (
+        0: 0,
+        4: var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-2xl)
+        )
+    ),
+    "rounded-bottom-end": (
+      property:border-bottom-right-radius,
+      class: rounded-bottom-end,
+      values: (
+        0: 0,
+        4: var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-2xl)
+        )
+    ),
+    "cursor": (
+      property:cursor,
+      class: cursor,
+      values: (
+        auto, grab,pointer
+        )
+    ),
+     // scss-docs-start utils-position
+     "position": (
+      property: position,
+      values: static relative absolute fixed sticky,
+      responsive:true
+    ),
+    "top": (
+      property: top,
+      values: $position-values,
+      responsive:true
+    ),
+    "bottom": (
+      property: bottom,
+      values: $position-values,
+      responsive:true
+    ),
+    "start": (
+      property: left,
+      class: start,
+      values: $position-values,
+      responsive:true
+    ),
+    "end": (
+      property: right,
+      class: end,
+      values: $position-values,
+      responsive:true
+    ),
+    "zindex": (
+      property: z-index,
+      class: z-index,
+      values: (
+        0:0,
+        1:1,
+        2:2,
+        n1:-1,
+        n2:-2,
+      )
+    ),
+    ),
+    $utilities);
+
+//Other utilities
+.hover-lift{
+  transition: all .25s!important;
+  &:hover,&:focus{
+    transform: translateY(-4px);
+    
+  }
+  &:not(.btn):not(.shadow-none){
+&:hover{
+  box-shadow: $box-shadow-lg!important;
+}
+  }
+}
+.hover-lift-sm{
+  transition: all .25s!important;
+  &:hover,&:focus{
+    transform: translateY(-2px);
+    
+  }
+  &:not(.btn):not(.shadow-none){
+&:hover{
+  box-shadow: $box-shadow!important;
+}
+  }
+}

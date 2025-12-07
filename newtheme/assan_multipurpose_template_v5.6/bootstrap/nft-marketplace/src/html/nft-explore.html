@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>NFT</title>
+        <!--Swiper-->
+        <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+        @@include('./partials/head.html')
+    </head>
+
+    <body>
+        @@include('./partials/navbar-default.html',{"page": "explore"})
+
+        <section class="position-relative pt-9 pt-lg-12">
+            <div class="container position-relative">
+                <div class="row">
+                   <div class="col-lg-4 col-xl-3">
+                    <div class="sticky-lg-top">
+                        <div class="offcanvas-lg py-lg-5 d-lg-block offcanvas-filter offcanvas-end" tabindex="-1" id="offcanvasFilter" aria-labelledby="offcanvasFilterLabel">
+                            <div class="offcanvas-header pt-lg-2 pb-lg-0 d-lg-block">
+                              <h5 class="offcanvas-title" id="offcanvasFilterLabel"><span class="material-icons align-middle me-2">filter_list</span> Filter</h5>
+                              <button type="button" class="btn-close d-lg-none" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasFilter" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="accordion-list py-lg-3 pe-lg-4 w-100">
+                                    
+                                     <!--Filter item-->
+                                     <div class="accordion-item">
+                                        <div class="accordion-header" id="filterOne">
+                                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#filterStatus" aria-expanded="true">
+                                              Status
+                                          </button>
+                                        </div>
+                                        <div id="filterStatus" class="accordion-collapse collapse show">
+                                          <div class="accordion-body">
+                                           <!--status check-->
+                                           <div class="form-check mb-3">
+                                              <input type="checkbox" checked class="form-check-input" name="status_for_sale" id="status_for_sale">
+                                              <label class="form-check-label d-block cursor-pointer" for="status_for_sale">For Sale</label>
+                                          </div> 
+                                          <!--status check-->
+                                          <div class="form-check">
+                                              <input type="checkbox" class="form-check-input" name="status_coming_soon" id="status_coming_soon">
+                                              <label class="form-check-label d-block cursor-pointer" for="status_coming_soon">Coming soon</label>
+                                          </div> 
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!--Filter item-->
+                                    <div class="accordion-item">
+                                        <div class="accordion-header" id="filterSix">
+                                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#filterCollection" aria-expanded="true">
+                                              Collection
+                                          </button>
+                                        </div>
+                                        <div id="filterCollection" class="accordion-collapse collapse">
+                                          <div class="accordion-body">
+                                            <input type="text" class="form-control mb-3 form-control-sm" placeholder="Search collection">
+                                           <!--sCollection-->
+                                           <div class="form-check mt-3">
+                                              <input type="checkbox" class="form-check-input" name="collection1" id="collection1">
+                                              <label class="form-check-label d-flex align-items-center cursor-pointer" for="collection1">
+                                                <img src="assets/img/collection/1.png" width="24" height="24" class=" rounded-pill me-3 flex-shrink-0">
+                                                <span>Time traveler club
+                                                </span>
+                                              </label>
+                                          </div> 
+                                           <!--sCollection-->
+                                           <div class="form-check mt-3">
+                                            <input type="checkbox" class="form-check-input" name="collection2" id="collection2">
+                                            <label class="form-check-label d-flex align-items-center cursor-pointer" for="collection2">
+                                              <img src="assets/img/collection/5.gif" width="24" height="24" class=" rounded-pill me-3 flex-shrink-0">
+                                              <span>King_ray
+                                            </span>
+                                            </label>
+                                        </div>
+                                         <!--sCollection-->
+                                         <div class="form-check mt-3">
+                                            <input type="checkbox" class="form-check-input" name="collection3" id="collection3">
+                                            <label class="form-check-label d-flex align-items-center cursor-pointer" for="collection3">
+                                              <img src="assets/img/collection/2.png" width="24" height="24" class=" rounded-pill me-3 flex-shrink-0">
+                                              <span>Space Art
+                                            </span>
+                                            </label>
+                                        </div>
+                                         <!--sCollection-->
+                                         <div class="form-check mt-3">
+                                            <input type="checkbox" class="form-check-input" name="collection4" id="collection4">
+                                            <label class="form-check-label d-flex align-items-center cursor-pointer" for="collection4">
+                                              <img src="assets/img/collection/6.gif" width="24" height="24" class=" rounded-pill me-3 flex-shrink-0">
+                                              <span>Merge bird</span>
+                                            </label>
+                                        </div>
+                                         <!--sCollection-->
+                                         <div class="form-check mt-3">
+                                            <input type="checkbox" class="form-check-input" name="collection5" id="collection5">
+                                            <label class="form-check-label d-flex align-items-center cursor-pointer" for="collection5">
+                                              <img src="assets/img/collection/3.png" width="24" height="24" class=" rounded-pill me-3 flex-shrink-0">
+                                              <span>Jungle Book</span>
+                                            </label>
+                                        </div>
+                                         <!--sCollection-->
+                                         <div class="form-check mt-3">
+                                            <input type="checkbox" class="form-check-input" name="collection6" id="collection6">
+                                            <label class="form-check-label d-flex align-items-center cursor-pointer" for="collection6">
+                                              <img src="assets/img/collection/4.png" width="24" height="24" class=" rounded-pill me-3 flex-shrink-0">
+                                              <span>Mobland</span>
+                                            </label>
+                                        </div>
+                                         <!--sCollection-->
+                                         <div class="form-check mt-3">
+                                            <input type="checkbox" class="form-check-input" name="collection7" id="collection7">
+                                            <label class="form-check-label d-flex align-items-center cursor-pointer" for="collection7">
+                                              <img src="assets/img/collection/7.gif" width="24" height="24" class=" rounded-pill me-3 flex-shrink-0">
+                                              <span>Art space</span>
+                                            </label>
+                                        </div>
+                                        
+                                          </div>
+                                        </div>
+                                      </div>
+                                    <!--Filter item-->
+                                    <div class="accordion-item">
+                                      <div class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filterPrice" aria-expanded="false">
+                                          Price
+                                        </button>
+                                      </div>
+                                      <div id="filterPrice" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <div class="row g-2 align-items-center">
+                                                <div class="col-auto">
+                                                    <select class="form-control form-control-sm" data-choices='{"searchEnabled":false, "allowHTML":true,"itemSelectText":""}'>
+                                                        <option value="USD">USD</option>
+                                                        <option value="ETH">ETH</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" class="form-control px-2 form-control-sm">
+                                                </div>
+                                                <span class="col-auto">to</span>
+                                                <div class="col">
+                                                    <input type="text" class="form-control px-2 form-control-sm">
+                                                </div>
+                                            </div>
+                                            <div class="d-grid pt-2">
+                                                <button type="button" class="btn btn-sm btn-secondary">Apply</button>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!--Filter item-->
+                                    <div class="accordion-item">
+                                      <div class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filterCurrency" aria-expanded="false">
+                                          Currency
+                                        </button>
+                                      </div>
+                                      <div id="filterCurrency" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <!--Currency check-->
+                                        <div class="form-check mb-3">
+                                            <input type="checkbox" class="form-check-input" checked name="currency_eth" id="currency_eth">
+                                            <label class="form-check-label d-block cursor-pointer" for="currency_eth">ETH</label>
+                                        </div>
+        
+                                           <!--Currency check-->
+                                           <div class="form-check mb-3">
+                                            <input type="checkbox" class="form-check-input" name="currency_ape" id="currency_ape">
+                                            <label class="form-check-label d-block cursor-pointer" for="currency_ape">APE</label>
+                                        </div>
+                                          <!--Currency check-->
+                                          <div class="form-check mb-3">
+                                            <input type="checkbox" class="form-check-input" name="currency_cube" id="currency_cube">
+                                            <label class="form-check-label d-block cursor-pointer" for="currency_cube">CUBE</label>
+                                        </div>
+        
+                                           <!--Currency check-->
+                                           <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" name="currency_weth" id="currency_weth">
+                                            <label class="form-check-label d-block cursor-pointer" for="currency_weth">WETH</label>
+                                        </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                     <!--Filter item-->
+                                     <div class="accordion-item">
+                                        <div class="accordion-header">
+                                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#filterCategories" aria-expanded="true">
+                                              Categories
+                                          </button>
+                                        </div>
+                                        <div id="filterCategories" class="accordion-collapse collapse">
+                                          <div class="accordion-body">
+                                           <!--status check-->
+                                           <div class="form-check mb-3">
+                                              <input type="checkbox" class="form-check-input" name="category_premium" id="category_premium">
+                                              <label class="form-check-label d-block cursor-pointer" for="category_premium">Premium</label>
+                                          </div> 
+                                          <!--status check-->
+                                          <div class="form-check mb-3">
+                                              <input type="checkbox" class="form-check-input" name="category_art" id="category_art">
+                                              <label class="form-check-label d-block cursor-pointer" for="category_art">Art</label>
+                                          </div> 
+                                          <!--status check-->
+                                          <div class="form-check mb-3">
+                                            <input type="checkbox" class="form-check-input" name="category_sports" id="category_sports">
+                                            <label class="form-check-label d-block cursor-pointer" for="category_sports">Sports</label>
+                                        </div> 
+                                        <!--status check-->
+                                        <div class="form-check mb-3">
+                                            <input type="checkbox" class="form-check-input" name="category_photography" id="category_photography">
+                                            <label class="form-check-label d-block cursor-pointer" for="category_photography">Photography</label>
+                                        </div> 
+                                        <!--status check-->
+                                        <div class="form-check mb-3">
+                                            <input type="checkbox" class="form-check-input" name="category_gaming" id="category_gaming">
+                                            <label class="form-check-label d-block cursor-pointer" for="category_gaming">Gaming</label>
+                                        </div> 
+                                         <!--status check-->
+                                         <div class="form-check mb-3">
+                                            <input type="checkbox" class="form-check-input" name="category_collectibles" id="category_collectibles">
+                                            <label class="form-check-label d-block cursor-pointer" for="category_collectibles">Collectibles</label>
+                                        </div> 
+                                        <!--status check-->
+                                        <div class="form-check mb-3">
+                                            <input type="checkbox" class="form-check-input" name="category_music" id="category_music">
+                                            <label class="form-check-label d-block cursor-pointer" for="category_music">Music</label>
+                                        </div> 
+                                        <!--status check-->
+                                        <div class="form-check mb-3">
+                                            <input type="checkbox" class="form-check-input" name="domain_names" id="domain_names">
+                                            <label class="form-check-label d-block cursor-pointer" for="domain_names">Domain names</label>
+                                        </div> 
+                                        <!--status check-->
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" name="category_trading_cards" id="category_trading_cards">
+                                            <label class="form-check-label d-block cursor-pointer" for="category_trading_cards">Trading cards</label>
+                                        </div> 
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!--Filter item-->
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filterFileType" aria-expanded="false">
+                                            File type
+                                          </button>
+                                        </div>
+                                        <div id="filterFileType" class="accordion-collapse collapse">
+                                          <div class="accordion-body">
+                                              <!--Currency check-->
+                                          <div class="form-check mb-3">
+                                              <input type="checkbox" class="form-check-input" name="file_type_image" id="file_type_image">
+                                              <label class="form-check-label d-block cursor-pointer" for="file_type_image">Image</label>
+                                          </div>
+          
+                                             <!--Currency check-->
+                                             <div class="form-check mb-3">
+                                              <input type="checkbox" class="form-check-input" name="file_type_video" id="file_type_video">
+                                              <label class="form-check-label d-block cursor-pointer" for="file_type_video">Video</label>
+                                          </div>
+                                            <!--Currency check-->
+                                            <div class="form-check">
+                                              <input type="checkbox" class="form-check-input" name="file_type_audio" id="file_type_audio">
+                                              <label class="form-check-label d-block cursor-pointer" for="file_type_audio">Audio</label>
+                                          </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                            </div>
+                          </div>
+                    </div>
+                   </div>
+                   <div class="col-lg-8 col-xl-9 h-100 pt-lg-5 pb-5">
+                    <div class="mb-4 d-flex align-items-center justify-content-between">
+                       <span><small>Showing</small> <strong class="small">483,753 items</strong></span>
+                       <div>
+                        <button class="btn btn-white d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter" aria-controls="offcanvasFilter">
+                            <span class="material-icons align-middle me-2">filter_list</span> Adjust Filters
+                        </button>
+                       </div>
+                    </div>
+                    <!--Filter applied-->
+                    <div class="row mb-3">
+                        <div class="col-lg-9">
+                            <div class="d-flex mb-4 mb-lg-0 flex-wrap align-items-center gap-2">
+                                <!--Filter Applied-->
+                                <div class="badge py-2 lh-base ps-3 d-flex align-items-center bg-body-secondary text-body">
+                                  <span>For sale</span>  <span role="button" class="ms-2"><span class="material-icons align-middle fs-5">close</span></span>
+                                </div>
+                                <!--Filter Applied-->
+                                <button class="btn btn-link btn-sm">
+                                    <span>Clear All</span>
+                                  </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-8 text-end">
+                            <div class="ms-lg-auto">
+                                <select class="btn btn-secondary" data-choices='{"searchEnabled":false, "allowHTML":true,"itemSelectText":""}'>
+                                    <option value="Recently Listed">Recently Listed</option>
+                                    <option value="Ending Soon">Ending Soon</option>
+                                    <option value="Pricing - Low">Pricing - Low</option>
+                                    <option value="Pricing - high">Pricing - high</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!--NFT ITEMS LIST-->
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <!--NFT Item Card-->
+                            <div class="card p-1 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative rounded overflow-hidden">
+                                    <img src="assets/img/02.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark bg-opacity-50 rounded-3 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" data-countdown="2023/08/12"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/3.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-4">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <!--NFT Item Card-->
+                            <div class="card p-1 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative rounded overflow-hidden">
+                                    <img src="assets/img/01.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark bg-opacity-50 rounded-3 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" data-countdown="2023/07/12"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/5.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-4">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <!--NFT Item Card-->
+                            <div class="card p-1 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative rounded overflow-hidden">
+                                    <img src="assets/img/03.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark bg-opacity-50 rounded-3 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" data-countdown="2023/07/12"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/5.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-4">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <!--NFT Item Card-->
+                            <div class="card p-1 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative rounded overflow-hidden">
+                                    <img src="assets/img/04.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark bg-opacity-50 rounded-3 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" data-countdown="2023/07/12"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/3.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-4">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <!--NFT Item Card-->
+                            <div class="card p-1 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative rounded overflow-hidden">
+                                    <img src="assets/img/05.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark bg-opacity-50 rounded-3 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" data-countdown="2023/07/12"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/1.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-4">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <!--NFT Item Card-->
+                            <div class="card p-1 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative rounded overflow-hidden">
+                                    <img src="assets/img/06.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark bg-opacity-50 rounded-3 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" data-countdown="2023/07/12"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/2.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-4">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <!--NFT Item Card-->
+                            <div class="card p-1 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative rounded overflow-hidden">
+                                    <img src="assets/img/07.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark bg-opacity-50 rounded-3 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" data-countdown="2023/07/12"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/4.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-4">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <!--NFT Item Card-->
+                            <div class="card p-1 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative rounded overflow-hidden">
+                                    <img src="assets/img/08.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark bg-opacity-50 rounded-3 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" data-countdown="2023/07/12"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/5.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-4">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <!--NFT Item Card-->
+                            <div class="card p-1 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative rounded overflow-hidden">
+                                    <img src="assets/img/02.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark bg-opacity-50 rounded-3 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" data-countdown="2023/07/12"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/3.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-4">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="col-12 pt-2 text-center">
+                            <button class="btn bg-body-secondary border-0" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                                Loading...
+                              </button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        
+       
+        
+        <!--script-->
+        <script src="assets/js/theme.bundle.min.js"></script>
+        <!--Countdown plugin and jquery-->
+        <script src="assets/vendor/node_modules/js/jquery.min.js"></script>
+        <script src="assets/vendor/node_modules/js/jquery.countdown.min.js"></script>
+        <script>
+            $('[data-countdown]').each(function () {
+                var $this = $(this),
+                    finalDate = $(this).data('countdown');
+
+                $this.countdown(finalDate, function (event) {
+                    var totalHours = event.offset.totalDays * 24 + event.offset.hours;
+                    var $this = $(this).html(event.strftime(
+                        totalHours +
+                        '<small class="d-inline-block ms-1 me-2">Hr</small>' +
+                        '%M <small class="d-inline-block ms-1 me-2">Min</small>' +
+                        '%S <small class="d-inline-block ms-1 me-2">Sec</small>'));
+                });
+            });
+
+        </script>
+           <!--Select scripts-->
+           <script src="assets/vendor/node_modules/js/choices.min.js"></script>
+           <script>
+               var cSelect = document.querySelectorAll("[data-choices]");
+               cSelect.forEach(el => {
+                   const t = {
+                       ...el.dataset.choices ? JSON.parse(el.dataset.choices) : {},
+                       ...{
+                           classNames: {
+                               containerInner: el.className,
+                               input: "form-control",
+                               inputCloned: "form-control-sm",
+                               listDropdown: "dropdown-menu",
+                               itemChoice: "dropdown-item",
+                               activeState: "show",
+                               selectedState: "active"
+                           }
+                       }
+                   }
+                   new Choices(el, t)
+               });
+   
+           </script>
+    </body>
+
+</html>

@@ -1,0 +1,1245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    <!--Swiper slider-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+    <!--Icons-->
+    <link rel="stylesheet" href="assets/fonts/bootstrap-icons/bootstrap-icons.min.css">
+    <!--Iconsmind Icons-->
+    <link rel="stylesheet" href="assets/fonts/iconsmind/iconsmind.css">
+
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <!--Main theme style-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+     <!--Preloader Spinner-->
+     <div class="spinner-loader bg-primary text-white">
+        <span class="relative flex h-16 w-16">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-16 w-16 bg-indigo-500"></span>
+          </span>
+    </div>
+
+    <!--Header Start-->
+    <header class="z-fixed pt-lg-3 z-[999] pt-4 absolute left-0 top-0 w-full header-boxed header-sticky">
+        <div class="container text-white relative hidden lg:block">
+            <div class="flex flex-wrap -mx-3">
+                <div class="w-full px-3 lg:md-8/12 ml-auto">
+                    <div class="flex justify-end">
+                        <a href="tel:+011234567890"
+                            class="text-white inline-block relative text-sm link-hover-underline mr-4">
+                            <i class="bi bi-phone me-1"></i>
+                            +01 1234 567 890
+                        </a>
+                        <a href="mailto:consult@company.com"
+                            class="text-white text-sm inline-block relative link-hover-underline">
+                            <i class="bi bi-envelope me-1"></i>
+                            consult@company.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-boxed">
+            <div class="container relative flex flex-wrap items-center justify-center relative">
+
+                <nav
+                    class="navbar navbar-expand-lg flex flex-wrap items-center top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+
+                    <!--Logo-->
+                    <a class="navbar-brand relative w-24 block" href="index.html">
+                        <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+                        <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+                    </a>
+                    <div class="flex items-center shrink-0 ml-auto lg:order-last">
+                        <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                                <i></i>
+                            </span>
+                        </button>
+                        <div class="nav-item mr-4 lg:mr-0">
+                            <a href="#" class="btn bg-pink-500 hover:bg-pink-600 text-white">Get started
+                            </a>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+                        id="mainNavbarTheme">
+                        
+                        <!--begin:Navbar items-->
+                        <ul class="navbar-nav flex flex-col lg:flex-row bg-white dark:bg-black lg:!bg-transparent w-full p-2 lg:p-0 shadow-lg lg:shadow-none">
+
+                          <!--begin:landings-->
+                          <li class="nav-item group dropdown relative">
+                            <a class="nav-link dropdown-toggle active" href="index.html" role="button"
+                              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Landings
+                              <!--:Arrow:-->
+                              <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                                <i class="bi bi-chevron-down"></i>
+                              </span>
+                            </a>
+                            <div class="dropdown-menu !p-0 overflow-hidden lg:w-[44rem]">
+                              <div class="overflow-hidden rounded-end">
+                                <div class="flex flex-wrap mx-0">
+                                  <div class="w-full lg:w-2/5 px-3 relative">
+                                    <div class="py-1 lg:py-3 lg:flex flex-col">
+                                      <a href="index.html" class="dropdown-item">Welcome</a>
+                                      <a href="index-landing-classic.html" class="dropdown-item">Classic Landing</a>
+                                      <a href="index-landing-creative.html" class="dropdown-item">Creative</a>
+                                      <a href="index-landing-agency.html" class="dropdown-item">Agency</a>
+                                      <a href="index-landing-business.html" class="dropdown-item">Business</a>
+                                      <a href="index-landing-startup.html" class="dropdown-item">Startup</a>
+                                      <a href="index-landing-consultancy.html" class="dropdown-item">Consultancy</a>
+                                      <a href="index-landing-saas-webapp.html" class="dropdown-item">Saas WebApp</a>
+                                      <a href="index-landing-personal-portfolio.html" class="dropdown-item">Personal Portfolio</a>
+                                    </div>
+                                  </div>
+                                  <!--/.col-->
+                                  <div class="w-full lg:w-3/5 hidden lg:block rounded-end overflow-hidden px-0 relative bg-no-repeat bg-cover bg-center"
+                                    style="background-image: url('assets/img/960x1140/3.jpg')">
+                                    <div class="absolute rounded-r-lg w-full h-full top-0 left-0 bg-gradient-to-tr from-indigo-500 to-purple-500 opacity-90">
+                                    </div>
+                                    <div
+                                      class="p-4 flex flex-col items-center text-center z-[1] justify-center h-full py-5 relative text-white">
+                                      <h5 class="text-4xl lg:text-5xl font-medium mb-4">Build stunning website ease</h5>
+                                      <p class="mb-5 text-white/75">Over 7000+ users & 7+ years of regular updates</p>
+                                      <a href="#!" class="btn btn-lg bg-white text-gray-700 hover:text-indigo-500">Purchase Now</a>
+                                    </div>
+                                  </div>
+                                  <!--/.col-->
+                                </div>
+                                <!--/.row-->
+                              </div>
+                            </div>
+                          </li>
+                          <!--end:landings-->
+
+                          <!--begin:portfolio-->
+                          <li class="nav-item group dropdown relative">
+                            <a class="nav-link dropdown-toggle " href="#" role="button"
+                              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">Portfolio
+                              <!--:Arrow:-->
+                              <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                                <i class="bi bi-chevron-down"></i>
+                              </span>
+                            </a>
+                            <div class="dropdown-menu">
+                              <div class="dropend">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                                  Classic <i class="bi bi-chevron-right ml-3 text-sm"></i></a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="portfolio-classic-2-col.html">2 Col</a>
+                                  <a class="dropdown-item" href="portfolio-classic-3-col.html">3 Col</a>
+                                  <a class="dropdown-item" href="portfolio-classic-4-col.html">4 Col</a>
+                                  <a class="dropdown-item" href="portfolio-classic-masonry.html">Masonry</a>
+                                </div>
+                              </div>
+                              <div class="dropend">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Grid
+                                  Overlay <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="portfolio-grid-overlay-2-col.html">2 Col</a>
+                                  <a class="dropdown-item" href="portfolio-grid-overlay-3-col.html">3 Col</a>
+                                  <a class="dropdown-item" href="portfolio-grid-overlay-4-col.html">4 Col</a>
+                                  <a class="dropdown-item" href="portfolio-grid-overlay-masonry.html">Masonry</a>
+                                </div>
+                              </div>
+                              <div class="dropend">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Full
+                                  width <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="portfolio-full-width-3-col.html">3 Col</a>
+                                  <a class="dropdown-item" href="portfolio-full-width-4-col.html">4 Col</a>
+                                  <a class="dropdown-item" href="portfolio-full-width-masonry.html">Masonry</a>
+                                </div>
+                              </div>
+                              <div class="dropend">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Project
+                                  Layouts <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="portfolio-case-study.html">Case Study</a>
+                                  <a class="dropdown-item" href="portfolio-single-classic.html">classic</a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <!--end:portfolio-->
+
+                          <!--begin:blog-->
+                          <li class="nav-item group dropdown relative">
+                            <a class="nav-link dropdown-toggle " href="#" role="button"
+                              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">Blog
+                              <!--:Arrow:-->
+                              <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                                <i class="bi bi-chevron-down"></i>
+                              </span>
+                            </a>
+                            <div class="dropdown-menu">
+                              <div class="dropend">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Blog
+                                  Layouts <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="blog-classic.html">Blog classic</a>
+                                  <a class="dropdown-item" href="blog-standard.html">Blog standard</a>
+                                  <a class="dropdown-item" href="blog-masonry.html">Blog Masonry</a>
+                                  <a class="dropdown-item" href="blog-sidebar.html">Blog Sidebar</a>
+                                  <a class="dropdown-item" href="blog-magazine.html">Blog magazine</a>
+                                </div>
+                              </div>
+                              <div class="dropend">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Article
+                                  Layouts <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="blog-article-basic.html">Basic</a>
+                                  <a class="dropdown-item" href="blog-article-video.html">Video</a>
+                                  <a class="dropdown-item" href="blog-article-gallery.html">Gallery</a>
+                                  <a class="dropdown-item" href="blog-article-parallax.html">Parallax
+                                    Header</a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <!--end:blog-->
+
+                          <!--begin:pages-->
+                          <li class="nav-item group dropdown relative">
+                            <a class="nav-link dropdown-toggle " href="#" role="button"
+                              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">Pages
+                              <!--:Arrow:-->
+                              <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                                <i class="bi bi-chevron-down"></i>
+                              </span>
+                            </a>
+                            <div class="dropdown-menu">
+                              <div class="dropend">
+                                <a class="dropdown-item dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#">
+                                  About <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="page-about.html">About Company</a>
+                                  <a class="dropdown-item" href="page-about-modern.html">About modern</a>
+                                </div>
+                              </div>
+                              <div class="dropend">
+                                <a class="dropdown-item dropdown-toggle" href="#" aria-expanded="false" data-bs-toggle="dropdown">
+                                  Services <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="page-services.html">Services</a>
+                                  <a class="dropdown-item" href="page-services-modern.html">Services
+                                    Modern</a>
+                                </div>
+                              </div>
+                              <div class="dropend">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                                  Career <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="page-careers.html">careers</a>
+                                  <a class="dropdown-item" href="page-career-single.html">career single</a>
+                                </div>
+                              </div>
+                              <div class="dropend">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                                  Customers <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="page-customers.html">Customers</a>
+                                  <a class="dropdown-item" href="page-customer-story.html">Customer Story</a>
+                                </div>
+                              </div>
+                              <div class="dropend">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                                  Account <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="page-profile.html">Profile</a>
+                                  <a class="dropdown-item" href="page-account-signin.html">Sign In</a>
+                                  <a class="dropdown-item" href="page-account-signin-alt.html">Sign In alt</a>
+                                  <a class="dropdown-item" href="page-account-signup.html">Sign Up</a>
+                                  <a class="dropdown-item" href="page-account-signup-alt.html">Sign Up Alt</a>
+                                  <a class="dropdown-item" href="page-account-forget-password.html">Forget Password</a>
+                                </div>
+                              </div>
+                              <div class="dropend">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                                  Misc <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="page-misc-error-404.html">Error 404</a>
+                                  <a class="dropdown-item" href="page-misc-coming-soon.html">Coming Soon</a>
+                                  <a class="dropdown-item" href="page-misc-maintenance.html">Maintenance</a>
+                                  <a class="dropdown-item" href="page-misc-success-message.html">Success Message</a>
+                                  <a class="dropdown-item" href="page-misc-policy.html">Privacy Policy</a>
+                                </div>
+                              </div>
+                              <a class="dropdown-item" href="page-pricing.html">Pricing Plans</a>
+                              <a class="dropdown-item" href="page-faq.html">Faqs</a>
+                              <a class="dropdown-item" href="page-knowladge-base.html">Knowladge Base</a>
+                              <div class="dropend">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                                  Contact <i class="bi bi-chevron-right ml-3 text-sm"></i></a></a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="page-contact-us-1.html">Contact Us 1</a>
+                                  <a class="dropdown-item" href="page-contact-us-2.html">Contact Us 2</a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <!--end:pages-->
+
+                          <!--begin:components-->
+                          <li class="nav-item group dropdown static">
+                            <a class="nav-link dropdown-toggle " href="#" role="button"
+                              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components
+                              <!--:Arrow:-->
+                              <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                                <i class="bi bi-chevron-down"></i>
+                              </span>
+                            </a>
+                            <div class="dropdown-menu left-0 top-full w-full p-0">
+                             <div class="dropdown-scroll-lg lg:p-4">
+                              <div class="flex flex-wrap mx-lg-0 justify-content-lg-around">
+                                <!--Dropdown-grid-Col-->
+                                <div class="w-full px-3 lg:w-1/4">
+                                  <div class="h-full">
+                                    <div>
+                                      <a class="dropdown-item" href="component-accordion.html">Accordion</a>
+                                      <a class="dropdown-item" href="component-alerts.html">Alerts</a>
+                                      <a class="dropdown-item" href="component-animations.html">Animations</a>
+                                      <a class="dropdown-item" href="component-avatar.html">Avatar</a>
+                                      <a class="dropdown-item" href="component-breadcrumb.html">Breadcrumb</a>
+                                      <a class="dropdown-item" href="component-badge.html">Badge</a>
+                                      <a class="dropdown-item" href="component-blockquote.html">Blockquote</a>
+                                      <a class="dropdown-item" href="component-buttons.html">Buttons</a>
+                                      <a class="dropdown-item" href="component-card-image.html">card image</a>
+                                      <a class="dropdown-item" href="component-card-icon.html">card icon</a>
+                                      <a class="dropdown-item" href="component-call-to-action.html">Call to action</a>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!--Dropdown-grid-Col-->
+                                <div class="w-full px-3 lg:w-1/4">
+                                  <div class="h-full">
+                                    <div>
+                                      <a class="dropdown-item" href="component-colors.html">Colors</a>
+                                      <a class="dropdown-item" href="component-collapse.html">Collapse</a>
+                                      <a class="dropdown-item" href="component-counteup.html">Countup</a>
+                                      <a class="dropdown-item" href="component-count-down.html">Countdown</a>
+                                      <a class="dropdown-item" href="component-clients.html">Clients</a>
+                                      <a class="dropdown-item" href="component-dropdowns.html">Dropdown</a>
+                                      <a class="dropdown-item" href="component-form-components.html">Form components</a>
+                                      <a class="dropdown-item" href="component-grid-system.html">Grid system</a>
+                                      <a class="dropdown-item" href="component-icons-social-brands.html">Icons Social</a>
+                                      <a class="dropdown-item" href="component-icons-bootstrap.html">Icons Bootstrap</a>
+                                      <a class="dropdown-item" href="component-iconsmind.html">Iconsmind</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--Dropdown-grid-Col-->
+                                <div class="w-full px-3 lg:w-1/4">
+                                  <div class="h-full">
+                                    <div>
+                                      <a class="dropdown-item" href="component-isotope-filter.html">Isotope filter</a>
+                                      <a class="dropdown-item" href="component-lightbox.html">Lightbox</a>
+                                      <a class="dropdown-item" href="component-list.html">List</a>
+                                      <a class="dropdown-item" href="component-link.html">Link</a>
+                                      <a class="dropdown-item" href="component-modal.html">Modal</a>
+                                      <a class="dropdown-item" href="component-masonry.html">Masonry</a>
+                                      <a class="dropdown-item" href="component-map-box.html">Map</a>
+                                      <a class="dropdown-item" href="component-navs.html">Navs</a>
+                                      <a class="dropdown-item" href="component-offcanvas.html">Offcanvas</a>
+                                      <a class="dropdown-item" href="component-pagination.html">Pagination</a>
+                                      <a class="dropdown-item" href="component-progress.html">Progress</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--Dropdown-grid-Col-->
+                                <div class="w-full px-3 lg:w-1/4">
+                                  <div class="h-full">
+                                    <div>
+                                      <a class="dropdown-item" href="component-page-header.html">Page Header</a>
+                                      <a class="dropdown-item" href="component-parallax.html">Parallax</a>
+                                      <a class="dropdown-item" href="component-pricing.html">Pricing</a>
+                                      <a class="dropdown-item" href="component-tabbbed-content.html">Tabbed Content</a>
+                                      <a class="dropdown-item" href="component-tooltip.html">Tooltip</a>
+                                      <a class="dropdown-item" href="component-testimonials.html">Testimonials</a>
+                                      <a class="dropdown-item" href="component-timeline.html">Timeline</a>
+                                      <a class="dropdown-item" href="component-typed-text.html">Typed Text</a>
+                                      <a class="dropdown-item" href="component-typography.html">Typography</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                             </div>
+                            </div>
+                          </li>
+                          <!--end:components-->
+
+                          <!--begin:features-->
+                          <li class="nav-item group dropdown static">
+                            <a class="nav-link dropdown-toggle " href="#" role="button"
+                              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Features
+                              <!--:Arrow:-->
+                              <span class="dropdown-arrow lg:group-hover:rotate-180 text-xs transition-all inline-block ml-1">
+                                <i class="bi bi-chevron-down"></i>
+                              </span>
+                            </a>
+                            <div class="dropdown-menu left-0 p-0 w-full">
+                              <div class="dropdown-scroll-lg lg:p-4">
+                                <div class="flex flex-wrap mx-lg-0">
+                                  <div class="w-full lg:w-2/5 px-3 mb-4 lg:mb-0">
+                                    <h5 class="text-xs pl-4 text-gray-400 mb-3 pt-3">
+                                      Header & footers Styles <span class="bg-blue-500 text-white text-xs leading-tight inline-block px-2 py-1 ml-2 rounded-full">15+</span></h5>
+                                    <div class="flex flex-wrap -mx-3 g-0">
+                                      <div class="w-full px-3 lg:w-1/2">
+                                        <a href="header-default.html" class="dropdown-item">Default</a>
+                                        <a href="header-info-bar.html" class="dropdown-item">info bar</a>
+                                        <a href="header-no-navbar.html" class="dropdown-item">No Navbar</a>
+                                        <a href="header-sticky-down.html" class="dropdown-item">Sticky down</a>
+                                        <a href="header-sticky-up.html" class="dropdown-item">Sticky up</a>
+                                        <a href="header-sticky-boxed.html" class="dropdown-item">Sticky Boxed</a>
+                                        <a href="header-search-bar.html" class="dropdown-item">Search</a>
+                                      </div>
+                                      <!--/.col-sm-6-->
+                                      <div class="w-full px-3 lg:w-1/2">
+                                        <div class="text-xs pl-4 text-gray-400 mb-3 pt-3">Footer Styles <span class="badge ms-2 bg-info">9+</span></div>
+                                        <a href="footer-1.html" class="dropdown-item">Footer 1</a>
+                                        <a href="footer-2.html" class="dropdown-item">Footer 2</a>
+                                        <a href="footer-3.html" class="dropdown-item">Footer 3</a>
+                                        <a href="footer-4.html" class="dropdown-item">Footer 4</a>
+                                        <a href="footer-5.html" class="dropdown-item">Footer 5</a>
+                                        <a href="footer-6.html" class="dropdown-item">Footer 6</a>
+                                        <a href="footer-7.html" class="dropdown-item">Footer 7</a>
+                                      </div>
+                                    </div>
+                                    <!--/.row-->
+                                  </div>
+                                  <!--/.End col-->
+                                  <div class="w-full lg:w-2/5 px-3 mb-4 lg:mb-0">
+                                    <h5 class="text-xs pl-4 text-gray-400 mb-3 pt-3">
+                                      Hero Covers Slider</h5>
+                                    <div class="flex flex-wrap -mx-3">
+                                      <div class="w-full px-3 lg:w-1/2">
+                                        <a href="hero-simple.html" class="dropdown-item">Hero Simple</a>
+                                        <a href="hero-parallax.html" class="dropdown-item">Hero Parallax</a>
+                                        <a href="hero-parallax-element.html" class="dropdown-item"> Parallax Element</a>
+                                        <a href="hero-fullscreen.html" class="dropdown-item">Hero Fullscreen</a>
+                                        <a href="hero-newsletter.html" class="dropdown-item">Hero Newsletter</a>
+                                        <a href="hero-signup.html" class="dropdown-item">Form SignUp</a>
+                                        <a href="hero-pricing.html" class="dropdown-item">Form Pricing</a>
+                                        <a href="hero-video-button.html" class="dropdown-item">Video popup</a>
+                                        <a href="hero-youtube-video.html" class="dropdown-item">Youtube Video</a>
+                                        <a href="hero-vimeo-video.html" class="dropdown-item">Vimeo Video</a>
+                                        <a href="hero-html5-video.html" class="dropdown-item">HTML5 Video</a>
+                                      </div>
+                                      <div class="w-full px-3 lg:w-1/2">
+                                        <a href="hero-bg-shape.html" class="dropdown-item">BG Shape</a>
+                                        <a href="hero-shape-image.html" class="dropdown-item">Shape Image</a>
+                                        <a href="hero-tiles.html" class="dropdown-item">Image tiles</a>
+                                        <a href="hero-media-player.html" class="dropdown-item">Media Player </a>
+                                        <a href="hero-typed-text.html" class="dropdown-item">Typed Text</a>
+                                        <a href="hero-slider-swiper.html" class="dropdown-item">Swiper slider</a>
+                                        <a href="hero-slider-master.html" class="dropdown-item">Master Slider</a>
+                                        <a href="hero-slider-master-alt.html" class="dropdown-item">Master Slider Alt</a>
+                                        <a href="hero-particles.html" class="dropdown-item">Particles</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--/.End col-->
+  
+                                  <div class="w-full lg:w-1/5 px-3 mb-4 lg:mb-0">
+                                    <h5 class="text-xs pl-4 text-gray-400 mb-3 pt-3">
+                                      Others</h5>
+                                    <a class="dropdown-item" target="_blank" href="layout-blank.html">layout Blank</a>
+           
+                
+                                        <a href="feature-sticky-cards.html" class="dropdown-item">Sticky Cards
+                                          <span class="inline-block ms-2 text-xs px-2 py-1 leading-tight bg-amber-500 text-white rounded-full">New</span>
+                                        </a>
+                                        <a href="feature-image-reveal.html" class="dropdown-item">Image Reveal
+                                          <span class="inline-block ms-2 text-xs px-2 py-1 leading-tight bg-amber-500 text-white rounded-full">New</span>
+                                        </a>
+                                  </div>
+                                  <!--/.End col-->
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <!--end:features-->
+                        </ul>
+                        <!--end:Navbar items-->
+
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <!--begin:Main Hero-->
+        <section class="relative overflow-hidden bg-black jarallax" data-speed=".2">
+            <img src="assets/img//backgrounds/bg2.jpg" alt="" class="jarallax-img opacity-25">
+
+            <!--Divider shape-->
+            <svg class="absolute left-0 bottom-0 text-white dark:text-black" preserveAspectRatio="none" width="100%"
+                height="64" viewBox="0 0 1460 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M122 22.8261L0 0V120H1460V0L1338 22.8261C1217 44.1304 973 88.2609 730 88.2609C487 88.2609 243 44.1304 122 22.8261Z"
+                    fill="currentColor" />
+            </svg>
+            <div class="container pt-24 lg:pt-48 lg:pb-64 pb-36 relative z-[1]">
+                <div class="flex flex-wrap -mx-3">
+                    <div class="xl:w-9/12 lg:w-10/12 px-3 mx-auto text-center text-white">
+                        <h1 class="text-5xl lg:text-7xl font-medium" data-text-split>
+                            Strategic Guidance for Sustainable Success
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end:Hero-->
+        <!--begin:Section Newsletter signup-->
+        <section class="relative">
+            <div class="container">
+                <div
+                    class="py-7 px-4 lg:py-9 lg:px-7 lg:w-10/12 mx-auto overflow-hidden bg-white dark:bg-black rounded-xl relative -mt-24 lg:-mt-36 z-[1] justify-center items-end">
+                    <div class="relative">
+                        <div class="mb-3">
+                            <h2 class="mb-0 text-3xl font-medium">Get a free quote
+                            </h2>
+                        </div>
+                        <!--Phone-->
+                        <p class="mb-5 text-lg"><i class="bi bi-phone me-2 align-middle text-orange-500"></i>
+                            +01 555 3456 382</p>
+
+                        <!--Request form-->
+                        <form>
+                            <div class="flex flex-wrap -mx-2 justify-center w-full">
+                                <div class="w-full px-2 lg:w-4/12 md:w-6/12 mb-3 lg:mb-0">
+                                    <input type="text" placeholder="Name" class="input w-full">
+                                </div>
+                                <div class="w-full px-2 lg:w-4/12 md:w-6/12 mb-3 lg:mb-0">
+                                    <input type="text" placeholder="Phone" class="input w-full">
+                                </div>
+                                <div class="w-full px-2 lg:w-4/12">
+                                    <button type="button"
+                                        class="btn bg-indigo-500 w-full text-white hover:bg-indigo-600">Send
+                                        request</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/end:Section Newsletter signup-->
+
+        <!--begin:Section Features-->
+        <section class="relative overflow-hidden">
+            <div class="container py-16 lg:py-24">
+                <div class="flex flex-wrap -mx-3 mb-5 justify-between items-end">
+                    <div class="w-full px-3 lg:w-6/12 mb-5 lg:mb-0">
+                        <h3 class="text-4xl lg:text-5xl font-medium" data-text-split>More revenue<br>
+                            Better margin</h3>
+                    </div>
+                    <div class="w-full px-3 lg:w-5/12">
+                        <p class="mb-0 text-lg text-gray-600 dark:text-gray-300">
+                            Convert your ideas into success with our business strategy Lorem ipsum is placeholder
+                            text commonly used in the graphic, print, and publishing
+                            industries for previewing layouts and visual mockups.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-3">
+                    <div class="w-full px-3 md:w-6/12 xl:w-3/12 mt-9">
+                        <div
+                            class="flex items-center justify-center mb-6 w-16 h-16 text-xl rounded-full text-2xl bg-indigo-500 text-white">
+                            <i class="bi bi-check relative"></i>
+                        </div>
+                        <h5 class="mb-4 text-xl font-medium">Trainings & seminars</h5>
+                        <p class="mb-0 text-gray-600 dark:text-gray-300">
+                            Lorem ipsum is placeholder text commonly used in the graphic and publish
+                            industries for layouts and visual mockups.
+                        </p>
+                    </div>
+                    <div class="w-full px-3 md:w-6/12 xl:w-3/12 mt-9">
+                        <div
+                            class="flex items-center justify-center mb-6 w-16 h-16 text-xl rounded-full text-2xl bg-indigo-500 text-white">
+                            <i class="bi bi-check relative"></i>
+                        </div>
+                        <h5 class="mb-4 text-xl font-medium">Coaching</h5>
+                        <p class="mb-0 text-gray-600 dark:text-gray-300">
+                            Lorem ipsum is placeholder text commonly used in the graphic and publish
+                            industries for layouts and visual mockups.
+                        </p>
+                    </div>
+                    <div class="w-full px-3 md:w-6/12 xl:w-3/12 mt-9">
+                        <div
+                            class="flex items-center justify-center mb-6 w-16 h-16 text-xl rounded-full text-2xl bg-indigo-500 text-white">
+                            <i class="bi bi-check relative"></i>
+                        </div>
+                        <h5 class="mb-4 text-xl font-medium">Business consulting</h5>
+                        <p class="mb-0 text-gray-600 dark:text-gray-300">
+                            Lorem ipsum is placeholder text commonly used in the graphic and publish
+                            industries for layouts and visual mockups.
+                        </p>
+                    </div>
+                    <div class="w-full px-3 md:w-6/12 xl:w-3/12 mt-9">
+                        <div
+                            class="flex items-center justify-center mb-6 w-16 h-16 text-xl rounded-full text-2xl bg-indigo-500 text-white">
+                            <i class="bi bi-check relative"></i>
+                        </div>
+                        <h5 class="mb-4 text-xl font-medium">Creative ideas</h5>
+                        <p class="mb-0 text-gray-600 dark:text-gray-300">
+                            Lorem ipsum is placeholder text commonly used in the graphic and publish
+                            industries for layouts and visual mockups.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/end:Section Features-->
+
+        <!--begin:Section Features-->
+        <section class="relative overflow-hidden">
+            <!--background-->
+            <div class="absolute right-0 top-0 w-8/12 h-full bg-pink-500/10 rounded-tl-2xl"></div>
+            <div class="container py-16 lg:py-24 relative z-[1]">
+                <div class="flex flex-wrap -mx-3 items-center">
+                    <div class="order-last px-3 lg:w-6/12 xl:pl-12 xl:ml-auto">
+                        <h6 class="mb-5 text-xl font-medium text-gray-600 dark:text-gray-400" data-text-split>Why consult with us?
+                        </h6>
+                         <h2 class="text-4xl lg:text-5xl font-medium leading-[1] mb-7" data-text-split>
+                                A Better future
+                            </h2>
+                        <p class="mb-7 text-lg text-gray-600 dark:text-gray-300">
+                            There are combined alignment methods
+                            when several types of alignment together
+                            are used in one composition.
+                        </p>
+                        <div class="flex flex-wrap -mx-3 mb-7">
+                            <div class="w-full px-3 md:w-6/12">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="flex mb-4">
+                                        <div class="mr-3">
+                                            <i class="bi bi-check text-gray-400 text-xl"></i>
+                                        </div>
+                                        <p class="mb-0">
+                                            Aenean eu leo quam ornare curabitur blandit tempus.
+                                        </p>
+                                    </li>
+                                    <li class="flex mb-4 md:mb-0">
+                                        <div class="mr-3">
+                                            <i class="bi bi-check text-gray-400 text-xl"></i>
+                                        </div>
+                                        <p class="mb-0">
+                                            Aenean eu leo quam ornare curabitur blandit tempus.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--/column -->
+                            <div class="w-full px-3 md:w-6/12">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="flex mb-4">
+                                        <div class="mr-3">
+                                            <i class="bi bi-check text-gray-400 text-xl"></i>
+                                        </div>
+                                        <p class="mb-0">
+                                            Aenean eu leo quam ornare curabitur blandit tempus.
+                                        </p>
+                                    </li>
+                                    <li class="flex mb-0">
+                                        <div class="mr-3">
+                                            <i class="bi bi-check text-gray-400 text-xl"></i>
+                                        </div>
+                                        <p class="mb-0">
+                                            Aenean eu leo quam ornare curabitur blandit tempus.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--/column -->
+                        </div>
+                        <div>
+                            <a href="#" class="link-underline">
+                                Explore Services
+                                <i class="bi bi-arrow-right text-lg leading-[1] align-middle ms-1"></i>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full px-3 lg:w-6/12 xl:w-5/12 mb-12 lg:mb-0 order-1">
+                        <div class="relative" data-animation="fadeInLeft">
+                            <!--feature image-->
+                            <img class="max-w-full relative rounded-3xl shadow-lg" alt=""
+                                src="assets/img/960x1140/2.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/end:Section Features-->
+
+        <!--begin:Section Process-->
+        <section class="relative overflow-hidden bg-gradient-to-tl from-indigo-500 to-purple-500 text-white">
+
+            <div class="container py-16 lg:py-24 relative z-[1]">
+                <div class="flex flex-wrap -mx-3 mb-7">
+                    <div class="w-full px-3 lg:w-8/12 mx-auto text-center">
+                        <div class="mb-3">
+                            <h6 class="mb-0 text-white/75">Data-driven methodologies.
+                            </h6>
+                        </div>
+                        <div class="mb-3">
+                            <h2 data-text-split class="mb-0 text-4xl lg:text-5xl font-medium">Our work
+                                process
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-3">
+                    <div class="w-full px-3 lg:px-6 lg:w-4/12 mb-7 lg:mb-0">
+                        <div class="relative">
+                            <span class="block absolute left top-0 text-9xl font-medium opacity-10">01</span>
+                            <div class="relative pt-4 pt-lg-6">
+                                <h5 class="mb-4 text-xl font-medium">Collaboration</h5>
+                                <p class="mb-0 opacity-75 lg:w-10/12">
+                                    Lorem ipsum dolor sit amet elit, sed do eiusmod tempor
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    ullamco laboris nisi ut aliquip commodo consequat.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-3 lg:px-6 lg:w-4/12 mb-7 lg:mb-0">
+                        <div class="relative">
+                            <span class="block absolute left top-0 text-9xl font-medium opacity-10">02</span>
+                            <div class="relative pt-4 pt-lg-6">
+                                <h5 class="mb-4 text-xl font-medium">Execution</h5>
+                                <p class="mb-0 opacity-75 lg:w-10/12">
+                                    Lorem ipsum dolor sit amet elit, sed do eiusmod tempor
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    ullamco laboris nisi ut aliquip commodo consequat.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-3 lg:px-6 lg:w-4/12">
+                        <div class="relative">
+                            <span class="block absolute left top-0 text-9xl font-medium opacity-10">03</span>
+                            <div class="relative pt-4 pt-lg-6">
+                                <h5 class="mb-4 text-xl font-medium">Financial Intelligence</h5>
+                                <p class="mb-0 opacity-75 lg:w-10/12">
+                                    Lorem ipsum dolor sit amet elit, sed do eiusmod tempor
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    ullamco laboris nisi ut aliquip commodo consequat.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/end:Section Process-->
+
+        <!--begin:Section Values-->
+        <section class="relative overflow-hidden">
+            <div class="container py-16 lg:py-24 relative z-[1]">
+                <div class="flex flex-wrap -mx-3 items-center">
+                    <div class="mx-auto w-full px-3 lg:w-6/12 xl:w-5/12 order-last lg:order-1">
+                        <div class="mb-6">
+                            <div class="flex p-4 lg:p-7 border-l-4 border-pink-500 rounded-xl shadow-lg">
+                                <div class="mr-6">
+                                    <i class="icon-Light-BulbLeaf text-4xl text-pink-500"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <h5 class="mb-2 text-xl font-medium">Our Values
+                                    </h5>
+                                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                        There are combined alignment methods –
+                                        when several types of alignment together
+                                        are used in one composition.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex p-4 lg:p-7 border-l-4 border-indigo-500 rounded-xl shadow-lg">
+                                <div class="mr-6">
+                                    <i class="icon-Line-Chart2 text-4xl text-indigo-500"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <h5 class="mb-3 text-xl font-medium">Business Growth
+                                    </h5>
+                                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                        There are combined alignment methods –
+                                        when several types of alignment together
+                                        are used in one composition.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-end pt-7">
+                            <a href="#" class="link-underline">
+                                Explore Services
+                                <i class="bi bi-arrow-right text-xl leading-[1] align-middle ms-1"></i>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full px-3 lg:w-6/12 order-1 lg:order-last mb-7 lg:mb-0">
+                        <div class="relative" data-animation="fadeInDown">
+                            <!--feature image-->
+                            <img class="max-w-full rounded-3xl shadow-lg relative" alt=""
+                                src="assets/img/960x1140/3.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/end:Section Values-->
+
+        <!--begin:Section Blog-->
+        <section class="overflow-hidden relative">
+
+            <!--Background-->
+            <div class="absolute left-0 top-0 w-full h-1/2 bg-amber-500/20 rounded-2xl">
+            </div>
+            <div class="container py-16 lg:py-24 relative">
+                <div class="flex flex-wrap -mx-3 mb-9 items-center">
+                    <div class="md:w-8/12 w-full px-3">
+                        <div class="mb-5 md:mb-0">
+                            <h3 class="splitting-down text-4xl lg:text-5xl font-medium" data-text-split>Latest insights
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="md:w-4/12 w-full px-3">
+                        <div class="relative flex items-center md:justify-end gap-2">
+                            <div
+                                class="swiperBlog-button-prev swiper-prev w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-lg">
+                            </div>
+                            <div
+                                class="swiperBlog-button-next swiper-next w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-lg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-container swiper-blog overflow-visible">
+                    <div class="swiper-wrapper">
+
+                        <!--Slide-->
+                        <div class="swiper-slide">
+                            <!--Article-->
+                            <article
+                                class="rounded-xl p-2 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black hover:shadow-xl group transition-all hover:-translate-y-2 transition-all duration-300 relative">
+                                <div class="block rounded-xl overflow-hidden">
+                                    <img src="assets/img/960x640/2.jpg" alt="" class="max-w-full relative">
+                                </div>
+                                <div class="relative p-4 lg:p-5">
+                                    <div class="flex justify-start w-full pb-3 items-center">
+                                        <small class="text-indigo-500 text-sm">: Startup</small>
+                                    </div>
+                                    <div class="link-multiline relative text-xl font-medium inline">
+                                        How to gain your first B2B customers in the market
+                                    </div>
+                                </div>
+                                <!--:Cover link:-->
+                                <a href="#" class="absolute inset-0"></a>
+                            </article>
+                        </div>
+                        <!--Slide-->
+                        <div class="swiper-slide">
+
+                            <!--Article-->
+                            <article
+                                class="rounded-xl p-2 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black hover:shadow-xl group transition-all hover:-translate-y-2 transition-all duration-300 relative">
+                                <div class="block rounded-xl overflow-hidden">
+                                    <img src="assets/img/960x640/1.jpg" alt="" class="max-w-full relative">
+                                </div>
+                                <div class="relative p-4 lg:p-5">
+                                    <div class="flex justify-start w-full pb-3 items-center">
+                                        <small class="text-indigo-500 text-sm">: Startup</small>
+                                    </div>
+                                    <div class="link-multiline relative text-xl font-medium inline">
+                                        How to gain your first B2B customers in the market
+                                    </div>
+                                </div>
+                                <!--:Cover link:-->
+                                <a href="#" class="absolute inset-0"></a>
+                            </article>
+                        </div>
+                        <!--Slide-->
+                        <div class="swiper-slide">
+                            <!--Article-->
+                            <article
+                                class="rounded-xl p-2 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black hover:shadow-xl group transition-all hover:-translate-y-2 transition-all duration-300 relative">
+                                <div class="block rounded-xl overflow-hidden">
+                                    <img src="assets/img/960x640/3.jpg" alt="" class="max-w-full relative">
+                                </div>
+                                <div class="relative p-4 lg:p-5">
+                                    <div class="flex justify-start w-full pb-3 items-center">
+                                        <small class="text-indigo-500 text-sm">: Startup</small>
+                                    </div>
+                                    <div class="link-multiline relative text-xl font-medium inline">
+                                        How to gain your first B2B customers in the market
+                                    </div>
+                                </div>
+                                <!--:Cover link:-->
+                                <a href="#" class="absolute inset-0"></a>
+                            </article>
+                        </div>
+                        <!--Slide-->
+                        <div class="swiper-slide">
+
+                            <!--Article-->
+                            <article
+                                class="rounded-xl p-2 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black hover:shadow-xl group transition-all hover:-translate-y-2 transition-all duration-300 relative">
+                                <div class="block rounded-xl overflow-hidden">
+                                    <img src="assets/img/960x640/4.jpg" alt="" class="max-w-full relative">
+                                </div>
+                                <div class="relative p-4 lg:p-5">
+                                    <div class="flex justify-start w-full pb-3 items-center">
+                                        <small class="text-indigo-500 text-sm">: Startup</small>
+                                    </div>
+                                    <div class="link-multiline relative text-xl font-medium inline">
+                                        How to gain your first B2B customers in the market
+                                    </div>
+                                </div>
+                                <!--:Cover link:-->
+                                <a href="#" class="absolute inset-0"></a>
+                            </article>
+                        </div>
+                        <!--Slide-->
+                        <div class="swiper-slide">
+                            <!--Article-->
+                            <article
+                                class="rounded-xl p-2 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black hover:shadow-xl group transition-all hover:-translate-y-2 transition-all duration-300 relative">
+                                <div class="block rounded-xl overflow-hidden">
+                                    <img src="assets/img/960x640/5.jpg" alt="" class="max-w-full relative">
+                                </div>
+                                <div class="relative p-4 lg:p-5">
+                                    <div class="flex justify-start w-full pb-3 items-center">
+                                        <small class="text-indigo-500 text-sm">: Startup</small>
+                                    </div>
+                                    <div class="link-multiline relative text-xl font-medium inline">
+                                        How to gain your first B2B customers in the market
+                                    </div>
+                                </div>
+                                <!--:Cover link:-->
+                                <a href="#" class="absolute inset-0"></a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/end:Section Blog-->
+
+        <!--begin:Section Testimonials-->
+        <section class="relative bg-indigo-500 text-white">
+            <!--:Verticle line:-->
+            <div
+                class="absolute left-1/2 -translate-x-1/2 bottom-0 w-auto h-full border-r border-white/20 hidden lg:block">
+            </div>
+            <div class="container py-16 lg:py-24 relative z-[1]">
+                <div class="flex flex-wrap -mx-3 items-center justify-between">
+                    <div class="lg:w-6/12 xl:w-5/12 px-3 mb-9">
+                        <div class="mb-7">
+                            <img src="assets/img/partners/white/spotify.svg" alt="" class="w-32 h-auto">
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-2xl lg:text-3xl mb-6">
+                                "They're very responsive and go above and beyond to meet our needs. We continue
+                                working with them, which is the best sign of our satisfaction."
+                            </p>
+                            <div class="">
+                                <div>
+                                    <h5 class="text-lg font-medium">Monroe Bond</h5>
+                                    <small class="text-white/50">Full stack developer, Spotify</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mr-auto w-16 h-0.5 bg-white/10"></div>
+                    </div>
+                    <div class="lg:w-6/12 xl:w-5/12 px-3 mb-9">
+                        <div class="mb-7">
+                            <img src="assets/img/partners/white/booking.com.svg" alt="" class="w-32 h-auto">
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-2xl lg:text-3xl mb-6">
+                                "They're very responsive and go above and beyond to meet our needs. We continue
+                                working with them, which is the best sign of our satisfaction."
+                            </p>
+                            <div class="">
+                                <div>
+                                    <h5 class="text-lg font-medium">Eduard Franz</h5>
+                                    <small class="text-white/50">Team head, Booking.com</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mr-auto w-16 h-0.5 bg-white/10"></div>
+                    </div>
+                </div>
+                <div class="relative text-center">
+                    <a href="#!" class="btn btn-lg bg-white hover:bg-gray-200 text-black">
+                        <span>More Customer stories</span>
+                        <i class="bi bi-arrow-right text-xl align-middle leading-[1] ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!--/end:Section Testimonials-->
+
+        <!--begin:Section Partners-->
+        <section class="relative overflow-hidden">
+            <img src="assets/img/vectors/worldmap-light.svg"
+                class="w-full h-full object-cover object-center absolute left-0 top-0 opacity-20" alt="">
+            <div class="container py-16 lg:py-24 relative z-[1]">
+                <div class="mb-7 lg:w-8/12 mx-auto mx-auto text-center">
+                    <div class="mb-3">
+                        <h2 class="text-4xl lg:text-5xl font-medium" data-text-split>
+                            Trusted partners
+                        </h2>
+                    </div>
+                    <p class="mb-0 text-lg text-gray-600 dark:text-gray-300">
+                        There are combined alignment methods –
+                        when several types of alignment together
+                        are used in one composition.
+                    </p>
+                </div>
+                <div class="flex flex-wrap lg:w-9/12 mx-auto gap-4 justify-center">
+                    <!--partner logo-->
+                    <div
+                        class="w-36 h-16 p-3 border border-gray-200 dark:border-gray-800 rounded-2xl flex items-center justify-center">
+                        <img src="assets/img/partners/amazon.svg" alt="" class="max-w-full dark:hidden">
+                        <img src="assets/img/partners/white/amazon.svg" alt="" class="max-w-full dark:block hidden">
+                    </div>
+                    <!--partner logo-->
+                    <div
+                        class="w-36 h-16 p-3 border border-gray-200 dark:border-gray-800 rounded-2xl flex items-center justify-center">
+                        <img src="assets/img/partners/booking.com.svg" alt="" class="max-w-full dark:hidden">
+                        <img src="assets/img/partners/white/booking.com.svg" alt=""
+                            class="max-w-full dark:block hidden">
+                    </div>
+                    <!--partner logo-->
+                    <div
+                        class="w-36 h-16 p-3 border border-gray-200 dark:border-gray-800 rounded-2xl flex items-center justify-center">
+                        <img src="assets/img/partners/deliveroo.svg" alt="" class="max-w-full dark:hidden">
+                        <img src="assets/img/partners/white/deliveroo.svg" alt="" class="max-w-full dark:block hidden">
+                    </div>
+                    <!--partner logo-->
+                    <div
+                        class="w-36 h-16 p-3 border border-gray-200 dark:border-gray-800 rounded-2xl flex items-center justify-center">
+                        <img src="assets/img/partners/grab.svg" alt="" class="max-w-full dark:hidden">
+                        <img src="assets/img/partners/white/grab.svg" alt="" class="max-w-full dark:block hidden">
+                    </div>
+                    <!--partner logo-->
+                    <div
+                        class="w-36 h-16 p-3 border border-gray-200 dark:border-gray-800 rounded-2xl flex items-center justify-center">
+                        <img src="assets/img/partners/lyft.svg" alt="" class="max-w-full dark:hidden">
+                        <img src="assets/img/partners/white/lyft.svg" alt="" class="max-w-full dark:block hidden">
+                    </div>
+                    <!--partner logo-->
+                    <div
+                        class="w-36 h-16 p-3 border border-gray-200 dark:border-gray-800 rounded-2xl flex items-center justify-center">
+                        <img src="assets/img/partners/postmates.svg" alt="" class="max-w-full dark:hidden">
+                        <img src="assets/img/partners/white/postmates.svg" alt="" class="max-w-full dark:block hidden">
+                    </div>
+                    <!--partner logo-->
+                    <div
+                        class="w-36 h-16 p-3 border border-gray-200 dark:border-gray-800 rounded-2xl flex items-center justify-center">
+                        <img src="assets/img/partners/uber.svg" alt="" class="max-w-full dark:hidden">
+                        <img src="assets/img/partners/white/uber.svg" alt="" class="max-w-full dark:block hidden">
+                    </div>
+                    <!--partner logo-->
+                    <div
+                        class="w-36 h-16 p-3 border border-gray-200 dark:border-gray-800 rounded-2xl flex items-center justify-center">
+                        <img src="assets/img/partners/expedia.svg" alt="" class="max-w-full dark:hidden">
+                        <img src="assets/img/partners/white/expedia.svg" alt="" class="max-w-full dark:block hidden">
+                    </div>
+                    <!--partner logo-->
+                    <div
+                        class="w-36 h-16 p-3 border border-gray-200 dark:border-gray-800 rounded-2xl flex items-center justify-center">
+                        <img src="assets/img/partners/zillow.svg" alt="" class="max-w-full dark:hidden">
+                        <img src="assets/img/partners/white/zillow.svg" alt="" class="max-w-full dark:block hidden">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/end:Section Partners-->
+    </main>
+
+
+    <!--Footer Start-->
+    <!--begin:Footer-->
+    <footer id="footer" class="relative footer overflow-hidden bg-white dark:bg-black">
+        <div class="container pt-12 lg:pt-16 pb-7">
+            <div class="flex flex-wrap -mx-3">
+                <div class="w-full px-3 md:w-3/12 sm:w-6/12 mb-7">
+                    <h5 class="mb-5 text-lg font-medium">We're here</h5>
+                    <p class="text-gray-600 dark:text-gray-300">124 Monali Street,</p>
+                    <p class="text-gray-600 dark:text-gray-300">Rosemary,&nbsp; California</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">302012, USA</p>
+                    <p class="mb-5">
+                        <a href="#!" class="link-underline">View on Map</a>
+                    </p>
+                    <p class="mb-0">
+                        <h2 data-countup="160000" data-suffix="+"
+                            class="text-3xl font-medium mb-2"></h2> <span class="text-gray-400">Users</span>
+                    </p>
+                </div>
+                <div class="md:w-4/12 sm:-6/12 w-full px-3 mb-7">
+                    <h5 class="mb-5 text-lg font-medium">Say g’day</h5>
+                    <div class="footer-info-details">
+                        <p class="mb-3">
+                            <a href="mailus@domain.com" class="link-underline">mailus@domain.com</a>
+                        </p>
+                        <p class="mb-0"><a class="link-underline" href="tel:+1123456789">(01) 1123 56789</a>
+                        </p>
+                    </div>
+
+                    <hr class="my-7 border-gray-200 dark:border-gray-900">
+                    <h6 class="mb-5 text-lg font-medium">Follow us</h6>
+                    <div class="flex items-center gap-4 mb-7">
+                        <!-- Social button -->
+                        <a href="#!" class="text-gray-400 hover:text-indigo-500 inline-block">
+                            <i class="bi bi-facebook text-xl leading-[1]"></i>
+                         </a>
+                        <!-- Social button -->
+                        <a href="#!" class="text-gray-400 hover:text-indigo-500 inline-block">
+                            <i class="bi bi-twitter-x text-xl leading-[1]"></i>
+                          </a>
+                        <!-- Social button -->
+                        <a href="#!" class="text-gray-400 hover:text-indigo-500 inline-block">
+                            <i class="bi bi-linkedin text-xl leading-[1]"></i>
+                          </a>
+                        <!-- Social button -->
+                        <a href="#!" class="text-gray-400 hover:text-indigo-500 inline-block">
+                            <i class="bi bi-instagram text-xl leading-[1]"></i>
+                            </a>
+                    </div>
+                    <!--:Dark Mode:-->
+                    <button data-bs-toggle="tooltip" data-bs-title="toggle theme" data-bs-placement="left"
+                    class="toggle-mode w-10 h-10 rounded-full transition-all bg-white shadow-lg text-gray-700 dark:text-white dark:bg-gray-700 hover:bg-indigo-500 hover:text-white dark:hover:bg-indigo-500 flex items-center justify-center"
+                    type="button">
+                    <span class="dark:block hidden">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 2V4M12 20V22M4 12H2M6.31412 6.31412L4.8999 4.8999M17.6859 6.31412L19.1001 4.8999M6.31412 17.69L4.8999 19.1042M17.6859 17.69L19.1001 19.1042M22 12H20M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <span class="block dark:hidden">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M21.9548 12.9564C20.5779 15.3717 17.9791 17.0001 15 17.0001C10.5817 17.0001 7 13.4184 7 9.00008C7 6.02072 8.62867 3.42175 11.0443 2.04492C5.96975 2.52607 2 6.79936 2 11.9998C2 17.5227 6.47715 21.9998 12 21.9998C17.2002 21.9998 21.4733 18.0305 21.9548 12.9564Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    </button>
+                </div>
+                <div class="md:w-5/12 px-3 w-full mb-7">
+                    <div class="py-7 px-4 lg:px-6 bg-indigo-500 rounded-2xl text-white">
+                        <h3 class="mb-3 text-xl font-medium">Request a free quote</h3>
+                        <p class="mb-4 opacity-75">Drop us a line below and we’ll find a way to help you and your team out.
+                        </p>
+                        <a class="btn btn-lg !rounded-full bg-white text-gray-700 hover:bg-gray-200" href="#!">
+                            <i class="bi bi-chat me-2"></i>
+                            Chat with us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="mb-5 mt-0 border-gray-100 dark:border-gray-900">
+            <div class="flex flex-wrap -mx-3 items-center">
+                <div class="sm:w-7/12 w-full px-3 mb-4 sm:mb-0">
+                    <div class="flex text-sm items-center space-x-4">
+                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#">Work</a>
+                        <a class="nav-link" href="#">Contact</a>
+                    </div>
+                </div>
+                <div class="sm:w-5/12 w-full px-3 sm:text-right">
+                    <span class="text-gray-400 text-sm">&copy; Copyright
+                        <script>
+                            document.write(new Date().getFullYear())
+
+                        </script>. Assan
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--end:Footer-->
+
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- end:Back to Top button -->
+
+    <!--:Gsap plugins - required before theme js for animations:-->
+    <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+    <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+    <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+    <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+    <!-- Theme script -->
+    <script src="assets/js/theme.bundle.min.js"></script>
+
+    <!--SwiperSlider-->
+    <script src="assets/vendor/node_modules/js/swiper-bundle.min.js"></script>
+    <script>
+        //Swiper Slider
+        var swiper3 = new Swiper(".swiper-blog", {
+            autoHeight: true,
+            spaceBetween: 16,
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 16
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 16
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            },
+            pagination: {
+                el: ".swiperBlog-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiperBlog-button-next",
+                prevEl: ".swiperBlog-button-prev"
+            }
+        });
+
+    </script>
+</body>
+
+</html>

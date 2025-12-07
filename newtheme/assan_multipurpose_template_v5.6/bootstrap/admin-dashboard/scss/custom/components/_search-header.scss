@@ -1,0 +1,15 @@
+// Header search bar scss
+.dropdown-search{
+    inset: 0;
+    transition: all .15s;
+    transform-origin: center;
+    transform: scale(0);
+    background-color:white;
+    z-index: $zindex-fixed + 1;
+}
+
+.is-search{
+    .dropdown-search{
+        transform:none ;    
+    }
+}

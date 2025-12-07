@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+
+    @@include('./partials/head-includes.html')
+</head>
+
+<body
+    class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+    @@include('./partials/app-preloader.html')
+
+
+    @@include('./partials/sidebar.html',{"page": "ui-components","components_collapse":
+    "show","component_breadcrumb_active": "active"})
+
+    <main class="relative flex flex-col lg:ms-64">
+        @@include('./partials/header-default.html')
+        <!--:Page Header:-->
+        <div class="px-4 lg:px-6 xl:px-12 py-4">
+            <div class="flex flex-wrap items-center">
+                <div class="flex-grow">
+                    <h4 class="text-2xl font-semibold">Breadcrumb</h4>
+                </div>
+                <div class="shrink-0">
+                    <!--:Breadcrumb:-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="flex items-center">
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                            </li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active"><a
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                    href="ui-component-alerts.html">Components</a></li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Breadcrumb
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content relative px-4 lg:px-6 xl:px-12">
+            <div class="grid grid-cols-1 gap-4 mb-4">
+                <div>
+                    <!--:Card:-->
+                    <div class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+                        <h5 class="text-lg font-semibold mb-4">Default</h5>
+                        <!--:Breadcrumb:-->
+                        <nav aria-label="breadcrumb">
+                            <ol class="flex items-center">
+                                <li class="breadcrumb-item"><a href="index.html"
+                                        class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                                </li>
+                                 <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                                <li class="breadcrumb-item active"><a
+                                        class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                        href="ui-component-alerts.html">Components</a></li>
+                                 <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                                <li class="breadcrumb-item active [&amp;.active]:text-gray-400" aria-current="page">
+                                    Breadcrumb</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div>
+                    <!--:Card:-->
+                    <div class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+                        <h5 class="text-lg font-semibold mb-4">Divider style 2</h5>
+                        <!--:Breadcrumb:-->
+                        <nav aria-label="breadcrumb">
+                            <ol class="flex items-center">
+                                <li class="breadcrumb-item"><a href="index.html"
+                                        class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                                </li>
+                                <li class="px-2 opacity-20">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 22L17 2" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </li>
+                                <li class="breadcrumb-item active"><a
+                                        class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                        href="ui-component-alerts.html">Components</a></li>
+                                <li class="px-2 opacity-20">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 22L17 2" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </li>
+                                <li class="breadcrumb-item active [&amp;.active]:text-gray-400" aria-current="page">
+                                    Breadcrumb</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+
+                <div>
+                    <!--:Card:-->
+                    <div class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+                        <h5 class="text-lg font-semibold mb-4">Divider style 3</h5>
+                        <!--:Breadcrumb:-->
+                        <nav aria-label="breadcrumb">
+                            <ol class="flex items-center">
+                                <li class="breadcrumb-item"><a href="index.html"
+                                        class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                                </li>
+                                <li class="px-2 opacity-20">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="currentColor"
+                                        class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                        <circle cx="8" cy="8" r="8"></circle>
+                                    </svg>
+                                </li>
+                                <li class="breadcrumb-item active"><a
+                                        class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                        href="ui-component-alerts.html">Components</a></li>
+                                <li class="px-2 opacity-20">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="currentColor"
+                                        class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                        <circle cx="8" cy="8" r="8"></circle>
+                                    </svg>
+                                </li>
+                                <li class="breadcrumb-item active [&amp;.active]:text-gray-400" aria-current="page">
+                                    Breadcrumb</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div>
+                    <!--:Card:-->
+                    <div class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+                        <h5 class="text-lg font-semibold mb-4">Icon</h5>
+                        <!--:Breadcrumb:-->
+                        <nav aria-label="breadcrumb">
+                            <ol class="flex items-center">
+                                <li class="breadcrumb-item"><a href="index.html"
+                                        class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">
+                                        <span class="icon-[tabler--home]"></span>
+                                    </a>
+                                </li>
+                                <li class="px-2 opacity-20">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 22L17 2" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </li>
+                                <li class="breadcrumb-item active"><a
+                                        class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                        href="ui-component-alerts.html">Components</a></li>
+                                <li class="px-2 opacity-20">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 22L17 2" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </li>
+                                <li class="breadcrumb-item active [&amp;.active]:text-gray-400" aria-current="page">
+                                    Breadcrumb</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

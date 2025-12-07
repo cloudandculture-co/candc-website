@@ -1,0 +1,1233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assan | Blog</title>
+    <!--FavIcon-->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet">
+    <!--Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Aos Animations-->
+    <link href="assets/vendor/node_modules/css/sal.css" rel="stylesheet">
+
+    <!--Main Style-->
+    <link href="assets/css/theme.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="d-flex flex-column flex-root">
+        <!--Page-->
+        <div class="page-lg d-flex flex-row flex-column-fluid">
+
+            <!--:Sidebar Menu:-->
+            <aside class="page-sidebar">
+                <div class="offcanvas-lg offcanvas-start" id="offcanvas-sidebar">
+                    <div class="offcanvas-header d-block p-0">
+                        <a class="sidebar-brand flex-shrink-0 d-flex justify-content-center height-6x w-100 align-items-center"
+                            href="index.html">
+                            <img src="assets/img/logo-a.svg" alt="" class="img-fluid logo-light">
+                            <img src="assets/img/logo-a-white.svg" alt="" class="img-fluid logo-dark">
+                        </a>
+                    </div>
+                    <!--:Sidenav:-->
+                    <div class="offcanvas-body flex-grow-1 p-0">
+                        <nav class="flex-grow-1 d-flex flex-column justify-content-center gap-1 gap-lg-2 align-items-center py-3">
+                            <a data-tippy-placement="right" data-tippy-content="Home" href="index.html"
+                                class="width-4x height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" width="24" height="24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+
+                            </a>
+                            <div class="dropdown">
+                                <a href="notifications.html" data-tippy-placement="right" data-tippy-content="Notifications"
+                                    class="width-4x tippy-dropdown height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" width="24" height="24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                                    </svg>
+
+                                </a>
+                            </div>
+                            <a data-tippy-placement="right" data-tippy-content="Bookmarks" href="bookmarks.html"
+                                class="width-4x height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" width="24" height="24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                                </svg>
+
+                            </a>
+                            <a data-tippy-placement="right" data-tippy-content="Topics" href="topics.html"
+                                class="width-4x height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" width="24" height="24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
+                                </svg>
+
+                            </a>
+                            <a data-tippy-placement="right" data-tippy-content="Write Post" href="write.html"
+                                class="width-4x height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" width="24" height="24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                                </svg>
+
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="mt-auto offcanvas-footer">
+
+                    </div>
+                </div>
+            </aside>
+
+            <!--:Page content:-->
+            <main class="page-content d-flex flex-column flex-row-fluid">
+                <!--:page-header:-->
+                <header class="navbar-main z-index-fixed border-bottom navbar navbar-expand-md px-3 px-lg-7 py-0 py-lg-2">
+                    <div class="container-fluid px-0 d-flex flex-wrap justify-content-between">
+
+                        <a class="navbar-brand d-lg-none flex-shrink-0 d-flex justify-content-center width-2x h-auto align-items-center"
+                            href="index.html">
+                            <img src="assets/img/logo-a.svg" alt="" class="img-fluid logo-light">
+                            <img src="assets/img/logo-a-white.svg" alt="" class="img-fluid logo-dark">
+                        </a>
+                        <div class="d-flex flex-grow-1 justify-content-end align-items-center order-md-last">
+
+                            <!--sidebar toggler button-->
+                            <button
+                                class="btn btn-sm btn-primary p-0 d-flex align-items-center justify-content-center size-3x rounded-pill d-lg-none shadow-none order-last ms-2"
+                                type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidebar"
+                                aria-controls="offcanvas-sidebar">
+                                <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+                                </svg>
+
+                            </button>
+                            <div class="nav-item d-flex height-5x align-items-center d-md-none me-2 me-lg-0">
+                                <a href="#searchCollapse" data-bs-target="#searchCollapse" data-bs-toggle="collapse"
+                                    class="btn btn-link nav-link py-2 px-2 d-flex align-items-center search-link lh-1">
+                                    <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                                    </svg>
+
+                                </a>
+                            </div>
+                            <div class="d-flex dropdown height-5x nav-item align-items-center">
+                                <a href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                    class="btn btn-link rounded-pill nav-link py-1 ps-1 pe-2 dropdown-toggle d-flex align-items-center">
+                                    <img src="assets/img/avatar/1.jpg" class="width-3x h-auto rounded-pill" alt="">
+                                    <small class="d-none d-md-block ms-2">Emily doe</small>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-md-end ms-n6 ms-md-0 position-absolute">
+                                    <a href="#!" class="dropdown-item d-flex gap-2 align-items-center">
+                                        <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                        </svg>
+                                        Profile
+                                    </a>
+                                    <a href="bookmarks.html" class="dropdown-item d-flex gap-2 align-items-center">
+                                        <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                                        </svg>
+                                        Bookmarks
+                                    </a>
+                                    <a href="write.html" class="dropdown-item d-flex gap-2 align-items-center">
+                                        <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                                        </svg>
+                                        Write
+                                    </a>
+                                    <a href="page-sign-in.html" class="dropdown-item d-flex gap-2 align-items-center">
+                                        <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                                        </svg>
+                                        Sign Out
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="d-flex height-5x ms-2 dropdown nav-item align-items-center">
+                                <a href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                    class="btn btn-link nav-link rounded-pill size-3x d-flex align-items-center justify-content-center">
+                                    <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+                                    </svg>
+
+                                </a>
+                                <div class="dropdown-menu me-n6 me-lg-0 dropdown-menu-end position-absolute">
+                                    <div class="dropdown-header">Pages</div>
+                                    <a href="page-sign-in.html" class="dropdown-item d-flex align-items-center">
+                                        Sign In
+                                    </a>
+                                    <a href="page-sign-up.html" class="dropdown-item d-flex align-items-center">
+                                        Sign Up
+                                    </a>
+                                    <a href="page-plans.html"
+                                        class="dropdown-item d-flex align-items-center ">
+                                        Plans
+                                    </a>
+                                    <a href="page-writers.html"
+                                        class="dropdown-item d-flex align-items-center ">
+                                        Writers
+                                    </a>
+                                    <a href="page-writer.html"
+                                        class="dropdown-item d-flex align-items-center ">
+                                        Writer
+                                    </a>
+                                    <a href="post-details.html"
+                                        class="dropdown-item d-flex align-items-center active">
+                                        Post details
+                                    </a>
+                                </div>
+                            </div>
+                            <!--:Dark Mode:-->
+                            <div class="nav-item height-5x d-flex align-items-center dropdown ms-2">
+                                <button
+                                    class="btn btn-link nav-link rounded-pill size-3x d-flex align-items-center justify-content-center"
+                                    id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                                    data-bs-display="static">
+                                    <span class="theme-icon-active d-flex align-items-center">
+                                        <i class="bi bi-brightness-high"></i>
+                                    </span>
+                                </button>
+                                <!--:Dark Mode Options:-->
+                                <ul class="dropdown-menu me-n3 me-md-0 dropdown-menu-end" aria-labelledby="bd-theme"
+                                    style="--bs-dropdown-min-width: 9rem;">
+                                    <li class="mb-1">
+                                        <button type="button" class="dropdown-item d-flex align-items-center active"
+                                            data-bs-theme-value="light">
+                                            <span class="theme-icon me-2 d-flex align-items-center">
+                                                <i class="bi bi-brightness-high"></i>
+                                            </span>
+                                            Light
+                                        </button>
+                                    </li>
+                                    <li class="mb-1">
+                                        <button type="button" class="dropdown-item d-flex align-items-center"
+                                            data-bs-theme-value="dark">
+                                            <span class="theme-icon me-2 d-flex align-items-center">
+                                                <i class="bi bi-moon"></i>
+                                            </span>
+                                            Dark
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item d-flex align-items-center"
+                                            data-bs-theme-value="auto">
+                                            <span class="theme-icon me-2 d-flex align-items-center">
+                                                <i class="bi bi-palette"></i>
+                                            </span>
+                                            Auto
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--Search collapse-->
+                        <div class="collapse collapse-search navbar-collapse" id="searchCollapse">
+                            <form>
+                                <div class="dropdown mb-3 mb-md-0">
+                                    <span
+                                        class="position-absolute d-flex align-items-center justify-content-center start-0 top-50 translate-middle-y ms-3 opacity-75">
+                                        <svg width="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                                        </svg>
+
+                                    </span>
+                                    <input type="text" data-bs-toggle="dropdown" placeholder="Search here..." class="form-control ps-5">
+                                    <!--:Search dropdown:-->
+                                    <div class="dropdown-menu p-0 rounded-top-0 w-100 overflow-hidden dropdown-menu-start">
+                                        <div class="dropdown-header border-bottom">
+                                            <i class="bi bi-fire"></i> Top Stories
+                                        </div>
+                                        <div style="height: 290px;overflow-y: auto;">
+                                            <!--:Search dropdown news list:-->
+                                            <div class="list-group list-group-flush">
+                                                <!--:Item:-->
+                                                <a href="#!" class="list-group-action list-group-item p-3">
+                                                    <div class="d-flex flex-column">
+                                                        <h6 class="fw-normal mb-2">5 Technologies That Could Be the Next Big Thing</h6>
+                                                        <small class="text-body-secondary flex-shrink-0">Technology</small>
+                                                    </div>
+                                                </a>
+                                                <!--:Item:-->
+                                                <a href="#!" class="list-group-action list-group-item p-3">
+                                                    <div class="d-flex flex-column">
+                                                        <h6 class="fw-normal mb-2">Is TikTok a Security Risk for Businesses?</h6>
+                                                        <small class="text-body-secondary flex-shrink-0">Business</small>
+                                                    </div>
+                                                </a>
+                                                <!--:Item:-->
+                                                <a href="#!" class="list-group-action list-group-item p-3">
+                                                    <div class="d-flex flex-column">
+                                                        <h6 class="fw-normal mb-2">Crypto Market Outlook: Looking Back to Forge New
+                                                            Milestones</h6>
+                                                        <small class="text-body-secondary flex-shrink-0">Crypto</small>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="dropdown-header pt-4 mb-2 border-top">
+                                                <i class="bi bi-fire me-2"></i> Popular Topics
+                                            </div>
+
+                                            <!--:Search dropdown categories list:-->
+                                            <div class="d-flex flex-wrap gap-2 pt-0 p-3">
+                                                <a href="#!" class="badge text-bg-primary">Sports</a>
+                                                <a href="#!" class="badge text-bg-primary">Health</a>
+                                                <a href="#!" class="badge text-bg-primary">Technology</a>
+                                                <a href="#!" class="badge text-bg-primary">Fashion</a>
+                                                <a href="#!" class="badge text-bg-primary">NFT</a>
+                                                <a href="#!" class="badge text-bg-primary">Business</a>
+                                                <a href="#!" class="badge text-bg-primary">Politics</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </header>
+                <!--::Page content with sidebar::-->
+                <div class="content d-flex flex-column-fluid position-relative">
+
+                    <!--:Content inner layout:-->
+                    <div class="d-flex flex-column flex-md-row h-100 w-100">
+                        <!--:Content inner Content:-->
+                        <div class="col-md-7 col-lg-8 layout-content d-flex flex-column h-100">
+                            <div class="position-relative px-3 px-lg-5 px-xl-7 py-5 mx-auto w-100">
+                                <!--:Post title:-->
+                                <div class="mb-6">
+                                    <h2 class="display-6 mb-4">
+                                        How to Auto-Generate Interactive Coding Videos for Software Developers
+                                    </h2>
+                                    <!--:Category:-->
+                                    <a href="#!"
+                                        class="btn btn-outline-success btn-sm d-felx align-items-center flex-shrink-0">
+                                        <svg width="16" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6 6h.008v.008H6V6Z" />
+                                        </svg>
+
+                                        Software</a>
+                                </div>
+                                <!--:Post details header:-->
+                                <div class="row mb-6 align-items-center">
+                                    <div class="col-md-6 mb-4 mb-md-0">
+                                        <div class="d-flex align-items-center">
+                                            <a href="#!">
+                                                <img src="assets/img/avatar/4.jpg"
+                                                    class="width-4x rounded-pill shadow-sm me-3 flex-shrink-0" alt="">
+                                            </a>
+                                            <div class="flex-grow-1">
+                                                <a href="#!" class="mb-1 d-block h6">Nikita Nketiah</a>
+                                                <ul class="list-unstyled list-divided mb-0 text-body-tertiary">
+                                                    <li>21 Dec</li>
+                                                    <li>4 min read</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        <!--:Share Post:-->
+                                        <div class="d-flex flex-wrap align-items-center justify-content-end gap-3">
+                                            <a data-tippy-placement="top" data-tippy-content="Share on Facebook"
+                                                href="#!" class="d-block">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                            <a data-tippy-placement="top" data-tippy-content="Share on Twitter"
+                                                href="#!" class="d-block">
+                                                <i class="bi bi-twitter-x"></i>
+                                            </a>
+                                            <a data-tippy-placement="top" data-tippy-content="Share on Linkedin"
+                                                href="#!" class="d-block">
+                                                <i class="bi bi-linkedin"></i>
+                                            </a>
+                                            <a data-tippy-placement="top" data-tippy-content="Copy Link" href="#!"
+                                                class="d-block">
+                                                <i class="bi bi-copy"></i>
+                                            </a>
+                                            <a data-tippy-placement="top" data-tippy-content="Add to Bookmarks"
+                                                href="#!" class="d-block ms-2">
+                                                <i class="bi bi-bookmark-plus"></i>
+                                            </a>
+                                            <!--:More options dropdown:-->
+                                            <div class="dropdown">
+                                                <a href="#" class="text-body-secondary" data-bs-toggle="dropdown"
+                                                    data-bs-display="static">
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end mt-2">
+                                                    <a href="#!" class="dropdown-item d-flex align-items-center gap-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                            width="20">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+                                                        </svg>
+
+                                                        Show less like this</a>
+                                                    <a href="#!" class="dropdown-item d-flex align-items-center gap-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                            width="20">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M17.25 9.75 19.5 12m0 0 2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6 4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+                                                        </svg>
+                                                        Mute author</a>
+                                                    <a href="#!" class="dropdown-item d-flex align-items-center gap-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                            width="20">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
+                                                        </svg>
+
+                                                        Report</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div>
+                                    <p class="lead mb-4">
+                                        Nunc sed id semper risus. Sem nulla pharetra diam sit. Etiam tempor orci eu
+                                        lobortis elementum nibh tellus. Sed velit dignissim sodales ut eu sem. Felis
+                                        eget nunc lobortis mattis aliquam faucibus purus in massa. Donec pretium
+                                        vulputate sapien nec sagittis. Porttitor leo a diam sollicitudin tempor id
+                                        eu. Augue lacus viverra vitae congue eu. At in tellus integer feugiat
+                                        scelerisque varius. Pharetra massa massa ultricies mi quis hendrerit dolor
+                                        magna eget. Aliquet enim tortor at auctor. Tellus pellentesque eu tincidunt
+                                        tortor. Sed enim ut sem viverra aliquet eget. Lacus suspendisse faucibus
+                                        interdum posuere. Donec massa sapien faucibus et molestie. Ullamcorper eget
+                                        nulla facilisi etiam dignissim diam quis enim.
+                                    </p>
+                                    <p class="mb-4">
+                                        Sit amet facilisis magna etiam tempor orci eu lobortis. Massa eget egestas
+                                        purus viverra accumsan in nisl. Elit pellentesque habitant morbi tristique
+                                        senectus et netus. Auctor augue mauris augue neque gravida. Sed viverra
+                                        ipsum nunc aliquet. Risus sed vulputate odio ut enim blandit volutpat
+                                        maecenas volutpat. Pellentesque pulvinar pellentesque habitant morbi
+                                        tristique. Magna fermentum iaculis eu non diam phasellus vestibulum lorem
+                                        sed. Turpis nunc eget lorem dolor sed. Sit amet commodo nulla facilisi
+                                        nullam vehicula. Pellentesque habitant morbi tristique senectus et netus et.
+                                        Odio tempor orci dapibus ultrices in. Tempus quam pellentesque nec nam
+                                        aliquam sem. In vitae turpis massa sed elementum tempus egestas sed.
+                                        Pellentesque habitant morbi tristique senectus et netus et.
+                                    </p>
+
+                                    <figure class="my-6 my-lg-9">
+                                        <div class="row mb-4">
+                                            <div class="col-6">
+                                                <img src="assets/img/large3.jpg" class="rounded-4 shadow img-fluid"
+                                                    alt="">
+                                            </div>
+                                            <div class="col-6">
+                                                <img src="assets/img/large4.jpg" class="rounded-4 shadow img-fluid"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                        <small class="text-center d-block">
+                                            Photos by <a class="text-decoration-underline text-body-secondary"
+                                                href="https://www.behance.net/?" target="_blank">Behance</a>
+                                        </small>
+                                    </figure>
+
+                                    <h4 class="mb-3">Sem nulla pharetra diam sit</h4>
+                                    <p class="mb-4">
+                                        Nunc sed id semper risus. Sem nulla pharetra diam sit. Etiam tempor orci eu
+                                        lobortis elementum nibh tellus. Sed velit dignissim sodales ut eu sem. Felis
+                                        eget nunc lobortis mattis aliquam faucibus purus in massa. Donec pretium
+                                        vulputate sapien nec sagittis. Porttitor leo a diam sollicitudin tempor id
+                                        eu. Augue lacus viverra vitae congue eu. At in tellus integer feugiat
+                                        scelerisque varius. Pharetra massa massa ultricies mi quis hendrerit dolor
+                                        magna eget. Aliquet enim tortor at auctor. Tellus pellentesque eu tincidunt
+                                        tortor. Sed enim ut sem viverra aliquet eget. Lacus suspendisse faucibus
+                                        interdum posuere. Donec massa sapien faucibus et molestie. Ullamcorper eget
+                                        nulla facilisi etiam dignissim diam quis enim.
+                                    </p>
+                                    <p class="mb-4 lead">
+                                        Lobortis feugiat vivamus at augue eget arcu dictum. Duis at consectetur
+                                        lorem donec massa sapien faucibus et. Nec nam aliquam sem et tortor
+                                        consequat id porta nibh. Erat pellentesque adipiscing commodo elit at
+                                        imperdiet dui accumsan sit. Et molestie ac feugiat sed lectus vestibulum.
+                                    </p>
+                                    <p class="mb-7">
+                                        Scelerisque fermentum dui faucibus in ornare. Cras ornare arcu dui vivamus.
+                                        Odio euismod lacinia at quis risus sed vulputate odio. Vitae auctor eu augue
+                                        ut lectus arcu. Sed odio morbi quis commodo odio. Sed felis eget velit
+                                        aliquet sagittis id consectetur purus ut.
+                                    </p>
+
+                                    <!--:Likes and comments:-->
+                                    <ul class="list-unstyled mb-4 list-divided d-flex align-items-center">
+                                        <li class="d-flex align-items-center">
+                                            <a href="#!"
+                                                class="me-1 p-0 bg-transparent border-0 gap-1 d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke-width="1.5" stroke="currentColor" width="16">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                                </svg>
+
+                                                <small class="text-body-secondary">
+                                                    328
+                                                </small>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="d-flex align-items-center ms-1 gap-1" data-bs-toggle="collapse"
+                                                href="#article-comments">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke-width="1.5" stroke="currentColor" width="16"
+                                                    class="flex-shrink-0">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                                                </svg>
+
+                                                <span class="flex-shrink-0">42 Comments</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+
+                                    <!--:Comments list:-->
+                                    <div class="collapse show" id="article-comments">
+                                        <ul class="list-group list-group-flush list-transparent">
+                                            <!--:Comment:-->
+                                            <li class="list-group-item px-0 py-4">
+                                                <div class="d-flex align-items-stretch">
+                                                    <a href="#!">
+                                                        <img src="assets/img/avatar/1.jpg"
+                                                            class="width-4x rounded-pill shadow-sm me-3 flex-shrink-0"
+                                                            alt="">
+                                                    </a>
+                                                    <div class="flex-grow-1">
+                                                        <div
+                                                            class="d-flex mb-2 align-items-center justify-content-between">
+                                                            <div class="overflow-hidden pe-3">
+                                                                <a href="#!"
+                                                                    class="mb-0 d-block small fw-bold text-truncate">Monika
+                                                                    Smith</a>
+                                                                <ul
+                                                                    class="list-unstyled list-divided mb-0 text-body-secondary">
+                                                                    <li>21 Dec</li>
+                                                                </ul>
+                                                            </div>
+                                                            <!--:Report icon:-->
+                                                            <button type="button" class="btn text-body-secondary p-0"
+                                                                data-tippy-placement="left"
+                                                                data-tippy-content="Report this comment">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                    viewBox="0 0 24 24" stroke-width="1.5"
+                                                                    stroke="currentColor" width="20">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
+                                                                </svg>
+
+                                                            </button>
+                                                        </div>
+                                                        <p class="mb-0">
+                                                            Etiam tempor orci eu lobortis elementum nibh tellus. Sed
+                                                            velit dignissim sodales ut eu sem.
+                                                        </p>
+                                                        <!--:Actions:-->
+                                                        <div
+                                                            class="d-flex pt-3 align-items-center justify-content-between">
+                                                            <div
+                                                                class="flex-grow-1 small text-start d-flex align-items-center">
+                                                                <button
+                                                                    class="p-0 me-1 bg-transparent text-body border-0"
+                                                                    type="button">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                        viewBox="0 0 24 24" stroke-width="1.5"
+                                                                        stroke="currentColor" width="20">
+                                                                        <path stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                                                    </svg>
+
+                                                                </button>
+                                                                <small>
+                                                                    328
+                                                                </small>
+                                                                <button
+                                                                    class="ms-3 border-0 text-body-secondary bg-transparent replies-collapse"
+                                                                    data-bs-toggle="collapse"
+                                                                    data-bs-target="#c_reply_1">
+
+                                                                    <span>2 replies</span>
+                                                                    <i class="bi bi-chevron-down me-2"></i>
+                                                                </button>
+                                                            </div>
+                                                            <div class="flex-grow-1 text-end">
+                                                                <a href="#!" class="small">Reply</a>
+                                                            </div>
+                                                        </div>
+                                                        <!--:Replies:-->
+                                                        <div class="collapse" id="c_reply_1">
+                                                            <ul class="list-group bg-body-tertiary mt-3">
+                                                                <!--:Comment:-->
+                                                                <li class="list-group-item p-3 bg-transparent">
+                                                                    <div class="d-flex align-items-stretch mb-3">
+                                                                        <a href="#!">
+                                                                            <img src="assets/img/avatar/1.jpg"
+                                                                                class="width-3x rounded-pill shadow-sm me-3 flex-shrink-0"
+                                                                                alt="">
+                                                                        </a>
+                                                                        <div class="flex-grow-1">
+                                                                            <div
+                                                                                class="d-flex mb-2 align-items-center justify-content-between">
+                                                                                <div class="overflow-hidden pe-3">
+                                                                                    <a href="#!"
+                                                                                        class="mb-0 d-block small fw-bold text-truncate">Monika
+                                                                                        Smith</a>
+                                                                                    <ul
+                                                                                        class="list-unstyled list-divided mb-0 text-body-secondary">
+                                                                                        <li>21 Dec</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                                <!--:Report icon:-->
+                                                                                <button type="button"
+                                                                                    class="btn text-body-secondary p-0"
+                                                                                    data-tippy-placement="left"
+                                                                                    data-tippy-content="Report this comment">
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                        fill="none" viewBox="0 0 24 24"
+                                                                                        stroke-width="1.5"
+                                                                                        stroke="currentColor"
+                                                                                        width="20">
+                                                                                        <path stroke-linecap="round"
+                                                                                            stroke-linejoin="round"
+                                                                                            d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
+                                                                                    </svg>
+
+                                                                                </button>
+                                                                            </div>
+                                                                            <p class="mb-0">
+                                                                                Etiam tempor orci eu lobortis
+                                                                                elementum nibh tellus. Sed
+                                                                                velit dignissim sodales ut eu sem.
+                                                                            </p>
+                                                                            <!--:Actions:-->
+                                                                            <div
+                                                                                class="d-flex pt-2 small align-items-center justify-content-between">
+                                                                                <div class="flex-grow-1 text-start">
+                                                                                    <button
+                                                                                        class="p-0 me-1 bg-transparent text-body border-0"
+                                                                                        type="button">
+                                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                            fill="none"
+                                                                                            viewBox="0 0 24 24"
+                                                                                            stroke-width="1.5"
+                                                                                            stroke="currentColor"
+                                                                                            width="20">
+                                                                                            <path stroke-linecap="round"
+                                                                                                stroke-linejoin="round"
+                                                                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                                                                        </svg>
+
+                                                                                    </button>
+                                                                                    <small>
+                                                                                        124
+                                                                                    </small>
+                                                                                </div>
+                                                                                <div class="flex-grow-1 text-end">
+                                                                                    <a href="#!" class="small">Reply</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </li>
+                                                                <!--:Comment:-->
+                                                                <li class="list-group-item p-3 bg-transparent">
+                                                                    <div class="d-flex align-items-stretch mb-3">
+                                                                        <a href="#!">
+                                                                            <img src="assets/img/avatar/3.jpg"
+                                                                                class="width-3x rounded-pill shadow-sm me-3 flex-shrink-0"
+                                                                                alt="">
+                                                                        </a>
+                                                                        <div class="flex-grow-1">
+                                                                            <div
+                                                                                class="d-flex mb-2 align-items-center justify-content-between">
+                                                                                <div class="overflow-hidden pe-3">
+                                                                                    <a href="#!"
+                                                                                        class="mb-0 d-block small fw-bold text-truncate">Adam</a>
+                                                                                    <ul
+                                                                                        class="list-unstyled list-divided mb-0 text-body-secondary">
+                                                                                        <li>19 Dec</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                                <!--:Report icon:-->
+                                                                                <button type="button"
+                                                                                    class="btn text-body-secondary p-0"
+                                                                                    data-tippy-placement="left"
+                                                                                    data-tippy-content="Report this comment">
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                        fill="none" viewBox="0 0 24 24"
+                                                                                        stroke-width="1.5"
+                                                                                        stroke="currentColor"
+                                                                                        width="20">
+                                                                                        <path stroke-linecap="round"
+                                                                                            stroke-linejoin="round"
+                                                                                            d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
+                                                                                    </svg>
+
+                                                                                </button>
+                                                                            </div>
+                                                                            <p class="mb-0">
+                                                                                Porttitor leo a diam sollicitudin
+                                                                                tempor id eu. Augue lacus viverra
+                                                                                vitae congue eu. At in tellus
+                                                                                integer feugiat scelerisque varius.
+                                                                                Pharetra massa massa ultricies mi
+                                                                                quis hendrerit dolor magna eget.
+                                                                            </p>
+                                                                            <!--:Actions:-->
+                                                                            <div
+                                                                                class="d-flex pt-2 small align-items-center justify-content-between">
+                                                                                <div class="flex-grow-1 text-start">
+                                                                                    <button
+                                                                                        class="p-0 me-1 bg-transparent text-body border-0"
+                                                                                        type="button">
+                                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                            fill="none"
+                                                                                            viewBox="0 0 24 24"
+                                                                                            stroke-width="1.5"
+                                                                                            stroke="currentColor"
+                                                                                            width="20">
+                                                                                            <path stroke-linecap="round"
+                                                                                                stroke-linejoin="round"
+                                                                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                                                                        </svg>
+
+                                                                                    </button>
+                                                                                    <small>
+                                                                                        124
+                                                                                    </small>
+                                                                                </div>
+                                                                                <div class="flex-grow-1 text-end">
+                                                                                    <a href="#!" class="small">Reply</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <!--:Comment:-->
+                                            <li class="list-group-item px-0 py-4">
+                                                <div class="d-flex align-items-stretch">
+                                                    <a href="#!">
+                                                        <img src="assets/img/avatar/5.jpg"
+                                                            class="width-4x rounded-pill shadow-sm me-3 flex-shrink-0"
+                                                            alt="">
+                                                    </a>
+                                                    <div class="flex-grow-1">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-3">
+                                                            <div class="overflow-hidden pe-3">
+                                                                <a href="#!"
+                                                                    class="mb-0 d-block small fw-bold text-truncate">Antony
+                                                                    Santo</a>
+                                                                <ul
+                                                                    class="list-unstyled list-divided mb-0 text-body-secondary">
+                                                                    <li>19 Dec</li>
+                                                                </ul>
+                                                            </div>
+                                                            <!--:Report icon:-->
+                                                            <button type="button" class="btn text-body-secondary p-0"
+                                                                data-tippy-placement="left"
+                                                                data-tippy-content="Report this comment">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                    viewBox="0 0 24 24" stroke-width="1.5"
+                                                                    stroke="currentColor" width="20">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
+                                                                </svg>
+
+                                                            </button>
+                                                        </div>
+                                                        <p class="mb-0">
+                                                            Scelerisque fermentum dui faucibus in ornare. Cras
+                                                            ornare arcu dui vivamus. Odio euismod lacinia at quis
+                                                            risus sed vulputate odio. Vitae auctor eu augue ut
+                                                            lectus arcu.
+                                                        </p>
+                                                        <!--:Actions:-->
+                                                        <div
+                                                            class="d-flex pt-3 align-items-center justify-content-between">
+                                                            <div
+                                                                class="flex-grow-1 small text-start d-flex align-items-center">
+                                                                <button
+                                                                    class="p-0 me-1 bg-transparent text-body border-0"
+                                                                    type="button">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                        viewBox="0 0 24 24" stroke-width="1.5"
+                                                                        stroke="currentColor" width="20">
+                                                                        <path stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                                                    </svg>
+
+                                                                </button>
+                                                                <small>
+                                                                    39
+                                                                </small>
+                                                            </div>
+                                                            <div class="flex-grow-1 text-end">
+                                                                <a href="#!" class="small">Reply</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <!--:Comment:-->
+                                            <li class="list-group-item px-0 py-4">
+                                                <div class="d-flex align-items-stretch mb-3">
+                                                    <a href="#!">
+                                                        <img src="assets/img/avatar/7.jpg"
+                                                            class="width-4x rounded-pill shadow-sm me-3 flex-shrink-0"
+                                                            alt="">
+                                                    </a>
+                                                    <div class="flex-grow-1">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-3">
+                                                            <div class="overflow-hidden pe-3">
+                                                                <a href="#!"
+                                                                    class="mb-0 d-block small fw-bold text-truncate">Kim
+                                                                    Son</a>
+                                                                <ul
+                                                                    class="list-unstyled list-divided mb-0 text-body-secondary">
+                                                                    <li>24 Dec</li>
+                                                                </ul>
+                                                            </div>
+                                                            <!--:Report icon:-->
+                                                            <button type="button" class="btn text-body-secondary p-0"
+                                                                data-tippy-placement="left"
+                                                                data-tippy-content="Report this comment">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                    viewBox="0 0 24 24" stroke-width="1.5"
+                                                                    stroke="currentColor" width="20">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
+                                                                </svg>
+
+                                                            </button>
+                                                        </div>
+                                                        <p class="mb-0">
+                                                            Scelerisque fermentum dui faucibus in ornare. Cras
+                                                            ornare arcu dui vivamus. Odio euismod lacinia at quis
+                                                            risus sed vulputate odio. Vitae auctor eu augue ut
+                                                            lectus arcu.
+                                                        </p>
+                                                        <!--:Actions:-->
+                                                        <div
+                                                            class="d-flex pt-3 align-items-center justify-content-between">
+                                                            <div
+                                                                class="flex-grow-1 small text-start d-flex align-items-center">
+                                                                <button
+                                                                    class="p-0 me-1 bg-transparent text-body border-0"
+                                                                    type="button">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                        viewBox="0 0 24 24" stroke-width="1.5"
+                                                                        stroke="currentColor" width="20">
+                                                                        <path stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                                                    </svg>
+
+                                                                </button>
+                                                                <small>
+                                                                    79
+                                                                </small>
+                                                            </div>
+                                                            <div class="flex-grow-1 text-end">
+                                                                <a href="#!" class="small">Reply</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="border-top px-3 px-lg-5 px-xl-7 py-5 py-lg-8">
+
+                                <!--:Add comment form:-->
+                                <h4 class="mb-2">Add Comment</h4>
+                                <p class="text-body-secondary mb-4">You must be <a
+                                        class="text-decoration-underline text-body" href="page-sign-in.html">Sign In</a>
+                                    to add a comment</p>
+                                <form action="#">
+                                    <div class="row">
+                                        <div class="col-12 mb-4">
+                                            <textarea rows="5" class="form-control"></textarea>
+                                        </div>
+                                        <div class="d-flex justify-content-end">
+                                            <button type="submit" class="btn btn-primary" disabled>Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!--:Content inner Sidebar:-->
+                        <div
+                            class="col-md-5 col-lg-4 bg-body-tertiary content-inner-sidebar d-flex flex-column h-100 border-start position-relative">
+                            <div class=" position-sticky top-0">
+                                <!--:Popular Articles:-->
+                                <div class="position-relative py-5 px-3">
+                                    <div class="mb-4 d-flex align-items-center">
+                                        <h6 class="mb-0">More from </h6>
+                                        <a href="#!"
+                                            class="d-inline-flex gap-2 align-items-center badge text-bg-primary ms-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" width="16">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M6 6h.008v.008H6V6Z" />
+                                            </svg>
+                                            Software
+                                        </a>
+                                    </div>
+                                    <!--:Post Article Card:-->
+                                    <article class="d-flex flex-row align-items-center mb-4">
+                                        <a href="post-details.html"
+                                            class="position-relative d-block size-7x flex-shrink-0">
+                                            <img src="assets/img/sm1.jpg" class="img-fluid rounded-3"
+                                                alt="post image" />
+                                        </a>
+                                        <div class="card-body flex-grow-1 p-0 ms-3">
+                                            <div class="d-flex align-items-center mb-2 lh-1">
+                                                <small class="text-body-secondary">by</small>
+                                                <a href="#!"
+                                                    class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                                    <span class="flex-grow-1 small ms-1">
+                                                        @lorris
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <h6>
+                                                <a href="post-details.html" class="mb-2 d-block lh-sm">
+                                                    Lorem ipsum dolor sit amet, consectetur
+                                                </a>
+                                            </h6>
+
+                                            <ul class="list-divided list-unstyled lh-sm mb-0">
+                                                <li><a href="#!" class="link-hover-underline">Software</a></li>
+                                                <li class="text-body-secondary small">2h</li>
+                                            </ul>
+                                        </div>
+                                    </article>
+
+                                    <!--:Post Article Card:-->
+                                    <article class="d-flex flex-row align-items-center mb-4">
+                                        <a href="post-details.html"
+                                            class="position-relative d-block size-7x flex-shrink-0">
+                                            <img src="assets/img/sm2.jpg" class="img-fluid rounded-3"
+                                                alt="post image" />
+                                        </a>
+                                        <div class="card-body flex-grow-1 p-0 ms-3">
+                                            <div class="d-flex align-items-center mb-2 lh-1">
+                                                <small class="text-body-secondary">by</small>
+                                                <a href="#!"
+                                                    class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                                    <span class="flex-grow-1 small ms-1">
+                                                        @monika
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <h6>
+                                                <a href="post-details.html" class="mb-2 d-block lh-sm">
+                                                    Lorem ipsum dolor sit amet, consectetur
+                                                </a>
+                                            </h6>
+                                            <ul class="list-divided list-unstyled lh-sm mb-0">
+                                                <li><a href="#!" class="link-hover-underline">Software</a></li>
+                                                <li class="text-body-secondary small">21 Nov</li>
+                                            </ul>
+                                        </div>
+                                    </article>
+
+                                    <!--:Post Article Card:-->
+                                    <article class="d-flex flex-row align-items-center">
+                                        <a href="post-details.html"
+                                            class="position-relative d-block size-7x flex-shrink-0">
+                                            <img src="assets/img/sm3.jpg" class="img-fluid rounded-3"
+                                                alt="post image" />
+                                        </a>
+                                        <div class="card-body flex-grow-1 p-0 ms-3">
+                                            <div class="d-flex align-items-center mb-2 lh-1">
+                                                <small class="text-body-secondary">by</small>
+                                                <a href="#!"
+                                                    class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                                    <span class="flex-grow-1 small ms-1">
+                                                        @lorris
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <h6>
+                                                <a href="post-details.html" class="mb-2 d-block lh-sm">
+                                                    Lorem ipsum dolor sit amet, consectetur
+                                                </a>
+                                            </h6>
+                                            <ul class="list-divided list-unstyled lh-sm mb-0">
+                                                <li><a href="#!" class="link-hover-underline">Software</a></li>
+                                                <li class="text-body-secondary small">2h</li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--:Footer:-->
+                <!-- Back to Top button -->
+                <a data-tippy-placement="left" data-tippy-content="Scroll to Top" href="#"
+                    class="toTop btn text-body bg-primary-subtle border-0 p-0 width-3x height-3x shadow d-flex align-items-center justify-content-center">
+                    <i class="bi bi-chevron-up"></i>
+                </a>
+
+
+                <!--Footer Start-->
+                <footer id="footer" class="footer border-top position-relative">
+                    <div class="container pt-9 pb-5 position-relative z-index-1">
+                        <div class="row">
+                            <!--Footer col-->
+                            <div class="col-md-7 col-lg-3 mb-7">
+                                <a href="#" class="d-block width-3x mb-5">
+                                    <img src="assets/img/logo-a.svg" class="img-fluid footer-logo-light" alt="">
+                                    <img src="assets/img/logo-a-white.svg" class="img-fluid footer-logo-dark" alt="">
+                                </a>
+                                <hr>
+                                <small class="text-body-secondary mb-2 d-block">
+                                    Enquiries
+                                </small>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="#!mailto:yourmail.domain.com">info@domian.com</a>
+                                    </li>
+                                </ul>
+                                <hr>
+                                <small class="text-body-secondary mb-3 d-block">
+                                    Join Us Today
+                                </small>
+                                <a href="page-plans.html" class="btn btn-secondary">Upgrade to Pro</a>
+                            </div>
+                            <!--Footer col-->
+                            <div class="col-md-4 col-lg-2 ms-md-auto mb-7 col-7">
+                                <h6 class="mb-4">Links</h6>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            About us
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Newsletter
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Contact
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Career <span class="badge bg-success rounded-pill ms-1">Hiring</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Privacy policy
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Terms & conditions
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Footer col-->
+                            <div class="col-md-4 col-lg-2 ms-lg-auto mb-7 col-5">
+                                <h6 class="mb-4">Topics</h6>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Design
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Development
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Fashion
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Business
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Nature
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Travel
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Footer col-->
+                            <div class="col-md-8 col-lg-4 mb-7">
+                                <h6 class="mb-4">Popular Articles</h6>
+                                <ul class="list-unstyled">
+                                    <li class="d-flex card-hover mb-4 align-items-center">
+                                        <div class="me-3">
+                                            <a href="#!" class="d-block width-6x rounded-3 overflow-hidden">
+                                                <img src="assets/img/sm2.jpg" alt="" class="img-fluid img-zoom">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#!" class="lh-sm d-block mb-2">Tips for creating a long-lasting
+                                                partnership with your startup</a>
+                                            <span class="d-block small text-body-tertiary">02 Sep 2025</span>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex card-hover mb-4 align-items-center">
+                                        <div class="me-3">
+                                            <a href="#!" class="d-block width-6x rounded-3 overflow-hidden">
+                                                <img src="assets/img/sm1.jpg" alt="" class="img-fluid img-zoom">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#!" class="lh-sm d-block mb-2">Functional programming in python for
+                                                beginners</a>
+                                            <span class="d-block small text-body-tertiary">18 Sep 2025</span>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex card-hover align-items-center">
+                                        <div class="me-3">
+                                            <a href="#!" class="d-block width-6x rounded-3 overflow-hidden">
+                                                <img src="assets/img/sm3.jpg" alt="" class="img-fluid img-zoom">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#!" class="lh-sm d-block mb-2">Modern and well coded bootstrap themes you should
+                                                buy</a>
+                                            <span class="d-block small text-body-tertiary">19 Aug 2025</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr class="mb-5 mt-0">
+                        <div class="row">
+                            <div class="col-sm-7 mb-3 mb-sm-0">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="dropup d-table">
+                                        <a href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false"
+                                            class="dropdown-toggle small">
+                                            United States (English)
+                                        </a>
+
+                                        <!--Dropdown lang menu-->
+                                        <div class="dropdown-menu mb-3 dropdown-menu-lg-start" style="margin: 0px;">
+                                            <a href="#!" class="d-flex align-items-center dropdown-item active">
+                                                <img src="assets/img/country/us.svg" class="width-2x me-2" alt="">
+                                                English (US)
+                                            </a>
+                                            <a href="#!" class="d-flex align-items-center dropdown-item">
+                                                <img src="assets/img/country/es.svg" class="width-2x me-2" alt="">
+                                                Spanish
+                                            </a>
+                                            <a href="#!" class="d-flex align-items-center dropdown-item">
+                                                <img src="assets/img/country/gb.svg" class="width-2x me-2" alt="">
+                                                English (UK)
+                                            </a>
+                                            <a href="#!" class="d-flex align-items-center dropdown-item">
+                                                <img src="assets/img/country/fr.svg" class="width-2x me-2" alt="">
+                                                French
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-5 small text-sm-end">
+                                <span class="d-block lh-sm text-body-secondary">© Copyright
+                                    <script>
+                                        document.write(new Date().getFullYear())
+
+                                    </script>. Assan
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--container-->
+                </footer>
+            </main>
+
+        </div>
+    </div>
+    <!--script-->
+    <script src="assets/js/theme.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+
+
+
+
+@import "./node_modules/bootstrap/scss/functions";
+@import "./custom/variables/variables";
+@import "./custom/variables/variables-dark";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/variables-dark";
+@import "./node_modules/bootstrap/scss/maps";
+@import "./node_modules/bootstrap/scss/mixins";
+@import "./node_modules/bootstrap/scss/utilities";
+@import "./custom/utilities/utilities";
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+
+//Custom css variables for Assan Theme
+@import "./custom/utilities/root";
+
+//Theme core style import
+
+
+@import "./custom/utilities/typography";
+@import "./custom/utilities/flexbox";
+@import "./custom/components/components";
+@import './custom/webfonts/webfonts';
+
+
+
+//Custom body background css here to avoid conflict with dropdown, forms, cards background colors
+body{
+    background-color:var(--#{$prefix}gray-100);
+}
+[data-bs-theme=dark]{
+    body{
+        background-color:var(--#{$prefix}black);
+    }   
+}
+
+.jvm-region.jvm-element{
+fill: var(--#{$prefix}border-color);
+}

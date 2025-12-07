@@ -1,0 +1,22 @@
+//Back to top style
+.toTop{
+    position: fixed;
+    z-index: $zindex-fixed;
+    right:$spacer;
+    bottom:$spacer;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: all .25s;
+    outline: none;
+    &:focus{
+        outline: none;
+    }
+    &.show{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: none;
+    }
+}

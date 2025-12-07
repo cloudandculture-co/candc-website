@@ -1,0 +1,57 @@
+//Dropzone file upload
+.dropzone{
+    --#{$prefix}input-bg:#{$input-bg};
+    --#{$prefix}input-border-color:#{$input-border-color};
+    border: #{$input-border-width} dashed var(--#{$prefix}input-border-color);
+    background-color: var(--#{$prefix}input-bg);
+    min-height: 220px;
+    position: relative;
+    overflow: hidden;
+    max-width:320px;
+    height:auto;
+    padding: $spacer;
+    border-radius:$border-radius-lg;
+    .dropzone-select{
+        width:100%;
+        height: 100%;
+        z-index: 0;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        top: 0;
+    }
+    .dropzone-preview{
+        width:100%;
+        height: 100%;
+        img{
+            pointer-events: none;
+            &[src="#"]{
+                opacity: 0;
+            }
+        }
+    }
+    .dropzone-delete{
+        pointer-events: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        margin-top: $spacer * .5;
+        margin-right: $spacer * .5;
+    }
+}
+.dropzone-preview-list.dz-error{
+display: none;
+}
+.dz-max-files-reached{
+    .dropzone-select{
+        pointer-events: none;
+        opacity:0;
+        visibility: hidden;
+    }
+}
+.dropzone-file-area{
+    min-height: 200px;
+}

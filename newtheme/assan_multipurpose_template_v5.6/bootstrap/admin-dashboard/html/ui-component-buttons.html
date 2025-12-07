@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assan-Admin</title>
+
+        @@include('./partials/fonts.html')
+
+        <!--Simplebar css-->
+        <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+        <!--Choices css-->
+        <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+        <!--Main style-->
+        <link rel="stylesheet" href="assets/css/style.min.css">
+    </head>
+
+    <body>
+        @@include('./partials/preloader.html')
+        <!--App Start-->
+        <div class="d-flex flex-column flex-root">
+            <!--Page-->
+            <div class="page d-flex flex-row flex-column-fluid">
+
+                @@include('./partials/sidebars/sidebar-default.html',{page:"components","components_collapse": "show","component_buttons_active": "active"})
+
+                <!--///////////Page content wrapper///////////////-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+
+
+                    @@include('./partials/header/header-default.html')
+
+                    <!--//Page Toolbar//-->
+                    <div class="toolbar px-3 px-lg-6 py-3">
+                        <div class="position-relative container-fluid px-0">
+                            <div class="row align-items-center position-relative">
+                                <div class="col-md-8">
+                                    <h3 class="mb-2">Buttons</h3>
+
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                            <li class="breadcrumb-item active">UI Components</li>
+                                            <li class="breadcrumb-item active">Buttons</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page Toolbar End//-->
+
+                    <!--//Page content//-->
+                    <div class="content pt-3 px-3 px-lg-6 d-flex flex-column-fluid">
+                        <div class="container-fluid px-0">
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+                                    <div class="card overflow-hidden">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Fill buttons</h5>
+                                        </div>
+                                        <div class="card-body">
+                                           <div class="d-flex flex-wrap gap-2">
+                                            <button type="button" class="btn btn-primary">Primary</button>
+                                            <button type="button" class="btn btn-success">success</button>
+                                            <button type="button" class="btn btn-info">info</button>
+                                            <button type="button" class="btn btn-danger">danger</button>
+                                            <button type="button" class="btn btn-warning">warning</button>
+                                            <button type="button" class="btn btn-white">white</button>
+                                            <button type="button" class="btn btn-light">light</button>
+                                            <button type="button" class="btn btn-secondary">secondary</button>
+                                            <button type="button" class="btn btn-dark">Dark</button>
+                                           </div>
+                                           <h6 class="pt-4 mb-3">Stats</h6>
+                                            <div class=" d-flex flex-wrap gap-2">
+                                            <button type="button" class="btn btn-primary">Default Primary</button>
+                                            <button type="button" class="btn btn-primary active">Active Primary</button>
+                                            <button type="button" class="btn btn-primary disabled">Disabled Primary</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <div class="card overflow-hidden">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Outline buttons</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <button type="button" class="btn btn-outline-primary">Primary</button>
+                                            <button type="button" class="btn btn-outline-success">success</button>
+                                            <button type="button" class="btn btn-outline-info">info</button>
+                                            <button type="button" class="btn btn-outline-danger">danger</button>
+                                            <button type="button" class="btn btn-outline-warning">warning</button>
+                                            <button type="button" class="btn btn-outline-secondary">secondary</button>
+                                            <button type="button" class="btn btn-outline-dark">Dark</button>
+                                            </div>
+                                            <span class="d-flex flex-wrap gap-2 p-3 rounded-2 bg-secondary my-2">
+                                              <button type="button" class="btn btn-outline-white me-2">white</button>
+                                            <button type="button" class="btn btn-outline-light me-2">light</button>
+                                            </span>
+                                            
+                                            <h6 class="pt-4 mb-3">Stats</h6>
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <button type="button" class="btn btn-outline-primary">Default Primary</button>
+                                            <button type="button" class="btn btn-outline-primary active">Active Primary</button>
+                                            <button type="button" class="btn btn-outline-primary disabled">Disabled Primary</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <div class="card overflow-hidden">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Icon buttons</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            
+                                           <div class="d-flex flex-wrap gap-2">
+                                            <button type="button" class="btn btn-secondary">
+                                                <span class="material-symbols-rounded align-middle me-2">
+                                                    shopping_cart
+                                                    </span> Add to cart</button>
+                                               <button type="button" class="btn btn-outline-secondary">
+                                                 Download 
+                                                 <span class="material-symbols-rounded align-middle ms
+                                                 -2">
+                                                    download
+                                                    </span>
+                                                </button>
+                                           </div>
+                                           <div class="d-flex align-items-center flex-wrap gap-2 pt-4">
+                                            
+                                            <button type="button" class="btn btn-outline-primary rounded-pill p-0 size-40 d-inline-flex align-items-center justify-content-center">
+                                                <span class="material-symbols-rounded fs-4">
+                                                    house
+                                                    </span>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-primary rounded-pill p-0 size-50 d-inline-flex align-items-center justify-content-center">
+                                                <span class="material-symbols-rounded fs-3">
+                                                    house
+                                                    </span>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-primary rounded-pill p-0 size-60 d-inline-flex align-items-center justify-content-center">
+                                                <span class="material-symbols-rounded fs-2">
+                                                    house
+                                                    </span>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-primary rounded-pill p-0 size-80 d-inline-flex align-items-center justify-content-center">
+                                                <span class="material-symbols-rounded fs-1">
+                                                    house
+                                                    </span>
+                                            </button>
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <div class="card overflow-hidden">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Group buttons</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="btn-group btn-group-sm">
+                                                <button class="btn btn-outline-secondary">Profile</button>
+                                                <button class="btn btn-outline-secondary">Contacts</button>
+                                                <button class="btn btn-outline-secondary">Settings</button>
+                                            </div>
+                                            <hr>
+                                            <div class="btn-group">
+                                                <button class="btn btn-outline-secondary active">
+                                                    <span class="material-symbols-rounded align-middle me-1">
+                                                        account_circle
+                                                        </span>
+                                                     Profile</button>
+                                                <button class="btn btn-outline-secondary">
+                                                    <span class="material-symbols-rounded align-middle me-1">
+                                                        analytics
+                                                        </span>
+                                                     Activity</button>
+                                                <button class="btn btn-outline-secondary">
+                                                    <span class="material-symbols-rounded align-middle me-1">
+                                                        rss_feed
+                                                        </span>
+                                                     Feed</button>
+                                            </div>
+                                            <hr>
+                                            <div class="btn-group btn-group-lg">
+                                                <button class="btn btn-outline-secondary">
+                                                    <span class="material-symbols-rounded align-middle lh-1">
+                                                        account_circle
+                                                        </span>
+                                                </button>
+                                                <button class="btn btn-outline-secondary">
+                                                    <span class="material-symbols-rounded align-middle lh-1">
+                                                        analytics
+                                                        </span>
+                                                </button>
+                                                <button class="btn btn-outline-secondary">
+                                                    <span class="material-symbols-rounded align-middle lh-1">
+                                                        rss_feed
+                                                        </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <div class="card overflow-hidden">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Custom buttons</h5>
+                                        </div>
+                                        <div class="card-body">
+                                           <div class="d-flex flex-wrap gap-2 mb-4">
+                                            <button class="btn btn-outline-secondary border-2">Outline 2x</button>
+                                            <button class="btn btn-outline-secondary rounded-pill">Corner Radius</button>
+                                            <button class="btn btn-outline-secondary rounded-0">Corner Radius 0</button>
+                                            
+                                           </div>
+                                           <button class="btn btn-outline-secondary btn-sm me-2 my-1">Small</button>
+                                            <button class="btn btn-outline-secondary me-2 my-1">Default</button>
+                                            <button class="btn btn-outline-secondary btn-lg me-2 my-1">Large</button>
+                                            
+                                            <hr>
+                                            <button class="btn btn-primary w-100 d-block">Block button</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page content End//-->
+
+                    @@include('./partials/footer.html')
+                </main>
+                <!--///////////Page content wrapper End///////////////-->
+            </div>
+        </div>
+        @@include('./partials/core-scripts.html')
+
+    </body>
+
+</html>

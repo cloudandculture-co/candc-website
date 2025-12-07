@@ -1,0 +1,103 @@
+<nav class="navbar navbar-expand-lg navbar-transparent navbar-sticky navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo-white.svg" alt="" class="img-fluid">
+        </a>
+        <div class="d-flex align-items-center ms-3 ms-lg-5">
+            <ul class="navbar-nav flex-row d-none d-sm-flex">
+                <li class="nav-item">
+                    <a class="nav-link @@if(context.page === 'resource-blog') {active}" href="resource-blog.html">Blog</a>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="d-flex order-lg-last ms-auto flex-row navbar-nav align-items-center">
+            <li class="nav-item me-3 me-lg-0 dropdown">
+                <a href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" class="nav-link">
+                    <span class="material-icons align-middle">
+                        account_circle
+                    </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end position-absolute">
+                    <a href="#!" class="dropdown-item">
+                        <span class="material-icons align-middle me-2">
+                            account_circle
+                        </span> Profile
+                    </a>
+                    <a href="#!" class="dropdown-item">
+                        <span class="material-icons align-middle me-2">
+                            favorite
+                        </span> Favorites
+                    </a>
+                    <a href="#!" class="dropdown-item">
+                        <span class="material-icons align-middle me-2">
+                            visibility
+                        </span> Watchlist
+                    </a>
+                    <a href="#!" class="dropdown-item">
+                        <span class="material-icons align-middle me-2">
+                            category
+                        </span> My collection
+                    </a>
+                    <a href="#!" class="dropdown-item">
+                        <span class="material-icons align-middle me-2">
+                            manage_accounts
+                        </span> Settings
+                    </a>
+                    <div class="dropdown-divider"></div>
+             <a href="#!" class="dropdown-item">
+              <span class="material-icons align-middle me-2">
+                logout
+              </span> Logout
+             </a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="#!" class="btn btn-outline-white">Submit request</a>
+            </li>
+            <!--:Dark Mode:-->
+        <li class="nav-item dropdown ms-3">
+            <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+              <span class="theme-icon-active d-flex align-items-center">
+                <span class="material-icons align-middle">
+                  
+                  </span>
+              </span>
+            </button>
+             <!--:Dark Mode Options:-->
+          <ul class="dropdown-menu position-absolute dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 9rem;">
+            <li class="mb-1">
+              <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light">
+                  <span class="theme-icon d-flex align-items-center">
+                    <span class="material-icons align-middle me-2">
+                      lightbulb
+                      </span>
+                    </span>
+                Light
+              </button>
+            </li>
+            <li class="mb-1">
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+                  <span class="theme-icon d-flex align-items-center">
+                    <span class="material-icons align-middle me-2">
+                      dark_mode
+                      </span>
+                    </span>
+                Dark
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
+                  <span class="theme-icon d-flex align-items-center">
+                    <span class="material-icons align-middle me-2">
+                      invert_colors
+                      </span>
+                    </span>
+                Auto
+              </button>
+            </li>
+          </ul>
+          </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    @@include('./partials/head-includes.html')
+    <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+    <!--begin:Header-->
+    <header class="header-transparent sticky-fixed">
+
+        <!--begin:navbar-->
+        <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light">
+            <!--Navbar-fixed-background-->
+            <div class="navbar-fixed-bg absolute"></div>
+            <div class="container relative flex flex-wrap items-center justify-center relative">
+                <!--begin:logo-->
+                <a class="navbar-brand relative w-24 block" href="index.html">
+                    <img src="assets/img/logo/logo.svg" alt="" class="max-w-full dark:hidden">
+                    <img src="assets/img/logo/logo-white.svg" alt="" class="max-w-full hidden dark:block">
+                </a>
+                <!--end:logo-->
+
+                <!--begin:navbar-no-collapse-items-->
+                <div class="flex items-center shrink-0 ml-auto lg:order-last">
+                    <!--Navbar toggler button-->
+                    <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i></i>
+                        </span>
+                    </button>
+                    <!--Button-->
+                    <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+                        <a href="#" class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+                    </div>
+                </div>
+                <!--end:navbar-no-collapse-items-->
+
+                <!--begin:navbar-collapse-->
+                <div class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+                    id="mainNavbarTheme">
+                    @@include('./partials/headers/default-navbar-items.html',{"page": "blog"})
+                </div>
+                <!--end:navbar-collapse-->
+            </div>
+
+        </nav>
+        <!--end:navbar-->
+    </header>
+    <!--end:header-->
+    <main class="main-content" id="main-content">
+        <section id="article-header" class="relative bg-gray-50 dark:bg-gray-900">
+            <div class="container lg:pt-36 pt-32 pb-24">
+                <article class="lg:w-8/12 pb-16">
+                    <div class="relative">
+                        <div class="flex items-center w-full">
+                            <a href="#!"
+                                class="inline-block px-3 py-1 rounded-full text-sm text-white bg-indigo-500 rounded-pill me-3">Tech</a>
+                            <small class="text-gray-500">02 May. 2025</small>
+                        </div>
+
+                        <div>
+                            <h2 class="my-4 text-5xl lg:text-6xl font-medium">
+                                Smoothly rolling out pricing changes is hard
+                            </h2>
+                            <div class="flex pt-2 mb-0 small items-center">
+                                <img src="assets/img/avatar/6.jpg" alt="" class="w-9 rounded-full mr-2">
+                                <span class="text-gray-400 inline-block">By <a href="#!"
+                                        class="text-indigo-500">Andrew</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!--/.article-->
+            </div>
+
+
+            <!--Divider-->
+            <svg class="absolute start-0 bottom-0 text-white dark:text-black" preserveAspectRatio="none" width="100%"
+                height="80" viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M800 240H0L800 0V240Z" fill="currentColor"></path>
+            </svg>
+
+        </section>
+
+        <section class="relative">
+            <div class="container pb-16 lg:pb-24">
+                <img src="assets/img/1200x600/4.jpg" alt=""
+                    class="max-w-full shadow-lg rounded-2xl mb-12 relative -mt-24">
+
+                <div class="flex flex-wrap">
+                    <div class="lg:w-9/12 mx-auto">
+                        <article class="article mb-9">
+                            <p class="text-gray-600 dark:text-gray-300 mb-7 text-lg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Viverra nam libero justo laoreet. Suscipit adipiscing
+                                bibendum est ultricies integer.
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-12">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Viverra nam libero justo laoreet. Suscipit adipiscing
+                                bibendum est ultricies integer quis auctor elit. Mauris pellentesque pulvinar
+                                pellentesque
+                                habitant morbi. Sapien nec sagittis aliquam malesuada. Purus sit amet volutpat
+                                consequat
+                                mauris. Imperdiet sed euismod nisi porta lorem mollis. Risus quis varius quam
+                                quisque id
+                                diam. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Sit amet
+                                massa
+                                vitae tortor condimentum lacinia quis vel eros. Diam vel quam elementum pulvinar
+                                etiam non.
+                                Nisl rhoncus mattis rhoncus urna. Vel elit scelerisque mauris pellentesque. Molestie
+                                a
+                                iaculis at erat pellentesque adipiscing commodo elit at. Faucibus et molestie ac
+                                feugiat sed
+                                lectus vestibulum mattis ullamcorper.
+                            </p>
+
+                            <blockquote class="blockquote rounded-2xl mb-12 bg-indigo-500/20 px-9 py-7">
+                                <h2 class="mb-4 text-4xl lg:text-5xl font-serif italic">
+                                    " Great things in
+                                    business are never done
+                                    by one person. "
+                                </h2>
+                                <div class="flex pt-4 justify-between items-center">
+                                    <footer class="blockquote-footer text-lg font-medium">
+                                        Steve Jobs
+                                    </footer>
+                                    <div class="text-end">
+                                        <a href="#!" class="btn bg-gray-700 text-white hover:bg-gray-800">
+                                            <i class="bi bi-twitter-x mr-2"></i>
+                                            Post</a>
+                                    </div>
+                                </div>
+                            </blockquote>
+                            <p class="text-gray-600 dark:text-gray-300 mb-9">
+                                Venenatis cras sed felis eget velit aliquet. Pharetra et ultrices neque ornare
+                                aenean
+                                euismod elementum. Gravida dictum fusce ut placerat. Facilisis mauris sit amet
+                                massa. Nunc
+                                scelerisque viverra mauris in aliquam. In iaculis nunc sed augue lacus. Pellentesque
+                                habitant morbi tristique senectus et netus. Placerat duis ultricies lacus sed turpis
+                                tincidunt. Vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Tincidunt
+                                lobortis feugiat vivamus at augue eget arcu dictum. Amet porttitor eget dolor morbi
+                                non arcu
+                                risus. Mi tempus imperdiet nulla malesuada pellentesque. Lectus urna duis convallis
+                                convallis. Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra.
+                            </p>
+                            <h4 class="mb-4 text-2xl font-medium">A highlight text heading</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-12">
+                                Harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+                                soluta nobis
+                                est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
+                                possimus,
+                                omnis voluptas
+                                assumenda est, omnis dolor repellendus.
+                            </p>
+                            <div class="flex flex-wrap -mx-3 mb-6">
+                                <div class="w-6/12 px-3">
+                                    <figure class="mb-6">
+                                        <img src="assets/img/1200x600/3.jpg" alt="image"
+                                            class="max-w-full rounded-2xl mb-3">
+                                        <figcaption class="text-gray-400 text-xs text-center">A caption to describe the
+                                            image
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="w-6/12 px-3">
+                                    <figure class="mb-6">
+                                        <img src="assets/img/1200x600/2.jpg" alt="image"
+                                            class="max-w-full rounded-2xl mb-3">
+                                        <figcaption class="text-gray-400 text-xs text-center">A caption to describe the
+                                            image
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 mb-12">
+                                Suscipit adipiscing bibendum est ultricies integer quis auctor elit. Mauris
+                                pellentesque
+                                pulvinar pellentesque habitant morbi. Sapien nec sagittis aliquam malesuada. Purus
+                                sit amet
+                                volutpat consequat mauris. Imperdiet sed euismod nisi porta lorem mollis. Risus quis
+                                varius
+                                quam quisque id diam. Habitasse platea dictumst vestibulum rhoncus est pellentesque
+                                elit.
+                                Sit amet massa vitae tortor condimentum lacinia quis vel eros. Diam vel quam
+                                elementum
+                                pulvinar etiam non. Nisl rhoncus mattis rhoncus urna. Vel elit scelerisque mauris
+                                pellentesque. Molestie a iaculis at erat pellentesque adipiscing commodo elit at.
+                                Faucibus
+                                et molestie ac feugiat sed lectus vestibulum mattis ullamcorper.
+                            </p>
+                        </article>
+                        <!--/.article-->
+
+                        <div class="flex justify-end items-center mb-9">
+                            <div class="me-3 text-sm text-gray-400">
+                                Share Article
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <a href="#!" class="inline-block">
+                                    <img src="assets/img/brands/facebook.svg" alt=""
+                                        class="w-8 h-8 hover:-translate-y-2 transition-all duration-300 rounded-full">
+                                </a>
+                                <a href="#!" class="inline-block">
+                                    <img src="assets/img/brands/x.svg" alt=""
+                                        class="w-8 h-8 hover:-translate-y-2 transition-all duration-300 rounded-full">
+                                </a>
+                                <a href="#!" class="inline-block">
+                                    <img src="assets/img/brands/linkedin.svg" alt=""
+                                        class="w-8 h-8 hover:-translate-y-2 transition-all duration-300 rounded-full">
+                                </a>
+                            </div>
+                        </div>
+                        <!--/.social-->
+                        <h4 class="mb-7 text-xl font-medium">Comments (2)</h4>
+                        <ul class="list-unstyled mb-12">
+                            <li class="flex mb-3">
+                                <div class="mr-3">
+                                    <img src="assets/img/avatar/1.jpg" alt="" class="w-12 h-auto rounded-full">
+                                </div>
+                                <div class="px-3 py-4 rounded-2xl border border-gray-200 dark:border-gray-800">
+                                    <div class="flex mb-3 justify-between">
+                                        <div class="flex items-center">
+                                            <h6 class="mb-0 me-3">Jessica</h6>
+                                            <small class="text-gray-400">02 June</small>
+                                        </div>
+                                        <div>
+                                            <a href="#!" class="text-dark small">Reply</a>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                        It is a long fact that a reader will be distracted by the readable
+                                        content of a page when looking at its layout of a page when looking at its
+                                        layout.
+                                    </p>
+                                </div>
+                            </li>
+                            <!--media-->
+                            <li class="flex mb-3">
+                                <div class="mr-3">
+                                    <img src="assets/img/avatar/3.jpg" alt="" class="w-12 h-auto rounded-full">
+                                </div>
+                                <div class="px-3 py-4 rounded-2xl border border-gray-200 dark:border-gray-800">
+                                    <div class="flex mb-3 justify-between">
+                                        <div class="flex items-center">
+                                            <h6 class="mb-0 me-3">Rebecca</h6>
+                                            <small class="text-gray-400">29 May</small>
+                                        </div>
+                                        <div>
+                                            <a href="#!" class="text-dark small">Reply</a>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                        It is a long fact that a reader will be distracted by the readable
+                                        content of a page when looking at its layout of a page when looking at its
+                                        layout.
+                                    </p>
+                                </div>
+                            </li>
+                            <!--media-->
+                        </ul>
+                        <!--/.comments-->
+                        <h4 class="mb-7 text-xl font-medium">Post a comment</h4>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="input" placeholder="Name" name="comment-name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="input" placeholder="Email Address" name="comment-email">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="input" name="comment-text" rows="5" placeholder="Comment"></textarea>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="input-check flex items-center">
+                                    <input class="input-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="input-check-label text-gray-500 ml-2 text-sm" for="flexCheckDefault">
+                                        Notify me when someone reply
+                                    </label>
+                                </div>
+                                <button class="btn bg-indigo-500 hover:bg-indigo-600 text-white btn-lg"
+                                    type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative overflow-hidden border-t border-gray-200 dark:border-gray-900">
+            <div class="container py-16 lg:py-24">
+                <h3 class="text-4xl lg:text-5xl font-medium mb-3 text-center">Related posts</h3>
+                <div class="flex flex-wrap -mx-3 justify-center">
+                    <!--Post card col-->
+                    <div class="w-full px-3 sm:w-6/12 lg:w-5/12 mt-6">
+                        <a href="#!"
+                            class="flex rounded-2xl border border-gray-200 dark:border-gray-800 p-5 hover:-translate-y-2 hover:shadow-lg bg-white dark:bg-gray-900 transition-all duration-300">
+                            <div class="me-4 rounded-2xl flex-shrink overflow-hidden">
+                                <img src="assets/img/projects/1.jpg" alt="" class="max-w-full h-auto w-24 rounded-2xl">
+                            </div>
+                            <div class="flex-grow h-full">
+                                <div class="flex text-sm mb-3 justify-between">
+                                    <span class="inline-block mr-2 small text-orange-500">
+
+                                        Business
+                                    </span>
+                                    <span class="text-gray-500 text-sm">19 Aug.</span>
+                                </div>
+                                <h5 class="mb-0 text-xl font-medium">
+                                    How to configure output css files from sass
+                                </h5>
+                            </div>
+                        </a>
+                        <!--/.card-->
+
+                    </div>
+                    <!--/.col-->
+
+                    <!--Post card col-->
+                    <div class="w-full px-3 sm:w-6/12 lg:w-5/12 mt-6">
+                        <a href="#!"
+                            class="flex rounded-2xl border border-gray-200 dark:border-gray-800 p-5 hover:-translate-y-2 hover:shadow-lg bg-white dark:bg-gray-900 transition-all duration-300">
+                            <div class="me-4 rounded-2xl flex-shrink overflow-hidden">
+                                <img src="assets/img/projects/2.jpg" alt="" class="max-w-full h-auto w-24 rounded-2xl">
+                            </div>
+                            <div class="flex-grow h-full">
+                                <div class="flex text-sm mb-3 justify-between">
+                                    <span class="inline-block mr-2 small text-success">
+
+                                        Community
+                                    </span>
+                                    <span class="text-gray-500 text-sm">12 Nov.</span>
+                                </div>
+                                <h5 class="mb-0 text-xl font-medium">
+                                    How to configure output css files from sass
+                                </h5>
+                            </div>
+                        </a>
+                        <!--/.card-->
+
+                    </div>
+                    <!--/.col-->
+
+                    <!--Post card col-->
+                    <div class="w-full px-3 sm:w-6/12 lg:w-5/12 mt-6">
+                        <a href="#!"
+                            class="flex rounded-2xl border border-gray-200 dark:border-gray-800 p-5 hover:-translate-y-2 hover:shadow-lg bg-white dark:bg-gray-900 transition-all duration-300">
+                            <div class="me-4 rounded-2xl flex-shrink overflow-hidden">
+                                <img src="assets/img/projects/3.jpg" alt="" class="max-w-full h-auto w-24 rounded-2xl">
+                            </div>
+                            <div class="flex-grow h-full">
+                                <div class="flex text-sm mb-3 justify-between">
+                                    <span class="inline-block mr-2 small text-red-500">
+
+                                        Design
+                                    </span>
+                                    <span class="text-gray-500 text-sm">24 Dec.</span>
+                                </div>
+                                <h5 class="mb-0 text-xl font-medium">
+                                    How to configure output css files from sass
+                                </h5>
+                            </div>
+                        </a>
+                        <!--/.card-->
+
+                    </div>
+                    <!--/.col-->
+
+                    <!--Post card col-->
+                    <div class="w-full px-3 sm:w-6/12 lg:w-5/12 mt-6">
+                        <a href="#!"
+                            class="flex rounded-2xl border border-gray-200 dark:border-gray-800 p-5 hover:-translate-y-2 hover:shadow-lg bg-white dark:bg-gray-900 transition-all duration-300">
+                            <div class="me-4 rounded-2xl flex-shrink overflow-hidden">
+                                <img src="assets/img/projects/4.jpg" alt="" class="max-w-full h-auto w-24 rounded-2xl">
+                            </div>
+                            <div class="flex-grow h-full">
+                                <div class="flex text-sm mb-3 justify-between">
+                                    <span class="inline-block mr-2 small text-indigo-500">
+
+                                        Tech
+                                    </span>
+                                    <span class="text-gray-500 text-sm">11 Jan.</span>
+                                </div>
+                                <h5 class="mb-0 text-xl font-medium">
+                                    How to configure output css files from sass
+                                </h5>
+                            </div>
+                        </a>
+                        <!--/.card-->
+
+                    </div>
+                    <!--/.col-->
+                </div>
+            </div>
+        </section>
+
+        <!--:Newsletter:-->
+        <section class="relative dark">
+            <div class="container relative z-[1] -mb-16">
+                <div class="px-6 lg:px-9 py-12 lg:py-16 bg-gray-800 rounded-2xl text-white overflow-hidden relative">
+                    <img src="assets/img/backgrounds/bg-blur2.png"
+                        class="h-auto w-full md:w-10/12 absolute right-0 top-0 -translate-y-2/3" alt="">
+
+                    <div class="relative">
+                        <h3 class="text-4xl lg:text-5xl font-medium mb-7" data-text-split>Get stories direct to your
+                            inbox</h3>
+                        <form>
+                            <div class="flex flex-col md:flex-row md:items-center gap-2 lg:w-7/12 mb-4">
+                                <input type="email" name="email" class="input input-lg" placeholder="Email Address"
+                                    required="">
+                                <button type="submit" class="btn btn-lg bg-white text-gray-700 hover:text-indigo-500">
+                                    <span>Subscribe</span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <p class="text-xs text-white/75 mb-0">
+                            We’ll never share your details.
+                            View our <a href="#!" class="link-hover-underline inline-block relative">Privacy Policy</a>
+                            for more info.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-5.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- end:Back to Top button -->
+    <!--:Gsap plugins - required before theme js for animations:-->
+    <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+    <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+    <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+    <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+    <!-- Theme script -->
+    <script src="assets/js/theme.bundle.min.js"></script>
+
+    <!--Autosize textarea-->
+    <script src="assets/vendor/node_modules/js/autosize.min.js"></script>
+    <script>
+        var ta = document.querySelector('textarea');
+        ta.style.display = 'none';
+        autosize(ta);
+        // Change layout
+        ta.style.display = 'block';
+        autosize.update(ta);
+
+    </script>
+</body>
+
+</html>

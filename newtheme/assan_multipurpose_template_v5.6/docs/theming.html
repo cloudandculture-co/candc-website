@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/ico">
+    <!--Google fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <!--Icons-->
+    <link href="assets/fonts/iconsmind/iconsmind.css" rel="stylesheet">
+    <link href="assets/fonts/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link href="assets/css/theme.min.css" rel="stylesheet">
+
+    <title>Assan 4</title>
+  </head>
+
+  <body class="vh-100 d-flex flex-column">
+    <!--Preloader Spinner-->
+    <div class="spinner-loader bg-gradient-secondary text-white">
+      <div class="spinner-border text-primary" role="status">
+      </div>
+      <span class="small d-block ms-2">Loading...</span>
+    </div>
+    <!--Header Start-->
+
+    <!--Header start-->
+    <nav class="navbar navbar-expand-lg z-index-fixed navbar-light bg-white shadow-lg w-100 start-0 top-0">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="assets/images/logo/logo.svg" alt="" class="img-fluid"></a>
+        <button class="navbar-toggler collapse d-lg-none d-block" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <i></i>
+            <i></i>
+          </span>
+        </button>
+        <!--Main Sidebar Nav Start-->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                Get started</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="structure.html">
+                Structure</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="theming.html">
+              Theming</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="credits.html">
+                Credits</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="changelog.html">
+                Changelog <sub class="small badge bg-light text-muted ms-1">v5.6.0</sub></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="btn btn-sm btn-primary" target="_blank" href="https://wrapmarket.com/item/assan-multipurpose-template-admin-ui-kit-WB05F069P?via=wb_rakesh">
+               Purchase ($24)</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+    <!--Main start-->
+    <main class="main">
+      <div class="container py-7">
+        <h3 class="mb-2">Theming for bootstrap main demo</h3>
+        <p class="mb-5">Assan included 8+ theme styles with different colors, fonts but have same components you viewing in preview</p>
+        <h5 class="mb-4">How to use theme styles?</h5>
+        <ol class="list-group mb-5">
+            <li class="list-group-item p-4">
+                <div class="font-monospace">01 - Create a new .html page into your project</div>
+            </li>
+            <li class="list-group-item p-4">
+                <div class="font-monospace">02 - Visit any of these theme styles from demo located in navbar top - hover on features/</div>
+                <img src="assets/images/demos/theming1.png" class="img-fluid d-block my-2" alt="">
+            </li>
+            <li class="list-group-item p-4">
+                <div class="font-monospace">03 - Scroll down a bit on this page, click on <code>Copy Code</code> button, paste into the page you just created into your project</div>
+                <img src="assets/images/demos/theming2.png" class="img-fluid d-block my-2" alt="">
+            </li>
+            <li class="list-group-item p-4">
+                <div class="font-monospace">04 - That's it! You just created a getting started landing page for your project using Assan theme with required css/js files included. Congrats!!</div>
+            </li>
+        </ol>
+
+        <h5 class="mb-4">How to update colors and fonts?</h5>
+        <ol class="list-group">
+            <li class="list-group-item font-monospace p-4">
+                01. Well! If you're familiar with the modern day tools like Sass for Css, It's going to be a very easy for you to update the look and feels of your landing page.
+            </li>
+            <li class="list-group-item font-monospace p-4">
+                02 - Open theme style related <code>_variables.scss</code> file from scss/custom/variables/<br>
+                For example - You've choose the theme style purple layout for your project, You need to open <code>scss/custom/variables/_variables-theme-purple.scss</code> file
+            </li>
+            <li class="list-group-item p-4">
+                <div class="font-monospace">03 - First we check which color name we use in project's primary color (purple theme style example continues..)</div>
+                <img src="assets/images/demos/theming3.png" class="img-fluid d-block my-2" alt="">
+            </li>
+            <li class="list-group-item p-4">
+                <div class="font-monospace">04 - After that we search primary color name value (its appears in top after grays)</div>
+                <div class="font-monospace">If your project brand color anywhere near like purple color - Change purple color value and hit save. Thats it!</div>
+                <img src="assets/images/demos/theming4.png" class="img-fluid d-block my-2" alt="">
+                <div class="font-monospace">
+                    You can also rename your theme style name and use any color value for your project's brand color. above are just an idea of changing colors.<br>
+                </div>
+            </li>
+            <li class="list-group-item p-4">
+                <div class="font-monospace">Updating fonts</div>
+                <div class="font-monospace">Find bellow variable values in <code>_variables.scss file</code> for updating the fonts<br>
+                Update these values with your brand font family.<br>
+                <code>$font-family-serif</code> is the secondary font option uses for blog articles, testimonials etc...
+                </div>
+                <img src="assets/images/demos/theming5.png" class="img-fluid d-block my-2" alt="">
+            </li>
+        </ol>
+    </div>
+    </main>
+
+       <!--Footer start-->
+       <footer class="footer mt-auto bg-secondary text-white">
+        <div class="container small p-3 p-sm-4">
+          <span class="d-block lh-sm text-muted">&copy; Copyright
+            <script>
+              document.write(new Date().getFullYear())
+            </script>. Assan
+          </span>
+        </div>
+      </footer>
+    <!-- scripts -->
+    <script src="assets/js/theme.bundle.min.js"></script>
+  </body>
+
+</html>

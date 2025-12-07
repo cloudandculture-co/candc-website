@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+
+    @@include('./partials/head-includes.html')
+</head>
+
+<body
+    class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+      @@include('./partials/app-preloader.html')
+
+
+    @@include('./partials/sidebar.html',{"page": "ui-components","components_collapse":
+    "show","component_tooltips_active": "active"})
+
+    <main class="relative flex flex-col lg:ms-64">
+        @@include('./partials/header-default.html')
+        <!--:Page Header:-->
+        <div class="px-4 lg:px-6 xl:px-12 py-4">
+            <div class="flex flex-wrap items-center">
+                <div class="flex-grow">
+                    <h4 class="text-2xl font-semibold">Tooltips & Popovers</h4>
+                    <p class="text-sm opacity-60">Bootstrap Js required</p>
+                </div>
+                <div class="shrink-0">
+                    <!--:Breadcrumb:-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="flex items-center">
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                            </li>
+                            <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active"><a
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                    href="ui-component-alerts.html">Components</a></li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Tooltips &
+                                Popovers</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="content relative px-4 lg:px-6 xl:px-12">
+            <div class="grid grid-cols-1 gap-4 mb-4">
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900 p-4">
+                        <h5 class="text-lg font-semibold mb-4">Tooltips
+                        </h5>
+                        <div class="flex flex-wrap gap-3">
+                            <button type="button" class="btn btn-gray" data-bs-toggle="tooltip" data-bs-placement="top"
+                                data-bs-title="Tooltip on top">
+                                Tooltip on top
+                            </button>
+                            <button type="button" class="btn btn-gray" data-bs-toggle="tooltip"
+                                data-bs-placement="right" data-bs-title="Tooltip on right">
+                                Tooltip on right
+                            </button>
+                            <button type="button" class="btn btn-gray" data-bs-toggle="tooltip"
+                                data-bs-placement="bottom" data-bs-title="Tooltip on bottom">
+                                Tooltip on bottom
+                            </button>
+                            <button type="button" class="btn btn-gray" data-bs-toggle="tooltip" data-bs-placement="left"
+                                data-bs-title="Tooltip on left">
+                                Tooltip on left
+                            </button>
+                            <button type="button" class="btn btn-gray" data-bs-toggle="tooltip" data-bs-html="true"
+                                data-bs-title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+                                Tooltip with HTML
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900 p-4">
+                        <h5 class="text-lg font-semibold mb-4">Popovers
+                        </h5>
+                        <div class="flex flex-wrap items-center gap-3">
+                            <button type="button" class="btn btn-gray" data-bs-toggle="popover"
+                                data-bs-title="Popover Top" data-bs-placement="top"
+                                data-bs-content="And here's some amazing content. It's very engaging. Right?">Top</button>
+                                <button type="button" class="btn btn-gray" data-bs-toggle="popover"
+                                data-bs-title="Popover Right"
+                                data-bs-content="And here's some amazing content. It's very engaging. Right?">Right</button>
+                                <button type="button" class="btn btn-gray" data-bs-placement="left" data-bs-toggle="popover"
+                                data-bs-title="Popover Left"
+                                data-bs-content="And here's some amazing content. It's very engaging. Right?">Left</button>
+                                <button type="button" class="btn btn-gray" data-bs-placement="bottom" data-bs-toggle="popover"
+                                data-bs-title="Popover Bottom"
+                                data-bs-content="And here's some amazing content. It's very engaging. Right?">Bottom</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

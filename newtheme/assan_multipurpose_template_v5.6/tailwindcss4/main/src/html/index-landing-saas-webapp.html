@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+  @@include('./partials/head-includes.html')
+
+  <!--Swiper slider-->
+  <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+  <!--G-lightbox-->
+  <link rel="stylesheet" href="assets/vendor/node_modules/css/glightbox.min.css" />
+  <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+  @@include('./partials/preloader.html')
+  <!--Header Start-->
+  <header class="z-fixed top-0 left-0 absolute header-sticky z-[999] w-full">
+    <nav class="navbar py-4 lg:py-0 shadow-none navbar-expand-lg navbar-light navbar-link-white">
+      <div class="container relative flex flex-wrap items-center justify-center">
+        <!--begin:logo-->
+        <a class="navbar-brand relative w-24 block" href="index.html">
+          <img src="assets/img/logo/logo.svg" alt="" class="max-w-full navbar-brand-sticky">
+          <img src="assets/img/logo/logo-white.svg" alt="" class="max-w-full navbar-brand-transparent">
+        </a>
+        <!--end:logo-->
+        <div class="flex items-center shrink-0 ml-auto lg:order-last">
+          <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <i></i>
+            </span>
+          </button>
+          <div class="nav-item me-3 me-lg-0 ms-lg-3">
+            <a href="#"
+              class="inline-block capitalize font-medium px-4 py-2 rounded-xl bg-orange-500 text-white hover:bg-orange-600 duration-200">
+              Get started</a>
+          </div>
+        </div>
+        <div
+          class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+          id="mainNavbarTheme">
+          @@include('./partials/headers/default-navbar-items.html',{"page":
+          "home"})
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--Main content-->
+
+  <main class="main-content" id="main-content">
+    <section class="relative bg-gradient-to-tr from-black to-indigo-900 text-white">
+
+      <div class="w-24 absolute right-0 bottom-0 mr-12">
+        <img src="assets/img/graphics/illustration/shape4.png" alt="" class="max-w-full" data-animation-y>
+      </div>
+      <img src="assets/img/backgrounds/bg-blur2.png" alt=""
+        class="h-auto w-1/2 absolute left-1/2 -translate-x-1/2 top-0 opacity-25" />
+      <div class="container relative pt-24 lg:pt-36 pb-12 z-[1]">
+        <div class="flex flex-wrap -mx-3 items-center">
+          <div class="lg:w-7/12 md:w-9/12 w-full px-3 mx-auto text-center">
+            <h2 class="text-5xl lg:text-6xl relative font-medium relative mb-5 lg:mb-7">
+              Automate your business with
+              <span class="relative inline-block">
+                <svg class="absolute w-28 h-auto left-0 bottom-0 text-orange-500 -z[1]" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 112.15515 11.79665">
+                  <path fill="currentColor"
+                    d="M112.15515,8.8006c-16.03949-.03888-32.7066-1.02392-48.94855-.42279-8.59.32-17.15576,1.0603-25.701,1.97675-5.97986.4834-11.98243,1.54925-17.98053,1.43335a1.50058,1.50058,0,0,1-.3758-2.83686c3.236-.96228,6.67139-1.22216,9.98023-1.913,6.79522-1.22632,13.6217-2.29785,20.40216-3.605C32.913,4.859,15.33948,7.49225,0,9.61859,11.46783,5.802,26.56049,3.31275,39.58484,1.86127c4.11255-.491,8.23242-.92,12.354-1.32788,2.80518-.14526,5.67249-.83557,8.46509-.38,1.01227.28968,1.90381,1.6164,1.12946,2.549-1.10761,1.166-2.80689,1.49456-4.30445,1.91479-3.47741.77252-6.97455,1.443-10.47961,2.07233,2.56055-.23731,5.12323-.44947,7.69079-.60266C73.6908,4.79621,93.18414,4.96442,112.15515,8.8006Z" />
+                </svg><span class="relative">Assan</span>
+              </span>
+            </h2>
+            <p class="relative text-lg text-white/75 lg:w-8/12 mx-auto mb-9">
+              Incididunt ut lorem ipsum dolor sit amet sed do eiusmod tempor
+              labore et dolore.
+            </p>
+            <form class="mb-3 lg:w-8/12 mx-auto">
+              <div class="flex flex-col md:flex-row items-center justify-center" data-bs-theme="light">
+                <input type="email" placeholder="Your work email" class="input h-12 text-black dark:text-white dark:!bg-gray-900 !border-0 mr-3"
+                  required />
+                <div class="pt-3 md:pt-0 shrink-0 w-full md:w-auto">
+                  <button
+                    class="block capitalize w-full font-medium bg-indigo-500 hover:bg-indigo-600 text-white rounded-xl px-6 py-3"
+                    type="submit">
+                    <span>Get started</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+            <small class="text-gray-400 text-xs mb-9 block">No CC required. Cancel anytime</small>
+            <div class="relative w-full -mb-24 lg:-mb-48">
+              <!--Hero image-->
+              <img src="assets/img/graphics/saas/shot1.jpg" alt=""
+                class="h-auto max-w-full relative shadow-2xl rounded-2xl" />
+
+              <!--Video button-->
+              <div class="flex justify-center items-center absolute left-0 top-0 w-full h-full z-[1]">
+                <!--Video button-->
+                <a href="https://vimeo.com/353105087" data-glightbox data-gallery="gallery-8" class="flex items-center text-white justify-center bg-indigo-500 hover:bg-indigo-600 duration-300 w-24 h-24 rounded-full
+                   flex-center">
+                  <i class="bi bi-play text-3xl leading-[1]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--/.row-->
+      </div>
+      <!--/.content-->
+    </section>
+    <!--/section-->
+
+    <!--:Partners:-->
+    <section class="overflow-hidden pt-16 lg:pt-48">
+      <div class="container py-16 lg:py-24">
+        <div class="swiper-container overflow-hidden swiper-partners-5">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide flex justify-center items-center">
+              <img class="max-w-full block mx-auto dark:hidden" src="assets/img/partners/dark/grab.svg" alt="" />
+              <img class="max-w-full block mx-auto dark:block hidden" src="assets/img/partners/white/grab.svg" alt="" />
+            </div>
+            <div class="swiper-slide flex justify-center items-center">
+              <img class="max-w-full block mx-auto dark:hidden" src="assets/img/partners/dark/expedia.svg" alt="" />
+              <img class="max-w-full block mx-auto dark:block hidden" src="assets/img/partners/white/expedia.svg"
+                alt="" />
+            </div>
+            <div class="swiper-slide flex justify-center items-center">
+              <img class="max-w-full block mx-auto dark:hidden" src="assets/img/partners/dark/microsoft.svg" alt="" />
+              <img class="max-w-full block mx-auto dark:block hidden" src="assets/img/partners/white/microsoft.svg"
+                alt="" />
+            </div>
+            <div class="swiper-slide flex justify-center items-center">
+              <img class="max-w-full block mx-auto dark:hidden" src="assets/img/partners/dark/nasdaq.svg" alt="" />
+              <img class="max-w-full block mx-auto dark:block hidden" src="assets/img/partners/white/nasdaq.svg"
+                alt="" />
+            </div>
+            <div class="swiper-slide flex justify-center items-center">
+              <img class="max-w-full block mx-auto dark:hidden" src="assets/img/partners/dark/national-geographic.svg"
+                alt="" />
+              <img class="max-w-full block mx-auto dark:block hidden"
+                src="assets/img/partners/white/national-geographic.svg" alt="" />
+            </div>
+            <div class="swiper-slide flex justify-center items-center">
+              <img class="max-w-full block mx-auto dark:hidden" src="assets/img/partners/dark/postmates.svg" alt="" />
+              <img class="max-w-full block mx-auto dark:block hidden" src="assets/img/partners/white/postmates.svg"
+                alt="" />
+            </div>
+            <div class="swiper-slide flex justify-center items-center">
+              <img class="max-w-full block mx-auto dark:hidden" src="assets/img/partners/dark/grab.svg" alt="" />
+              <img class="max-w-full block mx-auto dark:block hidden" src="assets/img/partners/white/grab.svg" alt="" />
+            </div>
+            <div class="swiper-slide flex justify-center items-center">
+              <img class="max-w-full block mx-auto dark:hidden" src="assets/img/partners/dark/expedia.svg" alt="" />
+              <img class="max-w-full block mx-auto dark:block hidden" src="assets/img/partners/white/expedia.svg"
+                alt="" />
+            </div>
+            <div class="swiper-slide flex justify-center items-center">
+              <img class="max-w-full block mx-auto dark:hidden" src="assets/img/partners/dark/microsoft.svg" alt="" />
+              <img class="max-w-full block mx-auto dark:block hidden" src="assets/img/partners/white/microsoft.svg"
+                alt="" />
+            </div>
+            <div class="swiper-slide flex justify-center items-center">
+              <img class="max-w-full block mx-auto dark:hidden" src="assets/img/partners/dark/nasdaq.svg" alt="" />
+              <img class="max-w-full block mx-auto dark:block hidden" src="assets/img/partners/white/nasdaq.svg"
+                alt="" />
+            </div>
+            <div class="swiper-slide flex justify-center items-center">
+              <img class="max-w-full block mx-auto dark:hidden" src="assets/img/partners/dark/national-geographic.svg"
+                alt="" />
+              <img class="max-w-full block mx-auto dark:block hidden"
+                src="assets/img/partners/white/national-geographic.svg" alt="" />
+            </div>
+            <div class="swiper-slide flex justify-center items-center">
+              <img class="max-w-full block mx-auto dark:hidden" src="assets/img/partners/dark/postmates.svg" alt="" />
+              <img class="max-w-full block mx-auto dark:block hidden" src="assets/img/partners/white/postmates.svg"
+                alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--:Features:-->
+
+    <section class="relative z-[1] pb-12 bg-gray-100 dark:bg-gray-950">
+      <div class="container relative pt-16 lg:pt-24 z-[1]">
+        <div class="lg:w-6/12 mx-auto">
+          <h2 class="text-center text-4xl lg:text-5xl font-medium">
+            <span class="relative inline-block">
+              <svg class="absolute w-24 h-auto left-0 bottom-0 text-orange-500 -mb-1" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 112.15515 11.79665">
+                <path fill="currentColor"
+                  d="M112.15515,8.8006c-16.03949-.03888-32.7066-1.02392-48.94855-.42279-8.59.32-17.15576,1.0603-25.701,1.97675-5.97986.4834-11.98243,1.54925-17.98053,1.43335a1.50058,1.50058,0,0,1-.3758-2.83686c3.236-.96228,6.67139-1.22216,9.98023-1.913,6.79522-1.22632,13.6217-2.29785,20.40216-3.605C32.913,4.859,15.33948,7.49225,0,9.61859,11.46783,5.802,26.56049,3.31275,39.58484,1.86127c4.11255-.491,8.23242-.92,12.354-1.32788,2.80518-.14526,5.67249-.83557,8.46509-.38,1.01227.28968,1.90381,1.6164,1.12946,2.549-1.10761,1.166-2.80689,1.49456-4.30445,1.91479-3.47741.77252-6.97455,1.443-10.47961,2.07233,2.56055-.23731,5.12323-.44947,7.69079-.60266C73.6908,4.79621,93.18414,4.96442,112.15515,8.8006Z" />
+              </svg><span class="relative">Everything</span>
+            </span> you need in one software
+          </h2>
+        </div>
+      </div>
+      <!--Stack(item)-->
+      <div class="rounded-xl sticky top-0 py-4 lg:py-12" data-stack>
+        <div class="container">
+          <div class="rounded-2xl px-4 lg:px-8 py-6 lg:py-12 border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+            <div class="flex flex-wrap -mx-3 items-center justify-between">
+              <div class="w-7/12 px-3 md:w-6/12 lg:w-4/12 mx-auto md:order-last">
+                <div class="relative">
+                  <!--Swiper-->
+                  <div class="swiper-feature-img swiper-container overflow-hidden">
+                    <div class="swiper-wrapper">
+                      <!--Slide-->
+                      <div class="swiper-slide">
+                        <div class="relative pr-16 pb-16">
+                          <img class="max-w-full" src="assets/img/graphics/saas/shot2.png" alt="content" />
+                          <img class="max-w-full absolute right-0 bottom-0 w-1/2"
+                            src="assets/img/graphics/saas/shot3.png" alt="content" />
+                        </div>
+                      </div>
+                      <!--Slide-->
+                      <div class="swiper-slide">
+                        <div class="relative pr-16 pb-16">
+                          <img class="max-w-full" src="assets/img/graphics/saas/shot8.png" alt="content" />
+                          <img class="max-w-full absolute right-0 bottom-0 w-1/2"
+                            src="assets/img/graphics/saas/shot7.png" alt="content" />
+                        </div>
+                      </div>
+                      <!--Slide-->
+                      <div class="swiper-slide">
+                        <div class="relative pr-16 pb-16">
+                          <img class="max-w-full" src="assets/img/graphics/saas/shot2.png" alt="content" />
+                          <img class="max-w-full absolute right-0 bottom-0 w-1/2"
+                            src="assets/img/graphics/saas/shot3.png" alt="content" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full px-3 md:w-6/12 lg:w-5/12 mx-auto md:order-1">
+                <!--Subtitle-->
+                <p class="mb-3 font-medium text-indigo-500">Why Assan?</p>
+
+                <!--Title-->
+                <div class="mb-1 font-title text-3xl lg:text-4xl font-medium">
+                  Easy to manage<br />
+                  <div class="swiper-container swiper-text w-full h-auto leading-[1.2] text-left overflow-hidden"
+                    style="max-height:44px;min-height: 44px;">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide text-green-500">
+                        Spreadsheets
+                      </div>
+                      <div class="swiper-slide text-indigo-500">
+                        Docs
+                      </div>
+                      <div class="swiper-slide text-red-500">
+                        Projects
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-5">
+                      Incididunt ut lorem ipsum dolor sit amet sed do
+                      eiusmod tempor labore et dolore. Labore et dolore
+                      magna aliqua lorem ipsum dolor sit amet.
+                    </p>
+                <div class="relative">
+                  <!--Action button-->
+                  <a href="#" class="link-underline capitalize font-medium">
+                    <span>
+                      Get started
+                      <i class="bi bi-arrow-right text-lg align-middle ml-1"></i></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Stack(item)-->
+      <div class="rounded-xl sticky top-0 py-4 lg:py-12" data-stack>
+        <div class="container">
+          <div class="rounded-2xl px-4 lg:px-8 py-6 lg:py-12 border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+            <div class="flex flex-wrap -mx-3 items-center">
+              <div class="w-9/12 px-3 md:w-6/12 mx-auto mb-9 md:mb-0">
+                <!--Feature image-->
+                <div class="relative">
+                  <img src="assets/img/graphics/saas/integrations.svg" class="max-w-full relative" alt="" />
+                </div>
+              </div>
+              <div class="w-full px-3 md:w-6/12 lg:w-5/12 mx-auto">
+                <p class="mb-3 text-indigo-500 font-medium">
+                  <!--Countup text-->
+                  <span data-countup="1000"></span>+ Integrations
+                </p>
+                <h2 class="mb-4 text-3xl lg:text-4xl font-medium">
+                  Integrate with your favorite tools.
+                </h2>
+                <p class="mb-5 text-gray-600 dark:text-gray-300">
+                  Lorem ipsum dolor sit amet sed tempor dolore magna aliqua nam
+                  libero justo laoreet.
+                </p>
+
+                <!--Action button-->
+                <a href="#" class="link-underline capitalize font-medium"><span>Explore all integrations
+                    <i class="bi bi-arrow-right fs-5 align-middle ms-1"></i></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Stack(item)-->
+      <div class="rounded-xl sticky top-0 py-4 lg:py-12" data-stack>
+        <div class="container">
+          <div class="rounded-2xl px-4 lg:px-8 py-6 lg:py-12 border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+            <div class="flex flex-wrap -mx-3 items-center justify-between">
+              <div class="w-8/12 px-3 md:w-6/12 lg:w-5/12 md:mx-auto mb-9 md:mb-0 md:order-last">
+                <div class="relative rounded-xl">
+                  <img class="max-w-full rounded-2xl" src="assets/img/960x900/3.jpg" alt="content" />
+                </div>
+              </div>
+              <div class="w-full px-3 md:w-6/12 lg:w-5/12 mx-auto md:order-1 lg:pr-16">
+                <!--Subtitle-->
+                <p class="mb-3 font-medium text-indigo-500">Support</p>
+                <!--Title-->
+                <h2 class="mb-4 text-3xl lg:text-4xl font-medium">
+                  Seamless 24/7 support experience.
+                </h2>
+                <p class="mb-5 text-gray-600 dark:text-gray-300">
+                  Ut enim ad minim veniam, quis nostrud ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit.
+                </p>
+                <div class="relative">
+                  <!--Action button-->
+                  <a href="#" class="link-underline capitalize font-medium">
+                    <span>
+                      Get started
+                      <i class="bi bi-arrow-right fs-5 align-middle ms-1"></i></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!--:Pricing:-->
+    <section class="relative overflow-hidden">
+      <div class="container relative py-16 lg:py-24">
+        <div class="flex flex-wrap -mx-3 items-center justify-between">
+          <div class="w-full lg:w-5/12 xl:pr-16 px-3 mb-12 lg:mb-0">
+            <div class="relative">
+              <!--Pricing box-->
+              <div class="relative z-[1] px-4 py-7 shadow-xl rounded-xl mx-auto overflow-hidden">
+                <div class="relative">
+                  <img src="assets/img/graphics/saas/6.png" class="w-48 h-auto block mb-4 mx-auto" alt="">
+                  <h2 class="mb-4 text-center">
+
+                    <span class="text-5xl lg:text-6xl font-medium" data-prefix="$" data-countup="39"></span>
+                  </h2>
+                  <h6 class="mb-4 text-center text-gray-400">Per Month</h6>
+                  <div class="relative">
+                    <!--Action button-->
+                    <a href="#"
+                      class="btn btn-lg block w-full text-center bg-indigo-500 hover:bg-indigo-600 text-white"><span>Sign
+                        up now</span></a>
+                  </div>
+                  <!--:Features:-->
+                  <ul class="list-unstyled py-8 mb-0 ps-5">
+                    <li class="mb-3">
+                      <i class='bi bi-check-circle text-xl mr-3 text-gray-400'></i>Free domain
+                    </li>
+                    <li class="mb-3">
+                      <i class='bi bi-check-circle text-xl mr-3 text-gray-400'></i>2 email
+                      accounts
+                    </li>
+                    <li class="mb-3">
+                      <i class='bi bi-check-circle text-xl mr-3 text-gray-400'></i>25 GB storage
+                    </li>
+                    <li class="mb-3">
+                      <i class='bi bi-check-circle text-xl mr-3 text-gray-400'></i>25 GB storage
+                    </li>
+                    <li class="">
+                      <i class='bi bi-check-circle text-xl mr-3 text-gray-400'></i>100K files
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Pricing features col-->
+          <div class="w-ull lg:w-7/12 px-3 lg:pl-12 relative">
+            <div class="flex flex-wrap -mx-3 lg:mb-7">
+              <div class="w-full px-3">
+                <p data-animation="fadeInUp" data-delay=".1" class="mb-4 font-medium text-gray-400 capitalize"> Get
+                  started for
+                  free, no CC
+                  required.</p>
+                <h2 class="text-4xl lg:text-5xl font-medium" data-animation="fadeInUp" data-delay=".2">
+                  <span class="relative inline-block">
+                    <svg class="absolute left-0 bottom-0 text-orange-500 w-24 h-auto -mb-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 112.15515 11.79665">
+                      <path fill="currentColor"
+                        d="M112.15515,8.8006c-16.03949-.03888-32.7066-1.02392-48.94855-.42279-8.59.32-17.15576,1.0603-25.701,1.97675-5.97986.4834-11.98243,1.54925-17.98053,1.43335a1.50058,1.50058,0,0,1-.3758-2.83686c3.236-.96228,6.67139-1.22216,9.98023-1.913,6.79522-1.22632,13.6217-2.29785,20.40216-3.605C32.913,4.859,15.33948,7.49225,0,9.61859,11.46783,5.802,26.56049,3.31275,39.58484,1.86127c4.11255-.491,8.23242-.92,12.354-1.32788,2.80518-.14526,5.67249-.83557,8.46509-.38,1.01227.28968,1.90381,1.6164,1.12946,2.549-1.10761,1.166-2.80689,1.49456-4.30445,1.91479-3.47741.77252-6.97455,1.443-10.47961,2.07233,2.56055-.23731,5.12323-.44947,7.69079-.60266C73.6908,4.79621,93.18414,4.96442,112.15515,8.8006Z" />
+                    </svg><span class="relative">Simple</span>
+                  </span> and fair pricing
+                </h2>
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-3">
+              <div class="w-full md:w-6/12 px-3 pt-12" data-animation="fadeInUp" data-delay=".1">
+                <!--Feature icon-->
+                <div
+                  class="mb-5 w-16 h-16 flex items-center justify-center rounded-xl shadow-lg bg-indigo-500 text-white">
+                  <i class="bi bi-book text-2xl"></i>
+                </div>
+                <h5 class="mb-4 text-xl font-medium capitalize">Countless features</h5>
+                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+              <div class="w-full md:w-6/12 px-3 pt-12" data-animation="fadeInUp" data-delay=".2">
+                <!--Feature icon-->
+                <div
+                  class="mb-5 w-16 h-16 flex items-center justify-center rounded-xl shadow-lg bg-green-500 text-white">
+                  <i class="bi bi-phone text-2xl"></i>
+                </div>
+                <h5 class="mb-4 text-xl font-medium capitalize">Mobile first</h5>
+                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+              <div class="w-full md:w-6/12 px-3 pt-12" data-animation="fadeInUp" data-delay=".3">
+                <!--Feature icon-->
+                <div
+                  class="mb-5 w-16 h-16 flex items-center justify-center rounded-xl shadow-lg bg-orange-500 text-white">
+                  <i class="bi bi-headphones text-2xl"></i>
+                </div>
+                <h5 class="mb-4 text-xl font-medium capitalize">Instant support</h5>
+                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+              <div class="w-full md:w-6/12 px-3 pt-12" data-animation="fadeInUp" data-delay=".4">
+                <!--Feature icon-->
+                <div
+                  class="mb-5 w-16 h-16 flex items-center justify-center rounded-xl shadow-lg bg-pink-500 text-white">
+                  <i class="bi bi-layers text-2xl"></i>
+                </div>
+                <h5 class="mb-4 text-xl font-medium capitalize">Multi layouts</h5>
+                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--:Features:-->
+    <section class="relative overflow-hidden bg-gray-100 dark:bg-gray-900">
+      <!--Container-->
+      <div class="container relative py-16 lg:py-24">
+        <div class="flex flex-wrap -mx-3">
+          <div class="w-full lg:w-8/12 px-3 mx-auto text-center">
+            <p class="mb-3 font-medium text-gray-400 capitalize">
+              Customizable
+            </p>
+            <h2 class="mb-7 text-4xl lg:text-5xl font-medium">
+              <span class="relative inline-block">
+                <svg class="absolute w-24 left-0 bottom-0 text-orange-500" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 112.15515 11.79665">
+                  <path fill="currentColor"
+                    d="M112.15515,8.8006c-16.03949-.03888-32.7066-1.02392-48.94855-.42279-8.59.32-17.15576,1.0603-25.701,1.97675-5.97986.4834-11.98243,1.54925-17.98053,1.43335a1.50058,1.50058,0,0,1-.3758-2.83686c3.236-.96228,6.67139-1.22216,9.98023-1.913,6.79522-1.22632,13.6217-2.29785,20.40216-3.605C32.913,4.859,15.33948,7.49225,0,9.61859,11.46783,5.802,26.56049,3.31275,39.58484,1.86127c4.11255-.491,8.23242-.92,12.354-1.32788,2.80518-.14526,5.67249-.83557,8.46509-.38,1.01227.28968,1.90381,1.6164,1.12946,2.549-1.10761,1.166-2.80689,1.49456-4.30445,1.91479-3.47741.77252-6.97455,1.443-10.47961,2.07233,2.56055-.23731,5.12323-.44947,7.69079-.60266C73.6908,4.79621,93.18414,4.96442,112.15515,8.8006Z" />
+                </svg> <span class="relative">Discover</span>
+              </span> more features
+            </h2>
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-3">
+          <!--Feature col-->
+          <div class="w-full px-3 lg:w-6/12 xl:w-5/12 xl:ml-auto mt-6" data-animation="fadeInUp" data-delay=".1">
+            <div
+              class="flex flex-col md:flex-row p-6 bg-white rounded-xl border border-gray-200 dark:border-gray-800 dark:bg-gray-900 transition-all duration-300 hover:shadow-xl">
+              <!--feature Icon-->
+              <div class="w-16 h-16 mb-6 md:mb-0 md:mr-5 text-indigo-500">
+                <div data-fill="currentColor" data-src="assets/img/graphics/icons/database.svg"
+                  class="w-full h-full svg-container"></div>
+              </div>
+
+              <!--Feature icon text-->
+              <div>
+                <h5 class="text-xl font-medium mb-3">Unlimited space</h5>
+                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                  Lorem ipsum dolor sit sed do eiusmod tempor
+                  incididunt ut labore et dolore.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--Feature col-->
+          <div class="w-full px-3 lg:w-6/12 xl:w-5/12 mt-6" data-animation="fadeInUp" data-delay=".2">
+            <div
+              class="flex flex-col md:flex-row p-6 bg-white rounded-xl border border-gray-200 dark:border-gray-800 dark:bg-gray-900 transition-all duration-300 hover:shadow-xl">
+              <!--feature Icon-->
+              <div class="w-16 h-16 mb-6 md:mb-0 md:mr-5 text-orange-500">
+                <div data-fill="currentColor" data-src="assets/img/graphics/icons/search.svg"
+                  class="w-full h-full svg-container"></div>
+              </div>
+              <!--Feature icon text-->
+              <div>
+                <h5 class="text-xl font-medium mb-3">Filter search</h5>
+                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                  Lorem ipsum dolor sit sed do eiusmod tempor
+                  incididunt ut labore et dolore.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--Feature col-->
+          <div class="w-full px-3 lg:w-6/12 xl:w-5/12 mt-6" data-animation="fadeInUp" data-delay=".3">
+            <div
+              class="flex flex-col md:flex-row p-6 bg-white rounded-xl border border-gray-200 dark:border-gray-800 dark:bg-gray-900 transition-all duration-300 hover:shadow-xl">
+              <!--feature Icon-->
+              <div class="w-16 h-16 mb-6 md:mb-0 md:mr-5 text-green-500">
+                <div data-fill="currentColor" data-src="assets/img/graphics/icons/locked.svg"
+                  class="w-full h-full svg-container"></div>
+              </div>
+              <!--Feature icon text-->
+              <div>
+                <h5 class="text-xl font-medium mb-3">Security settings</h5>
+                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                  Lorem ipsum dolor sit sed do eiusmod tempor
+                  incididunt ut labore et dolore.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--Feature col-->
+          <div class="w-full px-3 lg:w-6/12 xl:w-5/12 mt-6" data-animation="fadeInUp" data-delay=".4">
+            <div
+              class="flex flex-col md:flex-row p-6 bg-white rounded-xl border border-gray-200 dark:border-gray-800 dark:bg-gray-900 transition-all duration-300 hover:shadow-xl">
+              <!--feature Icon-->
+              <div class="w-16 h-16 mb-6 md:mb-0 md:mr-5 text-red-500">
+                <div data-fill="currentColor" data-src="assets/img/graphics/icons/collaboration.svg"
+                  class="w-full h-full svg-container"></div>
+              </div>
+              <!--Feature icon text-->
+              <div>
+                <h5 class="text-xl font-medium mb-3">Shared server</h5>
+                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                  Lorem ipsum dolor sit sed do eiusmod tempor
+                  incididunt ut labore et dolore.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--Feature col-->
+          <div class="w-full px-3 lg:w-6/12 xl:w-5/12 xl:ml-auto mt-6" data-animation="fadeInUp" data-delay=".5">
+            <div
+              class="flex flex-col md:flex-row p-6 bg-white rounded-xl border border-gray-200 dark:border-gray-800 dark:bg-gray-900 transition-all duration-300 hover:shadow-xl">
+              <!--feature Icon-->
+              <div class="w-16 h-16 mb-6 md:mb-0 md:mr-5 text-blue-500">
+                <div data-fill="currentColor" data-src="assets/img/graphics/icons/help.svg"
+                  class="w-full h-full svg-container"></div>
+              </div>
+
+              <!--Feature icon text-->
+              <div>
+                <h5 class="text-xl font-medium mb-3">Instant support</h5>
+                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                  Lorem ipsum dolor sit sed do eiusmod tempor
+                  incididunt ut labore et dolore.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--Feature col-->
+          <div class="w-full px-3 lg:w-6/12 xl:w-5/12 mt-6" data-animation="fadeInUp" data-delay=".6">
+            <div
+              class="flex flex-col md:flex-row p-6 bg-white rounded-xl border border-gray-200 dark:border-gray-800 dark:bg-gray-900 transition-all duration-300 hover:shadow-xl">
+              <!--feature Icon-->
+              <div class="w-16 h-16 mb-6 md:mb-0 md:mr-5 text-purple-500">
+                <div data-fill="currentColor" data-src="assets/img/graphics/icons/project-management.svg"
+                  class="w-full h-full svg-container"></div>
+              </div>
+              <!--Feature icon text-->
+              <div>
+                <h5 class="text-xl font-medium mb-3">Project management</h5>
+                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                  Lorem ipsum dolor sit sed do eiusmod tempor
+                  incididunt ut labore et dolore.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="relative overflow-hidden">
+      <!--Container-->
+      <div class="container py-16 lg:py-24 relative z-[1]">
+        <div class="flex flex-wrap -mx-3 justify-between items-center">
+          <div class="w-full lg:w-5/12 px-3 mr-auto mb-7 lg:mb-0">
+
+            <!--subheading-->
+            <p class="mb-4 font-medium text-gray-400 capitalize">
+              Process
+            </p>
+            <!--Heading-->
+            <h2 class="mb-9 text-4xl lg:text-5xl font-medium">
+              How it <span class="relative inline-block">
+
+                <svg class="absolute w-24 h-auto left-0 bottom-0 text-orange-500" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 112.15515 11.79665">
+                  <path fill="currentColor"
+                    d="M112.15515,8.8006c-16.03949-.03888-32.7066-1.02392-48.94855-.42279-8.59.32-17.15576,1.0603-25.701,1.97675-5.97986.4834-11.98243,1.54925-17.98053,1.43335a1.50058,1.50058,0,0,1-.3758-2.83686c3.236-.96228,6.67139-1.22216,9.98023-1.913,6.79522-1.22632,13.6217-2.29785,20.40216-3.605C32.913,4.859,15.33948,7.49225,0,9.61859,11.46783,5.802,26.56049,3.31275,39.58484,1.86127c4.11255-.491,8.23242-.92,12.354-1.32788,2.80518-.14526,5.67249-.83557,8.46509-.38,1.01227.28968,1.90381,1.6164,1.12946,2.549-1.10761,1.166-2.80689,1.49456-4.30445,1.91479-3.47741.77252-6.97455,1.443-10.47961,2.07233,2.56055-.23731,5.12323-.44947,7.69079-.60266C73.6908,4.79621,93.18414,4.96442,112.15515,8.8006Z" />
+                </svg> <span class="relative">works?</span>
+              </span>
+            </h2>
+            <!--Nav-tabs-->
+            <ul class="flex space-y-3 flex-col relative mb-5 mb-lg-0" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link py-3 px-4 rounded-xl active bg-gray-50 dark:bg-gray-900 block" data-bs-toggle="tab"
+                  href="#step1" aria-selected="true" role="tab">
+                  <div class="flex items-center">
+                    <div
+                      class="text-2xl size-12 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center shrink-0 me-4">
+                      <i class="bi bi-person"></i>
+                    </div>
+                    <div class="flex-grow">
+                      <div class="text-lg font-medium">
+                        01. Create account
+                      </div>
+                      <p class="mb-0 opacity-75">Lorem ipsum dolor sit amet sed</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link py-3 px-4 rounded-xl bg-gray-50 dark:bg-gray-900 block" data-bs-toggle="tab"
+                  href="#step2" aria-selected="false" role="tab">
+                  <div class="flex items-center">
+                    <div
+                      class="text-2xl size-12 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center shrink-0 me-4">
+                      <i class="bi bi-currency-dollar"></i>
+                    </div>
+                    <div class="flex-grow">
+                      <div class="text-lg font-medium">
+                        02. Choose a plan
+                      </div>
+                      <p class="mb-0 opacity-75">Lorem ipsum dolor sit amet</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link py-3 px-4 rounded-xl bg-gray-50 dark:bg-gray-900 block" data-bs-toggle="tab"
+                  href="#step3" aria-selected="false" role="tab">
+                  <div class="flex items-center">
+                    <div
+                      class="text-2xl size-12 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center shrink-0 me-4">
+                      <i class="bi bi-check-circle"></i>
+                    </div>
+                    <div class="flex-grow">
+                      <div class="text-lg font-medium">
+                        03. Start managing
+                      </div>
+                      <p class="mb-0 opacity-75">Ipsum dolor sit amet sed do</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="w-full lg:w-6/12 px-3">
+            <!--Tabs content-->
+            <div class="tab-content relative">
+              <div class="tab-pane fade show active" id="step1" role="tabpanel">
+                <div class="relative pr-16 pb-16">
+                  <img class="max-w-full w-3/5" src="assets/img/graphics/saas/shot8.png" alt="content" />
+                  <img class="max-w-full absolute right-0 bottom-0 w-1/2" src="assets/img/graphics/saas/shot7.png"
+                    alt="content" />
+                </div>
+              </div>
+              <div class="tab-pane fade" id="step2" role="tabpanel">
+                <div class="relative pr-16 pb-16">
+                  <img class="max-w-full w-3/5" src="assets/img/graphics/saas/shot2.png" alt="content" />
+                  <img class="max-w-full absolute right-0 bottom-0 w-1/2" src="assets/img/graphics/saas/shot3.png"
+                    alt="content" />
+                </div>
+              </div>
+              <div class="tab-pane fade" id="step3" role="tabpanel">
+                <div class="relative pr-16 pb-16">
+                  <img class="max-w-full w-3/5" src="assets/img/graphics/saas/shot7.png" alt="content" />
+                  <img class="max-w-full absolute right-0 bottom-0 w-1/2" src="assets/img/graphics/saas/shot8.png"
+                    alt="content" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--begin: Testimonials section-->
+    <section class="relative bg-gray-900 dark text-white overflow-hidden">
+
+      <div class="container relative py-16 lg:py-24">
+        <div class="flex flex-wrap -mx-3 mb-7 items-end">
+          <div class="md:w-7/12 px-3 mb-7 md:mb-0">
+            <p class="mb-4 font-medium text-gray-400 capitalize">Testimonials</p>
+            <h2 class="mb-4 text-4xl lg:text-5xl font-medium">
+              <span class="relative inline-block">
+
+                <svg class="absolute w-24 h-auto left-0 bottom-0 text-orange-500" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 112.15515 11.79665">
+                  <path fill="currentColor"
+                    d="M112.15515,8.8006c-16.03949-.03888-32.7066-1.02392-48.94855-.42279-8.59.32-17.15576,1.0603-25.701,1.97675-5.97986.4834-11.98243,1.54925-17.98053,1.43335a1.50058,1.50058,0,0,1-.3758-2.83686c3.236-.96228,6.67139-1.22216,9.98023-1.913,6.79522-1.22632,13.6217-2.29785,20.40216-3.605C32.913,4.859,15.33948,7.49225,0,9.61859,11.46783,5.802,26.56049,3.31275,39.58484,1.86127c4.11255-.491,8.23242-.92,12.354-1.32788,2.80518-.14526,5.67249-.83557,8.46509-.38,1.01227.28968,1.90381,1.6164,1.12946,2.549-1.10761,1.166-2.80689,1.49456-4.30445,1.91479-3.47741.77252-6.97455,1.443-10.47961,2.07233,2.56055-.23731,5.12323-.44947,7.69079-.60266C73.6908,4.79621,93.18414,4.96442,112.15515,8.8006Z" />
+                </svg><span class="relative">Clients</span>
+              </span> who love<br>
+              our
+              <span class="animated-text text-indigo-500" data-type-text="Work, Ideas, Creativity, Innovation"></span>
+            </h2>
+          </div>
+          <div class="md:w-5/12 px-3">
+            <!--Begin:Swiper navigation-->
+            <div class="relative flex items-center md:justify-end z-[2] gap-2">
+              <div
+                class="swiper-testimonials-button-prev swiper-prev w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-lg">
+              </div>
+              <div
+                class="swiper-testimonials-button-next swiper-next w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-lg">
+              </div>
+            </div>
+            <!--end:Swiper navigation-->
+          </div>
+        </div>
+
+        <!--Swiper slider testimonials-->
+        <div class="swiper-container swiper-testimonials">
+          <div class="swiper-wrapper">
+            <!--Slide-->
+            <div class="swiper-slide">
+              <div class="relative">
+                <div class="mb-7">
+                  <div class="mb-3 text-orange-500">
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                  </div>
+                  <p class="fw-normal fs-5 mb-0">
+                    “ Loved working with the beautiful theme. Everything clean and
+                    professional,
+                    also very helpful throughout the customisation. Looking forward to
+                    buy more
+                    license of Assan again in the future.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-content-start">
+
+                  <div class="relative mr-3">
+                    <!--Avatar Image-->
+                    <img class="relative w-12 h-12 rounded-xl shadow-lg" src="assets/img/avatar/4.jpg" alt="">
+                  </div>
+                  <div>
+                    <h5 class="mb-0 text-lg font-medium">Nala Goins</h5>
+                    <small class="text-gray-400">UI UX Designer, Paris</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Slide-->
+            <div class="swiper-slide">
+              <div class="relative">
+                <div class="mb-7">
+                  <div class="mb-3 text-orange-500">
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                  </div>
+                  <p class="fw-normal fs-5 mb-0">
+                    “ Their design delivery framework is fantastic and it really helped
+                    us all get
+                    on the same page from day one. The team has delivered a strong brand
+                    identity and a seamless UI
+                    which we can’t wait to put live and begin testing. ”
+                  </p>
+                </div>
+                <div class="flex items-center justify-content-start">
+
+                  <div class="relative mr-3">
+                    <img class="relative w-12 h-12 rounded-xl shadow-lg" src="assets/img/avatar/5.jpg" alt="">
+                  </div>
+                  <div>
+                    <h5 class="mb-0 text-lg font-medium">Lilja Peltola</h5>
+                    <small class="text-gray-400">Full stack developer,
+                      Toronto</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Slide-->
+            <div class="swiper-slide">
+              <div class="relative">
+                <div class="mb-7">
+                  <div class="mb-3 text-orange-500">
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                  </div>
+                  <p class="fw-normal fs-5 mb-0">
+                    “ Their design delivery framework is fantastic and it really helped
+                    us all get
+                    on the same page from day one. The team has delivered a strong brand
+                    identity and a seamless UI
+                    which we can’t wait to put live and begin testing. ”
+                  </p>
+                </div>
+                <div class="flex items-center justify-content-start">
+
+                  <div class="relative mr-3">
+                    <!--Avatar Image-->
+                    <img class="relative w-12 h-12 rounded-xl shadow-lg" src="assets/img/avatar/6.jpg" alt="">
+                  </div>
+                  <div>
+                    <h5 class="mb-0 text-lg font-medium">Adam Macofey</h5>
+                    <small class="text-gray-400">CEO, Physics, Stockholm</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Slide-->
+            <div class="swiper-slide">
+              <div class="relative">
+                <div class="mb-7">
+                  <div class="mb-3 text-orange-500">
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                  </div>
+                  <p class="fw-normal fs-5 mb-0">
+                    “ Loved working with the beautiful theme. Everything clean and
+                    professional,
+                    also very helpful throughout the customisation. Looking forward to
+                    buy more
+                    license of Assan again in the future.”
+                  </p>
+                </div>
+                <div class="flex items-center justify-content-start">
+
+                  <div class="relative mr-3">
+                    <!--Avatar Image-->
+                    <img class="relative w-12 h-12 rounded-xl shadow-lg" src="assets/img/avatar/7.jpg" alt="">
+                  </div>
+                  <div>
+                    <h5 class="mb-0 text-lg font-medium">Alex Lee</h5>
+                    <small class="text-gray-400">Developer, Barcelona</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Slide-->
+            <div class="swiper-slide">
+              <div class="relative">
+                <div class="mb-7">
+                  <div class="mb-3 text-orange-500">
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                  </div>
+                  <p class="fw-normal fs-5 mb-0">
+                    “ Their design delivery framework is fantastic and it really helped
+                    us all get
+                    on the same page from day one. The team has delivered a strong brand
+                    identity and a seamless UI
+                    which we can’t wait to put live and begin testing. ”
+                  </p>
+                </div>
+                <div class="flex items-center justify-content-start">
+
+                  <div class="relative mr-3">
+                    <!--Avatar Image-->
+                    <img class="relative w-12 h-12 rounded-xl shadow-lg" src="assets/img/avatar/8.jpg" alt="">
+                  </div>
+                  <div>
+                    <h5 class="mb-0 text-lg font-medium">Jayden Massey</h5>
+                    <small class="text-gray-400">UI UX master, Warsaw</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Slide-->
+            <div class="swiper-slide">
+              <div class="relative">
+                <div class="mb-7">
+                  <div class="mb-3 text-orange-500">
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                    <i class="bi bi-star-fill small"></i>
+                  </div>
+                  <p class="fw-normal fs-5 mb-0">
+                    “ Their design delivery framework is fantastic and it really helped
+                    us all get
+                    on the same page from day one. The team has delivered a strong brand
+                    identity and a seamless UI
+                    which we can’t wait to put live and begin testing. ”
+                  </p>
+                </div>
+                <div class="flex items-center justify-content-start">
+
+                  <div class="relative mr-3">
+                    <img class="relative w-12 h-12 rounded-xl shadow-lg" src="assets/img/avatar/9.jpg" alt="">
+                  </div>
+                  <div>
+                    <h5 class="mb-0 text-lg font-medium">Raymond Atkins</h5>
+                    <small class="text-gray-400">Entrepreneur, Los
+                      Angeles</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!--/end: Testimonials section-->
+
+    <!--:Section Faqs:-->
+    <section class="relative border-top overflow-hidden">
+      <div class="container relative py-16 lg:py-24">
+        <div class="flex flex-wrap -mx-3">
+          <div class="px-3 w-full lg:w-8/12 text-center mx-auto mb-7">
+            <!--Subtitle-->
+            <p class="mb-4 font-medium text-gray-400 capitalize" data-animation="fadeInUp" data-delay=".1">
+              FAQs
+            </p>
+            <!--Title-->
+            <h2 class="mb-0 text-4xl lg:text-5xl font-medium" data-animation="fadeInUp" data-delay=".2">
+              <span class="relative inline-block">
+                <svg class="absolute w-24 left-0 bottom-0 text-orange-500" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 112.15515 11.79665">
+                  <path fill="currentColor"
+                    d="M112.15515,8.8006c-16.03949-.03888-32.7066-1.02392-48.94855-.42279-8.59.32-17.15576,1.0603-25.701,1.97675-5.97986.4834-11.98243,1.54925-17.98053,1.43335a1.50058,1.50058,0,0,1-.3758-2.83686c3.236-.96228,6.67139-1.22216,9.98023-1.913,6.79522-1.22632,13.6217-2.29785,20.40216-3.605C32.913,4.859,15.33948,7.49225,0,9.61859,11.46783,5.802,26.56049,3.31275,39.58484,1.86127c4.11255-.491,8.23242-.92,12.354-1.32788,2.80518-.14526,5.67249-.83557,8.46509-.38,1.01227.28968,1.90381,1.6164,1.12946,2.549-1.10761,1.166-2.80689,1.49456-4.30445,1.91479-3.47741.77252-6.97455,1.443-10.47961,2.07233,2.56055-.23731,5.12323-.44947,7.69079-.60266C73.6908,4.79621,93.18414,4.96442,112.15515,8.8006Z" />
+                </svg><span class="relative">Frequently</span>
+              </span> asked
+              questions
+            </h2>
+          </div>
+          <div class="w-full px-3">
+
+            <div class="flex flex-wrap -mx-3 justify-center">
+              <div class="w-full px-3 lg:w-6/12 mt-6">
+                <!--FAQ item card-->
+                <div class="flex items-stretch py-7 px-4 lg:px-6 bg-gray-100 dark:bg-gray-900 rounded-xl"
+                  data-animation="fadeInUp" data-delay=".1">
+                  <div class="me-3 me-lg-4">
+                    <span class="text-gray-400 fs-5 flex width-2x height-2x rounded-2 flex-center">
+                      <i class="bi bi-question-circle"></i>
+                    </span>
+                    <!--/.Icon-->
+                  </div>
+
+                  <div>
+                    <h5 class="mb-3 text-xl font-medium capitalize">What do I get with this kit?</h5>
+                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                      Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor
+                      incididunt ut
+                      labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!--Q-col-->
+              <div class="w-full px-3 lg:w-6/12 mt-6">
+                <!--FAQ item card-->
+                <div class="flex items-stretch py-7 px-4 lg:px-6 bg-gray-100 dark:bg-gray-900 rounded-xl"
+                  data-animation="fadeInUp" data-delay=".2">
+                  <div class="me-3 me-lg-4">
+                    <span class="text-gray-400 fs-5 flex width-2x height-2x rounded-2 flex-center">
+                      <i class="bi bi-question-circle"></i>
+                    </span>
+                    <!--/.Icon-->
+                  </div>
+
+                  <div>
+                    <h5 class="mb-3 text-xl font-medium capitalize">How do i get the new updates?</h5>
+                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                      Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor
+                      incididunt ut
+                      labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!--Q-col-->
+              <div class="w-full px-3 lg:w-6/12 mt-6">
+                <!--FAQ item card-->
+                <div class="flex items-stretch py-7 px-4 lg:px-6 bg-gray-100 dark:bg-gray-900 rounded-xl"
+                  data-animation="fadeInUp" data-delay=".3">
+                  <div class="me-3 me-lg-4">
+                    <span class="text-gray-400 fs-5 flex width-2x height-2x rounded-2 flex-center">
+                      <i class="bi bi-question-circle"></i>
+                    </span>
+                    <!--/.Icon-->
+                  </div>
+
+                  <div>
+                    <h5 class="mb-3 text-xl font-medium capitalize">Lorem ipsum dolor sit amet?</h5>
+                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                      Lorem ipsum dolor sit amet adipiscing elit, sed do eiusmod tempor
+                      incididunt ut
+                      labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!--Q-col-->
+              <div class="w-full px-3 lg:w-6/12 mt-6">
+                <!--FAQ item card-->
+                <div class="flex items-stretch py-7 px-4 lg:px-6 bg-gray-100 dark:bg-gray-900 rounded-xl"
+                  data-animation="fadeInUp" data-delay=".4">
+                  <div class="me-3 me-lg-4">
+                    <span class="text-gray-400 fs-5 flex width-2x height-2x rounded-2 flex-center">
+                      <i class="bi bi-question-circle"></i>
+                    </span>
+                    <!--/.Icon-->
+                  </div>
+
+                  <div>
+                    <h5 class="mb-3 text-xl font-medium capitalize">What's the refund policy?</h5>
+                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                      Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor
+                      incididunt ut
+                      labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!--Q-col-->
+              <div class="w-full px-3 lg:w-6/12 mt-6">
+                <!--FAQ item card-->
+                <div class="flex items-stretch py-7 px-4 lg:px-6 bg-gray-100 dark:bg-gray-900 rounded-xl"
+                  data-animation="fadeInUp" data-delay=".5">
+                  <div class="me-3 me-lg-4">
+                    <span class="text-gray-400 fs-5 flex width-2x height-2x rounded-2 flex-center">
+                      <i class="bi bi-question-circle"></i>
+                    </span>
+                    <!--/.Icon-->
+                  </div>
+
+                  <div>
+                    <h5 class="mb-3 text-xl font-medium capitalize">Does Assan4 use bootstrap5?</h5>
+                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                      Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor
+                      incididunt ut
+                      labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!--Q-col-->
+              <div class="w-full px-3 lg:w-6/12 mt-6">
+                <!--FAQ item card-->
+                <div class="flex items-stretch py-7 px-4 lg:px-6 bg-gray-100 dark:bg-gray-900 rounded-xl"
+                  data-animation="fadeInUp" data-delay=".6">
+                  <div class="me-3 me-lg-4">
+                    <span class="text-gray-400 fs-5 flex width-2x height-2x rounded-2 flex-center">
+                      <i class="bi bi-question-circle"></i>
+                    </span>
+                    <!--/.Icon-->
+                  </div>
+                  <div>
+                    <h5 class="mb-3 text-xl font-medium capitalize">Why Assan 4.0?</h5>
+                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                      Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor
+                      incididunt ut
+                      labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!--Q-col-->
+            </div>
+          </div>
+          <div class="pt-7 w-full px-3 text-center" data-animation="fadeInUp">
+            <p class="mb-0 inline-flex flex-col sm:flex-row items-center">
+              Didn't get your answer? Feel free to <a class="link-underline ml-2" href="mailto:yourmail@domain.com">Send
+                us an Email</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="relative pb-12 bg-gray-50 dark:bg-gray-900 overflow-hidden">
+      <div class="container relative py-16 lg:py-24 z-[1]">
+        <div class="flex flex-wrap -mx-3 items-center">
+          <div class="w-full px-3 lg:w-5/12 mb-9 lg:mb-0">
+            <p class="mb-3 font-medium text-gray-400 capitalize" data-animation="fadeInLeft" data-delay=".1">
+              Get started
+            </p>
+            <h2 class="text-4xl lg:text-5xl font-medium mb-7" data-animation="fadeInLeft" data-delay=".2">
+              <span class="relative inline-block">
+
+                <svg class="absolute w-16 h-auto left-0 bottom-0 text-orange-500" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 112.15515 11.79665">
+                  <path fill="currentColor"
+                    d="M112.15515,8.8006c-16.03949-.03888-32.7066-1.02392-48.94855-.42279-8.59.32-17.15576,1.0603-25.701,1.97675-5.97986.4834-11.98243,1.54925-17.98053,1.43335a1.50058,1.50058,0,0,1-.3758-2.83686c3.236-.96228,6.67139-1.22216,9.98023-1.913,6.79522-1.22632,13.6217-2.29785,20.40216-3.605C32.913,4.859,15.33948,7.49225,0,9.61859,11.46783,5.802,26.56049,3.31275,39.58484,1.86127c4.11255-.491,8.23242-.92,12.354-1.32788,2.80518-.14526,5.67249-.83557,8.46509-.38,1.01227.28968,1.90381,1.6164,1.12946,2.549-1.10761,1.166-2.80689,1.49456-4.30445,1.91479-3.47741.77252-6.97455,1.443-10.47961,2.07233,2.56055-.23731,5.12323-.44947,7.69079-.60266C73.6908,4.79621,93.18414,4.96442,112.15515,8.8006Z" />
+                </svg><span class="relative">See</span>
+              </span> it for yourself
+            </h2>
+            <p class="mb-7 text-gray-600 dark:text-gray-300" data-animation="fadeInLeft" data-delay=".3">
+              Lorem ipsum dolor sit amet elit, sed do eiusmod tempor dolore
+              magna aliqua. Viverra nam libero justo laoreet. Suscipit
+              adipiscing bibendum est .
+            </p>
+            <div data-animation="fadeInLeft" data-delay=".4">
+              <!--Action button-->
+              <a href="#"
+                class="btn btn-lg bg-indigo-500 text-white hover:shadow hover:bg-indigo-600 duration-200"><span>Request
+                  a demo</span></a>
+            </div>
+          </div>
+          <div class="w-full px-3 lg:w-7/12 lg:pl-16 xl:ml-auto">
+            <div class="flex flex-wrap items-center -mx-3">
+              <div class="w-full md:w-7/12 px-3 mb-6 md:mb-0">
+                <img src="assets/img/graphics/saas/6.png" class="max-w-full" alt="">
+              </div>
+              <div class="w-full md:w-5/12 px-3">
+                <!--Facts box-->
+                <div class="bg-indigo-500 rounded-xl shadow-xl text-white py-6 px-4 text-center mb-6">
+                  <!--Countup-->
+                  <h2 data-countup="726" data-suffix="K" class="text-3xl lg:text-4xl font-medium"></h2>
+                  <!--text-->
+                  <div class="text-white">Customers</div>
+                </div>
+                <!--Facts box-->
+                <div class="bg-red-500 rounded-xl shadow-xl text-white py-6 px-4 text-center">
+                  <!--Countup-->
+                  <h2 data-countup="600" data-suffix="K" class="text-3xl lg:text-4xl font-medium"></h2>
+                  <!--text-->
+                  <div class="text-white">Issues solved</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Divider shape-->
+      <svg class="w-full absolute left-0 bottom-0 text-black z-[1]" height="48" fill="currentColor"
+        preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
+        style="transform: rotate(180deg) scaleX(-1)">
+        <path d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54
+     16.88 218.2 35.26 69.27 18 138.3 24.88 209.4
+     13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z" opacity=".25" />
+        <path d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15
+      60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39
+      62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 
+      113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z" opacity=".5" />
+        <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63
+    112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+      </svg>
+
+    </section>
+  </main>
+
+  @@include('./partials/footers/footer-5.html')
+
+  <!-- begin:Back to Top button -->
+  <a href="#"
+    class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+    <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="0, 251.2">
+      </circle>
+    </svg>
+    <i class="bi bi-chevron-up"></i>
+  </a>
+  <!-- begin:Back to Top button -->
+
+  <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+
+  <!--Swiper slider-->
+  <script src="assets/vendor/node_modules/js/swiper-bundle.min.js"></script>
+  <script>
+    //swiper -partners
+    var swiperPartners5 = new Swiper(".swiper-partners-5", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      centeredSlides: false,
+      freeMode: true,
+      loop: true,
+      speed: 3000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 4,
+        },
+        1024: {
+          slidesPerView: 5,
+        },
+      },
+    });
+    //swiper-Testimonials
+    var swiperTestimonails = new Swiper(".swiper-testimonials", {
+      autoHeight: true,
+      spaceBetween: 16,
+      centeredSlides: false,
+      freeMode: true,
+      loop: true,
+      speed: 3000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 16
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 16
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        }
+      },
+      pagination: {
+        el: ".swiper-testimonials-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-testimonials-button-next",
+        prevEl: ".swiper-testimonials-button-prev"
+      }
+    });
+    //Swiper for text/headings
+    var swiperText = new Swiper(".swiper-text", {
+      autoplay: true,
+      direction: "vertical",
+      loop: true,
+      grabCursor: false,
+      speed: 600,
+      autoHeight: true,
+    });
+    //Swiper for text/headings
+    var swiperFade = new Swiper(".swiper-feature-img", {
+      autoplay: true,
+      loop: true,
+      grabCursor: false,
+      speed: 600
+    });
+    // Link together the navigation of both swipers
+    var swiperText = document.querySelector('.swiper-text').swiper
+    var swiperFeatureImage = document.querySelector('.swiper-feature-img').swiper
+
+    swiperText.controller.control = swiperFeatureImage
+    swiperFeatureImage.controller.control = swiperText
+
+  </script>
+</body>
+
+</html>

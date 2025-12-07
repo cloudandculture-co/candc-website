@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    <!--Swiper slider-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+    
+    @@include('./partials/head-includes.html')
+    <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+     <!--begin:Header-->
+  <header class="header-transparent sticky-fixed">
+
+    <!--begin:navbar-->
+    <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+      <!--Navbar-fixed-background-->
+      <div class="navbar-fixed-bg absolute"></div>
+      <div class="container relative flex flex-wrap items-center justify-center relative">
+        <!--begin:logo-->
+        <a class="navbar-brand relative w-24 block" href="index.html">
+          <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+          <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+        </a>
+        <!--end:logo-->
+
+        <!--begin:navbar-no-collapse-items-->
+        <div class="flex items-center shrink-0 ml-auto lg:order-last">
+          <!--Navbar toggler button-->
+          <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <i></i>
+            </span>
+          </button>
+          <!--Button-->
+          <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+            <a href="#"
+              class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+          </div>
+        </div>
+        <!--end:navbar-no-collapse-items-->
+
+        <!--begin:navbar-collapse-->
+        <div
+          class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+          id="mainNavbarTheme">
+          @@include('./partials/headers/default-navbar-items.html',{"page": "pages"})
+        </div>
+        <!--end:navbar-collapse-->
+      </div>
+
+    </nav>
+    <!--end:navbar-->
+  </header>
+  <!--end:header-->
+
+  
+<main class="main-content" id="main-content">
+    <section class="relative bg-gradient-to-tr from-indigo-500 to-gray-900 text-white z-[1]">
+        <svg class="absolute text-white end-0 bottom-0" preserveAspectRatio="none" width="80%" height="80%" viewBox="0 0 352 352" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.1" d="M352 0C258.644 -1.11326e-06 169.111 37.0856 103.098 103.098C37.0856 169.111 8.16146e-06 258.644 0 352L352 352V0Z" fill="currentColor"/>
+            <path opacity="0.1" d="M352 26.7681C265.743 26.7681 183.019 61.0335 122.026 122.026C61.0335 183.019 26.7681 265.743 26.7681 352L352 352V26.7681Z" fill="currentColor"/>
+            <path opacity="0.025" d="M352 53.5361C272.842 53.5361 196.927 84.9813 140.954 140.954C84.9813 196.927 53.5361 272.842 53.5361 352L352 352V53.5361Z" fill="currentColor"/>
+            </svg>
+        <div class="container relative py-16 lg:py-24">
+            <div class="flex flex-wrap -mx-3 items-center pb-9 lg:pb-0 pt-12 lg:pt-24">
+                <div class="lg:w-10/12 w-full px-3 text-center text-center mx-auto relative z-[1]">
+                    <h2 class="text-4xl lg:text-5xl font-medium mb-0">
+                       Account Profile
+                    </h2>
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.content-->
+
+    </section>
+
+    <section class="relative">
+        <div class="container relative">
+            <div class="">
+
+                <!--Profile info header-->
+                <div class="relative py-16 lg:py-24">
+                    <div class="flex flex-wrap -mx-3">
+                        <div class="lg:w-4/12 w-full px-3 mb-12 lg:mb-0">
+                            <div class="-mt-36 relative z-[1]">
+                                <div class="rounded-2xl shadow-xl bg-white dark:bg-gray-900 p-4 lg:p-5">
+                                    <div>
+                                        <!--profile image-->
+                                        <div class="w-24 h-24 mb-5 rounded-full shadow bg-no-repat overflow-hidden bg-contain" style="background-image: url('assets/img/avatar/4.jpg');">
+                                        </div>
+                                        <h4 class="mb-2 text-xl font-medium">Emily Doe</h4>
+                                        <small class="block text-gray-400 mb-5">Senior Software developer</small>
+                                        <ul class="divide-y divide-gray-200 divide-dashed dark:divide-gray-800 mb-0">
+                                            <li class="flex items-center px-0 py-2">
+                                                <i class="bi bi-geo-alt me-2 align-middle text-gray-400"></i>
+                                                <span class="small">Barcelona, Spain</span>
+                                            </li>
+                                            <li class="flex py-2 items-stretch px-0">
+                                                <i class="bi bi-globe me-2 align-middle text-gray-400"></i>
+                                                <a href="#!" class="small link-hover-decoration">https://emilydoe.com/</a>
+                                            </li>
+                                            <li class="flex py-2 items-center px-0">
+                                                <i class="bi bi-check fs-5 lh-1 text-green-500 me-2 align-middle"></i>
+                                                <span class="small">Available for hire</span>
+                                            </li>
+                                            <li class="flex py-2 items-center px-0">
+                                                <i class="bi bi-twitter-x me-2 align-middle text-gray-400"></i>
+                                                <a href="#!" class="small link-hover-decoration">@emily.dev</a>
+                                            </li>
+                                            <li class="flex py-2 items-center px-0">
+                                                <i class="bi bi-linkedin me-2 align-middle text-gray-400"></i>
+                                                <a href="#!" class="small link-hover-decoration">emilyatin</a>
+                                            </li>
+                                            <li class="flex py-2 items-center px-0">
+                                                <i class="bi bi-instagram me-2 align-middle text-gray-400"></i>
+                                                <a href="#!" class="small link-hover-decoration">emily93</a>
+                                            </li>
+                                            <li class="flex py-2 px-0 justify-between items-center">
+                                                <span class="small">Followers</span>
+                                                <span class="fs-5">134</span>
+                                            </li>
+                                            <li class="flex py-2 px-0 justify-between items-center">
+                                                <span class="small">Following</span>
+                                                <span class="fs-5">23</span>
+                                            </li>
+                                            <li class="list-group-item px-0">
+                                                <div class="flex items-center gap-4 pt-3">
+                                                    <button class="btn bg-gray-200 text-gray-700 hover:bg-gray-600 hover:text-white" type="button"><i class="bi bi-person-plus me-2 lh-1"></i>
+                                                        Follow</button>
+                                                    <button class="btn bg-indigo-500 hover:bg-indigo-600 text-white py-1" type="button"><i class="bi bi-envelope me-2 lh-1"></i>
+                                                        Message</button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-8/12 w-full px-3">
+                            <div class="flex flex-col">
+                                <nav class="nav nav-fills mb-7 flex items-center flex-wrap gap-2">
+                                    <a href="page-profile.html" class="nav-link active"> <i class="bi bi-person me-2"></i>My profile</a>
+                                  
+                                    <a href="page-profile-settings.html" class="nav-link"><i class="bi bi-gear me-2"></i>Settings</a>
+                                    <a href="#" class="nav-link disabled"><i class="bi bi-layers me-2"></i>Orders</a>
+                                    <a href="#" class="nav-link disabled"><i class="bi bi-credit-card me-2"></i>Billing</a>
+                                    <a href="#" class="nav-link disabled"><i class="bi bi-people me-2"></i>Followers</a>
+                                </nav>
+
+                                <div class="h-full p-4 lg:p-8 rounded-xl bg-gray-50 dark:bg-gray-900">
+                                    <h5 class="mb-7 pb-4 border-b border-gray-200 dark:border-gray-700 text-xl font-medium">Profile Details</h5>
+
+                                    <div class="flex flex-wrap -mx-3 items-center">
+                                        <div class="md:w-6/12 w-full px-3 mb-5">
+                                            <label class="block mb-2 text-gray-600 dark:text-gray-300">Name</label>
+                                            <div class="input">Emily Doe
+                                            </div>
+                                        </div>
+                                        <div class="md:w-6/12 w-full px-3 mb-5">
+                                            <label class="block mb-2 text-gray-600 dark:text-gray-300">Email address</label>
+                                            <div class="input">info@emilydoe.com
+                                            </div>
+                                        </div>
+                                        <div class="md:w-6/12 w-full px-3 mb-5">
+                                            <label class="block mb-2 text-gray-600 dark:text-gray-300">Phone</label>
+                                            <div class="input">+34 1234 567 890
+                                            </div>
+                                        </div>
+                                        <div class="md:w-6/12 w-full px-3 mb-5">
+                                            <label class="block mb-2 text-gray-600 dark:text-gray-300">Company</label>
+                                            <div class="input">Assan inc.
+                                            </div>
+                                        </div>
+                                        <div class="md:w-6/12 w-full px-3 mb-5">
+                                            <label class="block mb-2 text-gray-600 dark:text-gray-300">Country</label>
+                                            <div class="input">Spain
+                                            </div>
+                                        </div>
+                                        <div class="md:w-6/12 w-full px-3 mb-5">
+                                            <label class="block mb-2 text-gray-600 dark:text-gray-300">Gender</label>
+                                            <div class="input">Male
+                                            </div>
+                                        </div>
+                                        <div class="md:w-6/12 w-full px-3 mb-5">
+                                            <label class="block mb-2 text-gray-600 dark:text-gray-300">Date of birth</label>
+                                            <div class="input">19 August 1993</div>
+                                        </div>
+                                        <div class="md:w-6/12 w-full px-3 mb-5">
+                                            <label class="block mb-2 text-gray-600 dark:text-gray-300">Plan</label>
+                                            <div class="input"><span class="badge px-2 bg-primary rounded-pill">Starter</span>
+                                            </div>
+                                        </div>
+                                        <div class="w-full px-3 mb-5">
+                                            <label class="block mb-2 text-gray-600 dark:text-gray-300">Communication</label>
+                                            <div>
+                                                <span class="px-3 py-1 rounded-full bg-indigo-500/10 text-sm border border-indigo-500/10 text-indigo-500">Phone</span>
+                                                <span class="px-3 py-1 rounded-full bg-indigo-500/10 text-sm border border-indigo-500/10 text-indigo-500">Email</span>
+                                            </div>
+                                        </div>
+                                        <div class="w-full px-3">
+                                            <label class="block mb-2 text-gray-600 dark:text-gray-300">Address</label>
+                                            <div class="input">
+                                                1355 Market St, Suite 900
+                                                San Francisco
+                                                CA 94103
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-1.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+    
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,320 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+     <!--Swiper slider-->
+     <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+     
+     
+     @@include('./partials/head-includes.html')
+     <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+    <!--begin:Header-->
+ <header class="header-transparent sticky-fixed">
+
+   <!--begin:navbar-->
+   <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+     <!--Navbar-fixed-background-->
+     <div class="navbar-fixed-bg absolute"></div>
+     <div class="container relative flex flex-wrap items-center justify-center relative">
+       <!--begin:logo-->
+       <a class="navbar-brand relative w-24 block" href="index.html">
+         <img src="assets/img/logo/logo.svg" alt="" class="max-w-full navbar-brand-sticky">
+         <img src="assets/img/logo/logo-white.svg" alt="" class="max-w-full navbar-brand-transparent">
+       </a>
+       <!--end:logo-->
+
+       <!--begin:navbar-no-collapse-items-->
+       <div class="flex items-center shrink-0 ml-auto lg:order-last">
+         <!--Navbar toggler button-->
+         <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+           data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+           aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon">
+             <i></i>
+           </span>
+         </button>
+         <!--Button-->
+         <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+           <a href="#"
+             class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+         </div>
+       </div>
+       <!--end:navbar-no-collapse-items-->
+
+       <!--begin:navbar-collapse-->
+       <div
+         class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+         id="mainNavbarTheme">
+         @@include('./partials/headers/default-navbar-items.html',{"page": "pages"})
+       </div>
+       <!--end:navbar-collapse-->
+     </div>
+
+   </nav>
+   <!--end:navbar-->
+ </header>
+ <!--end:header-->
+
+<!--Main content-->
+
+<main class="main-content" id="main-content">
+    <section class="relative bg-gradient-to-tr from-indigo-500 to-gray-900 text-white">
+        <!--divider-->
+        <svg class="absolute left-0 bottom-0 rotate-180 text-white dark:text-black" width="100%"
+            height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 152" fill="none"
+            preserveAspectRatio="none">
+            <path
+                d="M126.597 138.74C99.8867 127.36 76.6479 109.164 59.2161 85.9798L0 3.05176e-05L1440 0C1440 0 1419.98 25.8404 1380.15 32.9584L211.382 150.811C182.549 154.283 153.308 150.12 126.597 138.74Z"
+                fill="currentColor" />
+        </svg>
+        <div class="container relative pt-24 lg:pt-48 pb-12 lg:pb-16">
+            <div class="flex flex-wrap -mx-3 items-center pb-16">
+                <div class="lg:w-10/12 w-full px-3">
+                    <h1 class="text-4xl lg:text-6xl font-medium mb-3" data-text-split>
+                        Get in touch with us
+                    </h1>
+                    <p class="mb-0 text-lg text-white/75 lg:w-8/12">Do you have questions about our products or need a quote? Use
+                        the
+                        contact form below and we will get back to you.</p>
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.content-->
+    </section>
+    <!--/section-->
+
+    <section class="relative">
+        <div class="container py-16 lg:py-24">
+            <div class="flex flex-wrap -mx-3">
+                <div class="w-full px-3 lg:w-8/12 order-last lg:order-1">
+                    <div class="relative">
+                        <h2 class="text-3xl font-medium mb-3">
+                            Contact form
+                        </h2>
+                        <p class="mb-3 lg:w-8/12 text-gray-600 dark:text-gray-300">
+                            Use the contact form if you have questions about our products. Our sales team will
+                            be happy to help you:
+                        </p>
+                        <div class="w-16 pt-1 bg-indigo-500 mb-9"></div>
+                        <!-- Contacts Form -->
+
+                        <form id="contactForm" action="assets/contact/send_mail.php" method="post" role="form"
+                            class="needs-validation mb-7">
+                            <div class="flex flex-wrap -mx-3">
+                                <!-- Input -->
+                                <div class="w-full px-3 md:w-6/12 mb-3">
+                                    <label class="block text-gray-600 dark:text-gray-300 mb-2" for="name">Your name</label>
+                                    <input type="text" name="name" class="input" id="name"
+                                        placeholder="John Doe" required>
+                                </div>
+
+                                <!-- Input -->
+                                <div class="w-full px-3 md:w-6/12 mb-3">
+                                    <label class="block text-gray-600 dark:text-gray-300 mb-2" for="email">Your email address</label>
+                                    <input type="email" class="input" name="email" id="email"
+                                        placeholder="john@gmail.com" aria-label="jackwayley@gmail.com" required>
+                                    
+                                </div>
+
+                                <!-- Input -->
+
+                                <!-- Services -->
+                                <div class="w-full px-3 mb-3">
+                                    <label class="block text-gray-600 dark:text-gray-300 mb-2" for="subject">Subject</label>
+                                    <input type="text" class="input" name="subject" id="subject"
+                                        placeholder="Web Design" required>
+                                </div>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="mb-3">
+                                <label for="message" class="block text-gray-600 dark:text-gray-300 mb-2">Message</label>
+                                <textarea class="input min-h-48" name="message" placeholder="Hi there...."
+                                    required=""></textarea>
+                            </div>
+
+                            <div class="md:flex justify-between items-center">
+                                <p class="text-xs mb-4 text-gray-400 mb-md-0">We'll get back to you in 1-2
+                                    business days.</p>
+                                <input type="submit" name="submit" value="Submit message" id="sendBtn"
+                                    class="btn btn-lg bg-indigo-500 text-white hover:bg-indigo-600 cursor-pointer">
+                            </div>
+                        </form>
+
+                        <!--Card-->
+                        <div class="relative px-6 py-7 rounded-2xl border border-gray-200 dark:border-gray-800"
+                             data-animation="fadeInUp">
+                            <div class="relative">
+
+                                <h3 class="mb-4 text-3xl lg:text-400 font-medium">Need customer support?</h3>
+                                <p class="lg:w-8/12 text-gray-600 dark:text-gray-300">
+                                    If you are already a customer with us, we will be happy to help you in our
+                                    Customer Support.
+                                </p>
+                                <div class="width-6x pt-1 bg-success mb-5"></div>
+                                <a href="#" class="btn btn-lg bg-indigo-500 hover:bg-indigo-600 text-white">
+                                    Customer support
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-3 lg:w-3/12 lg:ml-auto order-1 lg:order-last mb-9 lg:mb-0">
+                    <div>
+                        <h4 class="mb-0 text-2xl font-medium">Global Offices</h4>
+                        <div class="border-t border-gray-200 dark:border-gray-800 mb-4 mt-2"></div>
+                    </div>
+                    <div data-animation="fadeInUp">
+                        <h5 class="text-lg font-medium mb-2">USA</h5>
+                        <div class="relative">
+                            <p class="mb-3"><b class="font-medium">Brooklyn </b><br>Street name 21, Ipsum,<br> 12345,&nbsp;New York
+                                City</p>
+                            <p>Phone:&nbsp;+01 1234 456 678<br>Fax: +01 1234 567 890<br>Website: <a rel="noopener"
+                                    href="#!" class="text-indigo-500">www.site.se</a><br>Email: <a rel="noopener"
+                                    href="#!" class="text-indigo-500">info@yourmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-200 dark:border-gray-800 my-4 my-lg-5"></div>
+                    <div data-animation="fadeInUp" data-delay=".2">
+                        <h5 class="text-lg font-medium mb-2">Sweden</h5>
+                        <div class="relative">
+                            <p class="mb-3"><b class="font-medium">Stockholm </b><br>Street name 21, Danderyd,<br>
+                                SE-12345,&nbsp;Sweden</p>
+                            <p>Phone:&nbsp;+46 1234 56789<br>Fax: +46 123 123456<br>Website: <a rel="noopener"
+                                    href="#!" class="text-indigo-500">www.site.se</a><br>Email: <a rel="noopener"
+                                    href="#!" class="text-indigo-500">info@yourmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-200 dark:border-gray-800 my-4 my-lg-5"></div>
+                    <div class="pb-0" data-animation="fadeInUp" data-delay=".1">
+                        <h5 class="text-lg font-medium mb-2">South Korea</h5>
+                        <div class="relative">
+                            <p class="mb-3">373 Gangnam-daero<br> Seocho-gu, Seoul, 06621,<br> South Korea</p>
+                            <p>Phone:&nbsp;+82 1234 56789<br>Fax: +82 123 123456<br>Website: <a rel="noopener"
+                                    href="#!" class="text-indigo-500">www.site.se</a><br>Email: <a rel="noopener"
+                                    href="#!" class="text-indigo-500">info@yourmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="border-t border-gray-200 dark:border-gray-800 overflow-hidden relative">
+        <div class="container py-12 lg:py-16">
+            <div class="flex flex-wrap -mx-3 items-end relative">
+                <div class="w-full px-3 lg:w-7/12 text-center lg:text-left">
+                    <h5 class="mb-3 text-gray-400">Let's start building</h5>
+                    <h1 class="mb-5 lg:mb-0 text-4xl lg:text-5xl font-medium" data-text-split>Stunning websites ease</h1>
+                </div>
+                <div class="w-full px-3 lg:w-5/12 lg:text-right text-center flex gap-2 flex-col sm:flex-row justify-center lg:justify-end">
+                    <a href="#!" class="btn btn-lg bg-indigo-500 text-white hover:bg-indigo-600">Contact sales</a>
+                    <a href="#!" class="btn btn-lg bg-green-500 text-white hover:bg-green-600">Purchase Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+   
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-1.html')
+<!--::Success message Modal::-->
+<div id="successModal" class="modal fade">
+    <div class="modal-dialog modal-dialog-xs modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body py-5 px-4 text-center">
+                <div class="w-16 h-16 mb-4 mx-auto flex items-center justify-center bg-green-500 text-white rounded-full">
+                     <i class="bi bi-check text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-medium mb-3">Message Sent</h3>
+                <p class="mb-6 text-gray-400">We'll get back to you in 1-2 business days! </p>
+                <button type="button" class="btn bg-red-500 text-white hover:bg-red-600" data-bs-dismiss="modal"
+                    aria-label="Close">Dismiss</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+    
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+
+        <!--:Contact form:-->
+        <script>
+            // Wait for the DOM to load
+            document.addEventListener('DOMContentLoaded', function () {
+                // Get the form element
+                const form = document.getElementById('contactForm');
+                const successModal = document.getElementById('successModal')
+    
+    
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    const formControls = form.querySelectorAll('.input');
+                    if (form.checkValidity()) {
+                        const formData = new FormData(form);
+                        fetch(form.action, {
+                            method: form.method,
+                            body: formData
+                        })
+                            .then(response => {
+                                const toastBootstrap = bootstrap.Modal.getOrCreateInstance(
+                                    successModal)
+                                toastBootstrap.show()
+                                // Clear validation feedback
+                                formControls.forEach(function (control) {
+                                    control.value = '';
+                                });
+                            })
+                            .catch(error => {
+                                console.error(error);
+                            });
+                    }
+                });
+            });
+    
+        </script>
+    <!--Autosize textarea-->
+    <script src="assets/vendor/node_modules/js/autosize.min.js"></script>
+    <script>
+        var ta = document.querySelector('textarea');
+        ta.style.display = 'none';
+        autosize(ta);
+        // Change layout
+        ta.style.display = 'block';
+        autosize.update(ta);
+
+    </script>
+</body>
+
+</html>

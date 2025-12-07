@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assan-Admin</title>
+
+        @@include('./partials/fonts.html')
+
+        <!--Simplebar css-->
+        <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+        <!--Choices css-->
+        <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+        
+        <!--Main style-->
+        <link rel="stylesheet" href="assets/css/style.min.css">
+    </head>
+
+    <body>
+        @@include('./partials/preloader.html')
+        <!--App Start-->
+        <div class="d-flex flex-column flex-root">
+            <!--Page-->
+            <div class="page d-flex flex-row flex-column-fluid">
+
+                @@include('./partials/sidebars/sidebar-default.html',{page:"forms", "form_collapse_show":"show","form_choices":"active"})
+
+                <!--///////////Page content wrapper///////////////-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+                    @@include('./partials/header/header-default.html')
+                    <!--//Page Toolbar//-->
+                    <div class="toolbar px-3 px-lg-6 py-3">
+                        <div class="position-relative container-fluid px-0">
+                            <div class="row align-items-center position-relative">
+                                <div class="col-md-8 mb-4 mb-md-0">
+                                    <h3 class="mb-2">Choices</h3>
+
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                            <li class="breadcrumb-item active">Forms</li>
+                                            <li class="breadcrumb-item active">Choices select</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                                <div class="col-md-4 text-md-end">
+                                    <a href="https://github.com/Choices-js/Choices" target="_blank"
+                                        class="text-body">Learn more <span class="material-symbols-rounded align-middle ms-1 fs-5">
+                                            open_in_new
+                                            </span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page Toolbar End//-->
+
+                    <!--//Page content//-->
+                    <div class="content pt-3 px-3 px-lg-6 d-flex flex-column-fluid">
+                        <div class="container-fluid px-0">
+                            <div class="row">
+
+                                <div class="col-12 col-md-6 mb-2">
+                                    <div class="card card-body">
+                                        <label for="chBasic" class="form-label">Basic Demo</label>
+                                        <select id="chBasic" class="form-control"
+                                            data-choices='{"searchEnabled":false, "itemSelectText":""}'>
+                                            <option value="">Select User</option>
+                                            <option value="Adam">Adam</option>
+                                            <option value="Mark">Mark</option>
+                                            <option value="John">John</option>
+                                            <option value="Varun">Varun</option>
+                                            <option value="Joseph">Joseph</option>
+                                            <option value="Smith">Smith</option>
+                                        </select>
+                                     </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-2">
+                                    <div class="card card-body">
+                                        <label for="chWidth" class="form-label">Custom Width</label>
+                                        <div class="width-140">
+                                            <select id="chWidth" class="form-control"
+                                                data-choices='{"searchEnabled":false, "itemSelectText":""}'>
+                                                <option value="">Quantity</option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-2">
+                                    
+                                    
+                                    <div class="card card-body">
+                                        <label for="Searchable" class="form-label">Searchable</label>
+                                        <div>
+                                            <select id="Searchable" class="form-control"
+                                                data-choices='{"searchEnabled":true, "itemSelectText":""}'>
+                                                <option value="">Country</option>
+                                                <option value="Usa">Usa</option>
+                                                <option value="Uk">Uk</option>
+                                                <option value="India">India</option>
+                                                <option value="France">France</option>
+                                                <option value="Japan">Japan</option>
+                                                <option value="Russia">Russia</option>
+                                                <option value="Poland">Poland</option>
+                                                <option value="Kenya">Kenya</option>
+                                                <option value="Sweden">Sweden</option>
+                                                <option value="Germany">Germany</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-2">
+                                    <div class="card card-body">
+                                        <label for="chBasic" class="form-label">Sizing</label>
+                                        <div class="mb-3">
+                                            <select id="chBasic" class="form-control-sm form-control mb-0"
+                                            data-choices='{"searchEnabled":false, "itemSelectText":""}'>
+                                            <option value="">Select User</option>
+                                            <option value="Adam">Adam</option>
+                                            <option value="Mark">Mark</option>
+                                            <option value="John">John</option>
+                                            <option value="Varun">Varun</option>
+                                            <option value="Joseph">Joseph</option>
+                                            <option value="Smith">Smith</option>
+                                        </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <select id="chBasic2" class="form-control mb-0"
+                                            data-choices='{"searchEnabled":false, "itemSelectText":""}'>
+                                            <option value="">Select User</option>
+                                            <option value="Adam">Adam</option>
+                                            <option value="Mark">Mark</option>
+                                            <option value="John">John</option>
+                                            <option value="Varun">Varun</option>
+                                            <option value="Joseph">Joseph</option>
+                                            <option value="Smith">Smith</option>
+                                        </select>
+                                        </div>
+                                        <select id="chBasic3" class="form-control-lg form-control mb-0"
+                                            data-choices='{"searchEnabled":false,"itemSelectText":""}'>
+                                            <option value="">Select User</option>
+                                            <option value="Adam">Adam</option>
+                                            <option value="Mark">Mark</option>
+                                            <option value="John">John</option>
+                                            <option value="Varun">Varun</option>
+                                            <option value="Joseph">Joseph</option>
+                                            <option value="Smith">Smith</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-2">
+                                    <div class="card card-body">
+                                        <h6>Multiple</h6>
+                                        <input type="text" class="form-control" data-choices='{"silent": true,"removeItems": "true","removeItemButton": "true", "itemSelectText":""}'>
+                                    <div class="pt-4"></div>
+                                    <h6>Multiple select with Available Options</h6>
+                                    <select multiple class="form-control" data-choices='{"silent": true,"removeItems": "true","removeItemButton": "true","itemSelectText":""}'>
+                                        <option value="Html">HTML</option>
+                                        <option value="Css">Css</option>
+                                        <option value="Bootstrap">Bootstrap</option>
+                                        <option value="Figma">Figma</option>
+                                        <option value="js">Js</option>
+                                        <option value="Figma">Figma</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-2">
+                                    <div class="card card-body">
+                                        <h6>Countries flag</h6>
+                                        
+                                        <select class="choices-country form-control"></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page content End//-->
+
+                    @@include('./partials/footer.html')
+                </main>
+                <!--///////////Page content wrapper End///////////////-->
+            </div>
+        </div>
+        @@include('./partials/core-scripts.html')
+
+
+        <!--Choices countries flag-->
+        <script>
+            var countries = [
+              { value: 'Afghanistan', text: 'AF' },
+              { value: 'Åland Islands', text: 'AX' },
+              { value: 'Albania', text: 'AL' },
+              { value: 'Algeria', text: 'DZ' },
+              { value: 'American Samoa', text: 'AS' },
+              { value: 'Andorra', text: 'AD' },
+              { value: 'Angola', text: 'AO' },
+              { value: 'Anguilla', text: 'AI' },
+              { value: 'Antarctica', text: 'AQ' },
+              { value: 'Antigua and Barbuda', text: 'AG' },
+              { value: 'Argentina', text: 'AR' },
+              { value: 'Armenia', text: 'AM' },
+              { value: 'Aruba', text: 'AW' },
+              { value: 'Australia', text: 'AU' },
+              { value: 'Austria', text: 'AT' },
+              { value: 'Azerbaijan', text: 'AZ' },
+              { value: 'Bahamas', text: 'BS' },
+              { value: 'Bahrain', text: 'BH' },
+              { value: 'Bangladesh', text: 'BD' },
+              { value: 'Barbados', text: 'BB' },
+              { value: 'Belarus', text: 'BY' },
+              { value: 'Belgium', text: 'BE' },
+              { value: 'Belize', text: 'BZ' },
+              { value: 'Benin', text: 'BJ' },
+              { value: 'Bermuda', text: 'BM' },
+              { value: 'Bhutan', text: 'BT' },
+              { value: 'Bolivia', text: 'BO' },
+              { value: 'Bosnia and Herzegovina', text: 'BA' },
+              { value: 'Botswana', text: 'BW' },
+              { value: 'Bouvet Island', text: 'BV' },
+              { value: 'Brazil', text: 'BR' },
+              { value: 'British Indian Ocean Territory', text: 'IO' },
+              { value: 'Brunei Darussalam', text: 'BN' },
+              { value: 'Bulgaria', text: 'BG' },
+              { value: 'Burkina Faso', text: 'BF' },
+              { value: 'Burundi', text: 'BI' },
+              { value: 'Cambodia', text: 'KH' },
+              { value: 'Cameroon', text: 'CM' },
+              { value: 'Canada', text: 'CA' },
+              { value: 'Cape Verde', text: 'CV' },
+              { value: 'Cayman Islands', text: 'KY' },
+              { value: 'Central African Republic', text: 'CF' },
+              { value: 'Chad', text: 'TD' },
+              { value: 'Chile', text: 'CL' },
+              { value: 'China', text: 'CN' },
+              { value: 'Christmas Island', text: 'CX' },
+              { value: 'Cocos (Keeling) Islands', text: 'CC' },
+              { value: 'Colombia', text: 'CO' },
+              { value: 'Comoros', text: 'KM' },
+              { value: 'Congo', text: 'CG' },
+              { value: 'Congo, The Democratic Republic of the', text: 'CD' },
+              { value: 'Cook Islands', text: 'CK' },
+              { value: 'Costa Rica', text: 'CR' },
+              { value: "Cote D'Ivoire", text: 'CI' },
+              { value: 'Croatia', text: 'HR' },
+              { value: 'Cuba', text: 'CU' },
+              { value: 'Cyprus', text: 'CY' },
+              { value: 'Czech Republic', text: 'CZ' },
+              { value: 'Denmark', text: 'DK' },
+              { value: 'Djibouti', text: 'DJ' },
+              { value: 'Dominica', text: 'DM' },
+              { value: 'Dominican Republic', text: 'DO' },
+              { value: 'Ecuador', text: 'EC' },
+              { value: 'Egypt', text: 'EG' },
+              { value: 'El Salvador', text: 'SV' },
+              { value: 'Equatorial Guinea', text: 'GQ' },
+              { value: 'Eritrea', text: 'ER' },
+              { value: 'Estonia', text: 'EE' },
+              { value: 'Ethiopia', text: 'ET' },
+              { value: 'Falkland Islands (Malvinas)', text: 'FK' },
+              { value: 'Faroe Islands', text: 'FO' },
+              { value: 'Fiji', text: 'FJ' },
+              { value: 'Finland', text: 'FI' },
+              { value: 'France', text: 'FR' },
+              { value: 'French Guiana', text: 'GF' },
+              { value: 'French Polynesia', text: 'PF' },
+              { value: 'French Southern Territories', text: 'TF' },
+              { value: 'Gabon', text: 'GA' },
+              { value: 'Gambia', text: 'GM' },
+              { value: 'Georgia', text: 'GE' },
+              { value: 'Germany', text: 'DE' },
+              { value: 'Ghana', text: 'GH' },
+              { value: 'Gibraltar', text: 'GI' },
+              { value: 'Greece', text: 'GR' },
+              { value: 'Greenland', text: 'GL' },
+              { value: 'Grenada', text: 'GD' },
+              { value: 'Guadeloupe', text: 'GP' },
+              { value: 'Guam', text: 'GU' },
+              { value: 'Guatemala', text: 'GT' },
+              { value: 'Guernsey', text: 'GG' },
+              { value: 'Guinea', text: 'GN' },
+              { value: 'Guinea-Bissau', text: 'GW' },
+              { value: 'Guyana', text: 'GY' },
+              { value: 'Haiti', text: 'HT' },
+              { value: 'Heard Island and Mcdonald Islands', text: 'HM' },
+              { value: 'Holy See (Vatican City State)', text: 'VA' },
+              { value: 'Honduras', text: 'HN' },
+              { value: 'Hong Kong', text: 'HK' },
+              { value: 'Hungary', text: 'HU' },
+              { value: 'Iceland', text: 'IS' },
+              { value: 'India', text: 'IN' },
+              { value: 'Indonesia', text: 'ID' },
+              { value: 'Iran, Islamic Republic Of', text: 'IR' },
+              { value: 'Iraq', text: 'IQ' },
+              { value: 'Ireland', text: 'IE' },
+              { value: 'Isle of Man', text: 'IM' },
+              { value: 'Israel', text: 'IL' },
+              { value: 'Italy', text: 'IT' },
+              { value: 'Jamaica', text: 'JM' },
+              { value: 'Japan', text: 'JP' },
+              { value: 'Jersey', text: 'JE' },
+              { value: 'Jordan', text: 'JO' },
+              { value: 'Kazakhstan', text: 'KZ' },
+              { value: 'Kenya', text: 'KE' },
+              { value: 'Kiribati', text: 'KI' },
+              { value: "Korea, Democratic People'S Republic of", text: 'KP' },
+              { value: 'Korea, Republic of', text: 'KR' },
+              { value: 'Kuwait', text: 'KW' },
+              { value: 'Kyrgyzstan', text: 'KG' },
+              { value: "Lao People'S Democratic Republic", text: 'LA' },
+              { value: 'Latvia', text: 'LV' },
+              { value: 'Lebanon', text: 'LB' },
+              { value: 'Lesotho', text: 'LS' },
+              { value: 'Liberia', text: 'LR' },
+              { value: 'Libyan Arab Jamahiriya', text: 'LY' },
+              { value: 'Liechtenstein', text: 'LI' },
+              { value: 'Lithuania', text: 'LT' },
+              { value: 'Luxembourg', text: 'LU' },
+              { value: 'Macao', text: 'MO' },
+              { value: 'Macedonia, The Former Yugoslav Republic of', text: 'MK' },
+              { value: 'Madagascar', text: 'MG' },
+              { value: 'Malawi', text: 'MW' },
+              { value: 'Malaysia', text: 'MY' },
+              { value: 'Maldives', text: 'MV' },
+              { value: 'Mali', text: 'ML' },
+              { value: 'Malta', text: 'MT' },
+              { value: 'Marshall Islands', text: 'MH' },
+              { value: 'Martinique', text: 'MQ' },
+              { value: 'Mauritania', text: 'MR' },
+              { value: 'Mauritius', text: 'MU' },
+              { value: 'Mayotte', text: 'YT' },
+              { value: 'Mexico', text: 'MX' },
+              { value: 'Micronesia, Federated States of', text: 'FM' },
+              { value: 'Moldova, Republic of', text: 'MD' },
+              { value: 'Monaco', text: 'MC' },
+              { value: 'Mongolia', text: 'MN' },
+              { value: 'Montserrat', text: 'MS' },
+              { value: 'Morocco', text: 'MA' },
+              { value: 'Mozambique', text: 'MZ' },
+              { value: 'Myanmar', text: 'MM' },
+              { value: 'Namibia', text: 'NA' },
+              { value: 'Nauru', text: 'NR' },
+              { value: 'Nepal', text: 'NP' },
+              { value: 'Netherlands', text: 'NL' },
+              { value: 'Netherlands Antilles', text: 'AN' },
+              { value: 'New Caledonia', text: 'NC' },
+              { value: 'New Zealand', text: 'NZ' },
+              { value: 'Nicaragua', text: 'NI' },
+              { value: 'Niger', text: 'NE' },
+              { value: 'Nigeria', text: 'NG' },
+              { value: 'Niue', text: 'NU' },
+              { value: 'Norfolk Island', text: 'NF' },
+              { value: 'Northern Mariana Islands', text: 'MP' },
+              { value: 'Norway', text: 'NO' },
+              { value: 'Oman', text: 'OM' },
+              { value: 'Pakistan', text: 'PK' },
+              { value: 'Palau', text: 'PW' },
+              { value: 'Palestinian Territory, Occupied', text: 'PS' },
+              { value: 'Panama', text: 'PA' },
+              { value: 'Papua New Guinea', text: 'PG' },
+              { value: 'Paraguay', text: 'PY' },
+              { value: 'Peru', text: 'PE' },
+              { value: 'Philippines', text: 'PH' },
+              { value: 'Pitcairn', text: 'PN' },
+              { value: 'Poland', text: 'PL' },
+              { value: 'Portugal', text: 'PT' },
+              { value: 'Puerto Rico', text: 'PR' },
+              { value: 'Qatar', text: 'QA' },
+              { value: 'Reunion', text: 'RE' },
+              { value: 'Romania', text: 'RO' },
+              { value: 'Russian Federation', text: 'RU' },
+              { value: 'RWANDA', text: 'RW' },
+              { value: 'Saint Helena', text: 'SH' },
+              { value: 'Saint Kitts and Nevis', text: 'KN' },
+              { value: 'Saint Lucia', text: 'LC' },
+              { value: 'Saint Pierre and Miquelon', text: 'PM' },
+              { value: 'Saint Vincent and the Grenadines', text: 'VC' },
+              { value: 'Samoa', text: 'WS' },
+              { value: 'San Marino', text: 'SM' },
+              { value: 'Sao Tome and Principe', text: 'ST' },
+              { value: 'Saudi Arabia', text: 'SA' },
+              { value: 'Senegal', text: 'SN' },
+              { value: 'Serbia and Montenegro', text: 'RS' },
+              { value: 'Seychelles', text: 'SC' },
+              { value: 'Sierra Leone', text: 'SL' },
+              { value: 'Singapore', text: 'SG' },
+              { value: 'Slovakia', text: 'SK' },
+              { value: 'Slovenia', text: 'SI' },
+              { value: 'Solomon Islands', text: 'SB' },
+              { value: 'Somalia', text: 'SO' },
+              { value: 'South Africa', text: 'ZA' },
+              { value: 'South Georgia and the South Sandwich Islands', text: 'GS' },
+              { value: 'Spain', text: 'ES' },
+              { value: 'Sri Lanka', text: 'LK' },
+              { value: 'Sudan', text: 'SD' },
+              { value: 'Suriname', text: 'SR' },
+              { value: 'Svalbard and Jan Mayen', text: 'SJ' },
+              { value: 'Swaziland', text: 'SZ' },
+              { value: 'Sweden', text: 'SE' },
+              { value: 'Switzerland', text: 'CH' },
+              { value: 'Syrian Arab Republic', text: 'SY' },
+              { value: 'Taiwan, Province of China', text: 'TW' },
+              { value: 'Tajikistan', text: 'TJ' },
+              { value: 'Tanzania, United Republic of', text: 'TZ' },
+              { value: 'Thailand', text: 'TH' },
+              { value: 'Timor-Leste', text: 'TL' },
+              { value: 'Togo', text: 'TG' },
+              { value: 'Tokelau', text: 'TK' },
+              { value: 'Tonga', text: 'TO' },
+              { value: 'Trinidad and Tobago', text: 'TT' },
+              { value: 'Tunisia', text: 'TN' },
+              { value: 'Turkey', text: 'TR' },
+              { value: 'Turkmenistan', text: 'TM' },
+              { value: 'Turks and Caicos Islands', text: 'TC' },
+              { value: 'Tuvalu', text: 'TV' },
+              { value: 'Uganda', text: 'UG' },
+              { value: 'Ukraine', text: 'UA' },
+              { value: 'United Arab Emirates', text: 'AE' },
+              { value: 'United Kingdom', text: 'GB' },
+              {
+                value: 'United States',
+                text: 'US',
+                synonym: ['USA', 'United States of America'],
+              },
+              { value: 'United States Minor Outlying Islands', text: 'UM' },
+              { value: 'Uruguay', text: 'UY' },
+              { value: 'Uzbekistan', text: 'UZ' },
+              { value: 'Vanuatu', text: 'VU' },
+              { value: 'Venezuela', text: 'VE' },
+              { value: 'Viet Nam', text: 'VN' },
+              { value: 'Virgin Islands, British', text: 'VG' },
+              { value: 'Virgin Islands, U.S.', text: 'VI' },
+              { value: 'Wallis and Futuna', text: 'WF' },
+              { value: 'Western Sahara', text: 'EH' },
+              { value: 'Yemen', text: 'YE' },
+              { value: 'Zambia', text: 'ZM' },
+              { value: 'Zimbabwe', text: 'ZW' },
+            ];
+      
+            for (var i = 0; i < countries.length; i++) {
+              countries[i].image =
+                'https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/' +
+                countries[i].text.toLowerCase() +
+                '.svg';
+              countries[i].label =
+                `<img src="${countries[i].image}" class="width-20 align-middle me-2" alt=""/>` +
+                countries[i].value;
+            }
+            const element = document.querySelector('.choices-country');
+            const choices = new Choices(element, {
+              choices: countries,
+              values: null,
+              allowHTML: true,
+              itemSelectText: '',
+              classNames: {
+                containerInner: element.className,
+                input: 'form-control',
+                inputCloned: 'form-control-xs',
+                listDropdown: 'dropdown-menu',
+                itemChoice: 'dropdown-item',
+                activeState: 'show',
+                selectedState: 'active',
+              },
+            });
+          </script>
+    </body>
+
+</html>

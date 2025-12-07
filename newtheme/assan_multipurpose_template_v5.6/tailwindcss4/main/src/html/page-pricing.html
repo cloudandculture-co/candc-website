@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    @@include('./partials/head-includes.html')
+
+    <!--Swiper slider-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+    <!--G-lightbox-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/glightbox.min.css" />
+    <title>Assan - TailwindCss Template</title>
+  </head>
+
+  <body class="leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+    <!--Header Start-->
+    <header class="z-fixed top-0 left-0 absolute header-sticky z-[999] w-full">
+      <nav class="navbar py-4 lg:py-0 shadow-none navbar-expand-lg navbar-light">
+        <div class="container relative flex flex-wrap items-center justify-center">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo/logo.svg" alt="" class="w-24 dark:hidden">
+            <img src="assets/img/logo/logo-white.svg" alt="" class="w-24 hidden dark:block">
+        </a>
+          <div class="flex items-center shrink-0 ml-auto lg:order-last">
+            <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon">
+                <i></i>
+              </span>
+            </button>
+            <div class="nav-item me-3 me-lg-0 ms-lg-3">
+              <a href="#" class="btn bg-orange-500 text-white hover:bg-orange-600">
+                Get started</a>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent" id="mainNavbarTheme">
+            @@include('./partials/headers/default-navbar-items.html',{"page":
+            "pages"})
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main-content" id="main-content">
+
+        <!--Page header-->
+        <section class="relative pt-12 overflow-hidden">
+            <img src="assets/img/backgrounds/bg-blur.png" class="h-auto w-full absolute right-0 top-0 opacity-25" alt="">
+
+            <div class="container z-[1] relative py-16 lg:py-24">
+                <div class="flex flex-wrap -mx-3">
+                    <div class="w-full px-3 lg:w-9/12 mx-auto text-center">
+                        <h1 class="text-4xl lg:text-5xl font-medium mb-3" data-text-split>
+                           Plans for every team
+                        </h1>
+                        <p class="mb-7 text-lg text-gray-600 dark:text-gray-300">Simple plans that grow with your business. No setup fees.
+                        </p>
+                    </div>
+                </div>
+                <!--/.row-->
+                 <!-- Plans--Switch -->
+                 <div class="flex items-center justify-center mb-5 mb-lg-7">
+                    <div class="price-monthly relative">
+                        <label for="planSwitch" class="cursor-pointer"> Monthly </label>
+                    </div>
+                    <!-- Switch -->
+                    <div class="input-switch flex items-center ms-3 mr-2">
+                        <input class="input-switch-input me-0" checked type="checkbox" id="planSwitch" data-as-toggle="price"
+                            data-as-target=".price" role="switch">
+                        <label class="input-switch-label" for="planSwitch"></label>
+                    </div>
+                    <div class="price-annualy">
+                        
+                        <label for="planSwitch" class="cursor-pointer">
+                            Annually <em class="text-xs align-bottom font-serif italic text-green-500">save 30%</em>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-12 lg:mb-16 relative">
+                    <div class="flex flex-wrap -mx-3 items-center justify-center relative z-[1]">
+                        <div class="w-full px-3 md:w-4/12 mb-6 md:mb-0" data-animation="fadeInUp" data-delay=".1">
+                            <div
+                                class="bg-white dark:bg-black/10 rounded-xl shadow-lg py-6 px-4 lg:px-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+                                <div class="relative mb-5 overflow-hidden">
+                                    <h4>Basic</h4>
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-xl mr-1 font-medium">USD$</span>
+                                        <h2 class="price text-center text-4xl lg:text-5xl font-medium mb-0" data-as-annual="6"
+                                            data-as-monthly="9">6
+                                        </h2>
+                                    </div>
+                                    <span class="text-gray-400">Monthly(Billed annually)</span>
+                                </div>
+                                <!--/.price-card-header-->
+                                
+                                <!--Action button-->
+                                <div class="grid mb-5">
+                                    <a href="#!" class="btn btn-lg bg-indigo-500 hover:bg-indigo-600 text-white text-center">
+                                        Purchase Basic
+                                    </a>
+                                </div>
+                                <!--Features-->
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-4 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        All components & pages
+                                    </li>
+                                    <li class="mb-4 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        All premium plugins
+                                    </li>
+                                    <li class="mb-4 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        All Components & Pages
+                                    </li>
+                                    <li class="mb-4 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        5 Downloads per day
+                                    </li>
+                                    <li class="mb-4 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        Custom layouts
+                                    </li>
+                                    <li class="mb-0 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        Lifetime free updates
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--/.col-->
+                        <div class="w-full px-3 md:w-4/12 mb-6 md:mb-0" data-animation="fadeInUp" data-delay=".2">
+                            <div
+                                class="bg-white dark:bg-black/10 z-[1] relative rounded-xl shadow-lg py-6 px-4 lg:px-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+
+                                <div class="relative overflow-hidden mb-5">
+                                    <div class="mb-4 items-center">
+
+                                        <span class="py-1 px-3 rounded-pill bg-green-500 text-white text-sm rounded-full inline-block mb-3">
+                                            Most popular</span>
+                                        <h4 class="mb-0">Freelancer</h4>
+                                        <div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-xl mr-1 font-medium">USD$</span>
+                                        <h2 class="price text-center text-4xl lg:text-5xl font-medium mb-0" data-as-annual="19"
+                                            data-as-monthly="29">19
+                                        </h2>
+                                    </div>
+                                    <span class="text-gray-400">Monthly(Billed annually)</span>
+                                </div>
+                                <!--/.price-card-header-->
+                                
+                                <!--Action button-->
+                                <div class="grid mb-5">
+                                    <a href="#!" class="btn btn-lg bg-indigo-500 hover:bg-indigo-600 text-white text-center">
+                                        Purchase Freelancer
+                                    </a>
+                                </div>
+                                <!--Features-->
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-4 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        All components & pages
+                                    </li>
+                                    <li class="mb-4 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        All premium plugins
+                                    </li>
+                                    <li class="mb-4 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        All Components & Pages
+                                    </li>
+                                    <li class="mb-4 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        5 Downloads per day
+                                    </li>
+                                    <li class="mb-4 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        Custom layouts
+                                    </li>
+                                    <li class="mb-0 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        Lifetime free updates
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--/.col-->
+                        <div class="w-full px-3 md:w-4/12" data-animation="fadeInUp" data-delay=".3">
+                            <div
+                                class="bg-white dark:bg-black/10 rounded-xl shadow-lg py-6 px-4 lg:px-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+                                <div class="relative mb-5 overflow-hidden">
+                                    <h4 class="mb-4">Team</h4>
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-xl mr-1 font-medium">USD$</span>
+                                        <h2 class="price text-center text-4xl lg:text-5xl font-medium mb-0" data-as-annual="49"
+                                            data-as-monthly="79">49
+                                        </h2>
+                                    </div>
+                                    <span class="text-gray-400">Monthly(Billed annually)</span>
+                                </div>
+                                <!--/.price-card-header-->
+                                
+                                <!--Action button-->
+                                <div class="grid mb-5">
+                                    <a href="#!" class="btn btn-lg bg-indigo-500 hover:bg-indigo-600 text-white text-center">
+                                        Purchase Team
+                                    </a>
+                                </div>
+                                <!--Features-->
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-4 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        All components & pages
+                                    </li>
+                                    <li class="mb-4 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        All premium plugins
+                                    </li>
+                                    <li class="mb-4 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        All Components & Pages
+                                    </li>
+                                    <li class="mb-4 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        5 Downloads per day
+                                    </li>
+                                    <li class="mb-4 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        Custom layouts
+                                    </li>
+                                    <li class="mb-0 flex flex-wrap items-center">
+                                        <i class="me-2 opacity-50 text-xl bi bi-check-circle"></i>
+                                        Lifetime free updates
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--/.col-->
+                    </div>
+                    <!--/.pricing row-->
+                </div>
+                <!--/.Plans-container-->
+
+
+                <div class="px-4 lg:px-9 pt-9 lg:pt-12 rounded-2xl overflow-hidden relative"
+                    data-animation="fadeInUp" data-delay=".2">
+                    <!--Decoration-->
+                    <svg class="absolute right-0 bottom-0 text-white" width="200" height="200"
+                        viewBox="0 0 146 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity=".25"
+                            d="M146 6.93582e-07C126.827 1.53166e-06 107.842 3.77641 90.1282 11.1136C72.4147 18.4508 56.3198 29.2051 42.7624 42.7624C29.205 56.3198 18.4508 72.4147 11.1136 90.1282C3.7764 107.842 -1.67616e-06 126.827 0 146L146 146L146 6.93582e-07Z"
+                            fill="currentColor" />
+                    </svg>
+                    <div class="flex flex-wrap -mx-3 items-center relative">
+                        <div class="md:w-8/12 w-full px-3 mb-7 md:mb-0">
+                            <h2 class="mb-3 text-3xl lg:text-4xl font-medium" data-text-split>
+                                Looking for enterprise plans?
+                            </h2>
+                            <p class="mb-0 opacity-75 text-lg">
+                                Lorem ipsum dolor sit amet sed do eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua. Viverra nam libero justo laoreet.
+                            </p>
+                        </div>
+                        <div class="md:w-4/12 w-full px-3 md:text-right">
+                            <a href="#" class="btn bg-indigo-500 btn-lg text-white hover:bg-indigo-600"><span>Contact sales</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/.content-->
+        </section>
+        <!--/section-->
+
+        <section class="relative">
+            <!--Background-->
+            <div class="absolute left-0 top-0 w-full lg:w-4/5 h-full bg-gradient-to-l from-indigo-50 to-white dark:from-gray-800 rounded-r-2xl"></div>
+             
+            <div class="container lg:pr-0 py-12 lg:py-16 relative z-[1]">
+                <div class="flex flex-wrap -mx-3 lg:mr-0 items-center justify-between">
+                    <div class="lg:w-6/12 lg:order-last mb-9 lg:mb-0 w-full px-3">
+                        <img src="assets/img/960x900/2.jpg" class="max-w-full rounded-l-2xl ml-3 relative" alt="">
+                    </div>
+                    <div class="lg:order-1 lg:w-5/12 lg:ml-auto w-full px-3">
+                        <blockquote class="relative z-[1]">
+                               <img src="assets/img/partners/zillow.svg"
+                                                class="w-24 block mb-5 h-auto" alt="">
+                                <p class="mb-7 text-2xl lg:text-3xl font-normal relative lg:-mr-36">
+                                    Loved working with the beautiful theme. Everything clean
+                                    and professional,
+                                    also very helpful throughout the customisation. Looking
+                                    forward to buy more
+                                    license of Assan again in the future.
+                                </p>
+                                <div class="mb-4">
+                                    <h6 class="text-xl text-indigo-500 font-medium inline-block mb-2">Krish Kendall</h6>
+                                            <p class="text-gray-400 block">Co-founder of Zillow</p>
+                                            </div>
+                        </blockquote>
+                        <!--Countup-->
+                        <div class="flex flex-wrap -mx-3 pt-7">
+                            <div class="w-6/12 px-3">
+                                <h3 class="text-3xl font-medium" data-countup="28" data-suffix="%">0</h3>
+                                <span class="text-gray-400">Sales growth</span>
+                            </div>
+                            <div class="w-6/12 px-3 dark:border-gray-800">
+                                <h3 class="text-3xl font-medium" data-countup="190" data-suffix="%">0</h3>
+                                <span class="text-gray-400">Increase daily visitors</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="relative">
+            <div class="container py-12 lg:py-16 relative z-[1]">
+                <div class="row mb-12 lg:mb-16" data-animation="fadeInUp" data-delay=".1">
+                    <div class="lg:w-8/12 mx-auto text-center">
+                        <h2 class="text-3xl lg:text-4xl font-medium mb-0">
+                            Frequently asked questions
+                        </h2>
+                        <!--/.section title-->
+                    </div>
+                </div>
+                <!--/.row-heading-->
+
+                <div class="flex flex-wrap -mx-3 justify-around">
+                    <div class="w-full px-3 md:w-6/12 lg:w-5/12 mb-9">
+                        <!--FAQ item card-->
+                        <div class="flex items-stretch" data-animation="fadeInUp" data-delay=".1">
+                            <div class="mr-4">
+                                <span
+                                    class="text-xl text-gray-400">
+                                    <i class="bi bi-question-circle"></i>
+                                </span>
+                                <!--/.Icon-->
+                            </div>
+
+                            <div>
+                                <h5 class="mb-3 text-xl font-medium">What do I get with this kit?</h5>
+                                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                    Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Q-col-->
+                    <div class="w-full px-3 md:w-6/12 lg:w-5/12 mb-9">
+                        <!--FAQ item card-->
+                        <div class="flex items-stretch" data-animation="fadeInUp" data-delay=".2">
+                            <div class="mr-4">
+                                <span
+                                    class="text-xl text-gray-400">
+                                    <i class="bi bi-question-circle"></i>
+                                </span>
+                                <!--/.Icon-->
+                            </div>
+
+                            <div>
+                                <h5 class="mb-3 text-xl font-medium">How do i get the new updates?</h5>
+                                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                    Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Q-col-->
+                    <div class="w-full px-3 md:w-6/12 lg:w-5/12 mb-9">
+                        <!--FAQ item card-->
+                        <div class="flex items-stretch" data-animation="fadeInUp" data-delay=".3">
+                            <div class="mr-4">
+                                <span
+                                    class="text-xl text-gray-400">
+                                    <i class="bi bi-question-circle"></i>
+                                </span>
+                                <!--/.Icon-->
+                            </div>
+
+                            <div>
+                                <h5 class="mb-3 text-xl font-medium">Lorem ipsum dolor sit amet?</h5>
+                                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                    Lorem ipsum dolor sit amet adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Q-col-->
+                    <div class="w-full px-3 md:w-6/12 lg:w-5/12 mb-9 mb-md-0">
+                        <!--FAQ item card-->
+                        <div class="flex items-stretch" data-animation="fadeInUp" data-delay=".4">
+                            <div class="mr-4">
+                                <span
+                                    class="text-xl text-gray-400">
+                                    <i class="bi bi-question-circle"></i>
+                                </span>
+                                <!--/.Icon-->
+                            </div>
+
+                            <div>
+                                <h5 class="mb-3 text-xl font-medium">What's the refund policy?</h5>
+                                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                    Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Q-col-->
+                    <div class="w-full px-3 md:w-6/12 lg:w-5/12 mb-9 md:mb-0">
+                        <!--FAQ item card-->
+                        <div class="flex items-stretch" data-animation="fadeInUp" data-delay=".5">
+                            <div class="mr-4">
+                                <span
+                                    class="text-xl text-gray-400">
+                                    <i class="bi bi-question-circle"></i>
+                                </span>
+                                <!--/.Icon-->
+                            </div>
+
+                            <div>
+                                <h5 class="mb-3 text-xl font-medium">Does Assan4 use bootstrap5?</h5>
+                                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                    Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Q-col-->
+                    <div class="w-full px-3 md:w-6/12 lg:w-5/12">
+                        <!--FAQ item card-->
+                        <div class="flex items-stretch" data-animation="fadeInUp" data-delay=".6">
+                            <div class="mr-4">
+                                <span
+                                    class="text-xl text-gray-400">
+                                    <i class="bi bi-question-circle"></i>
+                                </span>
+                                <!--/.Icon-->
+                            </div>
+                            <div>
+                                <h5 class="mb-3 text-xl font-medium">Why Assan 4.0?</h5>
+                                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                    Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Q-col-->
+                </div>
+            </div>
+        </section>
+        <!--/section-->
+
+        <section>
+            <div class="container py-12 lg:py-16">
+                <div class="px-4 rounded-xl shadow-xl py-9 px-4 lg:px-9 bg-indigo-500 text-white relative overflow-hidden"
+                    data-animation="zoomIn" data-delay=".1">
+                    <svg class="absolute right-0 bottom-0 mb-4 text-white/20" width="200" height="400"
+                        preserveAspectRatio="none" viewBox="0 0 150 300" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M150 300C130.302 300 110.796 296.12 92.5975 288.582C74.3986 281.044 57.8628 269.995 43.934 256.066C30.0052 242.137 18.9563 225.601 11.4181 207.403C3.87986 189.204 -6.2614e-07 169.698 0 150C6.2614e-07 130.302 3.87987 110.796 11.4181 92.5975C18.9563 74.3987 30.0052 57.8628 43.934 43.934C57.8628 30.0052 74.3987 18.9563 92.5975 11.4181C110.796 3.87986 130.302 3.51961e-06 150 5.00679e-06L150 37.5C135.226 37.5 120.597 40.4099 106.948 46.0636C93.299 51.7172 80.8971 60.0039 70.4505 70.4505C60.0039 80.8971 51.7172 93.299 46.0636 106.948C40.4099 120.597 37.5 135.226 37.5 150C37.5 164.774 40.4099 179.403 46.0636 193.052C51.7172 206.701 60.0039 219.103 70.4505 229.55C80.8971 239.996 93.299 248.283 106.948 253.936C120.597 259.59 135.226 262.5 150 262.5V300Z"
+                            fill="currentColor" />
+                    </svg>
+
+                    <div class="flex flex-wrap -mx-3 items-end relative">
+                        <div class="w-full px-3 lg:w-7/12 text-center lg:text-start">
+                            <p class="text-white mb-2">Let's start building</p>
+                            <h2 class="mb-7 lg:mb-0 text-4xl lg:text-5xl font-medium">Stunning websites ease</h2>
+                        </div>
+                        <div class="w-full px-3 lg:w-5/12 lg:text-right text-center">
+                            <a href="#!" class="btn btn-lg border boder-white hover:bg-white text-white hover:text-gray-700 mr-2">Contact sales</a>
+                            <a href="#!" class="btn btn-lg bg-white hover:bg-gray-200 text-gray-700 ">Purchase Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    @@include('./partials/footers/footer-1.html')
+
+   <!-- begin:Back to Top button -->
+   <a href="#" class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+    <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="0, 251.2">
+      </circle>
+    </svg>
+    <i class="bi bi-chevron-up"></i>
+  </a>
+  <!-- begin:Back to Top button -->
+  
+    <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme js -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+  </body>
+
+</html>

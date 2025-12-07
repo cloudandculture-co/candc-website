@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Assan | Blog</title>
+        @@include('./partials/head.html')
+    </head>
+
+    <body>
+        <div class="d-flex flex-column flex-root">
+            <!--Page-->
+            <div class="page-lg d-flex flex-row flex-column-fluid">
+
+                @@include('./partials/page-sidebar.html',{'page':'topics'})
+
+                <!--:Page content:-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+                    @@include('./partials/header-default.html')
+                    <!--::Page content with sidebar::-->
+                    <div class="content d-flex flex-column-fluid position-relative">
+
+                        <!--:Content inner layout:-->
+                        <div class="d-flex flex-column flex-md-row h-100 w-100">
+                            <!--:Content inner Content:-->
+                            <div class="col-md-7 col-lg-8 layout-content d-flex justify-content-center flex-column h-100">
+                                <div class="position-relative px-3 py-5 px-xl-7 mx-auto w-100">
+                                  <div class="mb-6 align-items-center">
+                                    <h2 class="display-6 mb-3">Suggested Topics</h2>
+                                    <p class="text-body-secondary">You'll see top articles about these right in your Home timeline</p>
+                                  </div>
+<!--:Search Topic:-->
+<form action="#">
+    <div class="position-relative mb-6">
+        <i class="bi bi-search fs-6 align-middle ms-3 opacity-50 position-absolute start-0 top-50 translate-middle-y"></i>
+        <input type="text" class="form-control ps-5" placeholder="Search topics">
+    </div>
+</form>
+                                  <!--:Topics list:-->
+                                  <div class="d-flex flex-wrap gap-2 gap-lg-3 mb-6 list-topics">
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="topics18" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics18">AI</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="topics17" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics17">Adventure</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" checked id="topics01" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics01">Photography</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="topics02" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics02">Health</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="topics03" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics03">Business</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="topics04" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics04">Writing</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" checked id="topics05" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics05">Technology</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="topics06" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics06">NFT</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="topics07" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics07">Bitcoin</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="topics08" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics08">Graphics design</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" checked id="topics09" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics09">Web Design</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="topics10" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics10">Software Development</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="topics11" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics11">Ecommerce</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="topics12" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics12">Fashion</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="topics13" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics13">Politics</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" checked id="topics14" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics14">Sports</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="topics15" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics15">Social</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" checked id="topics16" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics16">Nature</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="topics19" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics19">Maschine Learning</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" checked id="topics20" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics20">Programming</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="topics21" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics21">Data Science</label>
+                                    </div>
+                                    <!--:Topic:-->
+                                    <div>
+                                        <input type="checkbox" class="btn-check" id="topics22" autocomplete="off">
+                                       <label class="btn btn-outline-primary" for="topics22">Relationships</label>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <!--:Content inner Sidebar:-->
+                            <div class="col-md-5 col-lg-4 bg-body-tertiary content-inner-sidebar d-flex flex-column h-100 border-start position-relative">
+                               
+                               <div class="position-sticky top-0">
+                                <!--:Top Writers:-->
+                                <div class="position-relative py-5 px-3 px-xl-5">
+                                    <h6 class="mb-4">Popular Writers to Follow</h6>
+                                    <!--:Writer Card:-->
+                                    <div class="d-flex align-items-center position-relative mb-4">
+                                        <!--:Details link:-->
+                                        <a href="#!" class="stretched-link"></a>
+                                        <!--:Avatar:-->
+                                        <img src="assets/img/avatar/2.jpg"
+                                            class="width-4x height-4x rounded-pill shadow-sm me-4 flex-shrink-0" alt="">
+                                        <div class="flex-grow-1 overflow-hidden">
+                                            <h6 class="mb-1 text-truncate">Lora Sonnet</h6>
+                                            <small class="clamp-2">At vero eos et accusamus et iusto odio dignissimos ducimus</small>
+                                        </div>
+                                        <div class="flex-shrink-0 position-relative ps-4">
+                                            <a href="#!" class="btn btn-sm btn-primary px-3 rounded-pill">Follow</a>
+                                        </div>
+                                    </div>
+                                     <!--:Writer Card:-->
+                                     <div class="d-flex align-items-center position-relative mb-4">
+                                        <!--:Details link:-->
+                                        <a href="#!" class="stretched-link"></a>
+                                        <!--:Avatar:-->
+                                        <img src="assets/img/avatar/3.jpg"
+                                            class="width-4x height-4x rounded-pill shadow-sm me-4 flex-shrink-0" alt="">
+                                        <div class="flex-grow-1 overflow-hidden">
+                                            <h6 class="mb-1 text-truncate">Nuno Mendes</h6>
+                                            <small class="clamp-2">Similique sunt in culpa qui officia deserunt mollitia animi</small>
+                                        </div>
+                                        <div class="flex-shrink-0 position-relative ps-4">
+                                            <a href="#!" class="btn btn-sm btn-primary px-3 rounded-pill">Follow</a>
+                                        </div>
+                                    </div>
+                                     <!--:Writer Card:-->
+                                     <div class="d-flex align-items-center position-relative mb-4">
+                                        <!--:Details link:-->
+                                        <a href="#!" class="stretched-link"></a>
+                                        <!--:Avatar:-->
+                                        <img src="assets/img/avatar/4.jpg"
+                                            class="width-4x height-4x rounded-pill shadow-sm me-4 flex-shrink-0" alt="">
+                                        <div class="flex-grow-1 overflow-hidden">
+                                            <h6 class="mb-1 text-truncate">Jao Felix</h6>
+                                            <small class="clamp-2">Nemo enim ipsam voluptatem quia voluptas</small>
+                                        </div>
+                                        <div class="flex-shrink-0 position-relative ps-4">
+                                            <a href="#!" class="btn btn-sm btn-primary px-3 rounded-pill">Follow</a>
+                                        </div>
+                                    </div>
+                                     <!--:Writer Card:-->
+                                     <div class="d-flex align-items-center position-relative">
+                                        <!--:Details link:-->
+                                        <a href="#!" class="stretched-link"></a>
+                                        <!--:Avatar:-->
+                                        <img src="assets/img/avatar/5.jpg"
+                                            class="width-4x height-4x rounded-pill shadow-sm me-4 flex-shrink-0" alt="">
+                                        <div class="flex-grow-1 overflow-hidden">
+                                            <h6 class="mb-1 text-truncate">Lorris Huges</h6>
+                                            <small class="clamp-2">Nor again is there anyone who loves or pursues or desires</small>
+                                        </div>
+                                        <div class="flex-shrink-0 position-relative ps-4">
+                                            <a href="#!" class="btn btn-sm btn-primary px-3 rounded-pill">Follow</a>
+                                        </div>
+                                    </div>
+                                </div>
+                               </div>
+
+                            </div>
+                        </div>
+                    </div>
+                      <!--:Footer:-->
+                      @@include('./partials/footer-default.html')
+                </main>
+
+            </div>
+        </div>
+        <!--script-->
+        <script src="assets/js/theme.bundle.min.js"></script>
+         <!--Select scripts-->
+         <script src="assets/vendor/node_modules/js/choices.min.js"></script>
+         <script>
+             var cSelect = document.querySelectorAll("[data-choices]");
+             cSelect.forEach(el => {
+                 const t = {
+                     ...el.dataset.choices ? JSON.parse(el.dataset.choices) : {},
+                     ...{
+                         classNames: {
+                             containerInner: el.className,
+                             input: "form-control",
+                             inputCloned: "form-control-sm",
+                             listDropdown: "dropdown-menu",
+                             itemChoice: "dropdown-item",
+                             activeState: "show",
+                             selectedState: "active"
+                         }
+                     }
+                 }
+                 new Choices(el, t)
+             });
+ 
+         </script>
+
+    </body>
+
+</html>

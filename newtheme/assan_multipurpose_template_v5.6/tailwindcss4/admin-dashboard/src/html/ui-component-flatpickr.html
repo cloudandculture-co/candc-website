@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+<!--:Flatpickr:-->
+<link rel="stylesheet" href="vendor/css/flatpickr.min.css">
+    @@include('./partials/head-includes.html')
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+      @@include('./partials/app-preloader.html')
+
+
+    @@include('./partials/sidebar.html',{"page": "ui-components","components_collapse":
+    "show","component_flatpickr_active": "active"})
+
+    <main class="relative flex flex-col lg:ms-64">
+        @@include('./partials/header-default.html')
+        <!--:Page Header:-->
+        <div class="px-4 lg:px-6 xl:px-12 py-4">
+            <div class="flex flex-wrap items-center">
+                <div class="flex-grow">
+                    <h4 class="text-2xl font-semibold">Flatpickr</h4>
+                </div>
+                <div class="shrink-0">
+                    <!--:Breadcrumb:-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="flex items-center">
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                            </li>
+                            <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active"><a
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                    href="ui-component-alerts.html">Components</a></li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Flatpickr</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content relative px-4 lg:px-6 xl:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card">
+                        <div class="px-4 pt-4">
+                            <h5 class="text-lg font-semibold">Default Date Picker</h5>
+                        </div>
+                        <div class="px-4 py-4">
+                            <input type="text" class="form-input js-flatpickr" placeholder="Select Date">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card">
+                        <div class="px-4 pt-4">
+                            <h5 class="text-lg font-semibold">Date Range Picker</h5>
+                        </div>
+                        <div class="px-4 py-4">
+                            <input type="text" class="form-input js-flatpickr-range" placeholder="Select Date">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Learn more about Flatpickr <a class="font-semibold text-primary-500 border-b border-dashed hover:text-current"
+                    href="https://flatpickr.js.org/examples/" target="_blank">Here</a></p>
+        </div>
+    </main>
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+
+        <!--:Flatpickr:-->
+        <script src="vendor/flatpickr.min.js"></script>
+        <script>
+            flatpickr(".js-flatpickr", {
+                altInput: true,
+                altFormat: "F j, Y",
+                dateFormat: "Y-m-d"
+            });
+    
+            //range
+            flatpickr(".js-flatpickr-range", {
+                mode: "range",
+                altFormat: "F j, Y",
+                defaultDate: ["2024-06-05", "2024-06-12"]
+            });
+        </script>
+</body>
+
+</html>

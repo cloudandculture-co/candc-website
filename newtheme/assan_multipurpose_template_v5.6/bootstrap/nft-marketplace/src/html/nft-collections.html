@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>NFT</title>
+        <!--Swiper-->
+        <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+        @@include('./partials/head.html')
+    </head>
+
+    <body>
+        @@include('./partials/navbar-default.html',{"page":"collections","pagesitckyClass" : "navbar-sticky"})
+        <section class="position-relative">
+            <div class="container pt-10 pt-lg-12 position-relative pb-8">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex pb-7 pt-lg-5 justify-content-center align-items-center">
+                            <h2 class="me-3 mb-0 display-6 fw-normal">Top</h2>
+                            <select class="choices__inline display-6 text-muted border-0"
+                                data-choices='{"searchEnabled":false, "allowHTML":true,"itemSelectText":""}'>
+                                <option value="Collections">Collections</option>
+                                <option value="Sellers">Sellers</option>
+                            </select>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-nowrap table-bordered align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="width-4x text-nowrap">#</th>
+                                        <th class="text-nowrap">Collection</th>
+                                        <th class="text-end text-nowrap">Volume</th>
+                                        <th class="text-end text-nowrap">Floor price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>
+                                            <a href="#!" class="d-flex flex-nowrap align-items-center">
+                                                <div
+                                                    class="position-relative size-4x bg-white shadow-sm rounded-circle flex-shrink-0 me-4">
+                                                    <img src="assets/img/collection/1.png" alt=""
+                                                        class="img-fluid rounded-circle rounded-4">
+                                                    <!--Varified icon-->
+                                                    <div class="position-absolute end-0 bottom-0 text-primary me-1 mb-1" data-tippy-placement="right" data-tippy-content="Verified by NFTY">
+                                                        <svg width="16" height="16" viewBox="0 0 40 40" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill="currentColor" fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M20 2.72727L25.2727 0L28.5455 5.09091L34.7273 5.27273L34.9091 11.4545L40 14.7273L37.2727 20L40 25.2727L34.9091 28.5455L34.7273 34.7273L28.5455 34.9091L25.2727 40L20 37.2727L14.7273 40L11.4545 34.9091L5.27273 34.7273L5.09091 28.5455L0 25.2727L2.72727 20L0 14.7273L5.09091 11.4545L5.27273 5.27273L11.4545 5.09091L14.7273 0L20 2.72727Z">
+                                                            </path>
+                                                            <path
+                                                                d="M17.4988 25.4956L11.9995 20.5876L14.445 18.4051L17.4988 21.1382L26.052 13.4971L28.4975 15.6796L17.4988 25.4956Z"
+                                                                fill="white"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <h6 class="mb-0 text-body">Time traveler club</h6>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="text-end d-flex flex-column">
+                                                <strong class="mb-2">87.12 ETH</strong>
+                                                <span>$87150 <span class="badge bg-success ms-2">+23%</span></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-end d-flex flex-column">
+                                                <strong class="mb-2">0.12 ETH</strong>
+                                                <span class="opacity-50">$58</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>
+                                            <a href="#!" class="d-flex flex-nowrap align-items-center">
+                                                <div
+                                                    class="position-relative size-4x bg-white shadow-sm rounded-circle flex-shrink-0 me-4">
+                                                    <img src="assets/img/collection/2.png" alt=""
+                                                        class="img-fluid rounded-circle rounded-4">
+                                                    <!--Varified icon-->
+                                                    <div class="position-absolute end-0 bottom-0 text-primary me-1 mb-1" data-tippy-placement="right" data-tippy-content="Verified by NFTY">
+                                                        <svg width="16" height="16" viewBox="0 0 40 40" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill="currentColor" fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M20 2.72727L25.2727 0L28.5455 5.09091L34.7273 5.27273L34.9091 11.4545L40 14.7273L37.2727 20L40 25.2727L34.9091 28.5455L34.7273 34.7273L28.5455 34.9091L25.2727 40L20 37.2727L14.7273 40L11.4545 34.9091L5.27273 34.7273L5.09091 28.5455L0 25.2727L2.72727 20L0 14.7273L5.09091 11.4545L5.27273 5.27273L11.4545 5.09091L14.7273 0L20 2.72727Z">
+                                                            </path>
+                                                            <path
+                                                                d="M17.4988 25.4956L11.9995 20.5876L14.445 18.4051L17.4988 21.1382L26.052 13.4971L28.4975 15.6796L17.4988 25.4956Z"
+                                                                fill="white"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <h6 class="mb-0 text-body">King_ray</h6>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="text-end d-flex flex-column">
+                                                <strong class="mb-2">87.12 ETH</strong>
+                                                <span>$87150 <span class="badge bg-success ms-2">+23%</span></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-end d-flex flex-column">
+                                                <strong class="mb-2">0.12 ETH</strong>
+                                                <span class="opacity-50">$58</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>
+                                            <a href="#!" class="d-flex flex-nowrap align-items-center">
+                                                <div
+                                                    class="position-relative size-4x bg-white shadow-sm rounded-circle flex-shrink-0 me-4">
+                                                    <img src="assets/img/collection/5.gif" alt=""
+                                                        class="img-fluid rounded-circle rounded-4">
+                                                    <!--Varified icon-->
+                                                    <div class="position-absolute end-0 bottom-0 text-primary me-1 mb-1" data-tippy-placement="right" data-tippy-content="Verified by NFTY">
+                                                        <svg width="16" height="16" viewBox="0 0 40 40" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill="currentColor" fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M20 2.72727L25.2727 0L28.5455 5.09091L34.7273 5.27273L34.9091 11.4545L40 14.7273L37.2727 20L40 25.2727L34.9091 28.5455L34.7273 34.7273L28.5455 34.9091L25.2727 40L20 37.2727L14.7273 40L11.4545 34.9091L5.27273 34.7273L5.09091 28.5455L0 25.2727L2.72727 20L0 14.7273L5.09091 11.4545L5.27273 5.27273L11.4545 5.09091L14.7273 0L20 2.72727Z">
+                                                            </path>
+                                                            <path
+                                                                d="M17.4988 25.4956L11.9995 20.5876L14.445 18.4051L17.4988 21.1382L26.052 13.4971L28.4975 15.6796L17.4988 25.4956Z"
+                                                                fill="white"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <h6 class="mb-0 text-body">Merge bird</h6>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="text-end d-flex flex-column">
+                                                <strong class="mb-2">87.12 ETH</strong>
+                                                <span>$87150 <span class="badge bg-success ms-2">+23%</span></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-end d-flex flex-column">
+                                                <strong class="mb-2">0.12 ETH</strong>
+                                                <span class="opacity-50">$58</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>
+                                            <a href="#!" class="d-flex flex-nowrap align-items-center">
+                                                <div
+                                                    class="position-relative size-4x bg-white shadow-sm rounded-circle flex-shrink-0 me-4">
+                                                    <img src="assets/img/collection/3.png" alt=""
+                                                        class="img-fluid rounded-circle rounded-4">
+                                                    <!--Varified icon-->
+                                                    <div class="position-absolute end-0 bottom-0 text-primary me-1 mb-1" data-tippy-placement="right" data-tippy-content="Verified by NFTY">
+                                                        <svg width="16" height="16" viewBox="0 0 40 40" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill="currentColor" fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M20 2.72727L25.2727 0L28.5455 5.09091L34.7273 5.27273L34.9091 11.4545L40 14.7273L37.2727 20L40 25.2727L34.9091 28.5455L34.7273 34.7273L28.5455 34.9091L25.2727 40L20 37.2727L14.7273 40L11.4545 34.9091L5.27273 34.7273L5.09091 28.5455L0 25.2727L2.72727 20L0 14.7273L5.09091 11.4545L5.27273 5.27273L11.4545 5.09091L14.7273 0L20 2.72727Z">
+                                                            </path>
+                                                            <path
+                                                                d="M17.4988 25.4956L11.9995 20.5876L14.445 18.4051L17.4988 21.1382L26.052 13.4971L28.4975 15.6796L17.4988 25.4956Z"
+                                                                fill="white"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <h6 class="mb-0 text-body">Space Art</h6>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="text-end d-flex flex-column">
+                                                <strong class="mb-2">87.12 ETH</strong>
+                                                <span>$87150 <span class="badge bg-success ms-2">+23%</span></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-end d-flex flex-column">
+                                                <strong class="mb-2">0.12 ETH</strong>
+                                                <span class="opacity-50">$58</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>05</td>
+                                        <td>
+                                            <a href="#!" class="d-flex flex-nowrap align-items-center">
+                                                <div
+                                                    class="position-relative size-4x bg-white shadow-sm rounded-circle flex-shrink-0 me-4">
+                                                    <img src="assets/img/collection/6.gif" alt=""
+                                                        class="img-fluid rounded-circle rounded-4">
+                                                    <!--Varified icon-->
+                                                    <div class="position-absolute end-0 bottom-0 text-primary me-1 mb-1" data-tippy-placement="right" data-tippy-content="Verified by NFTY">
+                                                        <svg width="16" height="16" viewBox="0 0 40 40" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill="currentColor" fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M20 2.72727L25.2727 0L28.5455 5.09091L34.7273 5.27273L34.9091 11.4545L40 14.7273L37.2727 20L40 25.2727L34.9091 28.5455L34.7273 34.7273L28.5455 34.9091L25.2727 40L20 37.2727L14.7273 40L11.4545 34.9091L5.27273 34.7273L5.09091 28.5455L0 25.2727L2.72727 20L0 14.7273L5.09091 11.4545L5.27273 5.27273L11.4545 5.09091L14.7273 0L20 2.72727Z">
+                                                            </path>
+                                                            <path
+                                                                d="M17.4988 25.4956L11.9995 20.5876L14.445 18.4051L17.4988 21.1382L26.052 13.4971L28.4975 15.6796L17.4988 25.4956Z"
+                                                                fill="white"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <h6 class="mb-0 text-body">Jungle Book</h6>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="text-end d-flex flex-column">
+                                                <strong class="mb-2">87.12 ETH</strong>
+                                                <span>$87150 <span class="badge bg-success ms-2">+23%</span></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-end d-flex flex-column">
+                                                <strong class="mb-2">0.12 ETH</strong>
+                                                <span class="opacity-50">$58</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>06</td>
+                                        <td>
+                                            <a href="#!" class="d-flex flex-nowrap align-items-center">
+                                                <div
+                                                    class="position-relative size-4x bg-white shadow-sm rounded-circle flex-shrink-0 me-4">
+                                                    <img src="assets/img/collection/4.png" alt=""
+                                                        class="img-fluid rounded-circle rounded-4">
+                                                    <!--Varified icon-->
+                                                    <div class="position-absolute end-0 bottom-0 text-primary me-1 mb-1" data-tippy-placement="right" data-tippy-content="Verified by NFTY">
+                                                        <svg width="16" height="16" viewBox="0 0 40 40" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill="currentColor" fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M20 2.72727L25.2727 0L28.5455 5.09091L34.7273 5.27273L34.9091 11.4545L40 14.7273L37.2727 20L40 25.2727L34.9091 28.5455L34.7273 34.7273L28.5455 34.9091L25.2727 40L20 37.2727L14.7273 40L11.4545 34.9091L5.27273 34.7273L5.09091 28.5455L0 25.2727L2.72727 20L0 14.7273L5.09091 11.4545L5.27273 5.27273L11.4545 5.09091L14.7273 0L20 2.72727Z">
+                                                            </path>
+                                                            <path
+                                                                d="M17.4988 25.4956L11.9995 20.5876L14.445 18.4051L17.4988 21.1382L26.052 13.4971L28.4975 15.6796L17.4988 25.4956Z"
+                                                                fill="white"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <h6 class="mb-0 text-body">Mobland</h6>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="text-end d-flex flex-column">
+                                                <strong class="mb-2">87.12 ETH</strong>
+                                                <span>$87150 <span class="badge bg-success ms-2">+23%</span></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-end d-flex flex-column">
+                                                <strong class="mb-2">0.12 ETH</strong>
+                                                <span class="opacity-50">$58</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>07</td>
+                                        <td>
+                                            <a href="#!" class="d-flex flex-nowrap align-items-center">
+                                                <div
+                                                    class="position-relative size-4x bg-white shadow-sm rounded-circle flex-shrink-0 me-4">
+                                                    <img src="assets/img/collection/7.gif" alt=""
+                                                        class="img-fluid rounded-circle rounded-4">
+                                                    <!--Varified icon-->
+                                                    <div class="position-absolute end-0 bottom-0 text-primary me-1 mb-1" data-tippy-placement="right" data-tippy-content="Verified by NFTY">
+                                                        <svg width="16" height="16" viewBox="0 0 40 40" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill="currentColor" fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M20 2.72727L25.2727 0L28.5455 5.09091L34.7273 5.27273L34.9091 11.4545L40 14.7273L37.2727 20L40 25.2727L34.9091 28.5455L34.7273 34.7273L28.5455 34.9091L25.2727 40L20 37.2727L14.7273 40L11.4545 34.9091L5.27273 34.7273L5.09091 28.5455L0 25.2727L2.72727 20L0 14.7273L5.09091 11.4545L5.27273 5.27273L11.4545 5.09091L14.7273 0L20 2.72727Z">
+                                                            </path>
+                                                            <path
+                                                                d="M17.4988 25.4956L11.9995 20.5876L14.445 18.4051L17.4988 21.1382L26.052 13.4971L28.4975 15.6796L17.4988 25.4956Z"
+                                                                fill="white"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <h6 class="mb-0 text-body">Art space</h6>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="text-end d-flex flex-column">
+                                                <strong class="mb-2">87.12 ETH</strong>
+                                                <span>$87150 <span class="badge bg-success ms-2">+23%</span></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-end d-flex flex-column">
+                                                <strong class="mb-2">0.12 ETH</strong>
+                                                <span class="opacity-50">$58</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th colspan="4">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <div class="spinner-border spinner-border-sm text-primary" role="status"></div>
+                                                <span class="ms-2 small opacity-50">Loading...</span>
+                                                </div>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="position-relative">
+            <!--Background-->
+            <div class="position-absolute start-0 top-0 h-100 w-75 bg-body-secondary rounded-top-end-5 rounded-bottom-end-5">
+            </div>
+            <div class="container py-8 py-lg-11 position-relative">
+                <div class="row pt-4">
+                    <!--col-->
+                    <div class="col-lg-4 mb-7 mb-lg-0" data-aos="fade-up">
+                        <!--icon card-->
+                        <div class="card border-0 shadow-sm hover-lift pt-6 p-4">
+                            <!--icon-->
+                            <div
+                                class="me-4 position-absolute start-0 ms-3 mt-n4 top-0 flex-shrink-0 size-4x shadow d-flex align-items-center justify-content-center rounded-circle bg-primary text-white">
+                                <span class="material-icons fs-2">
+                                    account_balance_wallet
+                                </span>
+                            </div>
+                            <!--title-->
+                            <h5 class="mb-4 mt-n4 position-relative ps-10">Set your wallet</h5>
+
+                            <!--description-->
+                            <p class="mb-0">
+                                Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.
+                            </p>
+                        </div>
+                    </div>
+                    <!--col-->
+                    <div class="col-lg-4 mb-7 mb-lg-0" data-aos="fade-up">
+                        <!--icon card-->
+                        <div class="card border-0 shadow-sm hover-lift pt-6 p-4">
+                            <!--icon-->
+                            <div
+                                class="me-4 position-absolute start-0 ms-3 mt-n4 top-0 flex-shrink-0 size-4x shadow d-flex align-items-center justify-content-center rounded-circle bg-primary text-white">
+                                <span class="material-icons fs-2">
+                                    photo_library
+                                </span>
+                            </div>
+                            <!--title-->
+                            <h5 class="mb-4 mt-n4 position-relative ps-10">Add your NFTs</h5>
+
+                            <!--description-->
+                            <p class="mb-0">
+                                Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.
+                            </p>
+                        </div>
+                    </div>
+                    <!--col-->
+                    <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-up">
+                        <!--icon card-->
+                        <div class="card border-0 shadow-sm hover-lift pt-6 p-4">
+                            <!--icon-->
+                            <div
+                                class="me-4 position-absolute start-0 ms-3 mt-n4 top-0 flex-shrink-0 size-4x shadow d-flex align-items-center justify-content-center rounded-circle bg-primary text-white">
+                                <span class="material-icons fs-2">
+                                    sell
+                                </span>
+                            </div>
+                            <!--title-->
+                            <h5 class="mb-4 mt-n4 position-relative ps-10">List them for Sale</h5>
+
+                            <!--description-->
+                            <p class="mb-0">
+                                Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @@include('./partials/footer-default.html')
+        <!--script-->
+        <script src="assets/js/theme.bundle.min.js"></script>
+        <!--Countdown plugin and jquery-->
+        <script src="assets/vendor/node_modules/js/jquery.min.js"></script>
+        <script src="assets/vendor/node_modules/js/jquery.countdown.min.js"></script>
+        <script>
+            $('[data-countdown]').each(function () {
+                var $this = $(this),
+                    finalDate = $(this).data('countdown');
+
+                $this.countdown(finalDate, function (event) {
+                    var totalHours = event.offset.totalDays * 24 + event.offset.hours;
+                    var $this = $(this).html(event.strftime(
+                        totalHours +
+                        '<small class="d-inline-block ms-1">Hr</small><div class="ms-2 ps-2 py-1 h-100 border-start opacity-50"></div>' +
+                        '%M <small class="d-inline-block ms-1">Min</small><div class="ms-2 ps-2 py-1 h-100 border-start opacity-50"></div>' +
+                        '%S <small class="d-inline-block ms-1">Sec</small>'));
+                });
+            });
+
+        </script>
+
+        <!--Popular NFT slider-->
+        <script src="assets/vendor/node_modules/js/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".swiper-popular", {
+                slidesPerView: 1,
+                spaceBetween: 12,
+                keyboard: {
+                    enabled: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 12,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 16,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 16,
+                    }
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-next",
+                    prevEl: ".swiper-prev",
+                },
+            });
+
+        </script>
+
+        <!--Select scripts-->
+        <script src="assets/vendor/node_modules/js/choices.min.js"></script>
+        <script>
+            var cSelect = document.querySelectorAll("[data-choices]");
+            cSelect.forEach(el => {
+                const t = {
+                    ...el.dataset.choices ? JSON.parse(el.dataset.choices) : {},
+                    ...{
+                        classNames: {
+                            containerInner: el.className,
+                            input: "form-control",
+                            inputCloned: "form-control-sm",
+                            listDropdown: "dropdown-menu",
+                            itemChoice: "dropdown-item",
+                            activeState: "show",
+                            selectedState: "active"
+                        }
+                    }
+                }
+                new Choices(el, t)
+            });
+
+        </script>
+    </body>
+
+</html>

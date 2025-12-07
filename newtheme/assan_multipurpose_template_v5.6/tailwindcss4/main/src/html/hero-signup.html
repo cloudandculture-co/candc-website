@@ -1,0 +1,164 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+      @@include('./partials/head-includes.html')
+     <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+    <!--begin:Header-->
+ <header class="header-transparent sticky-fixed">
+
+   <!--begin:navbar-->
+   <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+     <!--Navbar-fixed-background-->
+     <div class="navbar-fixed-bg absolute"></div>
+     <div class="container relative flex flex-wrap items-center justify-center relative">
+        <!--begin:logo-->
+        <a class="navbar-brand relative w-24 block" href="index.html">
+            <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+            <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+          </a>
+          <!--end:logo-->
+   
+
+       <!--begin:navbar-no-collapse-items-->
+       <div class="flex items-center shrink-0 ml-auto lg:order-last">
+         <!--Navbar toggler button-->
+         <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+           data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+           aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon">
+             <i></i>
+           </span>
+         </button>
+         <!--Button-->
+         <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+           <a href="#"
+             class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+         </div>
+       </div>
+       <!--end:navbar-no-collapse-items-->
+
+       <!--begin:navbar-collapse-->
+       <div
+         class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+         id="mainNavbarTheme">
+         @@include('./partials/headers/default-navbar-items.html',{"page": "features"})
+       </div>
+       <!--end:navbar-collapse-->
+     </div>
+
+   </nav>
+   <!--end:navbar-->
+ </header>
+ <!--end:header-->
+
+ 
+<main class="main-content" id="main-content">
+    
+      <!--::Start Hero Section::-->
+      <section class="relative text-white bg-black">
+        <!--:Decoration bg:-->
+       <img src="assets/img/backgrounds/bg-blur2.png" class="h-full absolute right-0 top-0 opacity-50" alt="">
+        <!--:Hero divider vector:-->
+        <svg class="absolute w-full left-0 bottom-0 h-12 lg:h-24 text-white dark:text-black" preserveAspectRatio="none" width="100%"
+            height="220" viewBox="0 0 1296 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M1296 0H1241.56C1188.17 0 1080.35 0 971.477 21.9407C863.651 43.8814 755.826 87.7628 648 110.296C540.174 132.237 432.349 132.237 323.477 128.086C215.651 124.528 107.826 117.412 54.4362 113.854L3.71933e-05 110.296V220H54.4362C107.826 220 215.651 220 323.477 220C432.349 220 540.174 220 648 220C755.826 220 863.651 220 971.477 220C1080.35 220 1188.17 220 1241.56 220H1296V0Z"
+                fill="currentColor" />
+        </svg>
+        <div class="container py-16 lg:py-24 relative z-[1]">
+            <div class="flex flex-wrap -mx-3 items-center justify-center pt-12 pb-16">
+                <div class="lg:w-7/12 mb-9 lg:mb-0 w-full px-3 text-center lg:text-left">
+                    <!--:Heading:-->
+                    <h1 class="text-5xl lg:text-6xl font-medium mb-7">Vertically centered hero sign-up form</h1>
+                    <!--:Subheading:-->
+                    <p class="text-lg text-white/75 lg:w-10/12 mb-12">
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.
+                    </p>
+                    <a href="#section" class="w-12 h-12 mx-auto lg:mx-0 bg-white text-indigo-500 animate-bounce rounded-full flex items-center justify-center text-2xl">
+                        <i class="bi bi-arrow-down"></i>
+                    </a>
+                </div>
+                <div class="w-full mx-auto lg:w-4/12 px-3">
+                    <div class="relative">
+                        <!--:Signup form:-->
+                        <form
+                            class="px-4 py-5 rounded-xl bg-black/20 dark shadow-lg z-[1] relative">
+                            <!--:Input:-->
+                            <div class="mb-3">
+                                <input type="email" class="bg-white text-black block px-4 py-3 rounded-lg w-full focus:outline-0" required id="signupName"
+                                    placeholder="Enter name">
+                            </div>
+                            <!--:Input:-->
+                            <div class="mb-3">
+                                <input type="email" class="bg-white text-black block px-4 py-3 rounded-lg w-full focus:outline-0" required id="signupEmail"
+                                    placeholder="Enter email">
+                            </div>
+                            <!--:Input:-->
+                            <div class="mb-3">
+                                <input type="password" required class="bg-white text-black block px-4 py-3 rounded-lg w-full focus:outline-0" id="signupPassword"
+                                    placeholder="Password">
+                            </div>
+                            <!--:label:-->
+                            <div class="mb-3 input-check flex items-center">
+                                <input class="input-check-input me-1" id="terms" type="checkbox" value="">
+                                <label class="input-check-label text-sm ml-2" for="terms">Subscribe to our
+                                    newsletter</label>
+                            </div>
+                            <!--:Submit button:-->
+                            <button class="w-full btn btn-lg bg-indigo-500 text-white hover:bg-indigo-600" type="submit">Sign up</button>
+                            <!--:Info text:-->
+                            <small class="leading-tight text-white/75 pt-4 block">By clicking Sign up, you agree to the terms & conditions
+                                of use.</small>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/::end Hero section::-->
+
+    <section class="relative" id="section">
+        <div class="container py-16 lg:py-24">
+           Content...
+        </div>
+    </section>
+</main>
+
+   
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-1.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

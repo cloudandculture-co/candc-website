@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    <!--Mapbox-->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    @@include('./partials/head-includes.html')
+
+
+    <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+    <!--Header Start-->
+    <header class="z-fixed top-0 left-0 absolute header-sticky z-[999] w-full">
+        <nav class="navbar py-4 lg:py-0 shadow-none navbar-expand-lg navbar-light">
+            <div class="container relative flex flex-wrap items-center justify-center">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo/logo.svg" alt="" class="w-24 dark:hidden">
+                    <img src="assets/img/logo/logo-white.svg" alt="" class="w-24 hidden dark:block">
+                </a>
+                <div class="flex items-center shrink-0 ml-auto lg:order-last">
+                    <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i></i>
+                        </span>
+                    </button>
+                    <div class="nav-item me-3 me-lg-0 ms-lg-3">
+                        <a href="#" class="btn bg-orange-500 text-white hover:bg-orange-600">
+                            Get started</a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+                    id="mainNavbarTheme">
+                    @@include('./partials/headers/default-navbar-items.html',{"page":
+                    "pages"})
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Main content-->
+
+    <main class="main-content" id="main-content">
+        <section class="relative">
+            <div class="container relative pt-24 lg:pt-32">
+                <div class="flex flex-wrap -mx-3">
+                    <div class="lg:w-8/12 w-full px-3">
+                        <h1 class="text-4xl lg:text-6xl font-medium mb-3" data-text-split>
+                            Get in touch with us
+                        </h1>
+                        <p class="mb-7 pe-lg-9 text-lg text-gray-600 dark:text-gray-300">Do you have questions about our
+                            products or need a quote? Use
+                            the
+                            contact form below and we will get back to you.</p>
+                    </div>
+                </div>
+                <!--/.row-->
+                <div data-animation="fadeInUp">
+                    <img src="assets/img/1200x600/2.jpg" class="max-w-full rounded-2xl" alt="">
+                </div>
+                
+            </div>
+            <!--/.content-->
+        </section>
+        <!--/section-->
+
+        <section class="relative">
+            <div class="container py-16 lg:py-24">
+                <div class="flex flex-wrap -mx-3 pb-12 lg:pb-16">
+                    <div class="lg:w-4/12 w-full px-3 mb-5 mb-lg-0 text-center" data-animation="fadeInUp" data-delay=".1">
+
+                        <h5 class="mb-3 text-xl font-medium">Customer support</h5>
+                        <p class="mb-5 text-gray-600 dark:text-gray-300">
+                            If you are already a customer with us, we will be happy to help you in our
+                            Customer Support.
+                        </p>
+                        <a href="mailto:youremail.com" class="btn bg-gray-700 hover:bg-gray-800 text-white shadow-sm">
+                            <i class="bi bi-headset align-middle fw-normal me-1"></i> Customer support
+                        </a>
+                    </div>
+
+                    <div class="lg:w-4/12 w-full px-3 mb-5 mb-lg-0 text-center" data-animation="fadeInUp" data-delay=".2">
+
+                        <h5 class="mb-3 text-xl font-medium"> Skype</h5>
+                        <p class="mb-5 text-gray-600 dark:text-gray-300">
+                            Want to Discuss in details about your next project?, Join us on skype
+                        </p>
+                        <a href="#" class="btn bg-gray-700 hover:bg-gray-800 text-white shadow-sm">
+                            <i class="bi bi-skype align-middle fw-normal me-1"></i> rakesh.sharma856
+                        </a>
+                    </div>
+                    <div class="lg:w-4/12 w-full px-3 text-center" data-animation="fadeInUp" data-delay=".3">
+
+                        <h5 class="mb-3 text-xl font-medium">Phone</h5>
+                        <p class="mb-5 text-gray-600 dark:text-gray-300">
+                            Give us a call Monday to Friday<br> 10:AM to 5:PM
+                        </p>
+                        <a href="#!" class="btn bg-gray-700 hover:bg-gray-800 text-white shadow-sm">
+                            <i class="bi bi-phone align-middle fw-normal me-1"></i> +01 1234-567-890
+                        </a>
+                    </div>
+                </div>
+                <div class="overflow-hidden mb-16 lg:mb-24 shadow rounded-2xl">
+                    <div id='map' class="rounded-3" style='width: 100%; height: 350px;'></div>
+                </div>
+                <div class="flex flex-wrap -mx-3">
+                    <div class="md:w-10/12 lg:w-8/12 w-full px-3 mx-auto">
+                        <div class="relative">
+                            <h2 class="text-3xl font-medium mb-3">
+                                Contact form
+                            </h2>
+                            <p class="mb-3 lg:w-8/12 text-gray-600 dark:text-gray-300">
+                                Use the contact form if you have questions about our products. Our sales team will
+                                be happy to help you:
+                            </p>
+                            <div class="w-16 pt-1 bg-indigo-500 mb-9"></div>
+                            <!-- Contacts Form -->
+
+                            <form id="contactForm" action="assets/contact/send_mail.php" method="post" role="form"
+                                class="needs-validation mb-12">
+                                <div class="flex flex-wrap -mx-3">
+                                    <!-- Input -->
+                                    <div class="w-full px-3 md:w-6/12 mb-3">
+                                        <label class="block text-gray-600 dark:text-gray-300 mb-2" for="name">Your
+                                            name</label>
+                                        <input type="text" name="name" class="input" id="name" placeholder="John Doe"
+                                            required>
+                                    </div>
+                                    <!-- End Input -->
+
+                                    <!-- Input -->
+                                    <div class="w-full px-3 md:w-6/12 mb-3">
+                                        <label class="block text-gray-600 dark:text-gray-300 mb-2" for="email">Your
+                                            email address</label>
+                                        <input type="email" class="input" name="email" id="email"
+                                            placeholder="john@gmail.com" aria-label="jackwayley@gmail.com" required>
+
+                                    </div>
+
+                                    <!-- Input -->
+
+                                    <!-- Services -->
+                                    <div class="w-full px-3 mb-3">
+                                        <label class="block text-gray-600 dark:text-gray-300 mb-2"
+                                            for="subject">Subject</label>
+                                        <input type="text" class="input" name="subject" id="subject"
+                                            placeholder="Web Design" required>
+                                    </div>
+                                    <!-- End Input -->
+                                </div>
+
+                                <!-- Message -->
+                                <div class="mb-3">
+                                    <label for="message"
+                                        class="block text-gray-600 dark:text-gray-300 mb-2">Message</label>
+                                    <textarea class="input" name="message" placeholder="Hi there...."
+                                        required=""></textarea>
+                                </div>
+
+                                <div class="md:flex justify-between items-center">
+                                    <p class="text-xs mb-4 text-gray-400 mb-md-0">We'll get back to you in 1-2
+                                        business days.</p>
+                                    <input type="submit" name="submit" value="Submit message" id="sendBtn"
+                                        class="btn btn-lg bg-indigo-500 text-white hover:bg-indigo-600 cursor-pointer">
+                                </div>
+                            </form>
+                            <!-- End Contacts Form -->
+
+                            <!--Card-->
+                            <div class="relative px-6 py-7 rounded-2xl border border-gray-200 dark:border-gray-800">
+                                <div class="relative">
+
+                                    <h3 class="mb-4 text-3xl lg:text-400 font-medium" data-text-split>Need customer support?</h3>
+                                    <p class="lg:w-8/12 text-gray-600 dark:text-gray-300">
+                                        If you are already a customer with us, we will be happy to help you in our
+                                        Customer Support.
+                                    </p>
+                                    <div class="width-6x pt-1 bg-success mb-5"></div>
+                                    <a href="#" class="btn btn-lg bg-gray-700 hover:bg-gray-800 text-white">
+                                        Customer support
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    @@include('./partials/footers/footer-1.html')
+    <!--::Success message Modal::-->
+    <div id="successModal" class="modal fade">
+        <div class="modal-dialog modal-dialog-xs modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body py-5 px-4 text-center">
+                    <div
+                        class="w-16 h-16 mb-4 mx-auto flex items-center justify-center bg-green-500 text-white rounded-full">
+                        <i class="bi bi-check text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-medium mb-3">Message Sent</h3>
+                    <p class="mb-6 text-gray-400">We'll get back to you in 1-2 business days! </p>
+                    <button type="button" class="btn bg-red-500 text-white hover:bg-red-600"
+                        data-bs-dismiss="modal" aria-label="Close">Dismiss</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+
+  <!--:Map:-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken =
+            'pk.eyJ1IjoiZGVzaWdubXlsaWZlIiwiYSI6ImNqeHlkMzljejAwaHAzbXFtaXphYWI3NmYifQ.IRPz2gseBSE-DQMzurY4ZA';
+        var officeLocation = [75.788350, 26.958520];
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/light-v10',
+            center: officeLocation,
+            zoom: 9
+        });
+        // create the popup
+        var popup = new mapboxgl.Popup({
+            offset: 18
+        }).setHTML(
+            '<h6 class="text-indigo-500 mb-2 font-medium text-xl">Our office</h6><small class="text-gray-400">CreativeDM, SE-03, Vidhyadhar Nagar, Jaipur, 302012</small>'
+        );
+        // create DOM element for the marker
+        var el = document.createElement('div');
+        el.id = 'marker';
+        // disable map zoom when using scroll
+        map.scrollZoom.disable();
+        // create the marker
+        new mapboxgl.Marker(el)
+            .setLngLat(officeLocation)
+            .setPopup(popup) // sets a popup on this marker
+            .addTo(map);
+
+    </script>
+
+    <!--Autosize textarea-->
+    <script src="assets/vendor/node_modules/js/autosize.min.js"></script>
+    <script>
+        var ta = document.querySelector('textarea');
+        ta.style.display = 'none';
+        autosize(ta);
+        // Change layout
+        ta.style.display = 'block';
+        autosize.update(ta);
+    </script>
+
+    <!--:Contact form:-->
+    <script>
+        // Wait for the DOM to load
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the form element
+            const form = document.getElementById('contactForm');
+            const successModal = document.getElementById('successModal')
+
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const formControls = form.querySelectorAll('.input');
+                if (form.checkValidity()) {
+                    const formData = new FormData(form);
+                    fetch(form.action, {
+                        method: form.method,
+                        body: formData
+                    })
+                        .then(response => {
+                            const toastBootstrap = bootstrap.Modal.getOrCreateInstance(
+                                successModal)
+                            toastBootstrap.show()
+                            // Clear validation feedback
+                            formControls.forEach(function (control) {
+                                control.value = '';
+                            });
+                        })
+                        .catch(error => {
+                            console.error(error);
+                        });
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

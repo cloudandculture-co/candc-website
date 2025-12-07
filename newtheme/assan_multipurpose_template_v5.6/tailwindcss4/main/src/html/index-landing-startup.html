@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico" />
+    @@include('./partials/head-includes.html')
+    <!--Vendors css-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/glightbox.min.css">
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+
+    @@include('./partials/head-includes.html')
+    <title>Assan - TailwindCss Template</title>
+</head>
+
+
+<body class="leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+    <!--Header Start-->
+    <header class="z-fixed header-transparent header-absolute-top sticky-reverse">
+        <nav
+            class="navbar navbar-expand-lg py-4 lg:py-0 max-lg:bg-white/90 max-lg:dark:bg-black/90 fixed top-0 left-0 w-full z-[999] navbar-light">
+            <div class="container relative flex flex-wrap items-center justify-center relative">
+                <a class="relative w-24 block" href="index.html">
+                    <img src="assets/img/logo/logo.svg" alt="" class="img-fluid dark:hidden">
+                    <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid hidden dark:block">
+                </a>
+                <div class="flex items-center shrink-0 ml-auto lg:order-last">
+                    <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i></i>
+                        </span>
+                    </button>
+                    <div class="nav-item me-3 lg:ms-3 lg:me-0">
+                        <a href="#" class="btn bg-indigo-500 text-white hover:bg-indigo-600">Get started</a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+                    id="mainNavbarTheme">
+                    @@include('./partials/headers/default-navbar-items.html',{"page": "home"})
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!--Main content-->
+    <main>
+        <!--begin:page-hero-->
+        <section class="relative overflow-hidden">
+            <svg class="absolute text-indigo-500 left-0 top-0 h-1/2 lg:h-3/4 w-auto -ml-4 opacity-10" width="174"
+                height="81" viewBox="0 0 174 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0 67.3958C20.8281 63.4785 39.7173 54.4339 65.263 60.3691C90.8087 66.3043 123.851 86.8172 142.32 77.9737C161.209 68.9292 165.526 30.5282 172.621 -3.14752"
+                    stroke="currentColor" stroke-width=".5" stroke-dasharray="4 4" />
+            </svg>
+            <div class="container pt-12 relative z-[1]">
+                <div class="flex flex-wrap -mx-3 items-center py-12 justify-between">
+                    <div class="w-full lg:w-7/12 px-3 mb-7 mx-auto lg:mb-0">
+                        <div class="relative mb-9 z-[1]">
+                            <h2 class="text-4xl lg:text-6xl font-medium mb-6 relative">
+                                Built for <br>every
+                                <span class="text-indigo-500"
+                                    data-type-text='["Business", "Startup", "Company", "Developer"]'></span>
+                            </h2>
+                            <!--text-->
+                            <p class="text-lg text-gray-600 dark:text-gray-300">Create a stunning website for your
+                                startup.</p>
+                        </div>
+                        <div class="flex items-center flex-wrap gap-3">
+                            <div>
+                                <a href="#pricing" class="btn btn-lg text-white bg-indigo-500 hover:bg-indigo-600">
+                                    <span>Get started</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://vimeo.com/353105087" data-glightbox data-gallery="gallery08"
+                                    class="btn btn-lg bg-green-500 text-white hover:bg-green-600">
+                                    <i class="bi bi-play-fill inline-block align-middle"></i> Watch story
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-5/12 xl:w-4/12 ms-auto px-3">
+                        <div class="relative aspect-4/5 rounded-2xl overflow-hidden shadow-xl">
+                            <video muted="" loop="" webkit-playsinline="" playsinline=""
+                                    src="assets/videos/chess.mp4" autoplay="true"
+                                    class="video"></video>
+                           </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!--/end:page-hero-->
+
+        <!--begin:Partners section-->
+        <section class="relative">
+            <div class="container relative">
+                <div class="swiper-container rounded-4 py-7 py-lg-9 swiper-partners overflow-hidden">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img class="img-fluid px-2 lg:px-4 hidden dark:block"
+                                src="assets/img/partners/white/grab.svg" alt="">
+                            <img class="img-fluid px-2 lg:px-4 block dark:hidden"
+                                src="assets/img/partners/dark/grab.svg" alt="">
+                        </div>
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img class="img-fluid px-2 lg:px-4 hidden dark:block"
+                                src="assets/img/partners/white/expedia.svg" alt="">
+                            <img class="img-fluid px-2 lg:px-4 block dark:hidden"
+                                src="assets/img/partners/dark/expedia.svg" alt="">
+                        </div>
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img class="img-fluid px-2 lg:px-4 hidden dark:block"
+                                src="assets/img/partners/white/lyft.svg" alt="">
+                            <img class="img-fluid px-2 lg:px-4 block dark:hidden"
+                                src="assets/img/partners/dark/lyft.svg" alt="">
+                        </div>
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img class="img-fluid px-2 lg:px-4 hidden dark:block"
+                                src="assets/img/partners/white/microsoft.svg" alt="">
+                            <img class="img-fluid px-2 lg:px-4 block dark:hidden"
+                                src="assets/img/partners/dark/microsoft.svg" alt="">
+                        </div>
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img class="img-fluid px-2 lg:px-4 hidden dark:block"
+                                src="assets/img/partners/white/nasdaq.svg" alt="">
+                            <img class="img-fluid px-2 lg:px-4 block dark:hidden"
+                                src="assets/img/partners/dark/nasdaq.svg" alt="">
+                        </div>
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img class="img-fluid px-2 lg:px-4 hidden dark:block"
+                                src="assets/img/partners/white/national-geographic.svg" alt="">
+                            <img class="img-fluid px-2 lg:px-4 block dark:hidden"
+                                src="assets/img/partners/dark/national-geographic.svg" alt="">
+                        </div>
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img class="img-fluid px-2 lg:px-4 hidden dark:block"
+                                src="assets/img/partners/white/postmates.svg" alt="">
+                            <img class="img-fluid px-2 lg:px-4 block dark:hidden"
+                                src="assets/img/partners/dark/postmates.svg" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/end:Partners section-->
+
+        <!--begin:Feature Icon section-->
+        <section class="relative">
+
+            <div class="container py-16 lg:py-24 relative">
+                <div class="relative z-[1]">
+                    <div class="mb-4 text-center">
+                        <h2 class="text-4xl lg:text-5xl font-medium mb-0" data-text-split>
+                            Build anything
+                        </h2>
+                    </div>
+                    <div class="flex flex-wrap -mx-3">
+                        <!--Feature column-->
+                        <div class="w-full lg:w-4/12 px-3 text-center mt-7" data-animation="fadeInUp" data-delay=".1">
+                            <!--begin:feature card-->
+                            <div
+                                class="relative transition-all duration-[600ms] hover:shadow-lg hover:-translate-y-2 p-4 lg:p-6 rounded-2xl">
+                                <div class="relative">
+                                    <!--Icon-->
+                                    <div
+                                        class="mb-7 mx-auto w-20 h-20 flex items-center justify-center bg-indigo-500 text-white  relative rounded-full text-3xl leading-[1]">
+                                        <i class="icon-Light-Bulb"></i>
+                                    </div>
+                                    <!--Heading-->
+                                    <h5 class="mb-4 text-xl font-medium">Modern & Elegant</h5>
+                                    <!--text-->
+                                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                        Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                                        publishing
+                                        industries for layouts and visual mockups.
+                                    </p>
+                                </div>
+                            </div>
+                            <!--/end:feature card-->
+
+                        </div>
+
+                        <!--Feature column-->
+                        <div class="w-full lg:w-4/12 px-3 text-center mt-7" data-animation="fadeInUp" data-delay=".2">
+                            <!--begin:feature card-->
+                            <div
+                                class="relative transition-all duration-[600ms] hover:shadow-lg hover:-translate-y-2 p-4 lg:p-6 rounded-2xl">
+                                <div class="relative">
+                                    <!--Icon-->
+                                    <div
+                                        class="mb-7 mx-auto w-20 h-20 flex items-center justify-center bg-indigo-500 text-white  relative rounded-full text-3xl leading-[1]">
+                                        <i class="icon-People-onCloud"></i>
+                                    </div>
+                                    <!--Heading-->
+                                    <h5 class="mb-4 text-xl font-medium">Built for Developers</h5>
+                                    <!--text-->
+                                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                        Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                                        publishing
+                                        industries for layouts and visual mockups.
+                                    </p>
+                                </div>
+                            </div>
+                            <!--/end:feature card-->
+
+                        </div>
+
+                        <!--Feature column-->
+                        <div class="w-full lg:w-4/12 px-3 text-center mt-7" data-animation="fadeInUp" data-delay=".3">
+                            <!--begin:feature card-->
+                            <div
+                                class="relative transition-all duration-[600ms] hover:shadow-lg hover:-translate-y-2 p-4 lg:p-6 rounded-2xl">
+                                <div class="relative">
+                                    <!--Icon-->
+                                    <div
+                                        class="mb-6 mx-auto w-20 h-20 flex items-center justify-center bg-indigo-500 text-white  relative rounded-full text-3xl leading-[1]">
+                                        <i class="icon-Light-Bulb"></i>
+                                    </div>
+                                    <!--Heading-->
+                                    <h5 class="mb-4 text-xl font-medium">Friendly Support</h5>
+                                    <!--text-->
+                                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                        Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                                        publishing
+                                        industries for layouts and visual mockups.
+                                    </p>
+                                </div>
+                            </div>
+                            <!--/end:feature card-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/end:Feature Icon section-->
+
+
+        <!--begin:Feature section-->
+        <section class="relative overflow-hidden">
+            <!--:shape bg:-->
+            <div class="absolute right-10 top-10">
+                <img src="assets/img/graphics/illustration/shape3.png" class="w-16 lg:w-24 h-auto" alt="" data-animation-y>
+            </div>
+            <div class="container py-12 lg:py-16 relative z-[1]">
+                <div class="flex flex-wrap -mx-3 items-center justify-between">
+                    <div class="order-last lg:order-1 w-full lg:w-5/12 px-3">
+                        <h2 class="mb-4 text-4xl lg:text-5xl font-medium" data-text-split>Feel the difference
+                        </h2>
+                        <p class="mb-7 text-lg text-gray-600 dark:text-gray-300">
+                            Lorem ipsum dolor sit amet sed do eiusmod tempor labore et dolore
+                            magna aliqua.
+                        </p>
+                        <!--Accordions-->
+                        <div class="accordion accordion-custom mb-5" id="accordionExample">
+                            <!--:Accordion-item:-->
+                            <div class="accordion-item mb-3">
+                                <h5 role="button"
+                                    class="px-4 py-3 text-lg font-medium relative pr-16 rounded-xl bg-gray-100 dark:bg-gray-800
+                            after:font-icon after:content-['\f285'] after:absolute after:right-0 after:top-0 after:h-full after:flex after:w-12 after:items-center after:justify-center after:text-lg [&:not([aria-expanded=true])]:after:opacity-50 [&:not([aria-expanded=false])]:after:rotate-90 after:transition-all after:duration-300"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    Elegant and unique
+                                </h5>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="p-4">
+                                        <strong>This is the first item's accordion body.</strong> It is shown by
+                                        default, until the collapse plugin adds the appropriate classes that we use
+                                        to style each element.
+                                    </div>
+                                </div>
+                            </div>
+                            <!--:Accordion-item:-->
+                            <div class="accordion-item mb-3">
+                                <h5 role="button"
+                                    class="px-4 py-3 text-lg font-medium relative pr-16 rounded-xl bg-gray-100 dark:bg-gray-800
+                            after:font-icon after:content-['\f285'] after:absolute after:right-0 after:top-0 after:h-full after:flex after:w-12 after:items-center after:justify-center after:text-lg [&:not([aria-expanded=true])]:after:opacity-50 [&:not([aria-expanded=false])]:after:rotate-90 after:transition-all after:duration-300"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    Latest technologies
+                                </h5>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="p-4">
+                                        <strong>This is the second item's accordion body.</strong> It is hidden by
+                                        default, until the collapse plugin adds the appropriate classes that we use
+                                        to style each element.
+                                    </div>
+                                </div>
+                            </div>
+                            <!--:Accordion-item:-->
+                            <div class="accordion-item">
+                                <h5 role="button"
+                                    class="px-4 py-3 text-lg font-medium relative pr-16 rounded-xl bg-gray-100 dark:bg-gray-800
+                            after:font-icon after:content-['\f285'] after:absolute after:right-0 after:top-0 after:h-full after:flex after:w-12 after:items-center after:justify-center after:text-lg [&:not([aria-expanded=true])]:after:opacity-50 [&:not([aria-expanded=false])]:after:rotate-90 after:transition-all after:duration-300"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    Elegant and Unique
+                                </h5>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="p-4">
+                                        <strong>This is the third item's accordion body.</strong> It is hidden by
+                                        default, until the collapse plugin adds the appropriate classes that we use
+                                        to style each element.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-7">
+                            <a href="#!" class="btn text-white bg-indigo-500 hover:bg-indigo-600">
+                                Explore services
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="w-full lg:w-6/12 xl:w-5/12 px-3 ms-auto order-1 lg:order-last mb-9 mb-lg-0">
+                        <div class="relative" data-animation="zoomIn">
+
+                            <img src="assets/img/graphics/saas/3.png" class="max-w-full" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/end:Feature section-->
+
+        <!--begin:case studies section-->
+        <section class="relative bg-gray-50 dark:bg-gray-900">
+
+            <!--Divider-->
+            <svg class="position-absolute left-0 bottom-0 rotate-180 text-white dark:text-black"
+                preserveAspectRatio="none" width="100%" height="100" viewBox="0 0 1600 100" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1600 0V100H0L1600 0Z" fill="currentColor" />
+            </svg>
+            <div class="container relative py-12 lg:py-16 z-[1]">
+                <!--section-title-->
+                <h2 class="mb-4 text-center text-4xl lg:text-5xl font-medium" data-text-split>Case studies</h2>
+                <p class="mb-9 text-gray-600 text-center dark:text-gray-300 lg:w-6/12 mx-auto">
+                    We worked with world's top companies in a very short time There are combined alignment
+                    methods
+                </p>
+                <div class="flex flex-wrap -mx-3">
+                    <div class="w-full px-3 md:w-6/12 mb-6 md:mb-0" data-animation="fadeInUp">
+                        <!--Case study Card-->
+                        <a href="#!"
+                            class="block group rounded-2xl relative bg-white dark:bg-gray-700 overflow-hidden card-hover hover:-translate-y-2 transition-all duration-300 hover:shadow-lg">
+                            <div class="overflow-hidden relative">
+                                <img src="assets/img/960x640/3.jpg" alt="" class="max-w-full">
+                                <div class="absolute inset-0 py-4 px-3 text-white flex items-end justify-center">
+                                    <ul class="list-unstyled overlay-items">
+                                        <li
+                                            class="translate-y-5 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                                            <span class="btn btn-lg bg-white text-gray-700">View case study</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <h6 class=" text-gray-400 text-sm font-medium mb-2">Print design . Branding</h6>
+                                <h5 class="mb-0 text-xl font-medium">Duis commonly aute irure dolor in reprehenderit in
+                                    voluptate velit
+
+                                </h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w-full px-3 md:w-6/12" data-animation="fadeInUp" data-delay=".2">
+                        <!--Case study Card-->
+                        <a href="#!"
+                            class="block group rounded-2xl relative bg-indigo-500 text-white overflow-hidden card-hover hover:-translate-y-2 transition-all duration-300 hover:shadow-lg">
+                            <div class="overflow-hidden relative">
+                                <img src="assets/img/960x640/2.jpg" alt="" class="max-w-full">
+                                <div class="absolute inset-0 py-4 px-3 text-white flex items-end justify-center">
+                                    <ul class="list-unstyled overlay-items">
+                                        <li
+                                            class="translate-y-5 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                                            <span class="btn btn-lg bg-white text-gray-700">View case study</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <h6 class=" text-white/75 text-sm font-medium mb-2">Marketing</h6>
+                                <h5 class="mb-0 text-xl font-medium">Duis commonly aute irure dolor in reprehenderit in
+                                    voluptate velit
+                                </h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="mx-auto text-center pt-9">
+                    <a href="#!" class="link-underline capitalize font-medium">
+                        More case studies
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!--/end:case studies section-->
+
+        <!--begin pricing section-->
+        <section id="pricing" class="relative">
+            <div class="container relative py-12 lg:py-16">
+                <div class="flex flex-wrap mx-3 mb-3 items-end">
+                    <div class="w-full px-3 md:w-8/12 mx-auto text-center relative">
+                        <!--Section title-->
+                        <h2 class="text-4xl lg:text-5xl font-medium mb-5" data-text-split>Simple pricing for
+                            you</h2>
+                        <p class="mb-7 text-gray-400">Billing Annually</p>
+
+                        <!-- Plans--Switch -->
+                        <div class="flex items-center justify-center">
+                            <div class="price-monthly relative">
+                                 <label for="planSwitch" class="cursor-pointer"> Monthly </label>
+                                
+                            </div>
+                            <!-- Switch -->
+                            <div class="input-switch flex items-center ms-3 mr-2">
+                                <input class="input-switch-input me-0" type="checkbox" id="planSwitch"
+                                    data-as-toggle="price" data-as-target=".price" role="switch">
+                                <label class="input-switch-label" for="planSwitch"></label>
+                            </div>
+                            <div class="price-annualy">
+                               <label for="planSwitch" class="cursor-pointer">Annually <em
+                                        class="text-xs align-bottom font-serif italic text-green-500">save
+                                        30%</em></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.row-->
+                <div class="relative">
+                    <div class="flex flex-wrap -mx-3 items-center relative z-[1]">
+
+                        <!--Plan column-->
+                        <div class="w-full px-3 md:w-4/12 pt-6" data-animation="fadeInUp" data-delay=".1">
+                            <div
+                                class="hover:shadow-xl border border-gray-200 dark:border-gray-800 transition-all duration-300 py-7 px-4 rounded-xl bg-white dark:bg-gray-900">
+                                <div class="relative overflow-hidden">
+                                    <!--Plan title-->
+                                    <h6>Basic</h6>
+                                    <div class="flex items-end mb-4">
+                                        <sup class="inline-block">$</sup>
+                                        <h2 class="price text-5xl lg:text-6xl font-medium" data-as-annual="6"
+                                            data-as-monthly="9">6</h2>
+                                    </div>
+                                    <span>Billed Monthly</span>
+                                </div>
+                                <!--/.price-card-header-->
+                                <ul class="list-unstyled pt-4 mb-4 flex-grow">
+                                    <li class="py-3"><i
+                                            class="bi bi-check-circle mr-2 text-lg lh-[1] align-middle text-gray-400"></i>Free
+                                        domain</li>
+                                    <li class="py-3"><i
+                                            class="bi bi-check-circle mr-2 text-lg lh-[1] align-middle text-gray-400"></i>1
+                                        Email account</li>
+                                    <li class="py-3"><i
+                                            class="bi bi-check-circle mr-2 text-lg lh-[1] align-middle text-gray-400"></i>15
+                                        GB storage</li>
+                                    <li class="py-3"><i
+                                            class="bi bi-check-circle mr-2 text-lg lh-[1] align-middle text-gray-400"></i>50K
+                                        files</li>
+                                    <li class="py-3"><i
+                                            class="bi bi-check-circle mr-2 text-lg lh-[1] align-middle text-gray-400"></i>Basic
+                                        support</li>
+                                </ul>
+                                <div class="flex flex-col">
+                                    <a href="#!"
+                                        class="btn btn-lg bg-indigo-500 text-white hover:bg-indigo-600 text-center">
+                                        <span>Get Basic plan</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Plan column-->
+                        <div class="w-full px-3 md:w-4/12 pt-6" data-animation="fadeInUp" data-delay=".2">
+                            <div
+                                class="hover:shadow-xl border border-gray-200 dark:border-gray-800 relative overflow-hidden transition-all duration-300 py-7 px-4 rounded-xl bg-white dark:bg-gray-900">
+                                <span
+                                    class="p-3 w-48 h-4 flex items-center justify-center bg-indigo-500 text-white absolute end-0 top-0 rotate-45 mt-9 -mr-12 text-center">
+                                    Best Value</span>
+                                <div class="relative overflow-hidden">
+                                    <!--Plan title-->
+                                    <h6>Team</h6>
+                                    <div class="flex items-end mb-4">
+                                        <sup class="inline-block">$</sup>
+                                        <h2 class="price text-5xl lg:text-6xl font-medium" data-as-annual="16"
+                                            data-as-monthly="29">16
+                                        </h2>
+                                    </div>
+                                    <span>Billed Monthly</span>
+                                </div>
+                                <!--/.price-card-header-->
+                                <ul class="list-unstyled pt-4 mb-4 flex-grow">
+                                    <li class="py-3"><i
+                                            class="bi bi-check-circle mr-2 text-lg lh-[1] align-middle text-gray-400"></i>Free
+                                        domain</li>
+                                    <li class="py-3"><i
+                                            class="bi bi-check-circle mr-2 text-lg lh-[1] align-middle text-gray-400"></i>2
+                                        email accounts</li>
+                                    <li class="py-3"><i
+                                            class="bi bi-check-circle mr-2 text-lg lh-[1] align-middle text-gray-400"></i>25
+                                        GB storage</li>
+                                    <li class="py-3"><i
+                                            class="bi bi-check-circle mr-2 text-lg lh-[1] align-middle text-gray-400"></i>100K
+                                        files</li>
+                                    <li class="py-3"><i
+                                            class="bi bi-check-circle mr-2 text-lg lh-[1] align-middle text-gray-400"></i>Premium
+                                        support</li>
+                                </ul>
+                                <div class="flex flex-col">
+                                    <a href="#!"
+                                        class="btn btn-lg bg-green-500 text-white hover:bg-green-600 text-center"><span>Get
+                                            team
+                                            plan</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Plan column-->
+                        <div class="w-full px-3 md:w-4/12 pt-6" data-animation="fadeInUp" data-delay=".3">
+                            <div
+                                class="hover:shadow-xl border border-gray-200 dark:border-gray-800 transition-all duration-300 py-7 px-4 rounded-xl bg-white dark:bg-gray-900">
+                                <div class="relative overflow-hidden">
+                                    <!--Plan title-->
+                                    <h6>Enterprise</h6>
+                                    <div class="flex items-end mb-4">
+                                        <sup class="inline-block">$</sup>
+                                        <h2 class="price text-5xl lg:text-6xl font-medium" data-as-annual="49"
+                                            data-as-monthly="79">49
+                                        </h2>
+                                    </div>
+                                    <span>Billed Monthly</span>
+                                </div>
+                                <!--/.price-card-header-->
+                                <ul class="list-unstyled pt-4 mb-4 flex-grow">
+                                    <li class="py-3"><i
+                                            class="bi bi-check-circle mr-2 text-lg lh-[1] align-middle text-gray-400"></i>Free
+                                        domain</li>
+                                    <li class="py-3"><i
+                                            class="bi bi-check-circle mr-2 text-lg lh-[1] align-middle text-gray-400"></i>5
+                                        Sub domains</li>
+                                    <li class="py-3"><i
+                                            class="bi bi-check-circle mr-2 text-lg lh-[1] align-middle text-gray-400"></i>Unlimited
+                                        storage</li>
+                                    <li class="py-3"><i
+                                            class="bi bi-check-circle mr-2 text-lg lh-[1] align-middle text-gray-400"></i>Unlimited
+                                        files</li>
+                                    <li class="py-3"><i
+                                            class="bi bi-check-circle mr-2 text-lg lh-[1] align-middle text-gray-400"></i>Premium
+                                        support</li>
+                                </ul>
+                                <div class="flex flex-col">
+                                    <a href="#!"
+                                        class="btn btn-lg bg-blue-500 text-white hover:bg-blue-600 text-center"><span>Get
+                                            Enterprise
+                                            Plan</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.pricing row-->
+                </div>
+                <!--/.Plans-container-->
+            </div>
+            <!--/.content-->
+        </section>
+        <!--/end:pricing section-->
+
+        <!--begin:Faqs section-->
+        <section class="relative">
+            <!--Divider-->
+            <svg class="absolute left-0 bottom-0 flip-x text-white dark:text-black" preserveAspectRatio="none"
+                width="100%" height="100" viewBox="0 0 1600 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1600 0V100H0L1600 0Z" fill="currentColor" />
+            </svg>
+            <div class="container py-12 lg:py-16 relative">
+                <div class="flex flex-wrap -mx-3 pb-12 justify-around">
+                    <div class="w-full px-3 md:w-6/12 lg:w-5/12 mb-9">
+                        <!--FAQ item card-->
+                        <div class="flex items-stretch" data-animation="fadeInUp" data-delay=".1">
+                            <div class="me-5">
+                                <span
+                                    class="bg-gray-100 dark:bg-gray-600 text-gray-400 dark:text-white flex items-center  justify-center w-12 h-12 rounded-full">
+                                    <i class="bi bi-question-circle"></i>
+                                </span>
+                                <!--/.Icon-->
+                            </div>
+                            <div>
+                                <h5 class="mb-2 text-xl font-medium">What do I get with this kit?</h5>
+                                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                    Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Q-col-->
+                    <div class="w-full px-3 md:w-6/12 lg:w-5/12 mb-9">
+                        <!--FAQ item card-->
+                        <div class="flex items-stretch" data-animation="fadeInUp" data-delay=".2">
+                            <div class="me-5">
+                                <span
+                                    class="bg-gray-100 dark:bg-gray-600 text-gray-400 dark:text-white flex items-center  justify-center w-12 h-12 rounded-full">
+                                    <i class="bi bi-question-circle"></i>
+                                </span>
+                                <!--/.Icon-->
+                            </div>
+
+                            <div>
+                                <h5 class="mb-2 text-xl font-medium">How do i get the new updates?</h5>
+                                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                    Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Q-col-->
+                    <div class="w-full px-3 md:w-6/12 lg:w-5/12 mb-9">
+                        <!--FAQ item card-->
+                        <div class="flex items-stretch" data-animation="fadeInUp" data-delay=".3">
+                            <div class="me-5">
+                                <span
+                                    class="bg-gray-100 dark:bg-gray-600 text-gray-400 dark:text-white flex items-center  justify-center w-12 h-12 rounded-full">
+                                    <i class="bi bi-question-circle"></i>
+                                </span>
+                                <!--/.Icon-->
+                            </div>
+
+                            <div>
+                                <h5 class="mb-2 text-xl font-medium">Lorem ipsum dolor sit amet?</h5>
+                                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                    Lorem ipsum dolor sit amet adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Q-col-->
+                    <div class="w-full px-3 md:w-6/12 lg:w-5/12 mb-9">
+                        <!--FAQ item card-->
+                        <div class="flex items-stretch" data-animation="fadeInUp" data-delay=".4">
+                            <div class="me-5">
+                                <span
+                                    class="bg-gray-100 dark:bg-gray-600 text-gray-400 dark:text-white flex items-center  justify-center w-12 h-12 rounded-full">
+                                    <i class="bi bi-question-circle"></i>
+                                </span>
+                                <!--/.Icon-->
+                            </div>
+
+                            <div>
+                                <h5 class="mb-2 text-xl font-medium">What's the refund policy?</h5>
+                                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                    Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Q-col-->
+                    <div class="w-full px-3 md:w-6/12 lg:w-5/12 mb-9 md:mb-0">
+                        <!--FAQ item card-->
+                        <div class="flex items-stretch" data-animation="fadeInUp" data-delay=".5">
+                            <div class="me-5">
+                                <span
+                                    class="bg-gray-100 dark:bg-gray-600 text-gray-400 dark:text-white flex items-center  justify-center w-12 h-12 rounded-full">
+                                    <i class="bi bi-question-circle"></i>
+                                </span>
+                                <!--/.Icon-->
+                            </div>
+
+                            <div>
+                                <h5 class="mb-2 text-xl font-medium">Does Assan use TailwindCss?</h5>
+                                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                    Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Q-col-->
+                    <div class="w-full px-3 md:w-6/12 lg:w-5/12">
+                        <!--FAQ item card-->
+                        <div class="flex items-stretch" data-animation="fadeInUp" data-delay=".6">
+                            <div class="me-5">
+                                <span
+                                    class="bg-gray-100 dark:bg-gray-600 text-gray-400 dark:text-white flex items-center  justify-center w-12 h-12 rounded-full">
+                                    <i class="bi bi-question-circle"></i>
+                                </span>
+                                <!--/.Icon-->
+                            </div>
+                            <div>
+                                <h5 class="mb-2 text-xl font-medium">Why Assan 4.0?</h5>
+                                <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                    Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore et dolore magna aliqua. Viverra nam libero justo laoreet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Q-col-->
+                </div>
+            </div>
+        </section>
+        <!--/end:Faqs section-->
+
+        <!--begin:Testimonial section-->
+        <section class="relative overflow-hidden border-b border-gray-200 dark:border-gray-800">
+            <!--:shape bg:-->
+            <div class="absolute right-0 top-0 mt-16 mr-16">
+                <img src="assets/img/graphics/illustration/shape5.png" class="w-16 lg:w-24 h-auto" alt="" data-animation-y>
+            </div>
+            <div class="container pt-12 lg:pt-16 relative">
+                <div class="flex flex-wrap -mx-3 justify-between items-end">
+                    <div class="lg:w-4/12 px-3 w-full mx-auto order-last">
+                        <div class="relative pe-5">
+                            <img src="assets/img/backgrounds/trans3.png" alt="" class="max-w-full">
+                        </div>
+                    </div>
+                    <div class="lg:w-6/12 lg:ml-auto w-full px-3 order-1 pb-9">
+                        <img src="assets/img/partners/zillow.svg" class="w-24 h-auto h-auto mb-7" alt="">
+                        <blockquote class="relative">
+
+                            <div class="relative">
+                                <p class="text-xl lg:text-2xl leading-normal mb-5">
+                                    Loved working with the beautiful theme. Everything clean
+                                    and professional,
+                                    also very helpful throughout the customisation. Looking
+                                    forward to buy more
+                                    license of Assan again in the future.
+                                </p>
+                                <div class="mb-0 mb-7">
+                                    <h5 class="fs-6 inline-block me-1 mb-0">Emily Doe</h5> <small
+                                        class="text-gray-400">Co-founder</small>
+                                </div>
+
+                            </div>
+                        </blockquote>
+
+                        <!--Countup-->
+                        <div class="flex flex-wrap -mx-3 pt-lg-5">
+                            <div class="w-1/2 px-3">
+                                <h3 class="mb-1 text-4xl lg:text-5xl font-medium" data-countup="28" data-suffix="%"></h3>
+                                <span class="text-gray-400 text-sm">Sales growth</span>
+                            </div>
+                            <div class="w-1/2 px-3">
+                                <h3 class="mb-1 text-4xl lg:text-5xl font-medium" data-countup="240" data-suffix="%">0</h3>
+                                <span class="text-gray-400 text-sm">Increase daily visitors</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/end:Testimonial section-->
+
+        <!--begin:call to action section-->
+        <section class="relative overflow-hidden">
+            <!--:shape bg:-->
+            <div class="absolute left-10 top-10">
+                <img src="assets/img/graphics/illustration/shape6.png" class="w-20 h-auto" alt="" data-animation-y>
+            </div>
+            <div class="container py-16 lg:py-24 relative">
+
+                <div class="lg:w-7/12 text-center mx-auto relative z-[1]">
+                    <h2 class="mb-6 text-4xl lg:text-5xl font-medium" data-text-split>
+                        Your business deserved a good looking website.
+                    </h2>
+                    <p class="mb-9 lg:w-9/12 text-lg text-gray-600 dark:text-gray-300 mx-auto">
+                        There are combined alignment methods – when several types of alignment together are used
+                        in one composition.
+                    </p>
+                    <div>
+                        <a href="#!" class="btn btn-lg bg-indigo-500 hover:bg-indigo-600 text-white">
+                            Start building
+                        </a>
+                    </div>
+                </div>
+                <!--End Col-->
+            </div>
+        </section>
+        <!--/end:call to action section-->
+    </main>
+
+    @@include('./partials/footers/footer-6.html')
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+
+    <!--:Gsap plugins - required before theme js for animations:-->
+    <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+    <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+    <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+    <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+    <!-- Theme script -->
+    <script src="assets/js/theme.bundle.min.js"></script>
+
+    <!--Swiper slider-->
+    <script src="assets/vendor/node_modules/js/swiper-bundle.min.js"></script>
+    <script>
+        //swiper -partners
+        var swiperPartners = new Swiper(".swiper-partners", {
+            slidesPerView: 3,
+            loop: true,
+            spaceBetween: 16,
+            autoplay: true,
+            breakpoints: {
+                768: {
+                    slidesPerView: 4
+                },
+                1024: {
+                    slidesPerView: 6
+                }
+            },
+            pagination: {
+                el: ".swiper-partners-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper-partners-button-next",
+                prevEl: ".swiper-partners-button-prev"
+            }
+        });
+
+    </script>
+</body>
+
+</html>

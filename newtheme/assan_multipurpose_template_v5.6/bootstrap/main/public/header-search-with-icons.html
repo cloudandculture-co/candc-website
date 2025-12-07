@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+        <!--Icons-->
+        <link rel="stylesheet" href="assets/fonts/bootstrap-icons/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="assets/fonts/bootstrap-icons/bootstrap-icons.min.css">
+        <!--Iconsmind Icons-->
+        <link rel="stylesheet" href="assets/fonts/iconsmind/iconsmind.css">
+        <!--AOS Animations-->
+        <link rel="stylesheet" href="assets/vendor/node_modules/css/aos.css">
+
+
+        <!--Google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+        <!--Prism css for code snippets-->
+        <link rel="stylesheet" href="assets/vendor/node_modules/css/prism-tomorrow.css">
+        <!-- Main CSS -->
+        <link href="assets/css/theme.min.css" rel="stylesheet">
+
+        <title>Assan 4</title>
+        <style type="text/css">
+            .backdrop {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 1;
+                display: none;
+            }
+
+        </style>
+    </head>
+
+    <body>
+         <!--Preloader Spinner-->
+         <div class="spinner-loader bg-primary text-white">
+            <div class="spinner-border" role="status">
+            </div>
+        </div>
+        <!--::Begin Header-->
+        <header class="z-fixed header-transparent header-absolute-top header-sticky pt-lg-3">
+            <nav class="navbar navbar-expand-lg navbar-light navbar-search-w-icons">
+                <div class="container position-relative">
+                    <!--begin:logo-->
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-light">
+                        <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-dark">
+                    </a>
+                    <!--end:logo-->
+
+                    <div class="d-flex align-items-center navbar-no-collapse-items order-lg-last">
+                        <button class="navbar-toggler order-last" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                                <i></i>
+                            </span>
+                        </button>
+                        <div class="nav-item d-lg-none me-3 me-lg-0">
+                            <a href="#searchCollapse" data-bs-target="#searchCollapse" data-bs-toggle="collapse"
+                                class="nav-link search-link lh-1">
+                                <i class="bi bi-search fs-4 lh-1"></i>
+                            </a>
+                            <!--Search-bar-2-collapse-->
+                        </div>
+                    </div>
+                    <!--Search collapse (visible on desktop laptop)-->
+                    <div class="collapse collapse-search ms-lg-auto me-lg-5 d-lg-block" id="searchCollapse">
+                        <form>
+                            <div class="position-relative z-2 mt-3 mt-lg-0">
+                                <span
+                                    class="position-absolute start-0 top-50 translate-middle-y ms-3 opacity-50 pe-none">
+                                    <i class="bi bi-search"></i>
+                                </span>
+                                <input id="searchNavbarInput" type="text" placeholder="Type & hit enter..."
+                                    class="form-control bg-body-subtle shadow-sm ps-6 rounded-4"
+                                    data-bs-display="static" data-bs-toggle="dropdown">
+                                <!--With Submit button-->
+                                <!-- <button class="btn position-absolute end-0 top-0 flex-center p-0 width-4x h-100 rounded-pill btn-white">
+                                    <i class="bi bi-search"></i>
+                                </button> 
+                                <input type="text" placeholder="Search here..." class="form-control border-0 shadow-none ps-4 pe-6 rounded-pill">
+                           -->
+                                <!--:Search Dropdown:-->
+                                <div class="dropdown-menu dropdown-menu-input border-top-0 border rounded-top-0 p-3">
+                                    <h6 class="dropdown-header ps-0 mb-2">Popular searches</h6>
+                                    <div class="d-flex flex-wrap gap-2 pb-2 align-items-center">
+                                        <span><a href="#!"
+                                                class="d-block bg-body-secondary px-3 py-1 rounded small">Jeans</a></span>
+                                        <span><a href="#!"
+                                                class="d-block bg-body-secondary px-3 py-1 rounded small">Shoes</a></span>
+                                        <span><a href="#!"
+                                                class="d-block bg-body-secondary px-3 py-1 rounded small">Watches</a></span>
+                                        <span><a href="#!"
+                                                class="d-block bg-body-secondary px-3 py-1 rounded small">Men's</a></span>
+                                        <span><a href="#!"
+                                                class="d-block bg-body-secondary px-3 py-1 rounded small">Sneakers</a></span>
+                                        <span><a href="#!"
+                                                class="d-block bg-body-secondary px-3 py-1 rounded small">Casual</a></span>
+                                        <span><a href="#!"
+                                                class="d-block bg-body-secondary px-3 py-1 rounded small">Shirts</a></span>
+                                        <span><a href="#!"
+                                                class="d-block bg-body-secondary px-3 py-1 rounded small">T-shirts</a></span>
+                                        <span><a href="#!"
+                                                class="d-block bg-body-secondary px-3 py-1 rounded small">Lowers</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="collapse navbar-collapse" id="mainNavbarTheme">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="bi bi-house fs-5"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                    <i class="bi bi-globe fs-5"></i>
+                                </a>
+                                <!--Lang dropdown-->
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="#!" class="active dropdown-item">
+                                        <img src="assets/img/country/us.svg" class="me-2" width="20" alt="">
+                                        <small>English</small>
+                                    </a>
+                                    <a href="#!" class="dropdown-item">
+                                        <img src="assets/img/country/pt.svg" class="me-2" width="20" alt="">
+                                        <small>Portuguese</small>
+                                    </a>
+                                    <a href="#!" class="dropdown-item">
+                                        <img src="assets/img/country/de.svg" class="me-2" width="20" alt="">
+                                        <small>German</small>
+                                    </a>
+                                    <a href="#!" class="dropdown-item">
+                                        <img src="assets/img/country/fr.svg" class="me-2" width="20" alt="">
+                                        <small>French</small>
+                                    </a>
+                                    <a href="#!" class="dropdown-item">
+                                        <img src="assets/img/country/dk.svg" class="me-2" width="20" alt="">
+                                        <small>Danish</small>
+                                    </a>
+                                    <a href="#!" class="dropdown-item">
+                                        <img src="assets/img/country/es.svg" class="me-2" width="20" alt="">
+                                        <small>Española</small>
+                                    </a>
+                                    <a href="#!" class="dropdown-item">
+                                        <img src="assets/img/country/nl.svg" class="me-2" width="20" alt="">
+                                        <small>Dutch</small>
+                                    </a>
+                                    <a href="#!" class="dropdown-item">
+                                        <img src="assets/img/country/jp.svg" class="me-2" width="20" alt="">
+                                        <small>japanese</small>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                    <i class="bi bi-person fs-5"></i>
+                                </a>
+                                <!--Account dropdown-->
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <div class="dropdown-header">Account</div>
+                                    <a href="#!" class="dropdown-item">Login</a>
+                                    <a href="#!" class="dropdown-item">Create Account</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--::/end Header-->
+        <!--Main content-->
+        <main class="main-content" id="main-content">
+            <section class="position-relative bg-secondary-subtle">
+                <div class="container position-relative py-9 py-lg-15">
+                    <div class="row pt-9">
+                        <div class="col-xl-9">
+                            <h1 class="display-4 mb-3">Header Search with icons</h1>
+                            <p class="lead mb-0">Build stunning website faster than ever</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.content-->
+            </section>
+            <!--/section-->
+            <section class="border-bottom">
+                <div class="container pt-9 pt-lg-11">
+
+                    <!--//////////////////SNIPPETS:BEGIN////////////////-->
+                    <nav class="nav-tabs nav">
+                        <a href="#tabMain" data-bs-toggle="tab" class="nav-link active">HTML</a>
+                        <a href="#tabCss" data-bs-toggle="tab" class="nav-link">Css</a>
+                        <a href="#tabJs" data-bs-toggle="tab" class="nav-link">Js</a>
+                    </nav>
+                    <div class="tab-content">
+                        <!--Element Main code-->
+                        <div class="tab-pane fade show active" id="tabMain">
+                            <div class="position-relative" style="max-height:75vh; overflow-y:auto">
+                                <button
+                                    class="btn btn-sm position-absolute end-0 top-0 me-3 mt-3 z-1 btn-primary copy-link"
+                                    data-clipboard-target="#copyHTML1" data-clipboard-action="copy"
+                                    id="copyHTML1-1">Copy code</button>
+                                <pre id="copyHTML1" class="language-markup bg-secondary text-white-50 mt-0"
+                                    data-lang="html">
+<code>
+    &lt;!--::Begin Header-->
+    &lt;header class="z-fixed header-transparent header-absolute-top header-sticky pt-lg-3">
+        &lt;nav class="navbar navbar-expand-lg navbar-light navbar-search-w-icons">
+            &lt;div class="container position-relative">
+                &lt;!--begin:logo-->
+                &lt;a class="navbar-brand" href="index.html">
+                    &lt;img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-light">
+                    &lt;img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-dark">
+                &lt;/a>
+                &lt;!--end:logo-->
+
+                &lt;div class="d-flex align-items-center navbar-no-collapse-items order-lg-last">
+                    &lt;button class="navbar-toggler order-last" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        &lt;span class="navbar-toggler-icon">
+                            &lt;i>&lt;/i>
+                        &lt;/span>
+                    &lt;/button>
+                    &lt;div class="nav-item d-lg-none me-3 me-lg-0">
+                        &lt;a href="#searchCollapse" data-bs-target="#searchCollapse" data-bs-toggle="collapse"
+                            class="nav-link search-link lh-1">
+                            &lt;i class="bi bi-search fs-4 lh-1">&lt;/i>
+                        &lt;/a>
+                        &lt;!--Search-bar-2-collapse-->
+                    &lt;/div>
+                &lt;/div>
+                &lt;!--Search collapse (visible on desktop laptop)-->
+                &lt;div class="collapse collapse-search ms-lg-auto me-lg-5 d-lg-block" id="searchCollapse">
+                    &lt;form>
+                        &lt;div class="position-relative mt-3 mt-lg-0">
+                            &lt;span
+                                class="position-absolute start-0 top-50 translate-middle-y ms-3 opacity-50 pe-none">
+                                &lt;i class="bi bi-search">&lt;/i>
+                            &lt;/span>
+                            &lt;input type="text" placeholder="Type & hit enter..."
+                                class="form-control bg-body-subtle border shadow-sm ps-6 rounded-4"
+                                data-bs-display="static" data-bs-toggle="dropdown">
+                            &lt;!--With Submit button-->
+                            &lt;!-- &lt;button class="btn position-absolute end-0 top-0 flex-center p-0 width-4x h-100 rounded-pill btn-white">
+                                &lt;i class="bi bi-search">&lt;/i>
+                            &lt;/button> 
+                            &lt;input type="text" placeholder="Search here..." class="form-control border-0 shadow-none ps-4 pe-6 rounded-pill">
+                       -->
+                            &lt;!--:Search Dropdown:-->
+                            &lt;div class="dropdown-menu dropdown-menu-input border-top-0 border rounded-top-0 p-3">
+                                &lt;h6 class="dropdown-header ps-0 mb-2">Popular searches&lt;/h6>
+                                &lt;div class="d-flex flex-wrap gap-2 pb-2 align-items-center">
+                                    &lt;span>&lt;a href="#!"
+                                            class="d-block bg-body-secondary px-3 py-1 rounded small">Jeans&lt;/a>&lt;/span>
+                                    &lt;span>&lt;a href="#!"
+                                            class="d-block bg-body-secondary px-3 py-1 rounded small">Shoes&lt;/a>&lt;/span>
+                                    &lt;span>&lt;a href="#!"
+                                            class="d-block bg-body-secondary px-3 py-1 rounded small">Watches&lt;/a>&lt;/span>
+                                    &lt;span>&lt;a href="#!"
+                                            class="d-block bg-body-secondary px-3 py-1 rounded small">Men's&lt;/a>&lt;/span>
+                                    &lt;span>&lt;a href="#!"
+                                            class="d-block bg-body-secondary px-3 py-1 rounded small">Sneakers&lt;/a>&lt;/span>
+                                    &lt;span>&lt;a href="#!"
+                                            class="d-block bg-body-secondary px-3 py-1 rounded small">Casual&lt;/a>&lt;/span>
+                                    &lt;span>&lt;a href="#!"
+                                            class="d-block bg-body-secondary px-3 py-1 rounded small">Shirts&lt;/a>&lt;/span>
+                                    &lt;span>&lt;a href="#!"
+                                            class="d-block bg-body-secondary px-3 py-1 rounded small">T-shirts&lt;/a>&lt;/span>
+                                    &lt;span>&lt;a href="#!"
+                                            class="d-block bg-body-secondary px-3 py-1 rounded small">Lowers&lt;/a>&lt;/span>
+                                &lt;/div>
+                            &lt;/div>
+                        &lt;/div>
+                    &lt;/form>
+                &lt;/div>
+                &lt;div class="collapse navbar-collapse" id="mainNavbarTheme">
+                    &lt;ul class="navbar-nav ms-auto">
+                        &lt;li class="nav-item">
+                            &lt;a href="#" class="nav-link">
+                                &lt;i class="bi bi-home fs-5">&lt;/i>
+                            &lt;/a>
+                        &lt;/li>
+                        &lt;li class="nav-item dropdown">
+                            &lt;a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                &lt;i class="bi bi-globe fs-5">&lt;/i>
+                            &lt;/a>
+                            &lt;!--Lang dropdown-->
+                            &lt;div class="dropdown-menu dropdown-menu-end">
+                                &lt;a href="#!" class="active dropdown-item">
+                                    &lt;img src="assets/img/country/us.svg" class="me-2" width="20" alt="">
+                                    &lt;small>English&lt;/small>
+                                &lt;/a>
+                                &lt;a href="#!" class="dropdown-item">
+                                    &lt;img src="assets/img/country/pt.svg" class="me-2" width="20" alt="">
+                                    &lt;small>Portuguese&lt;/small>
+                                &lt;/a>
+                                &lt;a href="#!" class="dropdown-item">
+                                    &lt;img src="assets/img/country/de.svg" class="me-2" width="20" alt="">
+                                    &lt;small>German&lt;/small>
+                                &lt;/a>
+                                &lt;a href="#!" class="dropdown-item">
+                                    &lt;img src="assets/img/country/fr.svg" class="me-2" width="20" alt="">
+                                    &lt;small>French&lt;/small>
+                                &lt;/a>
+                                &lt;a href="#!" class="dropdown-item">
+                                    &lt;img src="assets/img/country/dk.svg" class="me-2" width="20" alt="">
+                                    &lt;small>Danish&lt;/small>
+                                &lt;/a>
+                                &lt;a href="#!" class="dropdown-item">
+                                    &lt;img src="assets/img/country/es.svg" class="me-2" width="20" alt="">
+                                    &lt;small>Española&lt;/small>
+                                &lt;/a>
+                                &lt;a href="#!" class="dropdown-item">
+                                    &lt;img src="assets/img/country/nl.svg" class="me-2" width="20" alt="">
+                                    &lt;small>Dutch&lt;/small>
+                                &lt;/a>
+                                &lt;a href="#!" class="dropdown-item">
+                                    &lt;img src="assets/img/country/jp.svg" class="me-2" width="20" alt="">
+                                    &lt;small>japanese&lt;/small>
+                                &lt;/a>
+                            &lt;/div>
+                        &lt;/li>
+                        &lt;li class="nav-item dropdown">
+                            &lt;a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                &lt;i class="bi bi-person fs-5">&lt;/i>
+                            &lt;/a>
+                            &lt;!--Account dropdown-->
+                            &lt;div class="dropdown-menu dropdown-menu-end">
+                                &lt;div class="dropdown-header">Account&lt;/div>
+                                &lt;a href="#!" class="dropdown-item">Login&lt;/a>
+                                &lt;a href="#!" class="dropdown-item">Create Account&lt;/a>
+                            &lt;/div>
+                        &lt;/li>
+                    &lt;/ul>
+                &lt;/div>
+            &lt;/div>
+        &lt;/nav>
+    &lt;/header>
+    &lt;!--::/end Header-->
+</code>
+</pre>
+                            </div>
+                        </div>
+                        <!--Element Css-->
+                        <div class="tab-pane fade" id="tabCss">
+                            <div class="position-relative">
+                                <button
+                                    class="btn btn-sm position-absolute end-0 top-0 me-3 mt-3 z-1 btn-primary copy-link"
+                                    data-clipboard-target="#copyCss1" data-clipboard-action="copy" id="copyCss1-2">Copy
+                                    code</button>
+                                <pre id="copyCss1" class="language-markup bg-secondary text-white-50 mt-0"
+                                    data-lang="html">
+                <code>
+  &lt;!-- Bootstrap + Vendor + Theme -->
+  &lt;link href="assets/css/theme.min.css" rel="stylesheet">
+</code>
+</pre>
+                            </div>
+                        </div>
+
+                        <!--Element JS-->
+                        <div class="tab-pane fade" id="tabJs">
+                            <div class="position-relative">
+                                <button
+                                    class="btn btn-sm position-absolute end-0 top-0 me-3 mt-3 z-1 btn-primary copy-link"
+                                    data-clipboard-target="#copyJs1" data-clipboard-action="copy" id="copyJs1-3">Copy
+                                    code</button>
+                                <pre id="copyJs1" class="language-markup bg-secondary text-white-50 mt-0"
+                                    data-lang="html">
+                <code>
+  &lt;!-- Bootstrap + Vendor + Theme -->
+  &lt;script src="assets/css/theme.bundle.js">&lt;/script>
+</code>
+</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//////////////////SNIPPETS:END////////////////-->
+                </div>
+                <div class="container py-9 py-lg-11">
+                    <div class="px-4 rounded-3 shadow-lg py-6 px-lg-5 py-lg-7 bg-gradient bg-secondary text-white position-relative overflow-hidden"
+                        data-aos="fade-up" data-aos-duration="400">
+                        <svg class="position-absolute end-0 bottom-0 mb-4 text-success" width="200" height="400"
+                            preserveAspectRatio="none" viewBox="0 0 150 300" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M150 300C130.302 300 110.796 296.12 92.5975 288.582C74.3986 281.044 57.8628 269.995 43.934 256.066C30.0052 242.137 18.9563 225.601 11.4181 207.403C3.87986 189.204 -6.2614e-07 169.698 0 150C6.2614e-07 130.302 3.87987 110.796 11.4181 92.5975C18.9563 74.3987 30.0052 57.8628 43.934 43.934C57.8628 30.0052 74.3987 18.9563 92.5975 11.4181C110.796 3.87986 130.302 3.51961e-06 150 5.00679e-06L150 37.5C135.226 37.5 120.597 40.4099 106.948 46.0636C93.299 51.7172 80.8971 60.0039 70.4505 70.4505C60.0039 80.8971 51.7172 93.299 46.0636 106.948C40.4099 120.597 37.5 135.226 37.5 150C37.5 164.774 40.4099 179.403 46.0636 193.052C51.7172 206.701 60.0039 219.103 70.4505 229.55C80.8971 239.996 93.299 248.283 106.948 253.936C120.597 259.59 135.226 262.5 150 262.5V300Z"
+                                fill="currentColor"></path>
+                        </svg>
+
+                        <div class="row align-items-end position-relative">
+                            <div class="col-lg-6 col-xl-7">
+                                <h5 class="text-white-50 mb-4">Let's start building</h5>
+                                <h2 class="mb-5 mb-md-0 display-5">Stunning websites ease</h2>
+                            </div>
+                            <div class="col-lg-6 col-xl-5 text-lg-end">
+                                <a href="#!" class="btn btn-primary btn-lg me-2 mb-2 mb-lg-0">Contact sales</a>
+                                <a href="#!" class="btn btn-gray-200 btn-lg">Purchase Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--begin:Footer-->
+        <footer id="footer" class="bg-body footer position-relative">
+            <div class="container pt-9 pt-lg-11 pb-5 position-relative z-1">
+                <div class="row">
+                    <!--Footer col-->
+                    <div class="col-lg-5 col-md-7 col-xl-4 mb-7">
+                        <div class="d-flex flex-column h-100">
+                            <h6 class="mb-4">
+                                Stay in the know
+                            </h6>
+                            <p class="mb-4 text-body">Subscribe to our newsletter and updates direct to your inbox.</p>
+                            <form novalidate class="needs-validation">
+                                <div class="mb-3">
+                                    <input type="email" required placeholder="Enter your email" class="form-control">
+                                    <span class="invalid-feedback">Please enter your email address</span>
+                                </div>
+                                <div class="d-grid">
+                                    <button class="btn btn-secondary" type="submit">
+                                        Subscribe
+                                    </button>
+                                </div>
+                            </form>
+                            <!--:Dark Mode:-->
+                            <div class="d-inline-flex width-13x align-items-center dropup mt-6">
+                                <button class="btn border text-body p-0 width-3x height-3x d-flex justify-content-center align-items-center"
+                                    id="assan-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                                    data-bs-display="static">
+                                    <span class="theme-icon-active">
+                                        <i class="bi align-middle"></i>
+                                    </span>
+                                </button>
+                                <!--:Dark Mode Options:-->
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="assan-theme" style="--bs-dropdown-min-width: 9rem;">
+                                    <li class="mb-1">
+                                        <button type="button" class="dropdown-item d-flex align-items-center active"
+                                            data-bs-theme-value="light">
+                                            <span class="theme-icon">
+                                                <i class="bi bi-sun align-middle"> </i>
+                                            </span>
+                                            <span class="ms-2">Light</span>
+                                        </button>
+                                    </li>
+                                    <li class="mb-1">
+                                        <button type="button" class="dropdown-item d-flex align-items-center"
+                                            data-bs-theme-value="dark">
+                                            <span class="theme-icon">
+                                                <i class="bi bi-moon align-middle"></i>
+                                            </span>
+                                            <span class="ms-2">Dark</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item d-flex align-items-center"
+                                            data-bs-theme-value="auto">
+                                            <span class="theme-icon d-flex align-items-center">
+                                                <i class="bi bi-paint-bucket align-middle"></i>
+                                            </span>
+                                            <span class="ms-2">Auto</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Footer col-->
+                    <div class="col-md-3 ms-md-auto mb-7 col-sm-4">
+                        <h6 class="mb-4">Services</h6>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Design
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Development
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    E-commerce
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Android Apps
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Ios Apps
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Footer col-->
+                    <div class="col-lg-4 col-sm-8 mb-7">
+                        <h6 class="mb-4">Latest news</h6>
+                        <ul class="list-unstyled">
+                            <li class="d-flex card-hover mb-5 align-items-center">
+                                <div class="me-3">
+                                    <a href="#!" class="d-block width-8x height-8x rounded-3 overflow-hidden">
+                                        <img src="assets/img/960x1140/1.jpg" alt="" class="img-fluid img-zoom">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#!" class="lh-sm d-block mb-1">
+                                      Tips for creating a long-lasting
+                                            partnership with your startup
+                                    </a>
+                                    <span class="d-block small text-body-secondary">02 Sep 2025</span>
+                                </div>
+                            </li>
+                            <li class="d-flex card-hover align-items-center">
+                                <div class="me-3">
+                                    <a href="#!" class="d-block width-8x height-8x rounded-3 overflow-hidden">
+                                        <img src="assets/img/960x1140/2.jpg" alt="" class="img-fluid img-zoom">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#!" class="lh-sm d-block mb-1">
+                                       Functional programming in python for
+                                            beginners
+                                    </a>
+                                    <span class="d-block small text-body-secondary">24 Aug 2025</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="mb-5 mt-0">
+                <div class="row">
+                    <div class="col-sm-7 mb-3 mb-sm-0">
+                        <div class="dropup d-table">
+                            <a href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false"
+                                class="dropdown-toggle text-body">
+                                United States (English)
+                            </a>
+
+                            <!--Dropdown lang menu-->
+                            <div class="dropdown-menu mb-3 dropdown-menu-lg-start" style="margin: 0px;">
+                                <a href="#!" class="d-flex align-items-center dropdown-item active">
+                                    <img src="assets/img/country/us.svg" class="width-2x me-2" alt="">
+                                    United States (English)
+                                </a>
+                                <a href="#!" class="d-flex align-items-center dropdown-item">
+                                    <img src="assets/img/country/es.svg" class="width-2x me-2" alt="">
+                                    América Latina (Español)
+                                </a>
+                                <a href="#!" class="d-flex align-items-center dropdown-item">
+                                    <img src="assets/img/country/gb.svg" class="width-2x me-2" alt="">
+                                    United Kingdom (English)
+                                </a>
+                                <a href="#!" class="d-flex align-items-center dropdown-item">
+                                    <img src="assets/img/country/fr.svg" class="width-2x me-2" alt="">
+                                    France (Français)
+                                </a>
+                                <a href="#!" class="d-flex align-items-center dropdown-item">
+                                    <img src="assets/img/country/pt.svg" class="width-2x me-2" alt="">
+                                    Portuguese
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 small text-md-end">
+                        <span class="d-block lh-sm text-body-secondary">&copy; Copyright
+                            <script>
+                                document.write(new Date().getFullYear())
+
+                            </script>. Assan
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!--container-->
+        </footer>
+        <!--end:Footer-->
+
+
+        <!-- begin Back to Top button -->
+        <a href="#" class="toTop"><svg class="progress-circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="0, 251.2">
+                </circle>
+            </svg>
+            <i class="bi bi-chevron-up"></i>
+        </a>
+        <!-- scripts -->
+        <script src="assets/js/theme.bundle.min.js"></script>
+        <!--Copy to clipboard + prismJs-->
+        <script src="assets/vendor/node_modules/js/prism.js"></script>
+        <script src="assets/vendor/node_modules/js/clipboard.min.js"></script>
+        <script>
+            /* Clipboard JS - Copy code button */
+            var cl = document.querySelector('.copy-link');
+            if (typeof !!cl && (cl) != 'undefined' && cl != null) {
+                var cle = document.querySelectorAll('.copy-link');
+                cle.forEach(el => {
+                    el.addEventListener("click", function () {
+                        var theButton = this;
+                        var copyId = this.getAttribute('id');
+                        var clipboard = new ClipboardJS('#' + copyId);
+
+                        clipboard.on('success', function (e) {
+                            e.clearSelection();
+                            theButton.innerHTML = 'Copied!';
+                            setTimeout(function () {
+                                theButton.innerHTML = 'Copy code';
+                            }, 5000);
+                        });
+                    });
+                });
+            }
+
+        </script>
+    </body>
+
+</html>

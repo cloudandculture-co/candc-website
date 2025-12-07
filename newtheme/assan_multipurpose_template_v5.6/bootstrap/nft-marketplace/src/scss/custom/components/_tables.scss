@@ -1,0 +1,9 @@
+//Theme Tables style
+.table-nowrap{
+    td,th{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: $font-weight-semibold;
+        color: $text-muted;
+    }
+}

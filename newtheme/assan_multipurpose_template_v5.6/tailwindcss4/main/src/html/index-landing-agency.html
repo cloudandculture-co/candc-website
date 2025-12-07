@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+  <!--G-lightbox-->
+  <link rel="stylesheet" href="assets/vendor/node_modules/css/glightbox.min.css" />
+  @@include('./partials/head-includes.html')
+  <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+  @@include('./partials/preloader.html')
+
+  <!--begin:Header-->
+  <header class="header-transparent sticky-fixed">
+
+    <!--begin:navbar-->
+    <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light">
+      <!--Navbar-fixed-background-->
+      <div class="navbar-fixed-bg absolute"></div>
+      <div class="container relative flex flex-wrap items-center justify-center relative">
+        <!--begin:logo-->
+        <a class="navbar-brand relative w-24 block" href="index.html">
+          <img src="assets/img/logo/logo.svg" alt="" class="img-fluid dark:hidden">
+          <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid hidden dark:block">
+        </a>
+        <!--end:logo-->
+
+        <!--begin:navbar-no-collapse-items-->
+        <div class="flex items-center shrink-0 ml-auto lg:order-last">
+          <!--Navbar toggler button-->
+          <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <i></i>
+            </span>
+          </button>
+          <!--Button-->
+          <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+            <a href="#" class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+          </div>
+        </div>
+        <!--end:navbar-no-collapse-items-->
+
+        <!--begin:navbar-collapse-->
+        <div
+          class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+          id="mainNavbarTheme">
+          @@include('./partials/headers/default-navbar-items.html',{"page": "home"})
+        </div>
+        <!--end:navbar-collapse-->
+      </div>
+
+    </nav>
+    <!--end:navbar-->
+  </header>
+  <!--end:header-->
+
+
+  <main class="main-content" id="main-content">
+    <!--begin:Hero section-->
+    <section class="relative overflow-hidden">
+      <div class="container flex items-center h-full py-16 lg:py-24 relative">
+        <div class="flex flex-wrap -mx-3 pt-12 items-center">
+          <div class="w-full lg:w-6/12 px-3 order-last lg:order-1">
+            <div class="flex flex-wrap -mx-3">
+              <div class="w-7/12 px-3">
+                <img src="assets/img/960x1140/2.jpg" class="rounded-2xl" alt="">
+              </div>
+              <div class="w-5/12 px-3">
+                <img src="assets/img/960x640/4.jpg" class="rounded-2xl mb-6" alt="">
+                <!--:shape bg:-->
+                <div class="relative flex justify-center items-center" data-animation-y>
+                  <img src="assets/img/graphics/illustration/shape6.png" class="w-36 h-auto" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-6/12 px-3 lg:pl-12 mb-9 lg:mb-0 order-1 lg:order-last">
+            <h5 class="lg:text-lg mb-3">👋 Hello! we're digital agency</h5>
+            <h2 class="mb-5 text-4xl xl:text-6xl font-normal">
+              <span class="font-medium block mb-2">
+                <span class="relative text-2xl">We create</span>
+              <span class="text-indigo-500"
+                data-type-text='["Modern", "Clean", "Working"]'></span>
+              </span>
+              <span class="font-medium">digital products</span>
+            </h2>
+            <p class="mb-7">
+              Euismod ipsum pellentesque sit nullam fermentum justo.
+            </p>
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="#!" class="btn btn-lg bg-indigo-500 text-white hover:bg-indigo-700 !rounded-full">Learn More
+                <i class="bi bi-arrow-up-right-circle text-xl ml-2"></i>
+              </a>
+              <div class="inline-flex items-center">
+                <!--Video button-->
+                <a href="https://vimeo.com/353105087" data-glightbox data-gallery="03"
+                  class="mr-4 w-14 h-14 relative group block">
+                  <span
+                    class="animate-ping absolute left-0 top-0 inline-flex h-full w-full rounded-full bg-orange-300 opacity-25"></span>
+                  <span
+                    class="w-14 h-14 rounded-full bg-orange-500 flex justify-center items-center relative transition-all duration-300 group-hover:scale-[1.1] origin-center">
+                    <i class="bi bi-play text-3xl text-white"></i>
+                  </span>
+                </a>
+                <small class="opacity-50 font-serif italic">Watch our new Showreel</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/end:Partners section-->
+
+
+    <!--begin:Partners section-->
+    <section class="relative overflow-hidden">
+      <div class="container pb-16 lg:pb-24">
+        <div class="flex flex-wrap -mx-3 justify-center">
+
+          <div class="w-full px-3 text-center">
+            <h6 class="mb-9 text-gray-400">Our partners</h6>
+            <!--Paertners List-->
+            <div class="flex flex-wrap items-center justify-center">
+              <!--Partner-->
+              <div data-animation="zoomIn" data-delay=".1" class="flex justify-center items-center px-4 py-2 w-36 h-auto">
+                <img class="img-fluid dark:hidden" src="assets/img/partners/dark/nasdaq.svg" alt="">
+                <img class="img-fluid hidden dark:block" src="assets/img/partners/white/nasdaq.svg" alt="">
+              </div>
+              <!--Partner-->
+              <div data-animation="zoomIn" data-delay=".2" class="flex justify-center items-center px-4 py-2 w-36 h-auto">
+                <img class="img-fluid dark:hidden" src="assets/img/partners/dark/zillow.svg" alt="">
+                <img class="img-fluid hidden dark:block" src="assets/img/partners/white/zillow.svg" alt="">
+              </div>
+              <!--Partner-->
+              <div data-animation="zoomIn" data-delay=".3" class="flex justify-center items-center px-4 py-2 w-36 h-auto">
+                <img class="img-fluid dark:hidden" src="assets/img/partners/dark/slack.svg" alt="">
+                <img class="img-fluid hidden dark:block" src="assets/img/partners/white/slack.svg" alt="">
+              </div>
+              <!--Partner-->
+              <div data-animation="zoomIn" data-delay=".4" class="flex justify-center items-center px-4 py-2 w-36 h-auto">
+                <img class="img-fluid dark:hidden" src="assets/img/partners/dark/google.svg" alt="">
+                <img class="img-fluid hidden dark:block" src="assets/img/partners/white/google.svg" alt="">
+              </div>
+              <!--Partner-->
+              <div data-animation="zoomIn" data-delay=".5" class="flex justify-center items-center px-4 py-2 w-36 h-auto">
+                <img class="img-fluid dark:hidden" src="assets/img/partners/dark/amazon.svg" alt="">
+                <img class="img-fluid hidden dark:block" src="assets/img/partners/white/amazon.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/end:Partners section-->
+
+    <!--begin:About section-->
+    <section class="relative overflow-hidden rounded-3xl bg-cover bg-no-repeat bg-right-center"
+      style="background-image: url(assets/img/backgrounds/bg5.jpg);">
+      <div class="container py-16 lg:py-24">
+        <div class="w-full lg:w-4/12 md:w-5/12 sm:w-8/12">
+          <div class="bg-white dark:bg-gray-900 rounded-3xl py-7 px-6 lg:py-12 lg:px-9 shadow-lg relative z-[1]" data-animation-x>
+            <h5 class="text-xl mb-4 text-orange-500">We're Design Agency</h5>
+            <h2 class="text-3xl font-medium mb-5">
+              It's so challenging to find a good team to do great things.
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 mb-7">
+              Mauris purus maecenas purus, aliquet lacus varius. Proin venenatis vel cras phasellus condimentum.
+            </p>
+            <a href="#!" class="btn btn-lg bg-indigo-500 text-white hover:bg-indigo-700">Work with us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/end:About section-->
+
+
+    <!--begin:Features-->
+    <section class="relative">
+      <div class="container py-16 lg:py-24">
+        <div class="flex flex-wrap -mx-3">
+          <div class="w-full lg:w-3/12 md:w-6/12 px-3 pt-10" data-animation="fadeInUp" data-delay=".1">
+            <div class="px-4 lg:px-6 pb-7 relative rounded-3xl bg-gray-50 dark:bg-gray-900 flex flex-col text-center">
+              <!--Feature icon-->
+              <div class="mb-4 mx-auto w-20 h-20 flex items-center justify-center relative -mt-10">
+                <!--Icon bg-->
+                <svg class="absolute text-white dark:text-black start-0 top-0 w-full h-full" preserveAspectRatio="none"
+                  width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M55.4078 1.90215C58.3481 0.684225 61.6519 0.684225 64.5922 1.90215L97.8342 15.6714C100.775 16.8894 103.111 19.2255 104.329 22.1658L118.098 55.4078C119.316 58.3481 119.316 61.6519 118.098 64.5922L104.329 97.8342C103.111 100.775 100.775 103.111 97.8342 104.329L64.5922 118.098C61.6519 119.316 58.3481 119.316 55.4078 118.098L22.1658 104.329C19.2255 103.111 16.8894 100.775 15.6714 97.8342L1.90215 64.5922C0.684225 61.6519 0.684225 58.3481 1.90215 55.4078L15.6714 22.1658C16.8894 19.2255 19.2255 16.8894 22.1658 15.6714L55.4078 1.90215Z"
+                    fill="currentColor"></path>
+                </svg>
+                <!--Icon-->
+                <i class="icon-Smartphone text-4xl text-indigo-500 relative"></i>
+              </div>
+              <div class="flex items-center mb-3 justify-center">
+                <h5 class="mb-0 text-xl font-medium capitalize">Web & Mobile</h5>
+              </div>
+              <p class="mb-0 mx-auto">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="w-full lg:w-3/12 md:w-6/12 px-3 pt-10" data-animation="fadeInUp" data-delay=".15">
+            <div class="px-4 lg:px-6 pb-7 relative rounded-3xl bg-gray-50 dark:bg-gray-900 flex flex-col text-center">
+              <!--Feature icon-->
+              <div class="mb-4 mx-auto w-20 h-20 flex items-center justify-center relative -mt-10">
+                <!--Icon bg-->
+                <svg class="absolute text-white dark:text-black start-0 top-0 w-full h-full" preserveAspectRatio="none"
+                  width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M55.4078 1.90215C58.3481 0.684225 61.6519 0.684225 64.5922 1.90215L97.8342 15.6714C100.775 16.8894 103.111 19.2255 104.329 22.1658L118.098 55.4078C119.316 58.3481 119.316 61.6519 118.098 64.5922L104.329 97.8342C103.111 100.775 100.775 103.111 97.8342 104.329L64.5922 118.098C61.6519 119.316 58.3481 119.316 55.4078 118.098L22.1658 104.329C19.2255 103.111 16.8894 100.775 15.6714 97.8342L1.90215 64.5922C0.684225 61.6519 0.684225 58.3481 1.90215 55.4078L15.6714 22.1658C16.8894 19.2255 19.2255 16.8894 22.1658 15.6714L55.4078 1.90215Z"
+                    fill="currentColor"></path>
+                </svg>
+                <!--Icon-->
+                <i class="icon-Code-Window text-4xl text-pink-500 relative"></i>
+              </div>
+              <div class="flex items-center mb-3 justify-center">
+                <h5 class="mb-0 text-xl font-medium capitalize">UX Design</h5>
+              </div>
+              <p class="mb-0 mx-auto">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="w-full lg:w-3/12 md:w-6/12 px-3 pt-10" data-animation="fadeInUp" data-delay=".2">
+            <div class="px-4 lg:px-6 pb-7 relative rounded-3xl bg-gray-50 dark:bg-gray-900 flex flex-col text-center">
+              <!--Feature icon-->
+              <div class="mb-4 mx-auto w-20 h-20 flex items-center justify-center relative -mt-10">
+                <!--Icon bg-->
+                <svg class="absolute text-white dark:text-black start-0 top-0 w-full h-full" preserveAspectRatio="none"
+                  width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M55.4078 1.90215C58.3481 0.684225 61.6519 0.684225 64.5922 1.90215L97.8342 15.6714C100.775 16.8894 103.111 19.2255 104.329 22.1658L118.098 55.4078C119.316 58.3481 119.316 61.6519 118.098 64.5922L104.329 97.8342C103.111 100.775 100.775 103.111 97.8342 104.329L64.5922 118.098C61.6519 119.316 58.3481 119.316 55.4078 118.098L22.1658 104.329C19.2255 103.111 16.8894 100.775 15.6714 97.8342L1.90215 64.5922C0.684225 61.6519 0.684225 58.3481 1.90215 55.4078L15.6714 22.1658C16.8894 19.2255 19.2255 16.8894 22.1658 15.6714L55.4078 1.90215Z"
+                    fill="currentColor"></path>
+                </svg>
+                <!--Icon-->
+                <i class="icon-Cloud text-4xl text-indigo-500 relative"></i>
+              </div>
+              <div class="flex items-center mb-3 justify-center">
+                <h5 class="mb-0 text-xl font-medium capitalize">Digital marketing</h5>
+              </div>
+              <p class="mb-0 mx-auto">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="w-full lg:w-3/12 md:w-6/12 px-3 pt-10" data-animation="fadeInUp" data-delay=".25">
+            <div class="px-4 lg:px-6 pb-7 relative rounded-3xl bg-gray-50 dark:bg-gray-900 flex flex-col text-center">
+              <!--Feature icon-->
+              <div class="mb-4 mx-auto w-20 h-20 flex items-center justify-center relative -mt-10">
+                <!--Icon bg-->
+                <svg class="absolute text-white dark:text-black start-0 top-0 w-full h-full" preserveAspectRatio="none"
+                  width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M55.4078 1.90215C58.3481 0.684225 61.6519 0.684225 64.5922 1.90215L97.8342 15.6714C100.775 16.8894 103.111 19.2255 104.329 22.1658L118.098 55.4078C119.316 58.3481 119.316 61.6519 118.098 64.5922L104.329 97.8342C103.111 100.775 100.775 103.111 97.8342 104.329L64.5922 118.098C61.6519 119.316 58.3481 119.316 55.4078 118.098L22.1658 104.329C19.2255 103.111 16.8894 100.775 15.6714 97.8342L1.90215 64.5922C0.684225 61.6519 0.684225 58.3481 1.90215 55.4078L15.6714 22.1658C16.8894 19.2255 19.2255 16.8894 22.1658 15.6714L55.4078 1.90215Z"
+                    fill="currentColor"></path>
+                </svg>
+                <!--Icon-->
+                <i class="icon-Smartphone text-4xl text-indigo-500 relative"></i>
+              </div>
+              <div class="flex items-center mb-3 justify-center">
+                <h5 class="mb-0 text-xl font-medium capitalize">Video production</h5>
+              </div>
+              <p class="mb-0 mx-auto">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/end:Features-->
+
+    <!--begin:Portfolio-->
+    <section class="relative bg-gray-900 text-white dark rounded-3xl">
+      <div class="container py-16 lg:py-24">
+        <div class="flex flex-wrap -mx-3 items-center mb-9">
+          <div class="w-full px-3 lg:w-4/12">
+            <h2 data-text-split class="text-4xl lg:text-5xl font-medium mb-4">Our recent projects</h2>
+          </div>
+          <div class="w-full px-3 lg:w-5/12 mb-7 lg:mb-0">
+            <p class="text-lg">Diam integer turpis tristique integer tincidunt cursus dignissim. Euismod libero
+              pellentesque et suspendisse posuere. Lorem quis nec nisl viverra ut velit imperdiet.</p>
+          </div>
+          <div class="w-full px-3 lg:w-3/12 lg:text-right">
+            <a href="#!" class="btn bg-white text-gray-700 hover:text-indigo-500">View All Projects</a>
+          </div>
+        </div>
+        <!-- Nav -->
+        <ul class="flex nav nav-filter items-center justify-end gap-4">
+          <li class="nav-item text-xs text-gray-400 flex mr-2">Filter by:</li>
+          <li class="nav-item">
+            <a class="nav-link active [.active]:line-through [.active]:opacity-70" href="#" data-bs-toggle="pill" data-filter="*" data-bs-target="#projects">
+              All
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link [.active]:line-through [.active]:opacity-70" href="#" data-bs-toggle="pill" data-filter=".bootstrap"
+              data-bs-target="#bootstrap">
+              Bootstrap
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link [.active]:line-through [.active]:opacity-70" href="#" data-bs-toggle="pill" data-filter=".javascript" data-bs-target="#javascript">
+              JS
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link [.active]:line-through [.active]:opacity-70" href="#" data-bs-toggle="pill" data-filter=".figma" data-bs-target="#figma">
+              Figma
+            </a>
+          </li>
+        </ul>
+
+        <div id="projects" data-isotope='{"layoutMode": "masonry"}' class="flex flex-wrap -mx-3">
+
+          <div class="w-full px-3 md:w-4/12 mt-9 bootstrap grid-item">
+            <a href="#!" class="group block">
+              <div class="overflow-hidden relative mb-5 rounded-3xl">
+                <img src="assets/img/projects/1.jpg" alt=""
+                  class="max-w-full transition-all duration-[600ms] group-hover:scale-125">
+              </div>
+              <h5 class="mb-2 text-xl font-medium">Sed quia non numquam</h5>
+              <span class="block text-white/75">UI / UX</span>
+            </a>
+          </div>
+          <div class="w-full px-3 md:w-4/12 mt-9 figma grid-item">
+            <a href="#!" class="group block">
+              <div class="overflow-hidden relative mb-5 rounded-3xl">
+                <img src="assets/img/projects/2.jpg" alt=""
+                  class="max-w-full transition-all duration-[600ms] group-hover:scale-125">
+              </div>
+              <h5 class="mb-2 text-xl font-medium">Ogólnie znana teza</h5>
+              <span class="block text-white/75">Javascript</span>
+            </a>
+          </div>
+          <div class="w-full px-3 md:w-4/12 mt-9 bootstrap grid-item">
+            <a href="#!" class="group block">
+              <div class="overflow-hidden relative mb-5 rounded-3xl">
+                <img src="assets/img/projects/3.jpg" alt=""
+                  class="max-w-full transition-all duration-[600ms] group-hover:scale-125">
+              </div>
+              <h5 class="mb-2 text-xl font-medium">El punto de</h5>
+              <span class="block text-white/75">Business, Marketing</span>
+            </a>
+          </div>
+          <div class="w-full px-3 md:w-4/12 mt-9 figma grid-item">
+            <a href="#!" class="group block">
+              <div class="overflow-hidden relative mb-5 rounded-3xl">
+                <img src="assets/img/projects/4.jpg" alt=""
+                  class="max-w-full transition-all duration-[600ms] group-hover:scale-125">
+              </div>
+              <h5 class="mb-2 text-xl font-medium">Sed quia non numquam</h5>
+              <span class="block text-white/75">UI / UX</span>
+            </a>
+          </div>
+          <div class="w-full px-3 md:w-4/12 mt-9 bootstrap grid-item">
+            <a href="#!" class="group block">
+              <div class="overflow-hidden relative mb-5 rounded-3xl">
+                <img src="assets/img/projects/5.jpg" alt=""
+                  class="max-w-full transition-all duration-[600ms] group-hover:scale-125">
+              </div>
+              <h5 class="mb-2 text-xl font-medium">Excepteur sint occaecat</h5>
+              <span class="block text-white/75">Product Design</span>
+            </a>
+          </div>
+          <div class="w-full px-3 md:w-4/12 mt-9 javascript grid-item">
+            <a href="#!" class="group block">
+              <div class="overflow-hidden relative mb-5 rounded-3xl">
+                <img src="assets/img/projects/6.jpg" alt=""
+                  class="max-w-full transition-all duration-[600ms] group-hover:scale-125">
+              </div>
+              <h5 class="mb-2 text-xl font-medium">Sed quia non numquam</h5>
+              <span class="block text-white/75">UI / UX</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/end:Portfolio-->
+
+    <!--begin:Testimonials-->
+    <section class="relative">
+      <div class="container py-16 lg:py-24">
+        <di class="flex flex-wrap -mx-3">
+          <div class="w-full px-3 md:px-12 md:w-6/12 mb-12 md:mb-0" data-animation="fadeInDown" data-delay=".1">
+            <!--:Card testimonials:-->
+            <figure class="relative">
+              <div class="mb-7">
+                <div class="mb-7 text-orange-500">
+                  <img src="assets/img/partners/microsoft.svg" class="w-36 h-auto" alt="">
+                </div>
+                <p class="text-2xl">
+                  “ Loved working with the beautiful theme. Everything clean and
+                  professional,
+                  also very helpful throughout the customisation. Looking forward to buy
+                  more
+                  license of Assan again in the future.”
+                </p>
+              </div>
+              <figcaption class="flex items-end justify-between">
+                <div>
+                  <h5 class="mb-1 text-xl font-medium">Jacob Ginnish</h5>
+                  <small class="text-gray-400">Marketing head at Deliveroo</small>
+                </div>
+                <div class="relative">
+                  <!--Avatar Image-->
+                  <img class="relative w-12 h-12 rounded-3xl" src="assets/img/avatar/5.jpg" alt="">
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="w-full px-3 md:px-12 md:w-6/12" data-animation="fadeInDown" data-delay=".2">
+            <!--:Card testimonials:-->
+            <figure class="relative">
+              <div class="mb-7">
+                <div class="mb-7 text-orange-500">
+                  <img src="assets/img/partners/deliveroo.svg" class="w-36 h-auto" alt="">
+                </div>
+                <p class="text-2xl">
+                  “ Loved working with the beautiful theme. Everything clean and
+                  professional,
+                  also very helpful throughout the customisation. Looking forward to buy
+                  more
+                  license of Assan again in the future.”
+                </p>
+              </div>
+              <figcaption class="flex items-end justify-between">
+                <div>
+                  <h5 class="mb-1 text-xl font-medium">Jacob Ginnish</h5>
+                  <small class="text-gray-400">Marketing head at Deliveroo</small>
+                </div>
+                <div class="relative">
+                  <!--Avatar Image-->
+                  <img class="relative w-12 h-12 rounded-3xl" src="assets/img/avatar/7.jpg" alt="">
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </di>
+      </div>
+    </section>
+    <!--/end:Testimonials-->
+
+    <!--begin:Call to action-->
+    <section class="relative border-t border-gray-100 dark:border-gray-900">
+      <div class="container py-16 lg:py-24 relative">
+        <div class="px-4 rounded-3xl shadow-xl py-9 lg:px-9 bg-indigo-500 text-white relative overflow-hidden" data-animation="fadeInUp" data-delay=".1">
+          <svg class="absolute right-0 bottom-0 mb-4 text-white/20" width="200" height="400" preserveAspectRatio="none"
+            viewBox="0 0 150 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M150 300C130.302 300 110.796 296.12 92.5975 288.582C74.3986 281.044 57.8628 269.995 43.934 256.066C30.0052 242.137 18.9563 225.601 11.4181 207.403C3.87986 189.204 -6.2614e-07 169.698 0 150C6.2614e-07 130.302 3.87987 110.796 11.4181 92.5975C18.9563 74.3987 30.0052 57.8628 43.934 43.934C57.8628 30.0052 74.3987 18.9563 92.5975 11.4181C110.796 3.87986 130.302 3.51961e-06 150 5.00679e-06L150 37.5C135.226 37.5 120.597 40.4099 106.948 46.0636C93.299 51.7172 80.8971 60.0039 70.4505 70.4505C60.0039 80.8971 51.7172 93.299 46.0636 106.948C40.4099 120.597 37.5 135.226 37.5 150C37.5 164.774 40.4099 179.403 46.0636 193.052C51.7172 206.701 60.0039 219.103 70.4505 229.55C80.8971 239.996 93.299 248.283 106.948 253.936C120.597 259.59 135.226 262.5 150 262.5V300Z"
+              fill="currentColor"></path>
+          </svg>
+
+          <div class="flex flex-wrap -mx-3 items-end relative">
+            <div class="w-full px-3 lg:w-7/12 text-center lg:text-start">
+              <p class="text-white mb-2">Let's start building</p>
+              <h2 class="mb-7 lg:mb-0 text-4xl lg:text-5xl font-medium">Stunning websites ease</h2>
+            </div>
+            <div class="w-full px-3 lg:w-5/12 lg:text-right text-center">
+              <a href="#!"
+                class="btn btn-lg border boder-white hover:bg-white text-white hover:text-gray-700 mr-2">Contact
+                sales</a>
+              <a href="#!"
+                class="btn btn-lg border border-white bg-white hover:bg-transparent text-gray-700 hover:text-white">Purchase
+                Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/end:Call to action-->
+  </main>
+
+
+  <!--Footer Start-->
+  @@include('./partials/footers/footer-6.html')
+
+  <!-- begin:Back to Top button -->
+  <a href="#"
+    class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+    <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="0, 251.2">
+      </circle>
+    </svg>
+    <i class="bi bi-chevron-up"></i>
+  </a>
+  <!-- begin:Back to Top button -->
+
+
+  <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+
+</body>
+</html>

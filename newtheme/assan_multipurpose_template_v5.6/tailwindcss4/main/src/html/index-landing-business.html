@@ -1,0 +1,1154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    @@include('./partials/head-includes.html')
+
+    <!--Swiper slider-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+    <!--G-lightbox-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/glightbox.min.css" />
+
+    <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+
+    @@include('./partials/preloader.html')
+    <!--Header Start-->
+    <header class="z-fixed header-absolute-top header-transparent">
+        <nav class="navbar py-4 navbar-expand-lg absolute top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+            <div class="container relative flex flex-wrap items-center justify-center">
+                <!--Logo Brand-->
+                <a class="navbar-brand relative w-24 block" href="index.html">
+                    <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid">
+                </a>
+
+                <div class="flex items-center shrink-0 ml-auto lg:order-last">
+                    <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i></i>
+                        </span>
+                    </button>
+                    <!--Navbar Button-->
+                    <div class="nav-item me-3 lg:ms-3 lg:me-0">
+                        <a href="#"
+                            class="btn text-white font-medium capitalize bg-green-500 hover:bg-green-600">Purchase</a>
+                    </div>
+                </div>
+
+                <!--Navbar Collapse-->
+                <div class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+                    id="mainNavbarTheme">
+                    @@include('./partials/headers/default-navbar-items.html',{"page": "home"})
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Main content-->
+
+    <main class="main-content" id="main-content">
+
+        <!--begin:Hero section-->
+        <section class="relative bg-black overflow-hidden">
+            <!-- Swiper Main -->
+            <div class="swiper-container swiper-classic h-[450px] lg:h-[650px]">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bg-cover bg-center"
+                        style="background-image:url('assets/img/backgrounds/bg6.jpg')">
+
+                        <!--Overlay-->
+                        <div class="bg-black absolute left-0 top-0 w-full h-full opacity-75"></div>
+                        <div class="container text-white h-full relative z-[1]">
+                            <div class="flex flex-wrap -mx-3 h-full items-center">
+                                <div class="lg:w-7/12 px-3 w-full mx-auto text-center">
+                                    <ul class="swiper-layers list-unstyled mb-0">
+                                        <li>
+                                            <h2 class="text-5xl lg:text-7xl font-semibold mb-9 leading-[1.1]">
+                                                Elevate the vision and strategy
+                                            </h2>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="btn btn-lg text-white border-2 !rounded-full hover:bg-white hover:border-white hover:text-indigo-500">
+                                                Learn More
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg-cover bg-center"
+                        style="background-image:url('assets/img/backgrounds/bg5.jpg')">
+                        <!--Overlay-->
+                        <div class="bg-black absolute left-0 top-0 w-full h-full opacity-75"></div>
+                        <div class="container text-white h-full relative z-[1]">
+                            <div class="flex flex-wrap -mx-3 h-full items-center">
+                                <div class="w-full px-3 lg:w-7/12 mx-auto text-center">
+                                    <ul class="swiper-layers list-unstyled mb-0">
+                                        <li>
+                                            <h2 class="text-5xl lg:text-7xl font-semibold mb-9 leading-[1.1]">
+                                                We turns ideas into business
+                                            </h2>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="btn btn-lg text-white border-2 !rounded-full hover:bg-white hover:border-white hover:text-indigo-500">
+                                                Grab a license
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg-cover bg-center"
+                        style="background-image:url('assets/img/backgrounds/bg2.jpg')">
+                        <!--Overlay-->
+                        <div class="bg-black absolute left-0 top-0 w-full h-full opacity-75"></div>
+                        <div class="container text-white h-full relative z-[1]">
+                            <div class="flex flex-wrap -mx-3 h-full items-center">
+                                <div class="w-full px-3 lg:w-8/12 mx-auto text-center">
+                                    <ul class="swiper-layers list-unstyled mb-0">
+                                        <li>
+                                            <h2 class="text-5xl lg:text-7xl font-semibold mb-9 leading-[1.1]">
+                                                Take your business to the next level
+                                            </h2>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="btn btn-lg text-white border-2 !rounded-full hover:bg-white hover:border-white hover:text-indigo-500">
+                                                Try it Now!
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End swiper-main-->
+
+            <!--Swiper thumbnails-->
+            <div
+                class="progress-swiper-thumbs pb-5 absolute left-0 bottom-0 w-full overflow-hidden text-white px-4 swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slide -->
+                    <div class="swiper-slide swiper-pagination-progress">
+                        <div class="swiper-pagination-progress-bar mb-2">
+                            <div class="swiper-pagination-progress-inner swiper-pagination-progress-bar-inner">
+                            </div>
+                        </div>
+                        <span class="small block text-truncate">Elevate vision</span>
+                    </div>
+                    <!-- End Slide -->
+
+                    <!-- Slide -->
+                    <div class="swiper-slide swiper-pagination-progress">
+                        <div class="swiper-pagination-progress-bar mb-2">
+                            <div class="swiper-pagination-progress-inner swiper-pagination-progress-bar-inner">
+                            </div>
+                        </div>
+                        <span class="small block text-truncate">Turn ideas into business</span>
+                    </div>
+                    <!-- End Slide -->
+
+                    <!-- Slide -->
+                    <div class="swiper-slide swiper-pagination-progress">
+                        <div class="swiper-pagination-progress-bar mb-2">
+                            <div class="swiper-pagination-progress-inner swiper-pagination-progress-bar-inner">
+                            </div>
+                        </div>
+                        <span class="small block text-truncate">Take your business to next level</span>
+                    </div>
+                    <!-- End Slide -->
+                </div>
+            </div>
+            <!-- End Swiper Thumbs Slider -->
+        </section>
+        <!--/end:Hero section-->
+
+        <!--begin:Partners section-->
+        <section class="border-b border-gray-200 dark:border-gray-800 overflow-hidden">
+            <div class="container py-9 lg:py-12">
+                <div class="flex flex-wrap -mx-3 items-center">
+                    <!--begin:section-title-->
+                    <div class="w-full px-3 lg:w-1/5 text-center text-md-start">
+                        <h6 class="mb-5 lg:mb-0 text-gray-400">Our partners</h6>
+                    </div>
+                    <!--end:section-title-->
+
+                    <div class="w-full px-3 lg:w-4/5">
+                        <!--Paertners List-->
+                        <div class="flex flex-wrap lg:justify-end justify-center">
+                            <!--Partner-->
+                            <div class="flex justify-center items-center px-6 py-3 w-32 h-auto">
+                                <img class="img-fluid dark:hidden" src="assets/img/partners/dark/nasdaq.svg" alt="">
+                                <img class="img-fluid hidden dark:block" src="assets/img/partners/white/nasdaq.svg"
+                                    alt="">
+                            </div>
+                            <!--Partner-->
+                            <div class="flex justify-center items-center px-6 py-3 w-32 h-auto">
+                                <img class="img-fluid dark:hidden" src="assets/img/partners/dark/zillow.svg" alt="">
+                                <img class="img-fluid hidden dark:block" src="assets/img/partners/white/zillow.svg"
+                                    alt="">
+                            </div>
+                            <!--Partner-->
+                            <div class="flex justify-center items-center px-6 py-3 w-32 h-auto">
+                                <img class="img-fluid dark:hidden" src="assets/img/partners/dark/slack.svg" alt="">
+                                <img class="img-fluid hidden dark:block" src="assets/img/partners/white/slack.svg"
+                                    alt="">
+                            </div>
+                            <!--Partner-->
+                            <div class="flex justify-center items-center px-6 py-3 w-32 h-auto">
+                                <img class="img-fluid dark:hidden" src="assets/img/partners/dark/google.svg" alt="">
+                                <img class="img-fluid hidden dark:block" src="assets/img/partners/white/google.svg"
+                                    alt="">
+                            </div>
+                            <!--Partner-->
+                            <div class="flex justify-center items-center px-6 py-3 w-32 h-auto">
+                                <img class="img-fluid dark:hidden" src="assets/img/partners/dark/amazon.svg" alt="">
+                                <img class="img-fluid hidden dark:block" src="assets/img/partners/white/amazon.svg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/end:Partners section-->
+
+        <!--begin:About section-->
+        <section class="relative overflow-hidden">
+            <div class="container py-16 lg:py-24 relative">
+                <div class="flex flex-wrap lg:mb-7 -mx-3 items-end">
+                    <div class="w-full px-3 lg:w-8/12 mb-7 lg:mb-0">
+                        <!--Subtitle-->
+                        <h6 class="mb-5 text-gray-400 font-medium capitalize">Who we are</h6>
+
+                        <!--title-->
+                        <h2 class="text-4xl lg:text-5xl font-medium mb-0" data-text-split>
+                            We are
+                            dedicated to making the
+                            world a better place.
+                        </h2>
+                    </div>
+
+                    <!--Video popup-->
+                    <div class="w-full px-3 lg:w-4/12 lg:text-right">
+                        <div class="inline-flex items-center">
+                            <!--Video button-->
+                            <a href="https://vimeo.com/353105087" data-glightbox data-gallery="03"
+                                class="mr-4 w-16 h-16 relative group block">
+                                <span
+                                    class="animate-ping absolute left-0 top-0 inline-flex h-full w-full rounded-full bg-indigo-300 opacity-75"></span>
+                                <span
+                                    class="w-16 h-16 rounded-full bg-indigo-500 flex justify-center items-center relative transition-all duration-300 group-hover:scale-125 origin-center">
+                                    <i class="bi bi-play text-3xl text-white"></i>
+                                </span>
+                            </a>
+                            <small class="opacity-50 font-serif italic">Watch our story</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-3">
+                    <div class="w-full px-3 lg:w-4/12 mt-9" data-animation="fadeInLeft" data-delay=".1">
+                        <!--:Icon:-->
+                        <div class="w-16 h-16 mb-5 flex-center">
+                            <div data-fill="currentColor" data-src="assets/img/graphics/icons/hand-shake.svg"
+                                class="w-full h-full text-indigo-500 svg-container"></div>
+                        </div>
+                        <h5 class="mb-3 text-xl font-medium capitalize">Relationships</h5>
+                        <p class="mb-0">
+                            Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
+                            industries layouts and visual mockups.
+                        </p>
+                    </div>
+                    <div class="w-full px-3 lg:w-4/12 mt-9" data-animation="fadeInLeft" data-delay=".2">
+                        <!--:Icon:-->
+                        <div class="w-16 h-16 mb-5 flex-center">
+                            <div data-fill="currentColor" data-src="assets/img/graphics/icons/target.svg"
+                                class="w-full h-full text-orange-500 svg-container"></div>
+                        </div>
+                        <h5 class="mb-3 text-xl font-medium capitalize">Mission & vision</h5>
+                        <p class="mb-0">
+                            Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
+                            industries layouts and visual mockups.
+                        </p>
+                    </div>
+                    <div class="w-full px-3 lg:w-4/12 mt-9" data-animation="fadeInLeft" data-delay=".3">
+                        <!--:Icon:-->
+                        <div class="w-16 h-16 mb-5 flex-center">
+                            <div data-fill="currentColor" data-src="assets/img/graphics/icons/magic-wand.svg"
+                                class="w-full h-full text-info svg-container" alt=""></div>
+                        </div>
+                        <h5 class="mb-3 text-xl font-medium capitalize">Best results</h5>
+                        <p class="mb-0">
+                            Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
+                            industries layouts and visual mockups.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--end/:About section-->
+
+        <!--begin: Services section-->
+        <section class="relative overflow-hidden">
+            <div class="container py-16 lg:py-24 relative">
+                <div class="flex flex-wrap -mx-3 justify-between">
+                    <div class="w-full lg:w-2/5 px-3 mb-7 lg:mb-0">
+                        <h6 class="mb-4 text-gray-400 font-medium">What we offer</h6>
+                        <h2 class="text-4xl lg:text-5xl font-medium" data-text-split>
+                            Take your
+                            Business to the next level
+                        </h2>
+                    </div>
+                    <div class="w-full lg:w-3/5 px-3">
+                        <div class="flex flex-wrap -mx-3">
+                            <div class="w-full px-3 md:w-1/2 mb-6" data-animation="fadeInLeft" data-delay=".1">
+                                <div class="relative py-6 px-4 rounded-2xl bg-orange-50 dark:bg-orange-900">
+                                    <h3 class="mb-4 text-xl font-medium">Code</h3>
+                                    <p class="mb-5 text-gray-600 dark:text-gray-300">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="flex py-2 items-center">
+                                            <div class="me-3">
+                                                <i class="bi bi-check fs-4 text-body-secondary"></i>
+                                            </div>
+                                            <p class="mb-0">
+                                                We design and development
+                                            </p>
+                                        </li>
+                                        <li class="flex py-2 items-center">
+                                            <div class="me-3">
+                                                <i class="bi bi-check fs-4 text-body-secondary"></i>
+                                            </div>
+                                            <p class="mb-0">
+                                                Mobile Solutions / App
+                                            </p>
+                                        </li>
+                                        <li class="flex py-2 items-center">
+                                            <div class="me-3">
+                                                <i class="bi bi-check fs-4 text-body-secondary"></i>
+                                            </div>
+                                            <p class="mb-0">
+                                                Microsite / web special
+                                            </p>
+                                        </li>
+                                        <li class="flex py-2 items-center">
+                                            <div class="me-3">
+                                                <i class="bi bi-check fs-4 text-body-secondary"></i>
+                                            </div>
+                                            <p class="mb-0">
+                                                Website / relaunch
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="w-full px-3 md:w-1/2 mb-6" data-animation="fadeInLeft" data-delay=".2">
+                                <div class="relative py-6 px-4 rounded-2xl bg-indigo-50 dark:bg-indigo-900">
+                                    <h3 class="mb-3 font-medium text-xl">Strategy</h3>
+                                    <p class="mb-5 text-gray-600 dark:text-gray-300">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="flex py-2 items-center">
+                                            <div class="me-3">
+                                                <i class="bi bi-check fs-4 text-body-secondary"></i>
+                                            </div>
+                                            <p class="mb-0">
+                                                Digital & communication strategy
+                                            </p>
+                                        </li>
+                                        <li class="flex py-2 items-center">
+                                            <div class="me-3">
+                                                <i class="bi bi-check fs-4 text-body-secondary"></i>
+                                            </div>
+                                            <p class="mb-0">
+                                                Customer journeys
+                                            </p>
+                                        </li>
+                                        <li class="flex py-2 items-center">
+                                            <div class="me-3">
+                                                <i class="bi bi-check fs-4 text-body-secondary"></i>
+                                            </div>
+                                            <p class="mb-0">
+                                                Internal communication strategy
+                                            </p>
+                                        </li>
+                                        <li class="flex py-2 items-center">
+                                            <div class="me-3">
+                                                <i class="bi bi-check fs-4 text-body-secondary"></i>
+                                            </div>
+                                            <p class="mb-0">
+                                                Brand story
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="w-full px-3 md:w-1/2 mb-6 md:mb-0" data-animation="fadeInLeft" data-delay=".3">
+                                <div class="relative py-6 px-4 rounded-2xl bg-green-50 dark:bg-green-900">
+                                    <h3 class="mb-4 text-xl font-medium">Design</h3>
+                                    <p class="mb-5 text-gray-600 dark:text-gray-300">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="flex py-2 items-center">
+                                            <div class="me-3">
+                                                <i class="bi bi-check fs-4 text-body-secondary"></i>
+                                            </div>
+                                            <p class="mb-0">
+                                                UX Design
+                                            </p>
+                                        </li>
+                                        <li class="flex py-2 items-center">
+                                            <div class="me-3">
+                                                <i class="bi bi-check fs-4 text-body-secondary"></i>
+                                            </div>
+                                            <p class="mb-0">
+                                                Keynote design
+                                            </p>
+                                        </li>
+                                        <li class="flex py-2 items-center">
+                                            <div class="me-3">
+                                                <i class="bi bi-check fs-4 text-body-secondary"></i>
+                                            </div>
+                                            <p class="mb-0">
+                                                Corporate Design
+                                            </p>
+                                        </li>
+                                        <li class="flex py-2 items-center">
+                                            <div class="me-3">
+                                                <i class="bi bi-check fs-4 text-body-secondary"></i>
+                                            </div>
+                                            <p class="mb-0">
+                                                Logo design & illustrations
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="w-full px-3 md:w-1/2" data-animation="fadeInLeft" data-delay=".4">
+
+                                <div class="relative py-6 px-4 rounded-2xl bg-red-50 dark:bg-red-900">
+                                    <h3 class="mb-4 text-xl font-medium">Development</h3>
+                                    <p class="mb-5 text-gray-600 dark:text-gray-300">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="flex py-2 items-center">
+                                            <div class="me-3">
+                                                <i class="bi bi-check fs-4 text-body-secondary"></i>
+                                            </div>
+                                            <p class="mb-0">
+                                                Wordpress
+                                            </p>
+                                        </li>
+                                        <li class="flex py-2 items-center">
+                                            <div class="me-3">
+                                                <i class="bi bi-check fs-4 text-body-secondary"></i>
+                                            </div>
+                                            <p class="mb-0">
+                                                Ecommerce
+                                            </p>
+                                        </li>
+                                        <li class="flex py-2 items-center">
+                                            <div class="me-3">
+                                                <i class="bi bi-check fs-4 text-body-secondary"></i>
+                                            </div>
+                                            <p class="mb-0">
+                                                SEO
+                                            </p>
+                                        </li>
+                                        <li class="flex py-2 items-center">
+                                            <div class="me-3">
+                                                <i class="bi bi-check fs-4 text-body-secondary"></i>
+                                            </div>
+                                            <p class="mb-0">
+                                                PHP & Laravel
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/end: Services section-->
+
+        <!--begin: quote parallax section-->
+        <section class="jarallax text-white relative overflow-hidden bg-black" data-speed=".2">
+            <!--Section background image parallax-->
+            <img src="assets/img/backgrounds/bg2.jpg" class="jarallax-img" alt="">
+
+            <!--Overlay-->
+            <div class="absolute w-full h-full left-0 top-0 bg-black opacity-70"></div>
+
+            <!--begin:Divider shape-->
+            <svg class="w-full absolute left-0 bottom-0 z-[1] rotate-180 text-white dark:text-black" height="64"
+                fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1200 120"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54
+     16.88 218.2 35.26 69.27 18 138.3 24.88 209.4
+     13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z" opacity=".25" />
+                <path d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15
+      60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39
+      62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 
+      113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z" opacity=".5" />
+                <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63
+    112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+            </svg>
+            <!--/end:Divider shape-->
+            <div class="container py-16 lg:py-24 relative">
+                <div class="lg:w-8/12 text-center pb-12 mx-auto">
+                    <div class="relative z-[1]">
+                        <!--Subtitle-->
+                        <h6 class="mb-5 text-center font-medium text-amber-500">A good company</h6>
+                        <!--Quote text-->
+                        <h2 data-text-split class="text-4xl md:text-5xl text-center mb-7">
+                            “ We believe in great details, and we also
+                            believe in businesses that keep that in
+                            our mind all days, everyday. ”
+                        </h2>
+                        <h5 class="text-center text-xl font-medium">
+                            - Client
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <!--/end: quote parallax section-->
+
+        <!--begin: Testimonials section-->
+        <section class="relative overflow-hidden">
+            <div class="container relative py-16 lg:py-24">
+                <div class="flex flex-wrap -mx-3 mb-9 items-end">
+                    <div class="md:w-7/12 px-3 mb-4 md:mb-0">
+                        <h6 class="mb-5 text-gray-400 font-medium">Testimonials</h6>
+                        <h2 class="mb-4 text-4xl lg:text-5xl font-medium">Clients who love<br>
+                            our
+                            <span class="text-indigo-500"
+                                data-type-text='["Work", "Ideas", "Creativity", "Innovation"]'></span>
+                        </h2>
+                    </div>
+                    <div class="md:w-5/12 px-3">
+                        <!--Begin:Swiper navigation-->
+                        <div class="relative flex items-center md:justify-end z-[2] gap-2">
+                            <div
+                                class="swiper-testimonials-button-prev swiper-prev w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-lg">
+                            </div>
+                            <div
+                                class="swiper-testimonials-button-next swiper-next w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-lg">
+                            </div>
+                        </div>
+                        <!--end:Swiper navigation-->
+                    </div>
+                </div>
+
+                <!--Swiper slider testimonials-->
+                <div class="swiper-container swiper-testimonials">
+                    <div class="swiper-wrapper">
+                        <!--Slide-->
+                        <div class="swiper-slide">
+                            <div class="relative">
+                                <div class="mb-7">
+                                    <div class="mb-3 text-orange-500">
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                    </div>
+                                    <p class="fw-normal fs-5 mb-0">
+                                        “ Loved working with the beautiful theme. Everything clean and
+                                        professional,
+                                        also very helpful throughout the customisation. Looking forward to
+                                        buy more
+                                        license of Assan again in the future.”
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-content-start">
+
+                                    <div class="relative mr-3">
+                                        <!--Avatar Image-->
+                                        <img class="relative w-12 h-12 rounded-xl shadow-lg"
+                                            src="assets/img/avatar/4.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-0 text-lg font-medium">Nala Goins</h5>
+                                        <small class="opacity-75">UI UX Designer, Paris</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Slide-->
+                        <div class="swiper-slide">
+                            <div class="relative">
+                                <div class="mb-7">
+                                    <div class="mb-3 text-orange-500">
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                    </div>
+                                    <p class="fw-normal fs-5 mb-0">
+                                        “ Their design delivery framework is fantastic and it really helped
+                                        us all get
+                                        on the same page from day one. The team has delivered a strong brand
+                                        identity and a seamless UI
+                                        which we can’t wait to put live and begin testing. ”
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-content-start">
+
+                                    <div class="relative mr-3">
+                                        <img class="relative w-12 h-12 rounded-xl shadow-lg"
+                                            src="assets/img/avatar/5.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-0 text-lg font-medium">Lilja Peltola</h5>
+                                        <small class="opacity-75">Full stack developer,
+                                            Toronto</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Slide-->
+                        <div class="swiper-slide">
+                            <div class="relative">
+                                <div class="mb-7">
+                                    <div class="mb-3 text-orange-500">
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                    </div>
+                                    <p class="fw-normal fs-5 mb-0">
+                                        “ Their design delivery framework is fantastic and it really helped
+                                        us all get
+                                        on the same page from day one. The team has delivered a strong brand
+                                        identity and a seamless UI
+                                        which we can’t wait to put live and begin testing. ”
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-content-start">
+
+                                    <div class="relative mr-3">
+                                        <!--Avatar Image-->
+                                        <img class="relative w-12 h-12 rounded-xl shadow-lg"
+                                            src="assets/img/avatar/6.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-0 text-lg font-medium">Adam Macofey</h5>
+                                        <small class="opacity-75">CEO, Physics, Stockholm</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Slide-->
+                        <div class="swiper-slide">
+                            <div class="relative">
+                                <div class="mb-7">
+                                    <div class="mb-3 text-orange-500">
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                    </div>
+                                    <p class="fw-normal fs-5 mb-0">
+                                        “ Loved working with the beautiful theme. Everything clean and
+                                        professional,
+                                        also very helpful throughout the customisation. Looking forward to
+                                        buy more
+                                        license of Assan again in the future.”
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-content-start">
+
+                                    <div class="relative mr-3">
+                                        <!--Avatar Image-->
+                                        <img class="relative w-12 h-12 rounded-xl shadow-lg"
+                                            src="assets/img/avatar/7.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-0 text-lg font-medium">Alex Lee</h5>
+                                        <small class="opacity-75">Developer, Barcelona</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Slide-->
+                        <div class="swiper-slide">
+                            <div class="relative">
+                                <div class="mb-7">
+                                    <div class="mb-3 text-orange-500">
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                    </div>
+                                    <p class="fw-normal fs-5 mb-0">
+                                        “ Their design delivery framework is fantastic and it really helped
+                                        us all get
+                                        on the same page from day one. The team has delivered a strong brand
+                                        identity and a seamless UI
+                                        which we can’t wait to put live and begin testing. ”
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-content-start">
+
+                                    <div class="relative mr-3">
+                                        <!--Avatar Image-->
+                                        <img class="relative w-12 h-12 rounded-xl shadow-lg"
+                                            src="assets/img/avatar/8.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-0 text-lg font-medium">Jayden Massey</h5>
+                                        <small class="opacity-75">UI UX master, Warsaw</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Slide-->
+                        <div class="swiper-slide">
+                            <div class="relative">
+                                <div class="mb-7">
+                                    <div class="mb-3 text-orange-500">
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                        <i class="bi bi-star-fill small"></i>
+                                    </div>
+                                    <p class="fw-normal fs-5 mb-0">
+                                        “ Their design delivery framework is fantastic and it really helped
+                                        us all get
+                                        on the same page from day one. The team has delivered a strong brand
+                                        identity and a seamless UI
+                                        which we can’t wait to put live and begin testing. ”
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-content-start">
+
+                                    <div class="relative mr-3">
+                                        <img class="relative w-12 h-12 rounded-xl shadow-lg"
+                                            src="assets/img/avatar/9.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-0 text-lg font-medium">Raymond Atkins</h5>
+                                        <small class="opacity-75">Entrepreneur, Los
+                                            Angeles</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--/end: Testimonials section-->
+
+        <!--begin: feature image section-->
+        <section class="relative bg-gray-50 dark:bg-gray-900 overflow-hidden">
+
+            <div class="container mx-auto py-16 lg:py-24 relative">
+                <div class="flex flex-wrap -mx-3 items-center">
+                    <!-- Left Column (Text Content) -->
+                    <div class="w-full px-3 lg:w-1/2 mb-7 lg:mb-0 lg:pr-32">
+                        <!-- Feature heading -->
+                        <h5 class="mb-5 text-gray-500 dark:text-gray-400 text-lg font-medium" data-animation="fadeInUp"
+                            data-delay=".1">We're creative</h5>
+                        <h2 class="text-4xl lg:text-5xl font-medium mb-7" data-animation="fadeInUp" data-delay=".15">
+                            Investing in the digital future.
+                        </h2>
+                        <!-- Feature description -->
+                        <p class="mb-9 text-gray-600 dark:text-gray-300" data-animation="fadeInUp" data-delay=".2">
+                            Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.
+                        </p>
+
+                        <!-- Feature buttons -->
+                        <div class="flex flex-col md:flex-row items-start md:items-center" data-animation="fadeInUp"
+                            data-delay=".25">
+                            <a href="#!"
+                                class="btn bg-white text-gray-700 shadow-sm mb-4 md:mb-0 hover:bg-indigo-500 hover:text-white md:mr-4">Contact
+                                us</a>
+                            <span class="text-gray-600 dark:text-gray-400">Or call us <strong>(123)
+                                    123-4567</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- Right Column (Image Content) -->
+                    <div class="w-full px-3 lg:w-1/2 lg:ml-auto relative" data-animation="fadeInLeft" data-delay=".2">
+                        <!-- Feature image -->
+                        <div class="bg-mask">
+                            <img src="assets/img/960x900/2.jpg" alt="" class="mask-image mask-blob-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/end: feature image section-->
+
+
+        <!--begin: Process section-->
+        <section class="relative overflow-hidden bg-indigo-500 text-white">
+            <div class="container mx-auto py-16 lg:py-24 relative z-[1]0">
+                <!-- Section Heading -->
+                <div class="flex justify-center">
+                    <div class="text-center lg:w-8/12">
+                        <div class="mb-5" data-animation="fadeInUp" data-delay=".1">
+                            <h6 class="text-white/75 font-medium text-lg">Data-driven methodologies.</h6>
+                        </div>
+                        <div class="mb-7" data-text-split>
+                            <h2 class="text-4xl lg:text-5xl font-medium">Our work process</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process Steps -->
+                <div class="flex flex-wrap -mx-3">
+                    <!-- Step 1: Collaboration -->
+                    <div class="relative w-full px-3 lg:w-4/12 mt-8" data-animation="fadeInUp" data-delay=".1">
+                        <span
+                            class="absolute left-1/2 transform -translate-x-1/2 text-7xl font-medium text-white opacity-10">01</span>
+                        <div class="relative pt-10">
+                            <h5 class="mb-4 text-white text-xl font-medium">Collaboration</h5>
+                            <p class="text-white opacity-75 lg:w-3/4">
+                                Lorem ipsum dolor sit amet, sed do eiusmod tempor labore et dolore magna aliqua. Ut enim
+                                ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip commodo consequat.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Execution -->
+                    <div class="relative w-full px-3 lg:w-4/12 mt-8" data-animation="fadeInUp" data-delay=".2">
+                        <span
+                            class="absolute left-1/2 transform -translate-x-1/2 text-7xl font-medium text-white opacity-10">02</span>
+                        <div class="relative pt-10">
+                            <h5 class="mb-4 text-white text-xl font-medium">Execution</h5>
+                            <p class="text-white opacity-75 lg:w-3/4">
+                                Lorem ipsum dolor sit amet, sed do eiusmod tempor labore et dolore magna aliqua. Ut enim
+                                ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip commodo consequat.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Financial Intelligence -->
+                    <div class="relative w-full px-3 lg:w-4/12 mt-8" data-animation="fadeInUp" data-delay=".3">
+                        <span
+                            class="absolute left-1/2 transform -translate-x-1/2 text-7xl font-medium text-white opacity-10">03</span>
+                        <div class="relative pt-10">
+                            <h5 class="mb-4 text-xl text-white font-medium">Financial Intelligence</h5>
+                            <p class="text-white opacity-75 lg:w-3/4">
+                                Lorem ipsum dolor sit amet, sed do eiusmod tempor labore et dolore magna aliqua. Ut enim
+                                ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip commodo consequat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/end: Process section-->
+
+
+
+        <!--begin: Blog section-->
+        <section class="relative bg-gray-50 dark:bg-gray-900 overflow-hidden">
+            <div class="container mx-auto py-9 lg:py-16 relative z-[1]0">
+                <!-- Heading Row -->
+                <div class="flex flex-col md:flex-row items-end mb-7">
+                    <div class="w-full md:w-3/5 mb-4 md:mb-0">
+                        <div class="relative">
+                            <h2 data-text-split class="text-4xl lg:text-5xl font-medium">
+                                Insights, thoughts and announcements
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/5 text-right hidden md:block">
+                        <!--Action button-->
+                        <a href="#!"
+                            class="group overflow-hidden inline-flex items-center justify-center w-20 h-20 border border-indigo-500 rounded-full relative text-indigo-500">
+                            <div class="btn-rise-bg bg-indigo-500
+                 transition-all
+                 duration-[500ms]
+                 absolute w-[125%] h-full left-1/2 top-0 rounded-full opacity-0 group-hover:opacity-100 group-hover:rounded
+                  translate-y-[105%] -translate-x-1/2 group-hover:translate-y-0 pointer-events-none"></div>
+                            <span
+                                class="text-sm block relative group-hover:text-white transition-all capitalize duration-300">blog</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Blog Articles -->
+                <div class="flex flex-wrap -mx-3">
+                    <!-- Article 1 -->
+                    <div class="w-full px-3 lg:w-1/3 mt-6">
+                        <article class="transition-transform transform hover:-translate-y-2 relative group">
+                            <div class="relative rounded-lg overflow-hidden">
+                                <img src="assets/img/960x640/3.jpg" class="w-full h-auto" alt="Blog Image 1">
+                            </div>
+                            <div class="pt-4">
+                                <h4 class="text-xl link-multiline font-medium">
+                                    The recipe for excellent design management
+                                </h4>
+                                <p class="text-sm text-gray-400 mt-3">02 May</p>
+                            </div>
+                            <a href="#" class="absolute inset-0"></a>
+                        </article>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div class="w-full px-3 lg:w-1/3 mt-6">
+                        <article class="transition-transform transform hover:-translate-y-2 relative group">
+                            <div class="relative rounded-lg overflow-hidden">
+                                <img src="assets/img/960x640/4.jpg" class="w-full h-auto" alt="Blog Image 2">
+                            </div>
+                            <div class="pt-4">
+                                <h4 class="text-xl font-medium link-multiline">
+                                    How to use social media to invent or reinvent yourself
+                                </h4>
+                                <p class="text-sm text-gray-400 mt-3">01 May</p>
+                            </div>
+                            <a href="#" class="absolute inset-0"></a>
+                        </article>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="w-full px-3 lg:w-1/3 mt-6">
+                        <article class="transition-transform transform hover:-translate-y-2 relative group">
+                            <div class="relative rounded-lg overflow-hidden">
+                                <img src="assets/img/960x640/5.jpg" class="w-full h-auto" alt="Blog Image 3">
+                            </div>
+                            <div class="pt-4">
+                                <h4 class="text-xl font-medium link-multiline">
+                                    Digital design trends in 2025
+                                </h4>
+                                <p class="text-sm text-gray-400 mt-3">21 April</p>
+                            </div>
+                            <a href="#" class="absolute inset-0"></a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/end: Blog section-->
+
+
+
+        <!--begin: Newsletter section-->
+        <section class="relative bg-gray-50 dark:bg-gray-900 py-8">
+            <!--begin:Divider shape-->
+            <svg class="w-full absolute left-0 bottom-0 z-[1] text-black" height="120" fill="currentColor"
+                preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
+                style="transform: rotate(180deg) scaleX(-1);">
+                <path d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54
+     16.88 218.2 35.26 69.27 18 138.3 24.88 209.4
+     13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z" opacity=".25" />
+                <path d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15
+      60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39
+      62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 
+      113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z" opacity=".5" />
+                <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63
+    112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+            </svg>
+            <!--/end:Divider shape-->
+            <div class="container relative z-[1]">
+                <div class="rounded-xl mx-auto bg-white dark:bg-gray-800 py-7 px-4 lg:px-7 lg:w-3/5 relative -mb-12">
+                    <!--Title-->
+                    <h5 class="mb-4 text-xl font-medium">Get updates direct to your inbox</h5>
+
+                    <!--Newsletter form-->
+                    <form>
+                        <div class="relative flex items-center">
+                            <!--Input-->
+                            <input type="email" required placeholder="Enter Work email" class="input flex-grow h-12">
+
+                            <!--Submit button-->
+                            <div class="ml-2">
+                                <button type="submit"
+                                    class="h-12 duration-300 flex items-center justify-center px-5 rounded-xl text-white bg-indigo-500 hover:bg-indigo-600">
+                                    <i class="bi bi-arrow-right fs-3"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--/end: Newsletter section-->
+    </main>
+
+    @@include('./partials/footers/footer-5.html')
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+
+
+    <!--:Gsap plugins - required before theme js for animations:-->
+    <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+    <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+    <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+    <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+    <!-- Theme script -->
+    <script src="assets/js/theme.bundle.min.js"></script>
+
+    <!--begin:Swiper slider-->
+    <script src="assets/vendor/node_modules/js/swiper-bundle.min.js"></script>
+    <script>
+        //Main Hero Slider
+        var sliderThumbs = new Swiper('.progress-swiper-thumbs', {
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            history: false,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 16,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 16,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 16,
+                },
+            },
+            on: {
+                'afterInit': function (swiper) {
+                    swiper.el.querySelectorAll('.swiper-pagination-progress-inner')
+                        .forEach($progress => $progress.style.transitionDuration =
+                            `${swiper.params.autoplay.delay}ms`)
+                }
+            }
+        });
+        var swiperClassic = new Swiper(".swiper-classic", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            grabCursor: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            effect: "creative",
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: ["-20%", 0, -1],
+                },
+                next: {
+                    translate: ["100%", 0, 0],
+                },
+            },
+            thumbs: {
+                swiper: sliderThumbs
+            },
+        });
+
+        //swiper partners
+        var swiperPartners5 = new Swiper(".swiper-partners", {
+            slidesPerView: 2,
+            loop: true,
+            spaceBetween: 16,
+            autoplay: true,
+            breakpoints: {
+                768: {
+                    slidesPerView: 4
+                },
+                1024: {
+                    slidesPerView: 5
+                }
+            },
+            pagination: {
+                el: ".swiper-partners-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper-partners-button-next",
+                prevEl: ".swiper-partners-button-prev"
+            }
+        });
+
+        //swiper Testimonials
+        var swiperTestimonails = new Swiper(".swiper-testimonials", {
+            autoHeight: true,
+            spaceBetween: 30,
+            centeredSlides: false,
+            freeMode: true,
+            loop: true,
+            speed: 3000,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 16
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 16
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            },
+            pagination: {
+                el: ".swiper-testimonials-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper-testimonials-button-next",
+                prevEl: ".swiper-testimonials-button-prev"
+            }
+        });
+
+    </script>
+    <!--/end:Swiper slider-->
+</body>
+
+</html>

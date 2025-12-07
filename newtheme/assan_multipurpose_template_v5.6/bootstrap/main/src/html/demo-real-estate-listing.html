@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="assets/img/favicon.ico" type="image/ico" />
+
+        <!--Vendors css-->
+        <link rel="stylesheet" href="assets/fonts/bootstrap-icons/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="assets/fonts/iconsmind/iconsmind.css" />
+        <link rel="stylesheet" href="assets/vendor/node_modules/css/choices.min.css">
+         <link rel="stylesheet" href="assets/vendor/node_modules/css/glightbox.min.css"/>
+        <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css" />
+        <link href="assets/vendor/node_modules/css/aos.css" rel="stylesheet">
+         <!--:Google Fonts:-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <!-- Main CSS -->
+        <link href="assets/css/theme-teal.min.css" rel="stylesheet" />
+
+        <title>Assan 4</title>
+    </head>
+
+    <body>
+        @@include('./partials/preloader.html')
+
+        <!--Header Start-->
+        <header class="z-fixed pt-2 pt-lg-3 header-absolute-top header-sticky">
+            <div class="container position-relative">
+                <div class="row">
+                    <div class="col-6 d-none d-lg-block">
+                        <div class="d-flex">
+                            <a href="tel:+011234567890" class="me-3 me-lg-4">
+                                <i class="bi bi-phone"></i>
+                                <small>+01 1234 567 890</small>
+                            </a>
+                            <a href="mailto:consult@company.com" class="me-3 me-lg-4">
+                               <i class="bi bi-envelope"></i>
+                                <small>estate@assan.com</small>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 ms-auto">
+                        <div class="d-flex justify-content-end">
+                            <a href="#!">
+                               <i class="bi bi-person"></i>
+                                <small>Sign In</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light"><div class="container position-relative">
+                <a class="navbar-brand width-3x" href="index.html">
+                    <img src="assets/img/logo/logo-a.svg" alt="" class="img-fluid navbar-brand-light">
+                    <img src="assets/img/logo/logo-a-white.svg" alt="" class="img-fluid navbar-brand-dark">
+                </a>
+                <div class="d-flex align-items-center navbar-no-collapse-items order-lg-last">
+                    <button class="navbar-toggler order-last" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i></i>
+                        </span>
+                    </button>
+                    <div class="nav-item me-2 ms-lg-5 me-lg-0">
+                        <a href="demo-real-estate-add-listing.html" class="btn btn-warning btn-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="16" height="16"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M12 4v16m8-8H4" />
+                            </svg> Submit Property
+                        </a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="mainNavbarTheme">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Home</a>
+                            <!--Dropdown-->
+                            <div class="dropdown-menu">
+                                <a href="demo-real-estate.html" class="dropdown-item">Home default</a>
+                                <a href="demo-real-estate-2.html" class="dropdown-item">Home option</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active"
+                                data-bs-toggle="dropdown">Listing</a>
+                            <!--Dropdown-->
+                            <div class="dropdown-menu">
+                                <a href="demo-real-estate-listing-grid.html" class="dropdown-item">Listing
+                                    Grid</a>
+                                <a href="demo-real-estate-listing-row.html" class="dropdown-item">Listing
+                                    Row</a>
+                                    <a href="demo-real-estate-add-listing.html" class="dropdown-item">Listing
+                                        Add</a>
+                                        <a href="demo-real-estate-listing.html" class="dropdown-item">Listing Detail</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div> </div>
+            </nav>
+        </header>
+        <main>
+            <!--hero-->
+            <section class="position-relative">
+                <div class="container pt-12 pb-9 position-relative z-1">
+                    <div class="row pt-3 pt-lg-9 justify-content-between align-items-center">
+                        <div class="col-xl-7 mb-5 mb-xl-0">
+                            <h5 class="text-body-tertiary mb-4">Bristol, UK</h5>
+                            <h1 class="display-4 mb-0">
+                                Villa in Coral Gables
+                            </h1>
+                        </div>
+                        <div class="col-xl-5">
+                            <div class="d-flex align-items-center justify-content-xl-end">
+                                <a href="#!" class="btn btn-primary flex-shrink-0 me-3"><i class="bi bi-bookmark me-2"></i> Save to favorites</a>
+                                <!--Share options-->
+                            <div class="dropdown text-end">
+                                <a href="#" data-bs-toggle="dropdown" class="btn btn-light dropdown-toggle">
+                                    <i class="bi bi-share me-2"></i> Share this Property
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end mt-2">
+                                    <a href="#!" class="dropdown-item">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-link-45deg fs-5 me-2"></i>
+                                            <span>Copy link</span>
+                                        </div>
+                                      </a>
+                                       <a href="#!" class="dropdown-item">
+                                          <div class="d-flex align-items-center">
+                                              <i class="bi bi-facebook fs-6 me-2"></i>
+                                              <span>Share via facebook</span>
+                                          </div>
+                                        </a>
+                                        <a href="#!" class="dropdown-item">
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-twitter-x fs-6 me-2"></i>
+                                                <span>Share via Twitter</span>
+                                            </div>
+                                          </a>
+                                          <a href="#!" class="dropdown-item">
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-linkedin fs-6 me-2"></i>
+                                                <span>Share via linkedin</span>
+                                            </div>
+                                          </a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                
+                <div class="container-fluid position-relative">
+                    
+                    <div class="row">
+                        <div class="col-sm-6 mb-4">
+                          <a href="assets/img/estate/listing/detail1.jpg" data-glightbox data-gallery="gallery02" class="d-block">
+                            <img src="assets/img/estate/listing/detail1.jpg" class="img-fluid rounded-4 shadow-lg" alt="">
+                          </a>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <a href="assets/img/estate/listing/detail2.jpg" data-glightbox data-gallery="gallery02" class="d-block">
+                              <img src="assets/img/estate/listing/detail2.jpg" class="img-fluid rounded-4 shadow-lg" alt="">
+                            </a>
+                          </div>
+                          <div class="col-6 mb-4">
+                            <a href="assets/img/estate/listing/detail3.jpg" data-glightbox data-gallery="gallery02" class="d-block">
+                              <img src="assets/img/estate/listing/detail3.jpg" class="img-fluid rounded-4 shadow-lg" alt="">
+                            </a>
+                          </div>
+                          <div class="col-sm-6 mb-4">
+                            <a href="assets/img/estate/listing/detail4.jpg" data-glightbox data-gallery="gallery02" class="d-block">
+                              <img src="assets/img/estate/listing/detail4.jpg" class="img-fluid rounded-4 shadow-lg" alt="">
+                            </a>
+                          </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container py-9 py-lg-11">
+                    <div class="row mb-5 align-items-center">
+                        
+                        
+                        <div class="col-sm-4 mb-4 col-6">
+                            <small class="text-body-tertiary mb-1 d-block">ID:</small>
+                            <h5 class="mb-0 pb-4 border-bottom">0011</h5>
+                        </div>
+                        <div class="col-sm-4 mb-4 col-6">
+                            <small class="text-body-tertiary mb-1 d-block">Property type:</small>
+                            <h5 class="mb-0 pb-4 border-bottom">Apartment</h5>
+                        </div>
+                        <div class="col-sm-4 mb-4 col-12">
+                            <small class="text-body-tertiary mb-1 d-block">Location</small>
+                            <h5 class="mb-0 pb-4 border-bottom">Bristol, UK</h5>
+                        </div>
+                        <div class="col-12 mb-4 col-sm-8">
+                            <small class="text-body-tertiary mb-1 d-block">Price</small>
+                            <h5 class="display-5 mb-0 pb-4 border-bottom">$125,000</h5>
+                        </div>
+                        <div class="col-12 col-sm-4 mb-4">
+                            <a href="#!" class="btn w-100 d-block btn-warning">Arrange a visit</a>
+                        </div>
+                        <div class="col-sm-4 mb-4 col-6">
+                            <small class="text-body-tertiary mb-1 d-block">Bedrooms:</small>
+                            <h5 class="mb-0 pb-4 border-bottom">4</h5>
+                        </div>
+                        <div class="col-sm-4 mb-4 col-6">
+                            <small class="text-body-tertiary mb-1 d-block">Bathrooms:</small>
+                            <h5 class="mb-0 pb-4 border-bottom">4</h5>
+                        </div>
+                        <div class="col-sm-4 mb-4 col-6">
+                            <small class="text-body-tertiary mb-1 d-block">WIFI</small>
+                            <h5 class="mb-0 pb-4 border-bottom">YES</h5>
+                        </div>
+                        <div class="col-sm-4 mb-4 col-6 col-lg-3">
+                            <small class="text-body-tertiary mb-1 d-block">Parking</small>
+                            <h5 class="mb-0 pb-4 border-bottom">YES</h5>
+                        </div>
+                        <div class="col-sm-4 mb-4 col-6 col-lg-3">
+                            <small class="text-body-tertiary mb-1 d-block">Swimming pool</small>
+                            <h5 class="mb-0 pb-4 border-bottom">YES</h5>
+                        </div>
+                        <div class="col-sm-4 mb-4 col-6 col-lg-3">
+                            <small class="text-body-tertiary mb-1 d-block">Area</small>
+                            <h5 class="mb-0 pb-4 border-bottom">3200 sq. ft.</h5>
+                        </div>
+                        <div class="col-sm-4 mb-4 col-6 col-lg-3">
+                            <small class="text-body-tertiary mb-1 d-block">Year in Built</small>
+                            <h5 class="mb-0 pb-4 border-bottom">2016</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        
+                        <div class="col-md-6 mb-7 mb-md-0">
+                            <small class="d-block text-body-secondary mb-2">Description:</small>
+                            <p>
+                                Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups  the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.
+                            </p>
+                            <p class="pb-3 mb-5 border-bottom">
+                                The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.
+                            </p>
+
+                            <small class="d-block text-body-secondary mb-4">Contact Agent:</small>
+                            <div class="d-flex align-items-center">
+                                <div class="me-4">
+                                    <img src="assets/img/avatar/4.jpg" class="img-fluid avatar xl rounded-circle" alt="">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1">Emily Doe</h6>
+                                    <p class="small mb-1 text-body-secondary"> <i class="bi bi-phone"></i> +01 123-4567-890</p>
+                                    <p class="mb-0"><a href="#!" class="link-hover-underline">Contact Agent</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Floor plan:</h5>
+                            </div>
+                            <div class="card-body">
+                             <img src="assets/img/estate/floor-plan.jpg" class="img-fluid" alt="">
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-body-tertiary">
+                <div class="container py-9 py-lg-11">
+                    <div class="d-flex mb-6 align-items-center">
+                        <h3 class="mb-0 display-6">Nearby Properties</h3>
+                        <div class="flex-grow-1 border-top ms-3"></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6 col-sm-10 mb-5 mb-lg-0">
+                            <!--Card-property-2-->
+                            <div class="position-relative">
+                                <a href="#!" class="d-block card-hover overflow-hidden rounded-4">
+                                    <!--Image-->
+                                    <img src="assets/img/estate/listing/1.jpg" class="img-fluid img-zoom" alt="">
+                                    <!--Background-->
+                                    <div class="position-absolute start-0 top-0 w-100 h-100 bg-gradient-dark opacity-50">
+                                    </div>
+                                    <div class="position-absolute start-0 top-0 w-100 pt-3 px-3">
+                                        <span class="badge text-bg-primary">For Sale</span>
+                                    </div>
+                                    <div class="text-white d-flex justify-content-between w-100 px-3 pb-4 position-absolute start-0 bottom-0 w-100 h-100 align-items-end">
+                                        <div class="flex-grow-1 overflow-hidden pe-4">
+                                            <h5 class="mb-3">$453,675</h5>
+                                            <!--Location-->
+                                            <p class="mb-0 d-flex">
+                                                <i class="bi bi-geo-alt me-1"></i>
+                                                <span class="small text-truncate">Manchester</span>
+                                            </p>
+                                        </div>
+                                        <!--Agent-->
+                                        <div class="d-flex align-items-center flex-shrink-0">
+                                            <img src="assets/img/avatar/1.jpg" alt="" class="flex-shrink-0 flex-shrink-0 avatar sm rounded-circle me-2 img-fluid">
+                                            <span class="small">
+                                                Sonia
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="card-body pt-4">
+                                    <a href="#!" class="d-block mb-4">
+                                        <h5>Villa in Coral Gables</h5>
+                                    </a>
+                                    <div class="row">
+                                        <div class="col-3" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                            data-bs-original-title="Bedrooms">
+                                            <div class="d-flex align-items-center">
+                                             <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M20 9.557V3h-2v2H6V3H4v6.557C2.81 10.25 2 11.525 2 13v4a1 1 0 0 0 1 1h1v4h2v-4h12v4h2v-4h1a1 1 0 0 0 1-1v-4c0-1.475-.811-2.75-2-3.443zM18 7v2h-5V7h5zM6 7h5v2H6V7zm14 9H4v-3c0-1.103.897-2 2-2h12c1.103 0 2 .897 2 2v3z"></path></svg>
+                                                <strong class="small">4</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 border-start border-end" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                            data-bs-original-title="Bathrooms">
+                                            <div class="d-flex align-items-center">
+                                                <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M21 10H7V7c0-1.103.897-2 2-2s2 .897 2 2h2c0-2.206-1.794-4-4-4S5 4.794 5 7v3H3a1 1 0 0 0-1 1v2c0 2.606 1.674 4.823 4 5.65V22h2v-3h8v3h2v-3.35c2.326-.827 4-3.044 4-5.65v-2a1 1 0 0 0-1-1zm-1 3c0 2.206-1.794 4-4 4H8c-2.206 0-4-1.794-4-4v-1h16v1z"></path></svg>
+                                                <strong class="small">2</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-6" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                            data-bs-original-title="Area">
+                                            <div class="d-flex align-items-center">
+                                                <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2zm16.002 14H5V5h14l.002 14z"></path><path fill="currentColor" d="M15 12h2V7h-5v2h3zm-3 3H9v-3H7v5h5z"></path></svg>
+                                                <strong class="small">6400 Sq Ft</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-10 mb-5 mb-lg-0">
+                            <!--Card-property-2-->
+                            <div class="position-relative">
+                                <a href="#!" class="d-block card-hover overflow-hidden rounded-4 position-relative">
+                                    <!--Image-->
+                                    <img src="assets/img/estate/listing/2.jpg" class="img-fluid rounded-4 img-zoom" alt="">
+                                    <!--Background-->
+                                    <div class="position-absolute start-0 top-0 w-100 h-100 bg-gradient-dark opacity-75">
+                                    </div>
+                                    <div class="position-absolute start-0 top-0 w-100 pt-3 px-3">
+                                        <span class="badge text-bg-warning">For Rent</span>
+                                    </div>
+                                    <div class="text-white d-flex justify-content-between w-100 px-3 pb-4 position-absolute start-0 bottom-0 w-100 h-100 align-items-end">
+                                        <div class="flex-grow-1 overflow-hidden pe-4">
+                                            <h5 class="mb-3">$953,000</h5>
+                                            <!--Location-->
+                                            <p class="mb-0 d-flex">
+                                                <i class="bi bi-geo-alt me-1"></i>
+                                                <span class="small text-truncate">Liverpool</span>
+                                            </p>
+                                        </div>
+                                        <!--Agent-->
+                                        <div class="d-flex align-items-center flex-shrink-0">
+                                            <img src="assets/img/avatar/2.jpg" alt="" class="flex-shrink-0 flex-shrink-0 avatar sm rounded-circle me-2 img-fluid">
+                                            <span class="small">
+                                                Monika
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="card-body pt-4">
+                                    <a href="#!" class="d-block mb-4">
+                                        <h5>Located in the heart of city</h5>
+                                    </a>
+                                    <div class="row">
+                                        <div class="col-3" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                            data-bs-original-title="Bedrooms">
+                                            <div class="d-flex align-items-center">
+                                             <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M20 9.557V3h-2v2H6V3H4v6.557C2.81 10.25 2 11.525 2 13v4a1 1 0 0 0 1 1h1v4h2v-4h12v4h2v-4h1a1 1 0 0 0 1-1v-4c0-1.475-.811-2.75-2-3.443zM18 7v2h-5V7h5zM6 7h5v2H6V7zm14 9H4v-3c0-1.103.897-2 2-2h12c1.103 0 2 .897 2 2v3z"></path></svg>
+                                                <strong class="small">4</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 border-start border-end" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                            data-bs-original-title="Bathrooms">
+                                            <div class="d-flex align-items-center">
+                                                <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21 10H7V7c0-1.103.897-2 2-2s2 .897 2 2h2c0-2.206-1.794-4-4-4S5 4.794 5 7v3H3a1 1 0 0 0-1 1v2c0 2.606 1.674 4.823 4 5.65V22h2v-3h8v3h2v-3.35c2.326-.827 4-3.044 4-5.65v-2a1 1 0 0 0-1-1zm-1 3c0 2.206-1.794 4-4 4H8c-2.206 0-4-1.794-4-4v-1h16v1z"></path></svg>
+                                                <strong class="small">2</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-6" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                            data-bs-original-title="Area">
+                                            <div class="d-flex align-items-center">
+                                                <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2zm16.002 14H5V5h14l.002 14z"></path><path fill="currentColor" d="M15 12h2V7h-5v2h3zm-3 3H9v-3H7v5h5z"></path></svg>
+                                                <strong class="small">6400 Sq Ft</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-10">
+                            <!--Card-property-2-->
+                            <div class="position-relative">
+                                <a href="#!" class="d-block card-hover overflow-hidden rounded-4 position-relative">
+                                    <!--Image-->
+                                    <img src="assets/img/estate/listing/4.jpg" class="img-fluid img-zoom" alt="">
+                                    <!--Background-->
+                                    <div class="position-absolute rounded-4 start-0 top-0 w-100 h-100 bg-gradient-dark opacity-50">
+                                    </div>
+                                    <div class="position-absolute start-0 top-0 w-100 pt-3 px-3">
+                                        <span class="badge text-bg-primary">For Sale</span>
+                                    </div>
+                                    <div class="text-white d-flex justify-content-between w-100 px-3 pb-4 position-absolute start-0 bottom-0 w-100 h-100 align-items-end">
+                                        <div class="flex-grow-1 overflow-hidden pe-4">
+                                            <h5 class="mb-3">$399,000</h5>
+                                            <!--Location-->
+                                            <p class="mb-0 d-flex">
+                                                <i class="bi bi-geo-alt me-1"></i>
+                                                <span class="small text-truncate">Bristol</span>
+                                            </p>
+                                        </div>
+                                        <!--Agent-->
+                                        <div class="d-flex align-items-center flex-shrink-0">
+                                            <img src="assets/img/avatar/6.jpg" alt="" class="flex-shrink-0 flex-shrink-0 avatar sm rounded-circle me-2 img-fluid">
+                                            <span class="small">
+                                                Adam
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="card-body pt-4">
+                                    <a href="#!" class="d-block mb-4">
+                                        <h5>Standing in the heart of the city</h5>
+                                    </a>
+                                    <div class="row">
+                                        <div class="col-3" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                            data-bs-original-title="Bedrooms">
+                                            <div class="d-flex align-items-center">
+                                             <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M20 9.557V3h-2v2H6V3H4v6.557C2.81 10.25 2 11.525 2 13v4a1 1 0 0 0 1 1h1v4h2v-4h12v4h2v-4h1a1 1 0 0 0 1-1v-4c0-1.475-.811-2.75-2-3.443zM18 7v2h-5V7h5zM6 7h5v2H6V7zm14 9H4v-3c0-1.103.897-2 2-2h12c1.103 0 2 .897 2 2v3z"></path></svg>
+                                                <strong class="small">4</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 border-start border-end" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                            data-bs-original-title="Bathrooms">
+                                            <div class="d-flex align-items-center">
+                                                <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M21 10H7V7c0-1.103.897-2 2-2s2 .897 2 2h2c0-2.206-1.794-4-4-4S5 4.794 5 7v3H3a1 1 0 0 0-1 1v2c0 2.606 1.674 4.823 4 5.65V22h2v-3h8v3h2v-3.35c2.326-.827 4-3.044 4-5.65v-2a1 1 0 0 0-1-1zm-1 3c0 2.206-1.794 4-4 4H8c-2.206 0-4-1.794-4-4v-1h16v1z"></path></svg>
+                                                <strong class="small">2</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-6" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                            data-bs-original-title="Area">
+                                            <div class="d-flex align-items-center">
+                                                <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2zm16.002 14H5V5h14l.002 14z"></path><path fill="currentColor" d="M15 12h2V7h-5v2h3zm-3 3H9v-3H7v5h5z"></path></svg>
+                                                <strong class="small">6400 Sq Ft</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--Footer Start-->
+        @@include('./partials/footers/footer-9.html')
+
+        <!-- begin Back to Top button -->
+        <a href="#" class="toTop"><svg class="progress-circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="0, 251.2"></circle>
+</svg>
+            <i class="bi bi-chevron-up"></i>
+        </a>
+        <!-- scripts -->
+        <script src="assets/js/theme.bundle.min.js"></script>
+        
+    </body>
+
+</html>

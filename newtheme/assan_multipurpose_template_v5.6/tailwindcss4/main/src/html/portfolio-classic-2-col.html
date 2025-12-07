@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    <!--Swiper slider-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+    
+    @@include('./partials/head-includes.html')
+    <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+    <!--begin:Header-->
+    <header class="header-transparent sticky-fixed">
+
+        <!--begin:navbar-->
+        <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+            <!--Navbar-fixed-background-->
+            <div class="navbar-fixed-bg absolute"></div>
+            <div class="container relative flex flex-wrap items-center justify-center relative">
+                <!--begin:logo-->
+                <a class="navbar-brand relative w-24 block" href="index.html">
+                    <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+                    <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+                </a>
+                <!--end:logo-->
+
+                <!--begin:navbar-no-collapse-items-->
+                <div class="flex items-center shrink-0 ml-auto lg:order-last">
+                    <!--Navbar toggler button-->
+                    <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i></i>
+                        </span>
+                    </button>
+                    <!--Button-->
+                    <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+                        <a href="#" class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+                    </div>
+                </div>
+                <!--end:navbar-no-collapse-items-->
+
+                <!--begin:navbar-collapse-->
+                <div class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+                    id="mainNavbarTheme">
+                    @@include('./partials/headers/default-navbar-items.html',{"page": "portfolio"})
+                </div>
+                <!--end:navbar-collapse-->
+            </div>
+
+        </nav>
+        <!--end:navbar-->
+    </header>
+    <!--end:header-->
+
+
+    <main class="main-content" id="main-content">
+        <section class="relative overflow-hidden bg-black rounded-b-2xl text-white">
+            <!--:Decoration bg:-->
+            <img src="assets/img/backgrounds/bg8.jpg"
+                class="w-full h-full object-cover absolute opacity-25 right-0 top-0" alt="">
+            <div class="container relative pb-12 lg:pb-24 pt-32 lg:pt-48">
+                <div class="flex flex-wrap -mx-3 items-center">
+                    <div class="lg:order-last w-full mx-auto px-3 lg:w-8/12 me-auto relative z-[1]">
+                        <h1 class="text-5xl lg:text-6xl text-center font-medium mb-7">Selected works</h1>
+
+                        <!--:Breadcrumbs:-->
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb flex items-center justify-center">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li><i class="bi bi-chevron-right mx-3 text-sm opacity-50"></i></li>
+                                <li class="breadcrumb-item"><a href="#">Portfolio</a></li>
+                                <li><i class="bi bi-chevron-right mx-3 text-sm opacity-50"></i></li>
+                                <li class="breadcrumb-item active [&.active]:opacity-50" aria-current="page">Classic 2
+                                    col</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!--/.row-->
+        </section>
+
+        <section class="relative">
+            <div class="container py-16 lg:py-24">
+                <!-- Nav -->
+                <ul class="mb-5 flex nav nav-filter items-center justify-end gap-4">
+                    <li class="nav-item text-xs text-gray-400 flex mr-2">Filter by:</li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-bs-toggle="pill" data-filter="*"
+                            data-bs-target="#projects">
+                            All
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link small" href="#" data-bs-toggle="pill" data-filter=".bootstrap"
+                            data-bs-target="#bootstrap">
+                            Bootstrap
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="pill" data-filter=".javascript"
+                            data-bs-target="#javascript">
+                            JS
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="pill" data-filter=".figma" data-bs-target="#figma">
+                            Figma
+                        </a>
+                    </li>
+                </ul>
+
+                <div id="projects" data-isotope='{"layoutMode": "masonry"}' class="flex flex-wrap -mx-3">
+
+                    <div class="w-full px-3 md:w-6/12 mb-9 bootstrap grid-item">
+                        <a href="#!" class="group block">
+                            <div class="overflow-hidden relative mb-5 rounded-3xl">
+                                <img src="assets/img/projects/1.jpg" alt=""
+                                    class="max-w-full transition-all duration-300 group-hover:scale-125">
+                            </div>
+                            <h5 class="mb-2 text-xl font-medium">Sed quia non numquam</h5>
+                            <span class="block text-gray-500">UI / UX</span>
+                        </a>
+                    </div>
+                    <div class="w-full px-3 md:w-6/12 mb-9 figma grid-item">
+                        <a href="#!" class="group block">
+                            <div class="overflow-hidden relative mb-5 rounded-3xl">
+                                <img src="assets/img/projects/2.jpg" alt=""
+                                    class="max-w-full transition-all duration-300 group-hover:scale-125">
+                            </div>
+                            <h5 class="mb-2 text-xl font-medium">Ogólnie znana teza</h5>
+                            <span class="block text-gray-500">Javascript</span>
+                        </a>
+                    </div>
+                    <div class="w-full px-3 md:w-6/12 mb-9 bootstrap grid-item">
+                        <a href="#!" class="group block">
+                            <div class="overflow-hidden relative mb-5 rounded-3xl">
+                                <img src="assets/img/projects/3.jpg" alt=""
+                                    class="max-w-full transition-all duration-300 group-hover:scale-125">
+                            </div>
+                            <h5 class="mb-2 text-xl font-medium">El punto de</h5>
+                            <span class="block text-gray-500">Business, Marketing</span>
+                        </a>
+                    </div>
+                    <div class="w-full px-3 md:w-6/12 mb-9 figma grid-item">
+                        <a href="#!" class="group block">
+                            <div class="overflow-hidden relative mb-5 rounded-3xl">
+                                <img src="assets/img/projects/4.jpg" alt=""
+                                    class="max-w-full transition-all duration-300 group-hover:scale-125">
+                            </div>
+                            <h5 class="mb-2 text-xl font-medium">Sed quia non numquam</h5>
+                            <span class="block text-gray-500">UI / UX</span>
+                        </a>
+                    </div>
+                    <div class="w-full px-3 md:w-6/12 mb-9 md:mb-0 bootstrap grid-item">
+                        <a href="#!" class="group block">
+                            <div class="overflow-hidden relative mb-5 rounded-3xl">
+                                <img src="assets/img/projects/5.jpg" alt=""
+                                    class="max-w-full transition-all duration-300 group-hover:scale-125">
+                            </div>
+                            <h5 class="mb-2 text-xl font-medium">Excepteur sint occaecat</h5>
+                            <span class="block text-gray-500">Product Design</span>
+                        </a>
+                    </div>
+                    <div class="w-full px-3 md:w-6/12 javascript grid-item">
+                        <a href="#!" class="group block">
+                            <div class="overflow-hidden relative mb-5 rounded-3xl">
+                                <img src="assets/img/projects/6.jpg" alt=""
+                                    class="max-w-full transition-all duration-300 group-hover:scale-125">
+                            </div>
+                            <h5 class="mb-2 text-xl font-medium">Sed quia non numquam</h5>
+                            <span class="block text-gray-500">UI / UX</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/section-->
+
+        <section class="bg-indigo-500 text-white relative py-16 lg:py-24 overflow-hidden">
+            <div class="container">
+                <div class="px-4 md:w-10/12 mx-auto md:flex md:items-center">
+                    <div class="mb-7 md:mb-0 md:pr-12 lg:pr-16 flex-grow">
+                        <h5 class="text-4xl lg:text-5xl font-medium mb-5">Build stunning website faster than ever</h5>
+                        <p class="opacity-75 mb-0">Your business deserve a stunning website. </p>
+                    </div>
+                    <a class="btn btn-lg bg-white text-gray-700 hover:text-indigo-500 shrink-0" href="#"><span>Purchase
+                            Now</span></a>
+                </div>
+            </div>
+            <!-- / .End container -->
+        </section>
+
+    </main>
+
+
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-1.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+    
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

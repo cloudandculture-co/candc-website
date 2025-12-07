@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <!--:Google Fonts:-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <!--:icons:-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Main stylesheet-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body
+    class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+      <!--:App Preloader:-->
+      <div id="app_preloader" class="fixed overflow-hidden w-full h-full left-0 top-0 z-[99999]">
+          <div class="w-full h-full flex justify-center items-center bg-white dark:bg-black">
+            <div class="flex items-center">
+              <!--:Spinner:-->
+              <svg class="animate-spin h-5 w-5 text-primary-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+            </div>
+          </div>
+        </div>
+
+
+    <!--:Sidebar:-->
+    <aside id="offcanvasSidebarMain"
+    class="app-sidebar offcanvas-lg absolute lg:fixed w-64 h-full top-0 bg-white dark:bg-black lg:z-[60] z-[70] -translate-x-full [&.show]:-translate-x-0 lg:translate-x-0 transition-all border-r border-gray-200 dark:border-gray-800">
+    <div class="flex flex-col h-full">
+
+      <!--:App Logo:-->
+      <div class="flex-shrink-0 py-3 px-6 flex items-center">
+        <a class="flex items-center" href="index.html">
+          <span
+            class="me-3 size-8 flex items-center justify-center text-sm font-semibold text-white mr-2 rounded-full bg-primary-500">
+            <svg width="16" viewBox="0 0 32 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.49072 8.66002C8.09029 5.65678 9.38962 2.0869 12.3929 0.686464C15.3961 -0.71397 18.966 0.585362 20.3664 3.5886L30.5093 25.34C31.9097 28.3432 30.6104 31.9131 27.6071 33.3135C24.6039 34.714 21.034 33.4146 19.6336 30.4114L9.49072 8.66002Z" fill="currentColor"/>
+    <path d="M1.53571 30.5093C0.135274 27.506 1.4346 23.9361 4.43784 22.5357C7.44108 21.1353 11.011 22.4346 12.4114 25.4379C13.8118 28.4411 12.5125 32.011 9.50926 33.4114C6.50602 34.8118 2.93614 33.5125 1.53571 30.5093Z" fill="currentColor"/>
+    </svg>
+
+          </span>
+          <h5 class="text-3xl font-semibold">Assan</h5>
+        </a>
+      </div>
+
+      <!--:App Sidebar Menu Items:-->
+      <div class="flex-grow overflow-y-auto sidebar-scroll">
+        <nav class="flex-grow-1 h-100" id="page-navbar">
+            <!--:Sidebar nav-->
+            <ul class="nav flex-column collapse-group collapse flex space-y-1 px-4 py-4">
+              <li class="nav-item px-3 pb-1 flex items-center sidebar-title truncate">
+                <span class="sidebar-text text-sm text-gray-400 font-semibold">Main</span>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="collapse"
+                  class="nav-link flex items-center truncate "
+                  aria-expanded="false" href="#dashboards">
+                  <span class="me-3 sidebar-icon">
+                    <span class="icon-[tabler--chart-bar]"></span>
+                  </span>
+                  <!--Sidebar nav text-->
+                  <span class="sidebar-text">Dashboard</span>
+                  <!--:Collapse Arrow:-->
+                  <span class="icon-[tabler--chevron-up] sidebar-arrow ms-auto"></span>
+                </a>
+                <ul id="dashboards" class="sidebar-dropdown list-unstyled collapse @@dashboard_collapse">
+                      <li class="sidebar-item">
+                        <a class="sidebar-link @@dashboard_ecommerce" href="index.html">Ecommerce</a>
+                      </li>
+                      <li class="sidebar-item">
+                        <a class="sidebar-link @@dashboard_analytics" href="index-analytics.html">Analytics</a>
+                      </li>
+                      <li class="sidebar-item">
+                        <a class="sidebar-link @@dashboard_crm" href="index-crm.html">CRM</a>
+                      </li>  
+                </ul>
+              </li>
+          
+              <li class="nav-item">
+                <a href="widgets.html"
+                  class="nav-link flex items-center truncate ">
+                  <span class="me-3 sidebar-icon">
+                    <span class="icon-[tabler--wand]"></span>
+                  </span>
+                  <span class="sidebar-text">Widgets </span>
+                  <span class="text-sm px-1 py-0.5 rounded-md bg-success-500 text-white ms-auto">30+</span>
+                </a>
+              </li>
+         
+              <li class="nav-item px-3 flex items-center pt-3 pb-1 sidebar-title truncate">
+                <span class="sidebar-text text-sm text-gray-400 font-semibold">Apps</span>
+              </li>
+              <li class="nav-item">
+                <a href="app-inbox.html"
+                  class="nav-link flex items-center truncate ">
+                  <span class="me-3 sidebar-icon">
+                    <span class="icon-[tabler--inbox]"></span>
+                  </span>
+                  <span class="sidebar-text flex-grow flex justify-between items-center">Inbox 
+                    <span class="size-2 block rounded-full bg-primary-500"></span>
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="app-chat.html"
+                  class="nav-link flex items-center truncate ">
+                  <span class="me-3 sidebar-icon">
+                   <span class="icon-[tabler--message]"></span>
+                  </span>
+                  <span class="sidebar-text">Chat</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="app-projects.html"
+                  class="nav-link flex items-center truncate ">
+                  <span class="me-3 sidebar-icon">
+                    <span class="icon-[tabler--folders]"></span>
+                  </span>
+                  <span class="sidebar-text">Projects</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="app-tasks.html"
+                  class="nav-link flex items-center truncate ">
+                  <span class="me-3 sidebar-icon">
+                    <span class="icon-[tabler--subtask]"></span>
+                  </span>
+                  <span class="sidebar-text">Tasks</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="app-calendar.html"
+                  class="nav-link flex items-center truncate ">
+                  <span class="me-3 sidebar-icon">
+                    <span class="icon-[tabler--calendar-month]"></span>
+                  </span>
+                  <span class="sidebar-text">Calendar</span>
+                </a>
+              </li>
+              <li class="nav-item px-3 flex items-center pt-3 pb-1 sidebar-title truncate">
+                <span class="sidebar-text text-sm text-gray-400 font-semibold">Pages</span>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="collapse"
+                  class="nav-link flex items-center truncate "
+                  aria-expanded="false" href="#ui-pages">
+                  <span class="me-3 sidebar-icon">
+                    <span class="icon-[tabler--file-description]"></span>
+                  </span>
+                  <!--Sidebar nav text-->
+                  <span class="sidebar-text">Pages</span>
+                  <!--:Collapse Arrow:-->
+                  <span class="icon-[tabler--chevron-up] sidebar-arrow ms-auto"></span>
+                </a>
+                <ul id="ui-pages" class="sidebar-dropdown list-unstyled collapse ui-componentss_collapse">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="page-signin.html">Sign In</a>
+                      </li>
+                      <li class="sidebar-item">
+                        <a class="sidebar-link" href="page-signup.html">Sign Up</a>
+                      </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="collapse"
+                  class="nav-link flex items-center truncate "
+                  aria-expanded="false" href="#ui-account">
+                  <span class="me-3 sidebar-icon">
+                    <span class="icon-[tabler--user-circle]"></span>
+                  </span>
+                  <!--Sidebar nav text-->
+                  <span class="sidebar-text">Account</span>
+                  <!--:Collapse Arrow:-->
+                  <span class="icon-[tabler--chevron-up] sidebar-arrow ms-auto"></span>
+                </a>
+                <ul id="ui-account" class="sidebar-dropdown list-unstyled collapse @@account_collapse">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link @@account_overview" href="account-overview.html">Overview</a>
+                      </li>
+                      <li class="sidebar-item">
+                        <a class="sidebar-link @@account_billing" href="account-billing.html">Billing</a>
+                      </li>
+                      <li class="sidebar-item">
+                        <a class="sidebar-link @@account_contacts" href="account-contacts.html">Contacts</a>
+                      </li>
+                      <li class="sidebar-item">
+                        <a class="sidebar-link @@account_permissions" href="account-permissions.html">Permissions</a>
+                      </li>
+                      <li class="sidebar-item">
+                        <a class="sidebar-link @@account_security" href="account-security.html">Security</a>
+                      </li>  
+                </ul>
+              </li>
+              <li class="nav-item px-3 flex items-center pt-3 pb-1 sidebar-title truncate">
+                <span class="sidebar-text text-sm text-gray-400 font-semibold">Features</span>
+              </li>
+              <li class="nav-item">
+                <a href="#ui-components" data-bs-toggle="collapse" aria-expanded="false"
+                  class="nav-link flex items-center truncate active">
+                  <span class="me-3 sidebar-icon">
+                    <span class="icon-[tabler--components]"></span>
+                  </span>
+                  <!--Sidebar nav text-->
+                  <span class="sidebar-text">UI Components</span>
+                  <!--:Collapse Arrow:-->
+                  <span class="icon-[tabler--chevron-up] sidebar-arrow ms-auto"></span>
+                </a>
+                <ul id="ui-components" class="sidebar-dropdown list-unstyled collapse show">
+              
+                  <li class="sidebar-item"><a class="sidebar-link @@component_avatars_active" href="ui-component-avatars.html">Avatars</a></li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_anim_spinners_active" href="ui-component-animations-spinners.html">Animations & Spinners</a> </li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_alerts_active" href="ui-component-alerts.html">Alerts</a></li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_badges_active" href="ui-component-badges.html">Badges</a></li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_buttons_active" href="ui-component-buttons.html">Buttons</a></li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_breadcrumb_active" href="ui-component-breadcrumb.html">Breadcrumb</a></li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_cards_active" href="ui-component-cards.html">Cards</a></li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_collapse_active" href="ui-component-collapse.html">Collapse</a> </li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_dropdown_active" href="ui-component-dropdown.html">Dropdowns</a> </li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_flatpickr_active" href="ui-component-flatpickr.html">Flatpickr</a></li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_modals_active" href="ui-component-modals.html">Modal</a> </li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_offcanvas_active" href="ui-component-offcanvas.html">Offcanvas</a></li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_icons_active" href="ui-component-icons.html">Icons</a></li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_progress_active" href="ui-component-progress.html">Progress</a></li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_paginations_active" href="ui-component-paginations.html">Pagintions</a></li>
+                  <li class="sidebar-item"><a class="sidebar-link active" href="ui-component-typography.html">Typography</a></li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_toast_active" href="ui-component-toast.html">Toast</a></li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_tooltips_active" href="ui-component-tooltips-popovers.html">Tooltips & Popovers</a></li>
+                  <li class="sidebar-item"><a class="sidebar-link @@component_tom_select_active" href="ui-component-tom-select.html">Tom Select</a></li>
+                 </ul>
+              </li>
+              <li class="nav-item">
+                <a href="forms.html"
+                  class="nav-link flex items-center truncate ">
+                  <span class="me-3 sidebar-icon">
+                    <span class="icon-[tabler--edit]"></span>
+                  </span>
+                  <span class="sidebar-text">Forms</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="charts.html"
+                  class="nav-link flex items-center truncate ">
+                  <span class="me-3 sidebar-icon">
+                    <span class="icon-[tabler--chart-area]"></span>
+                  </span>
+                  <span class="sidebar-text">Charts</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="tables.html"
+                  class="nav-link flex items-center truncate ">
+                  <span class="me-3 sidebar-icon">
+                    <span class="icon-[tabler--table]"></span>
+                  </span>
+                  <span class="sidebar-text">Tables</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link flex items-center truncate" href="#multi-level" data-bs-toggle="collapse" aria-expanded="false">
+                    <span class="me-3 sidebar-icon">
+                      <span class="icon-[tabler--layers-subtract]"></span>
+                    </span>
+                    <span class="sidebar-text">Multi level</span>
+                    <!--:Collapse Arrow:-->
+                  <span class="icon-[tabler--chevron-up] sidebar-arrow ms-auto"></span>
+                </a>
+                <ul id="multi-level" class="collapse sidebar-dropdown list-unstyled mb-0">
+                  <li class="sidebar-item">
+                    <a href="#level-2" data-bs-toggle="collapse" aria-expanded="false" class="sidebar-link flex items-center">Level
+                      Two
+                      <span class="icon-[tabler--chevron-up] sidebar-arrow ms-auto"></span>
+                    </a>
+                    <ul id="level-2" class="collapse sidebar-dropdown list-unstyled mb-0">
+
+                      <li class="sidebar-item">
+                        <a href="#level-3" data-bs-toggle="collapse" aria-expanded="false" class="sidebar-link flex items-center">Level
+                          two item 2
+                          <span class="icon-[tabler--chevron-up] sidebar-arrow ms-auto"></span>
+                        </a>
+                        <ul id="level-3" class="collapse sidebar-dropdown list-unstyled mb-0">
+                          <li class="sidebar-item">
+                            <a href="#!" class="sidebar-link">Level three item 1</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <hr class="border-gray-200 dark:border-gray-800 mt-4">
+              <li class="nav-item px-3 flex items-center pt-3 pb-1 sidebar-title truncate">
+                <span class="sidebar-text text-sm text-gray-400 font-semibold">Documentations</span>
+              </li>
+              <li class="nav-item">
+                <a href="documentation.html"
+                  class="nav-link flex items-center truncate ">
+                  <span class="me-3 sidebar-icon">
+                   <span class="icon-[tabler--lifebuoy]"></span>
+                  </span>
+                  <span class="sidebar-text">Getting started</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+      </div>
+  
+      <!--:dropdown for user:-->
+      <div class="px-4 py-3 border-t border-gray-200 dark:border-gray-800">
+        <div class="relative user-dropdown">
+          <a href="#" data-bs-toggle="dropdown" data-bs-display="static"
+            class="flex flex-nowrap items-center p-1 rounded-md">
+            <img src="img/avatars/m1.jpg" class="h-9 w-auto rounded-full mr-3 shrink-0" alt="">
+            <div class="flex-grow leading-tight h-full">
+              <h5 class="font-semibold mb-1">John Doe</h5>
+              <small class="text-gray-400 block">john@doe.com</small>
+            </div>
+          </a>
+          <div 
+            class="absolute left-0 bottom-full w-48 lg:w-56 py-2 mb-2 dropdown-menu translate-y-2 invisible opacity-0 [&.show]:opacity-100 [&.show]:visible [&.show]:-translate-y-0 transition-all duration-300">
+            <a href="#!" class="dropdown-item">
+              <span class="icon-[tabler--user-circle] text-lg"></span>
+              Profile
+            </a>
+            <a href="#!" class="dropdown-item">
+              <span class="icon-[tabler--settings] text-lg"></span>
+              Settings
+            </a>
+            <a href="#!" class="dropdown-item">
+               <span class="icon-[tabler--credit-card] text-lg"></span>
+              Payments
+            </a>
+            <a href="page-signin.html" class="dropdown-item">
+              <span class="icon-[tabler--logout] text-lg"></span>
+              Logout
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </aside>
+
+    <main class="relative flex flex-col lg:ms-64">
+        <!--:App Header:-->
+        <header class="bg-white/80 dark:bg-black/75 backdrop-blur py-3 z-[55] sticky top-0 border-b border-gray-200 dark:border-gray-800">
+            <div class="flex items-center px-4 lg:px-6 xl:px-12 h-full">
+              <!--:Header Left:-->
+              <div class="shrink-0 flex items-center">
+
+                <!--:Main Sidebar opener for :lg down:-->
+                <div>
+                  <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebarMain"
+                    class="lg:hidden mr-2 w-8 h-8 rounded-full flex items-center justify-center transition-all hover:bg-primary-500 hover:text-white">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+                <a class="flex items-center lg:hidden" href="index.html">
+                  <span
+                    class="w-8 h-8 flex items-center justify-center text-sm font-semibold me-2 rounded-full bg-white text-primary-500">
+                    <svg width="16" viewBox="0 0 32 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.49072 8.66002C8.09029 5.65678 9.38962 2.0869 12.3929 0.686464C15.3961 -0.71397 18.966 0.585362 20.3664 3.5886L30.5093 25.34C31.9097 28.3432 30.6104 31.9131 27.6071 33.3135C24.6039 34.714 21.034 33.4146 19.6336 30.4114L9.49072 8.66002Z" fill="currentColor"></path>
+            <path d="M1.53571 30.5093C0.135274 27.506 1.4346 23.9361 4.43784 22.5357C7.44108 21.1353 11.011 22.4346 12.4114 25.4379C13.8118 28.4411 12.5125 32.011 9.50926 33.4114C6.50602 34.8118 2.93614 33.5125 1.53571 30.5093Z" fill="currentColor"></path>
+            </svg>
+                  </span>
+                </a>
+
+                <!--:Header Search:-->
+                <div>
+                  <!-- Trigger button -->
+                  <button data-bs-toggle="modal" tabindex="-1" data-bs-target="#modalSearch"
+                    class="w-8 h-8 rounded-full transition-all hover:bg-primary-500 hover:text-white flex items-center justify-center">
+                    <span class="icon-[tabler--search] text-lg"></span>
+                  </button>
+                  </div>
+                </div>
+     
+              <!--:Header right:-->
+              <div class="flex items-center ml-auto">
+        
+                <!--:Notifications:-->
+                <div class="sm:relative mr-2">
+                  <button data-bs-toggle="dropdown" data-bs-display="static" data-bs-auto-close="outside"
+                    type="button"
+                    class="w-8 h-8 hover:bg-primary-500 hover:text-white relative rounded-full transition-all duration-200 flex items-center justify-center">
+                    <span class="icon-[tabler--bell] text-xl"></span>
+                    <!--:Badge:-->
+                    <span class="absolute top-0 right-0 block mr-px mt-px">
+                      <span class="relative flex h-2 w-2">
+                        <span
+                          class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
+                      </span>
+                    </span>
+                  </button>
+
+                  <!--:Notifications-dropdown:-->
+                  <div class="dropdown-menu absolute top-full right-0 w-[calc(100%-1rem)] mr-[.5rem] sm:w-96 overflow-hidden rounded-md -translate-y-1 opacity-0 invisible [&.show]:opacity-100 [&.show]:visible [&.show]:-translate-y-0 transition-all duration-300 sm:mt-3">
+                    <!--:Notifications Header:-->
+                    <div class="px-4 py-3 flex items-center justify-between">
+                      <h5 class="text-lg font-semibold">Notifications</h5>
+                      <a href="#!"
+                        class="shrink-0 size-6 transition-all rounded-full flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <span class="icon-[tabler--settings]"></span>
+                      </a>
+                    </div>
+                    <!--:Content:-->
+                    <div class="mb-0 h-72 overflow-y-auto">
+
+                        <!--//Notification item start//-->
+                        <a href="#"
+                          class="flex unread !font-normal items-center px-4 py-3 transition-all hover:bg-gray-100 dark:hover:bg-white/3">
+                          <div class="block mr-4 shrink-0">
+                            <span
+                              class="shrink-0 relative block after:content-[''] after:w-3 after:h-3 after:rounded-full after:bg-success-500
+                                after:block after:absolute after:bottom-0 after:right-0 after:border-2 after:border-white dark:after:border-gray-900">
+                              <img src="img/avatars/w1.jpg" class="w-10 h-10 rounded-full" alt="">
+                            </span>
+                          </div>
+
+                          <div class="flex-grow">
+                            <div class="flex items-center mb-0.5">
+                              <h6 class="font-semibold truncate pr-3">Nikita Miller</h6>
+                              <small class="text-sm opacity-60 block shrink-0">Just now</small>
+                              <!--:New notification badge:-->
+                              <span class="w-2 h-2 block rounded-full bg-primary-500 ml-auto"></span>
+                            </div>
+                            <!--:Notification message:-->
+                            <p>Sent you a message <span class="block font-semibold">
+                                "are you there?"
+                              </span></p>
+                          </div>
+                        </a>
+                        <!--//Notification item start//-->
+                        <a href="#"
+                          class="flex unread !font-normal items-center px-4 py-3 transition-all hover:bg-gray-100 dark:hover:bg-white/3">
+                          <div class="block mr-4 shrink-0">
+                            <span
+                              class="shrink-0 relative block after:content-[''] after:w-3 after:h-3 after:rounded-full after:bg-success-500
+                                after:block after:absolute after:bottom-0 after:right-0 after:border-2 after:border-white dark:after:border-gray-900">
+                              <img src="img/avatars/m1.jpg" class="w-10 h-10 rounded-full" alt="">
+                            </span>
+                          </div>
+
+                          <div class="flex-grow">
+                            <div class="flex items-center mb-0.5">
+                              <h6 class="font-semibold truncate pr-3">Angel D Maria</h6>
+                              <small class="text-sm opacity-60 block shrink-0">2h</small>
+                              <!--:New notification badge:-->
+                              <span class="w-2 h-2 block rounded-full bg-primary-500 ml-auto"></span>
+                            </div>
+                            <!--:Notification message:-->
+                            <p>Assigned you a new task <strong>
+                                #UI-3928
+                              </strong></p>
+                          </div>
+                        </a>
+                        <!--//Notification item start//-->
+                        <a href="#"
+                          class="flex read !font-normal items-center px-4 py-3 transition-all hover:bg-gray-100 dark:hover:bg-white/3">
+                          <div class="block mr-4 shrink-0">
+                            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-success-500 text-white">
+                             <span class="icon-[tabler--shield-check] text-lg"></span>
+                            </span>
+                          </div>
+
+                          <div class="flex-grow">
+                            <div class="flex items-center mb-0.5">
+                              <h6 class="font-semibold truncate pr-3 text-inherit">Password updated</h6>
+                              <small class="text-sm opacity-60 block shrink-0">2h</small>
+                              <!--:New notification badge:-->
+                              <!-- <span class="w-2 h-2 block rounded-full bg-primary-500 ml-auto"></span> -->
+                            </div>
+                            <!--:Notification message:-->
+                            <p>Your account password updated successfully</p>
+                          </div>
+                        </a>
+                        <!--//Notification item start//-->
+                        <a href="#"
+                          class="flex read !font-normal items-center px-4 py-3 transition-all hover:bg-gray-100 dark:hover:bg-white/3">
+                          <div class="block mr-4 shrink-0">
+                            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-info-500 text-white">
+                              <span class="icon-[tabler--filter-dollar] text-lg"></span>
+                            </span>
+                          </div>
+
+                          <div class="flex-grow">
+                            <div class="flex items-center mb-0.5">
+                              <h6 class="font-semibold truncate pr-3 text-inherit">Budget Increased</h6>
+                              <small class="text-sm opacity-60 block shrink-0">1d</small>
+                              <!--:New notification badge:-->
+                              <!-- <span class="w-2 h-2 block rounded-full bg-primary-500 ml-auto"></span> -->
+                            </div>
+                            <!--:Notification message:-->
+                            <p>Project <strong>project-admin-392</strong> budget increased by $3849</p>
+                          </div>
+                        </a>
+                      </div>
+                    <!--:Notifications footer:-->
+                    <div class="px-4 py-3 flex items-center border-t border-gray-200 dark:border-gray-800">
+                      <div class="flex-grow text-center">
+                        <a href="#!" class=" text-primary-500 border-b border-dashed hover:text-current">View All
+                          Notifications</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--:Dark Mode:-->
+                <button data-bs-toggle="tooltip" data-bs-title="toggle theme" data-bs-placement="left"
+                  class="toggle-mode w-8 h-8 rounded-full transition-all hover:bg-primary-500 hover:text-white flex items-center justify-center"
+                  type="button">
+                  <span class="dark:flex items-center justify-center hidden">
+                    <span class="icon-[carbon--sun] text-xl"></span>
+                  </span>
+                  <span class="flex items-center justify-center dark:hidden">
+                    <span class="icon-[carbon--moon] text-xl"></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </header>
+
+
+  
+                  <!-- Modal -->
+                  <div id="modalSearch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade z-[70] fixed left-0 top-0 w-full h-full hidden [&.show]:block overflow-y-auto overflow-x-hidden">
+                    <div class="modal-dialog w-full md:w-3/5 xl:w-2/5 mx-auto my-4 px-4">
+                        <!-- Modal dialog -->
+                     <div class="modal-content overflow-hidden bg-white dark:bg-gray-900 rounded-md">
+                       <div class="flex items-center relative">
+                         <span class="absolute left-0 top-1/2 -translate-y-1/2 ml-4 opacity-50 flex items-center">
+                          <span class="icon-[tabler--search]"></span>
+                          </span>
+                         <input autofocus class="focus:outline-0 bg-transparent w-full py-4 px-10" type="text"
+                           placeholder="Search Here...">
+                         <button type="button"
+                           class="absolute h-full right-0 top-0 w-9 flex items-center justify-start text-sm text-gray-400 hover:text-primary-500"
+                           data-bs-dismiss="modal">
+                           Esc
+                         </button>
+                       </div>
+                       <!--:Search results:-->
+                       <div class="flex flex-col border-t border-gray-200 dark:border-gray-900">
+                         <span class="block px-4 py-2 text-gray-400">Recent Searches</span>
+                         <a href="#!"
+                           class="transition-all flex items-center px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-800">
+                           <span class="icon-[tabler--arrow-up-right] text-lg me-2"></span> Dashboard
+                         </a>
+                         <a href="#!"
+                           class="transition-all flex items-center px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-800">
+                           <span class="icon-[tabler--arrow-up-right] text-lg me-2"></span> Profile
+                         </a>
+                         <a href="#!"
+                           class="transition-all flex items-center px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-800">
+                           <span class="icon-[tabler--arrow-up-right] text-lg me-2"></span> Tasks
+                         </a>
+                         <a href="#!"
+                           class="transition-all flex items-center px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-800">
+                           <span class="icon-[tabler--arrow-up-right] text-lg me-2"></span> Settings
+                         </a>
+                       </div>
+                     </div>
+                    </div>
+                    </div>
+        <!--:Page Header:-->
+        <div class="px-4 lg:px-6 xl:px-12 py-4">
+            <div class="flex flex-wrap items-center">
+                <div class="flex-grow">
+                    <h4 class="text-2xl font-semibold">Typography</h4>
+                </div>
+                <div class="shrink-0">
+                    <!--:Breadcrumb:-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="flex items-center">
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                            </li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active"><a
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                    href="ui-component-alerts.html">Components</a></li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Typography
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content relative px-4 lg:px-6 xl:px-12">
+            <div class="grid grid-cols-1 gap-4 mb-4">
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="text-lg font-semibold mb-4">Font Sizing</h5>
+
+                        <h3 class="text-9xl">This is text 9xl</h3>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <h3 class="text-8xl">This is text 8xl</h3>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <h3 class="text-7xl">This is text 7xl</h3>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <h3 class="text-6xl">This is text 6xl</h3>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <h3 class="text-5xl">This is text 5xl</h3>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <h3 class="text-4xl">This is text 4xl</h3>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <h3 class="text-3xl">This is text 3xl</h3>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <h3 class="text-2xl">This is text 2xl</h3>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <h3 class="text-xl">This is text extra large</h3>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <h3 class="text-lg">This is text large</h3>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <h3 class="text-base">This is text base</h3>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <h3 class="text-sm">This is text sm</h3>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <h3 class="text-sm">This is text xs</h3>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="text-lg font-semibold mb-4">Font Colors</h5>
+                        <p class="text-primary-500">This is primary text</p>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <p class="text-danger-500">This is danger text</p>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <p class="text-warning-500">This is warning text</p>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <p class="text-success-500">This is success text</p>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <p class="text-info-500">This is info text</p>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <p class="text-black dark:text-white">This is dark (white on dark mode) text</p>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <p class="text-gray-500 dark:text-gray-300">This is muted text</p>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="text-lg font-semibold mb-4">Inline text elements</h5>
+                        <p>You can use the mark tag to <mark class="bg-warning-500/20 text-black dark:text-gray-100 inline-block px-1 rounded">highlight</mark> text.</p>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <p><del>This line of text is meant to be treated as deleted text.</del></p>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <p><u>This line of text will render as underlined.</u></p>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <p><small>This line of text is meant to be treated as fine print.</small></p>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <p><strong>This line rendered as bold text.</strong></p>
+                        <hr class="border-gray-100 dark:border-gray-800 border-dashed my-2">
+                        <p><em>This line rendered as italicized text.</em></p>
+                        
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="text-lg font-semibold mb-4">Lists</h5>
+                        <p class="text-gray-400 mb-3">List Disc</p>
+                        <ul class="list-disc pl-4">
+                            <li>This is a list.</li>
+                            <li>It appears completely unstyled.</li>
+                            <li>Structurally, it's still a list.</li>
+                            <li>However, this style only applies to immediate child elements.</li>
+                            <li>Nested lists:
+                              <ul class="list-disc pl-4">
+                                <li>are unaffected by this style</li>
+                                <li>will still show a bullet</li>
+                                <li>and have appropriate left margin</li>
+                              </ul>
+                            </li>
+                            <li>This may still come in handy in some situations.</li>
+                          </ul>
+                          <hr class="border-gray-100 dark:border-gray-800 border-dashed my-3">
+                          <p class="text-gray-400 mb-3">List Decimal</p>
+                        <ul class="list-decimal pl-4">
+                            <li>This is a list.</li>
+                            <li>It appears completely unstyled.</li>
+                            <li>Structurally, it's still a list.</li>
+                            <li>However, this style only applies to immediate child elements.</li>
+                            <li>Nested lists:
+                              <ul class="list-decimal pl-4">
+                                <li>are unaffected by this style</li>
+                                <li>will still show a bullet</li>
+                                <li>and have appropriate left margin</li>
+                              </ul>
+                            </li>
+                            <li>This may still come in handy in some situations.</li>
+                          </ul>
+
+                          <hr class="border-gray-100 dark:border-gray-800 border-dashed my-3">
+                          <p class="text-gray-400 mb-3">List none</p>
+                        <ul class="list-none pl-4">
+                            <li>This is a list.</li>
+                            <li>It appears completely unstyled.</li>
+                            <li>Structurally, it's still a list.</li>
+                            <li>However, this style only applies to immediate child elements.</li>
+                            <li>Nested lists:
+                              <ul class="list-none pl-4">
+                                <li>are unaffected by this style</li>
+                                <li>will still show a bullet</li>
+                                <li>and have appropriate left margin</li>
+                              </ul>
+                            </li>
+                            <li>This may still come in handy in some situations.</li>
+                          </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

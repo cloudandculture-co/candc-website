@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan-Admin</title>
+
+    @@include('./partials/fonts.html')
+
+
+    <!--Simplebar css-->
+    <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+    <!--Choices css-->
+    <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+
+    <!--Swiper slider css-->
+    <link rel="stylesheet" href="assets/vendor/css/swiper-bundle.min.css">
+
+    <!--Main style-->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+  </head>
+
+  <body>
+
+
+    @@include('./partials/preloader.html')
+
+    <div class="d-flex flex-column flex-root">
+      <!--Page-->
+      <div class="page d-flex flex-row flex-column-fluid">
+
+
+        @@include('./partials/sidebars/sidebar-default.html',{"page": "index-management"})
+
+
+        <!--///////////Page content wrapper///////////////-->
+        <main class="page-content d-flex flex-column flex-row-fluid">
+
+          @@include('./partials/header/header-default.html')
+
+          <!--//Page content//-->
+          <div class="content pt-3 px-3 px-lg-6 d-flex flex-column-fluid position-relative">
+            <div class="container-fluid px-0">
+              <div class="row">
+               
+                <div class="col-md-6 mb-2">
+
+                <!--::Begin Card-->
+                <div class="card card-body h-100">
+                 <div class="mb-auto">
+                  <div class="d-flex align-items-staretch">
+                    <div class="flex-grow-1">
+                      <h3>39</h3>
+                  <p class="mb-4 text-body-secondary">Active Projects</p>
+                    </div>
+                    <div class="flex-shrink-0">
+                      <a href="#!" class="btn btn-primary btn-sm">Manage</a>
+                    </div>
+                  </div>
+                 </div>
+                 <div class="mt-auto">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <p class="mb-0 fw-semibold">Pending</p>
+                    <p class="mb-0 fw-semibold">17%</p>
+                  </div>
+                  <div class="progress mt-2 height-5">
+                    <div class="progress-bar bg-primary rounded-pill progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100" style="width: 83%"></div>
+                  </div>
+                 </div>
+                </div>
+                <!--::End Card-->
+
+
+                </div>
+                <div class="col-md-6 mb-2">
+
+                  <!--::Begin Card-->
+                  <div class="card card-body h-100">
+                   <div class="mb-auto">
+                    <div class="d-flex align-items-staretch">
+                      <div class="flex-grow-1">
+                        <h3>109</h3>
+                    <p class="mb-4 text-body-secondary">Team members</p>
+                      </div>
+                      <div class="flex-shrink-0 dropdown">
+                        <a href="#" data-bs-toggle="dropdown" class="btn btn-info btn-sm p-1">
+                          <span class="material-symbols-rounded align-middle">more_horiz</span>
+                        </a>
+                      <!--Dropdown-->
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <a href="#!" class="dropdown-item">Add member</a>
+                        <a href="#!" class="dropdown-item">Delete member</a>
+                      </div>
+                      </div>
+                    </div>
+                   </div>
+                   <div class="mt-auto">
+                    <div class="avatar-group d-none d-lg-flex">
+                      <a href="#!.html" class="avatar-group-item avatar sm rounded-circle" data-tippy-placement="top" data-tippy-content="Gabriel H">
+                        <img src="assets/media/avatars/04.jpg" alt="..." class="avatar-group-img rounded-circle">
+                      </a>
+                      <a href="#!.html" class="avatar-group-item avatar sm rounded-circle" data-tippy-placement="top" data-tippy-content="Emily Doe">
+                        <img src="assets/media/avatars/02.jpg" alt="..." class="avatar-group-img rounded-circle">
+                      </a>
+                      <a href="#!.html" class="avatar-group-item avatar sm rounded-circle" data-tippy-placement="top" data-tippy-content="Adam Howkins">
+                        <img src="assets/media/avatars/03.jpg" alt="..." class="avatar-group-img rounded-circle">
+                      </a>
+                      <a href="#!.html" class="avatar-group-item avatar sm small w-auto px-3 rounded-pill bg-body-tertiary d-flex align-items-center justify-content-center">
+                          +109 Members
+                        </a>
+                    </div>
+                   </div>
+                  </div>
+                  <!--::End Card-->
+                  </div>
+                  <div class="col-md-6 mb-2">
+                    <div class="card overflow-hidden h-100">
+                      <div class="card-header d-flex align-items-center justify-content-between">
+                        <h5 class="mb-0">Tasks Progress</h5>
+                        <a class="btn btn-outline-secondary btn-sm" href="#!">Full Report
+                        </a>
+                      </div>
+                      <div class="card-body p-0">
+                        <div class="p-4">
+                          <p class="text-body-secondary">See team members' time worked, <br> tasks progress and more</p>
+                        <div class="progress mb-2 rounded-pill bg-success-subtle height-10">
+                          <div class="progress-bar bg-success progress-bar-animated progress-bar-striped rounded-pill" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="mb-0 text-primary">78% completed</p>
+                        </div>
+
+                        <!--Divider HR-->
+                        <hr class="mt-0 mb-0">
+
+                        <!--::Begin todo list-->
+                        <div class="list-group list-group-flush">
+<!--::Begin todo item-->
+<div class="list-group-item bg-body px-4">
+ <h6 class="mb-0">Today's Pending Tasks</h6>
+</div>
+<!--/::end todo item-->
+                          <!--::Begin todo item-->
+                          <div class="list-group-item py-0 px-4">
+                            <div class="form-check mb-0 d-flex align-items-center">
+                              <input class="form-check-input rounded-circle form-check-line-through p-2 form-check-input-success" type="checkbox" id="checkbox-todo-0">
+                              <label class="form-check-label mb-0 p-3" for="checkbox-todo-0">Design a CRM Landing page</label></div>
+                          </div>
+                          <!--/::end todo item-->
+                          <!--::Begin todo item-->
+                          <div class="list-group-item py-0 px-4">
+                            <div class="form-check mb-0 d-flex align-items-center">
+                              <input class="form-check-input rounded-circle form-check-line-through p-2 form-check-input-primary" type="checkbox" id="checkbox-todo-1">
+                              <label class="form-check-label mb-0 p-3" for="checkbox-todo-1">Add New Checkboxes with All Theme Colors</label></div>
+                          </div>
+                          <!--/::end todo item-->
+                           <!--::Begin todo item-->
+                           <div class="list-group-item py-0 px-4">
+                            <div class="form-check mb-0 d-flex align-items-center">
+                              <input class="form-check-input rounded-circle form-check-line-through p-2 form-check-input-warning" type="checkbox" id="checkbox-todo-2">
+                              <label class="form-check-label mb-0 p-3" for="checkbox-todo-2">Update dashboard charts with Apexcharts</label></div>
+                          </div>
+                          <!--/::end todo item-->
+
+                           <!--::Begin todo item-->
+                           <div class="list-group-item py-0 px-4">
+                            <div class="form-check mb-0 d-flex align-items-center">
+                              <input class="form-check-input rounded-circle form-check-line-through p-2 form-check-input-info" type="checkbox" id="checkbox-todo-3">
+                              <label class="form-check-label mb-0 p-3" for="checkbox-todo-3">Twitter Ad Campaign</label></div>
+                          </div>
+                          <!--/::end todo item-->
+                           <!--::Begin todo item-->
+                           <div class="list-group-item py-0 px-4">
+                            <div class="form-check mb-0 d-flex align-items-center">
+                              <input class="form-check-input rounded-circle form-check-line-through p-2 form-check-input-danger" type="checkbox" id="checkbox-todo-4">
+                              <label class="form-check-label mb-0 p-3" for="checkbox-todo-4">Add New Widgets for Future Use</label></div>
+                          </div>
+                          <!--/::end todo item-->
+
+                        </div>
+                        <!--/::end todo list-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-2">
+                    <div class="card h-100">
+                      <div class="card-header d-flex align-items-center justify-content-between">
+                        <h5 class="mb-0 me-3">Recent Activity</h5>
+                        <a href="#!" class="btn btn-sm btn-outline-secondary">View Activity</a>
+                      </div>
+                      <div class="card-body">
+                        <ul class="step list-unstyled mb-0">
+                          <li class="step-item">
+                            <div class="step-row">
+                              <span class="step-icon">
+                                <!--Avatar-->
+                                <span class="avatar sm avatar-status status-online rounded-circle d-flex align-items-center justify-content-center bg-primary text-white">
+                                  <b>R</b>
+                                </span>
+                              </span>
+  
+                              <div class="step-content">
+                                <h6 class="mb-1">Raymond Atkins</h6>
+                                <span class="lh-sm d-block mb-1">Added <a href="#!">Felipe Grace</a> to project
+                                  group</span>
+                                <small class="d-block mb-0 text-body-secondary">3h ago</small>
+                              </div>
+                            </div>
+  
+                          </li>
+                          <!--/.step-item-->
+                          <li class="step-item">
+                            <div class="step-row">
+                              <span class="step-icon">
+                                <!--Avatar-->
+                                <span class="avatar sm avatar-status status-online">
+                                  <img src="assets/media/avatars/03.jpg" class="img-fluid rounded-circle w-auto" alt="">
+                                </span>
+                              </span>
+  
+                              <div class="step-content">
+                                <h6 class="mb-1">Abdul Kadir</h6>
+                                <span class="lh-sm d-block mb-1">Created a new task <a href="#!">#235</a></span>
+                                <small class="d-block mb-0 text-body-secondary">3h ago</small>
+                              </div>
+                            </div>
+  
+                          </li>
+                          <!--/.step-item-->
+                          <li class="step-item">
+                            <div class="step-row">
+                              <span class="step-icon">
+                                <!--Avatar-->
+                                <span class="avatar sm avatar-status status-online">
+                                  <img src="assets/media/avatars/05.jpg" class="img-fluid rounded-circle w-auto" alt="">
+                                </span>
+                              </span>
+  
+                              <div class="step-content">
+                                <h6 class="mb-1">Jessica</h6>
+                                <span class="d-block mb-2 lh-sm small">Added CSS file</span>
+                                <!--Post-->
+                                <div class="p-3 border rounded-3 mb-1 d-flex align-items-center">
+                                  <img src="assets/media/icons/files/css.svg" class="height-40 me-3 flex-shrink-0 w-auto" alt="">
+                                  <div class="flex-grow-1 overflow-hidden">
+                                    <p class="mb-1 lh-sm text-truncate">tooltip-popover.css</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                      <small class="text-body-secondary">4KB</small>
+                                      <a href="#!" class="text-body">
+                                        <span class="material-symbols-rounded align-middle">
+                                          download
+                                        </span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <small class="d-block text-body-secondary">Sep 14, 12:24PM EST</small>
+                              </div>
+                            </div>
+  
+                          </li>
+                          <!--/.step-item-->
+  
+                          <!--.step-item-->
+                          <li class="step-item">
+                            <div class="step-row">
+                              <span class="step-icon">
+                                <!--Avatar-->
+                                <span class="avatar sm avatar-status status-online">
+                                  <img src="assets/media/avatars/04.jpg" class="img-fluid rounded-circle w-auto" alt="">
+                                </span>
+                              </span>
+  
+                              <div class="step-content">
+                                <h6 class="mb-1">Adam Voes</h6>
+                                <span class="lh-sm d-block mb-1">Reassigned a tasked to <a href="#!">Jessica</a> <a href="#!">#078</a></span>
+                                <small class="d-block mb-0 text-body-secondary">June 14, 12:24PM EST</small>
+                              </div>
+                            </div>
+  
+                          </li>
+                          <!--/.step-item-->
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-12 mb-2">
+                  <div class="card h-100">
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                      <h5 class="pe-3 mb-0">
+                        <span class="material-symbols-rounded me-2 align-middle text-primary">
+                          workspace_premium
+                          </span> Featured Project
+                      </h5>
+                      <!--Action button-->
+                      <div class="flex-shrink-0">
+                        <a href="#!" class="btn btn-outline-secondary btn-sm">View Details</a>
+                      </div>
+                    </div>
+                    <div class="card-body py-0">
+                      <div class="row mx-md-0">
+                        <div class="col-md-7 col-xl-8 py-4">
+                          <div class="card h-100 rounded-0 border-0 shadow-none">
+                            
+                          <div class="d-flex mb-4">
+                            <div class="me-3 flex-grow-1 overflow-hidden">
+                              <h3 class="mb-1 mt-3">CRM Dashboard UI</h3>
+                              <p class="mb-0 text-truncate text-body-secondary">
+                                #1 Tool to get started with Web Apps any Kind &amp; size
+                              </p>
+                            </div>
+                            <div class="flex-shrink-0">
+                              <span class="badge rounded-pill bg-success small flex-shrink-0">Active</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center justify-content-start mb-4">
+                            <!--Members-->
+                            <div class="avatar-group me-3 me-sm-4">
+                              <a href="#!.html" class="avatar-group-item avatar sm rounded-circle" data-tippy-content="Gabriel H">
+                                <img src="assets/media/avatars/04.jpg" alt="..." class="avatar-group-img rounded-circle">
+                              </a>
+                              <a href="#!.html" class="avatar-group-item sm ms-n3 avatar rounded-circle" data-tippy-content="Emily Doe">
+                                <img src="assets/media/avatars/02.jpg" alt="..." class="avatar-group-img rounded-circle">
+                              </a>
+                              <a href="#!.html" class="avatar-group-item sm ms-n3 avatar rounded-circle" data-tippy-content="Adam Howkins">
+                                <img src="assets/media/avatars/03.jpg" alt="..." class="avatar-group-img rounded-circle">
+                              </a>
+                              <a href="#!.html" class="avatar-group-item sm d-flex ms-n3 align-items-center justify-content-center bg-primary-subtle text-body avatar rounded-circle" data-tippy-content="6 more members">
+                                <b>+6</b>
+                              </a>
+                            </div>
+      
+                            <div>
+                              <!--Due date-->
+                              <small class="text-body-secondary d-inline-block me-1">Due on</small>
+                              <span class="badge rounded-pill bg-danger-subtle text-danger flex-shrink-0">10 Jan. 2023</span>
+                            </div>
+                          </div>
+      
+                          <!--Description text-->
+                          <p class="mb-0">
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum.
+                          </p>
+                          </div>
+                        </div>
+                        <div class="col-md-5 col-xl-4 ps-md-6 border-start-md">
+
+                          <div class="card border-0 shadow-none rounded-0 bg-transparent h-100">
+                            <div class="row flex-column">
+                              <div class="col-md-12 border-bottom py-md-4 py-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                  <div class="flex-shrink-0 size-50 bg-danger-subtle text-danger d-flex align-items-center justify-content-center rounded me-4">
+                                    <span class="align-middle material-symbols-rounded fs-3">attach_money</span>
+                                  </div>
+                                  <div class="flex-grow-1">
+                                    <span class="d-block mb-1 text-body-secondary">Budget Spent</span>
+                                    <h4 class="mb-0">9125</h4>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-12 border-bottom py-md-4 py-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                  <div class="flex-shrink-0 size-50 bg-primary-subtle text-primary d-flex align-items-center justify-content-center rounded me-4">
+                                    <span class="align-middle material-symbols-rounded fs-3">schedule_send</span>
+                                  </div>
+                                  <div class="flex-grow-1">
+                                    <span class="d-block mb-1 text-body-secondary">Hours Spent</span>
+                                    <h4 class="mb-0">275</h4>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-12 py-3 py-md-5">
+                                <div class="d-flex justify-content-between align-items-center">
+                                  <div class="flex-shrink-0 size-50 bg-success-subtle text-success d-flex align-items-center justify-content-center rounded me-4">
+                                    <span class="material-symbols-rounded fs-3">
+                                      stacked_bar_chart
+                                    </span>
+                                  </div>
+                                  <div class="flex-grow-1">
+                                    <span class="d-block mb-1 text-body-secondary">Progress</span>
+                                    <h4 class="mb-0">84%</h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 mb-2">
+                  <div class="card table-card table-nowrap overflow-hidden">
+                    <div class="card-header d-flex align-items-center">
+                      <h5 class="mb-0 pe-3 flex-grow-1 text-truncate">Projects Stats</h5>
+                      <a href="#!" class="flex-shrink-0 btn btn-sm btn-outline-secondary">History</a>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table table-striped align-middle mb-0">
+                        <!--::begin table head-->
+                        <thead class="text-body-tertiary border-bottom small text-uppercase">
+                          <tr>
+                            <th>Project</th>
+                          <th class="text-end">Budget</th>
+                          <th class="text-end">Progress</th>
+                          <th class="text-end">Status</th>
+                          <th class="text-end"></th>
+                          </tr>
+                        </thead>
+                        <!--/::end table head-->
+                        <tbody>
+                          <!--::begin table-row-->
+                          <tr>
+                            <td>
+                              <!--::begin project thumbnail and name-->
+                              <div class="d-flex align-items-center">
+                                <div class="width-70 h-auto me-3">
+                                  <img src="assets/media/900x600/1.jpg" class="img-fluid rounded" alt="">
+                                </div>
+                                <div class="d-flex justify-content-start flex-column">
+                                  <a href="#" class="h6 mb-1">IOS Health App</a>
+                                  <span class="text-body-secondary d-block fs-6">Allie Grater</span>
+                                </div>
+                              </div>
+                              <!--/::end project thumbnail and name-->
+                            </td>
+                            <td class="text-end"><span class="text-body-secondary">$247,500</span></td>
+                            <td class="text-end">
+                              <!--begin::progress-->
+                              <div class="progress bg-danger-subtle height-5 rounded-pill">
+                                <div class="bg-danger rounded-pill progress-bar progress-bar-animated progress-bar-animated" aria-valuemax="100" aria-valuenow="24" style="width:24%"></div>
+                              </div>
+                              <!--/end::progress-->
+                            </td>
+                            <td class="text-end">
+                              <!--begin::label-->
+                              <span class="badge bg-success-subtle text-success">
+                              Active</span>
+                              <!--/end::label-->
+                            </td>
+                            <td class="text-end">
+                             <!--begin::link-->
+                             <a href="#!" class="link-primary">
+                              <span class="material-symbols-rounded fs-5 align-middle">
+                                visibility
+                                </span>
+                            </a>
+                            <!--/end::link-->
+                            </td>
+                          </tr>
+                          <!--/::end table-row-->
+                          <!--::begin table-row-->
+                          <tr>
+                            <td>
+                              <!--::begin project thumbnail and name-->
+                              <div class="d-flex align-items-center">
+                                <div class="width-70 h-auto me-3">
+                                  <img src="assets/media/900x600/2.jpg" class="img-fluid rounded" alt="">
+                                </div>
+                                <div class="d-flex justify-content-start flex-column">
+                                  <a href="#" class="h6 mb-1">Music Android App</a>
+                                  <span class="text-body-secondary d-block fs-6">Lynn O’Leeum</span>
+                                </div>
+                              </div>
+                              <!--/::end project thumbnail and name-->
+                            </td>
+                            <td class="text-end"><span class="text-body-secondary">$66,500</span></td>
+                            <td class="text-end">
+                              <!--begin::progress-->
+                              <div class="progress bg-info-subtle height-5 rounded-pill">
+                                <div class="bg-info rounded-pill progress-bar progress-bar-animated progress-bar-animated" aria-valuemax="100" aria-valuenow="74" style="width:74%"></div>
+                              </div>
+                              <!--/end::progress-->
+                            </td>
+                            <td class="text-end">
+                              <!--begin::label-->
+                              <span class="badge bg-primary-subtle text-primary">
+                              In Process</span>
+                              <!--/end::label-->
+                            </td>
+                            <td class="text-end">
+                              <!--begin::link-->
+                              <a href="#!" class="link-primary">
+                                <span class="material-symbols-rounded fs-5 align-middle">
+                                  visibility
+                                  </span>
+                              </a>
+                              <!--/end::link-->
+                            </td>
+                          </tr>
+                          <!--/::end table-row-->
+                          <!--::begin table-row-->
+                          <tr>
+                            <td>
+                              <!--::begin project thumbnail and name-->
+                              <div class="d-flex align-items-center">
+                                <div class="width-70 h-auto me-3">
+                                  <img src="assets/media/900x600/3.jpg" class="img-fluid rounded" alt="">
+                                </div>
+                                <div class="d-flex justify-content-start flex-column">
+                                  <a href="#" class="h6 mb-1">Figma Landing</a>
+                                  <span class="text-body-secondary d-block fs-6">Percy Vere</span>
+                                </div>
+                              </div>
+                              <!--/::end project thumbnail and name-->
+                            </td>
+                            <td class="text-end"><span class="text-body-secondary">$125,000</span></td>
+                            <td class="text-end">
+                              <!--begin::progress-->
+                              <div class="progress bg-primary-subtle height-5 rounded-pill">
+                                <div class="bg-primary rounded-pill progress-bar progress-bar-animated progress-bar-animated" aria-valuemax="100" aria-valuenow="84" style="width:84%"></div>
+                              </div>
+                              <!--/end::progress-->
+                            </td>
+                            <td class="text-end">
+                              <!--begin::label-->
+                              <span class="badge bg-warning-subtle text-warning">
+                              On Hold</span>
+                              <!--/end::label-->
+                            </td>
+                            <td class="text-end">
+                              <!--begin::link-->
+                              <a href="#!" class="link-primary">
+                                <span class="material-symbols-rounded fs-5 align-middle">
+                                  visibility
+                                  </span>
+                              </a>
+                              <!--/end::link-->
+                            </td>
+                          </tr>
+                          <!--/::end table-row-->
+                          <!--::begin table-row-->
+                          <tr>
+                            <td>
+                              <!--::begin project thumbnail and name-->
+                              <div class="d-flex align-items-center">
+                                <div class="width-70 h-auto me-3">
+                                  <img src="assets/media/900x600/4.jpg" class="img-fluid rounded" alt="">
+                                </div>
+                                <div class="d-flex justify-content-start flex-column">
+                                  <a href="#" class="h6 mb-1">Shopify Website</a>
+                                  <span class="text-body-secondary d-block fs-6">Jack Aranda</span>
+                                </div>
+                              </div>
+                              <!--/::end project thumbnail and name-->
+                            </td>
+                            <td class="text-end"><span class="text-body-secondary">$85,000</span></td>
+                            <td class="text-end">
+                              <!--begin::progress-->
+                              <div class="progress bg-success-subtle height-5 rounded-pill">
+                                <div class="bg-success rounded-pill progress-bar progress-bar-animated progress-bar-animated" aria-valuemax="100" aria-valuenow="62" style="width:62%"></div>
+                              </div>
+                              <!--/end::progress-->
+                            </td>
+                            <td class="text-end">
+                              <!--begin::label-->
+                              <span class="badge bg-warning-subtle text-warning">
+                              On Hold</span>
+                              <!--/end::label-->
+                            </td>
+                            <td class="text-end">
+                              <!--begin::link-->
+                              <a href="#!" class="link-primary">
+                                <span class="material-symbols-rounded fs-5 align-middle">
+                                  visibility
+                                  </span>
+                              </a>
+                              <!--/end::link-->
+                            </td>
+                          </tr>
+                          <!--/::end table-row-->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--//Page content End//-->
+
+          @@include('./partials/footer.html')
+
+        </main>
+        <!--///////////Page content wrapper End///////////////-->
+      </div>
+    </div>
+    @@include('./partials/core-scripts.html')
+
+    <!--Charts-->
+    <script src="assets/vendor/apexcharts.min.js"></script>
+    
+    <script>
+  
+      </script>
+
+    <!--Swiper Slider-->
+    <script src="assets/vendor/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      // var swiper = new Swiper(".swiper-contacts", {
+      //   slidesPerView: 3,
+      //   spaceBetween: 16,
+      //   navigation: {
+      //     nextEl: ".swiper-button-next",
+      //     prevEl: ".swiper-button-prev",
+      //   },
+      //   breakpoints: {
+      //     640: {
+      //       slidesPerView: 5,
+      //       spaceBetween: 16,
+      //     },
+      //     1024: {
+      //       slidesPerView: 7,
+      //       spaceBetween: 16,
+      //     },
+      //   },
+      // });
+    </script>
+  </body>
+
+</html>

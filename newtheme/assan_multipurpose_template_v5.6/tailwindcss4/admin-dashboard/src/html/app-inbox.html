@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assan Tailwindcss Admin</title>
+
+  <!--:Flatpickr:-->
+  <link rel="stylesheet" href="vendor/css/flatpickr.min.css">
+
+  @@include('./partials/head-includes.html')
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+  @@include('./partials/app-preloader.html')
+
+
+  @@include('./partials/sidebar.html',{"page": "inbox"} )
+
+  <main class="h-full overflow-hidden relative flex flex-col lg:ms-64">
+    @@include('./partials/header-default.html')
+      <!--:Apps Layout:-->
+      <div
+      class="content content-offcanvas relative overflow-hidden flex-1 flex-grow px-4 lg:px-6 xl:px-12 flex flex-col">
+      <div class="h-full absolute inset-0 flex flex-col lg:flex-row bg-white dark:bg-gray-900">
+        <!--:Secondary Sidebar:-->
+        <div id="offcanvasInbox" class="absolute offcanvas-lg lg:!flex start-0 top-0 h-full overflow-y-auto w-64 bg-white dark:bg-gray-900 z-10 border-e-2 border-gray-100 dark:border-black
+        -translate-x-full transition-all duration-200 lg:-translate-x-0 [&.show]:-translate-x-0">
+          <div class="flex w-full flex-col h-hull">
+            <div class="shrink-0 w-full p-3 px-4 text-center">
+              <button type="button"
+                class="btn btn-primary w-full !flex items-center justify-center">
+                <span class="icon-[tabler--edit] me-2 text-lg"></span>
+                Compose</button>
+            </div>
+            <div class="flex-grow px-4 py-3">
+              <!--:Email Nav:-->
+              <nav class="flex flex-col space-y-4 mb-8">
+                <a href="#!"
+                  class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500 active">
+                  <span class="me-3 flex items-center justify-center">
+                   <span class="icon-[tabler--inbox] text-lg"></span>
+                  </span>
+                  <span>Inbox</span> <span
+                    class="px-2 py-1 rounded-md bg-primary-500 text-white ml-auto inline-block leading-[1] text-primary-500 text-sm">3</span>
+                </a>
+                <a href="#!"
+                  class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                  <span class="me-3 flex items-center justify-center">
+                    <span class="icon-[tabler--star-filled] text-lg"></span>
+                  </span>
+                  <span>Starred</span>
+                </a>
+                <a href="#!"
+                  class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                  <span class="me-3 flex items-center justify-center">
+                    <span class="icon-[tabler--send] text-lg"></span>
+                  </span>
+                  <span>Sent</span>
+                </a>
+                <a href="#!"
+                  class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                  <span class="me-3 flex items-center justify-center">
+                    <span class="icon-[tabler--bug] text-lg"></span>
+                  </span>
+                  <span>Spam</span>
+                </a>
+              </nav>
+
+              <!--:Labels:-->
+              <span class="block mb-4 text-sm text-gray-400">Labels</span>
+              <nav class="flex flex-col">
+                <a href="#!" class="py-2 flex items-center hover:text-primary-500 transition-all">
+                   <span class="w-2 h-2 mr-3 rounded-full block bg-success-500"></span>
+                   Work
+                </a>
+                <a href="#!" class="py-2 flex items-center hover:text-primary-500 transition-all">
+                    <span class="w-2 h-2 mr-3 rounded-full block bg-danger-500"></span>
+                    Friends
+                 </a>
+                 <a href="#!" class="py-2 flex items-center hover:text-primary-500 transition-all ">
+                    <span class="w-2 h-2 mr-3 rounded-full block bg-info-500"></span>
+                    Family
+                 </a>
+                 <a href="#!" class="py-2 flex items-center hover:text-primary-500 transition-all">
+                    <span class="w-2 h-2 mr-3 rounded-full block bg-warning-500"></span>
+                    Others
+                 </a>
+                </nav>
+            </div>
+          </div>
+        </div>
+        <!--:Secondary layout content:-->
+        <div class="flex flex-col w-full h-full lg:pl-64">
+          <!--:Header:-->
+          <div class="shrink-0 px-4 py-3 border-b border-gray-100 dark:border-black flex items-center">
+            <!--:Inbox top nav items:-->
+            <div class="flex items-center">
+              <!--:Select All:-->
+              <div class="form-check mr-3 flex items-center justify-center w-4 h-4" data-check-id="1">
+                <input type="checkbox"
+                  class="js-check-all  form-checkbox">
+              </div>
+              <button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Archive" type="button"
+                class="w-8 h-8 border border-gray-200 dark:border-gray-700 border-r-0 rounded-l flex items-center justify-center transition-all hover:bg-gray-100 dark:hover:bg-gray-700">
+                <span class="icon-[tabler--archive] text-lg"></span>
+              </button>
+              <button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Report Spam" type="button"
+                class="w-8 h-8 border border-gray-200 dark:border-gray-700 border-r-0 flex items-center justify-center transition-all hover:bg-gray-100 dark:hover:bg-gray-700">
+                <span class="icon-[tabler--info-square-rounded] text-lg"></span>
+              </button>
+              <button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete" type="button"
+                class="w-8 h-8 border border-gray-200 border-r-0 dark:border-gray-700 flex items-center justify-center transition-all hover:bg-gray-100 dark:hover:bg-gray-700">
+                 <span class="icon-[tabler--trash] text-lg"></span>
+              </button>
+              
+              <!--:Dropdown:-->
+              <div class="">
+                <a href="#"
+                  class="w-8 h-8 border border-gray-200 dark:border-gray-700 flex items-center justify-center transition-all rounded-r hover:bg-gray-100 dark:hover:bg-gray-700"
+                  data-bs-toggle="dropdown">
+                  <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                </a>
+                 <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                :class="isShowPopper && 'show'">
+                  <a href="#!"
+                    class="dropdown-item">
+                    <span class="icon-[tabler--mail-opened] text-lg"></span> Mark as Read
+                  </a>
+                  <a href="#!"
+                    class="dropdown-item">
+                    <span class="icon-[tabler--star-filled] text-lg"></span>
+                    Add Star
+                  </a>
+                  <a href="#!"
+                    class="dropdown-item">
+                    <span class="icon-[tabler--ban] text-lg"></span>
+                    Mute
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="ml-auto shrink-0 flex items-center">
+              <div class="flex items-center shrink-0 mr-3 lg:mr-0">
+                <span class="text-sm text-gray-400 leading-[1] mr-3">
+                  1-12 of 12
+                </span>
+                <button
+                  class="flex mr-1 items-center justify-center w-6 h-6 rounded-full transition-all hover:bg-gray-200 dark:hover:bg-gray-700 disabled:pointer-events-none disabled:opacity-30" disabled>
+                  <span class="icon-[tabler--chevron-left]"></span>
+                </button>
+                <button
+                  class="flex items-center justify-center w-6 h-6 rounded-full transition-all hover:bg-gray-200 dark:hover:bg-gray-700">
+                  <span class="icon-[tabler--chevron-right]"></span>
+                </button>
+              </div>
+              <!--Inbox Sidebar Toggle Button--><button data-bs-toggle="offcanvas" data-bs-target="#offcanvasInbox"
+                class="ml-auto lg:hidden w-6 h-6 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 3V21M21 12H7M7 12L14 19M7 12L14 5" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!--:Emails:-->
+          <div class="flex-grow overflow-y-auto">
+            <!--:Emails List:-->
+            <ol>
+              <!--:Emails List item:-->
+              <li class="unread">
+                <a href="#!"
+                  class="flex realtive px-4 py-3 transition-all hover:z-[1] hover:bg-gray-50 hover:shadow-md dark:hover:bg-gray-800">
+                  <!--:Select and star:-->
+                  <div class="shrink-0 flex space-x-2">
+                    <div class="form-check flex items-center justify-center w-4 h-4" data-check-id="1">
+                      <input type="checkbox" id="email01" class="js-checkbox  form-checkbox">
+                    </div>
+                    <!--:Select Email:-->
+
+                    <!--:Star Email:-->
+                    <input type="checkbox" id="star01"
+                      class="star-email cursor-pointer appearance-none w-4 h-4 before:text-gray-400 dark:before:text-gray-500 before:text-sm before:content-['\F588'] [&:checked]:before:content-['\F586'] before:w-4 before:h-4 before:flex before:items-center before:justify-center before:font-icon [&:checked]:before:text-warning-500">
+                  </div>
+                  <!--:Email Content:-->
+                  <div class="flex-grow ps-3 flex items-center overflow-hidden">
+                    <!--:Sender:-->
+                    <div class="shrink-0 w-32 pr-3 overflow-hidden">
+                      <h6 class="text-inherit truncate leading-tight">
+                        John Wick</h6>
+                    </div>
+                    <!--:Subject:-->
+                    <div class="flex-grow overflow-hidden">
+                      <p class="leading-tight truncate text-inherit">
+                        Donec ac odio tempor orci. Sit amet luctus venenatis lectus magna fringilla urna porttitor
+                      </p>
+                    </div>
+                    <!--:Attachment:-->
+                    <span class="icon-[tabler--paperclip] ms-3 shrink-0"></span>
+                    <!--:Time:-->
+                    <span class="text-sm shrink-0 w-20 text-end">00:30 AM</span>
+                  </div>
+                </a>
+              </li>
+              <!--:Emails List item:-->
+              <li class="unread">
+                <a href="#!"
+                  class="flex realtive px-4 py-3 transition-all hover:z-[1] hover:bg-gray-50 hover:shadow-md dark:hover:bg-gray-800">
+                  <!--:Select and star:-->
+                  <div class="shrink-0 flex space-x-2">
+                    <div class="form-check flex items-center justify-center w-4 h-4" data-check-id="1">
+                      <input type="checkbox" id="email02"
+                        class="js-checkbox form-checkbox">
+                    </div>
+                    <!--:Select Email:-->
+
+                    <!--:Star Email:-->
+                    <input type="checkbox" id="star02"
+                      class="star-email cursor-pointer appearance-none w-4 h-4 before:text-gray-400 dark:before:text-gray-500 before:text-sm before:content-['\F588'] [&:checked]:before:content-['\F586'] before:w-4 before:h-4 before:flex before:items-center before:justify-center before:font-icon [&:checked]:before:text-warning-500">
+                  </div>
+                  <!--:Email Content:-->
+                  <div class="flex-grow ps-3 flex items-center overflow-hidden">
+                    <!--:Sender:-->
+                    <div class="shrink-0 w-32 pr-3 overflow-hidden">
+                      <h6 class="text-inherit truncate leading-tight">
+                        Abraham Syed</h6>
+                    </div>
+                    <!--:Subject:-->
+                    <div class="flex-grow overflow-hidden">
+                      <p class="leading-tight truncate text-inherit">
+                        Commodo elit at imperdiet dui accumsan sit amet nulla facilisi
+                      </p>
+                    </div>
+                    <!--:Time:-->
+                    <span class="text-sm shrink-0 w-20 text-end">15:30 PM</span>
+                  </div>
+                </a>
+              </li>
+              <!--:Emails List item:-->
+              <li class="unread">
+                <a href="#!"
+                  class="flex realtive px-4 py-3 transition-all hover:z-[1] hover:bg-gray-50 hover:shadow-md dark:hover:bg-gray-800">
+                  <!--:Select and star:-->
+                  <div class="shrink-0 flex space-x-2">
+                    <div class="form-check flex items-center justify-center w-4 h-4" data-check-id="1">
+                      <input type="checkbox" id="email03"
+                        class="js-checkbox form-checkbox">
+                    </div>
+                    <!--:Select Email:-->
+
+                    <!--:Star Email:-->
+                    <input type="checkbox" id="star03"
+                      class="star-email cursor-pointer appearance-none w-4 h-4 before:text-gray-400 dark:before:text-gray-500 before:text-sm before:content-['\F588'] [&:checked]:before:content-['\F586'] before:w-4 before:h-4 before:flex before:items-center before:justify-center before:font-icon [&:checked]:before:text-warning-500">
+                  </div>
+                  <!--:Email Content:-->
+                  <div class="flex-grow ps-3 flex items-center overflow-hidden">
+                    <!--:Sender:-->
+                    <div class="shrink-0 w-32 pr-3 overflow-hidden">
+                      <h6 class="text-inherit truncate leading-tight">
+                        Paypal</h6>
+                    </div>
+                    <!--:Subject:-->
+                    <div class="flex-grow overflow-hidden">
+                      <p class="leading-tight truncate text-inherit">
+                       Transaction in your paypal account
+                      </p>
+                    </div>
+                    <!--:Time:-->
+                    <span class="text-sm shrink-0 w-20 text-end">20:14 PM</span>
+                  </div>
+                </a>
+              </li>
+              <!--:Emails List item:-->
+              <li class="read">
+                <a href="#!"
+                  class="flex realtive px-4 py-3 transition-all hover:z-[1] hover:bg-gray-50 hover:shadow-md dark:hover:bg-gray-800">
+                  <!--:Select and star:-->
+                  <div class="shrink-0 flex space-x-2">
+                    <div class="form-check flex items-center justify-center w-4 h-4" data-check-id="1">
+                      <input type="checkbox" id="email04"
+                        class="js-checkbox form-checkbox">
+                    </div>
+                    <!--:Select Email:-->
+
+                    <!--:Star Email:-->
+                    <input type="checkbox" id="star04"
+                      class="star-email cursor-pointer appearance-none w-4 h-4 before:text-gray-400 dark:before:text-gray-500 before:text-sm before:content-['\F588'] [&:checked]:before:content-['\F586'] before:w-4 before:h-4 before:flex before:items-center before:justify-center before:font-icon [&:checked]:before:text-warning-500">
+                  </div>
+                  <!--:Email Content:-->
+                  <div class="flex-grow ps-3 flex items-center overflow-hidden">
+                    <!--:Sender:-->
+                    <div class="shrink-0 w-32 pr-3 overflow-hidden">
+                      <h6 class="text-inherit truncate leading-tight">
+                       Some Inc</h6>
+                    </div>
+                    <!--:Subject:-->
+                    <div class="flex-grow overflow-hidden">
+                      <p class="leading-tight truncate text-inherit">
+                        Ramadhir shared a design file, take a look and let us know
+                      </p>
+                    </div>
+                    <!--:Time:-->
+                    <span class="text-sm shrink-0 w-20 text-end">May 20</span>
+                  </div>
+                </a>
+              </li>
+              <!--:Emails List item:-->
+              <li class="read">
+                <a href="#!"
+                  class="flex realtive px-4 py-3 transition-all hover:z-[1] hover:bg-gray-50 hover:shadow-md dark:hover:bg-gray-800">
+                  <!--:Select and star:-->
+                  <div class="shrink-0 flex space-x-2">
+                    <div class="form-check flex items-center justify-center w-4 h-4" data-check-id="1">
+                      <input type="checkbox" id="email05"
+                        class="js-checkbox form-checkbox">
+                    </div>
+                    <!--:Select Email:-->
+
+                    <!--:Star Email:-->
+                    <input type="checkbox" id="star05"
+                      class="star-email cursor-pointer appearance-none w-4 h-4 before:text-gray-400 dark:before:text-gray-500 before:text-sm before:content-['\F588'] [&:checked]:before:content-['\F586'] before:w-4 before:h-4 before:flex before:items-center before:justify-center before:font-icon [&:checked]:before:text-warning-500">
+                  </div>
+                  <!--:Email Content:-->
+                  <div class="flex-grow ps-3 flex items-center overflow-hidden">
+                    <!--:Sender:-->
+                    <div class="shrink-0 w-32 pr-3 overflow-hidden">
+                      <h6 class="text-inherit truncate leading-tight">
+                        Bootstrap</h6>
+                    </div>
+                    <!--:Subject:-->
+                    <div class="flex-grow overflow-hidden">
+                      <p class="leading-tight truncate text-inherit">
+                        New update 5.3.3 released
+                      </p>
+                    </div>
+                    <!--:Time:-->
+                    <span class="text-sm shrink-0 w-20 text-end">May 19</span>
+                  </div>
+                </a>
+              </li>
+              <!--:Emails List item:-->
+              <li class="read">
+                <a href="#!"
+                  class="flex realtive px-4 py-3 transition-all hover:z-[1] hover:bg-gray-50 hover:shadow-md dark:hover:bg-gray-800">
+                  <!--:Select and star:-->
+                  <div class="shrink-0 flex space-x-2">
+                    <div class="form-check flex items-center justify-center w-4 h-4" data-check-id="1">
+                      <input type="checkbox" id="email06"
+                        class="js-checkbox form-checkbox">
+                    </div>
+                    <!--:Select Email:-->
+
+                    <!--:Star Email:-->
+                    <input type="checkbox" id="star06"
+                      class="star-email cursor-pointer appearance-none w-4 h-4 before:text-gray-400 dark:before:text-gray-500 before:text-sm before:content-['\F588'] [&:checked]:before:content-['\F586'] before:w-4 before:h-4 before:flex before:items-center before:justify-center before:font-icon [&:checked]:before:text-warning-500">
+                  </div>
+                  <!--:Email Content:-->
+                  <div class="flex-grow ps-3 flex items-center overflow-hidden">
+                    <!--:Sender:-->
+                    <div class="shrink-0 w-32 pr-3 overflow-hidden">
+                      <h6 class="text-inherit truncate leading-tight">
+                        Dalia</h6>
+                    </div>
+                    <!--:Subject:-->
+                    <div class="flex-grow overflow-hidden">
+                      <p class="leading-tight truncate text-inherit">
+                        Praesent semper feugiat nibh sed. Malesuada bibendum arcu vitae elementum curabitur vitae nunc
+                      </p>
+                    </div>
+                    <!--:Attachment:-->
+                    <span class="icon-[tabler--paperclip] ms-3 shrink-0"></span>
+                    <!--:Time:-->
+                    <span class="text-sm shrink-0 w-20 text-end">May 19</span>
+                  </div>
+                </a>
+              </li>
+              <!--:Emails List item:-->
+              <li class="read">
+                <a href="#!"
+                  class="flex realtive px-4 py-3 transition-all hover:z-[1] hover:bg-gray-50 hover:shadow-md dark:hover:bg-gray-800">
+                  <!--:Select and star:-->
+                  <div class="shrink-0 flex space-x-2">
+                    <div class="form-check flex items-center justify-center w-4 h-4" data-check-id="1">
+                      <input type="checkbox" id="email07"
+                        class="js-checkbox form-checkbox">
+                    </div>
+                    <!--:Select Email:-->
+
+                    <!--:Star Email:-->
+                    <input type="checkbox" id="star07"
+                      class="star-email cursor-pointer appearance-none w-4 h-4 before:text-gray-400 dark:before:text-gray-500 before:text-sm before:content-['\F588'] [&:checked]:before:content-['\F586'] before:w-4 before:h-4 before:flex before:items-center before:justify-center before:font-icon [&:checked]:before:text-warning-500">
+                  </div>
+                  <!--:Email Content:-->
+                  <div class="flex-grow ps-3 flex items-center overflow-hidden">
+                    <!--:Sender:-->
+                    <div class="shrink-0 w-32 pr-3 overflow-hidden">
+                      <h6 class="text-inherit truncate leading-tight">
+                       Tesla</h6>
+                    </div>
+                    <!--:Subject:-->
+                    <div class="flex-grow overflow-hidden">
+                      <p class="leading-tight truncate text-inherit">E-voting is opening now</p>
+                    </div>
+                    <!--:Time:-->
+                    <span class="text-sm shrink-0 w-20 text-end">May 19</span>
+                  </div>
+                </a>
+              </li>
+              <!--:Emails List item:-->
+              <li class="read">
+                <a href="#!"
+                  class="flex realtive px-4 py-3 transition-all hover:z-[1] hover:bg-gray-50 hover:shadow-md dark:hover:bg-gray-800">
+                  <!--:Select and star:-->
+                  <div class="shrink-0 flex space-x-2">
+                    <div class="form-check flex items-center justify-center w-4 h-4" data-check-id="1">
+                      <input type="checkbox" id="email08"
+                        class="js-checkbox form-checkbox">
+                    </div>
+                    <!--:Select Email:-->
+
+                    <!--:Star Email:-->
+                    <input type="checkbox" id="star08"
+                      class="star-email cursor-pointer appearance-none w-4 h-4 before:text-gray-400 dark:before:text-gray-500 before:text-sm before:content-['\F588'] [&:checked]:before:content-['\F586'] before:w-4 before:h-4 before:flex before:items-center before:justify-center before:font-icon [&:checked]:before:text-warning-500">
+                  </div>
+                  <!--:Email Content:-->
+                  <div class="flex-grow ps-3 flex items-center overflow-hidden">
+                    <!--:Sender:-->
+                    <div class="shrink-0 w-32 pr-3 overflow-hidden">
+                      <h6 class="text-inherit truncate leading-tight">
+                        Slack</h6>
+                    </div>
+                    <!--:Subject:-->
+                    <div class="flex-grow overflow-hidden">
+                      <p class="leading-tight truncate text-inherit">Ramcharan sent you a private message</p>
+                    </div>
+                    <!--:Time:-->
+                    <span class="text-sm shrink-0 w-20 text-end">May 18</span>
+                  </div>
+                </a>
+              </li>
+              <!--:Emails List item:-->
+              <li class="read">
+                <a href="#!"
+                  class="flex realtive px-4 py-3 transition-all hover:z-[1] hover:bg-gray-50 hover:shadow-md dark:hover:bg-gray-800">
+                  <!--:Select and star:-->
+                  <div class="shrink-0 flex space-x-2">
+                    <div class="form-check flex items-center justify-center w-4 h-4" data-check-id="1">
+                      <input type="checkbox" id="email09"
+                        class="js-checkbox form-checkbox">
+                    </div>
+                    <!--:Select Email:-->
+
+                    <!--:Star Email:-->
+                    <input type="checkbox" id="star09"
+                      class="star-email cursor-pointer appearance-none w-4 h-4 before:text-gray-400 dark:before:text-gray-500 before:text-sm before:content-['\F588'] [&:checked]:before:content-['\F586'] before:w-4 before:h-4 before:flex before:items-center before:justify-center before:font-icon [&:checked]:before:text-warning-500">
+                  </div>
+                  <!--:Email Content:-->
+                  <div class="flex-grow ps-3 flex items-center overflow-hidden">
+                    <!--:Sender:-->
+                    <div class="shrink-0 w-32 pr-3 overflow-hidden">
+                      <h6 class="text-inherit truncate leading-tight">
+                        X</h6>
+                    </div>
+                    <!--:Subject:-->
+                    <div class="flex-grow overflow-hidden">
+                      <p class="leading-tight truncate text-inherit">@adamvoges follows you</p>
+                    </div>
+                    <!--:Time:-->
+                    <span class="text-sm shrink-0 w-20 text-end">May 18</span>
+                  </div>
+                </a>
+              </li>
+              <!--:Emails List item:-->
+              <li class="read">
+                <a href="#!"
+                  class="flex realtive px-4 py-3 transition-all hover:z-[1] hover:bg-gray-50 hover:shadow-md dark:hover:bg-gray-800">
+                  <!--:Select and star:-->
+                  <div class="shrink-0 flex space-x-2">
+                    <div class="form-check flex items-center justify-center w-4 h-4" data-check-id="1">
+                      <input type="checkbox" id="email10"
+                        class="js-checkbox form-checkbox">
+                    </div>
+                    <!--:Select Email:-->
+
+                    <!--:Star Email:-->
+                    <input type="checkbox" id="star10"
+                      class="star-email cursor-pointer appearance-none w-4 h-4 before:text-gray-400 dark:before:text-gray-500 before:text-sm before:content-['\F588'] [&:checked]:before:content-['\F586'] before:w-4 before:h-4 before:flex before:items-center before:justify-center before:font-icon [&:checked]:before:text-warning-500">
+                  </div>
+                  <!--:Email Content:-->
+                  <div class="flex-grow ps-3 flex items-center overflow-hidden">
+                    <!--:Sender:-->
+                    <div class="shrink-0 w-32 pr-3 overflow-hidden">
+                      <h6 class="text-inherit truncate leading-tight">
+                        Meta</h6>
+                    </div>
+                    <!--:Subject:-->
+                    <div class="flex-grow overflow-hidden">
+                      <p class="leading-tight truncate text-inherit">
+                        Privacy policy updated
+                      </p>
+                    </div>
+                    <!--:Time:-->
+                    <span class="text-sm shrink-0 w-20 text-end">May 17</span>
+                  </div>
+                </a>
+              </li>
+              <!--:Emails List item:-->
+              <li class="read">
+                <a href="#!"
+                  class="flex realtive px-4 py-3 transition-all hover:z-[1] hover:bg-gray-50 hover:shadow-md dark:hover:bg-gray-800">
+                  <!--:Select and star:-->
+                  <div class="shrink-0 flex space-x-2">
+                    <div class="form-check flex items-center justify-center w-4 h-4" data-check-id="1">
+                      <input type="checkbox" id="email11"
+                        class="js-checkbox form-checkbox">
+                    </div>
+                    <!--:Select Email:-->
+
+                    <!--:Star Email:-->
+                    <input type="checkbox" id="star11"
+                      class="star-email cursor-pointer appearance-none w-4 h-4 before:text-gray-400 dark:before:text-gray-500 before:text-sm before:content-['\F588'] [&:checked]:before:content-['\F586'] before:w-4 before:h-4 before:flex before:items-center before:justify-center before:font-icon [&:checked]:before:text-warning-500">
+                  </div>
+                  <!--:Email Content:-->
+                  <div class="flex-grow ps-3 flex items-center overflow-hidden">
+                    <!--:Sender:-->
+                    <div class="shrink-0 w-32 pr-3 overflow-hidden">
+                      <h6 class="text-inherit truncate leading-tight">
+                        Johnathan Trott</h6>
+                    </div>
+                    <!--:Subject:-->
+                    <div class="flex-grow overflow-hidden">
+                      <p class="leading-tight truncate text-inherit">Checkout the new products ui design file</p>
+                    </div>
+                    <!--:Attachment:-->
+                    <span class="icon-[tabler--paperclip] ms-3 shrink-0"></span>
+                    <!--:Time:-->
+                    <span class="text-sm shrink-0 w-20 text-end">May 16</span>
+                  </div>
+                </a>
+              </li>
+              <!--:Emails List item:-->
+              <li class="read">
+                <a href="#!"
+                  class="flex realtive px-4 py-3 transition-all hover:z-[1] hover:bg-gray-50 hover:shadow-md dark:hover:bg-gray-800">
+                  <!--:Select and star:-->
+                  <div class="shrink-0 flex space-x-2">
+                    <div class="form-check flex items-center justify-center w-4 h-4" data-check-id="1">
+                      <input type="checkbox" id="email12"
+                        class="js-checkbox form-checkbox">
+                    </div>
+                    <!--:Select Email:-->
+
+                    <!--:Star Email:-->
+                    <input type="checkbox" id="star12"
+                      class="star-email cursor-pointer appearance-none w-4 h-4 before:text-gray-400 dark:before:text-gray-500 before:text-sm before:content-['\F588'] [&:checked]:before:content-['\F586'] before:w-4 before:h-4 before:flex before:items-center before:justify-center before:font-icon [&:checked]:before:text-warning-500">
+                  </div>
+                  <!--:Email Content:-->
+                  <div class="flex-grow ps-3 flex items-center overflow-hidden">
+                    <!--:Sender:-->
+                    <div class="shrink-0 w-32 pr-3 overflow-hidden">
+                      <h6 class="text-inherit truncate leading-tight">
+                        monday.com</h6>
+                    </div>
+                    <!--:Subject:-->
+                    <div class="flex-grow overflow-hidden">
+                      <p class="leading-tight truncate text-inherit">
+                        Amet mauris commodo quis imperdiet massa tincidunt. Sapien pellentesque habitant morbi tristique senectus et netus et
+                      </p>
+                    </div>
+                    <!--:Time:-->
+                    <span class="text-sm shrink-0 w-20 text-end">May 15</span>
+                  </div>
+                </a>
+              </li>
+              
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--:Main Script:-->
+  <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    <!--Swiper slider-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+    
+    @@include('./partials/head-includes.html')
+    <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+     <!--begin:Header-->
+  <header class="header-transparent sticky-fixed">
+
+    <!--begin:navbar-->
+    <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+      <!--Navbar-fixed-background-->
+      <div class="navbar-fixed-bg absolute"></div>
+      <div class="container relative flex flex-wrap items-center justify-center relative">
+        <!--begin:logo-->
+        <a class="navbar-brand relative w-24 block" href="index.html">
+          <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+          <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+        </a>
+        <!--end:logo-->
+
+        <!--begin:navbar-no-collapse-items-->
+        <div class="flex items-center shrink-0 ml-auto lg:order-last">
+          <!--Navbar toggler button-->
+          <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <i></i>
+            </span>
+          </button>
+          <!--Button-->
+          <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+            <a href="#"
+              class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+          </div>
+        </div>
+        <!--end:navbar-no-collapse-items-->
+
+        <!--begin:navbar-collapse-->
+        <div
+          class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+          id="mainNavbarTheme">
+          @@include('./partials/headers/default-navbar-items.html',{"page": "pages"})
+        </div>
+        <!--end:navbar-collapse-->
+      </div>
+
+    </nav>
+    <!--end:navbar-->
+  </header>
+  <!--end:header-->
+
+ <!--Main content-->
+ <main class="main-content" id="main-content">
+    <section class="relative overflow-hidden bg-black text-white">
+        <!--Video-->
+        <div class="w-full h-full opacity-30 absolute right-0 top-0 bg-cover bg-no-repeat bg-center"
+            style="background-image: url(assets/videos/officeloop-cover.jpg);">
+            <div class="jarallax bg-black h-full w-full" data-speed=".2" data-video-src="mp4:./assets/videos/officeloop.mp4">
+            </div>
+        </div>
+        <!--:Decoration bg:-->
+        <img src="assets/img/backgrounds/bg-blur2.png" class="w-1/2 h-auto absolute left-1/2 -translate-x-1/2 top-0 opacity-20" alt="">
+        <!--divider-->
+        <svg class="absolute right-0 bottom-0 text-white dark:text-black" fill="currentColor" width="100%" height="80"
+            preserveAspectRatio="none" viewBox="0 0 1440 150">
+            <path
+                d="M0,139.588931 C152,152.720009 299.666667,139.401344 443,99.6329343 C658,39.9803202 681,66.1486839 905,90.6287661 C1129,115.108848 1222,59.3955578 1293,37.4478979 C1340.33333,22.8161246 1389.33333,16.1567919 1440,17.4698997 L1440,150 L0,150 L0,139.588931 Z">
+            </path>
+            <path
+                d="M0,117.980769 C152,145.786435 299.666667,138.940533 443,97.4430619 C658,35.1968558 697,56.6671048 921,82.2115385 C1145,107.755972 1222,55.4562342 1293,32.5543282 C1340.33333,17.2863909 1389.33333,10.337522 1440,11.7077215 L1440,150 L0,150 L0,117.980769 Z"
+                fill-opacity="0.3"></path>
+            <path
+                d="M0,106.034486 C156.666667,132.662839 291.666667,129.406134 405,96.2643713 C575,46.5517277 637,36.0308187 861,62.6436817 C1085,89.2565447 1215,51.1586623 1286,27.2988541 C1333.33333,11.3923153 1384.66667,2.2926973 1440,1.13686838e-13 L1440,150 L0,150 L0,106.034486 Z"
+                fill-opacity="0.3"></path>
+        </svg>
+
+        <div class="container relative z-[1] pt-12 lg:pt-24 pb-24 lg:pb-36">
+            <div class="flex flex-wrap -mx-3 py-12">
+                <div class="w-full px-3 mx-auto text-center lg:w-8/12 mx-auto">
+                    <h1 class="text-4xl lg:text-7xl font-medium mb-7">We are a brand of collective & creativity</h1>
+                    <div class="flex items-center justify-center">
+                        <!--play button-->
+                        <a href="https://vimeo.com/353105087" data-glightbox data-gallery="gallery07"
+                        class="flex items-center justify-center w-24 h-24 rounded-full relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-300 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-24 w-24 flex items-center justify-center bg-indigo-500 text-white"> <i class="bi bi-play text-4xl leading-[1]"></i></span>
+                       
+                    </a>
+                        <small class="text-white/50 font-serif italic ml-3">Watch story </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/.row-->
+    </section>
+    <section class="relative border-b border-gray-200 dark:border-gray-800 overflow-hidden" id="next">
+        <div class="container py-16 lg:py-24">
+            <div class="flex flex-wrap -mx-3 items-center">
+                <div class="w-full px-3 lg:w-6/12 mb-7 lg:mb-0">
+                    <h6 class="italic font-serif text-gray-400 mb-4">
+                        Realise your potential </h6>
+                    <h1 class="text-4xl lg:text-5xl font-medium mb-5" data-text-split>
+                        We create digital design experiences
+                    </h1>
+                    <p class="mb-7 text-gray-600 dark:text-gray-300">
+                        We are a professional digital studio based in California, Usa. We make good
+                        designs for small to large businesses, Building good designs is our passion. Drop us a
+                        line and say hello to us without any hesitation. We would love to discuss about your
+                        next project.
+                    </p>
+                    <div>
+                        <a href="#" class="btn bg-indigo-500 text-white hover:bg-indigo-600"><span>What we
+                                offer</span></a>
+                    </div>
+                </div>
+                <div class="w-full px-3 lg:w-6/12 relative xl:w-5/12 xl:ml-auto">
+                    <div class="relative">
+                     
+                        <div class="relative pl-9 lg:pl-24 pb-9 pr-5 pt-5">
+                            <img src="assets/img/960x1140/4.jpg" alt=""
+                                class="max-w-full rounded-2xl shadow-lg relative">
+                            <img data-animation-y src="assets/img/960x900/4.jpg" alt=""
+                                class="max-w-full absolute shadow-lg rounded-2xl top-1/2 -mt-12 start-0 w-6/12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="relative">
+        <div class="container pt-12 lg:pt-16 pb-9">
+            <div class="flex flex-wrap -mx-3">
+                <div class="md:w-4/12 w-full px-3 mb-7 md:mb-0">
+                    <h6 class="italic font-serif mb-4 text-gray-400">We have been</h6>
+                    <h5 class="mb-4 text-4xl lg:text-5xl font-medium">
+                        <span data-countup="9" data-suffix="+" class="display-5 text-primary"></span>
+                    </h5>
+                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                        <strong>Years of experience</strong> adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="md:w-4/12 w-full px-3 mb-7 md:mb-0">
+                    <h6 class="italic font-serif mb-4 text-gray-400">Accuracy</h6>
+                    <h5 class="mb-4 text-4xl lg:text-5xl font-medium">
+                        <span data-countup="99.9" data-suffix="%" class="display-5 text-primary"></span>
+                    </h5>
+                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                        Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="md:w-4/12 w-full px-3">
+                    <h6 class="italic font-serif mb-4 text-gray-400">Sales</h6>
+                    <h5 class="mb-4 text-4xl lg:text-5xl font-medium">
+                        <span data-countup="16000" data-suffix="+" class="display-5 text-primary"></span>
+                    </h5>
+                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                        Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="relative bg-green-500/10 overflow-hidden">
+        <!--Divider shape-->
+        <svg class="absolute start-0 bottom-0 w-full text-white dark:text-black" preserveAspectRatio="none" width="1200"
+            height="80" viewBox="0 0 1200 167" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M1200 39.6228L1133 26.8851C1067 14.1473 933 -11.3281 800 5.65554C667 22.6392 533 82.0819 400 99.0655C267 116.049 133 90.5737 67 77.836L0 65.0982V167H67C133 167 267 167 400 167C533 167 667 167 800 167C933 167 1067 167 1133 167H1200V39.6228Z"
+                fill="currentColor" />
+        </svg>
+        <!--Divider shape-top-->
+        <svg class="absolute start-0 flip-y top-0 w-full rotate-180 text-white dark:text-black" preserveAspectRatio="none" width="1200"
+            height="80" viewBox="0 0 1200 167" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M1200 39.6228L1133 26.8851C1067 14.1473 933 -11.3281 800 5.65554C667 22.6392 533 82.0819 400 99.0655C267 116.049 133 90.5737 67 77.836L0 65.0982V167H67C133 167 267 167 400 167C533 167 667 167 800 167C933 167 1067 167 1133 167H1200V39.6228Z"
+                fill="currentColor" />
+        </svg>
+        <div class="container relative">
+            <div class="relative pb-16 pt-24">
+                <div class="flex flex-wrap -mx-3 py-16 lg:py-24">
+                    <div class="w-full lg:w-8/12 px-3 mx-auto">
+                        <figure class="mb-0 relative">
+                            <div class="relative mb-7">
+                                <!--Avatar Image-->
+                                <img class="relative w-24 rounded-full shadow"
+                                    src="assets/img/avatar/12.jpg" alt="">
+                            </div>
+                            <div>
+                                <blockquote>
+                                    <h2 data-text-split class="text-4xl lg:text-5xl mb-7">
+                                        " They're very responsive and go above and beyond to meet our needs. We
+                                        continue working with them, which is the best sign of our satisfaction.
+                                        "
+                                    </h2>
+                                </blockquote>
+                                <figcaption>
+                                    <h5 class="mb-2 text-xl font-medium text-indigo-500">
+                                        Joseph Foxx
+                                    </h5>
+                                    <span class="opacity-50">
+                                        Staff Engineer, Any inc.
+                                    </span>
+                                </figcaption>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="relative">
+        <div class="container py-16 lg:py-24">
+            <div class="flex-wrap flex -mx-3 mb-12">
+                <div class="lg:w-7/12 w-full px-3 mx-auto text-center">
+                    <h2 class="text-4xl lg:text-5xl font-medium" data-text-split>Meet our dedicated highly skilled super team</h2>
+                </div>
+            </div>
+            <div class="flex-wrap flex -mx-3">
+                <div class="lg:w-4/12 w-full px-3 mb-9 mt-auto text-center" data-animation="fadeInUp" data-delay=".1"
+                    >
+                    <div class="relative mb-4 overflow-hidden w-32 h-32 mx-auto rounded-full">
+                        <img src="assets/img/team/1.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-xl font-medium">
+                            Jordy Eubanks
+                        </h5>
+                        <p class="mb-3 font-serif italic text-indigo-500">Creative director</p>
+                        <p class="lg:w-8/12 text-gray-600 dark:text-gray-300 mx-auto mb-2">
+                            Duis aute irure dolor in velit esse cillum fugiat nulla pariatur.
+                        </p>
+                        <small class="text-gray-400">London, UK</small>
+                    </div>
+                </div>
+                <div class="lg:w-4/12 w-full px-3 mb-9 mt-auto text-center" data-animation="fadeInUp" data-delay=".15"
+                    >
+                    <div class="relative mb-4 overflow-hidden w-32 h-32 mx-auto rounded-full">
+                        <img src="assets/img/team/2.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-xl font-medium">
+                            Olive Mathews
+                        </h5>
+                        <p class="mb-3 font-serif italic text-indigo-500">Visual designer</p>
+                        <p class="lg:w-8/12 text-gray-600 dark:text-gray-300 mx-auto mb-2">
+                            Duis aute irure dolor in velit esse cillum fugiat nulla pariatur.
+                        </p>
+                        <small class="text-gray-400">Texas, US</small>
+                    </div>
+                </div>
+                <div class="lg:w-4/12 w-full px-3 mb-9 mt-auto text-center" data-animation="fadeInUp" data-delay=".2"
+                    >
+                    <div class="relative mb-5 overflow-hidden w-32 h-32 mx-auto rounded-full">
+                        <img src="assets/img/team/3.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-xl font-medium">
+                            Aarav Lynn
+                        </h5>
+                        <p class="mb-3 font-serif italic text-indigo-500">Developer</p>
+                        <p class="lg:w-8/12 text-gray-600 dark:text-gray-300 mx-auto mb-2">
+                            Duis aute irure dolor in velit esse cillum fugiat nulla pariatur.
+                        </p>
+                        <small class="text-gray-400">Wellington, NZ</small>
+                    </div>
+                </div>
+                <div class="py-4"></div>
+                <div class="lg:w-4/12 w-full px-3 mb-9 lg:mb-0 mt-auto text-center" data-animation="fadeInUp" data-delay=".25"
+                    >
+                    <div class="relative mb-5 overflow-hidden w-32 h-32 mx-auto rounded-full">
+                        <img src="assets/img/team/5.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-xl font-medium">
+                            Eva Calvert
+                        </h5>
+                        <p class="mb-3 font-serif italic text-indigo-500">Motion designer</p>
+                        <p class="lg:w-8/12 text-gray-600 dark:text-gray-300 mx-auto mb-2">
+                            Duis aute irure dolor in velit esse cillum fugiat nulla pariatur.
+                        </p>
+                        <small class="text-gray-400">Paris, FR</small>
+                    </div>
+                </div>
+                <div class="lg:w-4/12 w-full px-3 mb-7 lg:mb-0 mt-auto text-center" data-animation="fadeInUp" data-delay=".3">
+                    <div class="relative mb-5 overflow-hidden w-32 h-32 mx-auto rounded-full">
+                        <img src="assets/img/team/6.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-xl font-medium">
+                            Amiya Potts
+                        </h5>
+                        <p class="mb-3 font-serif italic text-indigo-500">Strategist / Copywriter</p>
+                        <p class="lg:w-8/12 text-gray-600 dark:text-gray-300 mx-auto mb-2">
+                            Duis aute irure dolor in velit esse cillum fugiat nulla pariatur.
+                        </p>
+                        <small class="text-gray-400">California, USA</small>
+                    </div>
+                </div>
+                <div class="lg:w-4/12 w-full px-3" data-animation="fadeInUp" data-delay=".35">
+                    <div class="relative overflow-hidden h-full">
+                        <div class="relative flex-grow flex flex-col h-full text-center">
+                            <div
+                                class="w-32 h-32 mb-5 mx-auto bg-indigo-500 text-white shadow relative rounded-full flex flex-col items-center justify-center">
+                               <small class="block mb-2 opacity-50">New opening</small>
+                                <h3 class="mb-0"> Visual <br>designer</h3>
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="text-xl font-medium lg:w-8/12 mx-auto">
+                                    Become a member of our super team
+                                </h3>
+                            </div>
+                            <div class="p-4">
+                                <a href="#!" class="link-underline h6 text-dark pb-1">View Job Openings
+                                    <i class="bi bi-arrow-right fs-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</main>
+
+
+
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-1.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+   
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme js -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+    
+</body>
+
+</html>

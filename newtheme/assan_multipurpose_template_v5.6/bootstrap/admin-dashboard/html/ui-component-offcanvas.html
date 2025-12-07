@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assan-Admin</title>
+
+        @@include('./partials/fonts.html')
+        <!--Simplebar css-->
+        <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+        <!--Choices css-->
+        <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+
+        <!--Main style-->
+        <link rel="stylesheet" href="assets/css/style.min.css">
+    </head>
+
+    <body>
+        @@include('./partials/preloader.html')
+        <!--App Start-->
+        <div class="d-flex flex-column flex-root">
+            <!--Page-->
+            <div class="page d-flex flex-row flex-column-fluid">
+                @@include('./partials/sidebars/sidebar-default.html',{page:"components","components_collapse": "show","component_offcanvas_active": "active"} )
+
+                <!--///////////Page content wrapper///////////////-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+
+                    @@include('./partials/header/header-default.html')
+
+
+                    <!--//Page Toolbar//-->
+                    <div class="toolbar pt-4 pb-4 px-3 px-lg-6">
+                        <div class="position-relative container-fluid px-0">
+                            <div class="row align-items-center position-relative">
+                                <div class="col-md-8 mb-4 mb-md-0">
+                                    <h3 class="mb-0">Offcanvas</h3>
+                                </div>
+                                <div class="col-md-4 d-md-flex justify-content-md-end">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="#!">Home</a></li>
+                                            <li class="breadcrumb-item active">UI Components</li>
+                                            <li class="breadcrumb-item active">Offcanvas</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page Toolbar End//-->
+
+                    <!--//Page content//-->
+                    <div class="content pt-3 px-3 px-lg-6 d-flex flex-column-fluid">
+                        <div class="container-fluid  px-0">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-2">
+                                    <div class="card overflow-hidden">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Basic Offcanvas</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <!--offcanvas example-->
+                                            <!-- Button trigger offcanvas -->
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="offcanvas"
+                                                data-bs-target="#exampleOffcanvas">
+                                                Open Offcanvas
+                                            </button>
+                                            <!-- Offcanvas -->
+                                            <div class="offcanvas offcanvas-end" id="exampleOffcanvas" tabindex="-1"
+                                                aria-labelledby="exampleOffcanvasLabel" aria-hidden="true">
+                                                <div class="offcanvas-header">
+                                                    <h5 class="mb-0">Title</h5>
+                                                    <button type="button" class="btn-close" data-bs-target="exampleOffcanvas" data-bs-dismiss="offcanvas"></button>
+                                                </div>
+                                                    <div class="offcanvas-body">
+                                                        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-2">
+                                    <div class="card overflow-hidden">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Body scrolling Offcanvas</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
+
+                                            <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                                              <div class="offcanvas-header">
+                                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                              </div>
+                                              <div class="offcanvas-body">
+                                                <p>Try scrolling the rest of the page to see this option in action.</p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-2">
+                                    <div class="card overflow-hidden">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Body scrolling with backdrop</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
+
+                                            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                                              <div class="offcanvas-header">
+                                                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                              </div>
+                                              <div class="offcanvas-body">
+                                                <p>Try scrolling the rest of the page to see this option in action.</p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-2">
+                                    <div class="card overflow-hidden">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Static offcanvas</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                                                Toggle static offcanvas
+                                              </button>
+                                              
+                                              <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                                                <div class="offcanvas-header">
+                                                  <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
+                                                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                </div>
+                                                <div class="offcanvas-body">
+                                                  <div>
+                                                    I will not close if you click outside of me.
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page content End//-->
+
+                    @@include('./partials/footer.html')
+                </main>
+                <!--///////////Page content wrapper End///////////////-->
+            </div>
+        </div>
+        @@include('./partials/core-scripts.html')
+
+    </body>
+
+</html>

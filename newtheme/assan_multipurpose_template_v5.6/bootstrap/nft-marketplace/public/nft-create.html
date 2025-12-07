@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>NFT</title>
+
+        <!--Favicon-->
+        <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!--Material symbols Icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Aos Animations-->
+        <link href="assets/vendor/node_modules/css/aos.css" rel="stylesheet">
+        <!--Main Style-->
+        <link href="assets/css/theme.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-transparent createsitckyClass navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/img/logo.svg" alt="" class="img-fluid logo-light">
+                  <img src="assets/img/logo-white.svg" alt="" class="img-fluid logo-dark">
+                </a>
+              <div class="d-flex align-items-center order-last order-lg-1 ms-lg-5">
+                <div class="position-relative">
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#modal_search" class="form-control d-none d-lg-flex position-relative d-flex align-items-center">
+                    <span class="material-icons align-middle fs-4 opacity-25 me-sm-2">search</span>
+                    <span class="d-none d-sm-block align-items-center small opacity-75">Search NFTs...</span>
+                  </button>
+                </div>
+                <!--Navbar toggler button-->
+               <button class="navbar-toggler px-0 border-0 shadow-none ms-3 ms-lg-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
+                <span class="material-icons align-middle">menu</span>
+              </button>
+              </div>
+      
+              <ul class="d-flex order-lg-last ms-auto ms-lg-4 me-1 me-lg-0 flex-row navbar-nav align-items-center">
+                <li class="nav-item">
+                  <a href="add-wallet.html" class="nav-link ">
+                    <span class="material-icons align-middle">
+                      account_balance_wallet
+                      </span>
+                  </a>
+                </li>
+                <li class="nav-item ms-3 dropdown">
+                  <a href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" class="nav-link dropdown-toggle">
+                    <span class="material-icons align-middle">
+                      account_circle
+                      </span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end position-absolute">
+                    <a href="#!" class="dropdown-item">
+                     <span class="material-icons align-middle me-2">
+                      account_circle
+                     </span> Profile
+                    </a>
+                    <a href="#!" class="dropdown-item">
+                      <span class="material-icons align-middle me-2">
+                       favorite
+                      </span> Favorites
+                     </a>
+                     <a href="#!" class="dropdown-item">
+                      <span class="material-icons align-middle me-2">
+                       visibility
+                      </span> Watchlist
+                     </a>
+                     <a href="#!" class="dropdown-item">
+                      <span class="material-icons align-middle me-2">
+                       category
+                      </span> My collection
+                     </a>
+                     <a href="#!" class="dropdown-item">
+                      <span class="material-icons align-middle me-2">
+                       manage_accounts
+                      </span> Settings
+                     </a>
+                     <div class="dropdown-divider"></div>
+                     <a href="#!" class="dropdown-item">
+                      <span class="material-icons align-middle me-2">
+                        logout
+                      </span> Logout
+                     </a>
+                  </div>
+                </li>
+                <li class="ms-3 d-lg-none">
+                  <a href="#modal_search" data-bs-toggle="modal" class="nav-link">
+                    <span class="material-icons align-middle">search</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="offcanvas order-lg-2 offcanvas-start" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header justify-content-end">
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link " href="nft-explore.html">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " href="nft-collections.html">Collections</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle " href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Resources
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="resourcesDropdown">
+                        <li><a class="dropdown-item @@activeclassHelp" href="resource-help-center.html">Help Center</a></li>
+                        <li><a class="dropdown-item @@activeclassBlog" href="resource-blog.html">Blog</a></li>
+                       </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="nft-create.html">Create</a>
+                    </li>
+            
+               <!--:Dark Mode:-->
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle d-flex align-items-center" id="bs-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+            <span class="theme-icon-active d-flex align-items-center">
+              <span class="material-icons align-middle">lightbulb</span>
+            </span>
+          </a>
+          <!--:Dark Mode Options:-->
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bs-theme" style="--bs-dropdown-min-width: 9rem;">
+            <li class="mb-1">
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+                <span class="theme-icon d-flex align-items-center">
+                  <span class="material-icons align-middle me-2">lightbulb</span>
+                </span>
+                Light
+              </button>
+            </li>
+            <li class="mb-1">
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+                <span class="theme-icon d-flex align-items-center">
+                  <span class="material-icons align-middle me-2">dark_mode</span>
+                </span>
+                Dark
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
+                <span class="theme-icon d-flex align-items-center">
+                  <span class="material-icons align-middle me-2">invert_colors</span>
+                </span>
+                Auto
+              </button>
+            </li>
+          </ul>
+        </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+
+          <!--Search Offcanvas start-->
+          <div class="modal fade" id="modal_search" tabindex="-1" aria-labelledby="modal_searchLabel" aria-hidden="true">
+           <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content overflow-hidden">
+      
+              <div class="modal-body p-3">
+                <form>
+                  <div class="position-relative">
+                    <span class="material-icons d-flex align-items-center opacity-25 justify-content-center width-4x h-100 position-absolute start-0 top-0">search</span>
+                    <input type="text" class="form-control py-3 ps-6 pe-6 form-control-lg" autofocus placeholder="Search Web3">
+                    <div class="position-absolute end-0 top-0 h-100 me-2 d-flex align-items-center">
+                      <div role="button" class="p-0 size-3x d-flex align-items-center justify-content-center z-index-1 position-relative" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="material-icons">close</span>
+                      </div>
+                    </div>
+                  </div>
+                 </form>
+                 <div class="pt-4 px-2">
+                  <h6 class="mb-3">
+                    <span class="material-icons align-middle me-2 opacity-50">sell</span>
+                    Tags</h6>
+                    <div class="d-flex flex-wrap gap-2">
+                      <a href="#!" class="btn btn-sm text-body bg-body-secondary hover-lift-sm">Art</a>
+                      <a href="#!" class="btn btn-sm text-body bg-body-secondary hover-lift-sm">Sports</a>
+                      <a href="#!" class="btn btn-sm text-body bg-body-secondary hover-lift-sm">Music</a>
+                      <a href="#!" class="btn btn-sm text-body bg-body-secondary hover-lift-sm">Photography</a>
+                      <a href="#!" class="btn btn-sm text-body bg-body-secondary hover-lift-sm">Premium</a>
+                      <a href="#!" class="btn btn-sm text-body bg-body-secondary hover-lift-sm">Domain names</a>
+                      <a href="#!" class="btn btn-sm text-body bg-body-secondary hover-lift-sm">Collectibles</a>
+                      <a href="#!" class="btn btn-sm text-body bg-body-secondary hover-lift-sm">Trending cards</a>
+                    </div>
+                 </div>
+              </div>
+            </div>
+           </div>
+          </div>
+
+        <section class="position-relative pt-10 pt-lg-12">
+            <div class="container pt-lg-6 position-relative">
+                <div class="row pb-8 pb-lg-11">
+                    <div class="col-lg-8 col-xl-7 mb-4 mb-lg-0">
+                        <h1 class="mb-4 mb-lg-5 display-5">Create New NFT</h1>
+   
+                        <!--Create Form-->
+                        <form id="create_nft">
+                            <div class="row">
+                                <div class="col-12 mb-4">
+                                    <h6 class="mb-2">Image, Video, Audio, or 3D Model <span class="text-danger">*</span>
+                                    </h6>
+                                    <p class="text-muted mb-3 small">Supported file types: JPG, PNG, GIF, SVG,
+                                         MP4, WEBM, MP3, WAV, OGG, Max size: 500 MB</p>
+                                    <div id="create_file_upload" class="dropzone">
+                                        <div class="fallback">
+                                            <input name="file" type="file" name="create_file_upload">
+                                        </div>
+                                        <div class="dz-message needsclick dropzone-select cursor-pointer">
+                                            <div>
+                                                Upload <span class="material-icons align-middle">
+                                                    upload
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropzone-preview" id="dropzone-preview">
+                                            <div class="dropzone-preview-list" id="dropzone-preview-list">
+                                                <!--begin::Progress-->
+                                                <div class="dropzone-progress">
+                                                    <div class="progress height-1x mb-3">
+                                                        <div class="progress-bar bg-primary" role="progressbar"
+                                                            aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+                                                            data-dz-uploadprogress>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--end::Progress-->
+                                                <div
+                                                    class="dropzone-file-area mb-3 w-100 h-100 overflow-hidden position-relative">
+                                                    <img data-dz-thumbnail class="img-fluid rounded-4 dropzone-file"
+                                                        src="#" alt="Dropzone-Image" />
+
+                                                    <div class="dropzone-delete">
+                                                        <button data-dz-remove
+                                                            class="btn btn-light p-0 size-2x d-flex align-items-center justify-content-center rounded-pill"
+                                                            type="button">
+                                                            <span class="material-icons align-middle">close</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="dropzone-file-info">
+                                                    <h6 class="mb-1" data-dz-name>&nbsp;</h6>
+                                                    <p class="fw-semibold small opacity-75 mb-0" data-dz-size></p>
+                                                    <strong class="error text-danger" data-dz-errormessage></strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mb-4">
+                                    <label class="h6" for="create_name">Name <span class="text-danger">*</span></label>
+                                    <!--Input-->
+                                    <input type="text" name="create_name" id="create_name"
+                                        class="form-control form-control-lg" placeholder="eg. Jungle Art">
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <label class="h6 mb-0" for="create_external_link">External Link</label>
+                                    <small class="d-block opacity-50 mb-2">Include a link to this URL on this item's
+                                        detail page, so that users can click to learn more about it.</small>
+                                    <!--Input-->
+                                    <input type="text" name="create_external_link" id="create_external_link"
+                                        class="form-control form-control-lg" placeholder="https://www.link.com">
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <label class="h6" for="create_description">Description</label>
+                                        </div>
+                                        <div>
+                                            <p class="mb-0 small">240</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <textarea name="create_description" id="create_description" rows="5"
+                                        class="form-control"></textarea>
+                                       
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <label class="h6" for="create_collection">Collection</label>
+                                    <!--Input-->
+                                    <select id="create_collection" multiple name="create_collection" placeholder="Search"
+                                        class="form-control choices__fw choices__inline">
+                                        </select>
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <div class="py-3 border-top border-bottom">
+                                        <div class="d-flex align-items-center mb-0">
+                                            <div class="flex-grow-1">
+                                                <label for="create_unlockable_check" class="d-flex align-items-center">
+                                                    <span class="fs-2 flex-shrink-0 me-3 align-middle material-icons">lock_open</span>
+                                                    <span class="flex-grow-1">
+                                                        <span class="h6 mb-0 w-100 d-block">Unlockable Once purchased</span>
+                                                    <small class="opacity-75">Content will be unlocked after successful transaction.</small>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check mb-0 form-switch flex-shrink-0">
+                                                <input onchange="valueChanged()" type="checkbox" class="form-check-input" id="create_unlockable_check" name="create_unlockable_check">
+                                                <label class="form-check-label d-none" for="create_unlockable_check">Unlockable Content</label>
+                                            </div>
+                                        </div>
+                                        <textarea id="create_unlockable_content" name="create_unlockable_content" class="form-control form-control-lg mt-3" rows="5" placeholder="Enter content (access key, code to redeem, link to a file, etc.)"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <label class="h6" for="create_properties">Properties</label>
+                                    <div class="row">
+                                        <div class="col-sm-6 mb-3">
+                                            <input name="create_properties" id="create_properties" class="form-control form-control-lg" placeholder="e.g. Size">
+                                        </div>
+                                        <div class="col-sm-6 mb-sm-0 mb-3">
+                                            <input name="create_propertiesM" id="create_propertiesM" class="form-control form-control-lg" placeholder="e.g. M">
+                                        </div>
+                                    </div>
+                                    <!--Add more Properties-->
+                                    <button type="button" class="btn btn-secondary btn-sm">
+                                        <span class="material-icons align-middle me-1 fs-6">add</span>
+                                        Add Properties
+                                    </button>
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <label class="h6" for="create_blockchain">Blockchain</label>
+                                    <!--Input-->
+                                    <select id="create_blockchain" name="create_blockchain" placeholder="Search"
+                                        class="form-control choices__fw choices__inline">
+                                    </select>
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <label class="h6" for="create_price">Price</label>
+                                    <!--Input-->
+                                    <input id="create_price" name="create_price" type="text" class="form-control form-control-lg" placeholder="Enter price for each item">
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch" name="create_agree_terms" id="create_agree_terms">
+                                        <label class="form-check-label" for="create_agree_terms">Agree to Marketplace <a href="#!">Terms & Conditions</a></label>
+                                      </div>
+                                </div>
+                                <!--Required fields error placement-->
+                                <div class="errorTxt"></div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-lg btn-primary">Submit & Create</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-4 ms-lg-auto">
+                        <div class="sticky-top">
+                            <h5 class="mb-4 pt-4">Item Preview <span role="button" data-tippy-content="This is how your product will look to the visitors" data-tippy-placement="bottom">
+                                <span class="material-icons align-middle text-body-tertiary">info</span>
+                            </span></h5>
+                            <div class="card p-1 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative rounded overflow-hidden">
+                                    <img src="assets/img/02.jpg" class="img-fluid card-img" alt="test image">
+                                     <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button" class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">0</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!" class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/3.jpg" width="24" height="24" class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @markrise
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Jungle Art #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-4">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">No bid yet</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--script-->
+        <script src="assets/js/theme.bundle.min.js"></script>
+        <!--Select scripts-->
+        <script src="assets/vendor/node_modules/js/choices.min.js"></script>
+        <script>
+            const values = [{
+                    value: 'Ethereum',
+                    label: '<img class="size-2x me-2 align-middle" src="assets/img/logos/ethereum.svg"/> Ethereum',
+                    id: 1
+                },
+                {
+                    value: 'Solana',
+                    label: '<img class="size-2x me-2 align-middle" src="assets/img/logos/solana.svg"/> Solana',
+                    id: 2
+                },
+                {
+                    value: 'klaytn',
+                    label: '<img class="size-2x me-2 align-middle" src="assets/img/logos/klaytn.svg"/> klaytn',
+                    id: 3
+                },
+                {
+                    value: 'Polygon',
+                    label: '<img class="size-2x me-2 align-middle" src="assets/img/logos/polygon.svg"/> Polygon',
+                    id: 4
+                }
+            ]
+
+            const element = document.querySelector('#create_blockchain');
+            const choices = new Choices(element, {
+                choices: values,
+                removeItems: true,
+                allowHTML: true,
+                searchEnabled: false,
+                placeholder: false,
+                silent: true,
+                itemSelectText: null,
+                classNames: {
+                    containerInner: element.className,
+                    input: "form-control",
+                    inputCloned: "form-control-sm",
+                    listDropdown: "dropdown-menu",
+                    itemChoice: "dropdown-item",
+                    activeState: "show",
+                    selectedState: "active"
+                }
+            });
+            const collection = document.querySelector('#create_collection');
+
+        </script>
+        <script>
+            const collectionValues = [{
+                    value: 'Time traveler club',
+                    label: '<img class="size-2x bg-white shadow-sm me-2 rounded-circle align-middle" src="assets/img/collection/6.gif"/> Time traveler club',
+                    id: 1
+                },
+                {
+                    value: 'King ray',
+                    label: '<img class="size-2x bg-white shadow-sm me-2 rounded-circle align-middle" src="assets/img/collection/3.png"/> King ray',
+                    id: 2
+                },
+                {
+                    value: 'Merge bird',
+                    label: '<img class="size-2x bg-white shadow-sm me-2 rounded-circle align-middle" src="assets/img/collection/5.gif"/> Merge bird',
+                    id: 3
+                },
+                {
+                    value: 'Space art',
+                    label: '<img class="size-2x bg-white shadow-sm me-2 rounded-circle align-middle" src="assets/img/collection/4.png"/> Space art',
+                    id: 4
+                }
+            ]
+            const choicesCollection = new Choices(collection, {
+                choices: collectionValues,
+                allowHTML: true,
+                placeholder: true,
+                searchPlaceholderValue: 'Search collection',
+                searchFields: ['value'],
+                itemSelectText: null,
+                silent:true,
+                removeItems:true,
+                removeItemButton:true,
+                maxItemCount: 1,
+                classNames: {
+                    containerInner: collection.className,
+                    input: "form-control",
+                    inputCloned: "form-control-sm px-1",
+                    listItems: 'choices__list--multiple',
+                 listSingle: 'choices__list--multiple',
+                    listDropdown: "dropdown-menu",
+                    itemChoice: "dropdown-item",
+                    activeState: "show",
+                    selectedState: "active"
+                }
+            });
+
+        </script>
+
+        <!--Upload file-->
+        <script src="assets/vendor/node_modules/js/dropzone-min.js"></script>
+        <script>
+            const id = "#create_file_upload";
+            const dropzone = document.querySelector(id);
+            Dropzone.autoDiscover = false;
+            var dropzonePreviewNode = document.querySelector("#dropzone-preview-list");
+            dropzonePreviewNode.id = "";
+            var previewTemplate = dropzonePreviewNode.parentNode.innerHTML;
+            dropzonePreviewNode.parentNode.removeChild(dropzonePreviewNode);
+            var myDropzone = new Dropzone(id, {
+                url: "https://httpbin.org/post",
+                method: "post",
+                previewTemplate: previewTemplate,
+                previewsContainer: "#dropzone-preview",
+                maxFileSize: 500,
+                acceptedFiles: '.jpg,.png,.mp4,.svg,.webm,.mp3,.ogg, .gif',
+                thumbnailWidth: 320,
+                thumbnailHeight: 280,
+                maxFiles: 1
+            });
+            myDropzone.on("addedfile", function (file) {
+                // Hookup the start button
+                const dropzoneItems = dropzone.querySelectorAll('.dropzone-item');
+                dropzoneItems.forEach(dropzoneItem => {
+                    dropzoneItem.style.display = '';
+                });
+            });
+
+            // Update the total progress bar
+            myDropzone.on("totaluploadprogress", function (progress) {
+                const progressBars = dropzone.querySelectorAll('.progress-bar');
+                progressBars.forEach(progressBar => {
+                    progressBar.style.width = progress + "%";
+                });
+            });
+
+            myDropzone.on("sending", function (file) {
+                // Show the total progress bar when upload starts
+                const progressBars = dropzone.querySelectorAll('.progress-bar');
+                progressBars.forEach(progressBar => {
+                    progressBar.style.display = "block";
+                });
+            });
+
+            // Hide the total progress bar when nothing"s uploading anymore
+            myDropzone.on("complete", function (progress) {
+                const progressBars = dropzone.querySelectorAll('.dz-complete');
+
+                setTimeout(function () {
+                    progressBars.forEach(progressBar => {
+                        progressBar.querySelector('.progress-bar').style.display = "none";
+                        progressBar.querySelector('.progress').style.display = "none";
+                    });
+                }, 100);
+            });
+            myDropzone.on("maxfilesexceeded", function (file) {
+                myDropzone.removeFile(file);
+            });
+
+        </script>
+        <!--jquery-validation-->
+        <script src="assets/vendor/node_modules/js/jquery.min.js"></script>
+        <script src="assets/vendor/node_modules/js/jquery.validate.min.js"></script>
+        <script>
+            $("#create_nft").validate({
+                validClass: "is-success",
+                errorClass: "is-error",
+
+                rules: {
+                    create_description: {
+                        required: true,
+                        maxlength: 240
+                    },
+                    create_name: {
+                        required: true,
+                    },
+                    create_agree_terms:{
+                        required:true
+                    }
+                },
+               messages:{
+                    create_name: {
+                        required: "Item name is required",
+                    },
+                create_description:{
+                    required:"Short of description is required"
+                },
+                create_agree_terms:{
+                        required:"Terms & conditions agreement required"
+                    },
+               },
+                errorElement : 'label',
+    errorLabelContainer: '.errorTxt'
+            });
+
+        </script>
+        <!--Unlockable content textarea hide/show-->
+        <script>
+              function valueChanged()
+    {
+        if($('#create_unlockable_check').is(":checked"))   
+            $("#create_unlockable_content").show();
+        else
+            $("#create_unlockable_content").hide();
+    }valueChanged()
+        </script>
+    </body>
+
+</html>

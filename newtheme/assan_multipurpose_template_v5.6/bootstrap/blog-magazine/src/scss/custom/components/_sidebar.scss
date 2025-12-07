@@ -1,0 +1,85 @@
+.navbar{
+  .navbar-nav{
+    .nav-link{
+      font-weight: $navbar-font-weight;
+      text-transform: $navbar-link-text-transform;
+    }
+  }
+}
+
+body{
+  .navbar-brand{
+    .logo-dark{
+      display:none;
+    }
+  }
+}
+
+// scss-docs-start navbar-expand-loop
+// Generate series of `.navbar-expand-*` responsive classes for configuring
+// where your navbar collapses.
+.page-sidebar .offcanvas-start{
+width: $page-sidebar-width;
+border-right: $border-width solid var(--#{$prefix}border-color);
+background-color:var(--#{$prefix}body-bg);
+z-index: $zindex-modal;
+}
+.sidebar-brand{
+  max-width:2rem;
+  margin: 0 auto;
+  img.logo-dark{
+display: none;
+  }
+}
+.sidenav-link{
+  transition: all .2s;
+  color: rgba(var(--#{$prefix}body-color-rgb),.65);
+  &:hover,&.show{
+    background-color:rgba(var(--#{$prefix}primary-rgb),1);
+    color: $white;
+  }
+  &.active{
+    background-color:rgba(var(--#{$prefix}primary-rgb),1);
+    color: $white;
+  }
+}
+[data-bs-theme=dark]{
+  .sidebar-brand{
+    img.logo-light{
+      display: none;
+    }
+    img.logo-dark{
+      display: block;
+    }
+  }
+}
+
+.page {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    // stylelint-disable-next-line scss/selector-no-union-class-name
+    &#{$infix} {
+      @include media-breakpoint-up($next) {
+       .page-sidebar{
+        position: fixed;
+        left: 0;
+        height: 100%;
+        top: 0;
+        .offcanvas-start{
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+       }
+       .page-content{
+        margin-left: $page-sidebar-width;
+       }
+       .offcanvas-backdrop{
+        display: none;
+       }
+      }
+    }
+  }
+}

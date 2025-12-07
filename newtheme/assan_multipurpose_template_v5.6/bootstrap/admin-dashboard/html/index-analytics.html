@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan-Admin</title>
+
+    @@include('./partials/fonts.html')
+    <!--Simplebar css-->
+    <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+    <!--Choices css-->
+    <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+    <!--Date range picker-->
+    <link rel="stylesheet" href="assets/vendor/css/daterangepicker.css">
+    <!--Main style-->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+  </head>
+
+  <body>
+
+
+    @@include('./partials/preloader.html')
+
+    <div class="d-flex flex-column flex-root">
+      <!--Page-->
+      <div class="page d-flex flex-row flex-column-fluid">
+
+
+        @@include('./partials/sidebars/sidebar-default.html',{"page": "index-analytics"})
+
+
+        <!--///////////Page content wrapper///////////////-->
+        <main class="page-content d-flex flex-column flex-row-fluid">
+
+          @@include('./partials/header/header-default.html')
+
+
+
+          <!--//Page Toolbar//-->
+          <div class="toolbar px-3 px-lg-6 pt-3 pb-3">
+            <div class="position-relative container-fluid px-0">
+              <div class="row align-items-center position-relative">
+                <div class="col-md-7 mb-3 mb-md-0">
+                  <h3 class="mb-0">Analytics</h3>
+                </div>
+                <div class="col-md-5 text-md-end">
+                  <div class="d-flex justify-content-md-end align-items-center">
+                    <div class="d-flex align-items-center">
+                      <div role="button" id="reportrange" class="btn btn-sm btn-outline-secondary d-inline-flex align-items-center" data-tippy-placement="left"
+                        data-tippy-content="Select dashboard data range">
+                        <i class="material-symbols-rounded align-middle fs-5 me-2">
+                          event
+                        </i>
+                        <span class="d-inline-block align-middle"></span>
+                      </div>
+                    </div>
+                    <!--:Dashboard button:-->
+                    <a href="#!" data-tippy-placement="left" data-tippy-content="Reload Dashboard"
+                      class="flex-shrink-0 ms-2 p-0 rounded-2 size-25 d-flex align-items-center justify-content-center btn btn-primary">
+                      <span class="material-symbols-rounded fs-5">
+                        refresh
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--//Page Toolbar End//-->
+
+          <!--//Page content//-->
+          <div class="content pt-3 px-3 px-lg-6 d-flex flex-column-fluid position-relative">
+            <div class="container-fluid px-0">
+
+              <div class="row">
+                <div class="col-md-12 col-xl-9 mb-2">
+                  <!--Card-->
+                  <div class="card overflow-hidden h-100">
+                    <!--Card header-->
+                    <div class="d-flex card-header justify-content-between align-items-center">
+                      <h5 class="mb-0 pe-3">Revenue Report
+                        <span class="material-symbols-rounded align-middle ms-2 text-body-secondary fs-6 cursor-pointer"
+                          data-tippy-placement="right"
+                          data-tippy-content="Earnings and expanses during the period">info</span>
+                      </h5>
+                      <!--Refresh trigger-->
+                      <span role="button" class="btn-refresh d-inline-block">
+                        <span class="material-symbols-rounded fs-5 align-middle">refresh</span>
+                      </span>
+                    </div>
+                    <!--Apex chart for Overview-->
+                    <div class="card-body card-refresh position-relative overflow-hidden p-0">
+                      <!--chart-->
+                      <div class="w-100">
+                        <div id="chart_revenue_report"></div>
+                      </div>
+
+                      <!--:Loader:-->
+                      <div class="loader-refresh w-100 h-100 position-absolute start-0 top-0 bottom-0 end-0 d-flex align-items-center justify-content-center bg-dark bg-opacity-25">
+                        <div>
+                          <div class="spinner-border spinner-border-sm me-2 text-white" role="status">
+                          
+                          </div>
+                          <span class="text-white">Refreshing...</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-4">
+                  <!--::begin card-->
+                  <div class="card overflow-hidden mb-2">
+                    <div class="card-body d-flex align-items-center">
+                      <!--Card text-->
+                      <div class="flex-grow-1">
+                        <div class="h3 mb-1">
+                          947
+                        </div>
+                        <span class="text-body-secondary">Products sold</span>
+                      </div>
+                      <div class="flex-shrink-0 text-end">
+                        <div class="small"><span class="text-success">69%</span></div>
+                        <span class="material-symbols-rounded text-success">
+                          trending_up
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!--::/end card-->
+                  <!--::begin card-->
+                  <div class="card overflow-hidden mb-2">
+                    <div class="card-body d-flex align-items-center">
+                      <!--Card text-->
+                      <div class="flex-grow-1">
+                        <div class="h3 mb-1">
+                          6748
+                        </div>
+                        <span class="text-body-secondary">Unique visitors</span>
+                      </div>
+                      <div class="flex-shrink-0 text-end">
+                        <div class="small"><span class="text-success">124%</span></div>
+                        <span class="material-symbols-rounded text-success">
+                          trending_up
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!--::/end card-->
+                  <!--::begin card-->
+                  <div class="card overflow-hidden mb-2">
+                    <div class="card-body d-flex align-items-center">
+                      <!--Card text-->
+                      <div class="flex-grow-1">
+                        <div class="h3 mb-1">
+                          5412
+                        </div>
+                        <span class="text-body-secondary">Total Impressions</span>
+                      </div>
+                      <div class="flex-shrink-0 text-end">
+                        <div class="small"><span class="text-success">9%</span></div>
+                        <span class="material-symbols-rounded text-success">
+                          trending_up
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!--::/end card-->
+
+                  <!--::begin card-->
+                  <div class="card overflow-hidden mb-2">
+                    <div class="card-body d-flex align-items-center">
+                      <!--Card text-->
+                      <div class="flex-grow-1">
+                        <div class="h3 mb-1">
+                          56%
+                        </div>
+                        <span class="text-body-secondary">Conversion rate</span>
+                      </div>
+                      <div class="flex-shrink-0 text-end">
+                        <div class="small"><span class="text-success">35%</span></div>
+                        <span class="material-symbols-rounded text-success">
+                          trending_up
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!--::/end card-->
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 mb-2">
+                  <div class="card overflow-hidden h-100">
+                    <div class="card-header d-flex align-items-center">
+                      <h5 class="mb-0 flex-grow-1 text-truncate pe-3">Bandwidth Summary</h5>
+                      <a href="#!" class="flex-shrink-0 btn btn-sm btn-secondary">
+                        <span class="material-symbols-rounded align-middle fs-5 me-1">download</span>
+                        Download Report</a>
+                    </div>
+                    <div class="card-body p-0">
+                      <div class="row mx-0">
+                        <div class="col-sm-6 col-12 p-4 border-bottom border-end-sm">
+                          <!--::begin bandwidth card-->
+                          <div class="position-relative">
+
+                            <div class="position-relative">
+                              <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                  <span class="h4 mb-0">393</span>
+                                  <span class="small">Mb</span>
+                                </div>
+                                <p class="mb-0">HTTP Traffic</p>
+                              </div>
+                              <!--Progress bar-->
+                              <div class="progress my-2 height-5">
+                                <div class="progress-bar rounded-pill progress-bar-striped progress-bar-animated"
+                                  role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+                                  aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                              </div>
+                              <div class="d-flex align-items-center justify-content-between">
+                                <p class="mb-0 text-body-secondary small">Monthly target</p>
+                                <p class="mb-0 small">17%</p>
+                              </div>
+                            </div>
+                          </div>
+                          <!--::/.end bandwidth card-->
+                        </div>
+                        <div class="col-sm-6 col-12 p-4 border-bottom">
+                          <!--::begin bandwidth card-->
+                          <div class="position-relative">
+
+                            <div class="position-relative">
+                              <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                  <span class="h4 mb-0">151</span>
+                                  <span class="small">Mb</span>
+                                </div>
+                                <p class="mb-0">SMTP Traffic</p>
+                              </div>
+                              <!--Progress bar-->
+                              <div class="progress my-2 height-5">
+                                <div
+                                  class="progress-bar bg-warning rounded-pill progress-bar-striped progress-bar-animated"
+                                  role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+                                  aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                              </div>
+                              <div class="d-flex align-items-center justify-content-between">
+                                <p class="mb-0 text-body-secondary small">Monthly target</p>
+                                <p class="mb-0 small">34%</p>
+                              </div>
+                            </div>
+                          </div>
+                          <!--::/.end bandwidth card-->
+                        </div>
+                        <div class="col-sm-6 col-12 p-4 border-end-sm border-bottom border-bottom-sm-0">
+                          <!--::begin bandwidth card-->
+                          <div class="position-relative">
+
+                            <div class="position-relative">
+                              <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                  <span class="h4 mb-0">247</span>
+                                  <span class="small">Mb</span>
+                                </div>
+                                <p class="mb-0">FTP Traffic</p>
+                              </div>
+                              <!--Progress bar-->
+                              <div class="progress my-2 height-5">
+                                <div
+                                  class="progress-bar rounded-pill bg-success progress-bar-striped progress-bar-animated"
+                                  role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+                                  aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                              </div>
+                              <div class="d-flex align-items-center justify-content-between">
+                                <p class="mb-0 text-body-secondary small">Monthly target</p>
+                                <p class="mb-0 small">21%</p>
+                              </div>
+                            </div>
+                          </div>
+                          <!--::/.end bandwidth card-->
+                        </div>
+                        <div class="col-sm-6 col-12 p-4">
+                          <!--::begin bandwidth card-->
+                          <div class="position-relative">
+                            <div class="position-relative">
+                              <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                  <span class="h4 mb-0">27</span>
+                                  <span class="small">Mb</span>
+                                </div>
+                                <p class="mb-0">POP3 Traffic
+                                </p>
+                              </div>
+                              <!--Progress bar-->
+                              <div class="progress my-2 height-5">
+                                <div
+                                  class="progress-bar rounded-pill bg-danger progress-bar-striped progress-bar-animated"
+                                  role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+                                  aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                              </div>
+                              <div class="d-flex align-items-center justify-content-between">
+                                <p class="mb-0 text-body-secondary small">Monthly target</p>
+                                <p class="mb-0 small">18%</p>
+                              </div>
+                            </div>
+                          </div>
+                          <!--::/.end bandwidth card-->
+                        </div>
+
+                      </div>
+                      <div class="p-4 border-top bg-body-tertiary">
+                        <div class="row align-items-center">
+                          <div class="col">
+                            <h5 class="text-danger">Running out of your space?</h5>
+                            <p>Your storage will be running out soon. Get more space and powerful productivity features.
+                            </p>
+                            <a href="#!" class="btn btn-primary btn-sm">Upgrade to Pro</a>
+                          </div>
+                          <div class="col-auto">
+                            <img src="assets/media/illustration/sm2.svg" class="width-120 h-auto" alt="">
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-2">
+                  <div class="card h-100">
+                    <div class="card-header">
+                      <h5 class="mb-0">Active Users by Device</h5>
+                    </div>
+                    <div class="row mx-0 text-center">
+                      <div class="col-12 col-sm border-end-sm border-bottom p-4">
+                        <p class="mb-1 text-body-secondary small">
+                          <span class="size-5 bg-primary d-inline-block align-middle me-1 rounded-circle"></span>
+                          Mobile</p>
+                        <h5 class="mb-0">10,325</h5>
+                      </div>
+                      <div class="col-12 col-sm border-bottom border-end-sm p-4">
+                        <p class="mb-1 text-body-secondary small">
+                          <span class="size-5 bg-success d-inline-block align-middle me-1 rounded-circle"></span>
+                          Desktop</p>
+                        <h5 class="mb-0">4,235</h5>
+                      </div>
+                      <div class="col-12 col-sm p-4 border-bottom">
+                        <p class="mb-1 text-body-secondary small">
+                          <span class="size-5 bg-danger d-inline-block align-middle me-1 rounded-circle"></span>
+                          Tablet</p>
+                        <h5 class="mb-0">3,575</h5>
+                      </div>
+                    </div>
+                    <div id="chart_active_users"></div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-7 mb-2">
+                  <div class="card table-card table-nowrap">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h5 class="mb-0">Most Visited Pages</h5>
+                      <a href="#!">View All</a>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="align-middle mb-0 table">
+                        <thead class="small bg-body text-uppercase text-body-secondary">
+                          <tr>
+                            <th>Page</th>
+                            <th>Visitors</th>
+                            <th>New</th>
+                            <th class="text-end">Bounce rate</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>/app/widgets.html</td>
+                            <td>13842</td>
+                            <td>2514</td>
+                            <td class="text-success text-end">23% <span
+                                class="material-symbols-rounded align-middle fs-5 ms-1">
+                                trending_up
+                              </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>/app/analytics.html</td>
+                            <td>9514</td>
+                            <td>1912</td>
+                            <td class="text-success text-end">13% <span
+                                class="material-symbols-rounded align-middle fs-5 ms-1">
+                                trending_up
+                              </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>/app/index.html</td>
+                            <td>8412</td>
+                            <td>1245</td>
+                            <td class="text-danger text-end">-4% <span
+                                class="material-symbols-rounded align-middle fs-5 ms-1">
+                                trending_down
+                              </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>/app/e-commerce.html</td>
+                            <td>6239</td>
+                            <td>458</td>
+                            <td class="text-success text-end">8% <span
+                                class="material-symbols-rounded align-middle fs-5 ms-1">
+                                trending_up
+                              </span>
+                            </td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-5 mb-2">
+                  <div class="card table-card table-nowrap">
+                    <div class="card-header">
+                      <h5 class="mb-0">Social Media Traffic</h5>
+                    </div>
+                    <table class="mb-0 table">
+                      <thead class="small bg-body text-uppercase text-body-secondary">
+                        <tr>
+                          <th>Network</th>
+                          <th>Visitors</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Instagram</td>
+                          <td>
+                            <div class="fs-6 d-flex justify-content-between align-items-center">654,078
+                              <div class="progress rounded-pill height-5 flex-grow-1 ms-4 ms-lg-6">
+                                <div class="progress-bar rounded-pill bg-danger" style="width:70%" aria-valuemax="100"
+                                  aria-valuemin="0" aria-valuenow="70" role="progressbar"></div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Facebook</td>
+                          <td>
+                            <div class="fs-6 d-flex justify-content-between align-items-center">214,587
+                              <div class="progress rounded-pill height-5 flex-grow-1 ms-4 ms-lg-6">
+                                <div class="progress-bar rounded-pill" style="width:53%" aria-valuemax="100"
+                                  aria-valuemin="0" aria-valuenow="13" role="progressbar"></div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Twitter</td>
+                          <td>
+                            <div class="fs-6 d-flex justify-content-between align-items-center">123,478
+                              <div class="progress rounded-pill height-5 flex-grow-1 ms-4 ms-lg-6">
+                                <div class="progress-bar rounded-pill bg-info" style="width:47%" aria-valuemax="100"
+                                  aria-valuemin="0" aria-valuenow="37" role="progressbar"></div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>LinkedIn</td>
+                          <td>
+                            <div class="fs-6 d-flex justify-content-between align-items-center">012,878
+                              <div class="progress rounded-pill height-5 flex-grow-1 ms-4 ms-lg-6">
+                                <div class="progress-bar rounded-pill bg-gray" style="width:41%" aria-valuemax="100"
+                                  aria-valuemin="0" aria-valuenow="41" role="progressbar"></div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--//Page content End//-->
+
+          @@include('./partials/footer.html')
+
+        </main>
+        <!--///////////Page content wrapper End///////////////-->
+      </div>
+    </div>
+    @@include('./partials/core-scripts.html')
+
+    <script src="assets/vendor/moment.min.js"></script>
+    <script src="assets/vendor/daterangepicker.js"></script>
+    <script>
+      $(function () {
+
+        var start = moment().subtract(6, 'days');
+        var end = moment();
+
+        function cb(start, end) {
+          $('#reportrange span').html(start.format('DD MMM YY') + ' - ' + end.format('DD MMM YY'));
+        }
+
+        $('#reportrange').daterangepicker({
+          startDate: start,
+          endDate: end,
+          ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf(
+              'month')]
+          }
+        }, cb);
+
+        cb(start, end);
+
+      });
+
+    </script>
+    <!--Charts-->
+    <script src="assets/vendor/apexcharts.min.js"></script>
+
+
+    <script>
+      //Revenue report
+      var optionsRevenue = {
+        colors: ["var(--bs-primary)", "var(--bs-warning)"],
+        series: [{
+            name: 'Revenue',
+            data: [147, 190, 230, 198, 274, 190, 366, 277, 173, 209, 164, 190],
+          },
+          {
+            name: 'Expanses',
+            data: [
+              -29, -39, -62, -71, -29, -87, -102, -123, -87, -48, -54, -62,
+            ],
+          },
+        ],
+        chart: {
+          fontFamily: 'inherit',
+          type: 'bar',
+          height: 300,
+          stacked: true,
+          toolbar: {
+            show: false,
+          },
+        },
+        dataLabels: {
+          enabled: false,
+        },
+
+        plotOptions: {
+          bar: {
+            columnWidth: '20%',
+            startingShapes:"rounded",
+            colors: {
+              backgroundBarOpacity: 0,
+            }
+          },
+          distributed: true
+        },
+        grid: {
+          strokeDashArray: 6,
+          padding: {
+            top: 0,
+            bottom: 10
+          },
+          xaxis: {
+            lines: {
+              show: true,
+            },
+          },
+          yaxis: {
+            lines: {
+              show: false,
+            },
+          },
+        },
+        tooltip: {
+          shared: true,
+          intersect: false,
+          y: [{
+              formatter: function (y) {
+                if (typeof y !== 'undefined') {
+                  return ' $' + y.toFixed(0) + 'K';
+                }
+                return y;
+              },
+            },
+            {
+              formatter: function (y) {
+                if (typeof y !== 'undefined') {
+                  return '$' + y.toFixed(0) + 'K';
+                }
+                return y;
+              },
+            },
+          ],
+        },
+        xaxis: {
+          categories: [
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec',
+          ],
+
+          axisTicks: {
+            show: true,
+          },
+          axisBorder: {
+            show: false,
+          },
+          tooltip: {
+            enabled: true,
+          },
+        },
+        yaxis: {
+          crosshairs: {
+            show: false,
+          }
+        }
+      };
+      new ApexCharts(document.querySelector('#chart_revenue_report'), optionsRevenue).render();
+
+      var optionsActiveUsers = {
+        series: [{
+            name: "Mobile",
+            data: [28, 29, 33, 36, 32, 32, 33]
+          },
+          {
+            name: "Desktop",
+            data: [21, 17, 21, 20, 24, 21, 19]
+          },
+          {
+            name: "Tablet",
+            data: [8, 5, 9, 7, 11, 8, 4]
+          }
+        ],
+        chart: {
+          height: 290,
+          type: 'line',
+          fontFamily: 'inherit',
+          toolbar: {
+            show: false
+          }
+        },
+        colors: ["var(--bs-primary)", "var(--bs-success)", "var(--bs-danger)"],
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          width: 3,
+          curve: 'smooth'
+        },
+        grid:{
+          strokeDashArray:4,
+          position:"back",
+          padding:{
+            right:30,
+            left:30
+          },
+          xaxis: {
+            lines: {
+              show: true,
+            },
+          },
+          yaxis: {
+            lines: {
+              show: false,
+            },
+          },
+        },
+        markers: {
+          strokeWidth: 5,
+          strokeOpacity: 1,
+          strokeColors: ["var(--bs-body-bg)","var(--bs-body-bg)","var(--bs-body-bg)"],
+        },
+        xaxis: {
+          type: 'category',
+          categories: ['Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat', 'Sun'],
+          axisTicks: {
+            show: true,
+          },
+          axisBorder: {
+            show: false,
+          },
+        },
+        yaxis: {
+            min: 0,
+            max: 40,
+            axisTicks: {
+            show: false,
+          },
+          axisBorder: {
+            show: false,
+          },
+          },
+        legend: {
+          show: false
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return val + 'k <span class="fw-normal text-body-secondary"> Active users</span>';
+            },
+          },
+        },
+      };
+
+      var chartActiveUsers = new ApexCharts(document.querySelector("#chart_active_users"), optionsActiveUsers);
+      chartActiveUsers.render();
+
+    </script>
+  </body>
+
+</html>

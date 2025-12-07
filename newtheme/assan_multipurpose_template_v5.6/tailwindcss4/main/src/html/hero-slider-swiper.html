@@ -1,0 +1,338 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+     
+        <!--Swiper slider-->
+        <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+      @@include('./partials/head-includes.html')
+     <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+    <!--begin:Header-->
+ <header class="header-transparent sticky-fixed">
+
+   <!--begin:navbar-->
+   <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+     <!--Navbar-fixed-background-->
+     <div class="navbar-fixed-bg absolute"></div>
+     <div class="container relative flex flex-wrap items-center justify-center relative">
+       <!--begin:logo-->
+       <a class="navbar-brand relative w-24 block" href="index.html">
+         <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+         <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+       </a>
+       <!--end:logo-->
+
+       <!--begin:navbar-no-collapse-items-->
+       <div class="flex items-center shrink-0 ml-auto lg:order-last">
+         <!--Navbar toggler button-->
+         <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+           data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+           aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon">
+             <i></i>
+           </span>
+         </button>
+         <!--Button-->
+         <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+           <a href="#"
+             class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+         </div>
+       </div>
+       <!--end:navbar-no-collapse-items-->
+
+       <!--begin:navbar-collapse-->
+       <div
+         class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+         id="mainNavbarTheme">
+         @@include('./partials/headers/default-navbar-items.html',{"page": "features"})
+       </div>
+       <!--end:navbar-collapse-->
+     </div>
+
+   </nav>
+   <!--end:navbar-->
+ </header>
+ <!--end:header-->
+
+ 
+<main class="main-content" id="main-content">
+    <!--begin:Hero section-->
+    <section class="relative bg-black overflow-hidden">
+         <!-- Swiper Main -->
+            <div class="swiper-container swiper-classic h-[450px] lg:h-[650px]">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bg-cover bg-center"
+                        style="background-image:url('assets/img/backgrounds/bg6.jpg')">
+
+                        <!--Overlay-->
+                        <div class="bg-black absolute left-0 top-0 w-full h-full opacity-75"></div>
+                        <div class="container text-white h-full relative z-[1]">
+                            <div class="flex flex-wrap -mx-3 h-full items-center">
+                                <div class="lg:w-7/12 px-3 w-full mx-auto text-center">
+                                    <ul class="swiper-layers list-unstyled mb-0">
+                                        <li>
+                                            <h2 class="text-5xl lg:text-7xl font-semibold mb-9 leading-[1.1]">
+                                                Elevate the vision and strategy
+                                            </h2>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="btn btn-lg text-white border-2 !rounded-full hover:bg-white hover:border-white hover:text-indigo-500">
+                                                Learn More
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg-cover bg-center"
+                        style="background-image:url('assets/img/backgrounds/bg5.jpg')">
+                        <!--Overlay-->
+                        <div class="bg-black absolute left-0 top-0 w-full h-full opacity-75"></div>
+                        <div class="container text-white h-full relative z-[1]">
+                            <div class="flex flex-wrap -mx-3 h-full items-center">
+                                <div class="w-full px-3 lg:w-7/12 mx-auto text-center">
+                                    <ul class="swiper-layers list-unstyled mb-0">
+                                        <li>
+                                            <h2 class="text-5xl lg:text-7xl font-semibold mb-9 leading-[1.1]">
+                                                We turns ideas into business
+                                            </h2>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="btn btn-lg text-white border-2 !rounded-full hover:bg-white hover:border-white hover:text-indigo-500">
+                                                Grab a license
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg-cover bg-center"
+                        style="background-image:url('assets/img/backgrounds/bg2.jpg')">
+                        <!--Overlay-->
+                        <div class="bg-black absolute left-0 top-0 w-full h-full opacity-75"></div>
+                        <div class="container text-white h-full relative z-[1]">
+                            <div class="flex flex-wrap -mx-3 h-full items-center">
+                                <div class="w-full px-3 lg:w-8/12 mx-auto text-center">
+                                    <ul class="swiper-layers list-unstyled mb-0">
+                                        <li>
+                                            <h2 class="text-5xl lg:text-7xl font-semibold mb-9 leading-[1.1]">
+                                                Take your business to the next level
+                                            </h2>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="btn btn-lg text-white border-2 !rounded-full hover:bg-white hover:border-white hover:text-indigo-500">
+                                                Try it Now!
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End swiper-main-->
+
+            <!--Swiper thumbnails-->
+            <div
+                class="progress-swiper-thumbs pb-5 absolute left-0 bottom-0 w-full overflow-hidden text-white px-4 swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slide -->
+                    <div class="swiper-slide swiper-pagination-progress">
+                        <div class="swiper-pagination-progress-bar mb-2">
+                            <div class="swiper-pagination-progress-inner swiper-pagination-progress-bar-inner">
+                            </div>
+                        </div>
+                        <span class="small block text-truncate">Elevate vision</span>
+                    </div>
+                    <!-- End Slide -->
+
+                    <!-- Slide -->
+                    <div class="swiper-slide swiper-pagination-progress">
+                        <div class="swiper-pagination-progress-bar mb-2">
+                            <div class="swiper-pagination-progress-inner swiper-pagination-progress-bar-inner">
+                            </div>
+                        </div>
+                        <span class="small block text-truncate">Turn ideas into business</span>
+                    </div>
+                    <!-- End Slide -->
+
+                    <!-- Slide -->
+                    <div class="swiper-slide swiper-pagination-progress">
+                        <div class="swiper-pagination-progress-bar mb-2">
+                            <div class="swiper-pagination-progress-inner swiper-pagination-progress-bar-inner">
+                            </div>
+                        </div>
+                        <span class="small block text-truncate">Take your business to next level</span>
+                    </div>
+                    <!-- End Slide -->
+                </div>
+            </div>
+            <!-- End Swiper Thumbs Slider -->
+    </section>
+    <!--/end:Hero section-->
+
+
+     <!--begin: Hero background slide section-->
+     <section class="relative">
+        <div class="container relative py-16 lg:py-24 z-[1]">
+            <div class="relative rounded-xl overflow-hidden bg-black">
+                <!-- Slider main container -->
+                <div
+                    class="swiper-main rounded-xl overflow-hidden opacity-50 absolute left-0 top-0 w-full h-full mb-0">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper rounded-5">
+                        <!-- Slides -->
+                        <div class="swiper-slide bg-cover bg-center bg-no-repeat"
+                            style="background-image: url('assets/img/backgrounds/bg1.jpg');"></div>
+                        <div class="swiper-slide bg-cover bg-center bg-no-repeat"
+                            style="background-image: url('assets/img/backgrounds/bg2.jpg');"></div>
+                        <div class="swiper-slide bg-cover bg-center bg-no-repeat"
+                            style="background-image: url('assets/img/backgrounds/bg3.jpg');"></div>
+                    </div>
+                </div>
+                <div
+                    class="relative text-white lg:w-8/12 mx-auto text-center z-[1] py-16 lg:py-32">
+                    <!--Hero title-->
+                    <h1 class="text-3xl lg:text-7xl font-medium mb-5 lg:mb-7 relative">Built for every business
+                    </h1>
+
+                    <!--Hero text-->
+                    <p class="text-lg lg:text-xl w-9/12 lg:w-8/12 text-center text-white/75 mx-auto mb-7 lg:mb-9">Build a stunning website that attract visitors online
+                        and grow
+                        your business</p>
+
+                    <!--Hero buttons-->
+                    <div class="flex flex-col">
+                        <div >
+                            <a href="#features" class="btn btn-lg bg-white text-gray-700 hover:bg-indigo-600 hover:text-white capitalize font-medium">
+                                Get Started
+                            </a>
+                        </div>
+                        <div class="pt-7 small">✌️ Get started for free, no CC required.</div>
+                    </div>
+                </div>
+            </div>
+            <!--/.flex flex-wrap -mx-3-->
+        </div>
+
+
+    </section>
+    <!--end: Hero background slide section-->
+    
+</main>
+
+   
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-1.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+    
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+
+          <!--begin:Swiper slider-->
+        <script src="assets/vendor/node_modules/js/swiper-bundle.min.js"></script>
+        <script>
+            //Main Hero Slider
+            var sliderThumbs = new Swiper('.progress-swiper-thumbs', {
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+                history: false,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    480: {
+                        slidesPerView: 2,
+                        spaceBetween: 16,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 16,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 16,
+                    },
+                },
+                on: {
+                    'afterInit': function (swiper) {
+                        swiper.el.querySelectorAll('.swiper-pagination-progress-inner')
+                            .forEach($progress => $progress.style.transitionDuration =
+                                `${swiper.params.autoplay.delay}ms`)
+                    }
+                }
+            });
+            var swiperClassic = new Swiper(".swiper-classic", {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: true,
+                grabCursor: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                effect: "creative",
+                creativeEffect: {
+                    prev: {
+                        shadow: true,
+                        translate: ["-20%", 0, -1],
+                    },
+                    next: {
+                        translate: ["100%", 0, 0],
+                    },
+                },
+                thumbs: {
+                    swiper: sliderThumbs
+                },
+            });
+            
+        </script>
+        <!--/end:Swiper slider-->
+
+        <script>
+            const swiper = new Swiper('.swiper-main', {
+                spaceBetween: 0,
+                effect: "fade",
+                autoplay: true,
+                loop: true,
+            });
+
+        </script>
+        <!-- end:scripts -->
+</body>
+
+</html>

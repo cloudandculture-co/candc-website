@@ -1,0 +1,51 @@
+.dropdown-item{
+    border-radius: $dropdown-border-radius;
+    text-transform: capitalize;
+    cursor: pointer;
+    &:not(:last-child){
+        margin-bottom: .25rem;
+    }
+}
+.dropdown-menu{
+    box-shadow: $dropdown-box-shadow;
+}
+
+.navbar-expand {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      $next: breakpoint-next($breakpoint, $grid-breakpoints);
+      $infix: breakpoint-infix($next, $grid-breakpoints);
+  
+      // stylelint-disable-next-line scss/selector-no-union-class-name
+      &#{$infix} {
+        @include media-breakpoint-up($next) {
+            &.navbar{
+                .dropdown-menu{
+                   display: block;
+                   opacity: 0;
+                   top: 100%;
+                   visibility: hidden;
+                   transform: translateY(10px);
+                   transition: all .25s;
+                   &.dropdown-menu-end{
+                    right: 0;
+                   }
+                }
+                .dropdown:hover{
+                    .dropdown-menu{
+                        opacity: 1;
+                        visibility: visible;
+                        transform: none;
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down($next) {
+            .offcanvas{
+                .dropdown-menu{
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+}

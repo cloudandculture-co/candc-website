@@ -1,0 +1,23 @@
+//Pricing plans radio buttons
+
+.btn-check~.btn.btn-plan{
+    padding: 1rem 2rem;
+    border: $border-width * 2 dashed var(--#{$prefix}border-color);
+
+    &:hover{
+        border-color: $primary;
+    }
+    .plan-select{
+        border: $border-width solid var(--#{$prefix}border-color);
+        color: $primary;
+    }
+}
+.btn-check:checked~.btn.btn-plan{
+    border-color: $primary;
+    border-style: solid;
+    .plan-select{
+        border-color: $primary;
+        background-color: $primary;
+        color: white;
+    }
+}

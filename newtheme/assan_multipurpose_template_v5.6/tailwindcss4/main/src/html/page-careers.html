@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    <!--Swiper slider-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+    
+    @@include('./partials/head-includes.html')
+    <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+     <!--begin:Header-->
+  <header class="header-transparent sticky-fixed">
+
+    <!--begin:navbar-->
+    <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+      <!--Navbar-fixed-background-->
+      <div class="navbar-fixed-bg absolute"></div>
+      <div class="container relative flex flex-wrap items-center justify-center relative">
+        <!--begin:logo-->
+        <a class="navbar-brand relative w-24 block" href="index.html">
+          <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+          <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+        </a>
+        <!--end:logo-->
+
+        <!--begin:navbar-no-collapse-items-->
+        <div class="flex items-center shrink-0 ml-auto lg:order-last">
+          <!--Navbar toggler button-->
+          <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <i></i>
+            </span>
+          </button>
+          <!--Button-->
+          <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+            <a href="#"
+              class="btn bg-orange-500 text-white hover:bg-orange-600 hover:text-white">Purchase</a>
+          </div>
+        </div>
+        <!--end:navbar-no-collapse-items-->
+
+        <!--begin:navbar-collapse-->
+        <div
+          class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+          id="mainNavbarTheme">
+          @@include('./partials/headers/default-navbar-items.html',{"page": "pages"})
+        </div>
+        <!--end:navbar-collapse-->
+      </div>
+
+    </nav>
+    <!--end:navbar-->
+  </header>
+  <!--end:header-->
+
+ <!--Main content-->
+
+ <main class="main-content" id="main-content">
+    <section class="relative overflow-hidden bg-gradient-to-tr from-indigo-500 to-gray-900 text-white">
+
+        <div class="container pt-32 pb-12 lg:pt-36 relative z-[1]">
+            <div class="flex flex-wrap -mx-3 pb-16 items-center">
+                <div class="w-full px-3 lg:w-7/12 mx-auto text-center mb-5 lg:mb-0">
+                    <h2 class="text-5xl lg:text-6xl font-medium mb-5">
+                        Work with us <br>not for us.
+                    </h2>
+                    
+                    <p class="text-lg mb-16">
+                        We believe in taking responsibility for making things happen rather than explaining why it can’t be done.
+                    </p>
+                    <div class="text-center">
+                        <a href="#openings" class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-white text-black animate-bounce">
+                            <i class="bi bi-arrow-down text-3xl"></i>
+                         </a>     
+                    </div>
+                </div>
+                <!--/.col-->
+            </div>
+            <!--/.row-->
+        </div>
+        
+        <!--Vector divider shape-->
+        <svg class="w-full absolute bottom-0 left-0 rotate-180 text-white dark:text-black" height="36"
+            fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1200 120"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54
+16.88 218.2 35.26 69.27 18 138.3 24.88 209.4
+13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z" opacity=".25"></path>
+            <path d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15
+60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39
+62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 
+113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z" opacity=".5"></path>
+            <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63
+112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z"></path>
+        </svg>
+    </section>
+    <section class="relative">
+        <div class="container py-16 lg:py-24 relative z-[1]">
+            <div class="flex flex-wrap -mx-3 justify-between items-center">
+                <div class="w-full px-3 lg:w-5/12 mb-6 lg:mb-0">
+                    <h2 data-text-split class="mb-7 text-4xl lg:text-5xl relative z-[1] font-medium lg:-mr-16">Recruiting
+                        across all
+                        career levels</h2>
+                    <p class="mb-0 lg:text-xl text-gray-600 dark:text-gray-300">
+                        Lorem ipsum dolor sit amet adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="lg:w-6/12 ml-auto w-full px-3" data-animation="fadeInUp" data-delay=".1">
+                    <div class="relative">
+                        <img src="assets/img/960x900/4.jpg" class="w-full flip-x rounded-2xl shadow-lg h-auto" alt="">
+                    </div>
+                </div>
+            </div>
+            <!--Divider line-->
+            <div class="my-16 lg:my-24 border-t border-gray-200 dark:border-gray-800 lg:w-6/12 mx-auto"></div>
+            <div class="flex flex-wrap -mx-3 justify-around">
+                <div class="md:w-4/12 lg:w-3/12 w-full px-3 mb-6 md:mb-0" data-animation="fadeInUp" data-delay=".1">
+                    <div class="mb-4 text-5xl text-indigo-500">
+                      <i class="icon-Building"></i>
+                    </div>
+                    <h5 class="mb-3 text-xl font-medium">Launched in 2014</h5>
+                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                        Lorem ipsum dolor sit amet adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="md:w-4/12 lg:w-3/12 w-full px-3 mb-6 md:mb-0" data-animation="fadeInUp" data-delay=".2">
+                    <div class="mb-4 text-5xl text-indigo-500">
+                        <i class="icon-Network"></i>
+                      </div>
+                    <h5 class="mb-3 text-xl font-medium">Team work</h5>
+                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                        Lorem ipsum dolor sit amet adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="md:w-4/12 lg:w-3/12 w-full px-3" data-animation="fadeInUp" data-delay=".3">
+                    <div class="mb-4 text-5xl text-indigo-500">
+                        <i class="icon-Thumb"></i>
+                      </div>
+                    <h5 class="mb-3 text-xl font-medium">Best in industry</h5>
+                    <p class="mb-0 text-gray-600 dark:text-gray-300">
+                        Lorem ipsum dolor sit amet adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="relative bg-black overflow-hidden jarallax text-white" data-speed=".2">
+
+        <!--parallax bg image-->
+        <img src="assets/img/backgrounds/bg4.jpg" class="jarallax-img opacity-75" alt="">
+
+        <!--Container-->
+        <div class="container py-16 lg:py-24 relative z-[1]">
+            <div class="flex flex-wrap -mx-3 relative z-[1]">
+                <!--Countup Numbers col-->
+                <div class="md:w-3/12 w-6/12 px-3 mb-7 md:mb-0 text-center">
+                    <h2 class="text-4xl lg:text-6xl font-medium mb-4">
+                        <span data-suffix="+" data-countup="185"></span>
+                    </h2>
+                    <p class="mb-0">Valid layouts</p>
+                </div>
+                <!--Countup Numbers col-->
+                <div class="md:w-3/12 w-6/12 px-3 mb-7 md:mb-0 text-center">
+                    <h2 class="text-4xl lg:text-6xl font-medium mb-4">
+                        <span data-suffix="+" data-countup="7350"></span>
+                    </h2>
+                    <p class="mb-0">Users</p>
+                </div>
+                <!--Countup Numbers col-->
+                <div class="md:w-3/12 w-6/12 px-3 text-center">
+                    <h2 class="text-4xl lg:text-6xl font-medium mb-4">
+                        <span data-suffix="+" data-countup="1000"></span>
+                    </h2>
+                    <p class="mb-0">UI components</p>
+                </div>
+                <!--Countup Numbers col-->
+                <div class="md:w-3/12 w-6/12 px-3 text-center">
+                    <h2 class="text-4xl lg:text-6xl font-medium mb-4">
+                        <span  data-suffix="%" data-countup="99"></span>
+                    </h2>
+                    <p class="mb-0">Happy customers</p>
+                </div>
+            </div>
+        </div>   
+    </section>
+    <section class="relative">
+        <div class="container py-16 lg:py-24 relative z-[1]">
+            <div class="flex flex-wrap -mx-3 items-center justify-between">
+                <div class="lg:w-5/12 w-full px-3 ms-auto order-last mb-7 lg:mb-0 relative z-[1]">
+                    <h6 class="mb-4 inline-block px-4 py-1 rounded-xl text-sm border border-green-500/20 bg-green-500/10 text-green-500">What we values</h6>
+                    <h2 class="mb-4 relative text-4xl lg:text-5xl font-medium" data-text-split>We care about our people.</h2>
+                    <p class="mb-7 lg:text-lg text-gray-600 dark:text-gray-300">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <ul class="mb-5 text-gray-600 dark:text-gray-300">
+                        <li class="inline-flex mr-3 mb-3 items-center">
+                            <div class="me-2 fs-4">
+                                <i class="bi bi-check-circle text-body-secondary opacity-75 align-middle"></i>
+                            </div>
+                            <div> Empathy</div>
+                        </li>
+                        <li class="inline-flex mr-3 mb-3 items-center">
+                            <div class="me-2 fs-4">
+                                <i class="bi bi-check-circle text-body-secondary opacity-75 align-middle"></i>
+                            </div>
+                            <div> Craftsmanship</div>
+                        </li>
+                        <li class="inline-flex mr-3 mb-3 items-center">
+                            <div class="me-2 fs-4">
+                                <i class="bi bi-check-circle text-body-secondary opacity-75 align-middle"></i>
+                            </div>
+                            <div> Learning</div>
+                        </li>
+                        <li class="inline-flex mr-3 mb-3 items-center">
+                            <div class="me-2 fs-4">
+                                <i class="bi bi-check-circle text-body-secondary opacity-75 align-middle"></i>
+                            </div>
+                            <div> Courtesy</div>
+                        </li>
+                        <li class="inline-flex mr-3 mb-3 items-center">
+                            <div class="me-2 fs-4">
+                                <i class="bi bi-check-circle text-body-secondary opacity-75 align-middle"></i>
+                            </div>
+                            <div> Solidarity</div>
+                        </li>
+                    </ul>
+                    <div>
+                        <a href="#openings" class="btn btn-lg bg-indigo-500 text-white hover:bg-indigo-600">
+                            View Openings
+                            <i class="bi bi-arrow-right text-lg ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-6/12 order-1 px-3 mb-9 lg:mb-0">
+                    <div class="relative pr-12 pb-20">
+                        <!--feature image-->
+                        <div>
+                        <img class="max-w-full relative w-10/12 block mx-auto rounded-2xl shadow-lg" alt="" src="assets/img/960x1140/3.jpg">
+                        </div>
+                        <div data-animation-y class="absolute right-0 top-1/2 -translate-y-1/2 mt-12 w-6/12">
+                        <img class="max-w-full rounded-2xl shadow-lg" alt=""
+                         src="assets/img/960x900/2.jpg">
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-gray-50 dark:bg-gray-900">
+        <div class="container py-16 lg:py-24 relative">
+            <h2 class="text-4xl lg:text-5xl font-medium mb-9 lg:mb-12" data-text-split>Explore Job by categories</h2>
+            <div class="flex flex-wrap -mx-3 items-center">
+                <div class="md:w-4/12 w-full px-3 mb-4" data-animation="fadeInUp" data-delay=".1">
+
+                    <!--Category card-->
+                    <a href="#!" class="px-4 py-6 rounded-xl bg-white dark:bg-gray-800 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl block relative">
+                        <i class="bi bi-search absolute right-0 top-0 mt-3 mr-3 z-[1] opacity-50"></i>
+                        <h6 class="mb-0 text-xl font-medium">Business development</h6>
+                    </a>
+                </div>
+                <div class="md:w-4/12 w-full px-3 mb-4" data-animation="fadeInUp" data-delay=".2">
+
+                    <!--Category card-->
+                    <a href="#!" class="px-4 py-6 rounded-xl bg-white dark:bg-gray-800 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl block relative">
+                        <i class="bi bi-search absolute right-0 top-0 mt-3 mr-3 z-[1] opacity-50"></i>
+                        <h6 class="mb-0 text-xl font-medium">Mobile Development</h6>
+                    </a>
+                </div>
+                <div class="md:w-4/12 w-full px-3 mb-4" data-animation="fadeInUp" data-delay=".3">
+
+                    <!--Category card-->
+                    <a href="#!" class="px-4 py-6 rounded-xl bg-white dark:bg-gray-800 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl block relative">
+                        <i class="bi bi-search absolute right-0 top-0 mt-3 mr-3 z-[1] opacity-50"></i>
+                        <h6 class="mb-0 text-xl font-medium">Project Management</h6>
+                    </a>
+                </div>
+                <div class="md:w-4/12 w-full px-3 mb-4" data-animation="fadeInUp" data-delay=".4">
+
+                    <!--Category card-->
+                    <a href="#!" class="px-4 py-6 rounded-xl bg-white dark:bg-gray-800 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl block relative">
+                        <i class="bi bi-search absolute right-0 top-0 mt-3 mr-3 z-[1] opacity-50"></i>
+                        <h6 class="mb-0 text-xl font-medium">Marketing & Communication</h6>
+                    </a>
+                </div>
+                <div class="md:w-4/12 w-full px-3 mb-4" data-animation="fadeInUp" data-delay=".5">
+
+                    <!--Category card-->
+                    <a href="#!" class="px-4 py-6 rounded-xl bg-white dark:bg-gray-800 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl block relative">
+                        <i class="bi bi-search absolute right-0 top-0 mt-3 mr-3 z-[1] opacity-50"></i>
+                        <h6 class="mb-0 text-xl font-medium">Design</h6>
+                    </a>
+                </div>
+                <div class="md:w-4/12 w-full px-3 mb-4" data-animation="fadeInUp" data-delay=".6">
+
+                    <!--Category card-->
+                    <a href="#!" class="px-4 py-6 rounded-xl bg-white dark:bg-gray-800 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl block relative">
+                        <i class="bi bi-search absolute right-0 top-0 mt-3 mr-3 z-[1] opacity-50"></i>
+                        <h6 class="mb-0 text-xl font-medium">Development</h6>
+                    </a>
+                </div>
+                <div class="w-full px-3 pt-5 text-center mx-auto" data-animation="fadeInUp" data-delay=".7">
+
+                    <!--Category card-->
+                    <a href="#!" class="btn btn-lg bg-indigo-500 hover:bg-indigo-600 text-white !inline-flex items-center">
+                        <h6 class="mb-0 flex-grow">View all Categories</h6>
+                        <i class="bi bi-arrow-right text-lg ml-3"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="relative overflow-hidden" id="openings">
+        
+            <div class="absolute w-full h-full">
+<!--Background vector-->
+<svg class="w-10/2 h-10/12 absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 text-amber-500" preserveAspectRatio="xMidYMid meet" width="475" height="475" viewBox="0 0 475 475" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path opacity=".1" d="M190.034 49.5011C255.056 -15.5212 360.478 -15.5212 425.5 49.5011C490.523 114.523 490.522 219.945 425.5 284.968L285.1 425.368C220.077 490.39 114.655 490.39 49.6332 425.368C-15.3891 360.346 -15.3891 254.924 49.6332 189.902L190.034 49.5011Z" fill="currentColor"/>
+    </svg>
+            </div>
+        <div class="container py-16 lg:py-24 relative z-[1]">
+            <div class="text-center">
+                <h6 class="mb-4 inline-block px-4 py-2 rounded-xl text-sm border border-green-500/20 bg-green-100 dark:bg-green-800 text-green-500">Apply for jobs</h6>
+            <h2 class="text-4xl lg:text-5xl font-medium mb-7 text-center" data-text-split>Current openings</h2>
+            </div>
+            
+            <div class="flex flex-wrap -mx-3 mb-5 justify-center">
+                <!--Job Col-->
+                <div class="md:w-6/12 xl:w-5/12 w-full px-3 mb-6" data-animation="fadeInUp" data-delay=".1">
+                    <!--Job card-->
+                    <div
+                        class="transition-all duration-300 hover:-translate-y-2 hover:shadow-lg bg-white rounded-2xl dark:bg-gray-900 py-5 px-4">
+                        <div class="flex-grow mb-0">
+                            <span class="mb-4 inline-block px-4 py-1 rounded-xl text-sm border border-orange-500/20 bg-orange-500/10 text-orange-500">Marketing</span>
+                            <h5 class="mb-3 text-xl font-medium">Marketing Automation Manager
+                            </h5>
+                            <p class="mb-0">
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum
+                            </p>
+                        </div>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+                <!--Job Col-->
+                <div class="md:w-6/12 xl:w-5/12 w-full px-3 mb-6" data-animation="fadeInUp" data-delay=".2">
+                    <!--Job card-->
+                    <div
+                        class="transition-all duration-300 hover:-translate-y-2 hover:shadow-lg bg-white rounded-2xl dark:bg-gray-900 py-5 px-4">
+                        <div class="flex-grow mb-0">
+                            <span class="mb-4 inline-block px-4 py-1 rounded-xl text-sm border border-pink-500/20 bg-pink-500/10 text-pink-500">Software</span>
+                            <h5 class="mb-3 text-xl font-medium">IT / Software Development
+                            </h5>
+                            <p class="mb-0">
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum
+                            </p>
+                        </div>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+                <!--Job Col-->
+                <div class="md:w-6/12 xl:w-5/12 w-full px-3 mb-6" data-animation="fadeInUp" data-delay=".3">
+                    <!--Job card-->
+                    <div
+                        class="transition-all duration-300 hover:-translate-y-2 hover:shadow-lg bg-white rounded-2xl dark:bg-gray-900 py-5 px-4">
+                        <div class="flex-grow mb-0">
+                            <span class="mb-4 inline-block px-4 py-1 rounded-xl text-sm border border-green-500/20 bg-green-500/10 text-green-500">Sales</span>
+                            <h5 class="mb-3 text-xl font-medium">Sales Development Representative
+                            </h5>
+                            <p class="mb-0">
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum
+                            </p>
+                        </div>
+
+                        <!--Job link-->
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+                <!--Job Col-->
+                <div class="md:w-6/12 xl:w-5/12 w-full px-3 mb-6" data-animation="fadeInUp" data-delay=".4">
+                    <!--Job card-->
+                    <div
+                        class="transition-all duration-300 hover:-translate-y-2 hover:shadow-lg bg-white rounded-2xl dark:bg-gray-900 py-5 px-4">
+                        <div class="flex-grow mb-0">
+                            <span class="mb-4 inline-block px-4 py-1 rounded-xl text-sm border border-blue-500/20 bg-blue-500/10 text-blue-500">UI UX</span>
+                            <h5 class="mb-3 text-xl font-medium">Front end Developer
+                            </h5>
+                            <p class="mb-0">
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum
+                            </p>
+                        </div>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-auto lg:w-8/12 text-center">
+                <p class="mb-5 text-gray-600 dark:text-gray-300 lg:text-lg" data-animation="fadeInUp" data-delay=".1">
+                    Didn’t find a position that suits you? Don’t worry. We’re accepting open applications, too,
+                    so send us your CV and cover letter, and we’ll make sure to review it.
+                </p>
+               <div  data-animation="fadeInUp" data-delay=".2">
+                <a href="#!" class="btn btn-lg bg-indigo-500 text-white hover:bg-indigo-600">
+                    Upload your CV <i class="bi bi-arrow-right text-lg ml-2"></i>
+                </a>
+               </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-1.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+   
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

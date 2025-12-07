@@ -1,0 +1,349 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+      @@include('./partials/head-includes.html')
+     <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+    <!--begin:Header-->
+ <header class="header-transparent sticky-fixed">
+
+   <!--begin:navbar-->
+   <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+     <!--Navbar-fixed-background-->
+     <div class="navbar-fixed-bg absolute"></div>
+     <div class="container relative flex flex-wrap items-center justify-center relative">
+       <!--begin:logo-->
+       <a class="navbar-brand relative w-24 block" href="index.html">
+         <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+         <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+       </a>
+       <!--end:logo-->
+
+       <!--begin:navbar-no-collapse-items-->
+       <div class="flex items-center shrink-0 ml-auto lg:order-last">
+         <!--Navbar toggler button-->
+         <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+           data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+           aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon">
+             <i></i>
+           </span>
+         </button>
+         <!--Button-->
+         <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+           <a href="#"
+             class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+         </div>
+       </div>
+       <!--end:navbar-no-collapse-items-->
+
+       <!--begin:navbar-collapse-->
+       <div
+         class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+         id="mainNavbarTheme">
+         @@include('./partials/headers/default-navbar-items.html',{"page": "blog"})
+       </div>
+       <!--end:navbar-collapse-->
+     </div>
+
+   </nav>
+   <!--end:navbar-->
+ </header>
+ <!--end:header-->
+
+ 
+<main class="main-content" id="main-content">
+    <section class="relative overflow-hidden bg-gradient-to-tr from-indigo-500 to-gray-900 text-white">
+              <!--:Blur Background:-->
+              <img src="assets/img/backgrounds/bg-blur.png" class="absolute right-0 top-0 w-full h-auto" alt="">
+        <div class="container relative pb-12 lg:pb-24 pt-32 lg:pt-48">
+            <div class="flex flex-wrap -mx-3 items-center">
+                <div class="w-full px-3 lg:w-8/12 relative z-[1]">
+                   <h1 class="text-4xl lg:text-6xl font-medium" data-text-split>Insights, thoughts & announcements from us</h1>
+                    </div>
+                </div>
+            </div>
+            <!--/.row-->
+    </section>
+   
+    <section class="relative">
+        <div class="container z-[1] relative py-16 lg:py-24">
+            <div class="flex flex-wrap -mx-3 mb-7">
+                <div class="lg:w-8/12 w-full px-3 order-last lg:order-1">
+                    <div>
+                        <article class="group relative mb-12 lg:mb-16">
+                            <div class="overflow-hidden rounded-2xl">
+                                <img src="assets/img/1200x600/1.jpg" alt=""
+                                    class="max-w-full rounded-2xl">
+                            </div>
+                            <div class="relative pt-7">
+                                <div class="flex justify-start w-full pb-3 items-center">
+                                    <div class="flex justify-start w-full mb-2 items-center">
+                                        <small class="text-xs inline-block px-3 py-1 rounded-full bg-gray-600 text-white font-medium">UI UX</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="mb-4">
+                                        <h2 class="link-multiline text-3xl lg:text-4xl font-medium">
+                                            The main principle of designing interactive environments
+                                        </h2>
+                                    </div>
+                                    <p class="mb-0 text-gray-600 dark:text-gray-300 line-clamp-2">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat.
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="#" class="absolute w-full h-full absolute left-0 top-0"></a>
+                        </article>
+                        <!--/.article-->
+                        <article class="group relative mb-12 lg:mb-16">
+                            <div class="overflow-hidden rounded-2xl">
+                                <img src="assets/img/1200x600/2.jpg" alt=""
+                                    class="max-w-full rounded-2xl">
+                            </div>
+                            <div class="relative pt-7">
+                                <div class="flex justify-start w-full pb-3 items-center">
+                                    <div class="flex justify-start w-full mb-2 items-center">
+                                        <small class="text-xs inline-block px-3 py-1 rounded-full bg-gray-600 text-white font-medium">Technology</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="mb-4">
+                                        <h2 class="link-multiline text-3xl lg:text-4xl font-medium">
+                                            Beginner python projects: Build a Simple email slicing program
+                                        </h2>
+                                    </div>
+                                    <p class="mb-0 text-gray-600 dark:text-gray-300 line-clamp-2">
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="#" class="absolute w-full h-full absolute left-0 top-0"></a>
+                        </article>
+                        <!--/.article-->
+                        <article class="group relative mb-12 lg:mb-16">
+                            <div class="overflow-hidden rounded-2xl">
+                                <img src="assets/img/1200x600/3.jpg" alt=""
+                                    class="max-w-full rounded-2xl">
+                            </div>
+                            <div class="relative pt-7">
+                                <div class="flex justify-start w-full pb-3 items-center">
+                                    <div class="flex justify-start w-full mb-2 items-center">
+                                        <small class="text-xs inline-block px-3 py-1 rounded-full bg-gray-600 text-white font-medium">Community</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="mb-4">
+                                        <h2 class="link-multiline text-3xl lg:text-4xl font-medium">
+                                            How to know if your new facebook Ad campaign is a dud in 3 days
+                                        </h2>
+                                    </div>
+                                    <p class="mb-0 text-gray-600 dark:text-gray-300 line-clamp-2">
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="#" class="absolute w-full h-full absolute left-0 top-0"></a>
+                        </article>
+                        <!--/.article-->
+                        <article class="group relative mb-12 lg:mb-16">
+                            <div class="overflow-hidden rounded-2xl">
+                                <img src="assets/img/1200x600/4.jpg" alt=""
+                                    class="max-w-full rounded-2xl">
+                            </div>
+                            <div class="relative pt-7">
+                                <div class="flex justify-start w-full pb-3 items-center">
+                                    <div class="flex justify-start w-full mb-2 items-center">
+                                        <small class="text-xs inline-block px-3 py-1 rounded-full bg-gray-600 text-white font-medium">Business</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="mb-4">
+                                        <h2 class="link-multiline text-3xl lg:text-4xl font-medium">
+                                            Product Configuration: The Future of eCommerce market
+                                        </h2>
+                                    </div>
+                                    <p class="mb-0 text-gray-600 dark:text-gray-300 line-clamp-2">
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="#" class="absolute w-full h-full absolute left-0 top-0"></a>
+                        </article>
+                        <!--/.article-->
+                    </div>
+                </div>
+
+                <!--Sidebar col-->
+                <div class="lg:w-4/12 w-full px-3 lg:ml-auto order-1 lg:order-last">
+                    <!--Widget-->
+                    <div class="sidebar-widget mb-9">
+                        <div class="flex items-center mb-4">
+                            <h5 class="mb-0 mr-3 text-xl font-medium">Popular articles</h5>
+                            <span class="block h-1 flex-grow bg-indigo-500/10"></span>
+                        </div>
+
+                       <div>
+                        <a href="#!"
+                        class="p-3 transition-all duration-200 hover:shadow-lg hover:-translate-y-2 rounded-2xl border border-gray-200 dark:border-gray-800 mb-3 block relative">
+                        <div class="flex justify-start w-full mb-2 items-center">
+                            <small class="text-xs inline-block px-3 py-1 rounded-full bg-gray-600 text-white font-medium">UI UX</small>
+                        </div>
+                        <p class="leading-tight text-lg font-medium">
+                            Lorem enim ad minim veniam, quis nostrud exercitation
+                        </p>
+                    </a>
+                       </div>
+                        
+                       
+                        <div>
+                            <a href="#!"
+                            class="p-3 transition-all duration-200 hover:shadow-lg hover:-translate-y-2 rounded-2xl border border-gray-200 dark:border-gray-800 mb-3 block relative">
+                            <div class="flex justify-start w-full mb-2 items-center">
+                                <small class="text-xs inline-block px-3 py-1 rounded-full bg-gray-600 text-white font-medium">Business</small>
+                            </div>
+                            <p class="leading-tight font-medium text-lg">
+                                Lorem enim ad minim veniam, quis nostrud exercitation
+                            </p>
+                        </a>
+                        </div>
+                        <div>
+                            <a href="#!"
+                            class="p-3 transition-all duration-200 hover:shadow-lg hover:-translate-y-2 rounded-2xl border border-gray-200 dark:border-gray-800 mb-3 block relative">
+                            <div class="flex justify-start w-full mb-2 items-center">
+                                <small class="text-xs inline-block px-3 py-1 rounded-full bg-gray-600 text-white font-medium">Community</small>
+                            </div>
+                            <p class="leading-tight font-medium text-lg">
+                                Lorem enim ad minim veniam, quis nostrud exercitation
+                            </p>
+                        </a>
+                        </div>
+                    </div>
+
+                    <!--Widget-->
+                    <div class="sidebar-widget mb-9">
+                        <div class="flex items-center mb-4">
+                            <h5 class="mb-0 mr-3 text-xl font-medium">Categories</h5>
+                            <span class="block h-1 flex-grow bg-indigo-500/20"></span>
+                        </div>
+                       <div class="flex flex-wrap gap-2">
+                        <a href="#!" class="inline-block px-3 py-2 text-xs rounded-full border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-lg font-medium">
+                            Bootstrap
+                        </a>
+                        <a href="#!" class="inline-block px-3 py-2 text-xs rounded-full border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-lg font-medium">
+                            Jquery
+                        </a>
+                        <a href="#!" class="inline-block px-3 py-2 text-xs rounded-full border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-lg font-medium">
+                            Sass
+                        </a>
+                        <a href="#!" class="inline-block px-3 py-2 text-xs rounded-full border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-lg font-medium">
+                            Gulp
+                        </a>
+                        <a href="#!" class="inline-block px-3 py-2 text-xs rounded-full border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-lg font-medium">
+                            Elements
+                        </a>
+                        <a href="#!" class="inline-block px-3 py-2 text-xs rounded-full border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-lg font-medium">
+                            Price
+                        </a>
+                        <a href="#!" class="inline-block px-3 py-2 text-xs rounded-full border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-lg font-medium">
+                            Updates
+                        </a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav aria-label="Page navigation" class="flex justify-end">
+                <ul class="pagination flex items-center gap-2 mb-0">
+                    <li class="page-item disabled"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+   
+    <!--:Newsletter:-->
+    <section class="relative dark">
+        <div class="container relative z-[1] -mb-16">
+            <div
+                class="px-6 lg:px-9 py-12 lg:py-16 bg-gray-800 rounded-2xl text-white overflow-hidden relative">
+                <img src="assets/img/backgrounds/bg-blur2.png" class="h-auto w-full md:w-10/12 absolute right-0 top-0 -translate-y-2/3" alt="">
+
+                <div class="relative">
+                    <h3 class="text-4xl lg:text-5xl font-medium mb-7" data-text-split>Get stories direct to your inbox</h3>
+                    <form>
+                        <div
+                            class="flex flex-col md:flex-row md:items-center gap-2 lg:w-7/12 mb-4">
+                            <input type="email" name="email"
+                                class="input input-lg"
+                                placeholder="Email Address" required="">
+                            <button type="submit" class="btn btn-lg bg-white text-gray-700 hover:text-indigo-500">
+                                <span>Subscribe</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <p class="text-xs text-white/75 mb-0">
+                        We’ll never share your details.
+                        View our <a href="#!" class="link-hover-underline inline-block relative">Privacy Policy</a> for more info.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+   
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-5.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+     <!-- end:Back to Top button -->
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

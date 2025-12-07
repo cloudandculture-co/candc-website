@@ -1,0 +1,44 @@
+.navbar-expand {
+  z-index: $zindex-fixed;
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      $next: breakpoint-next($breakpoint, $grid-breakpoints);
+      $infix: breakpoint-infix($next, $grid-breakpoints);
+  
+      // stylelint-disable-next-line scss/selector-no-union-class-name
+      &#{$infix} {
+        @include media-breakpoint-up($next) {
+          .collapse-search .dropdown{
+            width:400px;
+            min-width: 400px;
+            .dropdown-menu{
+                max-height: 340px;
+                overflow-y: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  .collapse-search{
+    .form-control.show{
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+  }
+
+  .navbar-brand{
+    .logo-dark{
+      display: none;
+    }
+  }
+
+  [data-bs-theme=dark]{
+    .navbar-brand{
+      .logo-dark{
+        display: block;
+      }
+      .logo-light{
+        display: none;
+      }
+    }
+  }

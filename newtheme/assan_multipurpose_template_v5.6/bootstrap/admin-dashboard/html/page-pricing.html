@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assan-Admin</title>
+
+        <!--Simplebar css-->
+        <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+        <!--Choices css-->
+        <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+
+        @@include('./partials/fonts.html')
+        <!--Main style-->
+        <link rel="stylesheet" href="assets/css/style.min.css">
+    </head>
+
+    <body>
+        @@include('./partials/preloader.html')
+        <!--App Start-->
+        <div class="d-flex flex-column flex-root">
+            <!--Page-->
+            <div class="page d-flex flex-row flex-column-fluid">
+                @@include('./partials/sidebars/sidebar-default.html',{"page": "pages","pages_collapse":"show","page_pricing":"active"} )
+
+                <!--///////////Page content wrapper///////////////-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+
+                    @@include('./partials/header/header-default.html')
+
+
+                    <!--//Page Toolbar//-->
+                    <div class="toolbar px-3 px-lg-6 py-3">
+                        <div class="position-relative container-fluid px-0">
+                            <div class="row align-items-center position-relative">
+                                <div class="col-md-8 mb-4 mb-lg-0">
+                                    <h3 class="mb-2">Pricing</h3>
+
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="#!">Home</a></li>
+                                            <li class="breadcrumb-item active">Pages</li>
+                                            <li class="breadcrumb-item active">Pricing</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page Toolbar End//-->
+
+                    <!--//Page content//-->
+                    <div class="content pt-3 px-3 px-lg-6 d-flex flex-column-fluid">
+                        <div class="container-fluid px-0">
+                            <div class="row row-cols-1 row-cols-md-3 mb-3">
+                                <div class="col">
+                                    <div class="card mb-2">
+                                        <div class="card-header py-3">
+                                            <h5 class="my-0">Free</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 text-body-secondary mb-0 me-1">$</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="display-5 mb-0">0</div>
+                                                </div>
+                                            </div>
+                                            <div class="small text-body-secondary">
+                                                Monthly
+                                            </div>
+                                            <ul class="list-unstyled pt-4 mb-4">
+                                                <li class="mb-2 pb-2 border-bottom"><span
+                                                        class="material-symbols-rounded me-2 fs-5 align-middle">
+                                                        check_circle
+                                                    </span> 10 users included</li>
+                                                <li class="mb-2 pb-2 border-bottom"><span
+                                                        class="material-symbols-rounded me-2 fs-5 align-middle">
+                                                        check_circle
+                                                    </span> 1 GB of storage</li>
+                                                <li class="mb-2 pb-2 border-bottom"><span
+                                                        class="material-symbols-rounded me-2 fs-5 align-middle">
+                                                        check_circle
+                                                    </span> Priority email support</li>
+                                                <li class="mb-2 pb-2 border-bottom"><span
+                                                        class="material-symbols-rounded me-2 fs-5 align-middle">
+                                                        check_circle
+                                                    </span> Help center access</li>
+                                            </ul>
+                                            <button type="button" class="btn w-100 btn-outline-primary">Get started with
+                                                free</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card mb-2">
+                                        <div class="card-header bg-transparent py-3">
+                                            <h5 class="my-0">Pro</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 text-body-secondary mb-0 me-1">$</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="display-5 mb-0">29</div>
+                                                </div>
+                                            </div>
+                                            <div class="small text-body-secondary">
+                                                Monthly
+                                            </div>
+                                            <ul class="list-unstyled pt-4 mb-4">
+                                                <li class="mb-2 pb-2 border-bottom"><span
+                                                        class="material-symbols-rounded me-2 fs-5 align-middle">
+                                                        check_circle
+                                                    </span> 20 users included</li>
+                                                <li class="mb-2 pb-2 border-bottom"><span
+                                                        class="material-symbols-rounded me-2 fs-5 align-middle">
+                                                        check_circle
+                                                    </span> 10 GB of storage</li>
+                                                <li class="mb-2 pb-2 border-bottom"><span
+                                                        class="material-symbols-rounded me-2 fs-5 align-middle">
+                                                        check_circle
+                                                    </span> Priority email support</li>
+                                                <li class="mb-2 pb-2 border-bottom"><span
+                                                        class="material-symbols-rounded me-2 fs-5 align-middle">
+                                                        check_circle
+                                                    </span> Help center access</li>
+                                            </ul>
+                                            <button type="button" class="btn w-100 btn-outline-primary">Get started with
+                                                pro</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card mb-2">
+                                        <div class="card-header py-3 text-white bg-primary border-primary">
+                                            <h5 class="my-0">Enterprise</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 text-body-secondary mb-0 me-1">$</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="display-5 mb-0">49</div>
+                                                </div>
+                                            </div>
+                                            <div class="small text-body-secondary">
+                                                Monthly
+                                            </div>
+                                            <ul class="list-unstyled pt-4 mb-4">
+                                                <li class="mb-2 pb-2 border-bottom"><span
+                                                        class="material-symbols-rounded me-2 fs-5 align-middle">
+                                                        check_circle
+                                                    </span> 30 users included</li>
+                                                <li class="mb-2 pb-2 border-bottom"><span
+                                                        class="material-symbols-rounded me-2 fs-5 align-middle">
+                                                        check_circle
+                                                    </span> 15 GB of storage</li>
+                                                <li class="mb-2 pb-2 border-bottom"><span
+                                                        class="material-symbols-rounded me-2 fs-5 align-middle">
+                                                        check_circle
+                                                    </span> Phone and email support</li>
+                                                <li class="mb-2 pb-2 border-bottom"><span
+                                                        class="material-symbols-rounded me-2 fs-5 align-middle">
+                                                        check_circle
+                                                    </span> Help center access</li>
+                                            </ul>
+                                            <button type="button" class="btn w-100 btn-primary">Start with
+                                                Enterprise</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Plans comparison-->
+                            <div class="card mb-2 table-nowrap table-card">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Plans Comparison</h5>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="table-responsive">
+                                        <table class="table text-center">
+                                            <thead class="bg-body text-uppercase text-body-secondary small">
+                                                <tr>
+                                                    <th style="width: 34%;"></th>
+                                                    <th style="width: 22%;">Free</th>
+                                                    <th style="width: 22%;">Pro</th>
+                                                    <th style="width: 22%;">Enterprise</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-start">Public</td>
+                                                    <td><span
+                                                            class="material-symbols-rounded text-success align-middle">
+                                                            check_circle
+                                                        </span></td>
+                                                    <td><span
+                                                            class="material-symbols-rounded text-success align-middle">
+                                                            check_circle
+                                                        </span></td>
+                                                    <td><span
+                                                            class="material-symbols-rounded text-success align-middle">
+                                                            check_circle
+                                                        </span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-start">Private</td>
+                                                    <td></td>
+                                                    <td><span
+                                                            class="material-symbols-rounded text-success align-middle">
+                                                            check_circle
+                                                        </span></td>
+                                                    <td><span
+                                                            class="material-symbols-rounded text-success align-middle">
+                                                            check_circle
+                                                        </span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-start">Permissions</td>
+                                                    <td><span
+                                                            class="material-symbols-rounded text-success align-middle">
+                                                            check_circle
+                                                        </span></td>
+                                                    <td><span
+                                                            class="material-symbols-rounded text-success align-middle">
+                                                            check_circle
+                                                        </span></td>
+                                                    <td><span
+                                                            class="material-symbols-rounded text-success align-middle">
+                                                            check_circle
+                                                        </span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-start">Sharing</td>
+                                                    <td></td>
+                                                    <td><span
+                                                            class="material-symbols-rounded text-success align-middle">
+                                                            check_circle
+                                                        </span></td>
+                                                    <td><span
+                                                            class="material-symbols-rounded text-success align-middle">
+                                                            check_circle
+                                                        </span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-start">Unlimited members</td>
+                                                    <td></td>
+                                                    <td><span
+                                                            class="material-symbols-rounded text-success align-middle">
+                                                            check_circle
+                                                        </span></td>
+                                                    <td><span
+                                                            class="material-symbols-rounded text-success align-middle">
+                                                            check_circle
+                                                        </span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-start">Extra security</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><span
+                                                            class="material-symbols-rounded text-success align-middle">
+                                                            check_circle
+                                                        </span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page content End//-->
+
+                    @@include('./partials/footer.html')
+                </main>
+                <!--///////////Page content wrapper End///////////////-->
+            </div>
+        </div>
+        @@include('./partials/core-scripts.html')
+
+    </body>
+
+</html>

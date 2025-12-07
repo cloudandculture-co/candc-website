@@ -1,0 +1,423 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+     <!--Swiper slider-->
+     <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+     
+     
+     @@include('./partials/head-includes.html')
+     <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+    <!--begin:Header-->
+ <header class="header-transparent sticky-fixed">
+
+   <!--begin:navbar-->
+   <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+     <!--Navbar-fixed-background-->
+     <div class="navbar-fixed-bg absolute"></div>
+     <div class="container relative flex flex-wrap items-center justify-center relative">
+       <!--begin:logo-->
+       <a class="navbar-brand relative w-24 block" href="index.html">
+         <img src="assets/img/logo/logo.svg" alt="" class="max-w-full navbar-brand-sticky">
+         <img src="assets/img/logo/logo-white.svg" alt="" class="max-w-full navbar-brand-transparent">
+       </a>
+       <!--end:logo-->
+
+       <!--begin:navbar-no-collapse-items-->
+       <div class="flex items-center shrink-0 ml-auto lg:order-last">
+         <!--Navbar toggler button-->
+         <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+           data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+           aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon">
+             <i></i>
+           </span>
+         </button>
+         <!--Button-->
+         <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+           <a href="#"
+             class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+         </div>
+       </div>
+       <!--end:navbar-no-collapse-items-->
+
+       <!--begin:navbar-collapse-->
+       <div
+         class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+         id="mainNavbarTheme">
+         @@include('./partials/headers/default-navbar-items.html',{"page": "pages"})
+       </div>
+       <!--end:navbar-collapse-->
+     </div>
+
+   </nav>
+   <!--end:navbar-->
+ </header>
+ <!--end:header-->
+
+ 
+<main class="main-content" id="main-content">
+    <section class="relative bg-gradient-to-tr from-indigo-500 to-gray-900 text-white">
+        <div class="container relative pb-12 lg:pb-16 pt-24 lg:pt-48">
+            <div class="flex flex-wrap -mx-3">
+                <div class="xl:w-7/12 w-full px-3 mx-auto text-center">
+                    <h1 class="text-4xl lg:text-6xl font-medium mb-7" data-text-split>How Can We Help?</h1>
+                    <form>
+                        <div class="flex items-center relative z-[1]">
+                             <input type="text" class="rounded-full bg-white block w-full px-7 pr-16 py-4 text-gray-700 focus:outline-0" placeholder="Search by topics" aria-label="Search by topics" aria-describedby="basic-addon2">
+                            <button role="button" type="button" class="rounded-full p-0 w-16 h-full absolute right-0 top-0 text-gray-700" id="basic-addon2">
+                                <i class="bi bi-search fs-4"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="flex justify-center items-center flex-wrap gap-2 pt-7">
+                        <div class="mr-4 mb-2 small text-gray-400">Popular topics</div>
+                        <a href="#!" class="inline-block px-3 py-1 rounded-full bg-black/10 hover:bg-black/50">Sass</a>
+                        <a href="#!" class="inline-block px-3 py-1 rounded-full bg-black/10 hover:bg-black/50">Babel</a>
+                        <a href="#!" class="inline-block px-3 py-1 rounded-full bg-black/10 hover:bg-black/50">Javascript</a>
+                        <a href="#!" class="inline-block px-3 py-1 rounded-full bg-black/10 hover:bg-black/50">Animations</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!--/.row-->
+    </section>
+    <section class="relative">
+        <div class="container py-16 lg:py-24">
+            <div class="flex flex-wrap -mx-3 justify-between">
+                <div class="w-full px-3 lg:w-8/12 lg:order-1 order-last mb-7 md:mb-0">
+                    <h3 class="mb-4 text-3xl font-medium">Popular Articles:</h3>
+                    <!--Topic item-->
+                    <a class="py-7 px-4 flex border border-gray-200 dark:border-gray-800 transition-all duration-200 hover:shadow-lg hover:-translate-y-2 mb-7 rounded-2xl" href="#!">
+                        <div class="me-3 text-gray-400">
+                           <i class="bi bi-question-circle fs-5"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <!--article-title-->
+                            <h5 class="text-xl font-medium mb-3">Sass / Css customisation</h5>
+                            <!--article-desc-->
+                            <p class="mb-4 text-gray-600 dark:text-gray-300">
+                                Lorem ipsum is placeholder text commonly used in the print, and
+                                publishing industries for previewing layouts and visual mockups.
+                            </p>
+                            <!--article-footer-->
+                            <div class="flex justify-between items-center">
+                                <!--article-discussion-members-->
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden relative">
+                                        <img src="assets/img/avatar/1.jpg" alt="" class="max-w-full">
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full overflow-hidden relative -ml-4">
+                                        <img src="assets/img/avatar/2.jpg" alt="" class="max-w-full">
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full overflow-hidden relative -ml-4">
+                                        <img src="assets/img/avatar/3.jpg" alt="" class="max-w-full">
+                                    </div>
+                                    <div class="w-10 h-10 relative flex items-center justify-center rounded-full text-white bg-indigo-500 text-white text-xl -ml-4">
+                                        <i class="bi bi-plus"></i>
+                                    </div>
+                                </div>
+                                <!--article-update-log-->
+                                <div class="text-sm text-gray-400">
+                                    <span>Last updated:</span> <span>14h ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!--Topic item-->
+                    <a class="py-7 px-4 flex border border-gray-200 dark:border-gray-800 transition-all duration-200 hover:shadow-lg hover:-translate-y-2 mb-7 rounded-2xl" href="#!">
+                        <div class="me-3 text-gray-400">
+                            <i class="bi bi-question-circle fs-5"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <!--article-title-->
+                            <h5 class="text-xl font-medium mb-3">Build tools</h5>
+                            <!--article-desc-->
+                            <p class="mb-4 text-gray-600 dark:text-gray-300">
+                                Lorem ipsum is placeholder text commonly used in the print, and
+                                publishing industries for previewing layouts and visual mockups.
+                            </p>
+                            <!--article-footer-->
+                            <div class="flex justify-between items-center">
+                                <!--article-discussion-members-->
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden relative">
+                                        <img src="assets/img/avatar/1.jpg" alt="" class="max-w-full">
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full overflow-hidden relative -ml-4">
+                                        <img src="assets/img/avatar/2.jpg" alt="" class="max-w-full">
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full overflow-hidden relative -ml-4">
+                                        <img src="assets/img/avatar/3.jpg" alt="" class="max-w-full">
+                                    </div>
+                                    <div class="w-10 h-10 relative flex items-center justify-center rounded-full text-white bg-indigo-500 text-white text-xl -ml-4">
+                                        <i class="bi bi-plus"></i>
+                                    </div>
+                                </div>
+                                <!--article-update-log-->
+                                <div class="text-sm text-gray-400">
+                                    <span>Last updated:</span> <span>12h ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!--Topic item-->
+                    <a class="py-7 px-4 flex border border-gray-200 dark:border-gray-800 transition-all duration-200 hover:shadow-lg hover:-translate-y-2 mb-7 rounded-2xl" href="#!">
+                        <div class="me-3 text-gray-400">
+                            <i class="bi bi-question-circle fs-5"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <!--article-title-->
+                            <h5 class="text-xl font-medium mb-3">Node modules import and export</h5>
+                            <!--article-desc-->
+                            <p class="mb-4 text-gray-600 dark:text-gray-300">
+                                Lorem ipsum is placeholder text commonly used in the print, and
+                                publishing industries for previewing layouts and visual mockups.
+                            </p>
+                            <!--article-footer-->
+                            <div class="flex justify-between items-center">
+                                <!--article-discussion-members-->
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden relative">
+                                        <img src="assets/img/avatar/1.jpg" alt="" class="max-w-full">
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full overflow-hidden relative -ml-4">
+                                        <img src="assets/img/avatar/2.jpg" alt="" class="max-w-full">
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full overflow-hidden relative -ml-4">
+                                        <img src="assets/img/avatar/3.jpg" alt="" class="max-w-full">
+                                    </div>
+                                    <div class="w-10 h-10 relative flex items-center justify-center rounded-full text-white bg-indigo-500 text-white text-xl -ml-4">
+                                        <i class="bi bi-plus"></i>
+                                    </div>
+                                </div>
+                                <!--article-update-log-->
+                                <div class="text-sm text-gray-400">
+                                    <span>Last updated:</span> <span>8h ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!--Topic item-->
+                    <a class="py-7 px-4 flex border border-gray-200 dark:border-gray-800 transition-all duration-200 hover:shadow-lg hover:-translate-y-2 mb-7 rounded-2xl" href="#!">
+                        <div class="me-3 text-gray-400">
+                            <i class="bi bi-question-circle fs-5"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <!--article-title-->
+                            <h5 class="text-xl font-medium mb-3">Javascript build tools like browserify, babel is not that hard to use </h5>
+                            <!--article-desc-->
+                            <p class="mb-4 text-gray-600 dark:text-gray-300">
+                                Lorem ipsum is placeholder text commonly used in the print, and
+                                publishing industries for previewing layouts and visual mockups.
+                            </p>
+                            <!--article-footer-->
+                            <div class="flex justify-between items-center">
+                                <!--article-discussion-members-->
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden relative">
+                                        <img src="assets/img/avatar/9.jpg" alt="" class="max-w-full">
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full overflow-hidden relative -ml-4">
+                                        <img src="assets/img/avatar/8.jpg" alt="" class="max-w-full">
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full overflow-hidden relative -ml-4">
+                                        <img src="assets/img/avatar/7.jpg" alt="" class="max-w-full">
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full overflow-hidden relative -ml-4">
+                                        <img src="assets/img/avatar/6.jpg" alt="" class="max-w-full">
+                                    </div>
+                                    <div class="w-10 h-10 relative flex items-center justify-center rounded-full text-white bg-indigo-500 text-white text-xl -ml-4">
+                                        <i class="bi bi-plus"></i>
+                                    </div>
+                                </div>
+                                <!--article-update-log-->
+                                <div class="text-sm text-gray-400">
+                                    <span>Last updated:</span> <span>Yesterday</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!--Topic item-->
+                    <a class="py-7 px-4 flex border border-gray-200 dark:border-gray-800 transition-all duration-200 hover:shadow-lg hover:-translate-y-2 rounded-2xl" href="#!">
+                        <div class="me-3 text-gray-400">
+                            <i class="bi bi-question-circle fs-5"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <!--article-title-->
+                            <h5 class="text-xl font-medium mb-3">Change your username & email id</h5>
+                            <!--article-desc-->
+                            <p class="mb-4 text-gray-600 dark:text-gray-300">
+                                Lorem ipsum is placeholder text commonly used in the print, and
+                                publishing industries for previewing layouts and visual mockups.
+                            </p>
+                            <!--article-footer-->
+                            <div class="flex justify-between items-center">
+                                <!--article-discussion-members-->
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden relative">
+                                        <img src="assets/img/avatar/4.jpg" alt="" class="max-w-full">
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full overflow-hidden relative -ml-4">
+                                        <img src="assets/img/avatar/5.jpg" alt="" class="max-w-full">
+                                    </div>
+                                    <div class="w-10 h-10 relative flex items-center justify-center rounded-full text-white bg-indigo-500 text-white text-xl -ml-4">
+                                        <i class="bi bi-plus"></i>
+                                    </div>
+                                </div>
+                                <!--article-update-log-->
+                                <div class="text-sm text-gray-400">
+                                    <span>Last updated:</span> <span>2d ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="w-full px-3 lg:w-3/12 order-1 lg:order-last mb-9 lg:mb-0">
+                    <div class="sticky top-24 pt-3">
+                        <div class="card card-body py-5 px-4 shadow-lg rounded-2xl">
+                            <a href="mailto:your@mail.com" class="btn btn-lg bg-indigo-500 !flex items-center justify-center text-white hover:bg-indigo-600">
+                               <i class="bi bi-headset mr-2"></i> Contact support
+                              </a>
+                            <hr class="my-5 border-gray-200 dark:border-gray-800">
+                            <h6 class="text-gray-400 mb-5">Popular topics:</h6>
+                            <nav class="mb-0 flex flex-wrap gap-2">
+                                <a href="#" class="inline-block px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-xl text-xs">Javascript</a>
+                                <a href="#" class="inline-block px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-xl text-xs">Animations</a>
+                                <a href="#" class="inline-block px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-xl text-xs">Lightbox</a>
+                                <a href="#" class="inline-block px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-xl text-xs">Icons</a>
+                                <a href="#" class="inline-block px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-xl text-xs">Modal</a>
+                                <a href="#" class="inline-block px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-xl text-xs">Dropdown</a>
+                                <a href="#" class="inline-block px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-xl text-xs">Hover</a>
+                                <a href="#" class="inline-block px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-xl text-xs">Splitting</a>
+                                <a href="#" class="inline-block px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-xl text-xs">Javascript</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative bg-gray-50 dark:bg-gray-900">
+        <div class="container py-16 lg:py-24">
+            <div class="flex flex-wrap -mx-3 items-center">
+                
+                <div class="w-full px-3 xl:w-3/12">
+                    <h3 class="mb-0 text-3xl font-medium" data-text-split>Other helpful topics</h3>
+                </div>
+                <div class="w-full px-3 lg:w-4/12 xl:w-3/12 mt-7" data-animation="fadeInUp" data-delay=".1">
+                    <a href="#!"
+                        class="py-7 px-4 bg-white dark:bg-gray-800 rounded-2xl block transition-all duration-200 hover:shadow-lg hover:-translate-y-2">
+                        <div class="relative">
+                            <!--Icon-->
+                            <div data-src="assets/img/graphics/icons/help.svg" data-fill="currentColor"
+                             data-inject-svg class="w-16 h-16 mb-5 svg-container text-indigo-500"></div>
+                            <!--Content-->
+                            <h5 class="mb-3 text-xl font-medium">Updates & support</h5>
+                            <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                                publishing.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-full px-3 lg:w-4/12 xl:w-3/12 mt-7" data-animation="fadeInUp" data-delay=".2">
+                    <a href="#!"
+                        class="py-7 px-4 bg-white dark:bg-gray-800 rounded-2xl block transition-all duration-200 hover:shadow-lg hover:-translate-y-2">
+                        <div class="relative">
+                             <!--Icon-->
+                             <div data-src="assets/img/graphics/icons/check-list.svg" data-fill="currentColor"
+                             data-inject-svg class="w-16 h-16 mb-5 svg-container text-indigo-500"></div>
+                             <!--Content-->
+                            <h5 class="mb-3 text-xl font-medium">Documentation</h5>
+                            <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                                publishing.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-full px-3 lg:w-4/12 xl:w-3/12 mt-7" data-animation="fadeInUp" data-delay=".3">
+                    <a href="#!"
+                        class="py-7 px-4 bg-white dark:bg-gray-800 rounded-2xl block transition-all duration-200 hover:shadow-lg hover:-translate-y-2">
+                        <div class="relative">
+                            <!--Icon-->
+                            <div data-src="assets/img/graphics/icons/mail.svg" data-fill="currentColor"
+                             data-inject-svg class="w-16 h-16 mb-5 svg-container text-indigo-500"></div>
+                           <!--Content-->
+                            <h5 class="mb-3 text-xl font-medium">Email support</h5>
+                            <p class="mb-0 text-gray-600 dark:text-gray-300">
+                                Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                                publishing.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/section-->
+
+    <section class="relative">
+        <div class="container relative py-16 lg:py-24">
+            <div class="px-6 rounded-2xl bg-indigo-500 shadow-lg py-12 lg:py-16 relative overflow-hidden">
+                <div class="flex flex-wrap -mx-3 relative items-center justify-center">
+                    <div class="w-full px-3 lg:w-7/12 xl:w-6/12 mb-7 lg:mb-0">
+                        <h6 class="text-white/75 mb-4">Our support team would love to help you</h6>
+                        <h2 class="mb-0 text-4xl lg:text-6xl font-medium text-white" data-text-split>Still no luck?</h2>
+                    </div>
+                    <div class="w-full px-3 lg:w-4/12 lg:text-right">
+                       <div data-animation="fadeInUp">
+                            <a href="#!" class="btn btn-lg bg-white !inline-flex items-center text-gray-700 hover:text-indigo-500">
+                              <i class="bi bi-headset text-xl mr-2"></i>  <span>Contact support</span></a>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+   
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-1.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+     <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

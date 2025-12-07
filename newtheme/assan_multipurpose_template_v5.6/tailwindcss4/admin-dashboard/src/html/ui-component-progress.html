@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+
+    @@include('./partials/head-includes.html')
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+      @@include('./partials/app-preloader.html')
+
+
+    @@include('./partials/sidebar.html',{"page": "ui-components","components_collapse":
+    "show","component_progress_active": "active"})
+
+    <main class="relative flex flex-col lg:ms-64">
+        @@include('./partials/header-default.html')
+        <!--:Page Header:-->
+        <div class="px-4 lg:px-6 xl:px-12 py-4">
+            <div class="flex flex-wrap items-center">
+                <div class="flex-grow">
+                    <h4 class="text-2xl font-semibold">Progress</h4>
+                </div>
+                <div class="shrink-0">
+                    <!--:Breadcrumb:-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="flex items-center">
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                            </li>
+                            <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active"><a
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                    href="ui-component-alerts.html">Components</a></li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Progress</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content px-4 lg:px-6 xl:px-12">
+            <div class="grid grid-cols-1 gap-4 mb-4">
+                <div>
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="font-semibold text-lg mb-4">Default examples</h5>
+                        <div class="space-y-2">
+                            <!--Progress-->
+                            <div class="progress bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-success-500 h-2" style="width: 25%"></div>
+                              </div>
+                              <!--Progress-->
+                              <div class="progress bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-info-500 h-2" style="width: 50%"></div>
+                              </div>
+                              <!--Progress-->
+                              <div class="progress bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-warning-500 h-2" style="width: 75%"></div>
+                              </div>
+                              <!--Progress-->
+                              <div class="progress bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-danger-500 h-2" style="width: 98%"></div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="font-semibold text-lg mb-4">Height</h5>
+                        <div class="space-y-2">
+                            <!--Progress-->
+                            <div class="progress bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-success-500 h-0.5" style="width: 25%"></div>
+                              </div>
+                               <!--Progress-->
+                            <div class="progress bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-success-500 h-1" style="width: 25%"></div>
+                              </div>
+                               <!--Progress-->
+                            <div class="progress bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-success-500 h-2" style="width: 25%"></div>
+                              </div>
+                                <!--Progress-->
+                            <div class="progress bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-success-500 h-3" style="width: 25%"></div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="font-semibold text-lg mb-4">Label</h5>
+                        <div class="space-y-4">
+                                <!--Progress-->
+                                <div>
+                                    <div class="flex text-sm mb-1 items-center justify-between">
+                                        <span>Downloading...</span>
+                                        <span>25%</span>
+                                    </div>
+                                <div class="progress bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-success-500 h-3" style="width: 25%"></div>
+                                  </div>
+                                </div>
+                                <!--Progress-->
+                                <div>
+                                    
+                                <div class="progress bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-success-500 h-4 flex items-center justify-center px-3" style="width: 25%">
+                                        <span class="text-sm text-white block leading-[1]">25%</span>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="font-semibold text-lg mb-4">Circle</h5>
+                        <div class="gap-4 flex items-center">
+                           <!--:Progress:-->
+                <div class="js-progress relative" data-progress="79">
+                    <svg class="progress-circle" width="36" height="36" viewBox="0 0 36 36">
+                      <path fill="none" stroke="currentColor" stroke-width="2" class="progress-bg text-primary-500/20" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <path cl fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="rounded" class="progress-bar text-primary-500"
+                        stroke-dasharray="0, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    </svg>
+                    <!--:Overlay Text:-->
+                    <div class="progress-value hidden absolute w-full h-full left-0 top-0 flex items-center justify-center">
+                      <span class="progress-value-text text-sm">50</span>%
+                    </div>
+                  </div>
+
+                   <!--:Progress:-->
+                <div class="js-progress relative" data-progress="79">
+                    <svg class="progress-circle" width="60" height="60" viewBox="0 0 36 36">
+                      <path fill="none" stroke="currentColor" stroke-width="3" class="progress-bg text-success-500/20" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <path cl fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="rounded" class="progress-bar text-success-500"
+                        stroke-dasharray="0, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    </svg>
+                    <!--:Overlay Text:-->
+                    <div class="progress-value absolute w-full h-full left-0 top-0 flex items-center justify-center">
+                      <span class="progress-value-text text-sm">50</span>%
+                    </div>
+                  </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

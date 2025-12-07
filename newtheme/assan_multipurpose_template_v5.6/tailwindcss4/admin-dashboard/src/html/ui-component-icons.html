@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+
+    @@include('./partials/head-includes.html')
+</head>
+
+<body
+    class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+      @@include('./partials/app-preloader.html')
+
+
+    @@include('./partials/sidebar.html',{"page": "ui-components","components_collapse":
+    "show","component_icons_active": "active"})
+
+    <main class="relative flex flex-col lg:ms-64">
+        @@include('./partials/header-default.html')
+        <!--:Page Header:-->
+        <div class="px-4 lg:px-6 xl:px-12 py-4">
+            <div class="flex flex-wrap items-center">
+                <div class="flex-grow">
+                    <h4 class="text-2xl font-semibold">Icons</h4>
+                </div>
+                <div class="shrink-0">
+                    <!--:Breadcrumb:-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="flex items-center">
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                            </li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active"><a
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                    href="ui-component-alerts.html">Components</a></li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Icons</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content relative px-4 lg:px-6 xl:px-12">
+            <div class="grid grid-cols-1 gap-4 mb-4">
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="text-lg font-semibold mb-4 pb-4 border-b border-gray-200 dark:border-gray-800">Iconify Tabler icons
+                        </h5>
+                        <div class="flex flex-wrap gap-4 text-xl mb-4">
+                            <span class="icon-[tabler--chevron-right]"></span>
+                            <span class="icon-[tabler--mail]"></span>
+                            <span class="icon-[tabler--folders]"></span>
+                            <span class="icon-[tabler--wand]"></span>
+                            <span class="icon-[tabler--chart-bar]"></span>
+                            <span class="icon-[tabler--calendar-month]"></span>
+                            <span class="icon-[tabler--file-description]"></span>
+                            <span class="icon-[tabler--bell] text-xl"></span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-200 dark:border-gray-800">
+                            <a class="text-primary-500 border-b border-dashed hover:text-current" target="_blank"
+                                href="https://icon-sets.iconify.design/tabler/?keyword=tabler">View All Icons</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="text-lg font-semibold mb-4 pb-4 border-b border-gray-200 dark:border-gray-800">Bootstrap Icons
+                        </h5>
+                        <div class="gap-5 text-xl flex flex-wrap pb-4">
+                            <i class="bi bi-house"></i>
+                            <i class="bi bi-bell"></i>
+                            <i class="bi bi-battery"></i>
+                            <i class="bi bi-bezier"></i>
+                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-briefcase"></i>
+                        </div>
+                        <div class="pt-4 border-t border-gray-200 dark:border-gray-800">
+                            <a class="text-primary-500 border-b border-dashed hover:text-current" target="_blank"
+                                href="https://icons.getbootstrap.com/">View All Icons</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

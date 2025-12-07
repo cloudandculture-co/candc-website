@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+
+  @@include('./partials/head-includes.html')
+
+  <!--Master slider-->
+  <link rel="stylesheet" href="assets/vendor/masterslider/style/masterslider.css">
+  <link rel="stylesheet" href="assets/vendor/masterslider/skins/black-1/style.css">
+
+  <!--Swiper slider-->
+  <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+
+  <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+  @@include('./partials/preloader.html')
+  <!--begin:Header-->
+  <header class="header-transparent sticky-fixed">
+
+    <!--begin:navbar-->
+    <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+      <!--Navbar-fixed-background-->
+      <div class="navbar-fixed-bg absolute"></div>
+      <div class="container relative flex flex-wrap items-center justify-center relative">
+        <!--begin:logo-->
+        <a class="navbar-brand relative w-24 block" href="index.html">
+          <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+          <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+        </a>
+        <!--end:logo-->
+
+        <!--begin:navbar-no-collapse-items-->
+        <div class="flex items-center shrink-0 ml-auto lg:order-last">
+          <!--Navbar toggler button-->
+          <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <i></i>
+            </span>
+          </button>
+          <!--Button-->
+          <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+            <a href="#" class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+          </div>
+        </div>
+        <!--end:navbar-no-collapse-items-->
+
+        <!--begin:navbar-collapse-->
+        <div
+          class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+          id="mainNavbarTheme">
+          @@include('./partials/headers/default-navbar-items.html',{"page": "home"})
+        </div>
+        <!--end:navbar-collapse-->
+      </div>
+
+    </nav>
+    <!--end:navbar-->
+  </header>
+  <!--end:header-->
+
+
+  <!--begin:main content-->
+  <main>
+    <!--begin:main slider-->
+    <div class="relative overflow-hidden">
+      <div class="ms-skin-black-1 master-slider" id="masterslider">
+        <!--begin:slide-1-->
+        <div class="ms-slide bg-dark" data-delay="3" data-fill-mode="fill">
+          <img class="opacity-25" src="assets/vendor/masterslider/style/blank.gif" alt="" title=""
+            data-src="assets/img/backgrounds/bg6.jpg" />
+
+          <!--title-->
+          <div class="ms-layer ms-title text-white" data-effect="front(800)" data-duration="1200" data-delay="600"
+            data-ease="easeInOutCubic" data-hide-effect="top(long,false)" data-offset-x="0" data-offset-y="-40"
+            data-origin="mc" data-position="center" data-masked="false">
+            <div class="text-center">
+              Create a website <br>you are proud of</div>
+          </div>
+          <!--button-->
+          <a href="#" class="ms-layer ms-btn" data-effect="front(800)" data-duration="1200" data-delay="800"
+            data-ease="easeInOutCubic" data-hide-effect="top(long,false)" data-offset-x="0" data-offset-y="170"
+            data-origin="mc" data-position="center" data-masked="false"><span
+              class="px-6 py-2 lg:py-3 rounded-xl text-lg font-medium bg-indigo-500 text-white inline-block transition-all hover:bg-primary-deep">Get
+              Started</span>
+          </a>
+        </div>
+        <!--end:slide-1-->
+
+        <!--begin:slide-2-->
+        <div class="ms-slide bg-dark" data-delay="3" data-fill-mode="fill">
+          <!--bg-->
+          <img class="opacity-25" src="assets/vendor/masterslider/style/blank.gif" alt="" title=""
+            data-src="assets/img/backgrounds/bg7.jpg" />
+
+          <!--title-->
+          <div class="ms-layer ms-title text-center text-white" data-effect="skewbottom(-10,150)" data-duration="1000"
+            data-delay="600" data-ease="easeInOutCubic" data-hide-effect="top(long,false)" data-offset-x="0"
+            data-offset-y="-40" data-origin="mc" data-position="center" data-masked="false">
+            <div>Ultimate solutions<br> for your website</div>
+          </div>
+          <!--button-->
+          <a href="#" class="ms-layer ms-btn" data-effect="skewbottom(-10,150)" data-duration="1000" data-delay="900"
+            data-ease="easeInOutCubic" data-hide-effect="top(long,false)" data-offset-x="0" data-offset-y="170"
+            data-origin="mc" data-position="center" data-masked="false">
+            <span
+              class="px-6 py-2 lg:py-3 rounded-xl text-lg font-medium bg-indigo-500 text-white inline-block transition-all hover:bg-primary-deep">Get
+              Started</span>
+          </a>
+        </div>
+        <!--end:slide-2-->
+
+        <!--begin:slide-3-->
+        <div class="ms-slide bg-dark" data-delay="3" data-fill-mode="fill">
+          <!--bg-->
+          <img class="opacity-25" src="assets/vendor/masterslider/style/blank.gif" alt="" title=""
+            data-src="assets/img/backgrounds/bg5.jpg" />
+          <!--Title-->
+          <div class="ms-layer text-center ms-title text-white" data-effect="skewleft(23,500)" data-duration="1000"
+            data-delay="900" data-ease="easeInOutSine" data-hide-effect="top(long,false)" data-offset-x="0"
+            data-offset-y="-40" data-origin="mc" data-position="center" data-masked="false">
+            <div>A responsive theme<br> built for success</div>
+          </div>
+
+          <!--Button-->
+          <a href="#" class="ms-layer ms-btn" data-effect="skewleft(23,500)" data-duration="1000" data-delay="1200"
+            data-ease="easeInOutSine" data-hide-effect="top(long,false)" data-offset-x="0" data-offset-y="170"
+            data-origin="mc" data-position="center" data-masked="false"><span
+              class="px-6 py-2 lg:py-3 rounded-xl text-lg font-medium bg-indigo-500 text-white inline-block transition-all hover:bg-primary-deep">Get
+              Started</span>
+          </a>
+        </div>
+        <!--end:slide-3-->
+      </div>
+    </div>
+    <!--end:main slider-->
+
+    <!--begin: features icons-->
+    <section class="relative border-bottom" id="next">
+      <div class="container py-9 lg:py-16">
+        <div class="flex flex-wrap -mx-4 mb-9 lg:mb-12 justify-center items-end">
+          <div class="w-full px-4 lg:w-3/5 mx-auto text-center">
+
+            <!--begin:Subheading-->
+            <div class="mb-5" data-animation="fadeInDown" data-delay=".1" data-duration=".8">
+              <span class="text-gray-500 dark:text-gray-400 font-medium text-lg">Welcome to the Assan</span>
+            </div>
+            <!--end:subheading-->
+
+            <!--begin:Section Heading-->
+            <h2 class=" text-4xl lg:text-5xl leading-[1.2] font-medium mb-0" data-text-split>Reimagine your product
+              with forward-thinking solutions
+            </h2>
+            <!--end:heading-->
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-4 justify-around">
+          <!--begin:Feature column-->
+          <div class="w-full lg:w-4/12 px-4 mb-9 lg:mb-0" data-animation="fadeInUp" data-delay=".1" data-duration=".8">
+            <div class="text-center">
+              <!--Icon-->
+              <div class="mb-4 relative text-4xl lg:text-5xl font-normal text-indigo-500">
+                <i class="icon-Repeat-2 relative"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-medium capitalize">Reusable elements</h5>
+              <p class="mb-5 lg:px-4 text-gray-600 dark:text-white">
+                Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
+                industries for layouts and visual mockups.
+              </p>
+              <a href="#!" class="link-hover-underline relative inline-block text-indigo-500 font-medium">
+                Learn More<i class="bi bi-arrow-right align-middle ms-1 lh-1 fs-5"></i>
+              </a>
+            </div>
+          </div>
+          <!--end:Feature column-->
+
+          <!--begin:Feature column-->
+          <div class="w-full lg:w-4/12 px-4 mb-9 lg:mb-0" data-animation="fadeInUp" data-delay=".2" data-duration=".8">
+            <div class="text-center">
+              <!--Icon-->
+              <div class="mb-4 relative text-4xl lg:text-5xl font-normal text-indigo-500">
+                <i class="icon-Light-Bulb relative"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-medium capitalize">Design & innovation</h5>
+              <p class="mb-5 lg:px-4 text-gray-600 dark:text-white">
+                Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
+                industries for layouts and visual mockups.
+              </p>
+              <a href="#!" class="link-hover-underline relative inline-block text-indigo-500 font-medium">
+                Learn More<i class="bi bi-arrow-right align-middle ms-1 lh-1 fs-5"></i>
+              </a>
+            </div>
+          </div>
+          <!--end:Feature column-->
+
+          <!--begin:Feature column-->
+          <div class="w-full lg:w-4/12 px-4" data-animation="fadeInUp" data-delay=".3" data-duration=".8">
+            <div class="text-center">
+              <!--Icon-->
+              <div class="mb-4 relative text-4xl lg:text-5xl font-normal text-indigo-500">
+                <i class="icon-Thumbs-UpSmiley relative"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-medium capitalize">Best selling</h5>
+              <p class="mb-5 lg:px-4 text-gray-600 dark:text-white">
+                Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
+                industries for layouts and visual mockups.
+              </p>
+              <a href="#!" class="link-hover-underline relative inline-block text-indigo-500 font-medium">
+                Learn More<i class="bi bi-arrow-right align-middle ms-1 lh-1 fs-5"></i>
+              </a>
+            </div>
+          </div>
+          <!--end:Feature column-->
+        </div>
+      </div>
+    </section>
+    <!--end: features icons-->
+
+    <!--begin: features image-->
+    <section class="relative overflow-hidden">
+      <div class="container py-9 lg:py-16 relative">
+        <div class="flex flex-wrap -mx-4 items-center justify-center">
+          <div class="order-last w-full md:w-3/5 md:pl-16 lg:pl-24 px-4">
+            <!--Subheading-->
+            <div class="mb-5" data-animation="fadeInUp">
+              <!--Subheading-->
+              <h6 class="mb-0 text-gray-500 dark:text-gray-400 font-medium text-lg">Why choose us?</h6>
+            </div>
+            <!--Section Heading-->
+            <h2 class="mb-9 text-4xl lg:text-5xl leading-[1.2] font-medium relative" data-text-split>Designed
+              for developers
+            </h2>
+            <div class="relative">
+              <!--Feature icon card-->
+              <div class="flex mb-7" data-animation="fadeInLeft" data-delay=".1">
+                <!--Feature icon-->
+                <div class="mr-4">
+                  <!--Icon-->
+                  <i
+                    class="bi bi-check lh-1 w-8 h-8 flex items-center justify-center rounded-full bg-indigo-500 text-white relative text-xl"></i>
+                </div>
+                <!--Feature text-->
+                <div>
+                  <h5 class="text-xl font-medium mb-2">
+                    500+ Reusable components
+                  </h5>
+                  <p class="mb-0 text-gray-600 dark:text-gray-300">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ac turpis egestas maecenas pharetra convallis.
+                  </p>
+                </div>
+              </div>
+              <!--Feature icon card-->
+              <div class="flex mb-7" data-animation="fadeInLeft" data-delay=".2">
+                <!--Feature icon-->
+                <div class="mr-4">
+                  <!--Icon-->
+                  <i
+                    class="bi bi-check lh-1 w-8 h-8 flex items-center justify-center rounded-full bg-indigo-500 text-white relative text-xl"></i>
+
+                </div>
+
+                <!--Feature text-->
+                <div>
+                  <h5 class="text-xl font-medium mb-2">
+                    Beautifully designed layouts
+                  </h5>
+                  <p class="mb-0 text-gray-600 dark:text-gray-300">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ac turpis egestas maecenas pharetra convallis.
+                  </p>
+                </div>
+              </div>
+              <!--Feature icon card-->
+              <div class="flex mb-9" data-animation="fadeInLeft" data-delay=".3">
+                <!--Feature icon-->
+                <div class="mr-4">
+                  <!--Icon-->
+                  <i
+                    class="bi bi-check lh-1 w-8 h-8 flex items-center justify-center rounded-full bg-indigo-500 text-white relative text-xl"></i>
+
+                </div>
+
+                <!--Feature text-->
+                <div>
+                  <h5 class="text-xl font-medium mb-2">
+                    Clean & well coded
+                  </h5>
+                  <p class="mb-0 text-gray-600 dark:text-gray-300">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ac turpis egestas maecenas pharetra convallis.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div  data-animation="fadeInLeft" data-delay=".4">
+              <a href="#!" class="link-hover-underline relative inline-block text-indigo-500 font-medium">
+                <span>Learn more</span> <i class="bi bi-chevron-right ml-1"></i>
+              </a>
+            </div>
+
+          </div>
+          <div class="w-full md:w-2/5 px-4 lg:mr-auto order-1 mb-7 md:mb-0">
+            <div class="relative">
+              <div
+                class="bg-gradient-to-bl from-indigo-500 via-purple-500 to-pink-500 absolute start-0 bottom-0 w-full h-3/4 rounded-2xl">
+              </div>
+
+              <img src="assets/img/backgrounds/trans2.png" alt="" class="img-fluid relative">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end: features image-->
+
+    <!--begin: Section case studies (portfolio)-->
+    <section class="relative overflow-hidden">
+      <div class="absolute left-0 top-0 w-full h-2/3 lg:px-4">
+        <div class="rounded-2xl top-0 w-full h-full bg-indigo-500"></div>
+      </div>
+      <div class="container relative py-9 lg:py-16">
+        <div class="flex flex-wrap -mx-3 mb-9 text-white justify-center items-end">
+          <div class="w-full lg:w-2/3 px-3 text-white text-center">
+            <!--Subheading-->
+            <div data-animation="fadeInUp">
+              <h6 class="mb-5 text-white/75 text-xl font-medium">Case studies</h6>
+            </div>
+            <!--Section Heading-->
+            <div>
+              <h2 class="text-4xl lg:text-5xl font-medium" data-text-split>Our work speaks for itself</h2>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-3">
+          <div class="w-full px-4 relative">
+
+            <!--Projects swiper slider-->
+            <div class="swiper-container swiper-projects overflow-visible">
+              <div class="swiper-wrapper">
+
+                <!--begin:project-slide-->
+                <div class="swiper-slide">
+                  <a href="#!" class="block group overflow-hidden rounded-2xl">
+                    <img src="assets/img/projects/1.jpg" alt="" class="img-fluid img-zoom rounded-3">
+                    <div
+                      class="absolute left-0 top-0 w-full h-full p-6 lg:p-9 rounded-2xl flex items-end text-white bg-gradient-to-t from-black/90 to-transparent transition-opacity duration-200 opacity-0 group-hover:opacity-100">
+                      <ul class="list-unstyled overlay-items mb-0">
+                        <li
+                          class="transition-all duration-300 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 delay-100">
+                          <h4 class="mb-1 text-2xl font-medium capitalize">Awesome title</h4>
+                        </li>
+                        <li
+                          class="transition-all duration-300 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 group-hover:delay-200">
+                          <span class="opacity-75">Awesome subtitle</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+                <!--::/End Project Slide-->
+
+                <!--begin:project-slide-->
+                <div class="swiper-slide">
+                  <a href="#!" class="block group overflow-hidden rounded-2xl">
+                    <img src="assets/img/projects/2.jpg" alt="" class="img-fluid img-zoom rounded-3">
+                    <div
+                      class="absolute left-0 top-0 w-full h-full p-6 lg:p-9 rounded-2xl flex items-end text-white bg-gradient-to-t from-black/90 to-transparent transition-opacity duration-200 opacity-0 group-hover:opacity-100">
+                      <ul class="list-unstyled overlay-items mb-0">
+                        <li
+                          class="transition-all duration-300 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 delay-100">
+                          <h4 class="mb-1 text-2xl font-medium capitalize">Awesome title</h4>
+                        </li>
+                        <li
+                          class="transition-all duration-300 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 group-hover:delay-200">
+                          <span class="opacity-75">Awesome subtitle</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+                <!--::/End Project Slide-->
+
+                <!--begin:project-slide-->
+                <div class="swiper-slide">
+                  <a href="#!" class="block group overflow-hidden rounded-2xl">
+                    <img src="assets/img/projects/3.jpg" alt="" class="img-fluid img-zoom rounded-3">
+                    <div
+                      class="absolute left-0 top-0 w-full h-full p-6 lg:p-9 rounded-2xl flex items-end text-white bg-gradient-to-t from-black/90 to-transparent transition-opacity duration-200 opacity-0 group-hover:opacity-100">
+                      <ul class="list-unstyled overlay-items mb-0">
+                        <li
+                          class="transition-all duration-300 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 delay-100">
+                          <h4 class="mb-1 text-2xl font-medium capitalize">Awesome title</h4>
+                        </li>
+                        <li
+                          class="transition-all duration-300 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 group-hover:delay-200">
+                          <span class="opacity-75">Awesome subtitle</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+                <!--::/End Project Slide-->
+
+                <!--begin:project-slide-->
+                <div class="swiper-slide">
+                  <a href="#!" class="block group overflow-hidden rounded-2xl">
+                    <img src="assets/img/projects/4.jpg" alt="" class="img-fluid img-zoom rounded-3">
+                    <div
+                      class="absolute left-0 top-0 w-full h-full p-6 lg:p-9 rounded-2xl flex items-end text-white bg-gradient-to-t from-black/90 to-transparent transition-opacity duration-200 opacity-0 group-hover:opacity-100">
+                      <ul class="list-unstyled overlay-items mb-0">
+                        <li
+                          class="transition-all duration-300 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 delay-100">
+                          <h4 class="mb-1 text-2xl font-medium capitalize">Awesome title</h4>
+                        </li>
+                        <li
+                          class="transition-all duration-300 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 group-hover:delay-200">
+                          <span class="opacity-75">Awesome subtitle</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+                <!--::/End Project Slide-->
+
+                <!--begin:project-slide-->
+                <div class="swiper-slide">
+                  <a href="#!" class="block group overflow-hidden rounded-2xl">
+                    <img src="assets/img/projects/5.jpg" alt="" class="img-fluid img-zoom rounded-3">
+                    <div
+                      class="absolute left-0 top-0 w-full h-full p-6 lg:p-9 rounded-2xl flex items-end text-white bg-gradient-to-t from-black/90 to-transparent transition-opacity duration-200 opacity-0 group-hover:opacity-100">
+                      <ul class="list-unstyled overlay-items mb-0">
+                        <li
+                          class="transition-all duration-300 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 delay-100">
+                          <h4 class="mb-1 text-2xl font-medium capitalize">Awesome title</h4>
+                        </li>
+                        <li
+                          class="transition-all duration-300 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 group-hover:delay-200">
+                          <span class="opacity-75">Awesome subtitle</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+                <!--::/End Project Slide-->
+
+                <!--begin:project-slide-->
+                <div class="swiper-slide">
+                  <a href="#!" class="block group overflow-hidden rounded-2xl">
+                    <img src="assets/img/projects/6.jpg" alt="" class="img-fluid img-zoom rounded-3">
+                    <div
+                      class="absolute left-0 top-0 w-full h-full p-6 lg:p-9 rounded-2xl flex items-end text-white bg-gradient-to-t from-black/90 to-transparent transition-opacity duration-200 opacity-0 group-hover:opacity-100">
+                      <ul class="list-unstyled overlay-items mb-0">
+                        <li
+                          class="transition-all duration-300 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 delay-100">
+                          <h4 class="mb-1 text-2xl font-medium capitalize">Awesome title</h4>
+                        </li>
+                        <li
+                          class="transition-all duration-300 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 group-hover:delay-200">
+                          <span class="opacity-75">Awesome subtitle</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+                <!--::/End Project Slide-->
+              </div>
+              <div class="text-center pt-9 lg:pt-12">
+                <div
+                  class="swiperProjects-pagination mb-9 lg:mb-12 text-indigo-500 swiper-pagination !relative flex justify-center mb-4">
+                </div>
+                <!--begin: button-->
+                <a href="#!" class="link-underline">
+                  View All case studies
+                </a>
+                <!--end: button-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!--end: Section case studies (portfolio)-->
+
+
+    <!--Begin:testimonials section-->
+    <section class="relative overflow-hidden bg-gray-50 dark:bg-gray-900">
+
+      <!--begin:Divider wave shape-->
+      <svg class="absolute left-0 bottom-0 w-full text-white dark:text-black" preserveAspectRatio="none" width="100%"
+        height="288" viewBox="0 0 1200 288" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M0 0L67 30C133 60 267 120 400 138C533 156 667 132 800 126C933 120 1067 132 1133 138L1200 144V288H1133C1067 288 933 288 800 288C667 288 533 288 400 288C267 288 133 288 67 288H0V0Z"
+          fill="currentColor" />
+      </svg>
+      <!--end:Divider wave shape-->
+
+      <div class="container relative py-12 lg:py-16">
+        <div class="flex flex-wrap -mx-3 mb-9 items-end justify-center">
+          <!--begin: Section headings-->
+          <div class="px-3 md:w-3/5 w-full mb-5 md:mb-0">
+
+            <div class="mb-3">
+              <!--Subheading-->
+              <h6 class="mb-0 text-gray-500 dark:text-gray-400 text-lg font-medium">Testimonials</h6>
+            </div>
+            <!--Heading-->
+            <h2 class="mb-0 text-4xl lg:text-5xl font-medium" data-text-split>What our clients say</h2>
+          </div>
+          <!--end: Section headings-->
+          <div class="px-3 md:w-2/5 w-full md:text-right">
+            <!--begin: button-->
+            <a href="#!" class="link-underline">
+              Customer Stories
+            </a>
+            <!--end: button-->
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 justify-center">
+          <div class="w-full px-3 relative">
+            <!--Begin:swiper slider-->
+            <div class="swiper-container overflow-hidden swiper-testimonials shadow-lg rounded-xl">
+              <!--Begin:wrapper-->
+              <div class="swiper-wrapper">
+
+                <!--Begin:slide-->
+                <div class="swiper-slide">
+                  <div
+                    class="flex items-center flex-col bg-white rounded-xl dark:bg-black overflow-hidden md:flex-row relative">
+                    <div class="md:w-1/2 px-0 mb-4 md:mb-0">
+                      <div class="relative">
+                        <!--testimonial Image-->
+                        <img src="assets/img/960x900/1.jpg" class="max-w-full" alt="">
+
+                        <!--Testimonial image divider-->
+                        <svg
+                          class="absolute hidden md:block right-0 top-0 h-full -mr-px -mb-px text-white dark:text-black"
+                          preserveAspectRatio="none" width="58" height="583" viewBox="0 0 58 583" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0 583L9.66667 534.417C19.3333 485.833 38.6667 388.667 39.7407 291.5C40.8148 194.333 23.6296 97.1667 15.037 48.5833L6.44444 -1.62125e-05H58V48.5833C58 97.1667 58 194.333 58 291.5C58 388.667 58 485.833 58 534.417V583H0Z"
+                            fill="currentColor" />
+                        </svg>
+
+                        <!--Testimonial image small device divider-->
+                        <svg class="absolute bottom-0 left-0 md:hidden -mb-1 text-white dark:text-black" width="100%"
+                          height="48" preserveAspectRatio="none" viewBox="0 0 1200 64" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0 0L100 10.6667C200 21.3333 400 42.6667 600 43.8519C800 45.037 1000 26.0741 1100 16.5926L1200 7.11111V64H1100C1000 64 800 64 600 64C400 64 200 64 100 64H0L0 0Z"
+                            fill="currentColor" />
+                        </svg>
+
+                      </div>
+                    </div>
+                    <div class="md:w-1/2 mx-auto px-0">
+                      <blockquote class="blockquote text-center mb-0 px-4 py-5 py-lg-7">
+                        <!--Testimonial Comapny Logo -->
+                        <div class="w-32 mb-5 h-auto mx-auto" style="color: #FF5A5F;">
+                          <img class="max-w-full" src="assets/img/partners/booking.com.svg" alt="">
+                        </div>
+                        <!-- Text -->
+                        <p class="mb-5 text-2xl font-medium lg:w-3/4 mx-auto leading-normal">
+                          “ It is really refreshing to work with this bootstrap theme
+                          which is truly helpful in the development of one of my client’s
+                          website.”
+                        </p>
+
+                        <!-- Footer -->
+                        <footer class="blockquote-footer pb-4 lg:pb-0">
+                          <span class="h6 font-medium text-indigo-500">Nikita Millton</span>
+                        </footer>
+
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <!--end:slide-->
+                <!--Begin:slide-->
+                <div class="swiper-slide">
+                  <div class="flex items-center flex-col bg-white rounded-xl dark:bg-black overflow-hidden md:flex-row">
+                    <div class="md:w-1/2 px-0 mb-4 md:mb-0">
+                      <div class="relative">
+                        <!--testimonial Image-->
+                        <img src="assets/img/960x900/2.jpg" class="max-w-full" alt="">
+
+                        <!--Testimonial image divider-->
+                        <svg
+                          class="absolute hidden md:block right-0 top-0 h-full -mr-px -mb-px text-white dark:text-black"
+                          preserveAspectRatio="none" width="58" height="583" viewBox="0 0 58 583" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0 583L9.66667 534.417C19.3333 485.833 38.6667 388.667 39.7407 291.5C40.8148 194.333 23.6296 97.1667 15.037 48.5833L6.44444 -1.62125e-05H58V48.5833C58 97.1667 58 194.333 58 291.5C58 388.667 58 485.833 58 534.417V583H0Z"
+                            fill="currentColor" />
+                        </svg>
+
+                        <!--Testimonial image small device divider-->
+                        <svg class="absolute bottom-0 left-0 md:hidden -mb-1 text-white dark:text-black" width="100%"
+                          height="48" preserveAspectRatio="none" viewBox="0 0 1200 64" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0 0L100 10.6667C200 21.3333 400 42.6667 600 43.8519C800 45.037 1000 26.0741 1100 16.5926L1200 7.11111V64H1100C1000 64 800 64 600 64C400 64 200 64 100 64H0L0 0Z"
+                            fill="currentColor" />
+                        </svg>
+
+                      </div>
+                    </div>
+                    <div class="md:w-1/2 mx-auto px-0">
+                      <blockquote class="blockquote text-center mb-0 px-4 py-5 py-lg-7">
+                        <!--Testimonial Comapny Logo -->
+                        <div class="w-32 mb-5 h-auto mx-auto" style="color: #FF5A5F;">
+                          <img class="max-w-full" src="assets/img/partners/booking.com.svg" alt="">
+                        </div>
+                        <!-- Text -->
+                        <p class="mb-5 text-2xl font-medium lg:w-3/4 mx-auto leading-normal">
+                          “ It is really refreshing to work with this bootstrap theme
+                          which is truly helpful in the development of one of my client’s
+                          website.”
+                        </p>
+
+                        <!-- Footer -->
+                        <footer class="blockquote-footer pb-4 lg:pb-0">
+                          <span class="h6 font-medium text-indigo-500">Nikita Millton</span>
+                        </footer>
+
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <!--end:slide-->
+                <!--Begin:slide-->
+                <div class="swiper-slide">
+                  <div class="flex items-center flex-col bg-white rounded-xl dark:bg-black overflow-hidden md:flex-row">
+                    <div class="md:w-1/2 px-0 mb-4 md:mb-0">
+                      <div class="relative">
+                        <!--testimonial Image-->
+                        <img src="assets/img/960x900/3.jpg" class="max-w-full" alt="">
+
+                        <!--Testimonial image divider-->
+                        <svg
+                          class="absolute hidden md:block right-0 top-0 h-full -mr-px -mb-px text-white dark:text-black"
+                          preserveAspectRatio="none" width="58" height="583" viewBox="0 0 58 583" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0 583L9.66667 534.417C19.3333 485.833 38.6667 388.667 39.7407 291.5C40.8148 194.333 23.6296 97.1667 15.037 48.5833L6.44444 -1.62125e-05H58V48.5833C58 97.1667 58 194.333 58 291.5C58 388.667 58 485.833 58 534.417V583H0Z"
+                            fill="currentColor" />
+                        </svg>
+
+                        <!--Testimonial image small device divider-->
+                        <svg class="absolute bottom-0 left-0 md:hidden -mb-1 text-white dark:text-black" width="100%"
+                          height="48" preserveAspectRatio="none" viewBox="0 0 1200 64" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0 0L100 10.6667C200 21.3333 400 42.6667 600 43.8519C800 45.037 1000 26.0741 1100 16.5926L1200 7.11111V64H1100C1000 64 800 64 600 64C400 64 200 64 100 64H0L0 0Z"
+                            fill="currentColor" />
+                        </svg>
+
+                      </div>
+                    </div>
+                    <div class="md:w-1/2 mx-auto px-0">
+                      <blockquote class="blockquote text-center mb-0 px-4 py-5 py-lg-7">
+                        <!--Testimonial Comapny Logo -->
+                        <div class="w-32 mb-5 h-auto mx-auto" style="color: #FF5A5F;">
+                          <img class="max-w-full" src="assets/img/partners/booking.com.svg" alt="">
+                        </div>
+                        <!-- Text -->
+                        <p class="mb-5 text-2xl font-medium lg:w-3/4 mx-auto leading-normal">
+                          “ It is really refreshing to work with this bootstrap theme
+                          which is truly helpful in the development of one of my client’s
+                          website.”
+                        </p>
+
+                        <!-- Footer -->
+                        <footer class="blockquote-footer pb-4 lg:pb-0">
+                          <span class="h6 font-medium text-indigo-500">Nikita Millton</span>
+                        </footer>
+
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <!--end:slide-->
+
+
+              </div>
+              <!--end:wrapper-->
+            </div>
+
+
+            <!--Begin:Swiper navigation-->
+            <div class="absolute right-0 bottom-0 mb-4 mr-8 flex items-center z-[2] gap-2">
+              <div
+                class="swiperAuto-button-prev swiper-prev w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-lg">
+              </div>
+              <div
+                class="swiperAuto-button-next swiper-next w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-lg">
+              </div>
+            </div>
+            <!--end:Swiper navigation-->
+
+          </div>
+          <!--end:swiper slider-->
+        </div>
+      </div>
+    </section>
+    <!--/end:testimonials section-->
+
+
+    <!--begin:Blog section-->
+    <section class="relative overflow-hidden">
+      <div class="container py-16 lg:py-24 relative">
+        <div class="flex flex-wrap -mx-3 mb-9 items-end justify-center">
+          <div class="w-full px-3 md:w-6/12 mb-6 md:mb-0">
+            <div class="mb-5" data-animation="fadeInLeft">
+              <!--Subheading-->
+              <h6 class="mb-0 text-gray-500 dark:text-gray-400 text-lg font-medium">Blog</h6>
+            </div>
+            <h2 class="mb-0 text-4xl lg:text-5xl font-medium" data-animation="fadeInLeft" data-delay=".2">Insights, thoughts & announcements
+            </h2>
+          </div>
+          <div class="w-full px-3 md:w-6/12 md:text-right" data-animation="fadeInLeft" data-delay=".3">
+            <!--begin: button-->
+            <a href="#!" class="link-underline">
+              View Blog
+            </a>
+            <!--end: button-->
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-3">
+          <div class="w-full px-3 md:w-4/12 mb-6 md:mb-0" data-animation="fadeInUp">
+            <article
+              class="transition-all transform duration-200 dark:bg-gray-900 rounded-xl block hover:shadow-lg hover:-translate-y-1 overflow-hidden relative">
+              <div class="overflow-hidden relative">
+                <!--Article image-->
+                <img src="assets/img/960x640/1.jpg" alt="" class="img-fluid img-zoom">
+
+                <!--Article image divider-->
+                <svg class="absolute left-0 bottom-0 -mb-1 text-white dark:text-gray-900" preserveAspectRatio="none"
+                  width="100%" height="48" viewBox="0 0 1460 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M122 22.8261L0 0V120H1460V0L1338 22.8261C1217 44.1304 973 88.2609 730 88.2609C487 88.2609 243 44.1304 122 22.8261Z"
+                    fill="currentColor"></path>
+                </svg>
+              </div>
+              <!--Content-body-->
+              <div class="px-4 pb-6 relative">
+                <small class="text-gray-600 dark:text-gray-300"><i class="bi bi-calendar me-1"></i> 12 Oct 2025</small>
+                <h5 class="py-3 text-xl lg:text-2xl font-medium mb-0">Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit</h5>
+                <p class="mb-0 line-clamp-2 px-lg-4 text-gray-600 dark:text-gray-300">
+                  Lorem ipsum dolor sit amet sed do eiusmod tempor labore et dolore magna aliqua.
+                  Viverra nam libero justo laoreet.
+                </p>
+              </div>
+
+              <!--Article link-->
+              <a href="#!" class="stretched-link absolute inset-0"></a>
+            </article>
+          </div>
+          <div class="w-full px-3 md:w-4/12 mb-6 md:mb-0" data-animation="fadeInUp" data-delay=".2">
+            <article
+              class="transition-all transform duration-200 dark:bg-gray-900 rounded-xl block hover:shadow-lg hover:-translate-y-1 overflow-hidden relative">
+              <div class="overflow-hidden relative">
+                <!--Article image-->
+                <img src="assets/img/960x640/2.jpg" alt="" class="img-fluid img-zoom">
+
+                <!--Article image divider-->
+                <svg class="absolute left-0 bottom-0 -mb-1 text-white dark:text-gray-900" preserveAspectRatio="none"
+                  width="100%" height="48" viewBox="0 0 1460 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M122 22.8261L0 0V120H1460V0L1338 22.8261C1217 44.1304 973 88.2609 730 88.2609C487 88.2609 243 44.1304 122 22.8261Z"
+                    fill="currentColor"></path>
+                </svg>
+              </div>
+              <!--Content-body-->
+              <div class="px-4 pb-6 relative">
+                <small class="text-gray-600 dark:text-gray-300"><i class="bi bi-calendar me-1"></i> 12 Oct 2025</small>
+                <h5 class="py-3 text-xl lg:text-2xl font-medium mb-0">Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit</h5>
+                <p class="mb-0 line-clamp-2 px-lg-4 text-gray-600 dark:text-gray-300">
+                  Lorem ipsum dolor sit amet sed do eiusmod tempor labore et dolore magna aliqua.
+                  Viverra nam libero justo laoreet.
+                </p>
+              </div>
+
+              <!--Article link-->
+              <a href="#!" class="stretched-link absolute inset-0"></a>
+            </article>
+          </div>
+          <div class="w-full px-3 md:w-4/12 mb-6 md:mb-0" data-animation="fadeInUp" data-delay=".3">
+            <article
+              class="transition-all transform duration-200 dark:bg-gray-900 rounded-xl block hover:shadow-lg hover:-translate-y-1 overflow-hidden relative">
+              <div class="overflow-hidden relative">
+                <!--Article image-->
+                <img src="assets/img/960x640/3.jpg" alt="" class="img-fluid img-zoom">
+
+                <!--Article image divider-->
+                <svg class="absolute left-0 bottom-0 -mb-1 text-white dark:text-gray-900" preserveAspectRatio="none"
+                  width="100%" height="48" viewBox="0 0 1460 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M122 22.8261L0 0V120H1460V0L1338 22.8261C1217 44.1304 973 88.2609 730 88.2609C487 88.2609 243 44.1304 122 22.8261Z"
+                    fill="currentColor"></path>
+                </svg>
+              </div>
+              <!--Content-body-->
+              <div class="px-4 pb-6 relative">
+                <small class="text-gray-600 dark:text-gray-300"><i class="bi bi-calendar me-1"></i> 12 Oct 2025</small>
+                <h5 class="py-3 text-xl lg:text-2xl font-medium mb-0">Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit</h5>
+                <p class="mb-0 line-clamp-2 px-lg-4 text-gray-600 dark:text-gray-300">
+                  Lorem ipsum dolor sit amet sed do eiusmod tempor labore et dolore magna aliqua.
+                  Viverra nam libero justo laoreet.
+                </p>
+              </div>
+
+              <!--Article link-->
+              <a href="#!" class="stretched-link absolute inset-0"></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end:Blog section-->
+
+    <!--begin:Clients section-->
+    <section class="relative bg-gray-50 dark:bg-gray-900 overflow-hidden" data-animation="zoomIn">
+      <div class="container py-16 lg:py-24 relative">
+        <div class="mb-0 text-center">
+          <!--Heading-->
+          <h5 class="mb-3 text-indigo-500 text-lg font-medium">
+            <span class="text-gray-500 dark:text-gray-400 block mb-2">Clients who love our</span>
+            <span class="animated-text block leading-tight text-5xl lg:text-6xl font-medium"
+            data-type-text='["Ideas", "Creativity", "Passion", "Innovation"]'></span>
+          </h5>
+        </div>
+        <div class="flex justify-center">
+          <div class="flex flex-wrap justify-center lg:w-9/12 -mx-3">
+            <div class="flex items-center justify-center mt-9 w-36 px-3" data-animation="fadeInUp" data-delay=".1">
+              <img src="assets/img/partners/dark/amazon.svg" alt="partner" class="max-w-full dark:hidden">
+              <img src="assets/img/partners/white/amazon.svg" alt="partner" class="max-w-full hidden dark:block">
+            </div>
+            <div class="flex items-center justify-center mt-9 w-36 px-3" data-animation="fadeInUp" data-delay=".2">
+              <img src="assets/img/partners/dark/microsoft.svg" alt="partner" class="max-w-full dark:hidden">
+              <img src="assets/img/partners/white/microsoft.svg" alt="partner" class="max-w-full hidden dark:block">
+            </div>
+            <div class="flex items-center justify-center mt-9 w-36 px-3" data-animation="fadeInUp" data-delay=".3">
+              <img src="assets/img/partners/dark/google.svg" alt="partner" class="max-w-full dark:hidden">
+              <img src="assets/img/partners/white/google.svg" alt="partner" class="max-w-full hidden dark:block">
+            </div>
+            <div class="flex items-center justify-center mt-9 w-36 px-3" data-animation="fadeInUp" data-delay=".4">
+              <img src="assets/img/partners/dark/booking.com.svg" alt="partner" class="max-w-full dark:hidden">
+              <img src="assets/img/partners/white/booking.com.svg" alt="partner" class="max-w-full hidden dark:block">
+            </div>
+            <div class="flex items-center justify-center mt-9 w-48 px-3" data-animation="fadeInUp" data-delay=".5">
+              <img src="assets/img/partners/dark/grab.svg" alt="partner" class="max-w-full dark:hidden">
+              <img src="assets/img/partners/white/grab.svg" alt="partner" class="max-w-full hidden dark:block">
+            </div>
+            <div class="flex items-center justify-center mt-5 w-36 px-3" data-animation="fadeInUp" data-delay=".6">
+              <img src="assets/img/partners/dark/slack.svg" alt="partner" class="max-w-full dark:hidden">
+              <img src="assets/img/partners/white/slack.svg" alt="partner" class="max-w-full hidden dark:block">
+            </div>
+            <div class="flex items-center justify-center mt-9 w-36 px-3" data-animation="fadeInUp" data-delay=".7">
+              <img src="assets/img/partners/dark/uber.svg" alt="partner" class="max-w-full dark:hidden">
+              <img src="assets/img/partners/white/uber.svg" alt="partner" class="max-w-full hidden dark:block">
+            </div>
+            <div class="flex items-center justify-center mt-9 w-36 px-3" data-animation="fadeInUp" data-delay=".8">
+              <img src="assets/img/partners/dark/didi.svg" alt="partner" class="max-w-full dark:hidden">
+              <img src="assets/img/partners/white/didi.svg" alt="partner" class="max-w-full hidden dark:block">
+            </div>
+            <div class="flex items-center justify-center mt-9 w-36 px-3" data-animation="fadeInUp" data-delay=".9">
+              <img src="assets/img/partners/dark/lyft.svg" alt="partner" class="max-w-full dark:hidden">
+              <img src="assets/img/partners/white/lyft.svg" alt="partner" class="max-w-full hidden dark:block">
+            </div>
+          </div>
+        </div>
+        <!--Col-->
+      </div>
+    </section>
+    <!--end:Clients section-->
+
+    <!--begin:Call to action section-->
+    <section class="relative bg-white dark:bg-gray-950 overflow-hidden">
+      <div class="container py-16 lg:py-24 relative">
+        <div class="flex flex-wrap -mx-3 pb-12 relative">
+          <div class="w-full px-3 md:w-9/12 lg:w-8/12 mx-auto text-center">
+            <h2 class="mb-5 text-4xl lg:text-6xl fw-light text-gradient" data-animation="fadeInDown">
+              Bring <span class="font-medium">Assan template
+              </span> to life and start building today
+            </h2>
+            <p class="mb-9 lg:mb-12 lg:px-24 text-lg text-gray-700 dark:text-gray-300" data-animation="zoomIn" data-delay=".1">
+              There are combined alignment methods – when several types of alignment together are
+              used
+              in one composition.
+            </p>
+            <div data-animation="fadeInUp" data-delay=".2">
+              <!--begin: button-->
+              <a href="#!" class="btn btn-lg bg-indigo-500 text-white hover:bg-indigo-600">
+                Purchase Now
+              </a>
+              <!--end: button-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--begin:divider-->
+      <svg class="absolute left-0 bottom-0 rotate-180 text-black" width="100%" height="36"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 152" fill="none" preserveAspectRatio="none">
+        <path
+          d="M126.597 138.74C99.8867 127.36 76.6479 109.164 59.2161 85.9798L0 3.05176e-05L1440 0C1440 0 1419.98 25.8404 1380.15 32.9584L211.382 150.811C182.549 154.283 153.308 150.12 126.597 138.74Z"
+          fill="currentColor" />
+      </svg>
+      <!--end:divider-->
+    </section>
+    <!--end:Call to action section-->
+
+  </main>
+  <!--end:main content-->
+
+
+
+
+  @@include('./partials/footers/footer-1.html')
+
+  <!-- begin:Back to Top button -->
+  <a href="#"
+    class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+    <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="0, 251.2">
+      </circle>
+    </svg>
+    <i class="bi bi-chevron-up"></i>
+  </a>
+  <!-- begin:Back to Top button -->
+
+
+  <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme js -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+
+  <!--Master Slider start (Include jquery before master slider js)-->
+  <script src="assets/vendor/node_modules/js/jquery.min.js"></script>
+  <script src="assets/vendor/masterslider/jquery.easing.min.js"></script>
+  <script src="assets/vendor/masterslider/masterslider.min.js"></script>
+  <script>
+    var slider = new MasterSlider();
+    slider.setup('masterslider', {
+      width: 1140,
+      height: 660,
+      minHeight: 400,
+      space: 0,
+      start: 1,
+      grabCursor: false,
+      layout: "fullwidth",
+      wheel: false,
+      autoplay: true,
+      instantStartLayers: true,
+      loop: true,
+      view: "basic",
+      instantStartLayers: true,
+    });
+    slider.control('arrows');
+
+  </script>
+
+
+  <!--Swiper slider-->
+  <script src="assets/vendor/node_modules/js/swiper-bundle.min.js"></script>
+  <script>
+    //swiper-projects
+    var swiperProjects = new Swiper(".swiper-projects", {
+      autoHeight: true,
+      spaceBetween: 16,
+      centeredSlides: true,
+      loop: true,
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 16
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 16
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 16
+        }
+      },
+      pagination: {
+        el: ".swiperProjects-pagination",
+        clickable: true
+      }
+    });
+
+    //swiper-testimonials
+    var swiperAuto = new Swiper(".swiper-testimonials", {
+      slidesPerView: "auto",
+      loop: true,
+      centeredSlides: true,
+      spaceBetween: 0,
+      grabCursor: true,
+      pagination: {
+        el: ".swiperAuto-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiperAuto-button-next",
+        prevEl: ".swiperAuto-button-prev",
+      }
+    });
+
+  </script>
+</body>
+
+</html>

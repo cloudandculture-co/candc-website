@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assan Tailwindcss Admin</title>
+
+  <!--:Flatpickr:-->
+  <link rel="stylesheet" href="vendor/css/flatpickr.min.css">
+
+  @@include('./partials/head-includes.html')
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+  @@include('./partials/app-preloader.html')
+
+  @@include('./partials/sidebar.html',{"page": "account","account_collapse":
+  "show", "account_overview": "active"} )
+
+  <main class="relative flex flex-col lg:ms-64">
+    @@include('./partials/header-default.html')
+    
+    <!--:Page Header:-->
+    <div class="px-4 lg:px-6 xl:px-12 py-4">
+        <div class="flex flex-wrap items-center">
+          <div class="flex-grow">
+            <h4 class="text-xl font-semibold">Overview</h4>
+          </div>
+          <div class="shrink-0">
+            <!--:Breadcrumb:-->
+            <nav aria-label="breadcrumb">
+              <ol class="flex items-center">
+                <li class="breadcrumb-item"><a href="index.html"
+                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                </li>
+                 <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                <li class="breadcrumb-item active"><a
+                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                    href="account-overview.html">Account</a></li>
+                <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Overview</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="content px-4 lg:px-6 xl:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-4">
+          <div class="md:col-span-4 lg:col-span-3">
+             <!--Account nav-->
+              <ul class="flex flex-col space-y-4">
+                <li class="nav-item">
+                  <a href="account-overview.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500 active">
+                    <span class="icon-[carbon--user-settings] me-2"></span>
+                    Overview
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-billing.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                    <span class="icon-[carbon--money] me-2"></span> Billing
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-contacts.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                    <span class="icon-[carbon--user-multiple] me-2"></span> Contacts
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-security.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                    <span class="icon-[carbon--rule-locked] me-2"></span> Security
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-permissions.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                    <span class="icon-[carbon--notification-new] me-2"></span> Permissions
+                  </a>
+                </li>
+              </ul>
+          </div>
+          <div class="md:col-span-8 lg:col-span-9">
+            <div class="flex flex-col h-full gap-4">
+              <!--Card-->
+              <div class="p-4 flex-grow bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+                <div class="card-body">
+  
+                  <div class="flex flex-wrap -mx-2">
+                    <div class="w-full px-2">
+  
+                      <h5 class="mb-3">
+                        Your photo
+                      </h5>
+                      <div class="flex flex-wrap md:flex-nowrap items-center">
+                        <div class="shrink-0 mr-5 mb-4 md:mb-0">
+  
+                          <!-- Avatar -->
+                          <div class="relative">
+                            <div class="avatar">
+                              <img class="w-28 rounded-lg" src="img/avatars/w1.jpg" alt="...">
+                            </div>
+                            <input type="file" class="hidden w-0 h-0 absolute" id="profile-upload">
+                            <label for="profile-upload" data-tippy-placement="bottom" data-tippy-content="Update photo"
+                              class="w-8 h-8 flex items-center justify-center rounded-full cursor-pointer absolute right-0 bottom-0 -mb-1 -mr-1 transition-all bg-white dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700">
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M22 11.5V14.6C22 16.8402 22 17.9603 21.564 18.816C21.1805 19.5686 20.5686 20.1805 19.816 20.564C18.9603 21 17.8402 21 15.6 21H8.4C6.15979 21 5.03969 21 4.18404 20.564C3.43139 20.1805 2.81947 19.5686 2.43597 18.816C2 17.9603 2 16.8402 2 14.6V9.4C2 7.15979 2 6.03969 2.43597 5.18404C2.81947 4.43139 3.43139 3.81947 4.18404 3.43597C5.03969 3 6.15979 3 8.4 3H12.5M19 8V2M16 5H22M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z"
+                                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </label>
+                          </div>
+  
+                        </div>
+                        <div class="flex-grow">
+                          <h6 class="text-sm block mb-2 text-gray-400">File smaller than 5MB and at least 200px by 200px
+                          </h6>
+                          <p class="text-sm text-gray-500">This image will be shown in the members of directory and your
+                            profile page if you choose to share it with other members, It will also help members to
+                            recognize you.</p>
+                        </div>
+                      </div> <!-- / .row -->
+                    </div>
+                  </div>
+  
+                  <hr class="my-8 border-gray-200 dark:border-gray-800">
+  
+                  <form>
+                    <div class="flex flex-wrap -mx-2">
+                      <div class="w-full md:w-1/2 px-2 mb-3">
+  
+                        <!-- First name -->
+                        <div class="form-group">
+  
+                          <!-- Label -->
+                          <label class="block" for="user_fname">
+                            First name
+                          </label>
+  
+                          <!-- Input with Icon -->
+                          <div class="relative mt-1.5 flex">
+                            <input class="form-input peer !ps-8" placeholder="First name" value="John" type="text">
+                            <span class="icon-[carbon--user] absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 peer-focus:text-primary-500 dark:peer-focus:text-gray-200">
+                               </span>
+                          </div>
+                        </div>
+  
+                      </div>
+                      <div class="w-full md:w-1/2 px-2 mb-3">
+  
+                        <!-- First name -->
+                        <div class="form-group">
+  
+                          <!-- Label -->
+                          <label class="block" for="user_lname">
+                            Last name
+                          </label>
+  
+                          <!-- Input with Icon -->
+                          <div class="relative mt-1.5 flex">
+                            <input class="form-input peer !ps-8" placeholder="Last name" value="Doe" type="text">
+                            <span class="icon-[carbon--user] absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 peer-focus:text-primary-500 dark:peer-focus:text-gray-200">
+                               </span>
+                          </div>
+                        </div>
+  
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-2">
+                      <div class="w-full md:w-1/2 px-2 mb-3">
+  
+                        <!-- Label -->
+                        <label class="block" for="user_phone">
+                          Phone
+                        </label>
+  
+                        <!-- Input -->
+                        <!-- Input with Icon -->
+                        <div class="relative mt-1.5 flex">
+                          <input class="form-input peer !ps-8" placeholder="Phone" value="(+01) 123 456 7890" type="text">
+                           <span class="icon-[carbon--phone] absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 peer-focus:text-primary-500 dark:peer-focus:text-gray-200">
+                               </span>
+                        </div>
+                      </div>
+                      <div class="w-full md:w-1/2 px-2 mb-3">
+  
+                        <!-- Label -->
+                        <label class="block" for="user_email">
+                          Email
+                        </label>
+                        <!-- Input with Icon -->
+                        <div class="relative mt-1.5 flex">
+                          <input class="form-input peer !ps-8" placeholder="Email address" value="John@doe.com"
+                            type="email">
+                           <span class="icon-[carbon--email] absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 peer-focus:text-primary-500 dark:peer-focus:text-gray-200">
+                               </span>
+                        </div>
+                        <small class="text-gray-400">This email will be shown to
+                          publicly.</small>
+  
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-2">
+                      <div class="w-full md:w-1/2 px-2 mb-3">
+                        <label for="user-currency" class="block mb-2">Currency</label>
+  
+                        <!--select-->
+                        <!--Input-->
+                        <div class="relative mt-1.5 flex">
+                          <select name="" id="select-currency" class="tom-select js-select w-full">
+                            <option value="USD" selected>US Dollar</option>
+                            <option value="Euro">Euro</option>
+                            <option value="Rupee">Rupee</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-2">
+                      <div class="w-full px-2 mb-3">
+                        <label for="user-skills" class="block">Skills</label>
+                        <!--Input-->
+                        <div class="relative mt-1.5 flex">
+                          <select name="" multiple id="select-skills" class="tom-select js-select w-full">
+                            <option value="Bootstrap" selected>Bootstrap</option>
+                            <option value="AlpineJs" selected>Alpine Js</option>
+                            <option value="TailwindCss">TailwindCss</option>
+                            <option value="Angular">Angular</option>
+                            <option value="ReactJs">ReactJs</option>
+                            <option value="VueJs">VueJs</option>
+                            <option value="Python">Python</option>
+                            <option value="Sass">Sass</option>
+                            <option value="Javascript">Javascript</option>
+                            <option value="Sass">Sass</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-2">
+                      <div class="w-full md:w-1/2 px-2 mb-3">
+  
+                        <!-- Profile public or private -->
+                        <div class="py-2 px-3 border border-gray-200 dark:border-gray-800 rounded-lg">
+  
+                          <div class="row">
+                            <div class="col-auto">
+  
+                              <!-- Check / Uncheck -->
+                              <div class="flex space-x-2 items-center">
+                                <input type="checkbox" id="switchVisible" class="form-checkbox">
+                                <label class="block cursor-pointer" for="switchVisible">Public profile</label>
+                              </div>
+  
+                            </div>
+                          </div> <!-- / .row -->
+                        </div>
+  
+                      </div>
+                      <div class="w-full md:w-1/2 px-2 mb-3">
+  
+                        <!-- Profile available for hire -->
+                        <div class="py-2 px-3 border border-gray-200 dark:border-gray-800 rounded-lg">
+                          <div class="row">
+                            <div class="col-auto">
+  
+                              <!-- Check / Uncheck -->
+                              <div class="form-check flex items-center space-x-2">
+                                <input type="checkbox" id="checkHire" class="form-checkbox">
+                                <label class="block cursor-pointer" for="checkHire">Available for hire</label>
+                              </div>
+                            </div>
+                          </div> <!-- / .row -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <button type="button" id="profile_save" class="btn btn-primary
+                                  ">Save Changes</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900 shrink-0">
+                <div class="card-body">
+                  <div class="flex flex-wrap items-center">
+                    <div class="w-full md:w-4/6 mb-4 md:mb-0">
+  
+                      <!-- Delete heading -->
+                      <h5 class="text-xl mb-2 font-semibold">
+                        Delete your account
+                      </h5>
+  
+                      <!-- Delete text -->
+                      <p class="text-sm">
+                        <strong class="font-semibold">Note:</strong>
+                        deleting your account is a permanent action and will no longer
+                        recoverable.
+                      </p>
+  
+                    </div>
+                    <div class="w-full md:w-2/6 md:text-end">
+  
+                      <!--Delete Button -->
+                      <button class="btn btn-danger">
+                        Delete account
+                      </button>
+  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--:Main Script:-->
+  <script src="js/theme.bundle.js"></script>
+    <!--:Selectbox:-->
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+    <script>
+      // Initialize multiple select elements
+      document.querySelectorAll('.js-select').forEach((el) => {
+        new TomSelect(el);
+      });
+    </script>
+</body>
+
+</html>

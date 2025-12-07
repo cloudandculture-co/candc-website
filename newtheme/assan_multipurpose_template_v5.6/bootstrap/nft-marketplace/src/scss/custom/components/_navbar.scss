@@ -1,0 +1,108 @@
+.navbar{
+  .navbar-nav{
+    .nav-link{
+      font-weight: $navbar-font-weight;
+      text-transform: $navbar-link-text-transform;
+    }
+  }
+}
+.navbar-transparent{
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: $zindex-fixed;
+  width: 100%;
+  &.navbar-sticky{
+    position: fixed;
+    transition: all .25s;
+    padding: 1.125rem 0;
+    &.headroom--bottom,&.headroom--pinned:not(.headroom--top){
+      padding: 0 0;
+      background-color: rgba(var(--#{$prefix}body-bg-rgb),.9875);
+      box-shadow: $box-shadow-lg;
+      &.navbar-dark{
+        background-color: $dark;
+      }
+    }
+  }
+}
+.navbar-brand{
+  width:5rem;
+  padding: 0 0;
+  margin: .3rem 0;
+  position: relative;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+body{
+  .navbar-brand{
+    .logo-dark{
+      display:none;
+    }
+  }
+}
+[data-bs-theme=dark]{
+  .navbar-brand{
+    .logo-light{
+      display:none;
+    }
+    .logo-dark{
+      display:block;
+    }
+  }
+}
+
+
+// scss-docs-start navbar-expand-loop
+// Generate series of `.navbar-expand-*` responsive classes for configuring
+// where your navbar collapses.
+.navbar-expand {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    // stylelint-disable-next-line scss/selector-no-union-class-name
+    &#{$infix} {
+      @include media-breakpoint-up($next) {
+        .navbar-brand{
+          width:6rem;
+        }
+        &.headroom--not-top:not(.headroom--pinned):not(.headroom--bottom){
+          transform: translateY(-100%);
+        }
+        .nav-item{
+          height: 4.5rem;
+          display: flex;
+          align-items: center;
+          &:not(:first-child){
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-expand {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    // stylelint-disable-next-line scss/selector-no-union-class-name
+    &#{$infix} {
+      @include media-breakpoint-down($next) {
+        &.navbar-transparent.navbar-sticky.headroom--not-top,&.navbar-transparent.navbar-sticky.headroom--bottom{
+          background-color: rgba(var(--#{$prefix}body-bg-rgb),.9875);
+          padding: .75rem 0;
+          box-shadow: $box-shadow-lg;
+          &.navbar-dark{
+            background-color: $dark;
+          }
+        }
+      }
+    }
+  }
+}

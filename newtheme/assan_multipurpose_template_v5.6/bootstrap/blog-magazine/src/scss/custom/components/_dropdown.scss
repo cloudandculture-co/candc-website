@@ -1,0 +1,22 @@
+.dropdown-item{
+    text-transform: capitalize;
+    border-radius: $dropdown-border-radius;
+    cursor: pointer;
+    &:not(:last-child){
+        margin-bottom: .25rem;
+    }
+}
+.dropdown-menu{
+    box-shadow: $dropdown-box-shadow;
+}
+
+.navbar{
+    .dropdown-menu-notifications{
+        min-width:340px;
+        overflow: hidden;
+        .list-group{
+          max-height: 360px;
+          overflow-y: auto;
+        }
+      }
+}

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assan-Admin</title>
+
+        @@include('./partials/fonts.html')
+
+        <!--Simplebar css-->
+        <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+        <!--Quill style-->
+        <link href="assets/vendor/css/quill.snow.css" rel="stylesheet">
+        <!--Choices css-->
+        <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+
+        <!--Main style-->
+        <link rel="stylesheet" href="assets/css/style.min.css">
+    </head>
+
+    <body>
+        @@include('./partials/preloader.html')
+        <!--App Start-->
+        <div class="d-flex flex-column flex-root bg-body">
+            <!--Page-->
+            <div class="page d-flex flex-row flex-column-fluid">
+                @@include('./partials/sidebars/sidebar-default.html',{"page": "inbox"} )
+
+                <!--///////////Page content wrapper///////////////-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+
+                    @@include('./partials/header/header-default.html')
+
+
+
+                    <!--//Page content//-->
+                    <div class="px-3 px-lg-6">
+                        <div class="content content-wrapper content-expand-md">
+                            <!--Content-wrapper-overlay when sidebar open for 768px down width-->
+                            <div class="content-wrapper-overlay"></div>
+                            <!--Content-sidebar-->
+                            <div class="content-left">
+                                <div class="content-sidebar card align-items-stretch h-100"
+                                    id="content-sidebar">
+                                    <!--content-sidebar-header-->
+                                    <div class="content-sidebar-header d-flex p-4 position-relative">
+
+                                        <a href="#modal_compose" data-bs-toggle="modal"
+                                            class="btn me-5 me-md-0 btn-outline-secondary d-flex flex-grow-1 justify-content-center align-items-center">
+                                            <span class="material-symbols-rounded fs-5 align-middle me-2">
+                                                edit
+                                                </span>
+                                            <span class="">Compose</span></a>
+                                        <button type="button"
+                                            class="btn d-md-none content_sidebar_toggler p-0 size-30 rounded-circle flex-center position-absolute shadow-none end-0 me-2 top-50 translate-middle-y text-body">
+                                            <span class="material-symbols-rounded align-middle">
+                                                close
+                                                </span>
+                                        </button>
+                                    </div>
+
+                                    <!--content-sidebar-body-->
+                                    <div class="content-sidebar-body card-body">
+                                        <div class="nav nav-pills nav-vertical mb-5 flex-column">
+                                            <a href="app-inbox.html" class="nav-link mb-1 active">
+                                                <span class="material-symbols-rounded fs-5 align-middle me-2">
+                                                    inbox
+                                                    </span>
+                                                Inbox
+                                            </a>
+                                            <a href="#!" class="nav-link mb-1">
+                                                <span class="material-symbols-rounded fs-5 align-middle me-2">
+                                                    star
+                                                    </span>
+                                                Starred
+                                            </a>
+                                            <a href="#!" class="nav-link mb-1">
+                                                <span class="material-symbols-rounded fs-5 align-middle me-2">
+                                                    mark_email_unread
+                                                    </span>
+                                                Unread
+                                            </a>
+                                            <a href="#!" class="nav-link mb-1">
+                                                <span class="material-symbols-rounded fs-5 align-middle me-2">
+                                                    send
+                                                    </span>
+                                                Sent
+                                            </a>
+                                            <a href="#!" class="nav-link mb-1">
+                                                <span class="material-symbols-rounded fs-5 align-middle me-2">
+                                                    draft
+                                                    </span>
+                                                Draft
+                                            </a>
+                                            <a href="#!" class="nav-link">
+                                                <span class="material-symbols-rounded fs-5 align-middle me-2">
+                                                    delete
+                                                    </span>
+                                                Trash
+                                            </a>
+                                        </div>
+                                        <span class="small text-body-secondary d-block mb-4">Labels</span>
+                                        <div class="nav nav-pills nav-vertical mb-0 flex-column">
+                                            <a href="#!" class="nav-link d-flex align-items-center">
+                                               <span class="size-10 me-2 rounded-circle bg-success"></span>
+                                               Work
+                                            </a>
+                                            <a href="#!" class="nav-link d-flex align-items-center">
+                                                <span class="size-10 me-2 rounded-circle bg-danger"></span>
+                                                Friends
+                                             </a>
+                                             <a href="#!" class="nav-link d-flex align-items-center ">
+                                                <span class="size-10 me-2 rounded-circle bg-info"></span>
+                                                Family
+                                             </a>
+                                             <a href="#!" class="nav-link d-flex align-items-center">
+                                                <span class="size-10 me-2 rounded-circle bg-warning"></span>
+                                                Others
+                                             </a>
+                                            </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!--content-right-->
+                            <div class="content-right card align-items-stretch h-100">
+
+                                <!--content right Header-->
+                                <div class="content-right-header card-header h-auto p-4 position-relative">
+                                    
+                                    <div class="ms-2 d-md-none position-absolute end-0 me-4 top-0 mt-4">
+                                        <button type="button"
+                                            class="content_sidebar_toggler btn btn-primary btn-sm">
+                                            <span class="material-symbols-rounded align-middle">
+                                                menu_open
+                                                </span>
+                                        </button>
+                                    </div>
+                                    <div class="d-flex w-100 align-items-lg-center justify-content-lg-between flex-lg-row flex-column">
+                                        <div class="col-md d-flex mb-2 mb-lg-0 align-items-center">
+                                          <div class="avatar me-lg-3 d-none d-lg-block">
+                                            <img class="rounded-circle" src="assets/media/avatars/02.jpg" alt="">
+                                          </div>
+                                          <div class="flex-grow-1 pe-5 overflow-hidden">
+                                            <h5 class="mb-0 text-truncate">Update the Gama product images</h5>
+                                            <a class="small text-body-secondary" href="#!">
+                                                <span class="fw-bold">Emily Doe</span>
+                                                <span class="ms-1 text-500">&lt;emily@doe.com&gt;</span>
+                                            </a>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-auto d-flex align-items-center">
+                                           <a href="#!" data-tippy-placement="top" data-tippy-content="Print" class="d-inline-block me-3" aria-label="Print"><i class="bi bi-printer"></i></a>
+                                            <small>11:40 AM, 23 Feb 2022</small>
+                                        <div data-tippy-placement="top" class="form-star ms-3" data-tippy-content="Star">
+                                            <input type="checkbox" class="form-star-input" id="starred_s">
+                                            <label for="starred_s" class="form-star-label"></label>
+                                        </div>
+                                        </div>
+                                      </div>
+                                </div>
+
+                                <!--content-right body-->
+                                <div class="content-right-body card-body flex-column p-4">
+                                    <div class="flex-row-fluid">
+                                        <strong class="d-block mb-2">Hi Noah</strong>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        </p>
+                                        <p>
+                                            Mollis nunc sed id semper risus. Imperdiet dui accumsan sit amet nulla. Nullam ac tortor vitae purus. Sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Enim eu turpis egestas pretium aenean. Bibendum at varius vel pharetra. Magna fringilla urna porttitor rhoncus. Tortor id aliquet lectus proin nibh nisl. Vitae turpis massa sed elementum tempus. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Velit euismod in pellentesque massa placerat. Pharetra et ultrices neque ornare aenean euismod elementum. Metus dictum at tempor commodo ullamcorper a. Euismod quis viverra nibh cras pulvinar mattis. Velit aliquet sagittis id consectetur purus. Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Pellentesque nec nam aliquam sem. Non odio euismod lacinia at quis. Ultricies mi quis hendrerit dolor. Lobortis scelerisque fermentum dui faucibus in ornare quam.
+                                        </p>
+                                        <hr>
+                                        <p>Attachments</p>
+                                        <div class="d-flex flex-wrap">
+                                            <!--Attachment image-->
+                                            <a href="#!" class="card-hover me-2 position-relative width-90">
+                                                <span class="hover-image mb-1 position-relative d-block overflow-hidden rounded-3">
+                                                    <img src="assets/media/900x600/2.jpg" class="img-fluid" alt="">
+                                                    <span class="hover-image-overlay position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center text-white">
+                                                        <span class="material-symbols-rounded align-middle">download</span>
+                                                    </span>
+                                                </span>
+
+                                                <!--File description-->
+                                                <span class="d-block small text-body text-truncate">
+                                                  photo-9304157018321
+                                                </span>
+                                                <span class="d-block small text-body-secondary text-truncate">
+                                                 257KB
+                                                </span>
+                                              </a>
+                                              <!--Attachment image-->
+                                              <a href="#!" class="card-hover me-2 position-relative width-90">
+                                                <span class="hover-image mb-1 position-relative d-block overflow-hidden rounded-3">
+                                                    <img src="assets/media/900x600/1.jpg" class="img-fluid" alt="">
+                                                    <span class="hover-image-overlay position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center text-white">
+                                                        <span>
+                                                            <span class="material-symbols-rounded align-middle">download</span>     
+                                                        </span>
+                                                    </span>
+                                                </span>
+
+                                                <!--File description-->
+                                                <span class="d-block small text-body text-truncate">
+                                                  photo-9304157018321
+                                                </span>
+                                                <span class="d-block small text-body-secondary text-truncate">
+                                                 257KB
+                                                </span>
+                                              </a>
+                                        </div>
+                                        <hr>
+                                        <!--:Buttons group:-->
+                                       <div class="d-flex align-items-center">
+                                        <div class="btn-group btn-group-icon btn-group-sm mx-auto mx-auto" role="group">
+                                            <a href="#!" class="btn btn-outline-primary">
+                                                <span class="material-symbols-rounded align-middle">reply</span>
+                                            </a>
+                                            <a href="#!" class="btn btn-outline-primary">
+                                                <span class="material-symbols-rounded align-middle">reply_all</span>
+                                            </a>
+                                            <a href="#!" class="btn btn-outline-primary">
+                                                <span class="material-symbols-rounded align-middle">forward</span>
+                                            </a>
+                                            <div class="btn-group dropdown btn-group-sm" role="group">
+                                                <a id="btnGroupDrop1" href="#" data-bs-toggle="dropdown" class="btn dropdown-toggle btn-outline-primary">
+                                                    <span class="material-symbols-rounded align-middle">more_horiz</span>
+                                                </a>
+                                                <div class="dropdown-menu mb-2" aria-labelledby="btnGroupDrop1">
+                                                    <a href="#!" class="dropdown-item">Mark as unread</a>
+                                                    <a href="#!" class="dropdown-item">Report spam</a>
+                                                    <a href="#!" class="dropdown-item">Delete message</a>
+                                                    <a href="#!" class="dropdown-item">Unsubscribe</a>
+                                                    <a href="#!" class="dropdown-item">View raw message</a>
+                                                    <a href="#!" class="dropdown-item">Block sender</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#!" class="dropdown-item">Print</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       </div>
+                                    </div>
+                                </div>
+
+                                <!--content right footer-->
+                                <div class="content-right-footer border-top card-footer">
+                                    <!--Footer for emails-->
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <div class="progress mb-1" style="height: 4px;">
+                                                <div class="progress-bar bg-success" aria-valuemax="100"
+                                                    aria-valuenow="20" style="width: 20%;">
+
+                                                </div>
+                                            </div>
+                                            <small>4 GB <span class="d-none d-sm-inline-block">(20%) </span> of 20 GB
+                                                used</small>
+                                        </div>
+                                        <div>
+                                            <small>1-12 of 999</small>
+                                            <div class="btn-group btn-group-sm ms-3">
+                                                <button class="btn px-1 btn-outline-secondary" type="button" disabled="disabled">
+                                                    <span class="material-symbols-rounded fs-5 align-middle">
+                                                        arrow_back
+                                                        </span>
+                                                </button>
+                                                <button class="btn px-1 btn-outline-secondary" type="button">
+                                                    <span class="material-symbols-rounded fs-5 align-middle">
+                                                        arrow_forward
+                                                        </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page content End//-->
+
+
+                </main>
+                <!--///////////Page content wrapper End///////////////-->
+            </div>
+        </div>
+
+        <!--Mail Compose Modal-->
+        <div class="modal compose_modal" id="modal_compose" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div
+                        class="position-relative d-flex rounded-top px-4 py-3 align-items-center justify-content-between bg-primary text-white">
+                        <h5 class="mb-0">New Message</h5>
+                        <button class="btn text-white shadow-none small" data-bs-dismiss="modal"
+                            type="button">Discard</button>
+                    </div>
+                    <div class="p-4 modal-body">
+                        <form>
+                            <input type="text" class="form-control mb-3" placeholder="To">
+                            <input type="text" class="form-control mb-3" placeholder="Subject">
+                            <!--Quill editor-->
+                            <div class="mb-3" data-quill='{"placeholder": "Enter your message here..."}'>
+
+                            </div>
+                            <div class="d-flex justify-content-end pt-4">
+                                <button type="button" class="btn btn-outline-gray">Save to Draft</button>
+                                <button type="button" class="btn btn-primary ms-2">Send message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        @@include('./partials/core-scripts.html')
+
+        <!--Chat sidebar toggler-->
+        <script>
+            $('.content_sidebar_toggler,.content-wrapper-overlay').on("click", function (e) {
+                $('.content-expand-md').toggleClass("content_sidebar_show");
+            });
+
+        </script>
+
+        <!--Compose message editor-->
+        <script src="assets/vendor/quill.js"></script>
+        <script>
+            var initQuill = document.querySelectorAll("[data-quill]");
+            initQuill.forEach((qe) => {
+                const qt = {
+                    ...(qe.dataset.quill ? JSON.parse(qe.dataset.quill) : {}),
+                    modules: {
+                        toolbar: [
+                            [{
+                                header: [1, 2, false]
+                            }],
+                            ["bold", "underline"],
+                            ["link", "image"]
+                        ]
+                    },
+                    theme: "snow"
+                };
+                new Quill(qe, qt);
+            });
+
+        </script>
+    </body>
+
+</html>

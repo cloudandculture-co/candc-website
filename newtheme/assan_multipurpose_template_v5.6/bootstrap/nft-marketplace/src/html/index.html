@@ -1,0 +1,1014 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>NFT</title>
+        <!--Swiper-->
+        <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+        @@include('./partials/head.html')
+    </head>
+
+    <body>
+        @@include('./partials/navbar-default.html',{"pagesitckyClass" : "navbar-sticky"})
+        <section class="position-relative overflow-hidden">
+            <div class="container position-relative py-8">
+                <div class="row pt-4 pt-lg-6 align-items-start justify-content-center">
+                    <div class="col-lg-6 col-md-9 mt-lg-6 text-center text-lg-start">
+                        <h1 class="mb-4 display-3 me-lg-n4 position-relative z-index-1">Discover, collect, and sell extra ordinary NFTs</h1>
+                        <p class="mb-4 mb-lg-6 lead opacity-75 pe-lg-6">Discover NTFs by category, track the latest drops, and follow the
+                            collection
+                            you love, Enjoy It!</p>
+                        <div class="d-flex flex-column gap-2 mb-5 mb-lg-0 flex-sm-row justify-content-center justify-content-lg-start">
+                            <a href="nft-explore.html" class="btn btn-primary px-lg-4 py-lg-3">Explore
+                                Marketplace</a>
+                            <a href="nft-create.html" class="btn btn-warning px-lg-4 py-lg-3">
+                                <span class="material-icons align-middle fs-4 me-1">add</span>
+                                Create NFT</a>
+                        </div>
+                       
+                    </div>
+                    <div class="col-lg-6 col-md-9 ms-lg-auto">
+                        <div class="position-relative ps-lg-9 pb-lg-5">
+                            <!--Featured Card-->
+                            <div class="card p-1 hover-lift">
+                                <div class="position-relative">
+                                    <img src="assets/img/08.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 rounded py-1 mb-3 ms-3 bg-dark bg-opacity-25 text-white countdown">
+                                        <span class="d-block small">Auction ends in:</span>
+                                        <div class="d-flex align-items-center" id="countdownHero">
+                                        </div>
+                                    </div>
+                                    <!--Featured button-->
+                                    <!--Info featured home-->
+                                    <button type="button" data-tippy-placement="left" data-tippy-interactive="true" data-tippy-content="Show your item as featured on home page, simply follow these <a href='#!'>Instructions</a>"
+                                        title="Featured item"
+                                        class="position-absolute z-index-2 top-0 end-0 me-4 mt-4 d-flex align-items-center justify-content-center btn btn-white">
+                                        <span class="material-icons align-middle fs-5 me-1">electric_bolt</span> Featured 
+                                    </button>
+                                </div>
+                                <div class="card-body px-4">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <small>Owned by</small>
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            
+                                            <span class="flex-grow-1 ms-1 fw-semibold">
+                                                @admondfits
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <h5 class="mb-0 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="position-relative">
+            <!--Background-->
+            <div class="position-absolute start-0 top-0 w-100 h-50 w-md-75 bg-primary-subtle rounded-top-end-5"></div>
+            <div class="container pt-8 pt-lg-11 position-relative">
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+                    <div class="d-flex flex-sm-row flex-column align-items-center mb-5 mb-md-0">
+                        <h2 class="mb-3 mb-sm-0 me-sm-3 display-6">Popular NTFs</h2>
+                        <select class="choices__inline text-body-secondary fs-3 border-0 fw-semibold" data-choices='{"searchEnabled":false, "allowHTML":true,"itemSelectText":""}'>
+                            <option value="Last 24 Hours">Last 24 Hours</option>
+                            <option value="Last 7 Days">Last 7 Days</option>
+                            <option value="Last 30 Days">Last 30 Days</option>
+                        </select>
+                    </div>
+                    <a href="nft-explore.html" class="btn btn-primary btn-hover">
+                     <span class="material-icons align-middle me-2 hover-translate">arrow_forward</span>   Explore All NFTs
+                    </a>
+                </div>
+            </div>
+            <div class="overflow-hidden">
+                <div class="container pt-5 pb-8 pb-lg-11">
+                    
+                <div class="swiper swiper-container overflow-visible swiper-popular">
+                    <div class="swiper-wrapper mb-5">
+                        <div class="swiper-slide">
+                            <!--NFT Item Card-->
+                            <div class="card p-2 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative overflow-hidden rounded">
+                                    <img src="assets/img/01.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark rounded bg-opacity-50 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" id="countdown8"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/3.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-5">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!--NFT Item Card-->
+                            <div class="card p-2 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative overflow-hidden rounded">
+                                    <img src="assets/img/02.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark rounded bg-opacity-50 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" id="countdown7"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/3.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-5">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!--NFT Item Card-->
+                            <div class="card p-2 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative overflow-hidden rounded">
+                                    <img src="assets/img/03.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark rounded bg-opacity-50 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" id="countdown1"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/3.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-5">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!--NFT Item Card-->
+                            <div class="card p-2 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative overflow-hidden rounded">
+                                    <img src="assets/img/04.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark rounded bg-opacity-50 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" id="countdown2"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/3.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-5">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!--NFT Item Card-->
+                            <div class="card p-2 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative overflow-hidden rounded">
+                                    <img src="assets/img/05.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark rounded bg-opacity-50 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" id="countdown3"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/3.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-5">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!--NFT Item Card-->
+                            <div class="card p-2 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative overflow-hidden rounded">
+                                    <img src="assets/img/06.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark rounded bg-opacity-50 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" id="countdown4"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/3.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-5">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!--NFT Item Card-->
+                            <div class="card p-2 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative overflow-hidden rounded">
+                                    <img src="assets/img/07.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark rounded bg-opacity-50 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" id="countdown5"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/3.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-5">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!--NFT Item Card-->
+                            <div class="card p-2 pb-0 card-hover overflow-hidden hover-lift">
+                                <div class="position-relative overflow-hidden rounded">
+                                    <img src="assets/img/08.jpg" class="img-fluid card-img"
+                                        alt="test image" />
+                                    <!--Count down-->
+                                    <div
+                                        class="position-absolute start-0 bottom-0 px-3 py-2 mb-3 d-flex flex-column align-items-start ms-3 bg-dark rounded bg-opacity-50 text-white countdown">
+                                        <span class="d-block small">Ends in:</span>
+                                        <div class="d-flex align-items-center small" id="countdown6"></div>
+                                    </div>
+                                    <!--Like button-->
+                                    <div class="position-absolute end-0 top-0 me-4 mt-4 z-index-2">
+                                        <a href="#!" data-bs-toggle="button"
+                                            class="btn btn-favorite btn-white p-0 height-2x px-2 rounded-pill d-flex align-items-center justify-content-center position-relative">21</a>
+                                    </div>
+                                    <!--Hover visible button-->
+                                    <div class="position-absolute start-50 top-50 translate-middle hover-visible">
+                                        <span class="btn btn-white" role="button">Place a bid</span>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <a href="#!"
+                                            class="d-flex align-items-center flex-shrink-0 position-relative z-index-2">
+                                            <img src="assets/img/avatar/3.jpg" width="24" height="24"
+                                                class="rounded-circle flex-shrink-0 me-2">
+                                            <span class="flex-grow-1 small text-muted">
+                                                @admondfits
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                    <h5 class="mb-3 text-truncate">
+                                        Pulses #21
+                                    </h5>
+                                    <div class="px-3 py-2 rounded bg-body-secondary">
+                                        <div class="row">
+                                            <div class="col-6 border-end">
+    
+                                                <small class="text-muted">Floor price:</small><br>
+                                                <strong class="">0.43 ETH</strong>
+                                            </div>
+                                            <div class="col-6 ps-lg-5">
+    
+                                                <small class="text-muted">Current Bid:</small><br>
+                                                <strong class="">4.43 ETH</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Link-->
+                                <a href="nft-details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Navigation and pagination-->
+                <div class="position-relative align-items-center d-flex justify-content-center">
+
+                    <div
+                        class="swiper-prev size-3x rounded-pill d-flex align-items-center justify-content-center btn btn-outline-primary position-static m-0">
+                        <span class="material-icons fs-2">
+                            chevron_left
+                        </span>
+                    </div>
+                    <div class="swiper-pagination w-auto mx-3 position-static"></div>
+                    <div
+                        class="swiper-next position-static m-0 rounded-pill size-3x d-flex align-items-center justify-content-center btn btn-outline-primary">
+                        <span class="material-icons fs-2">
+                            chevron_right
+                        </span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="position-relative">
+            <div class="container position-relative">
+               <div class="px-4 py-8 py-lg-11 rounded-5 bg-body-tertiary position-relative">
+                <div class="d-flex mb-5 mb-lg-6 flex-column flex-md-row align-items-center justify-content-center">
+                    <div class="d-flex flex-column flex-sm-row align-items-center">
+                        <h2 class="mb-3 mb-sm-0 me-sm-3 display-6">Top Collections over</h2>
+                        <select class="choices__inline fs-5 opacity-75 border-0 fw-semibold" data-choices='{"searchEnabled":false, "allowHTML":true,"itemSelectText":""}'>
+                            <option value="Last 24 Hours">Last 24 Hours</option>
+                            <option value="Last 7 Days">Last 7 Days</option>
+                            <option value="Last 30 Days">Last 30 Days</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 mb-4" data-aos="fade-up">
+                        <!--collection card-->
+                        <div class="card flex-md-row card-body hover-lift">
+                            
+                            <div class="position-relative size-5x bg-white shadow-sm rounded-circle flex-shrink-0">
+                                <img src="assets/img/collection/1.png" alt="" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="flex-grow-1 ps-md-4 pt-3 pt-md-0">
+                                <h6 class="mb-2 text-truncate text-primary"><span class="text-body">Fractality by</span> <span class="text-primary">@markrise</span></h6>
+                                <span class="badge mb-3 bg-body-tertiary text-body">25 NFT</span>
+                                <span class="d-flex mb-2 pb-2 border-bottom w-100 justify-content-between">
+                                    <small class="opacity-75">Floor Price:</small>
+                                    <span class="flex-grow-1 text-end small">0.05 ETH <span class="ms-2 badge bg-transparent text-success">+21%</span> </span>
+                                </span>
+                                <span class="d-flex w-100 justify-content-between">
+                                    <small class="opacity-75">Volumn:</small>
+                                    <span class="flex-grow-1 text-end small">256.60 ETH<span class="ms-2 badge px-1 lh-sm bg-success">+121%</span></span>
+                                </span>
+                            </div>
+                            <!--Collection detail link-->
+                            <a href="#!" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4" data-aos="fade-up">
+                        <!--collection card-->
+                        <div class="card flex-md-row card-body hover-lift">
+                            
+                            <div class="position-relative size-5x bg-white shadow-sm rounded-circle flex-shrink-0">
+                                <img src="assets/img/collection/7.gif" alt="" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="flex-grow-1 ps-md-4 pt-3 pt-md-0">
+                                <h6 class="mb-2 text-truncate text-primary"><span class="text-body">Fractality by</span> <span class="text-primary">@markrise</span></h6>
+                                <span class="badge mb-3 bg-body-tertiary text-body">25 NFT</span>
+                                <span class="d-flex mb-2 pb-2 border-bottom w-100 justify-content-between">
+                                    <small class="opacity-75">Floor Price:</small>
+                                    <span class="flex-grow-1 text-end small">0.05 ETH <span class="ms-2 badge bg-transparent text-success">+21%</span> </span>
+                                </span>
+                                <span class="d-flex w-100 justify-content-between">
+                                    <small class="opacity-75">Volumn:</small>
+                                    <span class="flex-grow-1 text-end small">256.60 ETH<span class="ms-2 badge px-1 lh-sm bg-success">+121%</span></span>
+                                </span>
+                            </div>
+                            <!--Collection detail link-->
+                            <a href="#!" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4" data-aos="fade-up">
+                        <!--collection card-->
+                        <div class="card flex-md-row card-body hover-lift">
+                            
+                            <div class="position-relative size-5x bg-white shadow-sm rounded-circle flex-shrink-0">
+                                <img src="assets/img/collection/3.png" alt="" class="img-fluid rounded-circle">
+                            <!--Varified icon-->
+                            <div class="position-absolute end-0 bottom-0 text-primary z-index-2 me-1 mb-1" data-tippy-placement="bottom" data-tippy-content="Verified by NFTY">
+                                <svg width="16" height="16" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 2.72727L25.2727 0L28.5455 5.09091L34.7273 5.27273L34.9091 11.4545L40 14.7273L37.2727 20L40 25.2727L34.9091 28.5455L34.7273 34.7273L28.5455 34.9091L25.2727 40L20 37.2727L14.7273 40L11.4545 34.9091L5.27273 34.7273L5.09091 28.5455L0 25.2727L2.72727 20L0 14.7273L5.09091 11.4545L5.27273 5.27273L11.4545 5.09091L14.7273 0L20 2.72727Z">
+                                    </path>
+                                    <path d="M17.4988 25.4956L11.9995 20.5876L14.445 18.4051L17.4988 21.1382L26.052 13.4971L28.4975 15.6796L17.4988 25.4956Z" fill="white"></path>
+                                 </svg>
+                        </div>
+                            </div>
+                            <div class="flex-grow-1 ps-md-4 pt-3 pt-md-0">
+                                <h6 class="mb-2 text-truncate text-primary"><span class="text-body">Fractality by</span> <span class="text-primary">@markrise</span></h6>
+                                <span class="badge mb-3 bg-body-tertiary text-body">25 NFT</span>
+                                <span class="d-flex mb-2 pb-2 border-bottom w-100 justify-content-between">
+                                    <small class="opacity-75">Floor Price:</small>
+                                    <span class="flex-grow-1 text-end small">0.05 ETH <span class="ms-2 badge bg-transparent text-success">+21%</span> </span>
+                                </span>
+                                <span class="d-flex w-100 justify-content-between">
+                                    <small class="opacity-75">Volumn:</small>
+                                    <span class="flex-grow-1 text-end small">256.60 ETH<span class="ms-2 badge px-1 lh-sm bg-success">+121%</span></span>
+                                </span>
+                            </div>
+                            <!--Collection detail link-->
+                            <a href="#!" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4" data-aos="fade-up">
+                        <!--collection card-->
+                        <div class="card flex-md-row card-body hover-lift">
+                            
+                            <div class="position-relative size-5x bg-white shadow-sm rounded-circle flex-shrink-0">
+                                <img src="assets/img/collection/4.png" alt="" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="flex-grow-1 ps-md-4 pt-3 pt-md-0">
+                                <h6 class="mb-2 text-truncate text-primary"><span class="text-body">Fractality by</span> <span class="text-primary">@markrise</span></h6>
+                                <span class="badge mb-3 bg-body-tertiary text-body">25 NFT</span>
+                                <span class="d-flex mb-2 pb-2 border-bottom w-100 justify-content-between">
+                                    <small class="opacity-75">Floor Price:</small>
+                                    <span class="flex-grow-1 text-end small">0.05 ETH <span class="ms-2 badge bg-transparent text-success">+21%</span> </span>
+                                </span>
+                                <span class="d-flex w-100 justify-content-between">
+                                    <small class="opacity-75">Volumn:</small>
+                                    <span class="flex-grow-1 text-end small">256.60 ETH<span class="ms-2 badge px-1 lh-sm bg-success">+121%</span></span>
+                                </span>
+                            </div>
+                            <!--Collection detail link-->
+                            <a href="#!" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4" data-aos="fade-up">
+                        <!--collection card-->
+                        <div class="card flex-md-row card-body hover-lift">
+                            
+                            <div class="position-relative size-5x bg-white shadow-sm rounded-circle flex-shrink-0">
+                                <img src="assets/img/collection/6.gif" alt="" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="flex-grow-1 ps-md-4 pt-3 pt-md-0">
+                                <h6 class="mb-2 text-truncate text-primary"><span class="text-body">Fractality by</span> <span class="text-primary">@markrise</span></h6>
+                                <span class="badge mb-3 bg-body-tertiary text-body">25 NFT</span>
+                                <span class="d-flex mb-2 pb-2 border-bottom w-100 justify-content-between">
+                                    <small class="opacity-75">Floor Price:</small>
+                                    <span class="flex-grow-1 text-end small">0.05 ETH <span class="ms-2 badge bg-transparent text-success">+21%</span> </span>
+                                </span>
+                                <span class="d-flex w-100 justify-content-between">
+                                    <small class="opacity-75">Volumn:</small>
+                                    <span class="flex-grow-1 text-end small">256.60 ETH<span class="ms-2 badge px-1 lh-sm bg-danger">-31%</span></span>
+                                </span>
+                            </div>
+                            <!--Collection detail link-->
+                            <a href="#!" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4" data-aos="fade-up">
+                        <!--collection card-->
+                        <div class="card flex-md-row card-body hover-lift">
+                            
+                            <div class="position-relative size-5x bg-white shadow-sm rounded-circle flex-shrink-0">
+                                <img src="assets/img/collection/2.png" alt="" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="flex-grow-1 ps-md-4 pt-3 pt-md-0">
+                                <h6 class="mb-2 text-truncate text-primary"><span class="text-body">Fractality by</span> <span class="text-primary">@markrise</span></h6>
+                                <span class="badge mb-3 bg-body-tertiary text-body">25 NFT</span>
+                                <span class="d-flex mb-2 pb-2 border-bottom w-100 justify-content-between">
+                                    <small class="opacity-75">Floor Price:</small>
+                                    <span class="flex-grow-1 text-end small">0.05 ETH <span class="ms-2 badge bg-transparent text-success">+21%</span> </span>
+                                </span>
+                                <span class="d-flex w-100 justify-content-between">
+                                    <small class="opacity-75">Volumn:</small>
+                                    <span class="flex-grow-1 text-end small">256.60 ETH<span class="ms-2 badge px-1 lh-sm bg-success">+121%</span></span>
+                                </span>
+                            </div>
+                            <!--Collection detail link-->
+                            <a href="#!" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4" data-aos="fade-up">
+                        <!--collection card-->
+                        <div class="card flex-md-row card-body hover-lift">
+                            
+                            <div class="position-relative size-5x bg-white shadow-sm rounded-circle flex-shrink-0">
+                                <img src="assets/img/collection/3.png" alt="" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="flex-grow-1 ps-md-4 pt-3 pt-md-0">
+                                <h6 class="mb-2 text-truncate text-primary"><span class="text-body">Fractality by</span> <span class="text-primary">@markrise</span></h6>
+                                <span class="badge mb-3 bg-body-tertiary text-body">25 NFT</span>
+                                <span class="d-flex mb-2 pb-2 border-bottom w-100 justify-content-between">
+                                    <small class="opacity-75">Floor Price:</small>
+                                    <span class="flex-grow-1 text-end small">0.05 ETH <span class="ms-2 badge bg-transparent text-danger">-9%</span> </span>
+                                </span>
+                                <span class="d-flex w-100 justify-content-between">
+                                    <small class="opacity-75">Volumn:</small>
+                                    <span class="flex-grow-1 text-end small">256.60 ETH<span class="ms-2 badge px-1 lh-sm bg-success">+121%</span></span>
+                                </span>
+                            </div>
+                            <!--Collection detail link-->
+                            <a href="#!" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4" data-aos="fade-up">
+                        <!--collection card-->
+                        <div class="card flex-md-row card-body hover-lift">
+                            
+                            <div class="position-relative size-5x bg-white shadow-sm rounded-circle flex-shrink-0">
+                                <img src="assets/img/collection/4.png" alt="" class="img-fluid rounded-circle">
+                             <!--Varified icon-->
+                             <div class="position-absolute end-0 bottom-0 text-primary z-index-2 me-1 mb-1" data-tippy-placement="bottom" data-tippy-content="Verified by NFTY">
+                                <svg width="16" height="16" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 2.72727L25.2727 0L28.5455 5.09091L34.7273 5.27273L34.9091 11.4545L40 14.7273L37.2727 20L40 25.2727L34.9091 28.5455L34.7273 34.7273L28.5455 34.9091L25.2727 40L20 37.2727L14.7273 40L11.4545 34.9091L5.27273 34.7273L5.09091 28.5455L0 25.2727L2.72727 20L0 14.7273L5.09091 11.4545L5.27273 5.27273L11.4545 5.09091L14.7273 0L20 2.72727Z">
+                                    </path>
+                                    <path d="M17.4988 25.4956L11.9995 20.5876L14.445 18.4051L17.4988 21.1382L26.052 13.4971L28.4975 15.6796L17.4988 25.4956Z" fill="white"></path>
+                                 </svg>
+                        </div>
+                            </div>
+                            <div class="flex-grow-1 ps-md-4 pt-3 pt-md-0">
+                                <h6 class="mb-2 text-truncate text-primary"><span class="text-body">Fractality by</span> <span class="text-primary">@markrise</span></h6>
+                                <span class="badge mb-3 bg-body-tertiary text-body">25 NFT</span>
+                                <span class="d-flex mb-2 pb-2 border-bottom w-100 justify-content-between">
+                                    <small class="opacity-75">Floor Price:</small>
+                                    <span class="flex-grow-1 text-end small">0.05 ETH <span class="ms-2 badge bg-transparent text-success">+21%</span> </span>
+                                </span>
+                                <span class="d-flex w-100 justify-content-between">
+                                    <small class="opacity-75">Volumn:</small>
+                                    <span class="flex-grow-1 text-end small">256.60 ETH<span class="ms-2 badge px-1 lh-sm bg-success">+121%</span></span>
+                                </span>
+                            </div>
+                            <!--Collection detail link-->
+                            <a href="#!" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4" data-aos="fade-up">
+                        <!--collection card-->
+                        <div class="card flex-md-row card-body hover-lift">
+                            
+                            <div class="position-relative size-5x bg-white shadow-sm rounded-circle flex-shrink-0">
+                                <img src="assets/img/collection/5.gif" alt="" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="flex-grow-1 ps-md-4 pt-3 pt-md-0">
+                                <h6 class="mb-2 text-truncate text-primary"><span class="text-body">Fractality by</span> <span class="text-primary">@markrise</span></h6>
+                                <span class="badge mb-3 bg-body-tertiary text-body">25 NFT</span>
+                                <span class="d-flex mb-2 pb-2 border-bottom w-100 justify-content-between">
+                                    <small class="opacity-75">Floor Price:</small>
+                                    <span class="flex-grow-1 text-end small">0.05 ETH <span class="ms-2 badge bg-transparent text-success">+21%</span> </span>
+                                </span>
+                                <span class="d-flex w-100 justify-content-between">
+                                    <small class="opacity-75">Volumn:</small>
+                                    <span class="flex-grow-1 text-end small">256.60 ETH<span class="ms-2 badge px-1 lh-sm bg-success">+121%</span></span>
+                                </span>
+                            </div>
+                            <!--Collection detail link-->
+                            <a href="#!" class="stretched-link"></a>
+                        </div>
+                    </div>
+                   
+                    <div class="col-12 pt-5 text-center" data-aos="fade-up" data-aos-delay="450">
+                        <a href="nft-collections.html" class="btn btn-hover btn-white px-lg-4 py-lg-3 hover-lift">Explore all collections
+                            <span class="material-icons align-middle hover-translate">chevron_right</span>
+                        </a>
+                    </div>
+                </div>
+               </div>
+            </div>
+            </section>
+
+        <section class="position-relative">
+            <div class="container pt-8 pt-lg-11 pb-8 pb-lg-11">
+                <div class="row pt-4">
+                    <!--col-->
+                    <div class="col-lg-4 mb-7 mb-lg-0" data-aos="fade-up">
+                        <!--icon card-->
+                        <div class="card hover-lift pt-6 p-4">
+                             <!--icon-->
+                            <div class="me-4 position-absolute start-0 ms-3 mt-n4 top-0 flex-shrink-0 size-4x shadow d-flex align-items-center justify-content-center rounded-circle bg-primary text-white">
+                                <span class="material-icons fs-2">
+                                    account_balance_wallet
+                                </span>
+                            </div>
+                            <!--title-->
+                            <h5 class="mb-4 mt-n4 position-relative ps-10">Set your wallet</h5>
+                            
+                            <!--description-->
+                            <p class="mb-0">
+                                Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.
+                            </p>
+                        </div>
+                    </div>
+                    <!--col-->
+                    <div class="col-lg-4 mb-7 mb-lg-0" data-aos="fade-up">
+                        <!--icon card-->
+                        <div class="card hover-lift pt-6 p-4">
+                             <!--icon-->
+                            <div class="me-4 position-absolute start-0 ms-3 mt-n4 top-0 flex-shrink-0 size-4x shadow d-flex align-items-center justify-content-center rounded-circle bg-primary text-white">
+                                <span class="material-icons fs-2">
+                                    photo_library
+                                </span>
+                            </div>
+                            <!--title-->
+                            <h5 class="mb-4 mt-n4 position-relative ps-10">Add your NFTs</h5>
+                            
+                            <!--description-->
+                            <p class="mb-0">
+                                Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.
+                            </p>
+                        </div>
+                    </div>
+                    <!--col-->
+                    <div class="col-lg-4" data-aos="fade-up">
+                        <!--icon card-->
+                        <div class="card hover-lift pt-6 p-4">
+                             <!--icon-->
+                            <div class="me-4 position-absolute start-0 ms-3 mt-n4 top-0 flex-shrink-0 size-4x shadow d-flex align-items-center justify-content-center rounded-circle bg-primary text-white">
+                                <span class="material-icons fs-2">
+                                    sell
+                                </span>
+                            </div>
+                            <!--title-->
+                            <h5 class="mb-4 mt-n4 position-relative ps-10">List them for Sale</h5>
+                            
+                            <!--description-->
+                            <p class="mb-0">
+                                Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        @@include('./partials/footer-default.html')
+        <!--script-->
+        <script src="assets/js/theme.bundle.min.js"></script>
+        <!--Countdown plugin and jquery-->
+        <script src="assets/vendor/node_modules/js/jquery.min.js"></script>
+        <script src="assets/vendor/node_modules/js/jquery.countdown.min.js"></script>
+        <script>
+            $(document).ready(function() {
+    var now = new Date();
+    
+    // Helper function to add days and hours to current time
+    function addTime(days, hours, minutes) {
+        var date = new Date(now);
+        date.setDate(date.getDate() + days);
+        date.setHours(date.getHours() + hours);
+        date.setMinutes(date.getHours() + minutes);
+        return date;
+    }
+
+    // Create target dates for each countdown
+    var targets = [
+        
+        addTime(4, 23, 45),
+        addTime(5, 8, 25),
+        addTime(3, 14, 30),
+        addTime(2, 10, 25),
+        addTime(0, 10, 40),
+        addTime(0, 5, 20),
+        addTime(1, 21, 15),
+        addTime(0, 16, 35),
+        addTime(0, 11, 20),
+    ];
+
+    // Initialize countdowns
+     $("#countdownHero").countdown(targets[0], function(event) {
+        $(this).html(event.strftime('%-Dd %-Hh %-Mm'));
+    });
+     $("#countdown1").countdown(targets[1], function(event) {
+        $(this).html(event.strftime('%-Dd %-Hh %-Mm'));
+    });
+    $("#countdown2").countdown(targets[2], function(event) {
+        $(this).html(event.strftime('%-Dd %-Hh %-Mm'));
+    });
+    $("#countdown3").countdown(targets[3], function(event) {
+        $(this).html(event.strftime('%-Dd %-Hh %-Mm'));
+    });
+    $("#countdown4").countdown(targets[4], function(event) {
+        $(this).html(event.strftime('%-Hh %-Mm'));
+    });
+    $("#countdown5").countdown(targets[5], function(event) {
+        $(this).html(event.strftime('%-Hh %-Mm'));
+    });
+    $("#countdown6").countdown(targets[6], function(event) {
+        $(this).html(event.strftime('%-Dd %-Hh %-Mm'));
+    });
+     $("#countdown7").countdown(targets[7], function(event) {
+        $(this).html(event.strftime('%-Hh %-Mm'));
+    });
+     $("#countdown8").countdown(targets[8], function(event) {
+        $(this).html(event.strftime('%-Hh %-Mm'));
+    });
+});
+
+        </script>
+
+        <!--Popular NFT slider-->
+        <script src="assets/vendor/node_modules/js/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".swiper-popular", {
+                slidesPerView: 1,
+                spaceBetween: 12,
+                keyboard: {
+                    enabled: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 12,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 16,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                        spaceBetween: 16,
+                    }
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-next",
+                    prevEl: ".swiper-prev",
+                },
+            });
+
+        </script>
+
+           <!--Select scripts-->
+           <script src="assets/vendor/node_modules/js/choices.min.js"></script>
+           <script>
+               var cSelect = document.querySelectorAll("[data-choices]");
+               cSelect.forEach(el => {
+                   const t = {
+                       ...el.dataset.choices ? JSON.parse(el.dataset.choices) : {},
+                       ...{
+                           classNames: {
+                               containerInner: el.className,
+                               input: "form-control",
+                               inputCloned: "form-control-sm",
+                               listDropdown: "dropdown-menu",
+                               itemChoice: "dropdown-item",
+                               activeState: "show",
+                               selectedState: "active"
+                           }
+                       }
+                   }
+                   new Choices(el, t)
+               });
+   
+           </script>
+    </body>
+
+</html>

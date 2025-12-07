@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+     @@include('./partials/head-includes.html')
+
+
+    <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+    <!--Header Start-->
+    <header class="z-fixed top-0 left-0 absolute header-sticky z-[999] w-full">
+        <nav class="navbar py-4 lg:py-0 shadow-none navbar-expand-lg navbar-light">
+            <div class="container relative flex flex-wrap items-center justify-center">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo/logo.svg" alt="" class="w-24 dark:hidden">
+                    <img src="assets/img/logo/logo-white.svg" alt="" class="w-24 hidden dark:block">
+                </a>
+                <div class="flex items-center shrink-0 ml-auto lg:order-last">
+                    <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i></i>
+                        </span>
+                    </button>
+                    <div class="nav-item me-3 me-lg-0 ms-lg-3">
+                        <a href="#" class="btn bg-orange-500 text-white hover:bg-orange-600">
+                            Get started</a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+                    id="mainNavbarTheme">
+                    @@include('./partials/headers/default-navbar-items.html',{"page":
+                    "pages"})
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Main content-->
+    <main class="main-content d-grid" id="main-content">
+        <section class="relative overflow-hidden">
+            <div class="container pb-16 lg:pb-24 pt-24 lg:pt-32">
+                <div class="flex flex-wrap -mx-3">
+                    <div class="w-full px-3 lg:w-8/12 mx-auto relative">
+                        <div class="shadow-lg rounded-2xl px-6 py-7">
+                            <div class="mb-4 pb-4 border-b border-gray-200 dark:border-gray-800">
+                                <h2 class="text-2xl font-medium mb-3">Our Privacy policy</h2>
+                                <p><small class="text-gray-400">Last Revised:</small> 13-09-2025</p>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 mb-7">To view our archived Privacy Policy, <a href="#!" class="font-medium text-indigo-500">click here</a>.</p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-7">
+                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                            <ul class="list-disc pl-4 text-gray-600 dark:text-gray-300 mb-7">
+                                <li>
+                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                </li>
+                                <li>
+                                 Excepteur sint occaecat cupidatat non proident
+                                </li>
+                                <li>
+                                 Sunt in culpa qui officia deserunt mollit anim id est
+                                </li>
+                                <li>
+                                 Duis aute irure dolor in reprehenderit
+                                </li>
+                                <li>
+                                 Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                </li>
+                            </ul>
+                            <h5 class="mb-4 text-xl font-medium">What information we collect, how we collect it, and why</h5>
+                            <p class="text-gray-600 dark:text-gray-300 mb-7">
+                             Vitae ultricies leo integer malesuada nunc vel. Curabitur gravida arcu ac tortor dignissim convallis. Neque viverra justo nec ultrices dui sapien eget. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum. Leo vel orci porta non pulvinar neque laoreet. Risus nec feugiat in fermentum posuere urna. Massa sapien faucibus et molestie ac. Eros donec ac odio tempor orci dapibus ultrices in. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Aenean euismod elementum nisi quis. Erat nam at lectus urna. Lacus viverra vitae congue eu consequat ac felis donec. Nunc sed augue lacus viverra vitae congue eu consequat ac. Urna nec tincidunt praesent semper. In arcu cursus euismod quis viverra nibh cras pulvinar. Mattis enim ut tellus elementum sagittis.
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-7">
+                             Molestie a iaculis at erat pellentesque adipiscing. Tristique nulla aliquet enim tortor at auctor. Viverra maecenas accumsan lacus vel facilisis volutpat est. Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Imperdiet proin fermentum leo vel orci porta non. Sit amet volutpat consequat mauris nunc. In metus vulputate eu scelerisque felis imperdiet proin. Hendrerit dolor magna eget est lorem ipsum dolor. Pharetra convallis posuere morbi leo. Nibh mauris cursus mattis molestie. Pharetra magna ac placerat vestibulum.
+                            </p>
+                            <h5 class="mb-4 text-xl font-medium">Cookies and similar technologies</h5>
+                            <p class="text-gray-600 dark:text-gray-300 mb-7">
+                             Vitae ultricies leo integer malesuada nunc vel. Curabitur gravida arcu ac tortor dignissim convallis. Neque viverra justo nec ultrices dui sapien eget. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum. Leo vel orci porta non pulvinar neque laoreet. Risus nec feugiat in fermentum posuere urna. Massa sapien faucibus et molestie ac. Eros donec ac odio tempor orci dapibus ultrices in. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Aenean euismod elementum nisi quis. Erat nam at lectus urna. Lacus viverra vitae congue eu consequat ac felis donec. Nunc sed augue lacus viverra vitae congue eu consequat ac. Urna nec tincidunt praesent semper. In arcu cursus euismod quis viverra nibh cras pulvinar. Mattis enim ut tellus elementum sagittis.
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-7">
+                             Molestie a iaculis at erat pellentesque adipiscing. Tristique nulla aliquet enim tortor at auctor. Viverra maecenas accumsan lacus vel facilisis volutpat est. Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Imperdiet proin fermentum leo vel orci porta non. Sit amet volutpat consequat mauris nunc. In metus vulputate eu scelerisque felis imperdiet proin. Hendrerit dolor magna eget est lorem ipsum dolor. Pharetra convallis posuere morbi leo. Nibh mauris cursus mattis molestie. Pharetra magna ac placerat vestibulum.
+                            </p>
+                            <h5 class="mb-4 text-xl font-medium">How we secure, store and retain your data.</h5>
+                            <p class="text-gray-600 dark:text-gray-300 mb-7">
+                             Vitae ultricies leo integer malesuada nunc vel. Curabitur gravida arcu ac tortor dignissim convallis. Neque viverra justo nec ultrices dui sapien eget. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum. Leo vel orci porta non pulvinar neque laoreet. Risus nec feugiat in fermentum posuere urna. Massa sapien faucibus et molestie ac. Eros donec ac odio tempor orci dapibus ultrices in. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Aenean euismod elementum nisi quis. Erat nam at lectus urna. Lacus viverra vitae congue eu consequat ac felis donec. Nunc sed augue lacus viverra vitae congue eu consequat ac. Urna nec tincidunt praesent semper. In arcu cursus euismod quis viverra nibh cras pulvinar. Mattis enim ut tellus elementum sagittis.
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-7">
+                             Molestie a iaculis at erat pellentesque adipiscing. Tristique nulla aliquet enim tortor at auctor. Viverra maecenas accumsan lacus vel facilisis volutpat est. Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Imperdiet proin fermentum leo vel orci porta non. Sit amet volutpat consequat mauris nunc. In metus vulputate eu scelerisque felis imperdiet proin. Hendrerit dolor magna eget est lorem ipsum dolor. Pharetra convallis posuere morbi leo. Nibh mauris cursus mattis molestie. Pharetra magna ac placerat vestibulum.
+                            </p>
+                            <h5 class="mb-4 text-xl font-medium">How you can access, update or delete your data.</h5>
+                            <p class="text-gray-600 dark:text-gray-300 mb-7">
+                             Vitae ultricies leo integer malesuada nunc vel. Curabitur gravida arcu ac tortor dignissim convallis. Neque viverra justo nec ultrices dui sapien eget. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum. Leo vel orci porta non pulvinar neque laoreet. Risus nec feugiat in fermentum posuere urna. Massa sapien faucibus et molestie ac. Eros donec ac odio tempor orci dapibus ultrices in. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Aenean euismod elementum nisi quis. Erat nam at lectus urna. Lacus viverra vitae congue eu consequat ac felis donec. Nunc sed augue lacus viverra vitae congue eu consequat ac. Urna nec tincidunt praesent semper. In arcu cursus euismod quis viverra nibh cras pulvinar. Mattis enim ut tellus elementum sagittis.
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-7">
+                             Molestie a iaculis at erat pellentesque adipiscing. Tristique nulla aliquet enim tortor at auctor. Viverra maecenas accumsan lacus vel facilisis volutpat est. Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Imperdiet proin fermentum leo vel orci porta non. Sit amet volutpat consequat mauris nunc. In metus vulputate eu scelerisque felis imperdiet proin. Hendrerit dolor magna eget est lorem ipsum dolor. Pharetra convallis posuere morbi leo. Nibh mauris cursus mattis molestie. Pharetra magna ac placerat vestibulum.
+                            </p>
+                            <h5 class="mb-4 text-xl font-medium">Changes to this policy.</h5>
+                            <p class="text-gray-600 dark:text-gray-300 mb-7">
+                             Molestie a iaculis at erat pellentesque adipiscing. Tristique nulla aliquet enim tortor at auctor. Viverra maecenas accumsan lacus vel facilisis volutpat est. Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Imperdiet proin fermentum leo vel orci porta non. Sit amet volutpat consequat mauris nunc. In metus vulputate eu scelerisque felis imperdiet proin. Hendrerit dolor magna eget est lorem ipsum dolor. Pharetra convallis posuere morbi leo. Nibh mauris cursus mattis molestie. Pharetra magna ac placerat vestibulum.
+                            </p>
+                            <h5 class="mb-4 text-xl font-medium">Contact us</h5>
+                            <ul class="text-gray-600 dark:text-gray-300 mb-7">
+                                <li class="flex items-center mb-4">
+                                    by mail: <a class="link-underline ml-3 text-indigo-500" href="mailto:mymail@domain.com">mymail@domain.com</a> 
+                                </li>
+                                <li class="flex items-center">
+                                 by phone: <a href="#!" class="link-underline ml-3 text-indigo-500">+01 1234 567 890</a> 
+                             </li>
+                            </ul>
+                            <small class="text-gray-400">We will respond with in 3-5 business working days</small>
+                         </div>
+                </div>
+            </div>
+            </div>
+        </section>
+     </main>
+   
+    @@include('./partials/footers/footer-1.html')
+    
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+
+</body>
+
+</html>

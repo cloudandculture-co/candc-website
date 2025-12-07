@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assan-Admin</title>
+
+        @@include('./partials/fonts.html')
+
+        <!--Simplebar css-->
+        <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+        <!--Main style-->
+        <link rel="stylesheet" href="assets/css/style.min.css">
+    </head>
+
+    <body>
+      @@include('./partials/preloader.html')
+      <!--App Start-->
+        <div class="d-flex flex-column flex-root">
+            <!--Page-->
+            <div class="page d-flex flex-row flex-column-fluid">
+
+                @@include('./partials/sidebars/sidebar-default.html',{page:"components","components_collapse": "show","component_bs_tables_active": "active"})
+
+                <!--///////////Page content wrapper///////////////-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+
+
+                    @@include('./partials/header/header-default.html')
+
+                    <!--//Page Toolbar//-->
+                    <div class="toolbar px-3 px-lg-6 py-3">
+                        <div class="position-relative container-fluid px-0">
+                            <div class="row align-items-center position-relative">
+                                <div class="col-md-8">
+                                    <h3 class="mb-2">Bootstrap tables</h3>
+
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                            <li class="breadcrumb-item active">UI Components</li>
+                                            <li class="breadcrumb-item active">Bootstrap Tables</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page Toolbar End//-->
+
+                    <!--//Page content//-->
+                    <div class="content pt-3 px-3 px-lg-6 d-flex flex-column-fluid">
+                        <div class="container-fluid px-0">
+                           <div class="row">
+                            <div class="col-12">
+                                  <!--Begin::table card-->
+                                  <div class="card table-card table-nowrap mb-2">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Table components</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <!--Begin:Item Avatar-->
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="flex-shrink-0 me-3">
+                                                <img src="assets/media/avatars/01.jpg" class="avatar sm rounded-circle" alt="">
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-0">Jason Roy</h6>
+                                                <small class="text-body-secondary">jason@roy.com</small>
+                                            </div>
+                                        </div>
+                                         <!--/ends:Item Avatar-->
+                                         <!--Begin:Project info-->
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="flex-shrink-0 me-3">
+                                                <img src="assets/media/900x600/10.jpg" class="avatar lg rounded-3" alt="">
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-0">Landing page in Figma</h6>
+                                                <small class="text-body-secondary">Maruti</small>
+                                            </div>
+                                        </div>
+                                         <!--/ends:Project info-->
+                                         <hr class="my-5">
+
+                                         <!--Begin:Table row action dropdown-->
+                                        <div class="dropdown">
+                                            <a href="#" class="size-40 d-flex align-items-center justify-content-center rounded-circle btn btn-outline-secondary p-0" data-bs-toggle="dropdown">
+                                                <span class="material-symbols-rounded">more_vert</span>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a href="#!" class="dropdown-item">Add to contacts</a>
+                                                <a href="#!" class="dropdown-item">Block from list</a>
+                                                <a href="#!" class="dropdown-item">Share to a friend</a>
+                                            </div>
+                                        </div>
+                                         <!--/ends:Table row action dropdown-->
+                                         <hr class="my-5">
+                                         <!--Begin:Table Action inline-->
+                                        <div class="d-flex align-items-center">
+                                            <a href="#!" data-tippy-content="View user">
+                                                <span class="material-symbols-rounded align-middle fs-5 text-body">visibility</span>
+                                            </a>
+                                            <!--Divider line-->
+                                            <span class="border-start mx-2 d-block height-20"></span>
+                                            <a href="#!" data-tippy-content="Edit user">
+                                                <span class="material-symbols-rounded align-middle fs-5 text-body">edit</span>
+                                            </a>
+                                             <!--Divider line-->
+                                             <span class="border-start mx-2 d-block height-20"></span>
+                                            <a href="#!" data-tippy-content="Delete user">
+                                                <span class="material-symbols-rounded align-middle fs-5 text-body">delete</span>
+                                            </a>
+                                        </div>
+                                         <!--/ends:Table Action inline-->
+                                         <hr class="my-5">
+                                         <!--Begin:Table Switch & Check-->
+                                        <div class="d-flex align-items-center">
+                                            <div class="form-check form-switch me-4">
+                                                <input class="form-check-input" type="checkbox" role="switch" id="tdCheckSwitch">
+                                                <label class="form-check-label" for="tdCheckSwitch"></label>
+                                              </div>
+                                              <br>
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="tdCheck">
+                                                <label class="form-check-label" for="tdCheck"></label>
+                                              </div>
+                                        </div>
+                                         <!--/ends:Table Switch & Check-->
+                                         <hr class="my-5">
+                                         <!--Begin:Table Progress for row-->
+                                        <div class="width-120">
+                                            <div class="progress height-5 rounded-pill">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated rounded-pill" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                                              </div>
+                                        </div>
+                                         <!--/ends:Table Progress for row-->
+                                         <hr class="my-5">
+                                          <!--Begin:Table users group-->
+                                        <div class="">
+                                            <div class="avatar-group d-none d-lg-flex">
+                                                <a href="#!.html" class="avatar-group-item sm avatar rounded-circle" data-tippy-placement="top" data-tippy-content="Gabriel H">
+                                                  <img src="assets/media/avatars/04.jpg" alt="..." class="avatar-group-img rounded-circle">
+                                                </a>
+                                                <a href="#!.html" class="avatar-group-item sm avatar rounded-circle" data-tippy-placement="top" data-tippy-content="Emily Doe">
+                                                  <img src="assets/media/avatars/02.jpg" alt="..." class="avatar-group-img rounded-circle">
+                                                </a>
+                                                <a href="#!.html" class="avatar-group-item sm avatar rounded-circle" data-tippy-placement="top" data-tippy-content="Adam Howkins">
+                                                  <img src="assets/media/avatars/03.jpg" alt="..." class="avatar-group-img rounded-circle">
+                                                </a>
+                                                <a href="#!.html" class="avatar-group-item sm avatar rounded-circle" data-tippy-placement="top" data-tippy-content="Gabriel H">
+                                                    <img src="assets/media/avatars/04.jpg" alt="..." class="avatar-group-img rounded-circle">
+                                                  </a>
+                                              </div>
+                                        </div>
+                                         <!--/ends:Table users group-->
+
+                                         <hr class="my-5">
+                                          <!--Begin:Table badges for status-->
+                                        <div class="mb-2">
+                                            <span class="badge bg-primary me-1">In Progress</span>
+                                            <span class="badge bg-warning me-1">On hold</span>
+                                            <span class="badge bg-success me-1">Active</span>
+                                            <span class="badge bg-danger me-1">Inactive</span>
+                                        </div>
+                                        <div class="mb-2">
+                                            <span class="badge fs-6 bg-primary me-1">In Progress</span>
+                                            <span class="badge fs-6 bg-warning me-1">On hold</span>
+                                            <span class="badge fs-6 bg-success me-1">Active</span>
+                                            <span class="badge fs-6 bg-danger me-1">Inactive</span>
+                                        </div>
+                                         <!--/ends:Table badges for status-->
+                                        <hr class="my-5">
+                                        <h5>Example</h5>
+                                    </div>
+                                    
+                                   <div class="table-responsive table-card table-nowrap">
+                                    <table class="table align-middle table-hover mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th>Id</th>
+                                            <th>User</th>
+                                            <th>Status</th>
+                                            <th>
+                                                Working Hours
+                                            </th>
+                                            <th class="text-end">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>#6343</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img src="assets/media/avatars/01.jpg" class="avatar sm rounded-circle" alt="">
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-0">Jason Roy</h6>
+                                                        <small class="text-body-secondary">jason@roy.com</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-success fs-6">Active</span>
+                                            </td>
+                                            <td>
+                                                <div class="width-120">
+                                                    <div class="progress height-5 rounded-pill">
+                                                        <div class="progress-bar bg-info progress-bar-striped progress-bar-animated rounded-pill" role="progressbar" aria-label="Animated striped example" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100" style="width: 54%"></div>
+                                                      </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-end align-items-center">
+                                                    <a href="#!" data-tippy-content="View user">
+                                                        <span class="material-symbols-rounded align-middle fs-5 text-body">visibility</span>
+                                                    </a>
+                                                    <!--Divider line-->
+                                                    <span class="border-start mx-2 d-block height-20"></span>
+                                                    <a href="#!" data-tippy-content="Edit user">
+                                                        <span class="material-symbols-rounded align-middle fs-5 text-body">edit</span>
+                                                    </a>
+                                                     <!--Divider line-->
+                                                     <span class="border-start mx-2 d-block height-20"></span>
+                                                    <a href="#!" data-tippy-content="Delete user">
+                                                        <span class="material-symbols-rounded align-middle fs-5 text-body">delete</span>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>#3432</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img src="assets/media/avatars/02.jpg" class="avatar sm rounded-circle" alt="">
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-0">Monika Bedi</h6>
+                                                        <small class="text-body-secondary">monika@bedi.com</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-danger fs-6">Inactive</span>
+                                            </td>
+                                            <td>
+                                                <div class="width-120">
+                                                    <div class="progress height-5 rounded-pill">
+                                                        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated rounded-pill" role="progressbar" aria-label="Animated striped example" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100" style="width: 32%"></div>
+                                                      </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-end align-items-center">
+                                                    <a href="#!" data-tippy-content="View user">
+                                                        <span class="material-symbols-rounded align-middle fs-5 text-body">visibility</span>
+                                                    </a>
+                                                    <!--Divider line-->
+                                                    <span class="border-start mx-2 d-block height-20"></span>
+                                                    <a href="#!" data-tippy-content="Edit user">
+                                                        <span class="material-symbols-rounded align-middle fs-5 text-body">edit</span>
+                                                    </a>
+                                                     <!--Divider line-->
+                                                     <span class="border-start mx-2 d-block height-20"></span>
+                                                    <a href="#!" data-tippy-content="Delete user">
+                                                        <span class="material-symbols-rounded align-middle fs-5 text-body">delete</span>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>#2342</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img src="assets/media/avatars/03.jpg" class="avatar sm rounded-circle" alt="">
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-0">Mark Otto</h6>
+                                                        <small class="text-body-secondary">mark@otto.com</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-success fs-6">Active</span>
+                                            </td>
+                                            <td>
+                                                <div class="width-120">
+                                                    <div class="progress height-5 rounded-pill">
+                                                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated rounded-pill" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                                                      </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-end align-items-center">
+                                                    <a href="#!" data-tippy-content="View user">
+                                                        <span class="material-symbols-rounded align-middle fs-5 text-body">visibility</span>
+                                                    </a>
+                                                    <!--Divider line-->
+                                                    <span class="border-start mx-2 d-block height-20"></span>
+                                                    <a href="#!" data-tippy-content="Edit user">
+                                                        <span class="material-symbols-rounded align-middle fs-5 text-body">edit</span>
+                                                    </a>
+                                                     <!--Divider line-->
+                                                     <span class="border-start mx-2 d-block height-20"></span>
+                                                    <a href="#!" data-tippy-content="Delete user">
+                                                        <span class="material-symbols-rounded align-middle fs-5 text-body">delete</span>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                   </div>
+                                </div>
+                                <!--/ends::table card-->
+
+
+                                <!--Begin::table card-->
+                                <div class="card table-card overflow-hidden table-nowrap mb-2">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Basic table example</h5>
+                                    </div>
+                                    <table class="table mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td colspan="2">Larry the Bird</td>
+                                            <td>@twitter</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                <!--/ends::table card-->
+
+                                 <!--Begin::table card-->
+                                 <div class="card table-card overflow-hidden table-nowrap mb-2">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Striped table example</h5>
+                                    </div>
+                                    <table class="table table-striped mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>The Bird</td>
+                                            <td>@twitter</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                <!--/ends::table card-->
+                                <!--Begin::table card-->
+                                <div class="card table-card overflow-hidden table-nowrap mb-2">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Primary table example</h5>
+                                    </div>
+                                    <table class="table table-hover table-primary mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>The Bird</td>
+                                            <td>@twitter</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                <!--/ends::table card-->
+
+                                <!--Begin::table card-->
+                                <div class="card table-card overflow-hidden table-nowrap mb-2">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Success table example</h5>
+                                    </div>
+                                    <table class="table table-hover table-success mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>The Bird</td>
+                                            <td>@twitter</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                <!--/ends::table card-->
+
+                                 <!--Begin::table card-->
+                                 <div class="card table-card overflow-hidden table-nowrap mb-2">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Light table example</h5>
+                                    </div>
+                                    <table class="table table-hover table-light mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>The Bird</td>
+                                            <td>@twitter</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                <!--/ends::table card-->
+
+                                  <!--Begin::table card-->
+                                  <div class="card table-card overflow-hidden table-nowrap mb-2">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Dark table example</h5>
+                                    </div>
+                                    <table class="table table-hover table-dark mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>The Bird</td>
+                                            <td>@twitter</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                <!--/ends::table card-->
+
+
+                                 <!--Begin::table card-->
+                                 <div class="card table-card overflow-hidden table-nowrap mb-2">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Info table example</h5>
+                                    </div>
+                                    <table class="table table-hover table-info mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>The Bird</td>
+                                            <td>@twitter</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                <!--/ends::table card-->
+                                <!--Begin::table card-->
+                                <div class="card table-card overflow-hidden table-nowrap mb-2">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Danger table example</h5>
+                                    </div>
+                                    <table class="table table-hover table-danger mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>The Bird</td>
+                                            <td>@twitter</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                <!--/ends::table card-->
+
+                                <!--Begin::table card-->
+                                <div class="card table-card overflow-hidden table-nowrap mb-2">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Warning table example</h5>
+                                    </div>
+                                    <table class="table table-hover table-warning mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>The Bird</td>
+                                            <td>@twitter</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                <!--/ends::table card-->
+
+                                 <!--Begin::table card-->
+                                 <div class="card table-card overflow-hidden table-nowrap mb-2">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Active table example</h5>
+                                    </div>
+                                    <table class="table table-hover table-striped mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr class="table-active">
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>The Bird</td>
+                                            <td>@twitter</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                <!--/ends::table card-->
+
+                                   <!--Begin::table card-->
+                                   <div class="card table-card overflow-hidden table-nowrap mb-2">
+                                    <div class="card-header border-bottom-0">
+                                        <h5 class="mb-0">Bordered table example</h5>
+                                    </div>
+                                    <table class="table table-bordered mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>The Bird</td>
+                                            <td>@twitter</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                <!--/ends::table card-->
+                                  <!--Begin::table card-->
+                                  <div class="card table-card overflow-hidden table-nowrap mb-2">
+                                    <div class="card-header border-bottom-0">
+                                        <h5 class="mb-0">Custom color bordered table example</h5>
+                                    </div>
+                                    <table class="table table-bordered border-primary mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>The Bird</td>
+                                            <td>@twitter</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                <!--/ends::table card-->
+
+                                <!--Begin::table card-->
+                                <div class="card table-card overflow-hidden table-nowrap mb-2">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Responsive example</h5>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-striped mb-0">
+                                            <thead>
+                                                <tr class="bg-body">
+                                                    <th>Name</th>
+                                                    <th>Position</th>
+                                                    <th>Office</th>
+                                                    <th>Age</th>
+                                                    <th>Start date</th>
+                                                    <th>Salary</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Tiger Nixon</td>
+                                                    <td>System Architect</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>61</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>$320,800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Garrett Winters</td>
+                                                    <td>Accountant</td>
+                                                    <td>Tokyo</td>
+                                                    <td>63</td>
+                                                    <td>2011/07/25</td>
+                                                    <td>$170,750</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ashton Cox</td>
+                                                    <td>Junior Technical Author</td>
+                                                    <td>San Francisco</td>
+                                                    <td>66</td>
+                                                    <td>2009/01/12</td>
+                                                    <td>$86,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cedric Kelly</td>
+                                                    <td>Senior Javascript Developer</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>22</td>
+                                                    <td>2012/03/29</td>
+                                                    <td>$433,060</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Airi Satou</td>
+                                                    <td>Accountant</td>
+                                                    <td>Tokyo</td>
+                                                    <td>33</td>
+                                                    <td>2008/11/28</td>
+                                                    <td>$162,700</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Brielle Williamson</td>
+                                                    <td>Integration Specialist</td>
+                                                    <td>New York</td>
+                                                    <td>61</td>
+                                                    <td>2012/12/02</td>
+                                                    <td>$372,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Herrod Chandler</td>
+                                                    <td>Sales Assistant</td>
+                                                    <td>San Francisco</td>
+                                                    <td>59</td>
+                                                    <td>2012/08/06</td>
+                                                    <td>$137,500</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!--/ends::table card-->
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                    <!--//Page content End//-->
+
+                    @@include('./partials/footer.html')
+                </main>
+                <!--///////////Page content wrapper End///////////////-->
+            </div>
+        </div>
+        @@include('./partials/core-scripts.html')
+
+
+    </body>
+
+</html>

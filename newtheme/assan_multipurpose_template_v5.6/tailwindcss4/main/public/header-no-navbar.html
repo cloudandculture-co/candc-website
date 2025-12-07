@@ -1,0 +1,244 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+      <!--Icons-->
+      <link rel="stylesheet" href="assets/fonts/bootstrap-icons/bootstrap-icons.min.css">
+      <!--Iconsmind Icons-->
+      <link rel="stylesheet" href="assets/fonts/iconsmind/iconsmind.css">
+
+
+      <!--Google fonts-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+      <!--Main theme style-->
+      <link rel="stylesheet" href="assets/css/style.css">
+     <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+     <!--Preloader Spinner-->
+     <div class="spinner-loader bg-primary text-white">
+        <span class="relative flex h-16 w-16">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-16 w-16 bg-indigo-500"></span>
+          </span>
+    </div>
+
+   <!--begin:Header-->
+   <header class="header-transparent">
+
+    <!--begin:navbar-->
+    <nav class="navbar navbar-expand-lg absolute top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+      <div class="container relative flex flex-wrap items-center justify-center relative pt-4">
+        <!--begin:logo-->
+        <a class="navbar-brand relative w-24 block" href="index.html">
+          <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+          <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+        </a>
+        <!--end:logo-->
+
+        <!--begin:navbar-no-collapse-items-->
+        <div class="flex items-center shrink-0 ml-auto lg:order-last">
+          <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+            <a href="#" class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+          </div>
+        </div>
+        <!--end:navbar-no-collapse-items-->
+
+        
+      </div>
+
+    </nav>
+    <!--end:navbar-->
+  </header>
+  <!--end:header-->
+ 
+<main class="main-content" id="main-content">
+    <section class="relative bg-gradient-to-tr from-indigo-500 to-gray-900 text-white pt-16">
+        <div class="container relative py-16 lg:py-24">
+            <div class="flex flex-wrap -mx-3 items-center">
+                <div class="w-full mx-auto px-3 lg:w-8/12  relative z-[1]">
+                   <h1 class="text-3xl lg:text-6xl text-center font-medium mb-7">Header No Navbar</h1>
+                <!--:Breadcrumbs:-->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb flex items-center justify-center">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li><i class="bi bi-chevron-right mx-3 text-sm opacity-50"></i></li>
+                      <li class="breadcrumb-item"><a href="#">Features</a></li>
+                      <li><i class="bi bi-chevron-right mx-3 text-sm opacity-50"></i></li>
+                      <li class="breadcrumb-item active [&.active]:opacity-50" aria-current="page">Header No Navbar</li>
+                    </ol>
+                  </nav>   
+                </div>
+                </div>
+            </div>
+            <!--/.row-->
+
+    </section>
+
+    <section class="relative">
+        <div class="container py-16 lg:py-24">
+            <div class="w-full">
+               Page content
+            </div>
+        </div>
+    </section>
+    
+</main>
+
+   
+    <!--Footer Start-->
+    <!--begin:Footer-->
+    <footer id="footer" class="bg-black text-gray-300 footer relative">
+        <div class="container pt-12 lg:pt-16">
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full lg:w-3/12 px-4 mb-7 h-full me-auto">
+                    <!--Title-->
+                    <h2 class="text-2xl lg:text-3xl leading-[1.25] font-medium text-white mb-0 relative">
+                        Work with us
+                    </h2>
+                    <div class="pt-3 mb-7">
+                        <a class="inline-block relative link-hover-underline text-white text-lg" href="mailto:mail@doamin.com">mail@domain.com</a>
+                    </div>
+                    <!--:Dark Mode:-->
+                    <button data-bs-toggle="tooltip" data-bs-title="toggle theme" data-bs-placement="left"
+                    class="toggle-mode w-10 h-10 rounded-full transition-all bg-white shadow-lg text-gray-700 dark:text-white dark:bg-gray-700 hover:bg-indigo-500 hover:text-white dark:hover:bg-indigo-500 flex items-center justify-center"
+                    type="button">
+                    <span class="dark:block hidden">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 2V4M12 20V22M4 12H2M6.31412 6.31412L4.8999 4.8999M17.6859 6.31412L19.1001 4.8999M6.31412 17.69L4.8999 19.1042M17.6859 17.69L19.1001 19.1042M22 12H20M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <span class="block dark:hidden">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M21.9548 12.9564C20.5779 15.3717 17.9791 17.0001 15 17.0001C10.5817 17.0001 7 13.4184 7 9.00008C7 6.02072 8.62867 3.42175 11.0443 2.04492C5.96975 2.52607 2 6.79936 2 11.9998C2 17.5227 6.47715 21.9998 12 21.9998C17.2002 21.9998 21.4733 18.0305 21.9548 12.9564Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    </button>
+                </div>
+                <div class="w-full lg:w-2/12 md:w-4/12 px-4 mb-7 ms-auto h-full">
+                    <!--Title-->
+                    <h6 class="small mb-3 mb-lg-4 text-gray-400">Learn</h6>
+                    <!--Nav-->
+                    <ul class="flex flex-col space-y-2 mb-0">
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Design</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Digital</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Development</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Branding</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Graphics</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Process</a></li>
+                    </ul>
+                </div>
+                <!--/.Col-->
+                <div class="w-full lg:w-2/12 md:w-4/12 px-4 mb-7 h-full">
+                    <!--Title-->
+                    <h6 class="small mb-3 mb-lg-4 text-gray-400">Resources</h6>
+                    <!--Nav-->
+                    <ul class="flex flex-col space-y-2 mb-0">
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Elements</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Features</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Credits</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Updates</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Help center</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Events</a></li>
+                    </ul>
+                </div>
+                <!--/.Col-->
+                <div class="w-full lg:w-2/12 md:w-4/12 px-4 mb-7 h-full">
+                    <!--Title-->
+                    <h6 class="small mb-3 mb-lg-4 text-gray-400">Company</h6>
+                    <!--Nav-->
+                    <ul class="flex flex-col space-y-2 mb-0">
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Awwards</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link py-1 block text-white" href="#!">Careers
+                                <span class="badge badge-pill ms-1 bg-indigo-500 text-xs font-medium rounded-full px-2 py-1 text-white">Hiring</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Customers</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Affiliate</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Contact us</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Terms of use</a></li>
+                        <li class="nav-item"><a class="nav-link py-1 block text-white" href="#!">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <!--/.Col-->
+            </div>
+            <hr class="mb-5 mt-0 border-gray-800">
+        </div> <!-- / .container -->
+        <div class="pb-7">
+            <div class="container">
+                <div class="flex flex-wrap -mx-4 justify-between items-center">
+                    <div class="flex gap-2 mb-4 md:mb-0 w-full px-4 md:w-6/12">
+                        <!-- Social button -->
+                        <a href="#!" class="w-10 h-10 border relative group overflow-hidden flex items-center justify-center rounded-full hover:bg-[#3b5998] hover:border-[#3b5998] hover:text-white">
+                            <i class="bi bi-facebook fs-6 block transition-all group-hover:-translate-y-full group-hover:opacity-0"></i>
+                            <i class="bi bi-facebook fs-6 block transition-all translate-y-full opacity-0 absolute group-hover:opacity-100 group-hover:translate-y-0"></i>
+                        </a>
+                        <!-- Social button -->
+                        <a href="#!" class="w-10 h-10 border relative group overflow-hidden flex items-center justify-center rounded-full hover:bg-[#1da1f2] hover:border-[#1da1f2] hover:text-white">
+                            <i class="bi bi-twitter-x fs-6 block transition-all group-hover:-translate-y-full group-hover:opacity-0"></i>
+                            <i class="bi bi-twitter-x fs-6 block transition-all translate-y-full opacity-0 absolute group-hover:opacity-100 group-hover:translate-y-0"></i>
+                        </a>
+                        <!-- Social button -->
+                        <a href="#!" class="w-10 h-10 border relative group overflow-hidden flex items-center justify-center rounded-full hover:bg-[#0077b5] hover:border-[#0077b5] hover:text-white">
+                            <i class="bi bi-linkedin fs-6 block transition-all group-hover:-translate-y-full group-hover:opacity-0"></i>
+                            <i class="bi bi-linkedin fs-6 block transition-all translate-y-full opacity-0 absolute group-hover:opacity-100 group-hover:translate-y-0"></i>
+                        </a>
+                        <!-- Social button -->
+                        <a href="#!" class="w-10 h-10 border relative group overflow-hidden flex items-center justify-center rounded-full hover:bg-[#e1306c] hover:border-[#e1306c] hover:text-white">
+                            <i class="bi bi-instagram fs-6 block transition-all group-hover:-translate-y-full group-hover:opacity-0"></i>
+                            <i class="bi bi-instagram fs-6 block transition-all translate-y-full opacity-0 absolute group-hover:opacity-100 group-hover:translate-y-0"></i>
+                        </a>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 md:text-right">
+                        <span class="block text-xs text-gray-400">© Copyright
+                            <script>
+                                document.write(new Date().getFullYear())
+
+                            </script>. Assan
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--end:Footer-->
+
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

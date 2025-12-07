@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+
+        <!--Bootstrap Icons-->
+        <link rel="stylesheet" href="assets/fonts/bootstrap-icons/bootstrap-icons.min.css">
+
+        <!--Iconsmind Icons-->
+        <link rel="stylesheet" href="assets/fonts/iconsmind/iconsmind.css">
+
+        <!-- Aos Animations CSS -->
+        <link href="assets/vendor/node_modules/css/aos.css" rel="stylesheet">
+
+        <!--Select css-->
+        <link rel="stylesheet" href="assets/vendor/node_modules/css/choices.min.css">
+
+        <!-- Google fonts CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <!-- Main CSS -->
+        <link href="assets/css/theme-green.min.css" rel="stylesheet">
+
+        <title>Assan 4</title>
+    </head>
+
+    <body>
+        @@include('./partials/preloader.html')
+        <!--Header Start-->
+        <header class="z-fixed header-absolute-top header-transparent sticky-reverse">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <div class="container px-xl-7 position-relative">
+                <!--:Brand Logo:-->
+                <a class="navbar-brand" href="demo-jobs.html">
+                    <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-light">
+                    <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-dark">
+                    <sub class="d-none d-sm-inline-block position-absolute end-0 bottom-0 me-n2 mb-n2">Jobs</sub>
+                </a>
+                <div class="d-flex align-items-center navbar-no-collapse-items order-lg-last">
+                    <div class="nav-item btn-group me-2 me-lg-0">
+                        <a href="demo-jobs-post-job.html" class="btn btn-outline-info btn-sm py-1 px-3">Post Job</a>
+                        <a href="#!" class="btn btn-sm btn-outline-info py-1 px-3"><i class="bi bi-person-circle me-1"></i>SignUp</a> 
+                    </div>
+                  <button class="navbar-toggler order-last" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                      <i></i>
+                    </span>
+                  </button>
+                  
+                </div>
+                <div class="collapse navbar-collapse" id="mainNavbarTheme">
+                    
+                 <ul class="navbar-nav me-lg-3 ms-lg-auto">
+                     <li class="nav-item">
+                         <a href="demo-jobs.html" class="nav-link">Home</a>
+                     </li>
+                     <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jobs listing</a>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="demo-jobs-listing.html">Lisitng Row</a>
+                          <a class="dropdown-item" href="demo-jobs-listing-grid.html">Lisitng Grid</a>
+                      </div>
+                     </li>
+                     <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item active" href="demo-jobs-job-detail.html">Job Details</a>
+                          <a class="dropdown-item" href="demo-jobs-job-apply.html">Apply for Job</a>
+                          <a class="dropdown-item" href="demo-jobs-employer.html">Employer</a>
+                      </div>
+                     </li>
+                  <li class="nav-item">
+                      <a href="demo-jobs-upload-resume.html" class="nav-link">Upload Resume</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">Eng</a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a href="#!" class="active dropdown-item">
+                            <img src="assets/img/country/us.svg" class="me-2" width="20" alt="">
+                            <small>English</small>
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                            <img src="assets/img/country/pt.svg" class="me-2" width="20" alt="">
+                            <small>Portuguese</small>
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                            <img src="assets/img/country/de.svg" class="me-2" width="20" alt="">
+                            <small>German</small>
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                            <img src="assets/img/country/fr.svg" class="me-2" width="20" alt="">
+                            <small>French</small>
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                            <img src="assets/img/country/dk.svg" class="me-2" width="20" alt="">
+                            <small>Danish</small>
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                            <img src="assets/img/country/es.svg" class="me-2" width="20" alt="">
+                            <small>Española</small>
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                            <img src="assets/img/country/nl.svg" class="me-2" width="20" alt="">
+                            <small>Dutch</small>
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                            <img src="assets/img/country/jp.svg" class="me-2" width="20" alt="">
+                            <small>japanese</small>
+                        </a>
+                    </div>
+                </li>
+              
+                 </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
+        <!--Main content-->
+        <main>
+            <section class="bg-body-tertiary rounded-bottom-4 d-flex w-100 position-relative">
+                <div class="container px-xl-7 pt-12 pt-lg-15 position-relative">
+
+                    <div class="row align-items-end">
+                        <div class="col-5">
+                            <img src="assets/img/companies/zenhub.svg" class="width-8x h-auto position-relative mb-n5 rounded-circle" alt="">
+                        </div>
+                        <div class="col-7 mb-7">
+                            <!--Share options-->
+                            <div class="dropdown text-end">
+                                <a href="#" data-bs-toggle="dropdown" class="btn btn-light dropdown-toggle">
+                                    <i class="bi bi-share me-2"></i> Share this job
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end mt-2">
+                                    <a href="#!" class="dropdown-item">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-link-45deg fs-5 me-2"></i>
+                                            <span>Copy link</span>
+                                        </div>
+                                      </a>
+                                       <a href="#!" class="dropdown-item">
+                                          <div class="d-flex align-items-center">
+                                              <i class="bi bi-facebook fs-6 me-2"></i>
+                                              <span>Share via facebook</span>
+                                          </div>
+                                        </a>
+                                        <a href="#!" class="dropdown-item">
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-twitter-x fs-6 me-2"></i>
+                                                <span>Share via Twitter</span>
+                                            </div>
+                                          </a>
+                                          <a href="#!" class="dropdown-item">
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-linkedin fs-6 me-2"></i>
+                                                <span>Share via linkedin</span>
+                                            </div>
+                                          </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="overflow-hidden position-relative">
+                <div class="container px-xl-7 py-9 pt-lg-12 position-relative">
+
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="d-flex flex-column flex-md-row align-items-md-end">
+                                <div class="flex-grow-1">
+                                    <span class="d-block mb-3">Zenhub</span>
+                                    <h2 class="display-5">Front End Developer</h2>
+                                    <ul class="list-inline w-100 small">
+                                        <li class="list-inline-item me-3 text-body-tertiary">30 March 2025</li>
+                                        <li class="list-inline-item"><i class="bi bi-geo-alt me-1 align-middle"></i> California, USA</li>
+                                    </ul>
+                                </div>
+                                <div class="flex-shrink-0 h-100 d-flex flex-column">
+                                    <a href="#!" class="d-inline-flex align-items-center"><i
+                                            class="bi bi-star me-2"></i> Save this job</a>
+                                   
+                                </div>
+                            </div>
+                            <hr class="mb-7 mb-lg-12">
+                            <h4 class="mb-4">What’s the job?</h4>
+                            <p class="mb-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.
+                            </p>
+                            <p class="ps-4 border-start border-3 border-info font-serif mb-7 mb-lg-12">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                            <h4 class="mb-4">What am I going to do?</h4>
+                            <ul class="list-unstyled mb-7 mb-lg-12">
+                                <li class="mb-3 d-flex align-items-center"><i class="bi bi-check me-2"></i> Build and
+                                    maintain design systems</li>
+                                <li class="mb-3 d-flex align-items-center"><i class="bi bi-check me-2"></i> Code
+                                    websites and web apps</li>
+                                <li class="mb-3 d-flex align-items-center"><i class="bi bi-check me-2"></i> Add delight
+                                    through motion animation</li>
+                                <li class="mb-3 d-flex align-items-center"><i class="bi bi-check me-2"></i> Implement
+                                    headless CMS</li>
+                                <li class="d-flex align-items-center"><i class="bi bi-check me-2"></i> Think along on
+                                    how to improve on the development process</li>
+                            </ul>
+                            <h4 class="mb-4">What are the qualifications?</h4>
+                            <ul class="list-unstyled mb-7 mb-lg-12">
+                                <li class="mb-3 d-flex align-items-center"><i class="bi bi-check me-2"></i> Mastery of
+                                    English language</li>
+                                <li class="mb-3 d-flex align-items-center"><i class="bi bi-check me-2"></i>Sufficient
+                                    knowledge of Figma</li>
+                                <li class="mb-3 d-flex align-items-center"><i class="bi bi-check me-2"></i>At least 1
+                                    year of Front-end development experience</li>
+                                <li class="mb-3 d-flex align-items-center"><i class="bi bi-check me-2"></i>Proficient at
+                                    JavaScript, HTML and CSS</li>
+                                <li class="d-flex align-items-center"><i class="bi bi-check me-2"></i>Knowlegde of and
+                                    experience with at least one front-end framework (React/Next.js, Vue/Nuxt, Svelte,
+                                    Angular)</li>
+                            </ul>
+                            <div class="mb-4 rounded border py-5 px-4 shadow-sm">
+                                <h5 class="mb-2">Apply for this job</h5>
+                                <p class="text-body-secondary mb-4">Please let Zenhub know you found this job on Assan Jobs. This will help us grow!
+                                </p>
+                                <a href="demo-jobs-job-apply.html" class="btn btn-primary">Apply now</a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4 position-relative">
+
+                            <!--Apply now-->
+                            <div data-aos="fade-up" class="d-none rounded d-md-block mb-4 border py-5 px-4 shadow-sm">
+                                <h5 class="mb-2">Apply for this job</h5>
+                                <p class="mb-4 text-body-secondary">Please let Zenhub know you found this job on Assan Jobs. This will help us grow!
+                                </p>
+                                <a href="demo-jobs-job-apply.html" class="btn btn-primary">Apply now</a>
+                            </div>
+
+                            <!--Job description-->
+                            <div data-aos="fade-up" class="mb-4 border rounded py-5 px-4 shadow-sm">
+                                <h5 class="mb-4">About this job</h5>
+                                <small class="text-body-tertiary mb-2 d-block">Job posted</small>
+                                <p class="mb-0">30 March 2025</p>
+                                <hr class="my-3">
+                                <small class="text-body-tertiary mb-2 d-block">Apply before</small>
+                                <p class="mb-0">End of May 2025</p>
+                                <hr class="my-3">
+                                <small class="text-body-tertiary mb-2 d-block">Job type</small>
+                                <p class="mb-0">FUll Time</p>
+                                <hr class="my-3">
+                                <small class="text-body-tertiary mb-2 d-block">Salary</small>
+                                <p class="mb-0">Between $40K - $80K</p>
+                                <hr class="my-3">
+                                <small class="text-body-tertiary mb-2 d-block">Location</small>
+                                <p class="mb-0">California, United States</p>
+                                <hr class="my-3">
+                                <small class="text-body-tertiary mb-2 d-block">Timezone</small>
+                                <p class="mb-0">USA (GMT-7)</p>
+                                <hr class="my-3">
+                                <!--Job categories-->
+                                <small class="text-body-tertiary mb-2 d-block">Categories</small>
+                                <p class="mb-0 d-flex flex-wrap mb-n2 position-relative">
+                                    <a href="#!" class="btn btn-sm btn-outline-secondary me-2 mb-2">UI UX Designer</a>
+                                    <a href="#!" class="btn btn-sm btn-outline-secondary me-2 mb-2">Front end
+                                        developer</a>
+                                </p>
+                                <hr class="my-3">
+                                <!--Skills-->
+                                <small class="text-body-tertiary mb-2 d-block">Skills required</small>
+                                <p class="mb-0 d-flex flex-wrap mb-n2 position-relative">
+                                    <a href="#!" class="btn btn-sm btn-outline-secondary me-2 mb-2">HTML</a>
+                                    <a href="#!" class="btn btn-sm btn-outline-secondary me-2 mb-2">CSS</a>
+                                    <a href="#!" class="btn btn-sm btn-outline-secondary me-2 mb-2">Sass</a>
+                                    <a href="#!" class="btn btn-sm btn-outline-secondary me-2 mb-2">Bootstrap</a>
+                                    <a href="#!" class="btn btn-sm btn-outline-secondary me-2 mb-2">Javascript</a>
+                                </p>
+                            </div>
+                            <div data-aos="fade-up" class=" mb-4 border rounded py-5 px-4 shadow-sm">
+                                <h5 class="mb-4">About company</h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="position-relative">
+                                        <i class='bi bi-patch-check-fill text-primary position-absolute end-0 bottom-0 mb-1 me-1'
+                                            title="varified"></i>
+                                        <div class="width-7x height-7x rounded-pill p-2 flex-shrink-0">
+                                            <img src="assets/img/companies/zenhub.svg" class="img-fluid rounded-circle" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 ms-4">
+                                        <h5 class="mb-3 text-info">Zenhub</h5>
+                                        <a href="#!" class="btn btn-info btn-sm">View company profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        @@include('./partials/footers/footer-jobs.html')
+          <!-- begin:Back to Top button -->
+    <a href="#" class="toTop"><svg class="progress-circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="0, 251.2"></circle>
+      </svg>
+            <i class="bi bi-chevron-up"></i>
+          </a>
+          <!-- begin:Back to Top button -->
+        <!-- scripts -->
+        <script src="assets/js/theme.bundle.min.js"></script>
+    </body>
+
+</html>

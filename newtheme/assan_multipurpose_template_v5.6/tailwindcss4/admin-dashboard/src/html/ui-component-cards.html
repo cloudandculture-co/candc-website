@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+
+    @@include('./partials/head-includes.html')
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+      @@include('./partials/app-preloader.html')
+
+
+    @@include('./partials/sidebar.html',{"page": "ui-components","components_collapse":
+    "show","component_cards_active": "active"})
+
+    <main class="relative flex flex-col lg:ms-64">
+        @@include('./partials/header-default.html')
+        <!--:Page Header:-->
+        <div class="px-4 lg:px-6 xl:px-12 py-4">
+            <div class="flex flex-wrap items-center">
+                <div class="flex-grow">
+                    <h4 class="text-2xl font-semibold">Cards</h4>
+                </div>
+                <div class="shrink-0">
+                    <!--:Breadcrumb:-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="flex items-center">
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                            </li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active"><a
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                    href="ui-component-alerts.html">Components</a></li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Cards</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content relative px-4 lg:px-6 xl:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg flex-col shadow-card">
+                        <div class="px-4 pt-3">
+                            <h5 class="text-lg font-semibold">Basic Card</h5>
+                        </div>
+                        <div class="px-4 py-3">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg flex-col shadow-card">
+                        <div class="px-4 pt-3 flex items-center">
+                            <h5 class="text-lg font-semibold pr-3 flex-grow">Card Search</h5>
+                            <div class="relative flex shrink-0 w-36">
+                                <input class="form-input form-input-sm !ps-8" id="signIn_email" placeholder="Search" type="text">
+                                <span class="pointer-events-none opacity-50 absolute flex h-full w-9 items-center justify-center peer-focus:text-primary-500 dark:peer-focus:text-primary-300">
+                                    <i class="bi bi-search text-sm leading-[1]"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="px-4 py-3">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg flex-col shadow-card">
+                        <div class="px-4 pt-3 flex items-center">
+                            <h5 class="text-lg font-semibold pr-3 flex-grow">Card Dropdown</h5>
+                             <!--:Action Dropdown:-->
+                <div class="relative dropstart">
+                    <button
+                      class="flex items-center justify-center size-6 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-primary-500 hover:text-white"
+                      data-bs-toggle="dropdown">
+                      <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                    </button>
+                    <!--:Dropdown:-->
+                    <div class="dropdown-menu min-w-40 py-2 absolute hidden [&.show]:block">
+                      <a href="#!" class="dropdown-item">
+                        Action
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Another action
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Something else here
+                      </a>
+                    </div>
+                  </div>
+                        </div>
+                        <div class="px-4 py-3">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg flex-col shadow-card">
+                        <div class="px-4 pt-3 flex items-center">
+                            <h5 class="text-lg font-semibold pr-3 truncate">Card Tabs</h5>
+                            <nav class="relative nav flex items-center justify-end flex-grow">
+                               <a class="nav-link active block text-nowrap text-sm px-3 py-1 rounded-s border border-gray-200 dark:border-gray-800 shadow-sm
+                               hover:bg-primary-500 hover:text-white hover:border-primary-500 
+                               [&.active]:bg-primary-500 [&.active]:text-white [&.active]:border-primary-500
+                               " href="#tabv1" data-bs-toggle="tab">Weekly</a>
+                               <a class="nav-link block text-nowrap text-sm px-3 py-1 border-y border-gray-200 dark:border-gray-800 shadow-sm
+                               hover:bg-primary-500 hover:text-white hover:border-primary-500 
+                               [&.active]:bg-primary-500 [&.active]:text-white [&.active]:border-primary-500
+                               " href="#tabv2" data-bs-toggle="tab">Monthly</a>
+                               <a class="nav-link block text-nowrap text-sm px-3 py-1 rounded-e border-gray-200 border dark:border-gray-800 shadow-sm
+                               hover:bg-primary-500 hover:text-white hover:border-primary-500 
+                               [&.active]:bg-primary-500 [&.active]:text-white [&.active]:border-primary-500
+                               " href="#tabv3" data-bs-toggle="tab">Yearly</a>
+                            </nav>
+                        </div>
+                        <div class="px-4 py-3 tab-content">
+                            <div class="tabe-pane fade hidden [&.active]:block active show" id="tabv1">
+                                Tab 1 content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                            <div class="tabe-pane fade hidden [&.active]:block" id="tabv2">
+                                Tab 2 content Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                            <div class="tabe-pane fade hidden [&.active]:block" id="tabv3">
+                                Tab 3 content Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg flex-col shadow-card">
+                        <div class="p-4">
+                            <h5 class="text-lg font-semibold">Card Image</h5>
+                        </div>
+                        <img src="img/900x600/2.jpg" class="max-w-full" alt="">
+                        <div class="p-4">
+                            <p class="mb-3">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <a href="#!" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg flex-col shadow-card">
+                        <img src="img/900x600/2.jpg" class="max-w-full rounded-t-md" alt="">
+                        <div class="p-4">
+                            <h5 class="text-lg font-semibold mb-1">Card Image 2</h5>
+                            <p class="mb-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <a href="#!" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="rounded-lg shadow-card bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900">
+                        <div role="button" class="flex p-4 items-center justify-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIcon1" aria-expanded="true" aria-controls="collapseIcon1">
+                          <!--:Icon:-->
+                          <span class="me-4">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M18.5 16C20.433 16 22 13.0899 22 9.5C22 5.91015 20.433 3 18.5 3M18.5 16C16.567 16 15 13.0899 15 9.5C15 5.91015 16.567 3 18.5 3M18.5 16L5.44354 13.6261C4.51605 13.4575 4.05231 13.3731 3.67733 13.189C2.91447 12.8142 2.34636 12.1335 2.11414 11.3159C2 10.914 2 10.4427 2 9.5C2 8.5573 2 8.08595 2.11414 7.68407C2.34636 6.86649 2.91447 6.18577 3.67733 5.81105C4.05231 5.62685 4.51605 5.54254 5.44354 5.3739L18.5 3M5 14L5.39386 19.514C5.43126 20.0376 5.44996 20.2995 5.56387 20.4979C5.66417 20.6726 5.81489 20.8129 5.99629 20.9005C6.20232 21 6.46481 21 6.98979 21H8.7722C9.37234 21 9.67242 21 9.89451 20.8803C10.0897 20.7751 10.2443 20.6081 10.3342 20.4055C10.4365 20.1749 10.4135 19.8757 10.3675 19.2773L10 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span>
+                          <h4 class="text-lg font-semibold truncate flex-grow pr-3">Collapse Card</h4>
+                          <!--:Collapse arrow:-->
+                          <span class="collapse-arrow flex items-center justify-center size-6 !rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-primary-500 hover:text-white !opacity-100">
+                            <span class="icon-[carbon--chevron-down] text-lg"></span>
+                          </span>
+                        </div>
+                        <div id="collapseIcon1" class="collapse show">
+                          <div class="pt-0 p-4">
+                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                            plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                            custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                            within the <code>.accordion-body</code>, though the transition does limit overflow.
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

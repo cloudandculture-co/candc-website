@@ -1,0 +1,16 @@
+.footer{
+    ul{
+        li{
+            &:not(:last-child){
+                margin-bottom: $spacer * .75;
+            }
+            a{
+                display: inline-block;
+                &:hover{
+                    transition: color .2s;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

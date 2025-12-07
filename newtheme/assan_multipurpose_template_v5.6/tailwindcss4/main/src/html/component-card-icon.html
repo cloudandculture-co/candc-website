@@ -1,0 +1,268 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+      @@include('./partials/head-includes.html')
+     <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+    <!--begin:Header-->
+ <header class="header-transparent sticky-fixed">
+
+   <!--begin:navbar-->
+   <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+     <!--Navbar-fixed-background-->
+     <div class="navbar-fixed-bg absolute"></div>
+     <div class="container relative flex flex-wrap items-center justify-center relative">
+       <!--begin:logo-->
+       <a class="navbar-brand relative w-24 block" href="index.html">
+         <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+         <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+       </a>
+       <!--end:logo-->
+
+       <!--begin:navbar-no-collapse-items-->
+       <div class="flex items-center shrink-0 ml-auto lg:order-last">
+         <!--Navbar toggler button-->
+         <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+           data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+           aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon">
+             <i></i>
+           </span>
+         </button>
+         <!--Button-->
+         <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+           <a href="#"
+             class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+         </div>
+       </div>
+       <!--end:navbar-no-collapse-items-->
+
+       <!--begin:navbar-collapse-->
+       <div
+         class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+         id="mainNavbarTheme">
+         @@include('./partials/headers/default-navbar-items.html',{"page": "components"})
+       </div>
+       <!--end:navbar-collapse-->
+     </div>
+
+   </nav>
+   <!--end:navbar-->
+ </header>
+ <!--end:header-->
+
+ 
+<main class="main-content" id="main-content">
+    <section class="relative bg-gradient-to-tr from-indigo-500 to-gray-900 text-white">
+        <div class="container relative pb-12 lg:pb-24 pt-32 lg:pt-48">
+            <div class="flex flex-wrap -mx-3 items-center">
+                <div class="w-full mx-auto px-3 lg:w-8/12  relative z-[1]">
+                   <h1 class="text-3xl lg:text-6xl text-center font-medium mb-7">Card Icon</h1>
+                <!--:Breadcrumbs:-->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb flex items-center justify-center">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li><i class="bi bi-chevron-right mx-3 text-sm opacity-50"></i></li>
+                      <li class="breadcrumb-item"><a href="#">Components</a></li>
+                      <li><i class="bi bi-chevron-right mx-3 text-sm opacity-50"></i></li>
+                      <li class="breadcrumb-item active [&.active]:opacity-50" aria-current="page">Card Icon</li>
+                    </ol>
+                  </nav>   
+                </div>
+                </div>
+            </div>
+            <!--/.row-->
+
+    </section>
+
+    <section class="relative border-b border-gray-200 dark:border-gray-800">
+      <div class="container py-16 lg:py-24">
+        <p class="text-lg font-medium text-gray-400 mb-5">Card Icon 1</p>
+          <div class="w-full lg:w-4/12">
+            <!--:Card Icon style 1:-->
+            <div class="text-center">
+              <!--Icon-->
+              <div class="mb-4 relative text-4xl lg:text-5xl font-normal text-indigo-500">
+                <i class="icon-Repeat-2 relative"></i>
+              </div>
+              <h5 class="mb-4 text-xl font-medium capitalize">Reusable elements</h5>
+              <p class="mb-5 lg:px-4 text-gray-600 dark:text-white">
+                Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
+                industries for layouts and visual mockups.
+              </p>
+              <a href="#!" class="link-hover-underline relative inline-block text-indigo-500 font-medium">
+                Learn More<i class="bi bi-arrow-right align-middle ms-1 lh-1 fs-5"></i>
+              </a>
+            </div>
+            <!--://Card Icon style 1:-->
+          </div>
+      </div>
+  </section>
+  <section class="relative border-b border-gray-200 dark:border-gray-800">
+    <div class="container py-16 lg:py-24">
+      <p class="text-lg font-medium text-gray-400 mb-5">Card Icon 2</p>
+        <div class="w-full lg:w-4/12">
+          <!--:Card Icon style 2:-->
+          <div class="border border-gray-200 dark:border-gray-800 rounded-xl py-7 px-4">
+            <!--Feature icon-->
+            <div class="w-16 h-16 flex relative items-center justify-center mb-6">
+                <svg class="absolute w-full h-full inset-0 text-indigo-500" preserveAspectRatio="none" width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M34.896 10.6995C50.8574 -4.17176 75.6287 -3.04345 90.2241 13.2197C104.82 29.4828 103.712 54.7223 87.7507 69.5936L66.0751 89.7887C50.1136 104.66 25.3424 103.532 10.747 87.2686C-3.84845 71.0054 -2.74106 45.766 13.2204 30.8947L34.896 10.6995Z" fill="currentColor"></path>
+                </svg>
+                <!--Icon-->
+                <i class="bi bi-lightning relative text-3xl leading-[1] text-white"></i>
+            </div>
+            <!--Feature title-->
+            <div class="mb-4">
+                <h5 class="text-xl font-medium capitalize">Modern &amp; elegant</h5>
+            </div>
+
+            <!--Feature description-->
+            <p class="mb-0 text-gray-600 dark:text-gray-300">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit nam libero justo
+                laoreet.
+            </p>
+        </div>
+          <!--://Card Icon style 2:-->
+        </div>
+    </div>
+</section>
+<section class="relative border-b border-gray-200 dark:border-gray-800">
+  <div class="container py-16 lg:py-24">
+    <p class="text-lg font-medium text-gray-400 mb-5">Card Icon 3</p>
+      <div class="w-full lg:w-4/12">
+        <!--:Card Icon style 3:-->
+        <div class="flex p-4 lg:p-7 border-l-4 border-indigo-500 rounded-xl shadow-lg">
+          <div class="mr-4">
+              <i class="icon-Line-Chart2 text-5xl text-indigo-500"></i>
+          </div>
+          <div class="flex-grow">
+              <h5 class="mb-3 text-xl font-medium">Business Growth
+              </h5>
+              <p class="mb-0 text-gray-600 dark:text-gray-300">
+                  There are combined alignment methods –
+                  when several types of alignment together
+                  are used in one composition.
+              </p>
+          </div>
+      </div>
+        <!--://Card Icon style 3:-->
+      </div>
+  </div>
+</section>
+<section class="relative border-b border-gray-200 dark:border-gray-800">
+  <div class="container py-16 lg:py-24">
+    <p class="text-lg font-medium text-gray-400 mb-12">Card Icon 4</p>
+      <div class="w-full lg:w-4/12">
+        <!--:Card Icon style 4:-->
+        <div class="px-4 lg:px-6 pb-7 relative rounded-xl bg-gray-50 dark:bg-gray-900 flex flex-col text-center shadow-xl">
+          <!--Feature icon-->
+      <div class="mb-4 mx-auto w-20 h-20 flex items-center justify-center relative -mt-10">
+          <!--Icon bg-->
+          <svg class="absolute text-white dark:text-black start-0 top-0 w-full h-full" preserveAspectRatio="none" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M55.4078 1.90215C58.3481 0.684225 61.6519 0.684225 64.5922 1.90215L97.8342 15.6714C100.775 16.8894 103.111 19.2255 104.329 22.1658L118.098 55.4078C119.316 58.3481 119.316 61.6519 118.098 64.5922L104.329 97.8342C103.111 100.775 100.775 103.111 97.8342 104.329L64.5922 118.098C61.6519 119.316 58.3481 119.316 55.4078 118.098L22.1658 104.329C19.2255 103.111 16.8894 100.775 15.6714 97.8342L1.90215 64.5922C0.684225 61.6519 0.684225 58.3481 1.90215 55.4078L15.6714 22.1658C16.8894 19.2255 19.2255 16.8894 22.1658 15.6714L55.4078 1.90215Z" fill="currentColor"></path>
+          </svg>
+          <!--Icon-->
+          <i class="icon-Idea-3 text-4xl text-indigo-500 relative"></i>
+      </div>
+      <div class="flex items-center mb-3 justify-center">
+          <h5 class="mb-0 text-xl font-medium capitalize">Creative &amp; elegant</h5>
+      </div>
+      <p class="mb-0 lg:w-10/12 mx-auto">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+      </p>
+      </div>
+        <!--://Card Icon style 4:-->
+      </div>
+  </div>
+</section>
+<section class="relative border-b border-gray-200 dark:border-gray-800">
+  <div class="container py-16 lg:py-24">
+    <p class="text-lg font-medium text-gray-400 mb-5">Card Icon 5</p>
+      <div class="w-full lg:w-4/12">
+        <!--:Card Icon style 5:-->
+        <div class="relative transition-all duration-[600ms] hover:shadow-lg hover:-translate-y-2 p-4 lg:p-6 rounded-2xl">
+          <div class="text-center">
+              <!--Icon-->
+              <div class="mb-7 mx-auto w-20 h-20 flex items-center justify-center bg-indigo-500 text-white  relative rounded-full text-3xl leading-[1]">
+                  <i class="icon-Light-Bulb"></i>
+              </div>
+              <!--Heading-->
+              <h5 class="mb-4 text-xl font-medium">Modern & Elegant</h5>
+              <!--text-->
+              <p class="mb-0 text-gray-600 dark:text-gray-300">
+                  Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                  publishing
+                  industries for layouts and visual mockups.
+              </p>
+          </div>
+      </div>
+        <!--://Card Icon style 5:-->
+      </div>
+  </div>
+</section>
+<section class="relative border-b border-gray-200 dark:border-gray-800">
+  <div class="container py-16 lg:py-24">
+    <p class="text-lg font-medium text-gray-400 mb-5">Card Icon 6</p>
+      <div class="w-full lg:w-4/12">
+        <!--:Card Icon style 5:-->
+        <div
+                class="flex flex-col md:flex-row py-7 px-4 bg-white rounded-xl border border-gray-200 dark:border-gray-800 dark:bg-gray-900 transition-all duration-300 hover:shadow-xl">
+                <!--feature Icon-->
+                <div class="w-20 h-20 mb-6 md:mb-0 md:mr-5 text-indigo-500">
+                  <div data-fill="currentColor" data-src="assets/img/graphics/icons/database.svg"
+                  class="w-full h-full svg-container"></div>
+                </div>
+  
+                <!--Feature icon text-->
+                <div>
+                  <h5 class="text-xl font-medium mb-3">Unlimited space</h5>
+                  <p class="mb-0 text-gray-600 dark:text-gray-300">
+                    Lorem ipsum dolor sit sed do eiusmod tempor
+                    incididunt ut labore et dolore.
+                  </p>
+                </div>
+              </div>
+        <!--://Card Icon style 5:-->
+      </div>
+  </div>
+</section>
+</main>
+
+   
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-1.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+     <!-- end:Back to Top button -->
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,294 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+      @@include('./partials/head-includes.html')
+     <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+    <!--begin:Header-->
+ <header class="header-transparent sticky-fixed">
+
+   <!--begin:navbar-->
+   <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+     <!--Navbar-fixed-background-->
+     <div class="navbar-fixed-bg absolute"></div>
+     <div class="container relative flex flex-wrap items-center justify-center relative">
+       <!--begin:logo-->
+       <a class="navbar-brand relative w-24 block" href="index.html">
+         <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+         <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+       </a>
+       <!--end:logo-->
+
+       <!--begin:navbar-no-collapse-items-->
+       <div class="flex items-center shrink-0 ml-auto lg:order-last">
+         <!--Navbar toggler button-->
+         <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+           data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+           aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon">
+             <i></i>
+           </span>
+         </button>
+         <!--Button-->
+         <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+           <a href="#"
+             class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+         </div>
+       </div>
+       <!--end:navbar-no-collapse-items-->
+
+       <!--begin:navbar-collapse-->
+       <div
+         class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+         id="mainNavbarTheme">
+         @@include('./partials/headers/default-navbar-items.html',{"page": "components"})
+       </div>
+       <!--end:navbar-collapse-->
+     </div>
+
+   </nav>
+   <!--end:navbar-->
+ </header>
+ <!--end:header-->
+
+ 
+<main class="main-content" id="main-content">
+    <section class="relative bg-gradient-to-tr from-indigo-500 to-gray-900 text-white">
+        <div class="container relative pb-12 lg:pb-24 pt-32 lg:pt-48">
+            <div class="flex flex-wrap -mx-3 items-center">
+                <div class="w-full mx-auto px-3 lg:w-8/12  relative z-[1]">
+                   <h1 class="text-3xl lg:text-6xl text-center font-medium mb-7">Call to actions</h1>
+                <!--:Breadcrumbs:-->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb flex items-center justify-center">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li><i class="bi bi-chevron-right mx-3 text-sm opacity-50"></i></li>
+                      <li class="breadcrumb-item"><a href="#">Components</a></li>
+                      <li><i class="bi bi-chevron-right mx-3 text-sm opacity-50"></i></li>
+                      <li class="breadcrumb-item active [&.active]:opacity-50" aria-current="page">Call to actions</li>
+                    </ol>
+                  </nav>   
+                </div>
+                </div>
+            </div>
+            <!--/.row-->
+
+    </section>
+
+    <section class="relative overflow-hidden">
+
+      <div class="container py-9 lg:py-16 relative">
+        <div class="flex flex-wrap -mx-3 pb-12 relative">
+          <div class="w-full px-3 lg:w-2/3 mx-auto text-center">
+            <h2 class="mb-7 text-4xl lg:text-5xl" data-text-split>
+              Bring Assan template to life and start building — today
+            </h2>
+            <p class="mb-12 lg:px-12 text-lg text-gray-600 dark:text-gray-300">
+              There are combined alignment methods – when several types of alignment together are
+              used
+              in one composition.
+            </p>
+            <div>
+              <!--begin: button-->
+            <a href="#!" class="btn btn-lg bg-indigo-500 hover:bg-indigo-600 text-white">
+              Purchase Now
+             </a>
+             <!--end: button-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="relative bg-orange-500/10 overflow-hidden">
+      <div class="container py-16 lg:py-24 relative">
+          <div class="flex flex-wrap -mx-4 justify-center text-center">
+              <div class="lg:w-4/5 mx-auto px-4">
+                  <!--CTA Title-->
+                  <h3 data-animation="fadeInUp" data-delay=".1" class="text-4xl lg:text-6xl font-medium mb-9">Schedule a meeting with one of
+                      our experts and make the <span class="text-gradient">best decision</span> for your
+                      business.</h3>
+
+                  <!--CTA action button-->
+                  <div data-animation="fadeInUp" data-delay=".2">
+                      <a href="#!" class="btn btn-lg bg-indigo-500 hover:-translate-y-1 hover:shadow-lg hover:bg-indigo-600 text-white">
+                          Schedule a meeting
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section class="relative text-white bg-gradient-to-r from-indigo-700 to-purple-600 overflow-hidden">
+    <div class="container py-16 lg:py-24 relative">
+        <div class="flex flex-wrap -mx-3 pt-5 pt-16 justify-center items-center">
+            <div class="lg:w-4/5 mx-auto text-center">
+                <!--Subtitle-->
+                <div class="flex justify-center items-center mb-5">
+                    <div class="border-orange-300 w-6 border-t-2"></div>
+                    <h6 class="mb-0 ms-3 text-white/50 font-medium">That's right</h6>
+                </div>
+                <!--Title-->
+                <h2 class="text-4xl lg:text-5xl font-medium mb-5" data-text-split>Make an impact with design
+                </h2>
+                <!--CTA Description text-->
+                <p class="mb-9 mx-auto text-lg text-white/75">Build stunning website
+                    with beautifuly designed layouts and components.</p>
+
+                <div>
+                    <!--CTA action button-->
+                    <a href="#!" class="btn btn-lg bg-white text-gray-700 hover:bg-gray-200 hover:shadow">
+                        <span>Start building</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="relative overflow-hidden">
+  <div class="container py-16 lg:py-24 relative">
+      <div class="lg:w-7/12 text-center mx-auto relative z-[1]">
+          <h2 class="mb-6 text-4xl lg:text-5xl font-medium" data-text-split>
+              Your business deserved a good looking website.
+          </h2>
+          <p class="mb-9 lg:w-9/12 text-lg text-gray-600 dark:text-gray-300 mx-auto">
+              There are combined alignment methods – when several types of alignment together are used
+              in one composition.
+          </p>
+          <div>
+              <a href="#!" class="btn btn-lg bg-indigo-500 hover:bg-indigo-600 text-white">
+                  Start building
+              </a>
+          </div>
+      </div>
+      <!--End Col-->
+  </div>
+</section>
+<section class="bg-gray-50 dark:bg-gray-900 relative">
+  <div class="container py-16 lg:py-24 relative z-[1]">
+      <div class="flex flex-wrap -mx-3 pb-5 items-center">
+          <div class="lg:w-5/12 w-full px-3 mb-7 mb-lg-0">
+              <h6 class="mb-4 text-gray-400">Careers</h6>
+              <h2 class="text-4xl lg:text-5xl font-medium" data-text-split>Want to create a lasting impact in people's lives?</h2>
+          </div>
+          <div class="lg:w-7/12 xl:w-6/12 w-full px-3 xl:ml-auto">
+              <p class="mb-5 text-gray-600 dark:text-gray-300 text-lg">
+                  We're always looking for new and amazing features to add the Assan, quis nostrud ullamco
+                  laboris nisi ut aliquip ex ea commodo. Duis aute irure dolor in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                  sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <a href="#" class="link-hover-underline inline-block relative">View Open Positions
+                  <i class="bi bi-arrow-right text-xl align-middle leading-[1]"></i>
+              </a>
+          </div>
+      </div>
+  </div>
+</section>
+<section>
+  <div class="container py-16 lg:py-24">
+      <div class="px-4 rounded-xl shadow-xl py-9 lg:px-9 bg-indigo-500 text-white relative overflow-hidden">
+          <svg class="absolute right-0 bottom-0 mb-4 text-white/20" width="200" height="400" preserveAspectRatio="none" viewBox="0 0 150 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M150 300C130.302 300 110.796 296.12 92.5975 288.582C74.3986 281.044 57.8628 269.995 43.934 256.066C30.0052 242.137 18.9563 225.601 11.4181 207.403C3.87986 189.204 -6.2614e-07 169.698 0 150C6.2614e-07 130.302 3.87987 110.796 11.4181 92.5975C18.9563 74.3987 30.0052 57.8628 43.934 43.934C57.8628 30.0052 74.3987 18.9563 92.5975 11.4181C110.796 3.87986 130.302 3.51961e-06 150 5.00679e-06L150 37.5C135.226 37.5 120.597 40.4099 106.948 46.0636C93.299 51.7172 80.8971 60.0039 70.4505 70.4505C60.0039 80.8971 51.7172 93.299 46.0636 106.948C40.4099 120.597 37.5 135.226 37.5 150C37.5 164.774 40.4099 179.403 46.0636 193.052C51.7172 206.701 60.0039 219.103 70.4505 229.55C80.8971 239.996 93.299 248.283 106.948 253.936C120.597 259.59 135.226 262.5 150 262.5V300Z" fill="currentColor"></path>
+          </svg>
+
+          <div class="flex flex-wrap -mx-3 items-end relative">
+              <div class="w-full px-3 lg:w-7/12 text-center lg:text-start">
+                  <p class="text-white mb-2">Let's start building</p>
+                  <h2 class="mb-7 lg:mb-0 text-4xl lg:text-5xl font-medium" data-text-split>Stunning websites ease</h2>
+              </div>
+              <div class="w-full px-3 lg:w-5/12 lg:text-right text-center">
+                  <a href="#!" class="btn btn-lg border boder-white hover:bg-white text-white hover:text-gray-700 mr-2">Contact sales</a>
+                  <a href="#!" class="btn btn-lg border border-white bg-white hover:bg-transparent text-gray-700 hover:text-white">Purchase Now</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="border-t border-gray-200 dark:border-gray-800 overflow-hidden relative">
+  <div class="container py-16 lg:py-24">
+      <div class="flex flex-wrap -mx-3 items-end relative">
+          <div class="w-full px-3 lg:w-7/12 text-center lg:text-left">
+              <h5 class="mb-3 text-gray-400">Let's start building</h5>
+              <h1 class="mb-5 lg:mb-0 text-4xl lg:text-5xl font-medium" data-text-split>Stunning websites ease</h1>
+          </div>
+          <div class="w-full px-3 lg:w-5/12 lg:text-right text-center flex gap-2 flex-col sm:flex-row justify-center lg:justify-end">
+              <a href="#!" class="btn btn-lg bg-indigo-500 text-white hover:bg-indigo-600">Contact sales</a>
+              <a href="#!" class="btn btn-lg bg-orange-500 text-white hover:bg-orange-600">Purchase Now</a>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="bg-gradient-to-r from-indigo-700 to-purple-600 text-white relative py-16 lg:py-24 overflow-hidden">
+  <div class="container">
+      <div class="px-4 md:w-10/12 mx-auto md:flex md:items-center">
+          <div class="mb-7 md:mb-0 md:pr-12 lg:pr-16 flex-grow">
+              <h5 class="text-4xl lg:text-5xl font-medium mb-5" data-text-split>Build stunning website faster than ever</h5>
+              <p class="opacity-75 mb-0">Your business deserve a stunning website. </p>
+          </div>
+          <a class="btn btn-lg bg-white text-gray-700 hover:text-indigo-500 shrink-0" href="#"><span>Purchase Now</span></a>
+      </div>
+  </div>
+  <!-- / .End container -->
+</section>
+<section class="relative dark">
+  <div class="container relative z-[1] py-16 lg:py-24">
+      <div class="px-6 lg:px-9 py-12 lg:py-16 bg-gray-800 rounded-2xl text-white overflow-hidden relative">
+          <img src="assets/img/backgrounds/bg-blur2.png" class="h-auto w-full md:w-10/12 absolute right-0 top-0 -translate-y-2/3" alt="">
+          <div class="relative">
+              <h3 class="text-4xl lg:text-5xl font-medium mb-7" data-text-split>Get stories direct to your inbox</h3>
+              <form>
+                  <div class="flex flex-col md:flex-row md:items-center gap-2 lg:w-7/12 mb-4">
+                      <input type="email" name="email" class="input input-lg" placeholder="Email Address" required="">
+                      <button type="submit" class="btn btn-lg bg-white text-gray-700 hover:text-indigo-500">
+                          <span>Subscribe</span>
+                      </button>
+                  </div>
+              </form>
+
+              <p class="text-xs text-white/75 mb-0">
+                  We’ll never share your details.
+                  View our <a href="#!" class="link-hover-underline inline-block relative">Privacy Policy</a> for more info.
+              </p>
+          </div>
+      </div>
+  </div>
+</section>
+</main>
+
+   
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-1.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- end:Back to Top button -->
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

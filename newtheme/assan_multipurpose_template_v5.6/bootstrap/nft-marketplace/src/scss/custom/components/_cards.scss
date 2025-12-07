@@ -1,0 +1,54 @@
+//Hover cards
+.card-hover{
+    .card-img,.hover-arrow{
+        transition: transform .4s;
+    }
+    .hover-visible{
+        transition: all .25s;
+        opacity: 0;
+        transform: translateY(100%);
+        .btn{
+            border: 0px;
+        }
+    }
+    &:hover{
+        .card-img{
+            transform: scale(1.15);
+        }
+        .hover-arrow{
+            transform: translateX(5px);
+        }
+        .hover-visible{
+            transform:none;
+            opacity: 1;
+        }
+    }
+}
+
+
+//Favorite button
+.btn-favorite{
+    position: relative;
+    &::before{
+        content: "\e87e";
+        font-family: "Material Icons";
+        font-size: 1.1rem;
+        vertical-align: middle;
+        margin-right: .25rem;
+        color: currentColor;
+    }
+    &.active{
+        color: $danger;
+        &::before{
+            content: "\e87d";
+        }
+    }
+}
+
+.countdown{
+min-width:200px;
+}
+
+.card-divider{
+    color: var(--#{$prefix}card-bg);
+}

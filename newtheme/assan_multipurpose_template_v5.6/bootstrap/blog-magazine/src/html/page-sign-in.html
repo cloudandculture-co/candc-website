@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Assan | Blog</title>
+        <!--Swiper-->
+        <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+        @@include('./partials/head.html')
+    </head>
+
+    <body>
+        <div class="d-flex flex-column flex-root">
+            <!--Page-->
+            <div class="page-lg d-flex flex-row flex-column-fluid">
+
+                @@include('./partials/page-sidebar.html')
+
+                <!--:Page content:-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+                    
+                    <!--::Page content with sidebar::-->
+                    <div class="content d-flex flex-column-fluid position-relative">
+
+                        <!--:Content inner layout:-->
+                        <div class="d-flex flex-column flex-md-row h-100 w-100">
+                            <!--:Content inner Content:-->
+                            <div class="col-md-7 col-lg-8 layout-content d-flex flex-column h-100">
+                                <div class="position-relative px-3 px-xl-7 py-8 w-100 mx-auto w-md-75">
+                                    <h2 class="mb-1">
+                                        Welcome back!
+                                    </h2>
+                                    <p class="mb-4 text-body-secondary">
+                                        Please Sign In with details...
+                                    </p>
+                                    <div>
+                                        <form class="needs-validation" novalidate>
+                                            <div class="mb-3">
+                                                <input type="email" class="form-control" required id="username" autofocus
+                                                    placeholder="Username">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="password" id="password" required class="form-control"
+                                                    placeholder="Password">
+                                            </div>
+                                            <div class="mb-3 d-flex justify-content-between">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label small" for="flexCheckDefault">
+                                                        Remember me
+                                                    </label>
+                                                </div>
+                                                <div>
+                                                    <label class="text-end d-block small mb-0">
+                                                        <a href="#!">Forget Password?</a></label>
+                                                </div>
+                                            </div>
+    
+                                            <div class="d-grid">
+                                                <button class="btn btn-primary" type="submit">
+                                                    Sign in
+                                                </button>
+                                            </div>
+                                             <!--Divider-->
+                                    <div class="d-flex align-items-center my-4">
+                                        <span class="flex-grow-1 border-bottom pt-1"></span>
+                                        <span
+                                            class="d-inline-flex flex-center mx-2">or</span>
+                                        <span class="flex-grow-1 border-bottom pt-1"></span>
+                                    </div>
+                                    <div class="d-grid">
+                                        <a href="#!"
+                                            class="btn btn-outline-secondary">
+                                            <svg class="width-2x height-2x me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+                                            <span>sign In with facebook</span>
+                                        </a>
+                                    </div>
+                                        </form>
+    
+                                        <!---->
+                                        <p class="pt-4 mb-0 small text-body-secondary">
+                                            Don’t have an account yet? <a href="page-sign-up.html"
+                                                class="ms-2 fw-semibold link-underline">Sign Up</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--:Content inner Sidebar:-->
+                            <div class="col-md-5 col-lg-4 bg-style-tertiary content-inner-sidebar d-flex flex-column h-100 border-start position-relative">
+                               
+                               <div class="position-sticky top-0">
+                                <!--:CTA:-->
+                                <div class="position-relative py-5 px-3 px-xl-5">
+                                    <h6 class="mb-4">💎 Unlock endless posibilities</h6>
+                                    <a href="page-plans.html" class="btn btn-secondary">Upgrade to Pro</a>
+                                </div>
+                               </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--:Footer:-->
+                    @@include('./partials/footer-default.html')
+                </main>
+
+            </div>
+        </div>
+        <!--script-->
+        <script src="assets/js/theme.bundle.min.js"></script>
+
+        <!--Select scripts-->
+        <script src="assets/vendor/node_modules/js/choices.min.js"></script>
+        <script>
+            var cSelect = document.querySelectorAll("[data-choices]");
+            cSelect.forEach(el => {
+                const t = {
+                    ...el.dataset.choices ? JSON.parse(el.dataset.choices) : {},
+                    ...{
+                        classNames: {
+                            containerInner: el.className,
+                            input: "form-control",
+                            inputCloned: "form-control-sm",
+                            listDropdown: "dropdown-menu",
+                            itemChoice: "dropdown-item",
+                            activeState: "show",
+                            selectedState: "active"
+                        }
+                    }
+                }
+                new Choices(el, t)
+            });
+
+        </script>
+    </body>
+
+</html>

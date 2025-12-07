@@ -1,0 +1,10 @@
+//Theme cards uses for widgets
+.card{
+    box-shadow: $card-box-shadow;
+}
+[data-bs-theme=dark]{
+    .card{
+        background-color: var(--#{$prefix}body-bg);
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,224 @@
+<!--:App Header:-->
+<header class="bg-white/80 dark:bg-black/75 backdrop-blur py-3 z-[55] sticky top-0 border-b border-gray-200 dark:border-gray-800">
+    <div class="flex items-center px-4 lg:px-6 xl:px-12 h-full">
+      <!--:Header Left:-->
+      <div class="shrink-0 flex items-center">
+
+        <!--:Main Sidebar opener for :lg down:-->
+        <div>
+          <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebarMain"
+            class="lg:hidden mr-2 w-8 h-8 rounded-full flex items-center justify-center transition-all hover:bg-primary-500 hover:text-white">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <a class="flex items-center lg:hidden" href="index.html">
+          <span
+            class="w-8 h-8 flex items-center justify-center text-sm font-semibold me-2 rounded-full bg-white text-primary-500">
+            <svg width="16" viewBox="0 0 32 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.49072 8.66002C8.09029 5.65678 9.38962 2.0869 12.3929 0.686464C15.3961 -0.71397 18.966 0.585362 20.3664 3.5886L30.5093 25.34C31.9097 28.3432 30.6104 31.9131 27.6071 33.3135C24.6039 34.714 21.034 33.4146 19.6336 30.4114L9.49072 8.66002Z" fill="currentColor"></path>
+    <path d="M1.53571 30.5093C0.135274 27.506 1.4346 23.9361 4.43784 22.5357C7.44108 21.1353 11.011 22.4346 12.4114 25.4379C13.8118 28.4411 12.5125 32.011 9.50926 33.4114C6.50602 34.8118 2.93614 33.5125 1.53571 30.5093Z" fill="currentColor"></path>
+    </svg>
+          </span>
+        </a>
+
+        <!--:Header Search:-->
+        <div>
+          <!-- Trigger button -->
+          <button data-bs-toggle="modal" tabindex="-1" data-bs-target="#modalSearch"
+            class="w-8 h-8 rounded-full transition-all hover:bg-primary-500 hover:text-white flex items-center justify-center">
+            <span class="icon-[tabler--search] text-lg"></span>
+          </button>
+          </div>
+        </div>
+     
+      <!--:Header right:-->
+      <div class="flex items-center ml-auto">
+        
+        <!--:Notifications:-->
+        <div class="sm:relative mr-2">
+          <button data-bs-toggle="dropdown" data-bs-display="static" data-bs-auto-close="outside"
+            type="button"
+            class="w-8 h-8 hover:bg-primary-500 hover:text-white relative rounded-full transition-all duration-200 flex items-center justify-center">
+            <span class="icon-[tabler--bell] text-xl"></span>
+            <!--:Badge:-->
+            <span class="absolute top-0 right-0 block mr-px mt-px">
+              <span class="relative flex h-2 w-2">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
+              </span>
+            </span>
+          </button>
+
+          <!--:Notifications-dropdown:-->
+          <div class="dropdown-menu absolute top-full right-0 w-[calc(100%-1rem)] mr-[.5rem] sm:w-96 overflow-hidden rounded-md -translate-y-1 opacity-0 invisible [&.show]:opacity-100 [&.show]:visible [&.show]:-translate-y-0 transition-all duration-300 sm:mt-3">
+            <!--:Notifications Header:-->
+            <div class="px-4 py-3 flex items-center justify-between">
+              <h5 class="text-lg font-semibold">Notifications</h5>
+              <a href="#!"
+                class="shrink-0 size-6 transition-all rounded-full flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-600">
+                <span class="icon-[tabler--settings]"></span>
+              </a>
+            </div>
+            <!--:Content:-->
+            <div class="mb-0 h-72 overflow-y-auto">
+
+                <!--//Notification item start//-->
+                <a href="#"
+                  class="flex unread !font-normal items-center px-4 py-3 transition-all hover:bg-gray-100 dark:hover:bg-white/3">
+                  <div class="block mr-4 shrink-0">
+                    <span
+                      class="shrink-0 relative block after:content-[''] after:w-3 after:h-3 after:rounded-full after:bg-success-500
+                        after:block after:absolute after:bottom-0 after:right-0 after:border-2 after:border-white dark:after:border-gray-900">
+                      <img src="img/avatars/w1.jpg" class="w-10 h-10 rounded-full" alt="">
+                    </span>
+                  </div>
+
+                  <div class="flex-grow">
+                    <div class="flex items-center mb-0.5">
+                      <h6 class="font-semibold truncate pr-3">Nikita Miller</h6>
+                      <small class="text-sm opacity-60 block shrink-0">Just now</small>
+                      <!--:New notification badge:-->
+                      <span class="w-2 h-2 block rounded-full bg-primary-500 ml-auto"></span>
+                    </div>
+                    <!--:Notification message:-->
+                    <p>Sent you a message <span class="block font-semibold">
+                        "are you there?"
+                      </span></p>
+                  </div>
+                </a>
+                <!--//Notification item start//-->
+                <a href="#"
+                  class="flex unread !font-normal items-center px-4 py-3 transition-all hover:bg-gray-100 dark:hover:bg-white/3">
+                  <div class="block mr-4 shrink-0">
+                    <span
+                      class="shrink-0 relative block after:content-[''] after:w-3 after:h-3 after:rounded-full after:bg-success-500
+                        after:block after:absolute after:bottom-0 after:right-0 after:border-2 after:border-white dark:after:border-gray-900">
+                      <img src="img/avatars/m1.jpg" class="w-10 h-10 rounded-full" alt="">
+                    </span>
+                  </div>
+
+                  <div class="flex-grow">
+                    <div class="flex items-center mb-0.5">
+                      <h6 class="font-semibold truncate pr-3">Angel D Maria</h6>
+                      <small class="text-sm opacity-60 block shrink-0">2h</small>
+                      <!--:New notification badge:-->
+                      <span class="w-2 h-2 block rounded-full bg-primary-500 ml-auto"></span>
+                    </div>
+                    <!--:Notification message:-->
+                    <p>Assigned you a new task <strong>
+                        #UI-3928
+                      </strong></p>
+                  </div>
+                </a>
+                <!--//Notification item start//-->
+                <a href="#"
+                  class="flex read !font-normal items-center px-4 py-3 transition-all hover:bg-gray-100 dark:hover:bg-white/3">
+                  <div class="block mr-4 shrink-0">
+                    <span class="flex items-center justify-center w-10 h-10 rounded-full bg-success-500 text-white">
+                     <span class="icon-[tabler--shield-check] text-lg"></span>
+                    </span>
+                  </div>
+
+                  <div class="flex-grow">
+                    <div class="flex items-center mb-0.5">
+                      <h6 class="font-semibold truncate pr-3 text-inherit">Password updated</h6>
+                      <small class="text-sm opacity-60 block shrink-0">2h</small>
+                      <!--:New notification badge:-->
+                      <!-- <span class="w-2 h-2 block rounded-full bg-primary-500 ml-auto"></span> -->
+                    </div>
+                    <!--:Notification message:-->
+                    <p>Your account password updated successfully</p>
+                  </div>
+                </a>
+                <!--//Notification item start//-->
+                <a href="#"
+                  class="flex read !font-normal items-center px-4 py-3 transition-all hover:bg-gray-100 dark:hover:bg-white/3">
+                  <div class="block mr-4 shrink-0">
+                    <span class="flex items-center justify-center w-10 h-10 rounded-full bg-info-500 text-white">
+                      <span class="icon-[tabler--filter-dollar] text-lg"></span>
+                    </span>
+                  </div>
+
+                  <div class="flex-grow">
+                    <div class="flex items-center mb-0.5">
+                      <h6 class="font-semibold truncate pr-3 text-inherit">Budget Increased</h6>
+                      <small class="text-sm opacity-60 block shrink-0">1d</small>
+                      <!--:New notification badge:-->
+                      <!-- <span class="w-2 h-2 block rounded-full bg-primary-500 ml-auto"></span> -->
+                    </div>
+                    <!--:Notification message:-->
+                    <p>Project <strong>project-admin-392</strong> budget increased by $3849</p>
+                  </div>
+                </a>
+              </div>
+            <!--:Notifications footer:-->
+            <div class="px-4 py-3 flex items-center border-t border-gray-200 dark:border-gray-800">
+              <div class="flex-grow text-center">
+                <a href="#!" class=" text-primary-500 border-b border-dashed hover:text-current">View All
+                  Notifications</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--:Dark Mode:-->
+        <button data-bs-toggle="tooltip" data-bs-title="toggle theme" data-bs-placement="left"
+          class="toggle-mode w-8 h-8 rounded-full transition-all hover:bg-primary-500 hover:text-white flex items-center justify-center"
+          type="button">
+          <span class="dark:flex items-center justify-center hidden">
+            <span class="icon-[carbon--sun] text-xl"></span>
+          </span>
+          <span class="flex items-center justify-center dark:hidden">
+            <span class="icon-[carbon--moon] text-xl"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  
+          <!-- Modal -->
+          <div id="modalSearch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade z-[70] fixed left-0 top-0 w-full h-full hidden [&.show]:block overflow-y-auto overflow-x-hidden">
+            <div class="modal-dialog w-full md:w-3/5 xl:w-2/5 mx-auto my-4 px-4">
+                <!-- Modal dialog -->
+             <div class="modal-content overflow-hidden bg-white dark:bg-gray-900 rounded-md">
+               <div class="flex items-center relative">
+                 <span class="absolute left-0 top-1/2 -translate-y-1/2 ml-4 opacity-50 flex items-center">
+                  <span class="icon-[tabler--search]"></span>
+                  </span>
+                 <input autofocus class="focus:outline-0 bg-transparent w-full py-4 px-10" type="text"
+                   placeholder="Search Here...">
+                 <button type="button"
+                   class="absolute h-full right-0 top-0 w-9 flex items-center justify-start text-sm text-gray-400 hover:text-primary-500"
+                   data-bs-dismiss="modal">
+                   Esc
+                 </button>
+               </div>
+               <!--:Search results:-->
+               <div class="flex flex-col border-t border-gray-200 dark:border-gray-900">
+                 <span class="block px-4 py-2 text-gray-400">Recent Searches</span>
+                 <a href="#!"
+                   class="transition-all flex items-center px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-800">
+                   <span class="icon-[tabler--arrow-up-right] text-lg me-2"></span> Dashboard
+                 </a>
+                 <a href="#!"
+                   class="transition-all flex items-center px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-800">
+                   <span class="icon-[tabler--arrow-up-right] text-lg me-2"></span> Profile
+                 </a>
+                 <a href="#!"
+                   class="transition-all flex items-center px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-800">
+                   <span class="icon-[tabler--arrow-up-right] text-lg me-2"></span> Tasks
+                 </a>
+                 <a href="#!"
+                   class="transition-all flex items-center px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-800">
+                   <span class="icon-[tabler--arrow-up-right] text-lg me-2"></span> Settings
+                 </a>
+               </div>
+             </div>
+            </div>
+            </div>

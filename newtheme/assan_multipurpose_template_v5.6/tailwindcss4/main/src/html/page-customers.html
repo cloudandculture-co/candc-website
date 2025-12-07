@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    <!--Swiper slider-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+    
+    @@include('./partials/head-includes.html')
+    <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+     <!--begin:Header-->
+  <header class="header-transparent sticky-fixed">
+
+    <!--begin:navbar-->
+    <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+      <!--Navbar-fixed-background-->
+      <div class="navbar-fixed-bg absolute"></div>
+      <div class="container relative flex flex-wrap items-center justify-center relative">
+        <!--begin:logo-->
+        <a class="navbar-brand relative w-24 block" href="index.html">
+          <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+          <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+        </a>
+        <!--end:logo-->
+
+        <!--begin:navbar-no-collapse-items-->
+        <div class="flex items-center shrink-0 ml-auto lg:order-last">
+          <!--Navbar toggler button-->
+          <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <i></i>
+            </span>
+          </button>
+          <!--Button-->
+          <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+            <a href="#"
+              class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+          </div>
+        </div>
+        <!--end:navbar-no-collapse-items-->
+
+        <!--begin:navbar-collapse-->
+        <div
+          class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+          id="mainNavbarTheme">
+          @@include('./partials/headers/default-navbar-items.html',{"page": "pages"})
+        </div>
+        <!--end:navbar-collapse-->
+      </div>
+
+    </nav>
+    <!--end:navbar-->
+  </header>
+  <!--end:header-->
+
+ 
+<main class="main-content" id="main-content">
+    <section class="relative bg-gradient-to-tr from-indigo-500 to-gray-900 text-white">
+        <div class="container relative lg:pb-0 pt-32">
+            <div class="flex flex-wrap -mx-3 items-center">
+                <div class="lg:order-last w-full px-3 lg:w-6/12 me-auto relative z-[1] mb-7 lg:mb-0">
+                    <div class="w-48 mb-7">
+                        <img src="assets/img/partners/white/postmates.svg" alt="" class="max-w-full opacity-75">
+                    </div>
+                    <p class="text-3xl lg:text-4xl leading-normal relative mb-7">
+                        “ Loved working with the beautiful theme. Everything clean and professional,
+                        also very helpful throughout the customisation. ”
+                    </p>
+                    <div class="mb-7">
+                        <h5 class="mb-1 text-xl font-medium">
+                           Jimmy Adams</h5>
+                        <small class="block text-white/75">Marketing head at Postmates</small>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <a href="#!" class="btn btn-lg bg-white text-gray-700 hover:bg-gray-200">
+                            Read story
+                            <i class="bi bi-link-45deg ml-1"></i>
+                        </a>
+                        <a href="#stories" class="btn btn-lg border border-white text-white hover:bg-white hover:text-gray-700">
+                            More stories
+                            <i class="bi bi-chevron-down ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full px-3 lg:w-6/12 lg:order-1">
+                    <div class="relative d-none d-lg-block">
+                        <img src="assets/img/backgrounds/trans1.png" alt="" class="max-w-full">
+                    </div>
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.content-->
+
+    </section>
+    <section class="relative border-b border-gray-200 dark:border-gray-800" id="stories">
+        <div class="container py-16 lg:py-24 relative z-[1]">
+            <div data-animation="fadeInUp" class="flex flex-wrap -mx-3 mb-12">
+                <div class="w-full px-3 lg:w-10/12 xl:w-7/12 mx-auto text-center">
+                    <h2 class="text-4xl lg:text-5xl font-medium mb-7">Trusted by the world’s most inspiring enterprises</h2>
+                    <p class="text-gray-400">Latest customer stories</p>
+                </div>
+            </div>
+            <div data-animation="fadeInUp" data-delay=".1" class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <div
+                        class="flex flex-col md:flex-row overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 hover:shadow-xl hover:-translate-y-2 transition-all duration-200 bg-white dark:bg-gray-900">
+                        <div class="md:w-4/12 w-full shrink-0">
+                            <div
+                                class="flex flex-col md:border-r border-gray-200 dark:border-gray-800 pt-5 md:pb-7 px-5 md:items-center justify-center h-full">
+                                <img src="assets/img/partners/deliveroo.svg" alt=""
+                                    class="w-32 h-auto dark:hidden">
+                                <img src="assets/img/partners/white/deliveroo.svg" alt=""
+                                    class="w-32 h-auto hidden dark:block">
+                            </div>
+                        </div>
+                        <div class="h-full p-4 py-7 md:py-12 md:pr-7 md:pl-0 flex-grow">
+                            <div class="md:flex md:items-center">
+                                <div class="shrink-0 md:-ml-8">
+                                    <img src="assets/img/avatar/1.jpg" alt=""
+                                        class="w-16 rounded-full border-4 border-white dark:border-gray-900 mb-4" alt="">
+                                </div>
+                                <div class="md:pl-9">
+                                    <p class="text-2xl mb-7">
+                                        “ Loved working with the beautiful theme. Everything clean and
+                                        professional,
+                                        also very helpful throughout the customisation. Looking forward to buy
+                                        more
+                                        license of Assan again in the future.”
+                                    </p>
+                                    <div class="mb-5">
+                                        <h5 class="mb-2 text-xl font-medium">Anastasia</h5>
+                                        <small class="block text-gray-400"> at Deliveroo</small>
+                                    </div>
+                                    <a href="#" class="link-underline font-medium">
+                                        <span>Read full story</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-animation="fadeInUp" data-delay=".1" class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <div
+                        class="flex flex-col md:flex-row overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 hover:shadow-xl hover:-translate-y-2 transition-all duration-200 bg-white dark:bg-gray-900">
+                        <div class="md:w-4/12 shrink-0 w-full md:order-last">
+                            <div
+                                class="flex flex-col md:border-s border-gray-200 dark:border-gray-800 pt-5 md:pb-7 px-5 md:items-center justify-center h-full">
+                                <img src="assets/img/partners/booking.com.svg" alt=""
+                                    class="w-32 h-auto dark:hidden">
+                               <img src="assets/img/partners/white/booking.com.svg" alt=""
+                                    class="w-32 h-auto dark:block hidden">
+                            </div>
+                        </div>
+                        <div class="h-full p-4 py-7 md:py-12 md:pl-7 md:pr-0 flex-grow">
+                            <div class="md:flex md:items-center ">
+                                <div class="md:order-last z-[1] shrink-0 md:-mr-8">
+                                    <img src="assets/img/avatar/2.jpg" alt=""
+                                        class="w-16 rounded-full mb-4 border-4 border-white dark:border-gray-900" alt="">
+                                </div>
+                                <div class="md:pr-9">
+                                    <p class="text-2xl mb-7">
+                                        “ Loved working with the beautiful theme. Everything clean and
+                                        professional,
+                                        also very helpful throughout the customisation. Looking forward to buy
+                                        more
+                                        license of Assan again in the future.”
+                                    </p>
+                                    <div class="mb-5">
+                                        <h5 class="mb-2 text-xl font-medium">Anastasia</h5>
+                                        <small class="block text-gray-400"> at Deliveroo</small>
+                                    </div>
+                                    <a href="#" class="link-underline font-medium">
+                                        <span>Read full story</span>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-animation="fadeInUp" data-delay=".1" class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <div
+                        class="flex flex-col md:flex-row overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 hover:shadow-xl hover:-translate-y-2 transition-all duration-200 bg-white dark:bg-gray-900">
+                        <div class="md:w-4/12 w-full shrink-0">
+                            <div
+                                class="flex flex-col md:border-r border-gray-200 dark:border-gray-800 pt-5 md:pb-7 px-5 md:items-center justify-center h-full">
+                                <img src="assets/img/partners/microsoft.svg" alt=""
+                                    class="w-32 h-auto dark:hidden">
+                              <img src="assets/img/partners/white/microsoft.svg" alt=""
+                                    class="w-32 h-auto hidden dark:block">
+                            </div>
+                        </div>
+                        <div class="h-full p-4 py-7 md:py-12 md:pr-7 md:pl-0 flex-grow">
+                            <div class="md:flex md:items-center">
+                                <div class="md:-ml-8 shrink-0">
+                                    <img src="assets/img/avatar/7.jpg" alt=""
+                                        class="w-16 border-4 border-white dark:border-gray-900 rounded-full mb-4" alt="">
+                                </div>
+                                <div class="md:pl-9">
+                                    <p class="text-2xl mb-7">
+                                        “ Loved working with the beautiful theme. Everything clean and
+                                        professional,
+                                        also very helpful throughout the customisation. Looking forward to buy
+                                        more
+                                        license of Assan again in the future.”
+                                    </p>
+                                    <div class="mb-5">
+                                        <h5 class="mb-2 text-xl font-medium">Jeson</h5>
+                                        <small class="block text-gray-400"> at Microsoft</small>
+                                    </div>
+                                    <a href="#" class="link-underline font-medium">
+                                        <span>Read full story</span>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-animation="fadeInUp" data-delay=".1" class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <div
+                        class="flex flex-col md:flex-row overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 hover:shadow-xl hover:-translate-y-2 transition-all duration-200 bg-white dark:bg-gray-900">
+                        <div class="md:w-4/12 shrink-0 w-full md:order-last">
+                            <div
+                                class="flex flex-col md:border-s border-gray-200 dark:border-gray-800 pt-5 md:pb-7 px-5 md:items-center justify-center h-full  h-full border-light">
+                                <img src="assets/img/partners/google.svg" alt=""
+                                    class="w-32 h-auto dark:hidden"> 
+                              <img src="assets/img/partners/white/google.svg" alt=""
+                                    class="w-32 h-auto hidden dark:block">
+                            </div>
+                        </div>
+                        <div class="h-full p-4 py-7 md:py-12 md:pl-7 md:pr-0 flex-grow">
+                            <div class="md:flex md:items-center">
+                                <div class="md:-mr-8 md:order-last z-[1] shrink-0">
+                                    <img src="assets/img/avatar/6.jpg" alt=""
+                                        class="w-16 border-4 border-white dark:border-gray-900 rounded-full mb-4" alt="">
+                                </div>
+                                <div class="md:pr-9">
+                                    <p class="text-2xl mb-7">
+                                        “ Loved working with the beautiful theme. Everything clean and
+                                        professional,
+                                        also very helpful throughout the customisation. Looking forward to buy
+                                        more
+                                        license of Assan again in the future.”
+                                    </p>
+                                    <div class="mb-5">
+                                        <h5 class="mb-2 text-xl font-medium">Admond</h5>
+                                        <small class="block text-gray-400"> at Google</small>
+                                    </div>
+                                    <a href="#" class="link-underline font-medium">
+                                        <span>Read full story</span>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-animation="fadeInUp" data-delay=".1" class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <div
+                        class="flex flex-col md:flex-row overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 hover:shadow-xl hover:-translate-y-2 transition-all duration-200 bg-white dark:bg-gray-900">
+                        <div class="md:w-4/12 w-full shrink-0">
+                            <div
+                                class="flex flex-col md:border-r border-gray-200 dark:border-gray-800 pt-5 md:pb-7 px-5 md:items-center justify-center h-full border-light">
+                                <img src="assets/img/partners/didi.svg" alt=""
+                                    class="w-32 h-auto dark:hidden">
+                               <img src="assets/img/partners/white/didi.svg" alt=""
+                                    class="w-32 h-auto dark:block hidden">
+                            </div>
+                        </div>
+                        <div class="h-full p-4 py-9 md:py-12 md:pr-7 md:pl-0 flex-grow">
+                            <div class="md:flex md:items-center">
+                                <div class="md:-ml-8 shrink-0">
+                                    <img src="assets/img/avatar/5.jpg" alt=""
+                                        class="w-16 border-4 border-white dark:border-gray-900 rounded-full mb-4" alt="">
+                                </div>
+                                <div class="md:pl-9">
+                                    <p class="text-2xl mb-6">
+                                        “ Loved working with the beautiful theme. Everything clean and
+                                        professional,
+                                        also very helpful throughout the customisation. Looking forward to buy
+                                        more
+                                        license of Assan again in the future.”
+                                    </p>
+                                    <div class="mb-5">
+                                        <h5 class="mb-2 text-xl font-medium">Jessica winfre</h5>
+                                        <small class="block text-gray-400"> at DIDI</small>
+                                    </div>
+                                    <a href="#" class="link-underline font-medium">
+                                        <span>Read full story</span>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" data-animation="fadeInUp">
+                <a href="#!" class="btn btn-lg bg-indigo-500 text-white hover:bg-indigo-600 rounded-pill">Archived stories
+                    <i class="bi bi-clock-history ms-1 small"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-1.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+    <!-- begin:Back to Top button -->
+    
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+
+    <!--:Flatpickr:-->
+    <link rel="stylesheet" href="vendor/css/flatpickr.min.css">
+
+    @@include('./partials/head-includes.html')
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+      @@include('./partials/app-preloader.html')
+
+
+    @@include('./partials/sidebar.html',{"page": "calendar"} )
+
+    <main class="relative flex flex-col lg:ms-64">
+        @@include('./partials/header-default.html')
+        <!--:Page Header:-->
+        <div class="px-4 lg:px-6 xl:px-12 py-4">
+            <div class="flex flex-wrap items-center">
+                <div class="flex-grow">
+                    <h4 class="text-2xl font-semibold">Events Calendar</h4>
+                </div>
+                <div class="shrink-0">
+                    <!--:Breadcrumb:-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="flex items-center">
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                            </li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active"><a
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                    href="account-overview.html">Apps</a></li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Calendar
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content pb-4 px-4 lg:px-6 xl:px-12">
+            <div class="bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+                <!--calendar-->
+                <div id="exampleCalendar"></div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+
+    <!--App calendar Plugin-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.14/index.global.js"></script>
+    <script>
+        function getTailwindColor(className, property) {
+      const element = document.createElement('div');
+      element.classList.add(className);
+      document.body.appendChild(element);
+      const style = getComputedStyle(element);
+      const color = style.getPropertyValue(property);
+      document.body.removeChild(element);
+      return color;
+    }
+    const primaryColor = getTailwindColor('text-primary-500', 'color');
+    const warningColor = getTailwindColor('text-warning-500', 'color');
+    const successColor = getTailwindColor('text-success-500', 'color');
+    const infoColor = getTailwindColor('text-info-500', 'color');
+    const grayColor = getTailwindColor('text-gray-400', 'color');
+    const dangerColor = getTailwindColor('text-danger-500', 'color');
+    const secondaryColor = getTailwindColor('text-primary-300', 'color');
+    const tritaryColor = getTailwindColor('text-gray-400', 'color');
+        // Example events
+        const currentMonth = ('0' + (new Date().getMonth() + 1)).slice(-2)
+        const currentYear = new Date().getFullYear()
+        const nextMonth = ('0' + (new Date().getMonth() + 2)).slice(-2);
+        const exampleEvents = [
+            
+        {
+            title: 'Tech Conference',
+            start: `${currentYear}-${currentMonth}-07`,
+            end: `${currentYear}-${currentMonth}-10`,
+            backgroundColor: infoColor,
+            borderColor: infoColor,
+        },
+        {
+            groupId: '123',
+            title: 'Meeting 1',
+            start: `${currentYear}-${currentMonth}-21T16:00:00+00:00`,
+            backgroundColor: warningColor,
+            borderColor: warningColor,
+        },
+        {
+            groupId: '123',
+            title: 'Meeting 2',
+            start: `${currentYear}-${currentMonth}-24T16:00:00+00:00`,
+            backgroundColor: dangerColor,
+            borderColor: dangerColor,
+        },
+        {
+            title: 'Developers Seminar',
+            start: `${currentYear}-${currentMonth}-04T10:30:00+00:00`,
+            end: `${currentYear}-${currentMonth}-04T13:30:00+00:00`,
+            backgroundColor: primaryColor,
+            borderColor: primaryColor,
+        },
+        {
+            title: 'John Doe Birthday',
+            start: `${currentYear}-${currentMonth}-05T07:00:00+00:00`,
+            backgroundColor: warningColor,
+            borderColor: warningColor,
+        },
+        {
+            url: 'http:\/\/google.com\/',
+            title: 'Website Launch',
+            start: `${currentYear}-${nextMonth}-08`,
+            backgroundColor: primaryColor,
+            borderColor: primaryColor,
+        },
+        {
+            title: 'Project #p-293 Discussion',
+            start: `${currentYear}-${currentMonth}-25T10:30:00+00:00`,
+            end: `${currentYear}-${currentMonth}-025T13:30:00+00:00`,
+            backgroundColor: primaryColor,
+            borderColor: primaryColor,
+        },
+        {
+            title: 'Business trip to New Delhi',
+            start: `${currentYear}-${currentMonth}-26T10:30:00+00:00`,
+            end: `${currentYear}-${currentMonth}-028T13:30:00+00:00`,
+            backgroundColor: primaryColor,
+            borderColor: primaryColor,
+        },
+        ]
+        // Initialize the calendar
+        const exampleCalendar = new FullCalendar.Calendar(document.getElementById('exampleCalendar'), {
+            events: exampleEvents,
+            headerToolbar: {
+                right: 'prev,next today',
+                left: 'title',
+                center: ''
+            },
+            initialView: 'listMonth',
+            buttonText: {
+                today: 'This Month',
+                month: 'Month',
+                week: 'Week',
+                day: 'Day',
+                list: 'List',
+                prev: '❮',
+                next: '❯',
+            },
+            dayMaxEvents: true, // allow "more" link when too many events
+            editable: true,
+            droppable: true
+        }).render()
+    </script>
+</body>
+
+</html>

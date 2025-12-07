@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+
+    <!--:Flatpickr:-->
+    <link rel="stylesheet" href="vendor/css/flatpickr.min.css">
+
+    @@include('./partials/head-includes.html')
+</head>
+
+<body
+    class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+      @@include('./partials/app-preloader.html')
+
+
+    @@include('./partials/sidebar.html',{"page": "docs"} )
+
+    <main class="relative flex flex-col lg:ms-64">
+        @@include('./partials/header-default.html')
+        <!--:Page Header:-->
+        <div class="px-4 lg:px-6 xl:px-12 py-4">
+            <div class="flex flex-wrap items-center">
+                <div class="flex-grow">
+                    <h4 class="text-2xl font-semibold">Get Started</h4>
+                </div>
+                <div class="shrink-0">
+                    <!--:Breadcrumb:-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="flex items-center">
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                            </li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active"><a
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                    href="documentation.html">Documentation</a></li>
+                            <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Get started
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content relative px-4 lg:px-6 xl:px-12">
+            <div class="grid grid-cols-1 gap-4 mb-4">
+                <div>
+                    <!--:Card:-->
+                    <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg p-4">
+                        <h5 class="text-lg font-semibold mb-4">Quick start</h5>
+                        <p class="mb-0">Looking to start your project quickly? Just unzip the main file and open
+                            <code class="text-danger-500">admin-dashboard-tailwindcss</code>. We have precompiled and
+                            packaged everything in the
+                            <code class="text-danger-500">dist</code> directory for you. Start editing the
+                            <code class="text-danger-500">dist/index.html</code> with a text or code editor, save it,
+                            and open the
+                            file in your favourite browser to see the changes.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg p-4">
+                        <h5 class="text-lg font-semibold mb-4">Setting up Build System</h5>
+                        <p class="mb-2">Open the folder <code class="text-danger-500">admin-dashboard-tailwindcss</code>
+                            to an editor and open a command line or terminal at that location.
+                            theme's dev tools require <a href="https://nodejs.org/en/" target="_blank"
+                                class="text-primary-500 hover:underline">Node</a> and <a
+                                class="text-primary-500 hover:underline" href="https://git-scm.com/"
+                                target="_blank">Git</a> . If you do not have them in your machine, please install their
+                            latest stable version from their corresponding website. As you have <span
+                                class="fw-black text-body-emphasis">Node and Git installed and accessible from your
+                                terminal or command line</span>, install <a class="text-primary-500 hover:underline"
+                                href="https://gulpjs.com/" target="_blank">Gulp CLI</a> package
+                            globally with the following command:</p>
+                        <pre class="language-html px-4 py-2 bg-gray-700 text-white mb-4" tabindex="0"><code class="language-html">npm i gulp-cli -g
+</code></pre>
+                        <p class="mb-2">When you’re done, install the rest of the theme’s dependencies with:</p>
+                        <pre class="language-html px-4 py-2 bg-gray-700 text-white mb-4" tabindex="0"><code class="language-html">npm i
+</code></pre>
+                        <p class="mb-2">Now run:</p>
+                        <pre class="language-html px-4 py-2 bg-gray-700 text-white mb-4" tabindex="0"><code class="language-html">gulp
+</code></pre>
+                        <p class="mb-2">Running gulp will compile the css, transpile the javascript, copy all required
+                            libraries form <code>node_modules</code> to the corresponding <code
+                                class="text-danger-500">dist/vendor </code>
+                            directory and will open a browser window to <code
+                                class="text-danger-500">dist/index.html</code></p>
+                        <pre class="language-html px-4 py-2 bg-gray-700 text-white mb-4" tabindex="0"><code class="language-html">public/img/
+public/vendor
+src/html/
+src/css/ 
+src/js/
+</code></pre>
+                        <p>Hit <code class="text-danger-500">Ctrl+C</code> or just close the command line window to stop
+                            the server.
+                            <br><br>
+                            Happy coding!
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg p-4">
+                        <h5 class="text-lg font-semibold mb-4">Customizing colors & fonts</h5>
+<p class="mb-3 h5 font-semibold">Fonts</p>
+<p class="mb-2">Open <code class="text-danger-500">src/style.css</code> file and add/edit css variables inside <code class="text-danger-500">@theme</code> for update font family and sizes.</p>
+            <div class="mb-4 font-mono flex flex-col text-sm text-gray-400">
+               <div>
+                <span class="text-gray-400">--text-base</span> : <span class="text-danger-500">0.935rem;</span>
+               </div>
+               <div>
+                <span class="text-gray-400">--font-sans</span> : <span class="text-danger-500">"Public Sans";</span>
+               </div>
+            </div>
+            <p class="mb-3 h5 font-semibold">Colors</p>
+ <p class="mb-2">Open <code class="text-danger-500">src/style.css</code> file and add/edit css variables inside <code class="text-danger-500">@theme</code> for update theme color.</p>
+            <div class="mb-4 font-mono flex flex-col text-sm text-gray-400">
+               <div>
+                <span class="text-gray-400">--color-primary-50</span>  : <span class="text-danger-500">var(--color-indigo-50);</span>
+               </div>
+               <div>
+                <span class="text-gray-400">--color-primary-100</span> : <span class="text-danger-500">var(--color-indigo-100);</span>
+               </div>
+               <div>
+                <span class="text-gray-400">--color-primary-200</span> : <span class="text-danger-500">var(--color-indigo-200);</span>
+               </div>
+               <div>
+                <span class="text-gray-400">--color-primary-300</span> : <span class="text-danger-500">var(--color-indigo-300);</span>
+               </div>
+               <div>
+                <span class="text-gray-400">--color-primary-400</span> : <span class="text-danger-500">var(--color-indigo-400);</span>
+               </div>
+               <div>
+                <span class="text-gray-400">--color-primary-500</span> : <span class="text-danger-500">var(--color-indigo-500);</span>
+               </div>
+               <div>
+                <span class="text-gray-400">--color-primary-600</span> : <span class="text-danger-500">var(--color-indigo-600);</span>
+               </div>
+               <div>
+                <span class="text-gray-400">--color-primary-700</span> : <span class="text-danger-500">var(--color-indigo-700);</span>
+               </div>
+               <div>
+                <span class="text-gray-400">--color-primary-800</span> : <span class="text-danger-500">var(--color-indigo-800);</span>
+               </div>
+               <div>
+                <span class="text-gray-400">--color-primary-900</span> : <span class="text-danger-500">var(--color-indigo-900);</span>
+               </div>
+               <div>
+                <span class="text-gray-400">--color-primary-950</span> : <span class="text-danger-500">var(--color-indigo-950);</span>
+               </div>
+            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

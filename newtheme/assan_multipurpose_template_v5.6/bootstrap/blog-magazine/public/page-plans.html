@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assan | Blog</title>
+    <!--Swiper-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+    <!--FavIcon-->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet">
+    <!--Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Aos Animations-->
+    <link href="assets/vendor/node_modules/css/sal.css" rel="stylesheet">
+
+    <!--Main Style-->
+    <link href="assets/css/theme.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="d-flex flex-column flex-root">
+        <!--Page-->
+        <div class="page-lg d-flex flex-row flex-column-fluid">
+
+            <!--:Sidebar Menu:-->
+            <aside class="page-sidebar">
+                <div class="offcanvas-lg offcanvas-start" id="offcanvas-sidebar">
+                    <div class="offcanvas-header d-block p-0">
+                        <a class="sidebar-brand flex-shrink-0 d-flex justify-content-center height-6x w-100 align-items-center"
+                            href="index.html">
+                            <img src="assets/img/logo-a.svg" alt="" class="img-fluid logo-light">
+                            <img src="assets/img/logo-a-white.svg" alt="" class="img-fluid logo-dark">
+                        </a>
+                    </div>
+                    <!--:Sidenav:-->
+                    <div class="offcanvas-body flex-grow-1 p-0">
+                        <nav class="flex-grow-1 d-flex flex-column justify-content-center gap-1 gap-lg-2 align-items-center py-3">
+                            <a data-tippy-placement="right" data-tippy-content="Home" href="index.html"
+                                class="width-4x height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" width="24" height="24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+
+                            </a>
+                            <div class="dropdown">
+                                <a href="notifications.html" data-tippy-placement="right" data-tippy-content="Notifications"
+                                    class="width-4x tippy-dropdown height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" width="24" height="24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                                    </svg>
+
+                                </a>
+                            </div>
+                            <a data-tippy-placement="right" data-tippy-content="Bookmarks" href="bookmarks.html"
+                                class="width-4x height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" width="24" height="24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                                </svg>
+
+                            </a>
+                            <a data-tippy-placement="right" data-tippy-content="Topics" href="topics.html"
+                                class="width-4x height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" width="24" height="24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
+                                </svg>
+
+                            </a>
+                            <a data-tippy-placement="right" data-tippy-content="Write Post" href="write.html"
+                                class="width-4x height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" width="24" height="24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                                </svg>
+
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="mt-auto offcanvas-footer">
+
+                    </div>
+                </div>
+            </aside>
+
+            <!--:Page content:-->
+            <main class="page-content d-flex flex-column flex-row-fluid">
+                <!--:page-header:-->
+                <header class="navbar-main z-index-fixed border-bottom navbar navbar-expand-md px-3 px-lg-7 py-0 py-lg-2">
+                    <div class="container-fluid px-0 d-flex flex-wrap justify-content-between">
+
+                        <a class="navbar-brand d-lg-none flex-shrink-0 d-flex justify-content-center width-2x h-auto align-items-center"
+                            href="index.html">
+                            <img src="assets/img/logo-a.svg" alt="" class="img-fluid logo-light">
+                            <img src="assets/img/logo-a-white.svg" alt="" class="img-fluid logo-dark">
+                        </a>
+                        <div class="d-flex flex-grow-1 justify-content-end align-items-center order-md-last">
+
+                            <!--sidebar toggler button-->
+                            <button
+                                class="btn btn-sm btn-primary p-0 d-flex align-items-center justify-content-center size-3x rounded-pill d-lg-none shadow-none order-last ms-2"
+                                type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidebar"
+                                aria-controls="offcanvas-sidebar">
+                                <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+                                </svg>
+
+                            </button>
+                            <div class="nav-item d-flex height-5x align-items-center d-md-none me-2 me-lg-0">
+                                <a href="#searchCollapse" data-bs-target="#searchCollapse" data-bs-toggle="collapse"
+                                    class="btn btn-link nav-link py-2 px-2 d-flex align-items-center search-link lh-1">
+                                    <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                                    </svg>
+
+                                </a>
+                            </div>
+                            <div class="d-flex dropdown height-5x nav-item align-items-center">
+                                <a href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                    class="btn btn-link rounded-pill nav-link py-1 ps-1 pe-2 dropdown-toggle d-flex align-items-center">
+                                    <img src="assets/img/avatar/1.jpg" class="width-3x h-auto rounded-pill" alt="">
+                                    <small class="d-none d-md-block ms-2">Emily doe</small>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-md-end ms-n6 ms-md-0 position-absolute">
+                                    <a href="#!" class="dropdown-item d-flex gap-2 align-items-center">
+                                        <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                        </svg>
+                                        Profile
+                                    </a>
+                                    <a href="bookmarks.html" class="dropdown-item d-flex gap-2 align-items-center">
+                                        <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                                        </svg>
+                                        Bookmarks
+                                    </a>
+                                    <a href="write.html" class="dropdown-item d-flex gap-2 align-items-center">
+                                        <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                                        </svg>
+                                        Write
+                                    </a>
+                                    <a href="page-sign-in.html" class="dropdown-item d-flex gap-2 align-items-center">
+                                        <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                                        </svg>
+                                        Sign Out
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="d-flex height-5x ms-2 dropdown nav-item align-items-center">
+                                <a href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                    class="btn btn-link nav-link rounded-pill size-3x d-flex align-items-center justify-content-center">
+                                    <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+                                    </svg>
+
+                                </a>
+                                <div class="dropdown-menu me-n6 me-lg-0 dropdown-menu-end position-absolute">
+                                    <div class="dropdown-header">Pages</div>
+                                    <a href="page-sign-in.html" class="dropdown-item d-flex align-items-center">
+                                        Sign In
+                                    </a>
+                                    <a href="page-sign-up.html" class="dropdown-item d-flex align-items-center">
+                                        Sign Up
+                                    </a>
+                                    <a href="page-plans.html"
+                                        class="dropdown-item d-flex align-items-center active">
+                                        Plans
+                                    </a>
+                                    <a href="page-writers.html"
+                                        class="dropdown-item d-flex align-items-center ">
+                                        Writers
+                                    </a>
+                                    <a href="page-writer.html"
+                                        class="dropdown-item d-flex align-items-center ">
+                                        Writer
+                                    </a>
+                                    <a href="post-details.html"
+                                        class="dropdown-item d-flex align-items-center ">
+                                        Post details
+                                    </a>
+                                </div>
+                            </div>
+                            <!--:Dark Mode:-->
+                            <div class="nav-item height-5x d-flex align-items-center dropdown ms-2">
+                                <button
+                                    class="btn btn-link nav-link rounded-pill size-3x d-flex align-items-center justify-content-center"
+                                    id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                                    data-bs-display="static">
+                                    <span class="theme-icon-active d-flex align-items-center">
+                                        <i class="bi bi-brightness-high"></i>
+                                    </span>
+                                </button>
+                                <!--:Dark Mode Options:-->
+                                <ul class="dropdown-menu me-n3 me-md-0 dropdown-menu-end" aria-labelledby="bd-theme"
+                                    style="--bs-dropdown-min-width: 9rem;">
+                                    <li class="mb-1">
+                                        <button type="button" class="dropdown-item d-flex align-items-center active"
+                                            data-bs-theme-value="light">
+                                            <span class="theme-icon me-2 d-flex align-items-center">
+                                                <i class="bi bi-brightness-high"></i>
+                                            </span>
+                                            Light
+                                        </button>
+                                    </li>
+                                    <li class="mb-1">
+                                        <button type="button" class="dropdown-item d-flex align-items-center"
+                                            data-bs-theme-value="dark">
+                                            <span class="theme-icon me-2 d-flex align-items-center">
+                                                <i class="bi bi-moon"></i>
+                                            </span>
+                                            Dark
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item d-flex align-items-center"
+                                            data-bs-theme-value="auto">
+                                            <span class="theme-icon me-2 d-flex align-items-center">
+                                                <i class="bi bi-palette"></i>
+                                            </span>
+                                            Auto
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--Search collapse-->
+                        <div class="collapse collapse-search navbar-collapse" id="searchCollapse">
+                            <form>
+                                <div class="dropdown mb-3 mb-md-0">
+                                    <span
+                                        class="position-absolute d-flex align-items-center justify-content-center start-0 top-50 translate-middle-y ms-3 opacity-75">
+                                        <svg width="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                                        </svg>
+
+                                    </span>
+                                    <input type="text" data-bs-toggle="dropdown" placeholder="Search here..." class="form-control ps-5">
+                                    <!--:Search dropdown:-->
+                                    <div class="dropdown-menu p-0 rounded-top-0 w-100 overflow-hidden dropdown-menu-start">
+                                        <div class="dropdown-header border-bottom">
+                                            <i class="bi bi-fire"></i> Top Stories
+                                        </div>
+                                        <div style="height: 290px;overflow-y: auto;">
+                                            <!--:Search dropdown news list:-->
+                                            <div class="list-group list-group-flush">
+                                                <!--:Item:-->
+                                                <a href="#!" class="list-group-action list-group-item p-3">
+                                                    <div class="d-flex flex-column">
+                                                        <h6 class="fw-normal mb-2">5 Technologies That Could Be the Next Big Thing</h6>
+                                                        <small class="text-body-secondary flex-shrink-0">Technology</small>
+                                                    </div>
+                                                </a>
+                                                <!--:Item:-->
+                                                <a href="#!" class="list-group-action list-group-item p-3">
+                                                    <div class="d-flex flex-column">
+                                                        <h6 class="fw-normal mb-2">Is TikTok a Security Risk for Businesses?</h6>
+                                                        <small class="text-body-secondary flex-shrink-0">Business</small>
+                                                    </div>
+                                                </a>
+                                                <!--:Item:-->
+                                                <a href="#!" class="list-group-action list-group-item p-3">
+                                                    <div class="d-flex flex-column">
+                                                        <h6 class="fw-normal mb-2">Crypto Market Outlook: Looking Back to Forge New
+                                                            Milestones</h6>
+                                                        <small class="text-body-secondary flex-shrink-0">Crypto</small>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="dropdown-header pt-4 mb-2 border-top">
+                                                <i class="bi bi-fire me-2"></i> Popular Topics
+                                            </div>
+
+                                            <!--:Search dropdown categories list:-->
+                                            <div class="d-flex flex-wrap gap-2 pt-0 p-3">
+                                                <a href="#!" class="badge text-bg-primary">Sports</a>
+                                                <a href="#!" class="badge text-bg-primary">Health</a>
+                                                <a href="#!" class="badge text-bg-primary">Technology</a>
+                                                <a href="#!" class="badge text-bg-primary">Fashion</a>
+                                                <a href="#!" class="badge text-bg-primary">NFT</a>
+                                                <a href="#!" class="badge text-bg-primary">Business</a>
+                                                <a href="#!" class="badge text-bg-primary">Politics</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </header>
+                <!--::Page content with sidebar::-->
+                <div class="content d-flex flex-column-fluid position-relative">
+
+                    <!--:Content inner layout:-->
+                    <div class="d-flex flex-column flex-md-row h-100 w-100">
+                        <!--:Content inner Content:-->
+                        <div class="col-md-7 col-lg-8 layout-content d-flex justify-content-center flex-column h-100">
+                            <div class="position-relative px-3 px-xl-7 py-5 mx-auto w-100">
+                                <h2 class="display-6 mb-3 text-center">Pricing Plans</h2>
+                                <p class="mb-4 text-center">Save 50% with our best deal of the year</p>
+
+                                <div class="row justify-content-center mb-6">
+                                    <div class="col-sm-6 col-md-5 col-lg-4 mb-4">
+
+                                        <input type="radio" class="btn-check" name="plans" id="planMonthly"
+                                            autocomplete="off" checked>
+                                        <label class="btn btn-plan text-body h-100 w-100 d-flex flex-column text-center"
+                                            for="planMonthly">
+                                            <span class="d-block mb-auto">
+                                                <span class="d-block text-center mb-3">Monthly</span>
+                                                <span class="d-block text-center mb-3 h3">$5</span>
+                                                <span class="mb-1 d-block mb-0">USD/month</span>
+                                            </span>
+                                            <span
+                                                class="plan-select mt-3 w-100 d-block rounded-pill py-3 px-2 lh-sm">Select</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-6 col-md-5 col-lg-4 mb-4">
+
+                                        <input type="radio" class="btn-check" name="plans" id="planAnnual"
+                                            autocomplete="off">
+                                        <label class="btn btn-plan text-body h-100 w-100 d-flex flex-column text-center"
+                                            for="planAnnual">
+                                            <span class="d-block mb-auto">
+                                                <span class="d-block text-center mb-3">Annually</span>
+                                                <span class="d-block text-center mb-3 h3">$30</span>
+                                                <span class="mb-1 d-block mb-3">USD/Annually</span>
+                                                <small class="text-success d-block">Save 50%</small>
+                                            </span>
+                                            <span
+                                                class="plan-select mt-3 w-100 d-block rounded-pill py-3 px-2 lh-sm">Select</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 col-md-10">
+                                        <div class="d-flex mb-4 justify-content-between align-items-center">
+                                            <h6 class="mb-0">Total amount to paid now</h6>
+                                            <strong>$5</strong>
+                                        </div>
+                                        <div class="card bg-transparent card-body p-4">
+                                            <div class="mb-4">
+                                                <span class="d-block mb-1">Pay with</span>
+                                                <button role="button" class="btn btn-info px-4 px-lg-6">
+                                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAxcHgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxMDEgMzIiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHhtbG5zPSJodHRwOiYjeDJGOyYjeDJGO3d3dy53My5vcmcmI3gyRjsyMDAwJiN4MkY7c3ZnIj48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNIDEyLjIzNyAyLjggTCA0LjQzNyAyLjggQyAzLjkzNyAyLjggMy40MzcgMy4yIDMuMzM3IDMuNyBMIDAuMjM3IDIzLjcgQyAwLjEzNyAyNC4xIDAuNDM3IDI0LjQgMC44MzcgMjQuNCBMIDQuNTM3IDI0LjQgQyA1LjAzNyAyNC40IDUuNTM3IDI0IDUuNjM3IDIzLjUgTCA2LjQzNyAxOC4xIEMgNi41MzcgMTcuNiA2LjkzNyAxNy4yIDcuNTM3IDE3LjIgTCAxMC4wMzcgMTcuMiBDIDE1LjEzNyAxNy4yIDE4LjEzNyAxNC43IDE4LjkzNyA5LjggQyAxOS4yMzcgNy43IDE4LjkzNyA2IDE3LjkzNyA0LjggQyAxNi44MzcgMy41IDE0LjgzNyAyLjggMTIuMjM3IDIuOCBaIE0gMTMuMTM3IDEwLjEgQyAxMi43MzcgMTIuOSAxMC41MzcgMTIuOSA4LjUzNyAxMi45IEwgNy4zMzcgMTIuOSBMIDguMTM3IDcuNyBDIDguMTM3IDcuNCA4LjQzNyA3LjIgOC43MzcgNy4yIEwgOS4yMzcgNy4yIEMgMTAuNjM3IDcuMiAxMS45MzcgNy4yIDEyLjYzNyA4IEMgMTMuMTM3IDguNCAxMy4zMzcgOS4xIDEzLjEzNyAxMC4xIFoiPjwvcGF0aD48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNIDM1LjQzNyAxMCBMIDMxLjczNyAxMCBDIDMxLjQzNyAxMCAzMS4xMzcgMTAuMiAzMS4xMzcgMTAuNSBMIDMwLjkzNyAxMS41IEwgMzAuNjM3IDExLjEgQyAyOS44MzcgOS45IDI4LjAzNyA5LjUgMjYuMjM3IDkuNSBDIDIyLjEzNyA5LjUgMTguNjM3IDEyLjYgMTcuOTM3IDE3IEMgMTcuNTM3IDE5LjIgMTguMDM3IDIxLjMgMTkuMzM3IDIyLjcgQyAyMC40MzcgMjQgMjIuMTM3IDI0LjYgMjQuMDM3IDI0LjYgQyAyNy4zMzcgMjQuNiAyOS4yMzcgMjIuNSAyOS4yMzcgMjIuNSBMIDI5LjAzNyAyMy41IEMgMjguOTM3IDIzLjkgMjkuMjM3IDI0LjMgMjkuNjM3IDI0LjMgTCAzMy4wMzcgMjQuMyBDIDMzLjUzNyAyNC4zIDM0LjAzNyAyMy45IDM0LjEzNyAyMy40IEwgMzYuMTM3IDEwLjYgQyAzNi4yMzcgMTAuNCAzNS44MzcgMTAgMzUuNDM3IDEwIFogTSAzMC4zMzcgMTcuMiBDIDI5LjkzNyAxOS4zIDI4LjMzNyAyMC44IDI2LjEzNyAyMC44IEMgMjUuMDM3IDIwLjggMjQuMjM3IDIwLjUgMjMuNjM3IDE5LjggQyAyMy4wMzcgMTkuMSAyMi44MzcgMTguMiAyMy4wMzcgMTcuMiBDIDIzLjMzNyAxNS4xIDI1LjEzNyAxMy42IDI3LjIzNyAxMy42IEMgMjguMzM3IDEzLjYgMjkuMTM3IDE0IDI5LjczNyAxNC42IEMgMzAuMjM3IDE1LjMgMzAuNDM3IDE2LjIgMzAuMzM3IDE3LjIgWiI+PC9wYXRoPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0gNTUuMzM3IDEwIEwgNTEuNjM3IDEwIEMgNTEuMjM3IDEwIDUwLjkzNyAxMC4yIDUwLjczNyAxMC41IEwgNDUuNTM3IDE4LjEgTCA0My4zMzcgMTAuOCBDIDQzLjIzNyAxMC4zIDQyLjczNyAxMCA0Mi4zMzcgMTAgTCAzOC42MzcgMTAgQyAzOC4yMzcgMTAgMzcuODM3IDEwLjQgMzguMDM3IDEwLjkgTCA0Mi4xMzcgMjMgTCAzOC4yMzcgMjguNCBDIDM3LjkzNyAyOC44IDM4LjIzNyAyOS40IDM4LjczNyAyOS40IEwgNDIuNDM3IDI5LjQgQyA0Mi44MzcgMjkuNCA0My4xMzcgMjkuMiA0My4zMzcgMjguOSBMIDU1LjgzNyAxMC45IEMgNTYuMTM3IDEwLjYgNTUuODM3IDEwIDU1LjMzNyAxMCBaIj48L3BhdGg+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTSA2Ny43MzcgMi44IEwgNTkuOTM3IDIuOCBDIDU5LjQzNyAyLjggNTguOTM3IDMuMiA1OC44MzcgMy43IEwgNTUuNzM3IDIzLjYgQyA1NS42MzcgMjQgNTUuOTM3IDI0LjMgNTYuMzM3IDI0LjMgTCA2MC4zMzcgMjQuMyBDIDYwLjczNyAyNC4zIDYxLjAzNyAyNCA2MS4wMzcgMjMuNyBMIDYxLjkzNyAxOCBDIDYyLjAzNyAxNy41IDYyLjQzNyAxNy4xIDYzLjAzNyAxNy4xIEwgNjUuNTM3IDE3LjEgQyA3MC42MzcgMTcuMSA3My42MzcgMTQuNiA3NC40MzcgOS43IEMgNzQuNzM3IDcuNiA3NC40MzcgNS45IDczLjQzNyA0LjcgQyA3Mi4yMzcgMy41IDcwLjMzNyAyLjggNjcuNzM3IDIuOCBaIE0gNjguNjM3IDEwLjEgQyA2OC4yMzcgMTIuOSA2Ni4wMzcgMTIuOSA2NC4wMzcgMTIuOSBMIDYyLjgzNyAxMi45IEwgNjMuNjM3IDcuNyBDIDYzLjYzNyA3LjQgNjMuOTM3IDcuMiA2NC4yMzcgNy4yIEwgNjQuNzM3IDcuMiBDIDY2LjEzNyA3LjIgNjcuNDM3IDcuMiA2OC4xMzcgOCBDIDY4LjYzNyA4LjQgNjguNzM3IDkuMSA2OC42MzcgMTAuMSBaIj48L3BhdGg+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTSA5MC45MzcgMTAgTCA4Ny4yMzcgMTAgQyA4Ni45MzcgMTAgODYuNjM3IDEwLjIgODYuNjM3IDEwLjUgTCA4Ni40MzcgMTEuNSBMIDg2LjEzNyAxMS4xIEMgODUuMzM3IDkuOSA4My41MzcgOS41IDgxLjczNyA5LjUgQyA3Ny42MzcgOS41IDc0LjEzNyAxMi42IDczLjQzNyAxNyBDIDczLjAzNyAxOS4yIDczLjUzNyAyMS4zIDc0LjgzNyAyMi43IEMgNzUuOTM3IDI0IDc3LjYzNyAyNC42IDc5LjUzNyAyNC42IEMgODIuODM3IDI0LjYgODQuNzM3IDIyLjUgODQuNzM3IDIyLjUgTCA4NC41MzcgMjMuNSBDIDg0LjQzNyAyMy45IDg0LjczNyAyNC4zIDg1LjEzNyAyNC4zIEwgODguNTM3IDI0LjMgQyA4OS4wMzcgMjQuMyA4OS41MzcgMjMuOSA4OS42MzcgMjMuNCBMIDkxLjYzNyAxMC42IEMgOTEuNjM3IDEwLjQgOTEuMzM3IDEwIDkwLjkzNyAxMCBaIE0gODUuNzM3IDE3LjIgQyA4NS4zMzcgMTkuMyA4My43MzcgMjAuOCA4MS41MzcgMjAuOCBDIDgwLjQzNyAyMC44IDc5LjYzNyAyMC41IDc5LjAzNyAxOS44IEMgNzguNDM3IDE5LjEgNzguMjM3IDE4LjIgNzguNDM3IDE3LjIgQyA3OC43MzcgMTUuMSA4MC41MzcgMTMuNiA4Mi42MzcgMTMuNiBDIDgzLjczNyAxMy42IDg0LjUzNyAxNCA4NS4xMzcgMTQuNiBDIDg1LjczNyAxNS4zIDg1LjkzNyAxNi4yIDg1LjczNyAxNy4yIFoiPjwvcGF0aD48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNIDk1LjMzNyAzLjMgTCA5Mi4xMzcgMjMuNiBDIDkyLjAzNyAyNCA5Mi4zMzcgMjQuMyA5Mi43MzcgMjQuMyBMIDk1LjkzNyAyNC4zIEMgOTYuNDM3IDI0LjMgOTYuOTM3IDIzLjkgOTcuMDM3IDIzLjQgTCAxMDAuMjM3IDMuNSBDIDEwMC4zMzcgMy4xIDEwMC4wMzcgMi44IDk5LjYzNyAyLjggTCA5Ni4wMzcgMi44IEMgOTUuNjM3IDIuOCA5NS40MzcgMyA5NS4zMzcgMy4zIFoiPjwvcGF0aD48L3N2Zz4"
+                                                        data-v-b01da731="" alt="" role="presentation"
+                                                        class="width-6x h-auto">
+                                                </button>
+                                            </div>
+                                            <!--:Divider:-->
+                                            <div class="d-flex mb-4 align-items-center">
+                                                <span class="pe-2 font-secondary fst-italic opacity-50">or</span>
+                                                <span class="flex-grow-1 border-top"></span>
+                                            </div>
+                                            <!--:Pay with debit/credit card:-->
+                                            <div class="d-flex mb-4 align-items-center justify-content-between">
+                                                <span class="d-block me-3">Pay with Debit/Credit Card</span>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M0 6.5C0 5.67.67 5 1.5 5h29c.83 0 1.5.67 1.5 1.5v18c0 .83-.67 1.5-1.5 1.5h-29A1.5 1.5 0 0 1 0 24.5v-18z"
+                                                            fill="#F2F2F2"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M0 6.5C0 5.67.67 5 1.5 5h29c.83 0 1.5.67 1.5 1.5V10H0V6.5z"
+                                                            fill="#4095DB"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M0 21h32v3.5c0 .83-.67 1.5-1.5 1.5h-29A1.5 1.5 0 0 1 0 24.5V21z"
+                                                            fill="#F4B662"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M20.14 12.28c-.31-.13-.8-.28-1.41-.28-1.56 0-2.65.92-2.66 2.24-.01.97.78 1.52 1.38 1.84.61.33.82.55.81.84 0 .46-.49.66-.94.66-.63 0-.96-.1-1.48-.35l-.2-.1-.22 1.5c.36.2 1.04.36 1.75.37 1.65 0 2.73-.9 2.74-2.32 0-.77-.41-1.36-1.32-1.84-.55-.31-.89-.52-.88-.84 0-.28.28-.58.9-.58.51-.01.89.12 1.18.26l.14.07.21-1.47zm-7.29 6.62l.99-6.78h1.57l-.98 6.78h-1.58zm10.01-4.3s-.5 1.5-.62 1.9h1.3l-.36-1.96-.1-.59-.15.45-.07.2zm1.32-2.47h-1.22c-.37 0-.66.12-.82.56L19.8 18.9h1.65l.33-1.02h2.02l.2 1.02h1.45l-1.27-6.77zm-12.65 0L10 16.74l-.16-.94-.56-3.12c-.1-.43-.37-.56-.71-.57H6.02l-.02.14c.62.18 1.17.43 1.65.74l1.4 5.9h1.67l2.48-6.78h-1.67z"
+                                                            fill="#0071CE"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M0 6.5C0 5.67.67 5 1.5 5h29c.83 0 1.5.67 1.5 1.5v18c0 .83-.67 1.5-1.5 1.5h-29A1.5 1.5 0 0 1 0 24.5v-18z"
+                                                            fill="#E5E5E5" fill-opacity="0.01"></path>
+                                                    </svg>
+                                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M0 6.5C0 5.67.67 5 1.5 5h29c.83 0 1.5.67 1.5 1.5v18c0 .83-.67 1.5-1.5 1.5h-29A1.5 1.5 0 0 1 0 24.5v-18z"
+                                                            fill="#F2F2F2"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M12.5 21a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11z"
+                                                            fill="#D8232A"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M16 19.74a5.5 5.5 0 1 0 0-8.49 5.49 5.49 0 0 1 0 8.5z"
+                                                            fill="#ED9F2D"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M16 11.26a5.49 5.49 0 0 0 0 8.48 5.49 5.49 0 0 0 0-8.48z"
+                                                            fill="#D8232A"></path>
+                                                        <mask id="Icon-Mastercard_svg__a" maskUnits="userSpaceOnUse"
+                                                            x="14" y="11" width="4" height="9">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M16 11.26a5.49 5.49 0 0 0 0 8.48 5.49 5.49 0 0 0 0-8.48z"
+                                                                fill="#fff"></path>
+                                                        </mask>
+                                                        <g mask="url(#Icon-Mastercard_svg__a)">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M13 12h6v1h-6v-1zm0 2h6v1h-6v-1zm6 2h-6v1h6v-1zm-6 2h6v1h-6v-1zm6 2h-6v1h6v-1z"
+                                                                fill="#ED9F2D"></path>
+                                                        </g>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M0 6.5C0 5.67.67 5 1.5 5h29c.83 0 1.5.67 1.5 1.5v18c0 .83-.67 1.5-1.5 1.5h-29A1.5 1.5 0 0 1 0 24.5v-18z"
+                                                            fill="#E5E5E5" fill-opacity="0.01"></path>
+                                                    </svg>
+                                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M0 6.5C0 5.67.67 5 1.5 5h29c.83 0 1.5.67 1.5 1.5v18c0 .83-.67 1.5-1.5 1.5h-29A1.5 1.5 0 0 1 0 24.5v-18z"
+                                                            fill="url(#Icon-Amex_svg__paint0_radial)"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M0 6.5C0 5.67.67 5 1.5 5h29c.83 0 1.5.67 1.5 1.5v18c0 .83-.67 1.5-1.5 1.5h-29A1.5 1.5 0 0 1 0 24.5v-18z"
+                                                            fill="#E5E5E5" fill-opacity="0.01"></path>
+                                                        <mask id="Icon-Amex_svg__a" maskUnits="userSpaceOnUse" x="3.57"
+                                                            y="12" width="25" height="7" fill="#000">
+                                                            <path fill="#fff" d="M3.57 12h25v7h-25z"></path>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M7.4 16.07l.66-1.84h.02l.64 1.84H7.4zM7.5 13l-1.93 5H6.7l.4-1.11h1.92L9.4 18h1.17l-1.91-5H7.5zm3.52 0v5h1.05v-3.5h.02l1.25 3.5h.87l1.25-3.54h.02V18h1.05v-5h-1.58l-1.14 3.44h-.01L12.6 13h-1.58zm6.5 0v5h3.89v-.92h-2.76v-1.23h2.48V15h-2.48v-1.08h2.7V13h-3.83zm5.9 2.38L21.64 18h1.26l1.14-1.73L25.16 18h1.34l-1.79-2.61L26.35 13h-1.23l-1.04 1.6-1-1.6h-1.3l1.64 2.38z">
+                                                            </path>
+                                                        </mask>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M7.4 16.07l.66-1.84h.02l.64 1.84H7.4zM7.5 13l-1.93 5H6.7l.4-1.11h1.92L9.4 18h1.17l-1.91-5H7.5zm3.52 0v5h1.05v-3.5h.02l1.25 3.5h.87l1.25-3.54h.02V18h1.05v-5h-1.58l-1.14 3.44h-.01L12.6 13h-1.58zm6.5 0v5h3.89v-.92h-2.76v-1.23h2.48V15h-2.48v-1.08h2.7V13h-3.83zm5.9 2.38L21.64 18h1.26l1.14-1.73L25.16 18h1.34l-1.79-2.61L26.35 13h-1.23l-1.04 1.6-1-1.6h-1.3l1.64 2.38z"
+                                                            fill="#1793C0" fill-opacity="0.01"></path>
+                                                        <path
+                                                            d="M7.4 16.07l-.94-.34-.5 1.34H7.4v-1zm.66-1.84v-1h-.7l-.24.66.94.34zm.02 0l.94-.33-.23-.67h-.71v1zm.64 1.84v1h1.41l-.46-1.33-.95.33zM7.5 13v-1h-.68l-.25.64.93.36zm-1.93 5l-.93-.36L4.1 19h1.46v-1zm1.13 0v1h.7l.24-.66L6.7 18zm.4-1.11v-1h-.7l-.24.66.94.34zm1.92 0l.94-.33-.23-.67h-.71v1zM9.4 18l-.94.33.23.67h.71v-1zm1.17 0v1h1.46l-.52-1.36-.94.36zm-1.91-5l.93-.36-.24-.64h-.7v1zm2.36 0v-1h-1v1h1zm0 5h-1v1h1v-1zm1.05 0v1h1v-1h-1zm0-3.5v-1h-1v1h1zm.02 0l.94-.35-.24-.66h-.7v1zm1.25 3.5l-.94.34.24.66h.7v-1zm.87 0v1h.7l.24-.67-.94-.33zm1.25-3.54v-1h-.7l-.24.66.94.34zm.02 0h1v-1h-1v1zm0 3.54h-1v1h1v-1zm1.05 0v1h1v-1h-1zm0-5h1v-1h-1v1zm-1.58 0v-1h-.73l-.22.69.95.31zm-1.14 3.44v1h.73l.22-.69-.95-.31zm-.01 0l-.94.33.23.67h.71v-1zM12.6 13l.95-.33-.24-.67h-.7v1zm4.92 0v-1h-1v1h1zm0 5h-1v1h1v-1zm3.89 0v1h1v-1h-1zm0-.92h1v-1h-1v1zm-2.76 0h-1v1h1v-1zm0-1.23v-1h-1v1h1zm2.48 0v1h1v-1h-1zm0-.85h1v-1h-1v1zm-2.48 0h-1v1h1v-1zm0-1.08v-1h-1v1h1zm2.7 0v1h1v-1h-1zm0-.92h1v-1h-1v1zm2.07 2.38l.83.56.39-.56-.4-.57-.82.57zM21.64 18l-.83-.56L19.74 19h1.9v-1zm1.26 0v1h.54l.3-.45-.84-.55zm1.14-1.73l.84-.54-.83-1.29-.85 1.28.84.55zM25.16 18l-.84.54.3.46h.54v-1zm1.34 0v1h1.9l-1.08-1.56-.82.56zm-1.79-2.61l-.82-.57-.39.57.39.56.82-.56zM26.35 13l.83.57L28.26 12h-1.9v1zm-1.23 0v-1h-.54l-.3.45.84.55zm-1.04 1.6l-.84.53.83 1.32.85-1.3-.84-.55zm-1-1.6l.84-.53-.29-.47h-.55v1zm-1.3 0v-1h-1.92l1.1 1.57.81-.57zM8.33 16.4L9 14.58l-1.88-.68-.66 1.84 1.88.68zm-.28-1.17h.02v-2h-.02v2zm-.93-.67l.65 1.84 1.89-.66-.65-1.84-1.89.66zm1.6.5H7.4v2h1.32v-2zm-2.16-2.42l-1.93 5 1.86.72 1.94-5-1.87-.72zm-1 6.36H6.7v-2H5.57v2zm2.07-.66l.4-1.11-1.88-.68-.4 1.11 1.88.68zm-.54-.45h1.92v-2H7.1v2zm.97-.68l.39 1.12 1.89-.66-.39-1.11-1.89.66zM9.4 19h1.17v-2H9.4v2zm2.1-1.36l-1.9-5-1.88.72 1.92 5 1.87-.72zM8.67 12H7.5v2h1.16v-2zm1.36 1v5h2v-5h-2zm1 6h1.05v-2h-1.05v2zm2.05-1v-3.5h-2V18h2zm-1-2.5h.02v-2h-.02v2zm-.93-.67l1.26 3.5 1.88-.67-1.25-3.5-1.89.67zm2.2 4.17h.87v-2h-.87v2zm1.81-.67l1.26-3.54-1.89-.67-1.25 3.55 1.88.66zm.31-2.87h.02v-2h-.02v2zm-.98-1V18h2v-3.54h-2zm1 4.54h1.05v-2h-1.05v2zm2.05-1v-5h-2v5h2zm-1-6h-1.58v2h1.58v-2zm-2.53.69l-1.14 3.44 1.9.62 1.14-3.44-1.9-.62zm-.19 2.75h-.01v2h.01v-2zm.93.67l-1.2-3.44-1.88.66 1.2 3.44 1.88-.66zM12.6 12h-1.58v2h1.58v-2zm3.92 1v5h2v-5h-2zm1 6h3.89v-2h-3.89v2zm4.89-1v-.92h-2V18h2zm-1-1.92h-2.76v2h2.76v-2zm-1.76 1v-1.23h-2v1.23h2zm-1-.23h2.48v-2h-2.48v2zm3.48-1V15h-2v.85h2zm-1-1.85h-2.48v2h2.48v-2zm-1.48 1v-1.08h-2V15h2zm-1-.08h2.7v-2h-2.7v2zm3.7-1V13h-2v.92h2zm-1-1.92h-3.83v2h3.83v-2zm1.25 2.82l-1.79 2.62 1.65 1.12 1.79-2.62-1.65-1.12zM21.64 19h1.26v-2h-1.26v2zm2.1-.45l1.13-1.73-1.67-1.1-1.14 1.73 1.67 1.1zm-.54-1.74l1.12 1.73L26 17.46l-1.12-1.73-1.68 1.08zM25.16 19h1.34v-2h-1.34v2zm2.16-1.56l-1.78-2.62-1.65 1.13 1.78 2.61 1.65-1.12zm-1.78-1.49l1.64-2.38-1.65-1.14-1.64 2.4 1.65 1.12zm.81-3.95h-1.23v2h1.23v-2zm-2.07.45l-1.04 1.6 1.68 1.1 1.04-1.6-1.68-1.1zm.65 1.61l-1-1.6-1.7 1.07 1 1.6 1.7-1.07zM23.08 12h-1.3v2h1.3v-2zm-2.13 1.57l1.65 2.38 1.64-1.14-1.64-2.38-1.65 1.14z"
+                                                            fill="#fff" mask="url(#Icon-Amex_svg__a)"></path>
+                                                        <defs>
+                                                            <radialGradient id="Icon-Amex_svg__paint0_radial" cx="0"
+                                                                cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                                                gradientTransform="matrix(0 21 -32 0 10.75 8.98)">
+                                                                <stop stop-color="#71C8F2"></stop>
+                                                                <stop offset="1" stop-color="#0071BD"></stop>
+                                                            </radialGradient>
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <form action="#">
+                                                <div class="row">
+                                                    <div class="col-12 mb-4">
+                                                        <label for="card_number"
+                                                            class="form-label small text-body-secondary">Card
+                                                            Number</label>
+                                                        <input type="text" id="card_number"
+                                                            data-inputmask="'mask': '9999 9999 9999 9999'"
+                                                            class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6 mb-4">
+                                                        <label for="card_number"
+                                                            class="form-label small text-body-secondary">Expiration
+                                                            [MM/YEAR]</label>
+                                                        <input type="text" id="card_number"
+                                                            data-inputmask="'mask': '99/9999'" class="form-control">
+                                                    </div>
+                                                    <div class="col-sm-6 mb-4">
+                                                        <label for="card_number"
+                                                            class="form-label small text-body-secondary">CVV</label>
+                                                        <input type="text" id="card_number"
+                                                            data-inputmask="'mask': '999'" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <button class="d-block w-100 btn btn-primary mb-4">Pay with Debit/Credit
+                                                    Card</button>
+                                                <p class="small mb-0 text-muted">By starting a membership, you agree to
+                                                    our
+                                                    <a class="fw-bold" href="#!" target="_blank">Membership Terms &
+                                                        Conditions</a>.
+                                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                                    pariatur
+                                                </p>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--:Content inner Sidebar:-->
+                        <div
+                            class="col-md-5 col-lg-4 bg-body-tertiary content-inner-sidebar d-flex flex-column h-100 border-start position-relative">
+
+                            <div class="position-sticky top-0">
+                                <!--:Top Writers:-->
+                                <div class="position-relative py-5 px-3 px-xl-5">
+                                    <h6 class="mb-4">Benefits of Pro</h6>
+                                    <ul class="list-unstyled gap-2 mb-0 d-flex flex-column">
+                                        <li class="d-flex align-items-center">
+                                            <i class="bi bi-check me-2"></i> No Ads
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="bi bi-check me-2"></i>Unlimited Stories/Articles
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="bi bi-check me-2"></i>2 Devices
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--:Footer:-->
+                <!-- Back to Top button -->
+                <a data-tippy-placement="left" data-tippy-content="Scroll to Top" href="#"
+                    class="toTop btn text-body bg-primary-subtle border-0 p-0 width-3x height-3x shadow d-flex align-items-center justify-content-center">
+                    <i class="bi bi-chevron-up"></i>
+                </a>
+
+
+                <!--Footer Start-->
+                <footer id="footer" class="footer border-top position-relative">
+                    <div class="container pt-9 pb-5 position-relative z-index-1">
+                        <div class="row">
+                            <!--Footer col-->
+                            <div class="col-md-7 col-lg-3 mb-7">
+                                <a href="#" class="d-block width-3x mb-5">
+                                    <img src="assets/img/logo-a.svg" class="img-fluid footer-logo-light" alt="">
+                                    <img src="assets/img/logo-a-white.svg" class="img-fluid footer-logo-dark" alt="">
+                                </a>
+                                <hr>
+                                <small class="text-body-secondary mb-2 d-block">
+                                    Enquiries
+                                </small>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="#!mailto:yourmail.domain.com">info@domian.com</a>
+                                    </li>
+                                </ul>
+                                <hr>
+                                <small class="text-body-secondary mb-3 d-block">
+                                    Join Us Today
+                                </small>
+                                <a href="page-plans.html" class="btn btn-secondary">Upgrade to Pro</a>
+                            </div>
+                            <!--Footer col-->
+                            <div class="col-md-4 col-lg-2 ms-md-auto mb-7 col-7">
+                                <h6 class="mb-4">Links</h6>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            About us
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Newsletter
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Contact
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Career <span class="badge bg-success rounded-pill ms-1">Hiring</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Privacy policy
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Terms & conditions
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Footer col-->
+                            <div class="col-md-4 col-lg-2 ms-lg-auto mb-7 col-5">
+                                <h6 class="mb-4">Topics</h6>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Design
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Development
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Fashion
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Business
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Nature
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Travel
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Footer col-->
+                            <div class="col-md-8 col-lg-4 mb-7">
+                                <h6 class="mb-4">Popular Articles</h6>
+                                <ul class="list-unstyled">
+                                    <li class="d-flex card-hover mb-4 align-items-center">
+                                        <div class="me-3">
+                                            <a href="#!" class="d-block width-6x rounded-3 overflow-hidden">
+                                                <img src="assets/img/sm2.jpg" alt="" class="img-fluid img-zoom">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#!" class="lh-sm d-block mb-2">Tips for creating a long-lasting
+                                                partnership with your startup</a>
+                                            <span class="d-block small text-body-tertiary">02 Sep 2025</span>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex card-hover mb-4 align-items-center">
+                                        <div class="me-3">
+                                            <a href="#!" class="d-block width-6x rounded-3 overflow-hidden">
+                                                <img src="assets/img/sm1.jpg" alt="" class="img-fluid img-zoom">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#!" class="lh-sm d-block mb-2">Functional programming in python for
+                                                beginners</a>
+                                            <span class="d-block small text-body-tertiary">18 Sep 2025</span>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex card-hover align-items-center">
+                                        <div class="me-3">
+                                            <a href="#!" class="d-block width-6x rounded-3 overflow-hidden">
+                                                <img src="assets/img/sm3.jpg" alt="" class="img-fluid img-zoom">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#!" class="lh-sm d-block mb-2">Modern and well coded bootstrap themes you should
+                                                buy</a>
+                                            <span class="d-block small text-body-tertiary">19 Aug 2025</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr class="mb-5 mt-0">
+                        <div class="row">
+                            <div class="col-sm-7 mb-3 mb-sm-0">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="dropup d-table">
+                                        <a href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false"
+                                            class="dropdown-toggle small">
+                                            United States (English)
+                                        </a>
+
+                                        <!--Dropdown lang menu-->
+                                        <div class="dropdown-menu mb-3 dropdown-menu-lg-start" style="margin: 0px;">
+                                            <a href="#!" class="d-flex align-items-center dropdown-item active">
+                                                <img src="assets/img/country/us.svg" class="width-2x me-2" alt="">
+                                                English (US)
+                                            </a>
+                                            <a href="#!" class="d-flex align-items-center dropdown-item">
+                                                <img src="assets/img/country/es.svg" class="width-2x me-2" alt="">
+                                                Spanish
+                                            </a>
+                                            <a href="#!" class="d-flex align-items-center dropdown-item">
+                                                <img src="assets/img/country/gb.svg" class="width-2x me-2" alt="">
+                                                English (UK)
+                                            </a>
+                                            <a href="#!" class="d-flex align-items-center dropdown-item">
+                                                <img src="assets/img/country/fr.svg" class="width-2x me-2" alt="">
+                                                French
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-5 small text-sm-end">
+                                <span class="d-block lh-sm text-body-secondary">© Copyright
+                                    <script>
+                                        document.write(new Date().getFullYear())
+
+                                    </script>. Assan
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--container-->
+                </footer>
+            </main>
+
+        </div>
+    </div>
+    <!--script-->
+    <script src="assets/js/theme.bundle.min.js"></script>
+
+    <!--Input mask-->
+    <script src="assets/vendor/node_modules/js/inputmask.min.js"></script>
+    <script>
+        Inputmask().mask(document.querySelectorAll("[data-inputmask]"));
+
+    </script>
+</body>
+
+</html>

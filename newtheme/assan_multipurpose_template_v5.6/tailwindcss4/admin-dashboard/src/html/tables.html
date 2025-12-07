@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assan Tailwindcss Admin</title>
+
+  @@include('./partials/head-includes.html')
+</head>
+
+<body
+  class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+  @@include('./partials/app-preloader.html')
+
+
+  @@include('./partials/sidebar.html',{"page": "tables"} )
+
+  <main class="relative flex flex-col lg:ms-64">
+    @@include('./partials/header-default.html')
+
+    <!--:Page Header:-->
+    <div class="px-4 lg:px-6 xl:px-12 py-4">
+      <div class="flex flex-wrap items-center">
+        <div class="flex-grow">
+          <h4 class="text-2xl font-semibold">Tables</h4>
+        </div>
+        <div class="shrink-0">
+          <!--:Breadcrumb:-->
+          <nav aria-label="breadcrumb">
+            <ol class="flex items-center">
+              <li class="breadcrumb-item"><a href="index.html"
+                  class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+              </li>
+               <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+
+              <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Tables
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="content relative px-4 lg:px-6 xl:px-12">
+      <div class="flex flex-wrap -mx-2">
+        <div class="w-full px-2 mb-4">
+          <!--:Card:-->
+          <div class="overflow-hidden bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+            <div class="px-4 py-3">
+              <h5 class="text-lg font-semibold">Basic</h5>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="border-collapse w-full text-nowrap text-left">
+                <thead class="bg-gray-50 dark:bg-black text-sm text-gray-400 border-t border-gray-200 dark:border-gray-800">
+                  <tr>
+                    <th scope="col" class="px-4 py-3 font-semibold">Name</th>
+                    <th scope="col" class="px-4 py-3 font-semibold">Position</th>
+                    <th scope="col" class="px-4 py-3 font-semibold">Age</th>
+                    <th scope="col" class="px-4 py-3 font-semibold">Country</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Airi Satou</td>
+                    <td scope="row" class="px-4 py-3">Chief Executive Officer (CEO)</td>
+                    <td scope="row" class="px-4 py-3">54</td>
+                    <td scope="row" class="px-4 py-3">India</td>
+                  </tr>
+                  <tr class="border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Howard Hatfield</td>
+                    <td scope="row" class="px-4 py-3">Office Manager</td>
+                    <td scope="row" class="px-4 py-3">42</td>
+                    <td scope="row" class="px-4 py-3">United States</td>
+                  </tr>
+                  <tr class="border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Colleen Hurst</td>
+                    <td scope="row" class="px-4 py-3">Javascript Developer</td>
+                    <td scope="row" class="px-4 py-3">39</td>
+                    <td scope="row" class="px-4 py-3">United States</td>
+                  </tr>
+                  <tr class="border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Fiona Green</td>
+                    <td scope="row" class="px-4 py-3">Support Engineer</td>
+                    <td scope="row" class="px-4 py-3">42</td>
+                    <td scope="row" class="px-4 py-3">New Zealand</td>
+                  </tr>
+                  <tr class="border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Gavin Cortez</td>
+                    <td scope="row" class="px-4 py-3">Team Leader</td>
+                    <td scope="row" class="px-4 py-3">27</td>
+                    <td scope="row" class="px-4 py-3">France</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-2 mb-4">
+          <!--:Card:-->
+          <div class="overflow-hidden bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+            <div class="px-4 py-3">
+              <h5 class="text-lg font-semibold">Bordered</h5>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="border-collapse border border-e-0 border-b-0 border-s-0 w-full text-nowrap text-left">
+                <thead class="bg-gray-50 dark:bg-black text-sm text-gray-400">
+                  <tr>
+                    <th scope="col" class="px-4 py-3 font-semibold border border-gray-200 dark:border-gray-800 border-s-0">Name
+                    </th>
+                    <th scope="col" class="px-4 py-3 font-semibold border border-gray-200 dark:border-gray-800">
+                      Position</th>
+                    <th scope="col" class="px-4 py-3 font-semibold border border-gray-200 dark:border-gray-800">Age
+                    </th>
+                    <th scope="col" class="px-4 py-3 font-semibold border border-gray-200 dark:border-gray-800 border-r-0">
+                      Country</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800 border-s-0">Airi
+                      Satou</td>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800">Chief Executive
+                      Officer (CEO)</td>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800">54</td>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800 border-r-0">India
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800 border-s-0">Howard
+                      Hatfield</td>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800">Office Manager
+                    </td>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800">42</td>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800">United States</td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800 border-s-0">Colleen
+                      Hurst</td>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800">Javascript
+                      Developer</td>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800">39</td>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800 border-r-0">United
+                      States</td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800 border-s-0">Fiona
+                      Green</td>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800">Support Engineer
+                    </td>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800">42</td>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800 border-r-0">New
+                      Zealand</td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800 border-s-0">Gavin
+                      Cortez</td>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800">Team Leader</td>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800">27</td>
+                    <td scope="row" class="px-4 py-3 border border-gray-200 dark:border-gray-800 border-r-0">France
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-2 mb-4">
+          <!--:Card:-->
+          <div class="overflow-hidden bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+            <div class="px-4 py-3">
+              <h5 class="text-lg font-semibold">Striped</h5>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="border-collapse w-full text-nowrap text-left">
+                <thead class="bg-gray-50 dark:bg-black text-sm text-gray-400">
+                  <tr>
+                    <th scope="col" class="px-4 py-3 font-semibold">Name</th>
+                    <th scope="col" class="px-4 py-3 font-semibold">Position</th>
+                    <th scope="col" class="px-4 py-3 font-semibold">Age</th>
+                    <th scope="col" class="px-4 py-3 font-semibold">Country</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="even:bg-gray-50 dark:even:bg-gray-800">
+                    <td scope="row" class="px-4 py-3">Airi Satou</td>
+                    <td scope="row" class="px-4 py-3">Chief Executive Officer (CEO)</td>
+                    <td scope="row" class="px-4 py-3">54</td>
+                    <td scope="row" class="px-4 py-3">India</td>
+                  </tr>
+                  <tr class="even:bg-gray-50 dark:even:bg-gray-800">
+                    <td scope="row" class="px-4 py-3">Howard Hatfield</td>
+                    <td scope="row" class="px-4 py-3">Office Manager</td>
+                    <td scope="row" class="px-4 py-3">42</td>
+                    <td scope="row" class="px-4 py-3">United States</td>
+                  </tr>
+                  <tr class="even:bg-gray-50 dark:even:bg-gray-800">
+                    <td scope="row" class="px-4 py-3">Colleen Hurst</td>
+                    <td scope="row" class="px-4 py-3">Javascript Developer</td>
+                    <td scope="row" class="px-4 py-3">39</td>
+                    <td scope="row" class="px-4 py-3">United States</td>
+                  </tr>
+                  <tr class="even:bg-gray-50 dark:even:bg-gray-800">
+                    <td scope="row" class="px-4 py-3">Fiona Green</td>
+                    <td scope="row" class="px-4 py-3">Support Engineer</td>
+                    <td scope="row" class="px-4 py-3">42</td>
+                    <td scope="row" class="px-4 py-3">New Zealand</td>
+                  </tr>
+                  <tr class="even:bg-gray-50 dark:even:bg-gray-800">
+                    <td scope="row" class="px-4 py-3">Gavin Cortez</td>
+                    <td scope="row" class="px-4 py-3">Team Leader</td>
+                    <td scope="row" class="px-4 py-3">27</td>
+                    <td scope="row" class="px-4 py-3">France</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-2 mb-4">
+          <!--:Card:-->
+          <div class="overflow-hidden bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+            <div class="px-4 py-3">
+              <h5 class="text-lg font-semibold">Hover</h5>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="border-collapse w-full text-nowrap text-left">
+                <thead class="bg-gray-50 border-t border-gray-200 dark:border-gray-800 dark:bg-black text-sm text-gray-400">
+                  <tr>
+                    <th scope="col" class="px-4 py-3 font-semibold">Name</th>
+                    <th scope="col" class="px-4 py-3 font-semibold">Position</th>
+                    <th scope="col" class="px-4 py-3 font-semibold">Age</th>
+                    <th scope="col" class="px-4 py-3 font-semibold">Country</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Airi Satou</td>
+                    <td scope="row" class="px-4 py-3">Chief Executive Officer (CEO)</td>
+                    <td scope="row" class="px-4 py-3">54</td>
+                    <td scope="row" class="px-4 py-3">India</td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Howard Hatfield</td>
+                    <td scope="row" class="px-4 py-3">Office Manager</td>
+                    <td scope="row" class="px-4 py-3">42</td>
+                    <td scope="row" class="px-4 py-3">United States</td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Colleen Hurst</td>
+                    <td scope="row" class="px-4 py-3">Javascript Developer</td>
+                    <td scope="row" class="px-4 py-3">39</td>
+                    <td scope="row" class="px-4 py-3">United States</td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Fiona Green</td>
+                    <td scope="row" class="px-4 py-3">Support Engineer</td>
+                    <td scope="row" class="px-4 py-3">42</td>
+                    <td scope="row" class="px-4 py-3">New Zealand</td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Gavin Cortez</td>
+                    <td scope="row" class="px-4 py-3">Team Leader</td>
+                    <td scope="row" class="px-4 py-3">27</td>
+                    <td scope="row" class="px-4 py-3">France</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-2 mb-4">
+          <!--:Card:-->
+          <div class="overflow-hidden bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+            <div class="px-4 py-3">
+              <h5 class="text-lg font-semibold">Action Dropdown</h5>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="border-collapse w-full text-nowrap text-left">
+                <thead class="bg-gray-50 border-t border-gray-200 dark:border-gray-800 dark:bg-black text-sm text-gray-400">
+                  <tr>
+                    <th scope="col" class="px-4 py-3 font-semibold">Name</th>
+                    <th scope="col" class="px-4 py-3 font-semibold">Position</th>
+                    <th scope="col" class="px-4 py-3 font-semibold">Age</th>
+                    <th scope="col" class="px-4 py-3 font-semibold">Country</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Airi Satou</td>
+                    <td scope="row" class="px-4 py-3">Chief Executive Officer (CEO)</td>
+                    <td scope="row" class="px-4 py-3">54</td>
+                    <td scope="row" class="px-4 py-3">India</td>
+                    <td>
+                      <!-- Dropdown -->
+                      <div class="relative shrink-0">
+                        <a href="#"
+                          type="button" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                        </a>
+
+                        <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                          :class="isShowPopper &amp;&amp; 'show'">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else
+                          </a>
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Howard Hatfield</td>
+                    <td scope="row" class="px-4 py-3">Office Manager</td>
+                    <td scope="row" class="px-4 py-3">42</td>
+                    <td scope="row" class="px-4 py-3">United States</td>
+                    <td>
+                      <!-- Dropdown -->
+                      <div class="relative shrink-0">
+                        <a href="#"
+                          type="button" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                        </a>
+
+                        <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                          :class="isShowPopper &amp;&amp; 'show'">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else
+                          </a>
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Colleen Hurst</td>
+                    <td scope="row" class="px-4 py-3">Javascript Developer</td>
+                    <td scope="row" class="px-4 py-3">39</td>
+                    <td scope="row" class="px-4 py-3">United States</td>
+                    <td>
+                      <!-- Dropdown -->
+                      <div class="relative shrink-0">
+                        <a href="#"
+                          type="button" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                        </a>
+
+                        <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                          :class="isShowPopper &amp;&amp; 'show'">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else
+                          </a>
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Fiona Green</td>
+                    <td scope="row" class="px-4 py-3">Support Engineer</td>
+                    <td scope="row" class="px-4 py-3">42</td>
+                    <td scope="row" class="px-4 py-3">New Zealand</td>
+                    <td>
+                      <!-- Dropdown -->
+                      <div class="relative shrink-0">
+                        <a href="#"
+                          type="button" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                        </a>
+
+                        <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                          :class="isShowPopper &amp;&amp; 'show'">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else
+                          </a>
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Gavin Cortez</td>
+                    <td scope="row" class="px-4 py-3">Team Leader</td>
+                    <td scope="row" class="px-4 py-3">27</td>
+                    <td scope="row" class="px-4 py-3">France</td>
+                    <td>
+                      <!-- Dropdown -->
+                      <div class="relative shrink-0">
+                        <a href="#"
+                          type="button" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                        </a>
+
+                        <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                          :class="isShowPopper &amp;&amp; 'show'">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else
+                          </a>
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-2 mb-4">
+          <!--:Card:-->
+          <div class="overflow-hidden bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+            <div class="px-4 py-3">
+              <h5 class="text-lg font-semibold">Pagination</h5>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="border-collapse w-full text-nowrap text-left">
+                <thead class="bg-gray-50 border-t border-gray-200 dark:border-gray-800 dark:bg-black text-sm text-gray-400">
+                  <tr>
+                    <th scope="col" class="px-4 py-3 font-semibold">Name</th>
+                    <th scope="col" class="px-4 py-3 font-semibold">Position</th>
+                    <th scope="col" class="px-4 py-3 font-semibold">Age</th>
+                    <th scope="col" class="px-4 py-3 font-semibold">Country</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Airi Satou</td>
+                    <td scope="row" class="px-4 py-3">Chief Executive Officer (CEO)</td>
+                    <td scope="row" class="px-4 py-3">54</td>
+                    <td scope="row" class="px-4 py-3">India</td>
+                    <td>
+                      <!-- Dropdown -->
+                      <div class="relative shrink-0">
+                        <a href="#"
+                          type="button" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                        </a>
+
+                        <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                          :class="isShowPopper &amp;&amp; 'show'">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else
+                          </a>
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Howard Hatfield</td>
+                    <td scope="row" class="px-4 py-3">Office Manager</td>
+                    <td scope="row" class="px-4 py-3">42</td>
+                    <td scope="row" class="px-4 py-3">United States</td>
+                    <td>
+                      <!-- Dropdown -->
+                      <div class="relative shrink-0">
+                        <a href="#"
+                          type="button" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                        </a>
+
+                        <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                          :class="isShowPopper &amp;&amp; 'show'">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else
+                          </a>
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Colleen Hurst</td>
+                    <td scope="row" class="px-4 py-3">Javascript Developer</td>
+                    <td scope="row" class="px-4 py-3">39</td>
+                    <td scope="row" class="px-4 py-3">United States</td>
+                    <td>
+                      <!-- Dropdown -->
+                      <div class="relative shrink-0">
+                        <a href="#"
+                          type="button" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                        </a>
+
+                        <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                          :class="isShowPopper &amp;&amp; 'show'">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else
+                          </a>
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Fiona Green</td>
+                    <td scope="row" class="px-4 py-3">Support Engineer</td>
+                    <td scope="row" class="px-4 py-3">42</td>
+                    <td scope="row" class="px-4 py-3">New Zealand</td>
+                    <td>
+                      <!-- Dropdown -->
+                      <div class="relative shrink-0">
+                        <a href="#"
+                          type="button" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                        </a>
+
+                        <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                          :class="isShowPopper &amp;&amp; 'show'">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else
+                          </a>
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Gavin Cortez</td>
+                    <td scope="row" class="px-4 py-3">Team Leader</td>
+                    <td scope="row" class="px-4 py-3">27</td>
+                    <td scope="row" class="px-4 py-3">France</td>
+                    <td>
+                      <!-- Dropdown -->
+                      <div class="relative shrink-0">
+                        <a href="#"
+                          type="button" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                        </a>
+
+                        <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                          :class="isShowPopper &amp;&amp; 'show'">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else
+                          </a>
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--:Pagination:-->
+            <nav class="flex items-center justify-end px-4 py-3 gap-1 border-t border-gray-200 dark:border-gray-800"
+              aria-label="Page navigation example">
+              <button disabled="" type="button"
+                class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 17L13 12L18 7M11 17L6 12L11 7" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+              <button type="button"
+                class="w-9 h-9 active flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">1</button>
+              <button type="button"
+                class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">2</button>
+              <button type="button"
+                class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">3</button>
+              <button type="button"
+                class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 17L11 12L6 7M13 17L18 12L13 7" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+            </nav>
+          </div>
+        </div>
+        <div class="w-full px-2 mb-4">
+          <!--:Card:-->
+          <div class="overflow-hidden bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+            <div class="px-4 py-3">
+              <h5 class="text-lg font-semibold">Sorting Arrows</h5>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="border-collapse w-full text-nowrap text-left">
+                <thead class="bg-gray-50 border-t border-gray-200 dark:border-gray-800 dark:bg-black text-sm text-gray-400">
+                  <tr>
+                    <th scope="col" class="px-4 py-2 font-semibold">
+                      <div class="flex justify-between items-center">
+                        <span class="flex-grow">Name</span>
+                        <!--:sort:-->
+                        <button type="button" class="flex flex-col leading-[0.75] text-[10px] 
+                        after:block before:block
+                        font-icon before:content-['\F235'] after:content-['\F229']">
+                      </button>
+                      </div>
+                    </th>
+                    <th scope="col" class="px-4 py-2 font-semibold">Position</th>
+                    <th scope="col" class="px-4 py-2 font-semibold">
+                      <div class="flex justify-between items-center">
+                        <span class="flex-grow">Age</span>
+                        <!--:sort:-->
+                        <button type="button" class="flex flex-col leading-[0.75] text-[10px] 
+                        after:block before:block
+                        font-icon before:content-['\F235'] after:content-['\F229']">
+                      </button>
+                      </div>
+                    </th>
+                    <th scope="col" class="px-4 py-2 font-semibold">Country</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Airi Satou</td>
+                    <td scope="row" class="px-4 py-3">Chief Executive Officer (CEO)</td>
+                    <td scope="row" class="px-4 py-3">54</td>
+                    <td scope="row" class="px-4 py-3">India</td>
+                    <td>
+                      <!-- Dropdown -->
+                      <div class="relative shrink-0">
+                        <a href="#"
+                          type="button" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                        </a>
+
+                        <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                          :class="isShowPopper &amp;&amp; 'show'">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else
+                          </a>
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Howard Hatfield</td>
+                    <td scope="row" class="px-4 py-3">Office Manager</td>
+                    <td scope="row" class="px-4 py-3">42</td>
+                    <td scope="row" class="px-4 py-3">United States</td>
+                    <td>
+                      <!-- Dropdown -->
+                      <div class="relative shrink-0">
+                        <a href="#"
+                          type="button" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                        </a>
+
+                        <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                          :class="isShowPopper &amp;&amp; 'show'">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else
+                          </a>
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Colleen Hurst</td>
+                    <td scope="row" class="px-4 py-3">Javascript Developer</td>
+                    <td scope="row" class="px-4 py-3">39</td>
+                    <td scope="row" class="px-4 py-3">United States</td>
+                    <td>
+                      <!-- Dropdown -->
+                      <div class="relative shrink-0">
+                        <a href="#"
+                          type="button" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                        </a>
+
+                        <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                          :class="isShowPopper &amp;&amp; 'show'">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else
+                          </a>
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Fiona Green</td>
+                    <td scope="row" class="px-4 py-3">Support Engineer</td>
+                    <td scope="row" class="px-4 py-3">42</td>
+                    <td scope="row" class="px-4 py-3">New Zealand</td>
+                    <td>
+                      <!-- Dropdown -->
+                      <div class="relative shrink-0">
+                        <a href="#"
+                          type="button" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                        </a>
+
+                        <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                          :class="isShowPopper &amp;&amp; 'show'">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else
+                          </a>
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
+                    <td scope="row" class="px-4 py-3">Gavin Cortez</td>
+                    <td scope="row" class="px-4 py-3">Team Leader</td>
+                    <td scope="row" class="px-4 py-3">27</td>
+                    <td scope="row" class="px-4 py-3">France</td>
+                    <td>
+                      <!-- Dropdown -->
+                      <div class="relative shrink-0">
+                        <a href="#"
+                          type="button" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-500 hover:text-white
+                    " role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                        </a>
+
+                        <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block"
+                          :class="isShowPopper &amp;&amp; 'show'">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else
+                          </a>
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--:Pagination:-->
+            <nav class="flex items-center justify-end px-4 py-3 gap-1 border-t border-gray-200 dark:border-gray-800"
+              aria-label="Page navigation example">
+              <button disabled="" type="button"
+                class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 17L13 12L18 7M11 17L6 12L11 7" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+              <button type="button"
+                class="w-9 h-9 active flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">1</button>
+              <button type="button"
+                class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">2</button>
+              <button type="button"
+                class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">3</button>
+              <button type="button"
+                class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 17L11 12L6 7M13 17L18 12L13 7" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+  <!--:Main Script:-->
+  <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+//Form component colors using css variables
+
+
+//Form star
+.form-switch{
+  height: 1.5rem;
+}
+.form-star{
+    .form-star-input{
+      display: none;
+    }
+    .form-star-label{
+      width: 1rem;
+      height: 1rem;
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      &::after{
+        font-weight: normal;
+        font-family: bootstrap-icons;
+        content: "\f588";
+      }
+    }
+    .form-star-input:checked~.form-star-label{
+      &::after{
+        content: "\f586";
+        color: $warning;
+      }
+    }
+  }
+  //
+  // Custom checkboxes
+  //
+  .form-check-line-through:checked+label {
+    color: $text-muted;
+    text-decoration: line-through;
+  }
+  @mixin form-check-input($color: $theme-colors) {
+    border-color:$color !important;
+  }
+  @mixin form-check-input-checked($color: $theme-colors) {
+    background-color:$color !important;
+  }
+  @mixin form-check-input-shadow($color: $theme-colors) {
+    box-shadow:0 0 $input-btn-focus-blur $input-btn-focus-width rgba($color,$input-btn-focus-color-opacity) !important;
+  }
+  
+  //Default border stat
+  @each $color, $value in $theme-colors {
+    .form-check-input-#{$color} {
+      @include form-check-input($value);
+    }
+  }
+  
+  //checked stat
+  @each $color, $value in $theme-colors {
+    .form-check-input-#{$color}:checked {
+      @include form-check-input-checked($value);
+    }
+  }
+  
+  //focus box-shadowstat
+  @each $color, $value in $theme-colors {
+    .form-check-input-#{$color}:focus {
+      @include form-check-input-shadow($value);
+    }
+  }
+
+
+  //Dark forms

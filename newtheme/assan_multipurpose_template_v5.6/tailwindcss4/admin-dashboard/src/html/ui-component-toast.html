@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assan Tailwindcss Admin</title>
+
+  @@include('./partials/head-includes.html')
+</head>
+
+<body
+  class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+  @@include('./partials/app-preloader.html')
+
+
+  @@include('./partials/sidebar.html',{"page": "ui-components","components_collapse":
+  "show","component_toast_active": "active"})
+
+  <main class="relative flex flex-col lg:ms-64">
+    @@include('./partials/header-default.html')
+    <!--:Page Header:-->
+    <div class="px-4 lg:px-6 xl:px-12 py-4">
+      <div class="flex flex-wrap items-center">
+        <div class="flex-grow">
+          <h4 class="text-2xl font-semibold">Toast</h4>
+          <p class="text-sm opacity-60">Bootstrap Js required</p>
+        </div>
+        <div class="shrink-0">
+          <!--:Breadcrumb:-->
+          <nav aria-label="breadcrumb">
+            <ol class="flex items-center">
+              <li class="breadcrumb-item"><a href="index.html"
+                  class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+              </li>
+               <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+              <li class="breadcrumb-item active"><a
+                  class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                  href="ui-component-alerts.html">Components</a></li>
+               <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+              <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Toast</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="content relative px-4 lg:px-6 xl:px-12">
+      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900 p-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+        <div>
+          <p class="mb-2 mt-3">Info</p>
+          <!--:Toast:-->
+          <div class="toast rounded-lg bg-info-500/95 text-white" role="alert" aria-live="assertive" aria-atomic="true">
+            <!--:Toast Header:-->
+            <div class="toast-header p-4 flex items-center justify-between border-b border-white/20">
+              <strong class="me-auto">Bootstrap</strong>
+              <small class="opacity-60">11 mins ago</small>
+              <button type="button" class="text-white/50 hover:text-white ms-3 flex items-center" data-bs-dismiss="toast"
+                aria-label="Close">
+                <span class="icon-[tabler--x] text-lg"></span>
+              </button>
+            </div>
+            <!--:Toast body:-->
+            <div class="toast-body p-4">
+              Hello, world! This is a toast message.
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-2 mt-3">Warning</p>
+          <!--:Toast:-->
+          <div class="toast rounded-lg bg-warning-500/95 text-white" role="alert" aria-live="assertive"
+            aria-atomic="true">
+            <!--:Toast Header:-->
+            <div class="toast-header p-4 flex items-center justify-between border-b border-white/20">
+              <strong class="me-auto">Bootstrap</strong>
+              <small class="opacity-60">11 mins ago</small>
+              <button type="button" class="text-white/50 hover:text-white ms-3 flex items-center" data-bs-dismiss="toast"
+                aria-label="Close">
+                <span class="icon-[tabler--x] text-lg"></span>
+              </button>
+            </div>
+            <!--:Toast body:-->
+            <div class="toast-body p-4">
+              Hello, world! This is a toast message.
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-2 mt-3">Success</p>
+          <!--:Toast:-->
+          <div class="toast rounded-lg bg-success-500/95 text-white" role="alert" aria-live="assertive"
+            aria-atomic="true">
+            <!--:Toast Header:-->
+            <div class="toast-header p-4 flex items-center justify-between border-b border-white/20">
+              <strong class="me-auto">Bootstrap</strong>
+              <small class="opacity-60">11 mins ago</small>
+              <button type="button" class="text-white/50 hover:text-white ms-3 flex items-center" data-bs-dismiss="toast"
+                aria-label="Close">
+                <span class="icon-[tabler--x] text-lg"></span>
+              </button>
+            </div>
+            <!--:Toast body:-->
+            <div class="toast-body p-4">
+              Hello, world! This is a toast message.
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-2 mt-3">Error</p>
+          <!--:Toast:-->
+          <div class="toast rounded-lg bg-danger-500/95 text-white" role="alert" aria-live="assertive"
+            aria-atomic="true">
+            <!--:Toast Header:-->
+            <div class="toast-header p-4 flex items-center justify-between border-b border-white/20">
+              <strong class="me-auto">Bootstrap</strong>
+              <small class="opacity-60">11 mins ago</small>
+              <button type="button" class="text-white/50 hover:text-white ms-3 flex items-center" data-bs-dismiss="toast"
+                aria-label="Close">
+                <span class="icon-[tabler--x] text-lg"></span>
+              </button>
+            </div>
+            <!--:Toast body:-->
+            <div class="toast-body p-4">
+              Hello, world! This is a toast message.
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mb-2 mt-3">Live Example</p>
+      <button id="liveToastBtn" type="button" class="btn btn-sm btn-primary">Show Toast</button>
+      <div class="fixed z-[999] right-3 top-3">
+        <!--:Toast:-->
+        <div id="liveToast" class="toast hide fade shadow-md rounded-md bg-white/95 dark:bg-gray-800/90" role="alert"
+          aria-live="assertive" aria-atomic="true">
+          <!--:Toast Header:-->
+          <div class="toast-header p-4 flex items-center justify-between">
+            <strong class="me-auto">Welcome back John doe</strong>
+            <button type="button" class="hover:text-inherit text-gray-400 ms-3 flex items-center" data-bs-dismiss="toast"
+              aria-label="Close">
+              <span class="icon-[tabler--x] text-lg"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </main>
+  <!--:Main Script:-->
+  <script src="js/theme.bundle.js"></script>
+  <script>
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+
+    if (toastTrigger) {
+      const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+      toastTrigger.addEventListener('click', () => {
+        toastBootstrap.show()
+      })
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assan Tailwindcss Admin</title>
+
+  <!--:Flatpickr:-->
+  <link rel="stylesheet" href="vendor/css/flatpickr.min.css">
+
+  @@include('./partials/head-includes.html')
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+  @@include('./partials/app-preloader.html')
+
+
+  @@include('./partials/sidebar.html',{"page": "account","account_collapse":
+  "show","account_permissions": "active"} )
+
+  <main class="relative flex flex-col lg:ms-64">
+    @@include('./partials/header-default.html')
+    
+    <!--:Page Header:-->
+    <div class="px-4 lg:px-6 xl:px-12 py-4">
+        <div class="flex flex-wrap items-center">
+          <div class="flex-grow">
+            <h4 class="text-xl font-semibold">Permissions</h4>
+          </div>
+          <div class="shrink-0">
+            <!--:Breadcrumb:-->
+            <nav aria-label="breadcrumb">
+              <ol class="flex items-center">
+                <li class="breadcrumb-item"><a href="index.html"
+                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                </li>
+                 <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                <li class="breadcrumb-item active"><a
+                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                    href="account-overview.html">Account</a></li>
+                <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Permissions
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="content px-4 lg:px-6 xl:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-4">
+        <div class="md:col-span-4 lg:col-span-3">
+          <!--Account nav-->
+              <ul class="flex flex-col space-y-4">
+                <li class="nav-item">
+                  <a href="account-overview.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                    <span class="icon-[carbon--user-settings] me-2"></span>
+                    Overview
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-billing.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                    <span class="icon-[carbon--money] me-2"></span> Billing
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-contacts.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                    <span class="icon-[carbon--user-multiple] me-2"></span> Contacts
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-security.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                    <span class="icon-[carbon--rule-locked] me-2"></span> Security
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-permissions.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500 active">
+                    <span class="icon-[carbon--notification-new] me-2"></span> Permissions
+                  </a>
+                </li>
+              </ul>
+        </div>
+        <div class="md:col-span-8 lg:col-span-9">
+          <div class="relative mb-4">
+              <div class="flex py-3 items-center justify-between">
+                <!-- card title -->
+                <h5>
+                  Notifications
+                </h5>
+                <!-- Disable button -->
+                <div>
+                  <!-- checkbox -->
+                  <div class="relative flex items-center space-x-2">
+                    <input class="form-checkbox" type="checkbox" id="disableAll" checked="">
+                    <label class="cursor-pointer block" for="disableAll">Disable All</label>
+                  </div>
+                </div>
+              </div>
+              <div class="overvlow-x-auto bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card">
+                <table class="table w-full border-collapse">
+                  <thead class="text-left text-sm text-gray-500 dark:text-gray-400 font-semibold">
+                    <tr>
+                      <th class="px-4 py-3">Type</th>
+                      <th class="px-4 py-3 text-center">Call</th>
+                      <th class="px-4 py-3 text-center">Email</th>
+                      <th class="px-4 py-3 text-center">SMS</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-t border-gray-200 dark:border-gray-800">
+                      <td class="px-4 py-3">
+                        Direct messages
+                      </td>
+                      <td class="text-center px-4 py-3"></td>
+                      <td class="text-center px-4 py-3">
+  
+                        <!-- checkbox -->
+                        <div class="relative flex items-center justify-center">
+                          <input class="form-checkbox" type="checkbox" id="emailCheckboxOne"
+                            checked="">
+                          <label class="form-check-label" for="emailCheckboxOne"></label>
+                        </div>
+  
+                      </td>
+                      <td class="text-center px-4 py-3">
+  
+                        <!-- checkbox -->
+                        <div class="relative flex items-center justify-center">
+                          <input class="form-checkbox" type="checkbox" id="smsCheckboxOne"
+                            checked="">
+                          <label class="form-check-label" for="smsCheckboxOne"></label>
+                        </div>
+  
+                      </td>
+                    </tr>
+                    <tr class="border-t border-gray-200 dark:border-gray-800">
+                      <td class="px-4 py-3">
+                        Reminders
+                      </td>
+                      <td class="text-center px-4 py-3"></td>
+                      <td class="text-center px-4 py-3">
+  
+                        <!-- checkbox -->
+                        <div class="relative flex items-center justify-center">
+                          <input class="form-checkbox" type="checkbox" id="emailCheckboxTwo"
+                            checked="">
+                          <label class="form-check-label" for="emailCheckboxTwo"></label>
+                        </div>
+  
+                      </td>
+                      <td class="text-center px-4 py-3">
+  
+                        <!-- checkbox -->
+                        <div class="relative flex items-center justify-center">
+                          <input class="form-checkbox" type="checkbox" id="smsCheckboxTwo"
+                            checked="">
+                          <label class="form-check-label" for="smsCheckboxTwo"></label>
+                        </div>
+  
+                      </td>
+                    </tr>
+                    <tr class="border-t border-gray-200 dark:border-gray-800">
+                      <td class="px-4 py-3">
+                        API Limits
+                      </td>
+                      <td class="text-center px-4 py-3">
+  
+                        <!-- checkbox -->
+                        <div class="relative flex items-center justify-center">
+                          <input class="form-checkbox" type="checkbox" id="callCheckboxThree">
+                          <label class="form-check-label" for="callCheckboxThree"></label>
+                        </div>
+  
+                      </td>
+                      <td class="text-center px-4 py-3">
+  
+                        <!-- Checkbox -->
+                        <div class="relative flex items-center justify-center">
+                          <input class="form-checkbox" type="checkbox" id="emailCheckboxThree"
+                            checked="">
+                          <label class="form-check-label" for="emailCheckboxThree"></label>
+                        </div>
+  
+                      </td>
+                      <td class="text-center px-4 py-3">
+  
+                        <!-- Checkbox -->
+                        <div class="relative flex items-center justify-center">
+                          <input class="form-checkbox" type="checkbox" id="smsCheckboxThree"
+                            checked="">
+                          <label class="form-check-label" for="smsCheckboxThree"></label>
+                        </div>
+  
+                      </td>
+                    </tr>
+                    <tr class="border-t border-gray-200 dark:border-gray-800">
+                      <td class="px-4 py-3">
+                        Policy &amp; Community
+                      </td>
+                      <td class="text-center px-4 py-3">
+  
+                        <!-- Checkbox -->
+                        <div class="relative flex items-center justify-center">
+                          <input class="form-checkbox" type="checkbox" id="callCheckboxFour">
+                          <label class="form-check-label" for="callCheckboxFour"></label>
+                        </div>
+  
+                      </td>
+                      <td class="text-center px-4 py-3">
+  
+                        <!-- Checkbox -->
+                        <div class="relative flex items-center justify-center">
+                          <input class="form-checkbox" type="checkbox" id="emailCheckboxFour"
+                            checked="">
+                          <label class="form-check-label" for="emailCheckboxFour"></label>
+                        </div>
+  
+                      </td>
+                      <td class="text-center px-4 py-3">
+  
+                        <!-- Checkbox -->
+                        <div class="relative flex items-center justify-center">
+                          <input class="form-checkbox" type="checkbox" id="smsCheckboxFour"
+                            checked="">
+                          <label class="form-check-label" for="smsCheckboxFour"></label>
+                        </div>
+  
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="py-3 flex items-center justify-between">
+  
+                <!-- Title -->
+                <h5 class="flex-grow">
+                  Subscriptions
+                </h5>
+  
+                <!-- Button -->
+                <div class="flex items-center">
+                  <input class="form-switch" id="unsubscribeAll" type="checkbox" checked>
+                  <label for="unsubscribeAll" class="block ml-2 cursor-pointer">Unsubscribe All</label>
+                </div>
+  
+              </div>
+              <!-- List group -->
+              <div class="">
+                <div class="px-4 py-3 mb-2 rounded-lg shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900">
+                  <div class="flex items-center justify-between">
+                    <label class="block flex-grow cursor-pointer" for="subscriptionsSwitch1">
+                      <!-- Heading -->
+                      <span class="mb-1 text-lg block font-semibold h6">
+                        Product updates
+                      </span>
+  
+                      <!-- text -->
+                      <span class="">
+                        Changes in our product that related to your account
+                      </span>
+                    </label>
+                    <input class="form-switch" id="subscriptionsSwitch1" type="checkbox" checked="">
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+  </main>
+  <!--:Main Script:-->
+  <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

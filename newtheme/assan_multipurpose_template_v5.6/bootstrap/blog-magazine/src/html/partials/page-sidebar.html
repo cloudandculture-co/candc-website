@@ -1,0 +1,68 @@
+<!--:Sidebar Menu:-->
+<aside class="page-sidebar">
+    <div class="offcanvas-lg offcanvas-start" id="offcanvas-sidebar">
+        <div class="offcanvas-header d-block p-0">
+            <a class="sidebar-brand flex-shrink-0 d-flex justify-content-center height-6x w-100 align-items-center"
+                href="index.html">
+                <img src="assets/img/logo-a.svg" alt="" class="img-fluid logo-light">
+                <img src="assets/img/logo-a-white.svg" alt="" class="img-fluid logo-dark">
+            </a>
+        </div>
+        <!--:Sidenav:-->
+        <div class="offcanvas-body flex-grow-1 p-0">
+            <nav class="flex-grow-1 d-flex flex-column justify-content-center gap-1 gap-lg-2 align-items-center py-3">
+                <a data-tippy-placement="right" data-tippy-content="Home" href="index.html"
+                    class="width-4x height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link  @@if (context.page === 'home') {active}">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+
+                </a>
+                <div class="dropdown">
+                    <a href="notifications.html" data-tippy-placement="right" data-tippy-content="Notifications"
+                        class="width-4x tippy-dropdown height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link @@if (context.page === 'notifications') {active}">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" width="24" height="24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                        </svg>
+
+                    </a>
+                </div>
+                <a data-tippy-placement="right" data-tippy-content="Bookmarks" href="bookmarks.html"
+                    class="width-4x height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link @@if (context.page === 'bookmarks') {active}">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+
+                </a>
+                <a data-tippy-placement="right" data-tippy-content="Topics" href="topics.html"
+                    class="width-4x height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link @@if (context.page === 'topics') {active}">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
+                    </svg>
+
+                </a>
+                <a data-tippy-placement="right" data-tippy-content="Write Post" href="write.html"
+                    class="width-4x height-4x d-flex align-items-center justify-content-center rounded-3 sidenav-link @@if (context.page === 'write') {active}">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                    </svg>
+
+                </a>
+            </nav>
+        </div>
+        <div class="mt-auto offcanvas-footer">
+
+        </div>
+    </div>
+</aside>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    @@include('./partials/head-includes.html')
+
+    <!--Swiper slider-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/swiper-bundle.min.css">
+    <!--G-lightbox-->
+    <link rel="stylesheet" href="assets/vendor/node_modules/css/glightbox.min.css" />
+    <title>Assan - TailwindCss Template</title>
+  </head>
+
+  <body class="leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+    <!--Header Start-->
+    <header class="z-fixed top-0 left-0 absolute header-sticky z-[999] w-full">
+      <nav class="navbar py-4 lg:py-0 shadow-none navbar-expand-lg navbar-light">
+        <div class="container relative flex flex-wrap items-center justify-center">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo/logo.svg" alt="" class="w-24 dark:hidden">
+            <img src="assets/img/logo/logo-white.svg" alt="" class="w-24 hidden dark:block">
+        </a>
+          <div class="flex items-center shrink-0 ml-auto lg:order-last">
+            <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon">
+                <i></i>
+              </span>
+            </button>
+            <div class="nav-item me-3 me-lg-0 ms-lg-3">
+              <a href="#" class="btn bg-orange-500 text-white hover:bg-orange-600">
+                Get started</a>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent" id="mainNavbarTheme">
+            @@include('./partials/headers/default-navbar-items.html',{"page":
+            "pages"})
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main-content" id="main-content">
+        <!--page-hero-->
+        <section class="relative">
+            <!--:Pattern:-->
+            <div class="bg-pattern text-primary text-opacity-50 opacity-25 w-full h-full start-0 top-0 position-absolute"></div>
+            <div class="container pt-24 pb-16 relative z-[1]">
+                <div class="flex flex-wrap -mx-3 items-center justify-center">
+                    <div class="xl:w-4/12 z-2">
+                        
+                        <h2 class="mb-3 text-4xl lg:text-5xl font-medium">
+                            Welcome back!
+                           </h2>
+                           <p class="mb-5 text-gray-400">
+                              Please Sign In with details...
+                           </p>
+                        <div class="relative">
+                            <div>
+                                <form class="needs-validation" novalidate>
+                                    <div class="relative mb-3">
+                                  <input type="email" class="input !pl-9 peer" required autofocus placeholder="Username">
+                                  <span class="input-icon absolute left-0 top-1/2 -translate-y-1/2 ml-3 opacity-50 peer-focus:text-indigo-500">
+                                    <i class="bi bi-envelope"></i>
+                                  </span>
+                                </div>
+                                  <div class="relative mb-3">
+                                  <input type="password" class="input peer !pl-9" required placeholder="Password">
+                                  <span class="input-icon absolute left-0 top-1/2 -translate-y-1/2 ml-3 opacity-50 peer-focus:text-indigo-500">
+                                    <i class="bi bi-unlock"></i>
+                                </span>
+                                </div>
+                                    <div class="mb-3 flex justify-between">
+                                        <div class="input-check flex items-center">
+                                            <input class="input-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="input-check-label ml-2 text-gray-400" for="flexCheckDefault">
+                                             Remember me
+                                            </label>
+                                          </div>
+                                          <div>
+                                            <label class="text-end block small mb-0">
+                                                <a href="page-account-forget-password.html" class="link-hover-underline inline-block relative">Forget Password?</a></label>
+                                          </div>
+                                    </div>
+                                    
+                                    <div class="grid">
+                                        <button class="btn w-full bg-indigo-500 text-white hover:bg-indigo-600 text-center" type="submit">
+                                            Sign in
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <!---->
+                                <p class="pt-4 flex flex-wrap items-center small text-gray-400">
+                                    Don’t have an account yet? <a href="page-account-signup.html" class="ms-2 link-underline leading-[1] text-indigo-500 !pb-1">Sign Up</a>
+                                </p>
+                                <!--Divider-->
+                                <div class="flex items-center py-3">
+                                    <span class="flex-grow border-b border-gray-200 dark:border-gray-800 pt-1"></span>
+                                    <span class="inline-block px-4">or</span>
+                                    <span class="flex-grow border-b border-gray-200 dark:border-gray-800 pt-1"></span>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                  <a href="#!" class="btn bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-700 hover:bg-gray-700 hover:text-white w-full text-center">
+                                      <!--Main Icon-->
+                                      <div class="flex items-center justify-center">
+                                          <img src="assets/img/brands/google.svg" alt="" class="w-5 mr-2">
+                                          <span>sign in with google</span>
+                                      </div>
+                                  </a> 
+                                  <a href="#!" class="btn bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-700 hover:bg-gray-700 hover:text-white w-full text-center">
+                                      <!--Main Icon-->
+                                      <div class="flex items-center justify-center">
+                                          <img src="assets/img/brands/facebook.svg" alt="" class="w-5 mr-2">
+                                          <span>sign in with facebook</span>
+                                      </div>
+                                  </a> 
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    </main>
+
+    @@include('./partials/footers/footer-1.html')
+
+   <!-- begin:Back to Top button -->
+   <a href="#" class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+    <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="0, 251.2">
+      </circle>
+    </svg>
+    <i class="bi bi-chevron-up"></i>
+  </a>
+  <!-- begin:Back to Top button -->
+    
+    <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+  </body>
+
+</html>

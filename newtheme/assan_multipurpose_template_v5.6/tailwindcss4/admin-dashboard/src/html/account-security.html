@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assan Tailwindcss Admin</title>
+
+  <!--:Flatpickr:-->
+  <link rel="stylesheet" href="vendor/css/flatpickr.min.css">
+
+  @@include('./partials/head-includes.html')
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+  @@include('./partials/app-preloader.html')
+
+
+  @@include('./partials/sidebar.html',{"page": "account","account_collapse":
+  "show","account_collapse": "show","account_security": "active"} )
+
+  <main class="relative flex flex-col lg:ms-64">
+    @@include('./partials/header-default.html')
+     <!--:Page Header:-->
+     <div class="px-4 lg:px-6 xl:px-12 py-4">
+        <div class="flex flex-wrap items-center">
+          <div class="flex-grow">
+            <h4 class="text-xl font-semibold">Security</h4>
+          </div>
+          <div class="shrink-0">
+            <!--:Breadcrumb:-->
+            <nav aria-label="breadcrumb">
+              <ol class="flex items-center">
+                <li class="breadcrumb-item"><a href="index.html"
+                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                </li>
+                 <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                <li class="breadcrumb-item active"><a
+                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                    href="account-overview.html">Account</a></li>
+                 <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Security
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="content px-4 lg:px-6 xl:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-4">
+        <div class="md:col-span-4 lg:col-span-3">
+           <!--Account nav-->
+              <ul class="flex flex-col space-y-4">
+                <li class="nav-item">
+                  <a href="account-overview.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                    <span class="icon-[carbon--user-settings] me-2"></span>
+                    Overview
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-billing.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                    <span class="icon-[carbon--money] me-2"></span> Billing
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-contacts.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                    <span class="icon-[carbon--user-multiple] me-2"></span> Contacts
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-security.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500 active">
+                    <span class="icon-[carbon--rule-locked] me-2"></span> Security
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-permissions.html"
+                    class="flex items-center transition-all hover:text-primary-500 [&.active]:text-primary-500">
+                    <span class="icon-[carbon--notification-new] me-2"></span> Permissions
+                  </a>
+                </li>
+              </ul>
+        </div>
+         <div class="md:col-span-8 lg:col-span-9">
+          <div class="bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+              <div class="px-4 py-3 flex items-center justify-between">
+  
+                <!-- card title -->
+                <h5 class="text-lg font-semibold">
+                  Update password
+                </h5>
+  
+                <!-- Disable button -->
+                <div>
+                  <a href="#!" class="text-primary-500 hover:underline">
+                    Forget password?
+                  </a>
+                </div>
+              </div>
+  
+              <!--card body-->
+              <div class="p-4">
+                <div class="flex flex-wrap -mx-2">
+  
+                  <!--col-->
+                  <div class="w-full md:w-4/6 md:pr-6 px-2 mb-4 md:mb-0">
+                    <form>
+  
+                      <!--Current password -->
+                      <div class="mb-4">
+  
+                        <!-- Label -->
+                        <label class="block mb-1.5 text-gray-500 dark:text-gray-300" for="current_password">
+                          Current password
+                        </label>
+                        <!--:Input Default with icon:-->
+                        <div class="relative">
+                          <input type="text" placeholder="Current password" id="current_password"
+                            class="form-input peer !ps-8" />
+                          <span
+                            class="icon-[carbon--locked] absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 peer-focus:text-indigo-500 dark:peer-focus:text-gray-200">
+                            </span>
+                        </div>
+                      </div>
+                      <div class="mb-4">
+                        <!-- Label -->
+                        <label class="block mb-1.5 text-gray-500 dark:text-gray-300" for="new_password">
+                          New password
+                        </label>
+                        <!--:Input Default with icon:-->
+                        <div class="relative">
+                          <input type="text" placeholder="Current password" id="new_password"
+                            class="form-input peer !ps-8" />
+                          <span
+                            class="icon-[carbon--locked] absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 peer-focus:text-indigo-500 dark:peer-focus:text-gray-200">
+                            </span>
+                        </div>
+                      </div>
+                      <!--current password -->
+                      <div class="mb-4">
+  
+                        <!-- Label -->
+                        <label class="block mb-1.5 text-gray-500 dark:text-gray-300" for="confirm_new_password">
+                          Confirm new password
+                        </label>
+  
+                        <!--:Input Default with icon:-->
+                        <div class="relative">
+                          <input type="text" placeholder="Current password" id="confirm_new_password"
+                            class="form-input peer !ps-8" />
+                          <span
+                            class="icon-[carbon--locked] absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 peer-focus:text-indigo-500 dark:peer-focus:text-gray-200">
+                            </span>
+                        </div>
+                      </div>
+  
+                      <!-- form update password button -->
+                      <button
+                        class="inline-block px-4 py-2 rounded-md bg-primary-500 text-white hover:bg-primary-600 transition-all focus:ring-1 focus:ring-ofsset-2 focus:ring-primary-500 focus:ring-offset-primary-white dark:focus:ring-offset-gray-900"
+                        type="submit">
+                        Update password
+                      </button>
+  
+                    </form>
+                  </div>
+  
+                  <!--col-->
+                  <div class="w-full md:w-2/6 px-2 mb-4 md:mb-0">
+  
+                    <!-- Card -->
+                    <div
+                      class="bg-warning-200 border border-warning-300 dark:bg-warning-900 dark:border-warning-800 rounded-md px-4 py-4">
+                      <div>
+  
+                        <!-- Text -->
+                        <p class="mb-2 text-black dark:text-white">
+                          Password requirements
+                        </p>
+                        <!-- List group -->
+                        <ul class="list-disc text-sm text-warning-900 dark:text-warning-500 ps-4 mb-0">
+                          <li>
+                            Minimum 8 character
+                          </li>
+                          <li>
+                            At least 1 special character
+                          </li>
+                          <li>
+                            At least 2 number
+                          </li>
+                          <li>
+                            Can’t be the same as a previous password
+                          </li>
+                        </ul>
+  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--/.End row-->
+                <hr class="my-4 border-gray-200 dark:border-gray-800">
+                <div class="flex items-center">
+                  <div class="flex-grow pr-3">
+                    <label class="cursor-pointer" for="two-factor-auth">
+                      <!-- Heading -->
+                      <span class="block text-lg h6 font-semibold mb-1">
+                        Enable 2-step authentication
+                      </span>
+  
+                      <!-- Text -->
+                      <span class="text-gray-500 dark:text-gray-400 block text-sm">
+                        Protects you against password theft by requesting an authentication code via SMS on every login.
+                      </span>
+                    </label>
+  
+                  </div>
+                  <div class="shrink-0">
+                    <!-- Switch -->
+                    <div class="relative">
+                      <input class="form-switch" type="checkbox" id="two-factor-auth" checked="">
+                    </div>
+  
+                  </div>
+                </div>
+                <hr class="my-4 border-gray-200 dark:border-gray-800">
+                <div class="flex items-center">
+                  <div class="flex-grow pr-3">
+                    <label class="cursor-pointer block" for="ask-pass-update">
+                      <!-- Heading -->
+                      <span class="mb-1 text-lg h6 font-semibold block">
+                        Ask to change password on every 6 months
+                      </span>
+  
+                      <!-- Text -->
+                      <span class="text-gray-500 dark:text-gray-400 block text-sm">
+                        Protected against data leaks and password theft.
+                      </span>
+                    </label>
+                  </div>
+                  <div class="shrink-0">
+  
+                    <!-- Switch -->
+                    <div class="relative">
+                      <input class="form-switch" type="checkbox" id="ask-pass-update">
+                    </div>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div>
+        </div>
+      </div>
+  </main>
+  <!--:Main Script:-->
+  <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

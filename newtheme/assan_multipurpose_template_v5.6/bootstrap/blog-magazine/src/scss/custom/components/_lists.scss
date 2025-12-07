@@ -1,0 +1,93 @@
+//List styles
+.list-group-transparent{
+    .list-group-item{
+        background-color: transparent;
+    }
+}
+.list-divided{
+    display: flex;
+    align-items: center;
+    li{
+        position: relative;
+        font-size:$font-size-sm;
+        &:not(:last-child)::after{
+            content:"";
+            width:4px;
+            height:4px;
+            border-radius: 2px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 .5rem;
+            background-color: currentColor;
+            opacity: .25;
+        }
+        a{
+            color: var(--#{$prefix}body-color);
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+//Notifications list
+.list-group.list-group-notifications{
+    .list-group-item{
+        position: relative;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: transparent!important;
+        &:not(.unread){
+        color: $gray-600;
+        a:not(.btn):not([class~="text-"]){
+            color: currentColor;
+            &:hover{
+                color: var(--#{$prefix}body-color);
+            }
+        }
+        }
+        &.unread {
+            a{
+                font-weight: $font-weight-medium;
+            }
+        }
+
+    }
+}
+[data-bs-theme=dark]{
+    .list-group.list-group-notifications{
+        .list-group-item{
+            &:not(.unread){
+                color: rgba($white,.6);
+                }
+        }
+    } 
+}
+
+.list-transparent.list-group{
+    .list-group-item{
+        background-color: transparent!important;
+    }
+}
+
+//Topics list
+.list-topics{
+    label.btn{
+        position: relative;
+        border-radius: $border-radius-pill;
+        &::before{
+            content: '\F28A';
+            vertical-align: -2px;
+            display: inline-block;
+            margin-right: .5rem;
+            font-size: $font-size-base;
+            line-height: 1;
+            font-weight: normal;
+            font-family: bootstrap-icons!important;
+        }
+    }
+    input[type=checkbox]:checked~label.btn::before{
+        content: "\F26B";
+    }
+}

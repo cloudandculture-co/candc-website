@@ -1,0 +1,30 @@
+//data tables style
+.dt-length{
+    padding-left: .5rem;
+    padding-top:.5rem;
+    label{
+        font-size: $font-size-sm;
+    }
+}
+.dt-input{
+    margin-right: .5rem;
+}
+.dt-info{
+    padding-left: .5rem;
+}
+.dt-paging{
+    padding-right: .5rem;
+}
+div.dt-container .dt-paging .dt-paging-button:hover, div.dt-container .dt-paging .dt-paging-button:active,div.dt-container .dt-paging .dt-paging-button.current, div.dt-container .dt-paging .dt-paging-button.current:hover{
+    background: none;
+    background-color: $primary;
+    border-color: $primary;
+    color: white!important;
+    box-shadow: none;
+}
+div.dt-container .dt-paging .dt-paging-button{
+    padding: .25em .75em;
+}
+div.dt-container.dt-empty-footer tbody>tr:last-child>*{
+    border-bottom-color: $border-color;
+}

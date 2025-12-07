@@ -1,0 +1,24 @@
+//buttons override
+.btn{
+    text-transform: $btn-text-transform;
+    font-weight:$btn-font-weight;
+    letter-spacing: $letter-spacing-base;
+    --#{$prefix}btn-focus-box-shadow: 0 3px #{$btn-focus-width} 0 rgba(var(--#{$prefix}btn-focus-shadow-rgb), .075);
+    &:hover{
+        box-shadow:var(--#{$prefix}btn-focus-box-shadow);
+    }
+}
+.btn-group-icon{
+    .dropdown-toggle{
+        &::after{
+            display: none;
+        }
+    }
+}
+
+.btn.btn-outline-secondary{
+    --bs-btn-color:var(--#{$prefix}secondary-color);
+    --bs-btn-border-color:var(--#{$prefix}border-color-translucent);
+    --bs-btn-disabled-border-color:var(--#{$prefix}tertiary-color);
+    --bs-btn-disabled-color:var(--#{$prefix}tertiary-color);
+}

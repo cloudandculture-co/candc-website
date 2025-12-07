@@ -1,0 +1,682 @@
+
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assan Tailwindcss Admin</title>
+
+  <!--:Flatpickr:-->
+  <link rel="stylesheet" href="vendor/css/flatpickr.min.css">
+
+  @@include('./partials/head-includes.html')
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+  @@include('./partials/app-preloader.html')
+
+
+  @@include('./partials/sidebar.html',{"page": "dashboards","dashboard_collapse":
+  "show","dashboard_crm": "active"})
+
+  <main class="relative flex flex-col lg:ms-64">
+    @@include('./partials/header-default.html')
+    <!--:Page Header:-->
+    <div class="px-4 lg:px-6 xl:px-12 py-4 lg:py-6">
+      <div class="flex flex-col md:items-center md:flex-row gap-4">
+        <div class="flex-grow">
+          <h4 class="text-2xl font-semibold">Welcome Back! John 🤗</h4>
+          <p class="text-gray-400">Your CRM dashboard</p>
+        </div>
+        
+         <div class="shrink-0 hidden md:block">
+          <!--:Add button:-->
+          <a href="#!" class="btn btn-info !inline-flex items-center justify-center">
+            <span class="icon-[tabler--wand] text-lg me-1"></span>
+            Add Widget</a>
+        </div>
+         <!--:Calendar:-->
+        <div class="shrink-0 relative inline-flex items-center shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-md">
+          <span class="shrink-0 opacity-50 pointer-events-none
+          absolute start-0 top-0 w-8 h-full flex items-center justify-center">
+        <span class="icon-[tabler--calendar-week]"></span>
+        </span>
+          <input type="text"
+            class="js-data-range ps-8 w-46 text-sm py-2">
+        </div>
+      </div>
+    </div>
+      <div class="content px-4 lg:px-6 xl:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+              <!--:Card stats:-->
+              <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg p-4 flex items-center">
+                <div class="shrink-0 mr-4 lg:mr-6">
+                  <!--:Progress:-->
+                <div class="js-progress relative" data-progress="79">
+                    <svg class="progress-circle" width="72" height="72" viewBox="0 0 36 36">
+                      <path fill="none" stroke="currentColor" stroke-width="2" class="progress-bg text-primary-500/20" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <path cl fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="rounded" class="progress-bar text-primary-500"
+                        stroke-dasharray="0, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    </svg>
+                    <!--:Overlay Text:-->
+                    <div class="progress-value absolute w-full h-full left-0 top-0 flex items-center justify-center">
+                      <span class="progress-value-text text-sm">50</span>%
+                    </div>
+                  </div>
+                </div>
+                  <div class="flex-grow">
+                  <!--:Title:-->
+                <h5 class="mb-1 text-2xl font-semibold">4562</h5>
+                <!--:Subtitle:-->
+                <p class="text-gray-600 dark:text-gray-300 mb-3">New Leads</p>
+                <span class="flex text-sm items-center">
+                  <span class="flex items-center text-success-500">
+                    <span class="icon-[tabler--arrow-up-right] me-1"></span>
+                    169%
+                  </span>
+                  <span class="ps-1 text-gray-400">vs last period</span>
+                </span>
+                </div>
+              </div>
+              <!--:Card stats:-->
+              <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg p-4 flex items-center">
+                <div class="shrink-0 mr-4 lg:mr-6">
+                  <!--:Progress:-->
+                <div class="js-progress relative" data-progress="74">
+                    <svg class="progress-circle" width="72" height="72" viewBox="0 0 36 36">
+                      <path fill="none" stroke="currentColor" stroke-width="2" class="progress-bg text-success-500/20" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <path cl fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="rounded" class="progress-bar text-success-500"
+                        stroke-dasharray="0, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    </svg>
+                    <!--:Overlay Text:-->
+                    <div class="progress-value absolute w-full h-full left-0 top-0 !hidden flex items-center justify-center">
+                      <span class="progress-value-text text-sm">50</span>%
+                    </div>
+                  </div>
+                </div>
+                  <div class="flex-grow">
+                  <!--:Title:-->
+                <h5 class="mb-1 text-2xl font-semibold">74%</h5>
+                <!--:Subtitle:-->
+                <p class="text-gray-600 dark:text-gray-300 mb-3">Lead Conversion Rate</p>
+                <span class="flex text-sm items-center">
+                  <span class="flex items-center text-success-500">
+                    <span class="icon-[tabler--arrow-up-right] me-1"></span>
+                    165%
+                  </span>
+                  <span class="ps-1 text-gray-400">vs last period</span>
+                </span>
+                </div>
+              </div>
+              <!--:Card stats:-->
+              <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg p-4 flex items-center">
+                
+                  <div class="flex-grow pr-4">
+                  <!--:Title:-->
+                <h5 class="mb-1 text-2xl font-semibold">742</h5>
+                <!--:Subtitle:-->
+                <p class="text-gray-600 dark:text-gray-300 mb-3">New Contacts</p>
+                <span class="flex text-sm items-center">
+                  <span class="flex items-center text-success-500">
+                    <span class="icon-[tabler--arrow-up-right] me-1"></span>
+                    47%
+                  </span>
+                  <span class="ps-1 text-gray-400">vs last period</span>
+                </span>
+                </div>
+                 <!--:Sparkline chart:-->
+                 <div class="w-24">
+                  <!--:Chart:-->
+                <div id="chartSparkline1"></div>
+                </div>
+              </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg">
+              <div class="flex px-4 pt-4 items-center justify-between">
+                <h5 class="text-lg font-semibold flex-grow">Visitors Engagement</h5>
+                <!--:Action Dropdown:-->
+                <div class="relative dropstart">
+                  <button
+                    class="hover:bg-primary-500 hover:text-white rounded-full w-8 h-8 inline-flex items-center justify-center"
+                    data-bs-toggle="dropdown">
+                    <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                  </button>
+                   <div data-popper-placement="bottom" class="dropdown-menu absolute min-w-32 py-2 hidden [&.show]:block"
+                      >
+                      <a href="#!" class="dropdown-item">
+                        View report
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Download report
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Email report
+                      </a>
+                    </div>
+                </div>
+              </div>
+              <div class="overflow-hidden">
+                <!--:Sales overview chart:-->
+                <div id="chart_overview"></div>
+              </div>
+            </div>
+            <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg">
+              <div class="flex px-4 pt-4 items-center justify-between">
+                <div class="flex-grow">
+                  <h5 class="text-lg font-semibold">Campaigns Overview</h5>
+                  <p class="text-gray-400">Sent, reach and opened campaigns</p>
+                </div>
+                <!--:Action Dropdown:-->
+                <div class="relative dropstart">
+                  <button
+                    class="hover:bg-primary-500 hover:text-white rounded-full w-8 h-8 inline-flex items-center justify-center"
+                    data-bs-toggle="dropdown">
+                    <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                  </button>
+                   <div data-popper-placement="bottom" class="dropdown-menu absolute !right-0 min-w-32 py-2 hidden [&.show]:block"
+                      >
+                      <a href="#!" class="dropdown-item">
+                        View report
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Download report
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Email report
+                      </a>
+                    </div>
+                </div>
+              </div>
+              <!--:Chart:-->
+              <div id="chartCampaigns"></div>
+              <div class="flex items-center">
+                <div class="flex-grow text-center">
+                  <span class="block mx-auto w-3 h-3 rounded-full bg-success-500 mb-1"></span>
+                  <small>Opened</small>
+                  <h6 class="font-semibold">543</h6>
+                </div>
+                <div class="flex-grow text-center">
+                  <span class="block mx-auto w-3 h-3 rounded-full bg-warning-500 mb-1"></span>
+                  <small>Reached</small>
+                  <h6 class="font-semibold">287</h6>
+                </div>
+                <div class="flex-grow text-center">
+                  <span class="block mx-auto w-3 h-3 rounded-full bg-primary-500 mb-1"></span>
+                  <small>Sent</small>
+                  <h6 class="font-semibold">476</h6>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 gap-4 mb-4">
+            <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg">
+              <div class="flex px-4 pt-4 items-center justify-between">
+                <h5 class="text-lg font-semibold flex-grow">Ads Overview</h5>
+                <!--:Action Dropdown:-->
+                <div class="relative dropstart">
+                  <button
+                    class="hover:bg-primary-500 hover:text-white rounded-full w-8 h-8 inline-flex items-center justify-center"
+                    data-bs-toggle="dropdown">
+                    <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                  </button>
+                   <div data-popper-placement="bottom" class="dropdown-menu absolute min-w-32 py-2 hidden [&.show]:block"
+                      >
+                      <a href="#!" class="dropdown-item">
+                        View report
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Download report
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Email report
+                      </a>
+                    </div>
+                </div>
+              </div>
+              <div class="overflow-hidden">
+                <!--:Sales overview chart:-->
+                <div id="chart_ads_click"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <!--:Card:-->
+              <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg">
+                <div class="flex px-4 py-3 items-center justify-between">
+                  <div class="flex-grow">
+                    <h5 class="text-lg font-semibold">Sales Target</h5>
+                    <p class="text-gray-400">Country-wise sales target overview</p>
+                  </div>
+                  <!--:Action Dropdown:-->
+                  <div class="relative dropstart">
+                    <button
+                      class="hover:bg-primary-500 hover:text-white rounded-full w-8 h-8 inline-flex items-center justify-center"
+                      data-bs-toggle="dropdown">
+                      <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                    </button>
+                     <div data-popper-placement="bottom" class="dropdown-menu absolute min-w-32 py-2 hidden [&.show]:block"
+                        >
+                        <a href="#!" class="dropdown-item">
+                          View report
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Download report
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Email report
+                        </a>
+                      </div>
+                  </div>
+                </div>
+                <div class="border-t border-gray-100 dark:border-gray-800">
+                  <!--:Sales Target overview list:-->
+                  <ul class="divide-y divide-gray-100 dark:divide-gray-800">
+                    <li class="px-4 py-3 flex items-center">
+                      <div class="flex flex-col shrink-0 mr-4">
+                          <span class="shrink-0 text-sm mb-1 text-gray-400">India</span>
+                        <span class="shrink-0 font-semibold">$200K</span>
+                        </div>
+                        <!--:Progress:-->
+                      <div class="progress mx-2 p-1 flex-grow rounded-md bg-primary-500/10" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-primary-500 rounded-md px-4 py-0.5 leading-[1] text-white" style="width: 74%">
+                          <small>74%</small>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="px-4 py-3 flex items-center">
+                      <div class="flex flex-col shrink-0 mr-4">
+                          <span class="shrink-0 text-sm mb-1 text-gray-400">USA</span>
+                        <span class="shrink-0 font-semibold">$300K</span>
+                        </div>
+                        <!--:Progress:-->
+                      <div class="progress mx-2 p-1 flex-grow rounded-md bg-primary-500/10" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-primary-500 rounded-md px-4 py-0.5 leading-[1] text-white" style="width: 69%">
+                          <small>69%</small>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="px-4 py-3 flex items-center">
+                      <div class="flex flex-col shrink-0 mr-4">
+                          <span class="shrink-0 text-sm mb-1 text-gray-400">Germany</span>
+                        <span class="shrink-0 font-semibold">$150K</span>
+                        </div>
+                        <!--:Progress:-->
+                      <div class="progress mx-2 p-1 flex-grow rounded-md bg-primary-500/10" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-primary-500 rounded-md px-4 py-0.5 leading-[1] text-white" style="width: 61%">
+                          <small>61%</small>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="px-4 py-3 flex items-center">
+                      <div class="flex flex-col shrink-0 mr-4">
+                          <span class="shrink-0 text-sm mb-1 text-gray-400">Japan</span>
+                        <span class="shrink-0 font-semibold">$125K</span>
+                        </div>
+                        <!--:Progress:-->
+                      <div class="progress mx-2 p-1 flex-grow rounded-md bg-primary-500/10" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-primary-500 rounded-md px-4 py-0.5 leading-[1] text-white" style="width: 54%">
+                          <small>54%</small>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--:Card:-->
+              <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg">
+                <div class="px-4 py-3 flex items-center justify-between">
+                  <h5 class="mb-0 text-lg font-semibold">Todo</h5>
+                  <a href="#!" class="text-primary-500 dark:text-white border-b border-dashed hover:text-current">View All</a>
+                </div>
+                <div class="flex flex-col">
+                  <!--::Begin todo list-->
+                  <div class="divide-y divide-gray-100 dark:divide-gray-800">
+                    <!--::Begin todo item-->
+                    <div class="border-t border-gray-100 dark:border-gray-800 px-4 py-3">
+                      <h6 class="mb-0">Today's Pending Tasks</h6>
+                    </div>
+                    <!--/::end todo item-->
+                    <!--::Begin todo item-->
+                    <div class="list-group-item px-4 py-3">
+                      <div class="flex items-center">
+                        <input class="form-checkbox peer !rounded-full before:!rounded-full after:!rounded-full" type="checkbox" id="checkbox-todo-0">
+                        <label class="form-checkbox-label cursor-pointer ml-2 peer-checked:line-through" for="checkbox-todo-0">Design a CRM Landing page</label>
+                      </div>
+                    </div>
+                    <!--/::end todo item-->
+                    <!--::Begin todo item-->
+                    <div class="list-group-item px-4 py-3">
+                      <div class="flex items-center">
+                        <input class="form-checkbox peer !rounded-full before:!rounded-full after:!rounded-full" type="checkbox" id="checkbox-todo-1">
+                        <label class="form-checkbox-label cursor-pointer ml-2 peer-checked:line-through" for="checkbox-todo-1">Add New Checkboxes with All Theme Colors</label>
+                      </div>
+                    </div>
+                    <!--/::end todo item-->
+                    <!--::Begin todo item-->
+                    <div class="list-group-item px-4 py-3">
+                      <div class="flex items-center">
+                        <input class="form-checkbox peer !rounded-full before:!rounded-full after:!rounded-full" type="checkbox" id="checkbox-todo-2">
+                        <label class="form-checkbox-label cursor-pointer ml-2 peer-checked:line-through" for="checkbox-todo-2">Update dashboard charts with Apexcharts</label>
+                      </div>
+                    </div>
+                    <!--/::end todo item-->
+                    
+                    <!--::Begin todo item-->
+                    <div class="list-group-item px-4 py-3">
+                      <div class="flex items-center">
+                        <input class="form-checkbox peer !rounded-full before:!rounded-full after:!rounded-full" type="checkbox" checked="" id="checkbox-todo-4">
+                        <label class="form-checkbox-label cursor-pointer ml-2 peer-checked:line-through" for="checkbox-todo-4">Add New Widgets for Future Use</label>
+                      </div>
+                    </div>
+                    <!--/::end todo item-->
+
+                    <!--::Begin todo item-->
+                    <div class="list-group-item px-4 py-3">
+                      <div class="flex items-center">
+                        <input class="form-checkbox peer !rounded-full before:!rounded-full after:!rounded-full" type="checkbox" checked="" id="checkbox-todo-5">
+                        <label class="form-checkbox-label cursor-pointer ml-2 peer-checked:line-through" for="checkbox-todo-5">Add new emails compaign</label>
+                      </div>
+                    </div>
+                    <!--/::end todo item-->
+    
+                  </div>
+                  <!--/::end todo list-->
+                </div>
+              </div>
+            </div>
+      </div>
+  </main>
+  <!--:Main Script:-->
+  <script src="js/theme.bundle.js"></script>
+
+  <!--:Chart:-->
+  <script src="vendor/apexcharts.min.js"></script>
+
+  <script>
+    function getTailwindColor(className, property) {
+      const element = document.createElement('div');
+      element.classList.add(className);
+      document.body.appendChild(element);
+      const style = getComputedStyle(element);
+      const color = style.getPropertyValue(property);
+      document.body.removeChild(element);
+      return color;
+    }
+    const primaryColor = getTailwindColor('text-primary-500', 'color');
+    const warningColor = getTailwindColor('text-warning-500', 'color');
+    const successColor = getTailwindColor('text-success-500', 'color');
+    const infoColor = getTailwindColor('text-info-500', 'color');
+    const grayColor = getTailwindColor('text-gray-400', 'color');
+    const dangerColor = getTailwindColor('text-danger-500', 'color');
+    const secondaryColor = getTailwindColor('text-primary-300', 'color');
+    const tritaryColor = getTailwindColor('text-gray-400', 'color');
+    //Chart Sales overview
+    var optionsSalesOverview = {
+      colors: [primaryColor, warningColor],
+      series: [{
+        name: 'New Visitors',
+        data: [144, 155, 187, 156, 261, 247, 163
+        ],
+      },
+      {
+        name: 'Returning Visitors',
+        data: [56, 65, 83, 98, 87, 67, 63
+        ],
+      },
+      ],
+
+      chart: {
+        type: 'bar',
+        height: 350,
+        fontFamily: 'Inherit',
+        toolbar: {
+          show: false
+        },
+        zoom: {
+          enabled: false
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        width: 0,
+        curve: 'smooth',
+      },
+      grid: {
+        strokeDashArray: 2,
+        padding: {
+          top: 0,
+          bottom: 0,
+          right: 20
+        },
+        xaxis: {
+          lines: {
+            show: true,
+          },
+        },
+        yaxis: {
+          lines: {
+            show: false,
+          },
+        },
+      },
+      labels: ["Mon", "Tue", "Wed", "Thr", "Fri", "Sat", "Sun"],
+
+      yaxis: {
+        labels: {
+          show: true
+        },
+      },
+      xaxis: {
+
+        tickAmount: 6,
+        labels: {
+          show: true,
+          rotate: 0
+        },
+        tooltip: {
+          enabled: false
+        },
+        axisTicks: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
+      },
+
+      tooltip: {
+        shared: true,
+        intersect: false,
+        y: {
+          formatter: function (val) {
+            return val ;
+          },
+        },
+      },
+      plotOptions: {
+        bar: {
+          borderRadius: 1,
+          borderRadiusApplication: 'around',
+          borderRadiusWhenStacked: 'last',
+          columnWidth: '40%',
+        }
+      }
+    };
+
+    var chartOverview = new ApexCharts(
+      document.querySelector('#chart_overview'),
+      optionsSalesOverview
+    );
+    chartOverview.render();
+
+     //Sparkline1
+     var optionsSpark1 = {
+      colors: [primaryColor],
+      series: [{
+        name: "New Contacts",
+        data: [50, 41, 29, 41, 69, 52, 69]
+      }],
+      chart: {
+        height: 90,
+        type: 'bar',
+        fontFamily: 'inherit',
+        sparkline: {
+          enabled: true,
+        },
+        zoom: {
+          enabled: false
+        }
+      },
+      stroke: {
+        curve: 'smooth',
+        width: 0
+      },
+      grid: {
+        padding: {
+          top: 10,
+          bottom: 10,
+          left: 10,
+          right: 10,
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      xaxis: {
+        categories: ['Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat', 'Sun'],
+      },
+      tooltip: {
+        enabled: true
+      }
+    };
+
+    var chartSpark1 = new ApexCharts(document.querySelector("#chartSparkline1"), optionsSpark1);
+    chartSpark1.render();
+
+    var optionsChartCampaigns = {
+      colors:[primaryColor,warningColor,successColor],
+          series: [44, 55, 67],
+          chart: {
+          height: 280,
+          type: 'radialBar',
+          fontFamily:'inherit',
+        },
+        plotOptions: {
+          radialBar: {
+            dataLabels: {
+              name: {
+                offsetY: -10,color: grayColor,
+              },
+              value: {
+          fontSize: "14px",
+          offsetY:-2,
+          show: true,fontWeight:'700',
+        },
+        stroke: {
+    lineCap: "round",
+  },
+              total: {
+                show: true,
+                label: 'Total Campaigns',
+                fontSize:'12px',
+                formatter: function (w) {
+                 return 249
+                }
+              }
+            },
+          },
+        },
+        labels: ['Sent', 'Reached', 'Opened'],
+        };
+
+        var chartCampaigns = new ApexCharts(document.querySelector("#chartCampaigns"), optionsChartCampaigns);
+        chartCampaigns.render();
+        //Chart Ads click
+        var optionsAdsClick = {
+          colors:[primaryColor,successColor],
+          series: [{
+          name: 'Views',
+          data: [3831, 2740, 2628, 3651, 2342, 3109, 6740]
+        }, {
+          name: 'Clicks',
+          data: [181, 132, 445, 32, 234, 352, 441]
+        }],
+          chart: {
+          height: 350,
+          type: 'line',
+          fontFamily:'inherit',
+          zoom:{
+            enabled:false
+          },
+          toolbar:{
+            show:false
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: 'straight',
+          width:2
+        },
+        labels: ["Mon", "Tue", "Wed", "Thr", "Fri", "Sat", "Sun"],
+        yaxis: {
+          labels: {
+            show: true,
+            offsetX: 6
+          },
+        },
+        xaxis: {
+
+          tickAmount: 6,
+          labels: {
+            show: true,
+            rotate: 0
+          },
+          tooltip: {
+            enabled: false
+          },
+          axisTicks: {
+            show: false,
+          },
+          axisBorder: {
+            show: false,
+          },
+        },
+        };
+
+        var chartAds = new ApexCharts(document.querySelector("#chart_ads_click"), optionsAdsClick);
+        chartAds.render();
+  </script>
+
+  <!--:Dashboard data date-range:-->
+  <!--:Flatpickr:-->
+  <script src="vendor/flatpickr.min.js"></script>
+  <script>
+    // Calculate default dates
+    const today = new Date();
+    const lastWeek = new Date();
+    lastWeek.setDate(today.getDate() - 7);
+    //range
+    flatpickr(".js-data-range", {
+      mode: "range",
+      dateFormat: "d M y",
+      defaultDate: [lastWeek, today],
+    });
+  </script>
+</body>
+
+</html>

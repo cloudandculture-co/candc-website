@@ -1,0 +1,17 @@
+.swiper-pagination{
+    .swiper-pagination-bullet{
+        width:6px;
+        height:6px;
+        background-color: tint-color($primary,80%);
+        &.swiper-pagination-bullet-active{
+            background-color:tint-color($primary,10%);
+        }
+    }
+}
+.swiper-prev,.swiper-next{
+transition: all .25s;
+}
+.swiper-button-disabled{
+opacity: .25;
+pointer-events: none;
+}

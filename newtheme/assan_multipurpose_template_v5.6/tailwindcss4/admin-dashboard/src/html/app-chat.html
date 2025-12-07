@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+
+    <!--:Flatpickr:-->
+    <link rel="stylesheet" href="vendor/css/flatpickr.min.css">
+
+    @@include('./partials/head-includes.html')
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+      @@include('./partials/app-preloader.html')
+
+
+    @@include('./partials/sidebar.html',{"page": "chat"} )
+
+    <main class="h-full overflow-hidden relative flex flex-col lg:ms-64">
+        @@include('./partials/header-default.html')
+        <!--:Apps Layout:-->
+        <div class="content relative overflow-hidden flex-1 flex-grow px-4 lg:px-6 xl:px-12 flex flex-col">
+            <div
+                class="h-full absolute inset-0 flex flex-col lg:flex-row bg-white dark:bg-gray-900">
+                <!--:Sidebar:-->
+                <div id="sidebarChat"
+                    class="absolute offcanvas-lg -translate-x-full lg:-translate-x-0 [&.show]:translate-x-0 transition-all duration-200 lg:!flex left-0 top- h-full overflow-y-auto w-64 bg-white dark:bg-gray-900 z-[70] border-r-2 border-gray-100 dark:border-black">
+                    <div class="flex w-full flex-col h-hull">
+                        <div class="shrink-0 w-full py-3 px-4">
+                            <div class="relative">
+                                <span class="absolute right-0 top-1/2 -translate-y-1/2 mr-2 pointer-events-none">
+                                   <span class="icon-[tabler--search]"></span>
+                                </span>
+                                <input id="search_contacts" type="text" placeholder="Search contacts" class="py-3 px-4 pr-9 bg-transparent
+                                border-0 focus:outline-0 block w-full">
+                            </div>
+                        </div>
+                        <div class="flex-grow px-2 overflow-y-auto">
+                            <!--:Chat users list:-->
+                            <ol class="flex flex-col space-y-1">
+
+                                <!--:Chat list item:-->
+                                <li>
+                                    <!--:user:-->
+                                    <a href="#!"
+                                        class="flex unread items-center rounded-md px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 [&.active]:bg-gray-100 dark:[&.active]:bg-gray-700 active">
+                                        <span
+                                            class="shrink-0 mr-3 relative block after:content-[''] after:w-3 after:h-3 after:rounded-full after:bg-success-500
+                                        after:block after:absolute after:bottom-0 after:right-0 after:border-2 after:border-white dark:after:border-gray-900">
+                                            <img src="img/avatars/w1.jpg" class="w-10 h-10 rounded-full" alt="">
+                                        </span>
+                                        <div class="flex-grow overflow-hidden">
+                                            <div class="mb-1 overflow-hidden flex items-center">
+                                                <h6 class="font-semibold leading-[1] truncate pr-3 flex-grow">Natasha
+                                                    Vlahovic</h6>
+                                                <!--:Last chat time:-->
+                                                <small class="opacity-50 text-sm shrink-0">9:30 AM</small>
+                                            </div>
+                                            <!--:Last chat message:-->
+                                            <p class="leading-tight text-sm line-clamp-2">No problem, take your time, I
+                                                will
+                                                contact you later</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!--:Chat list item:-->
+                                <li>
+                                    <!--:user:-->
+                                    <a href="#!"
+                                        class="flex unread items-center rounded-md px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 [&.active]:bg-gray-100 dark:[&.active]:bg-gray-700">
+                                        <span
+                                            class="shrink-0 mr-3 relative block after:content-[''] after:w-3 after:h-3 after:rounded-full after:bg-success-500
+                                        after:block after:absolute after:bottom-0 after:right-0 after:border-2 after:border-white dark:after:border-gray-900">
+                                            <img src="img/avatars/m2.jpg" class="w-10 h-10 rounded-full" alt="">
+                                        </span>
+                                        <div class="flex-grow overflow-hidden">
+                                            <div class="mb-1 overflow-hidden flex items-center">
+                                                <h6 class="font-semibold leading-[1] truncate pr-3 flex-grow">Will Smith
+                                                </h6>
+                                                <!--:Last chat time:-->
+                                                <small class="opacity-50 shrink-0">Yesterday</small>
+                                            </div>
+                                            <!--:Last chat message:-->
+                                            <p class="leading-tight text-sm line-clamp-2">Hi John, Sent you file, pelase
+                                                check</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!--:Chat list item:-->
+                                <li>
+                                    <!--:user:-->
+                                    <a href="#!"
+                                        class="flex items-center rounded-md px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 [&.active]:bg-gray-100 dark:[&.active]:bg-gray-700">
+                                        <span
+                                            class="shrink-0 mr-3 relative block after:content-[''] after:w-3 after:h-3 after:rounded-full after:bg-warning-500
+                                        after:block after:absolute after:bottom-0 after:right-0 after:border-2 after:border-white dark:after:border-gray-900">
+                                            <img src="img/avatars/w2.jpg" class="w-10 h-10 rounded-full" alt="">
+                                        </span>
+                                        <div class="flex-grow overflow-hidden">
+                                            <div class="mb-1 overflow-hidden flex items-center">
+                                                <h6
+                                                    class="font-semibold text-inherit leading-[1] truncate pr-3 flex-grow">
+                                                    Sharmila Taigor</h6>
+                                                <!--:Last chat time:-->
+                                                <small class="opacity-50 shrink-0">2d</small>
+                                            </div>
+                                            <!--:Last chat message:-->
+                                            <p class="leading-tight text-sm line-clamp-2">Okay! Well done, I will
+                                                contact you later</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!--:Chat list item:-->
+                                <li>
+                                    <!--:user:-->
+                                    <a href="#!"
+                                        class="flex items-center rounded-md px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 [&.active]:bg-gray-100 dark:[&.active]:bg-gray-700">
+                                        <span
+                                            class="shrink-0 mr-3 relative block after:content-[''] after:w-3 after:h-3 after:rounded-full after:bg-gray-400
+                                        after:block after:absolute after:bottom-0 after:right-0 after:border-2 after:border-white dark:after:border-gray-900">
+                                            <img src="img/avatars/m3.jpg" class="w-10 h-10 rounded-full" alt="">
+                                        </span>
+                                        <div class="flex-grow overflow-hidden">
+                                            <div class="mb-1 overflow-hidden flex items-center">
+                                                <h6
+                                                    class="font-semibold text-inherit leading-[1] truncate pr-3 flex-grow">
+                                                    Adam Milne</h6>
+                                                <!--:Last chat time:-->
+                                                <small class="opacity-50 shrink-0">3d</small>
+                                            </div>
+                                            <!--:Last chat message:-->
+                                            <p class="leading-tight text-sm line-clamp-2">Okay! Well done, I will
+                                                contact you later</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!--:Chat list item:-->
+                                <li>
+                                    <!--:user:-->
+                                    <a href="#!"
+                                        class="flex items-center rounded-md px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 [&.active]:bg-gray-100 dark:[&.active]:bg-gray-700">
+                                        <span
+                                            class="shrink-0 mr-3 relative block after:content-[''] after:w-3 after:h-3 after:rounded-full after:bg-gray-400
+                                        after:block after:absolute after:bottom-0 after:right-0 after:border-2 after:border-white dark:after:border-gray-900">
+                                            <img src="img/avatars/w3.jpg" class="w-10 h-10 rounded-full" alt="">
+                                        </span>
+                                        <div class="flex-grow overflow-hidden">
+                                            <div class="mb-1 overflow-hidden flex items-center">
+                                                <h6
+                                                    class="font-semibold text-inherit leading-[1] truncate pr-3 flex-grow">
+                                                    Maria</h6>
+                                                <!--:Last chat time:-->
+                                                <small class="opacity-50 shrink-0">1w</small>
+                                            </div>
+                                            <!--:Last chat message:-->
+                                            <p class="leading-tight text-sm line-clamp-2">Lorem ipsum is placeholder
+                                                text commonly used in the graphic, print</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!--:Secondary layout content:-->
+                <div class="flex flex-col w-full h-full lg:pl-64">
+                    <!--:Header:-->
+                    <div class="shrink-0 px-4 py-3 border-b border-gray-100 dark:border-black flex items-center">
+                        <!--:Chat top nav:-->
+                        <div class="flex items-center">
+                            <!--:Current users:-->
+                            <div class="flex items-center">
+                                <img src="img/avatars/w1.jpg" class="w-10 h-10 rounded-full shrink-0 mr-3" alt="">
+                                <div class="flex-grow">
+                                    <h6 class="font-semibold leading-[1]">Natasha Vlahovic</h6>
+                                    <small class="text-success-500">Online</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!--:Contact actions dropdown:-->
+                        <div class="ml-auto shrink-0 flex items-center">
+                            <div class="relative leading-[1]">
+                                <button data-bs-toggle="dropdown" class=" 
+                                w-8 h-8 flex items-center justify-center
+                                hover:bg-primary-500 hover:text-white rounded-full
+                                transition-all">
+                                   <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+                                </button>
+                                <!--:Attachments dropdown:-->
+                                <div class="dropdown-menu min-w-40 py-2 hidden [&.show]:block">
+                                   <!--:Dropdown item:-->
+                                   <a href="#!"
+                                   class="dropdown-item">
+                                   <span class="icon-[tabler--trash] text-lg"></span>
+                                   <span class="block leading-[1] flex-grow">Clear Chat</span>
+                               </a>
+                               <!--:Dropdown item:-->
+                               <a href="#!"
+                                   class="dropdown-item">
+                                  <span class="icon-[tabler--ban] text-lg"></span>
+                                   <span class="block leading-[1] flex-grow">Block</span>
+                               </a>
+                               <!--:Dropdown item:-->
+                               <a href="#!"
+                                   class="dropdown-item">
+                                   <span class="icon-[tabler--alarm-snooze] text-lg"></span>
+                                   <span class="block leading-[1] flex-grow">Snooze</span>
+                               </a>
+                                </div>
+                            </div>
+                            <!--Chat Sidebar Toggle Button--><button data-bs-target="#sidebarChat" data-bs-toggle="offcanvas"
+                                class="ml-4 lg:hidden w-8 h-8 flex items-center justify-center hover:bg-primary-500 hover:text-white rounded-full">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 3V21M21 12H7M7 12L14 19M7 12L14 5" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!--:Chat:-->
+                    <div class="flex-grow flex flex-col-reverse overflow-y-auto py-4 px-4">
+                        <div>
+                            <!--:Date:-->
+                            <div class="flex items-center mb-5">
+                                <span class="border-t border-gray-200 dark:border-gray-800 flex-grow"></span>
+                                <span class="px-4 text-sm text-gray-400">Today</span>
+                                <span class="border-t border-gray-200 dark:border-gray-800 flex-grow"></span>
+                            </div>
+                            <!--:Chat Message Box [Contact]:-->
+                            <div class="flex items-center mb-8">
+                                <img src="img/avatars/w1.jpg" class="w-8 h-8 mt-auto rounded-full shrink-0 mr-2" alt="">
+                                <div class="flex-grow flex flex-col space-y-1">
+                                    <!--:Time:-->
+                                    <small class="block text-sm text-gray-300 dark:text-gray-600 mb-1">14:10</small>
+                                    <!--:Single Message Box:-->
+                                    <div class="flex items-center group space-y-1">
+                                        <p
+                                            class="inline-block max-w-[75%] shrink-0 bg-gray-100 dark:bg-gray-700 rounded-md px-3 py-2">
+                                            Hi John
+                                        </p>
+                                        <!--:Message options:-->
+                                        <div
+                                            class="shrink-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible text-lg space-x-2 pl-3 flex items-center">
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="React">
+                                                <span class="icon-[tabler--mood-smile]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Reply">
+                                                <span class="icon-[tabler--message-reply]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Forward">
+                                                <span class="icon-[tabler--arrow-forward-up]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Title">
+                                                <span class="icon-[tabler--trash]"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!--:Single Message Box:-->
+                                    <div class="flex items-center group space-y-1">
+                                        <p
+                                            class="inline-block text-wrap max-w-[75%] shrink-0 bg-gray-100 dark:bg-gray-700 rounded-md px-3 py-2">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                        <!--:Message options:-->
+                                        <div
+                                            class="shrink-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible text-lg space-x-2 pl-3 flex items-center">
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="React">
+                                                <span class="icon-[tabler--mood-smile]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Reply">
+                                                <span class="icon-[tabler--message-reply]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Forward">
+                                                <span class="icon-[tabler--arrow-forward-up]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Title">
+                                                <span class="icon-[tabler--trash]"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                             <!--:Chat Message Box [Self]:-->
+                             <div class="flex justify-end items-center mb-8">
+                                <div class="flex-grow flex flex-col items-end space-y-1">
+                                    <!--:Time:-->
+                                    <small class="block text-sm text-gray-300 dark:text-gray-600 mb-1">14:30</small>
+                                    <!--:Single Message Box:-->
+                                    <div class="flex items-center group justify-end">
+
+                                        <!--:Message options:-->
+                                        <div
+                                            class="shrink-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible text-lg space-x-2 pr-3 flex items-center justify-end leading-[1]">
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="React">
+                                                <span class="icon-[tabler--mood-smile]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Reply">
+                                                <span class="icon-[tabler--message-reply]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Forward">
+                                                <span class="icon-[tabler--arrow-forward-up]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Title">
+                                                <span class="icon-[tabler--trash]"></span>
+                                            </button>
+                                        </div>
+                                        <p
+                                            class="inline-flex max-w-[60%] shrink-0 bg-primary-500 text-primary-100 rounded-md px-3 py-2 relative">
+                                            <span class="block pr-5">
+                                              Hi there
+                                            </span>
+                                            <i class="icon-[tabler--checks] absolute end-2 bottom-2 text-white"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--:Chat Message Box [Contact]:-->
+                            <div class="flex items-center mb-8">
+                                <img src="img/avatars/w1.jpg" class="w-8 h-8 mt-auto rounded-full shrink-0 mr-2" alt="">
+                                <div class="flex-grow flex flex-col space-y-1">
+                                    <small class="block text-sm text-gray-300 dark:text-gray-600 mb-1">14:30</small>
+
+                                    <!--:Single Message Box:-->
+                                    <div class="flex items-center group space-y-1">
+                                        <p
+                                            class="inline-block max-w-[75%] shrink-0 bg-gray-100 dark:bg-gray-700 rounded-md px-3 py-2">
+                                            Am Good, Thank you 😊
+                                        </p>
+                                        <!--:Message options:-->
+                                        <div
+                                            class="shrink-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible text-lg space-x-2 pl-3 flex items-center">
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="React">
+                                                <span class="icon-[tabler--mood-smile]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Reply">
+                                                <span class="icon-[tabler--message-reply]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Forward">
+                                                <span class="icon-[tabler--arrow-forward-up]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Title">
+                                                <span class="icon-[tabler--trash]"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                             <!--:Chat Message Box [Self]:-->
+                             <div class="flex justify-end items-center mb-8">
+                                <div class="flex-grow flex flex-col items-end space-y-1">
+                                    <!--:Time:-->
+                                    <small class="block text-sm text-gray-300 dark:text-gray-600 mb-1">15:10</small>
+                                    <!--:Single Message Box:-->
+                                    <div class="flex items-center group justify-end">
+
+                                        <!--:Message options:-->
+                                        <div
+                                            class="shrink-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible text-lg space-x-2 pr-3 flex items-center justify-end leading-[1]">
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="React">
+                                                <span class="icon-[tabler--mood-smile]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Reply">
+                                                <span class="icon-[tabler--message-reply]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Forward">
+                                                <span class="icon-[tabler--arrow-forward-up]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Title">
+                                                <span class="icon-[tabler--trash]"></span>
+                                            </button>
+                                        </div>
+                                        <p
+                                            class="inline-flex max-w-[60%] shrink-0 bg-primary-500 text-primary-100 rounded-md px-3 py-2 relative">
+                                            <span class="block pr-5">
+                                                Was the work you were given completed?
+                                            </span>
+                                            <i class="icon-[tabler--checks] absolute end-2 bottom-2 text-white"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--:Chat Message Box [Contact]:-->
+                            <div class="flex items-center mb-8">
+                                <img src="img/avatars/w1.jpg" class="w-8 h-8 mt-auto rounded-full shrink-0 mr-2" alt="">
+                                <div class="flex-grow flex flex-col space-y-1">
+                                    <!--:Time:-->
+                                    <small class="block text-sm text-gray-300 dark:text-gray-600 mb-1">15:22</small>
+                                    <!--:Single Message Box:-->
+                                    <div class="flex items-center group space-y-1">
+                                        <p
+                                            class="inline-block max-w-[75%] shrink-0 bg-gray-100 dark:bg-gray-700 rounded-md px-3 py-2">
+                                            Please check the UI of Ecommerce dashboard
+                                        </p>
+                                        <!--:Message options:-->
+                                        <div
+                                            class="shrink-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible text-lg space-x-2 pl-3 flex items-center">
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="React">
+                                                <span class="icon-[tabler--mood-smile]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Reply">
+                                                <span class="icon-[tabler--message-reply]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Forward">
+                                                <span class="icon-[tabler--arrow-forward-up]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Title">
+                                                <span class="icon-[tabler--trash]"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!--:Single Message Box:-->
+                                    <div class="flex items-center group space-y-1">
+                                        <!--:Document:-->
+                                        <div
+                                            class="inline-block max-w-[75%] shrink-0 bg-gray-100 dark:bg-gray-700 rounded-md px-3 py-2">
+                                            <div class="flex items-center">
+                                                <img src="img/icons/files/pdf.svg" class="w-8 mr-3 shrink-0" alt="">
+                                                <div class="flex-grow overflow-hidden">
+                                                    <p class="mb-1 lh-sm text-truncate">Ecommerce Dashboard UI</p>
+                                                    <div class="flex items-center justify-between">
+                                                        <small class="text-gray-400 text-sm">4KB</small>
+                                                        <a href="#!" class="hover:text-black dark:hover:text-white">
+                                                            <span class="icon-[tabler--download]"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--:Message options:-->
+                                        <div
+                                            class="shrink-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible text-lg space-x-2 pl-3 flex items-center">
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="React">
+                                                <span class="icon-[tabler--mood-smile]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Reply">
+                                                <span class="icon-[tabler--message-reply]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Forward">
+                                                <span class="icon-[tabler--arrow-forward-up]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Title">
+                                                <span class="icon-[tabler--trash]"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--:Chat Message Box [Self]:-->
+                            <div class="flex justify-end items-center mb-8">
+                                <div class="flex-grow flex flex-col items-end space-y-1">
+                                    <!--:Time:-->
+                                    <small class="block text-sm text-gray-300 dark:text-gray-600 mb-1">15:10</small>
+                                    <!--:Single Message Box:-->
+                                    <div class="flex items-center group justify-end">
+
+                                        <!--:Message options:-->
+                                        <div
+                                            class="shrink-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible text-lg space-x-2 pr-3 flex items-center justify-end leading-[1]">
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="React">
+                                                <span class="icon-[tabler--mood-smile]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Reply">
+                                                <span class="icon-[tabler--message-reply]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Forward">
+                                                <span class="icon-[tabler--arrow-forward-up]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Title">
+                                                <span class="icon-[tabler--trash]"></span>
+                                            </button>
+                                        </div>
+                                        <p
+                                            class="inline-flex max-w-[60%] shrink-0 bg-primary-500 text-primary-100 rounded-md px-3 py-2 relative">
+                                            <span class="block pr-5">
+                                                I am currently out of the office for some work, I will take a look as
+                                                soon as I get back and let you know
+                                            </span>
+                                            <i class="icon-[tabler--checks] absolute end-2 bottom-2 text-white"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--:Chat Message Box [Contact]:-->
+                            <div class="flex items-center mb-8">
+                                <img src="img/avatars/w1.jpg" class="w-8 h-8 mt-auto rounded-full shrink-0 mr-2" alt="">
+                                <div class="flex-grow flex flex-col space-y-1">
+                                     <!--:Time:-->
+                                     <small class="block text-sm text-gray-300 dark:text-gray-600 mb-1">15:32</small>
+                                    <!--:Single Message Box:-->
+                                    <div class="flex items-center group space-y-1">
+                                        <p class="inline-block max-w-[75%] shrink-0 bg-gray-100 dark:bg-gray-700 rounded-md px-3 py-2">
+                                            No problem, take your time, I will
+                                            contact you later
+                                        </p>
+                                        <!--:Message options:-->
+                                        <div
+                                            class="shrink-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible text-lg space-x-2 pl-3 flex items-center">
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="React">
+                                                <span class="icon-[tabler--mood-smile]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Reply">
+                                                <span class="icon-[tabler--message-reply]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Forward">
+                                                <span class="icon-[tabler--arrow-forward-up]"></span>
+                                            </button>
+                                            <button
+                                                class="transition-all text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                                                type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Title">
+                                                <span class="icon-[tabler--trash]"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--:Chat type message and options:-->
+                    <div class="shrink-0 p-2">
+                        <form>
+                            <div class="flex bg-gray-50 rounded-md dark:bg-gray-800 px-4 items-center">
+                                <div class="shrink-0 flex items-center">
+                                    <div class="relative leading-[1]">
+                                        <button data-bs-toggle="dropdown" class="text-gray-400 
+                                        hover:text-black
+                                        w-6 h-6 flex items-center justify-center
+                                        dark:hover:text-white 
+                                        transition-all">
+                                            <span class="icon-[tabler--library-photo] text-lg"></span>
+                                        </button>
+                                        <!--:Attachments dropdown:-->
+                                        <div class="dropdown-menu min-w-36 py-2 absolute mb-2 hidden [&.show]:block">
+                                            <!--:Dropdown item:-->
+                                            <a href="#!"
+                                            class="dropdown-item">
+                                             <span class="icon-[tabler--library-photo] text-lg"></span>
+                                            <span class="block leading-[1] flex-grow">Photos</span>
+                                        </a>
+                                        <!--:Dropdown item:-->
+                                        <a href="#!"
+                                            class="dropdown-item">
+                                            <span class="icon-[tabler--file]"></span>
+                                            <span class="block leading-[1] flex-grow">Documents</span>
+                                        </a>
+                                        <!--:Dropdown item:-->
+                                        <a href="#!"
+                                            class="dropdown-item">
+                                            <span class="icon-[tabler--map-pin]"></span>
+                                            <span class="block leading-[1] flex-grow">Location</span>
+                                        </a>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="ml-1
+                                    text-gray-400 hover:text-black dark:hover:text-white transition-all
+                                    w-6 h-6 flex items-center justify-center">
+                                       <span class="icon-[tabler--mood-smile]"></span>
+                                    </button>
+                                </div>
+                                <input type="text" class="w-full bg-transparent h-12 px-4">
+                                <button type="button"
+                                    class="text-gray-400 hover:text-black dark:hover:text-white transition-all">
+                                    <span class="icon-[tabler--send]"></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

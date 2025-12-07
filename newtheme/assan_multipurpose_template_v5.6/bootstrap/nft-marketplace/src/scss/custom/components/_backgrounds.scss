@@ -1,0 +1,13 @@
+//Background-styles
+
+//Background
+.bg-img{
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:top center;
+}
+
+//Blur overlay
+.bg-blur{
+    backdrop-filter: blur(10px);
+}

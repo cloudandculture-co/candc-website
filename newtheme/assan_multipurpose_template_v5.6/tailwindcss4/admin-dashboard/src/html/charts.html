@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assan Tailwindcss Admin</title>
+
+  <!--:Flatpickr:-->
+  <link rel="stylesheet" href="vendor/css/flatpickr.min.css">
+
+  @@include('./partials/head-includes.html')
+</head>
+
+<body
+  class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+  @@include('./partials/app-preloader.html')
+
+
+  @@include('./partials/sidebar.html',{"page": "charts"} )
+
+  <main class="relative flex flex-col lg:ms-64">
+    @@include('./partials/header-default.html')
+    <!--:Page Header:-->
+    <div class="px-4 lg:px-6 xl:px-12 py-4">
+      <div class="flex flex-wrap items-center">
+        <div class="flex-grow">
+          <h4 class="text-3xl font-semibold">Charts</h4>
+        </div>
+        <div class="shrink-0">
+          <!--:Breadcrumb:-->
+          <nav aria-label="breadcrumb">
+            <ol class="flex items-center">
+              <li class="breadcrumb-item"><a href="index.html"
+                  class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+              </li>
+               <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+              <li class="breadcrumb-item active"><a
+                  class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                  href="ui-component-alerts.html">Components</a></li>
+               <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+              <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Charts</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="content relative pt-4 px-4 lg:px-6 xl:px-12">
+      <p class="mb-2">SparkLine Charts</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+        <div class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+          <div class="flex items-center flex-wrap -mx-2">
+            <div class="w-2/4 px-2">
+              <p class="mb-1">Total Sales</p>
+              <h5 class="text-2xl mb-3 font-semibold">4982</h5>
+              <span class="flex text-sm items-center text-success-500">
+                <span class="icon-[tabler--arrow-up-right] me-1"></span>
+                <span>12%</span>
+              </span>
+            </div>
+            <div class="w-2/4 px-2">
+
+              <div id="chartSparkline1"></div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+          <div class="flex flex-wrap items-center -mx-2">
+            <div class="w-2/4 px-2">
+              <p class="mb-1">Earnings</p>
+              <h5 class="text-2xl mb-3 font-semibold">$498265</h5>
+
+              <span class="flex text-sm items-center text-success-500">
+                <span class="icon-[tabler--arrow-up-right] me-1"></span>
+                <span>9%</span>
+              </span>
+            </div>
+            <div class="w-2/4 px-2">
+              <div id="chartSparkline2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+          <div class="flex flex-wrap items-center -mx-2">
+            <div class="w-2/4 px-2">
+              <p class="mb-1">Sales</p>
+              <h5 class="text-2xl mb-3 font-semibold">4567</h5>
+
+              <span class="flex text-sm items-center text-success-500">
+                <span class="icon-[tabler--arrow-up-right] me-1"></span>
+                <span>9%</span>
+              </span>
+            </div>
+            <div class="w-2/4 px-2">
+              <div id="chartSparkline3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 gap-4 mb-4">
+        <!--:Chart Col:-->
+        <div>
+          <div
+            class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+            <h5 class="text-lg font-semibold">
+              Chart Scatter
+            </h5>
+            <!--:Chart:-->
+            <div>
+              <div id="chart_scatter"></div>
+            </div>
+          </div>
+        </div>
+        <!--:Chart Col:-->
+        <div>
+          <div
+            class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+            <h5 class="text-lg font-semibold">
+              Chart Bar
+            </h5>
+            <!--:Chart:-->
+            <div id="chart_bar"></div>
+          </div>
+        </div>
+        <!--:Chart Col:-->
+        <div>
+          <div
+            class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+            <h5 class="text-lg font-semibold">
+              Chart Line
+            </h5>
+            <!--:Chart:-->
+            <div>
+              <div id="chart_line"></div>
+            </div>
+          </div>
+        </div>
+        <!--:Chart Col:-->
+        <div>
+          <div
+            class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+            <h5 class="text-lg font-semibold">
+              Chart Area
+            </h5>
+            <!--:Chart:-->
+            <div>
+              <div id="chart_area"></div>
+            </div>
+          </div>
+        </div>
+        <!--:Chart Col:-->
+        <div>
+          <div
+            class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+            <h5 class="text-lg font-semibold">
+              Chart Mixed
+            </h5>
+            <!--:Chart:-->
+            <div>
+              <div id="chart_mixed"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+
+        <!--:Chart Col:-->
+        <div>
+          <div
+            class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+            <h5 class="text-lg font-semibold">
+              Chart Radar
+            </h5>
+            <!--:Chart:-->
+            <div>
+              <div id="chart_radar"></div>
+            </div>
+          </div>
+        </div>
+        <!--:Chart Col:-->
+        <div>
+          <div
+            class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+            <h5 class="text-lg font-semibold">
+              Chart Pie
+            </h5>
+            <!--:Chart:-->
+            <div>
+              <div id="chart_pie"></div>
+            </div>
+          </div>
+        </div>
+        <!--:Chart Col:-->
+        <div>
+          <div
+            class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+            <h5 class="text-lg font-semibold">
+              Chart Radial Bar
+            </h5>
+            <!--:Chart:-->
+            <div>
+              <div id="chart_radial_bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--:Main Script:-->
+  <script src="js/theme.bundle.js"></script>
+
+  <!--:Chart:-->
+  <script src="vendor/apexcharts.min.js"></script>
+  <script>
+    function getTailwindColor(className, property) {
+      const element = document.createElement('div');
+      element.classList.add(className);
+      document.body.appendChild(element);
+      const style = getComputedStyle(element);
+      const color = style.getPropertyValue(property);
+      document.body.removeChild(element);
+      return color;
+    }
+    const primaryColor = getTailwindColor('text-primary-500', 'color');
+    const warningColor = getTailwindColor('text-warning-500', 'color');
+    const successColor = getTailwindColor('text-success-500', 'color');
+    const infoColor = getTailwindColor('text-info-500', 'color');
+    const grayColor = getTailwindColor('text-gray-400', 'color');
+    const dangerColor = getTailwindColor('text-danger-500', 'color');
+    const secondaryColor = getTailwindColor('text-primary-300', 'color');
+    const tritaryColor = getTailwindColor('text-gray-400', 'color');
+
+    //Sparkline1
+    var optionsSpark1 = {
+      colors: [primaryColor],
+      series: [{
+        name: "Sales",
+        data: [50, 41, 29, 41, 69, 52, 69]
+      }],
+      chart: {
+        height: 60,
+        type: 'line',
+        fontFamily: 'inherit',
+        sparkline: {
+          enabled: true,
+        },
+        zoom: {
+          enabled: false
+        }
+      },
+      stroke: {
+        curve: 'smooth',
+        width: 2
+      },
+      grid: {
+        padding: {
+          top: 10,
+          bottom: 10,
+          left: 10,
+          right: 10,
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      xaxis: {
+        categories: ['Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat', 'Sun'],
+      },
+      tooltip: {
+        enabled: true
+      }
+    };
+
+    var chartSpark1 = new ApexCharts(document.querySelector("#chartSparkline1"), optionsSpark1);
+    chartSpark1.render();
+
+    //Sparkline2
+    var optionsSpark2 = {
+      colors: [successColor],
+      series: [{
+        name: "Sales",
+        data: [50, 41, 29, 41, 69, 52, 69]
+      }],
+      chart: {
+        height: 60,
+        type: 'area',
+        fontFamily: 'inherit',
+        sparkline: {
+          enabled: true,
+        },
+        zoom: {
+          enabled: false
+        }
+      },
+      stroke: {
+        curve: 'smooth',
+        width: 2
+      },
+      grid: {
+        padding: {
+          top: 10,
+          bottom: 10,
+          left: 10,
+          right: 10,
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      xaxis: {
+        categories: ['Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat', 'Sun'],
+      },
+      tooltip: {
+        enabled: true
+      }
+    };
+
+    var chartSpark2 = new ApexCharts(document.querySelector("#chartSparkline2"), optionsSpark2);
+    chartSpark2.render();
+
+    //Sparkline Bar Chart
+    var optionsSparkLine3 = {
+      colors: [primaryColor],
+      series: [{
+        name: "Conversion",
+        data: [54, 62, 68, 63, 59, 32, 24]
+      }],
+      chart: {
+        fontFamily: 'inherit',
+        type: 'bar',
+        height: 80,
+        zoom: {
+          enabled: false
+        },
+        toolbar: {
+          show: false
+        },
+        sparkline: {
+          enabled: true
+        }
+      },
+      plotOptions: {
+        bar: {
+          columnWidth: '40%',
+          borderRadius: 4
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        width: 0,
+        color: 'transparent'
+      },
+      labels: ['Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat', 'Sun'],
+      xaxis: {
+        type: 'category',
+      },
+      yaxis: {
+        opposite: true
+      },
+      tooltip: {
+        shared: true,
+        intersect: false,
+        y: {
+          formatter: function (val) {
+            return val + '%';
+          },
+        },
+      },
+    };
+    //render chart
+    var chartSparkLineBar = new ApexCharts(document.querySelector("#chartSparkline3"), optionsSparkLine3);
+    chartSparkLineBar.render();
+
+
+    //Scatter chart
+    var optionsScatter = {
+      colors: [primaryColor, warningColor],
+      series: [{
+        name: 'Sent',
+        data: [30, 40, 50, 60, 24, 20, 15]
+      },
+      {
+        name: 'Received',
+        data: [7, 12, 14, 17, 10, 13, 8]
+      },
+      ],
+      chart: {
+        height: 350,
+        type: 'scatter',
+        fontFamily: 'inherit',
+        zoom: {
+          enabled: false
+        },
+        toolbar: {
+          show: false
+        }
+      },
+      tooltip: {
+        shared: true,
+        intersect: false,
+        y: {
+          formatter: function (val) {
+            return val + ' <span class="fw-normal opacity-60">Emails</span>';
+          },
+        },
+      },
+      dataLabels: {
+        enabled: false
+      },
+      fill: {
+        opacity: 1
+      },
+      stroke: {
+        width: 0
+      },
+      labels: ['Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat', 'Sun'],
+      xaxis: {
+        type: 'category',
+        axisTicks: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
+
+        crosshairs: {
+          show: true,
+          stroke: {
+            width: 1,
+            dashArray: 0,
+          },
+        },
+      },
+      yaxis: {
+        max: 70,
+        axisTicks: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
+
+        labels: {
+          offsetX: 6
+        },
+      },
+      grid: {
+        strokeDashArray: 4,
+        padding: {
+          left: 24,
+          bottom: 20,
+          right: 30
+        },
+      }
+    };
+
+    var chartScatter = new ApexCharts(document.querySelector("#chart_scatter"), optionsScatter);
+    chartScatter.render();
+
+
+    //bar chart
+    var optionsBar = {
+      series: [{
+        name: 'Revenue',
+        data: [23, 27, 18, 21, 19, 25, 23, 27, 18, 21, 19, 23]
+      },
+      {
+        name: 'Expanses',
+        data: [-10, -12, -8, -6, -9, -11, -10, -12, -8, -6, -9, -6]
+      }
+      ],
+      chart: {
+        type: 'bar',
+        height: 440,
+        stacked: true,
+        fontFamily: 'inherit',
+        toolbar: {
+          show: false
+        },
+        zoom: {
+          enabled: false
+        }
+      },
+      colors: [primaryColor, warningColor],
+      
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        width: 0,
+        colors: ['transparent']
+      },
+
+      grid: {
+        strokeDashArray: 4,
+        padding: {
+          left: 20,
+          right: 10
+        }
+      },
+      xaxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+
+        axisTicks: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
+        lines: {
+          show: false
+        }
+      },
+      yaxis: {
+        labels: {
+          offsetX: 6
+        },
+        axisTicks: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
+        lines: {
+          show: true
+        }
+      },
+      tooltip: {
+        shared: true,
+        intersect: false,
+        x: {
+          formatter: function (val) {
+            return val
+          }
+        },
+        y: {
+          formatter: function (val) {
+            return Math.abs(val) + "K"
+          }
+        }
+      },
+      xaxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+
+        axisTicks: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
+      },
+    };
+
+    var chartBar = new ApexCharts(document.querySelector("#chart_bar"), optionsBar);
+    chartBar.render();
+
+
+    //Line chart
+    var optionsLine = {
+      colors: [primaryColor, warningColor],
+      series: [{
+        name: "Visitors",
+        data: [140, 181, 205, 283, 249, 162, 249, 164, 248, 174, 219, 141]
+      }, {
+        name: "Registrations",
+        data: [54, 29, 74, 31, 73, 27, 52, 81, 41, 86, 48, 91]
+      }],
+      chart: {
+        height: 350,
+        type: 'line',
+        fontFamily: 'inherit',
+        zoom: {
+          enabled: false
+        },
+        toolbar: {
+          show: false
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        curve: 'stepline',
+        width: 3
+      },
+      grid: {
+        strokeDashArray: 4,
+        padding: {
+          left: 20,
+          right: 10,
+          bottom: 20
+        }
+      },
+      xaxis: {
+        axisTicks: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      },
+      yaxis: {
+        labels: {
+          offsetX: 6
+        },
+        axisTicks: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
+      },
+      tooltip: {
+        shared: true,
+        intersect: false,
+        y: [{
+          formatter: function (y) {
+            if (typeof y !== 'undefined') {
+              return y.toFixed(0) + 'K';
+            }
+            return y;
+          },
+        },
+        {
+          formatter: function (y) {
+            if (typeof y !== 'undefined') {
+              return y.toFixed(0) + 'K';
+            }
+            return y;
+          },
+        },
+        ],
+      },
+      markers: {
+        strokeWidth: 5,
+        strokeOpacity: 1,
+        strokeColors: ["var(--bs-body-bg)", "var(--bs-body-bg)", "var(--bs-body-bg)"],
+      },
+    };
+
+    var chartLine = new ApexCharts(document.querySelector("#chart_line"), optionsLine);
+    chartLine.render();
+
+
+    //Chart Area
+    var optionsArea = {
+      colors: [primaryColor, infoColor],
+      series: [{
+        name: 'Direct',
+        data: [144, 155, 187, 156, 261, 247, 163,
+          144, 155, 257, 156, 261, 224, 163,
+          144, 155, 257, 156, 261, 198, 163,
+          144, 155, 257, 156, 261, 274, 163, 257, 156
+        ],
+      },
+      {
+        name: 'Ads',
+        data: [76, 85, 101, 98, 87, 124, 91,
+          76, 85, 101, 98, 54, 105, 97,
+          76, 85, 101, 124, 87, 94, 91,
+          76, 85, 101, 78, 104, 135, 104, 98, 87
+        ],
+      },
+      ],
+
+      chart: {
+        type: 'area',
+        height: 350,
+        fontFamily: 'Inherit',
+        toolbar: {
+          show: false
+        },
+        zoom: {
+          enabled: false
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        width: 0,
+        curve: 'smooth',
+      },
+      grid: {
+        strokeDashArray: 2,
+        padding: {
+          left: 16,
+          top: 0,
+          bottom: 10,
+          right: 0
+        },
+        xaxis: {
+          lines: {
+            show: true,
+          },
+        },
+        yaxis: {
+          lines: {
+            show: false,
+          },
+        },
+      },
+      labels: ["Jan 1", "Jan 2", "Jan 3", "Jan 4", "Jan 5", "Jan 6", "Jan 7",
+        "Jan 8", "Jan 9", "Jan 10", "Jan 11", "Jan 12", "Jan 13", "Jan 14",
+        "Jan 15", "Jan 16", "Jan 17", "Jan 18", "Jan 19", "Jan 20", "Jan 21",
+        "Jan 22", "Jan 23", "Jan 24", "Jan 25", "Jan 26", "Jan 27", "Jan 28", "Jan 29", "Jan 30",
+      ],
+
+      yaxis: {
+        labels: {
+          show: true,
+          offsetX: 6
+        },
+      },
+      xaxis: {
+
+        tickAmount: 6,
+        labels: {
+          show: true,
+          rotate: 0
+        },
+        tooltip: {
+          enabled: false
+        },
+        axisTicks: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
+      },
+      fill: {
+        type: 'gradient',
+        gradient: {
+          type: "vertical",
+          shadeIntensity: 1,
+          opacityFrom: 1,
+          opacityTo: .05,
+          stops: [0, 100],
+           gradientToColors: [primaryColor, infoColor],
+        }
+      },
+      tooltip: {
+        shared: true,
+        intersect: false,
+        y: {
+          formatter: function (val) {
+            return val + ' <span class="opacity-60">Products sold</span>';
+          },
+        },
+      },
+      markers: {
+        strokeWidth: 2,
+      },
+    };
+    var chartArea = new ApexCharts(
+      document.querySelector('#chart_area'),
+      optionsArea
+    );
+    chartArea.render();
+
+
+    //Chart Mixed
+    var optionsMixed = {
+      colors: [dangerColor, warningColor, primaryColor],
+      series: [{
+        name: 'FrontEnd',
+        type: 'column',
+        data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30,
+          23, 11, 22, 27, 13, 44, 22, 30, 23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30
+        ]
+      }, {
+        name: 'Backend',
+        type: 'area',
+        data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43,
+          44, 55, 41, 67, 22, 56, 27, 43, 44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43
+        ]
+      }, {
+        name: 'Graphics',
+        type: 'line',
+        data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39,
+          30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 36, 30, 45, 35, 64, 52, 59, 36, 39
+        ]
+      }],
+      chart: {
+        height: 350,
+        type: 'line',
+        stacked: false,
+        fontFamily: 'inherit',
+        zoom: {
+          enabled: false
+        },
+        toolbar: {
+          show: false
+        }
+      },
+      stroke: {
+        width: [0, 0, 3],
+        curve: 'smooth'
+      },
+      plotOptions: {
+        bar: {
+          columnWidth: '60%',
+          borderRadius: 4
+        }
+      },
+
+      fill: {
+        opacity: [0.85, 0.25, 1],
+        gradient: {
+          inverseColors: false,
+          shade: 'light',
+          type: "vertical",
+          opacityFrom: 0,
+          opacityTo: .5,
+          stops: [0, 100, 100, 100]
+        }
+      },
+      labels: ["Jan 1", "Jan 2", "Jan 3", "Jan 4", "Jan 5", "Jan 6", "Jan 7",
+        "Jan 8", "Jan 9", "Jan 10", "Jan 11", "Jan 12", "Jan 13", "Jan 14",
+        "Jan 15", "Jan 16", "Jan 17", "Jan 18", "Jan 19", "Jan 20", "Jan 21",
+        "Jan 22", "Jan 23", "Jan 24", "Jan 25", "Jan 26", "Jan 27", "Jan 28", "Jan 29", "Jan 30",
+      ],
+
+      markers: {
+        strokeWidth: 2,
+        strokeOpacity: 1,
+      },
+      xaxis: {
+        type: 'category',
+        tickAmount: 6,
+        labels: {
+          show: true,
+          rotate: 0
+        },
+        tooltip: {
+          enabled: false
+        },
+        axisBorder: {
+          show: false
+        },
+        axisTicks: {
+          show: false
+        }
+      },
+      yaxis: {
+        min: 0,
+        labels: {
+          offsetX: 6
+        },
+        axisBorder: {
+          show: false
+        },
+        axisTicks: {
+          show: false
+        }
+      },
+      tooltip: {
+        shared: true,
+        intersect: false,
+        y: {
+          formatter: function (y) {
+            if (typeof y !== "undefined") {
+              return y.toFixed(0) + "h worked";
+            }
+            return y;
+          }
+        }
+      },
+      grid: {
+        strokeDashArray: 4,
+        padding: {
+          left: 24,
+          right: 24,
+          bottom: 10,
+          top: 0
+        }
+      }
+    };
+
+    var chartMixed = new ApexCharts(document.querySelector("#chart_mixed"), optionsMixed);
+    chartMixed.render();
+
+
+    //Chart radar
+    var optionsRadar = {
+      colors: [warningColor, primaryColor],
+      series: [{
+        name: 'Visitors',
+        data: [180, 150, 130, 140, 205, 140],
+      }, {
+        name: 'Unique visitors',
+        data: [78, 102, 69, 58, 132, 98],
+      }],
+      chart: {
+        height: 240,
+        type: 'radar',
+        fontFamily: 'inherit',
+        dropShadow: {
+          enabled: true,
+          blur: 12,
+          left: 0,
+          top: 4,
+          opacity: .05
+        },
+        toolbar: {
+          show: false
+        }
+      },
+      stroke: {
+        width: 0
+      },
+      fill: {
+        opacity: 1
+      },
+      markers: {
+        size: 0,
+      },
+      xaxis: {
+        strokeWidth: 0,
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
+      },
+      yaxis: {
+        show: false
+      },
+      plotOptions: {
+        radar: {
+          polygons: {
+            strokeWidth: 0,
+          }
+        }
+      }
+    };
+
+    var chartRadar = new ApexCharts(document.querySelector("#chart_radar"), optionsRadar);
+    chartRadar.render();
+
+
+    //Chart Pie
+    var optionsPie = {
+      colors: [primaryColor, infoColor, dangerColor],
+      series: [44, 55, 13],
+      chart: {
+        type: 'donut',
+        fontFamily: 'inherit',
+
+      },
+      labels: ['Facebook', 'Twitter', 'Instagram'],
+      plotOptions: {
+        pie: {
+          expandOnClick: false,
+          size: 200,
+          donut: {
+            size: '65%'
+          }
+        }
+      },
+      dataLabels: {
+        enabled: false,
+        dropShadow: {
+          enabled: false
+        }
+      },
+      legend: {
+        show: false
+      },
+      tooltip: {
+        y: {
+          formatter: function (val) {
+            return val + '<span class="fw-normal small">K Followers</span>';
+          },
+        },
+      },
+    };
+    var chartPie = new ApexCharts(document.querySelector("#chart_pie"), optionsPie);
+    chartPie.render();
+
+    //chart radial
+    var optionsRadialBar = {
+      colors: [primaryColor],
+      series: [76],
+      chart: {
+        type: 'radialBar',
+        offsetY: 0,
+        fontFamily: 'inherit',
+        height: 400,
+        sparkline: {
+          enabled: true
+        }
+      },
+      plotOptions: {
+        radialBar: {
+          startAngle: -90,
+          endAngle: 90,
+          track: {
+            opacity: .2,
+            background: primaryColor,
+            strokeWidth: '100%',
+            margin: 5, // margin is in pixels
+            dropShadow: {
+              enabled: true,
+              top: 2,
+              left: 0,
+              color: '#000',
+              opacity: .1,
+              blur: 12
+            }
+          },
+          dataLabels: {
+            name: {
+              show: true,
+              offsetY: -30,
+              fontSize: '14px',
+              fontWeight: '400',
+            },
+            value: {
+              offsetY: -20,
+              fontSize: '20px',
+              fontWeight: '700',
+              color: 'currentColor'
+            }
+          }
+        }
+      },
+      fill: {
+        opacity: 1
+      },
+      grid: {
+        padding: {
+          top: -30,
+          bottom: 50
+        }
+      },
+      labels: ['Conversion Rate'],
+    };
+
+    var chartRadialBar = new ApexCharts(document.querySelector("#chart_radial_bar"), optionsRadialBar);
+    chartRadialBar.render();
+
+  </script>
+</body>
+
+</html>

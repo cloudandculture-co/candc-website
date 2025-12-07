@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assan Tailwindcss Admin</title>
+
+  <!--:Flatpickr:-->
+  <link rel="stylesheet" href="vendor/css/flatpickr.min.css">
+
+  @@include('./partials/head-includes.html')
+</head>
+
+<body
+  class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+  @@include('./partials/app-preloader.html')
+
+
+  @@include('./partials/sidebar.html',{"page": "dashboards","dashboard_collapse":
+  "show","dashboard_analytics": "active"})
+
+  <main class="relative flex flex-col lg:ms-64">
+    @@include('./partials/header-default.html')
+    <!--:Page Header:-->
+    <div class="px-4 lg:px-6 xl:px-12 py-4 lg:py-6">
+      <div class="flex flex-col md:items-center md:flex-row gap-4">
+        <div class="flex-grow">
+          <h4 class="text-2xl font-semibold">Welcome Back! John 🤗</h4>
+        </div>
+
+        <div class="shrink-0 hidden md:block">
+          <!--:Add button:-->
+          <a href="#!" class="btn btn-info !inline-flex items-center justify-center">
+            <span class="icon-[tabler--wand] text-lg me-1"></span>
+            Add Widget</a>
+        </div>
+         <!--:Calendar:-->
+        <div class="shrink-0 relative inline-flex items-center shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-md">
+          <span class="shrink-0 opacity-50 pointer-events-none
+          absolute start-0 top-0 w-8 h-full flex items-center justify-center">
+        <span class="icon-[tabler--calendar-week]"></span>
+        </span>
+          <input type="text"
+            class="js-data-range ps-8 w-46 text-sm py-2">
+        </div>
+      </div>
+    </div>
+    <div class="content px-4 lg:px-6 xl:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+        <!--:Card stats:-->
+        <div
+          class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg p-4 text-center">
+          <!--:Icon:-->
+          <div class="w-10 h-10 mb-4 flex mx-auto relative">
+            <div class="w-6 h-6 rounded-lg rotate-[25] bg-primary-500/20 absolute bottom-0 left-0"></div>
+            <div class="w-8 h-8 ml-auto flex items-center justify-center rounded-lg bg-primary-500 text-white">
+              <span class="icon-[tabler--users] text-xl"></span>
+            </div>
+          </div>
+          <!--:Title:-->
+          <h5 class="mb-2 text-2xl font-semibold">8.7M</h5>
+          <!--:Subtitle:-->
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Total Visitors</p>
+          <span class="flex text-sm justify-center items-center">
+            <span class="flex items-center text-success-500">
+              <span class="icon-[tabler--arrow-up-right] me-1"></span>
+              169%
+            </span>
+            <span class="ps-1 text-gray-400">vs last period</span>
+          </span>
+        </div>
+        <!--:Card stats:-->
+        <div
+          class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg p-4 text-center">
+          <!--:Icon:-->
+          <div class="w-10 h-10 mb-4 flex mx-auto relative">
+            <div class="w-6 h-6 rounded-lg rotate-[25] bg-primary-500/20 absolute bottom-0 left-0"></div>
+            <div class="w-8 h-8 ml-auto flex items-center justify-center rounded-lg bg-primary-500 text-white">
+              <span class="icon-[tabler--basket-dollar] text-xl"></span>
+            </div>
+          </div>
+          <!--:Title:-->
+          <h5 class="mb-2 text-2xl font-semibold">$591.029k</h5>
+          <!--:Subtitle:-->
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Total Earnings</p>
+          <span class="flex text-sm justify-center items-center">
+            <span class="flex items-center text-success-500">
+              <span class="icon-[tabler--arrow-up-right] me-1"></span>
+              169%
+            </span>
+            <span class="ps-1 text-gray-400">vs last period</span>
+          </span>
+        </div>
+        <!--:Card stats:-->
+        <div
+          class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg p-4 text-center">
+          <!--:Icon:-->
+          <div class="w-10 h-10 mb-4 flex mx-auto relative">
+            <div class="w-6 h-6 rounded-lg rotate-[25] bg-primary-500/20 absolute bottom-0 left-0"></div>
+            <div class="w-8 h-8 ml-auto flex items-center justify-center rounded-lg bg-primary-500 text-white">
+              <span class="icon-[tabler--users] text-xl"></span>
+            </div>
+          </div>
+          <!--:Title:-->
+          <h5 class="mb-2 text-2xl font-semibold">4.5k</h5>
+          <!--:Subtitle:-->
+          <p class="text-gray-600 dark:text-gray-300 mb-4">New Users</p>
+          <span class="flex text-sm justify-center items-center">
+            <span class="flex items-center text-danger-500">
+              <span class="icon-[tabler--arrow-down-right] me-1"></span>
+              2%
+            </span>
+            <span class="ps-1 text-gray-400">vs last period</span>
+          </span>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 gap-4 mb-4">
+        <div class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg">
+          <div class="flex px-4 pt-4 items-center justify-between">
+            <h5 class="text-lg font-semibold flex-grow">Visitors</h5>
+            <!--:Action Dropdown:-->
+            <div class="relative">
+              <button
+                class="hover:bg-primary-500 hover:text-white rounded-full w-8 h-8 inline-flex items-center justify-center"
+                data-bs-toggle="dropdown">
+                <span class="icon-[carbon--overflow-menu-vertical] text-lg"></span>
+              </button>
+              <div class="dropdown-menu min-w-32 py-2 hidden [&.show]:block">
+                <a href="#!" class="dropdown-item">
+                  View report
+                </a>
+                <a href="#!" class="dropdown-item">
+                  Download report
+                </a>
+                <a href="#!" class="dropdown-item">
+                  Email report
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="overflow-hidden">
+            <!--:Sales overview chart:-->
+            <div id="chart_overview"></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div
+          class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg overflow-hidden">
+          <div class="flex px-4 py-3 justify-between items-center">
+            <h5 class="flex-grow pr-3 truncate text-lg font-semibold">Most visited pages</h5>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="border-collapse w-full text-nowrap">
+              <thead class="text-sm text-left bg-gray-50 dark:bg-black text-gray-400 dark:text-gray-500">
+                <tr>
+                  <th class="py-3 px-4 font-semibold">Page</th>
+                  <th class="py-3 px-4 font-semibold">Visitors</th>
+                  <th class="py-3 px-4 font-semibold">Unique visitors</th>
+                  <th class="py-3 px-4 font-semibold text-end">Bounce rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="px-4 py-3">/app/widgets.html</td>
+                  <td class="px-4 py-3">13842</td>
+                  <td class="px-4 py-3">2514</td>
+                  <td class="px-4 py-3 flex items-center justify-end">23%
+                    <span class="icon-[tabler--arrow-up-right] ms-1 text-success-500"></span>
+                  </td>
+                </tr>
+                <tr class="bg-body">
+                  <td class="px-4 py-3">/app/analytics.html</td>
+                  <td class="px-4 py-3">9514</td>
+                  <td class="px-4 py-3">1912</td>
+                  <td class="px-4 py-3 flex items-center justify-end">13%
+                    <span class="icon-[tabler--arrow-up-right] ms-1 text-success-500"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3">/app/index.html</td>
+                  <td class="px-4 py-3">8412</td>
+                  <td class="px-4 py-3">1245</td>
+                  <td class="px-4 py-3 flex items-center justify-end">4%
+                    <span class="icon-[tabler--arrow-down-right] ms-1 text-danger-500"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3">/app/e-commerce.html</td>
+                  <td class="px-4 py-3">6239</td>
+                  <td class="px-4 py-3">458</td>
+                  <td class="px-4 py-3 flex items-center justify-end">8%
+                    <span class="icon-[tabler--arrow-up-right] ms-1 text-success-500"></span>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div
+          class="shadow-card border border-gray-200 dark:border-gray-900 bg-white dark:bg-gray-900 rounded-lg overflow-hidden">
+          <div class="py-3 px-4">
+            <h5 class="mb-0 text-lg font-semibold">Social media traffic</h5>
+          </div>
+          <table class="mb-0 w-full border-collapse">
+            <thead class="text-sm text-uppercase bg-gray-50 dark:bg-black text-left text-gray-400 dark:text-gray-500">
+              <tr>
+                <th class="py-3 px-4 font-semibold">Network</th>
+                <th class="py-3 px-4 font-semibold">Visitors</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-4 py-3">Instagram</td>
+                <td class="px-4 py-3">
+                  <div class="flex items-center justify-between">654,078
+                    <div class="h-1 flex-grow ml-4 bg-pink-500/20 rounded-full overflow-hidden">
+                      <div class="progress-bar rounded-pill bg-pink-500 h-1" style="width:70%" aria-valuemax="100"
+                        aria-valuemin="0" aria-valuenow="70" role="progressbar"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3">Facebook</td>
+                <td class="px-4 py-3">
+                  <div class="flex items-center justify-between">214,587
+                    <div class="h-1 flex-grow ml-4 bg-blue-500/20 rounded-full overflow-hidden">
+                      <div class="progress-bar rounded-pill bg-blue-500 h-1" style="width:53%" aria-valuemax="100"
+                        aria-valuemin="0" aria-valuenow="13" role="progressbar"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3">Twitter</td>
+                <td class="px-4 py-3">
+                  <div class="flex items-center justify-between">123,478
+                    <div class="h-1 flex-grow ml-4 bg-primary-500/20 rounded-full overflow-hidden">
+                      <div class="progress-bar rounded-pill bg-primary-500 h-1" style="width:47%" aria-valuemax="100"
+                        aria-valuemin="0" aria-valuenow="37" role="progressbar"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3">LinkedIn</td>
+                <td class="px-4 py-3">
+                  <div class="flex items-center justify-between">012,878
+                    <div class="h-1 flex-grow ml-4 bg-info-500/20 rounded-full overflow-hidden">
+                      <div class="bg-info-500 h-1" style="width:27%" aria-valuemax="100" aria-valuemin="0"
+                        aria-valuenow="57" role="progressbar"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--:Main Script:-->
+  <script src="js/theme.bundle.js"></script>
+
+  <!--:Chart:-->
+  <script src="vendor/apexcharts.min.js"></script>
+  <script>
+    function getTailwindColor(className, property) {
+      const element = document.createElement('div');
+      element.classList.add(className);
+      document.body.appendChild(element);
+      const style = getComputedStyle(element);
+      const color = style.getPropertyValue(property);
+      document.body.removeChild(element);
+      return color;
+    }
+    const primaryColor = getTailwindColor('text-primary-500', 'color');
+    const warningColor = getTailwindColor('text-warning-500', 'color');
+    const successColor = getTailwindColor('text-success-500', 'color');
+    const infoColor = getTailwindColor('text-info-500', 'color');
+    const grayColor = getTailwindColor('text-gray-200', 'color');
+    const dangerColor = getTailwindColor('text-danger-500', 'color');
+    const secondaryColor = getTailwindColor('text-primary-300', 'color');
+    const tritaryColor = getTailwindColor('text-gray-400', 'color');
+    //Chart Sales overview
+
+    //Chart Mixed
+    var optionsChartOverview = {
+      colors: [primaryColor, warningColor],
+      series: [{
+        name: 'Direct',
+        type: 'column',
+        data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30,
+          23, 11, 22, 27, 13, 44, 22, 30, 23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30
+        ]
+      }, {
+        name: 'Ads',
+        type: 'line',
+        data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39,
+          30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 36, 30, 45, 35, 64, 52, 59, 36, 39
+        ]
+      }],
+      chart: {
+        height: 350,
+        type: 'line',
+        stacked: false,
+        fontFamily: 'inherit',
+        zoom: {
+          enabled: false
+        },
+        toolbar: {
+          show: false
+        }
+      },
+      stroke: {
+        width: [0, 3],
+        curve: 'smooth'
+      },
+      plotOptions: {
+        bar: {
+          columnWidth: '60%',
+          borderRadius: 4
+        }
+      },
+
+      fill: {
+        opacity: [0.85, 0.25, 1],
+        gradient: {
+          inverseColors: false,
+          shade: 'light',
+          type: "vertical",
+          opacityFrom: 0,
+          opacityTo: .5,
+          stops: [0, 100, 100, 100]
+        }
+      },
+      labels: ["Jan 1", "Jan 2", "Jan 3", "Jan 4", "Jan 5", "Jan 6", "Jan 7",
+        "Jan 8", "Jan 9", "Jan 10", "Jan 11", "Jan 12", "Jan 13", "Jan 14",
+        "Jan 15", "Jan 16", "Jan 17", "Jan 18", "Jan 19", "Jan 20", "Jan 21",
+        "Jan 22", "Jan 23", "Jan 24", "Jan 25", "Jan 26", "Jan 27", "Jan 28", "Jan 29", "Jan 30",
+      ],
+
+      markers: {
+        strokeWidth: 2,
+        strokeOpacity: 1,
+      },
+      xaxis: {
+        type: 'category',
+        tickAmount: 6,
+        labels: {
+          show: true,
+          rotate: 0
+        },
+        tooltip: {
+          enabled: false
+        },
+        axisBorder: {
+          show: false
+        },
+        axisTicks: {
+          show: false
+        }
+      },
+      yaxis: {
+        min: 0,
+        labels: {
+          offsetX: 6
+        },
+        axisBorder: {
+          show: false
+        },
+        axisTicks: {
+          show: false
+        }
+      },
+      tooltip: {
+        shared: true,
+        intersect: false,
+        y: {
+          formatter: function (y) {
+            if (typeof y !== "undefined") {
+              return y.toFixed(0) + " visitors";
+            }
+            return y;
+          }
+        }
+      },
+      grid: {
+        strokeDashArray: 4,
+        padding: {
+          left: 24,
+          right: 24,
+          bottom: 10,
+          top: 0
+        }
+      }
+    };
+
+    var chartOverview = new ApexCharts(document.querySelector("#chart_overview"), optionsChartOverview);
+    chartOverview.render();
+  </script>
+
+
+
+  <!--:Dashboard data date-range:-->
+  <!--:Flatpickr:-->
+  <script src="vendor/flatpickr.min.js"></script>
+  <script>
+    // Calculate default dates
+    const today = new Date();
+    const lastWeek = new Date();
+    lastWeek.setDate(today.getDate() - 7);
+    //range
+    flatpickr(".js-data-range", {
+      mode: "range",
+      dateFormat: "d M y",
+      defaultDate: [lastWeek, today],
+    });
+  </script>
+</body>
+
+</html>

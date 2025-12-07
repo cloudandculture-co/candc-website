@@ -1,0 +1,313 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+      @@include('./partials/head-includes.html')
+     <title>Assan - TailwindCss Template</title>
+</head>
+
+<body class="text-gray-600 dark:text-gray-300 leading-relaxed text-base text-gray-900 dark:text-white dark:bg-black">
+    @@include('./partials/preloader.html')
+
+    <!--begin:Header-->
+ <header class="header-transparent sticky-fixed">
+
+   <!--begin:navbar-->
+   <nav class="navbar navbar-expand-lg fixed top-0 left-0 w-full z-[999] navbar-light navbar-link-white">
+     <!--Navbar-fixed-background-->
+     <div class="navbar-fixed-bg absolute"></div>
+     <div class="container relative flex flex-wrap items-center justify-center relative">
+       <!--begin:logo-->
+       <a class="navbar-brand relative w-24 block" href="index.html">
+         <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
+         <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+       </a>
+       <!--end:logo-->
+
+       <!--begin:navbar-no-collapse-items-->
+       <div class="flex items-center shrink-0 ml-auto lg:order-last">
+         <!--Navbar toggler button-->
+         <button class="navbar-toggler order-last lg:hidden ml-3" type="button" data-bs-toggle="collapse"
+           data-bs-target="#mainNavbarTheme" aria-controls="mainNavbarTheme" aria-expanded="false"
+           aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon">
+             <i></i>
+           </span>
+         </button>
+         <!--Button-->
+         <div class="nav-item lg:ml-3 mr-4 lg:mr-0">
+           <a href="#"
+             class="btn bg-orange-500 text-white hover:bg-orange-600">Purchase</a>
+         </div>
+       </div>
+       <!--end:navbar-no-collapse-items-->
+
+       <!--begin:navbar-collapse-->
+       <div
+         class="collapse navbar-collapse w-full lg:w-auto lg:visible lg:ml-auto flex flex-wrap  lg:justify-end items-center !visible lg:!flex lg:basis-auto basis-full pt-4 lg:pt-0 lg:!bg-transparent"
+         id="mainNavbarTheme">
+         @@include('./partials/headers/default-navbar-items.html',{"page": "components"})
+       </div>
+       <!--end:navbar-collapse-->
+     </div>
+
+   </nav>
+   <!--end:navbar-->
+ </header>
+ <!--end:header-->
+
+ 
+<main class="main-content" id="main-content">
+    <section class="relative bg-gradient-to-tr from-indigo-500 to-gray-900 text-white">
+        <div class="container relative pb-12 lg:pb-24 pt-32 lg:pt-48">
+            <div class="flex flex-wrap -mx-3 items-center">
+                <div class="w-full mx-auto px-3 lg:w-8/12  relative z-[1]">
+                   <h1 class="text-3xl lg:text-6xl text-center font-medium mb-7">Tabbed Content</h1>
+                <!--:Breadcrumbs:-->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb flex items-center justify-center">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li><i class="bi bi-chevron-right mx-3 text-sm opacity-50"></i></li>
+                      <li class="breadcrumb-item"><a href="#">Components</a></li>
+                      <li><i class="bi bi-chevron-right mx-3 text-sm opacity-50"></i></li>
+                      <li class="breadcrumb-item active [&.active]:opacity-50" aria-current="page">Tabbed Content</li>
+                    </ol>
+                  </nav>   
+                </div>
+                </div>
+            </div>
+            <!--/.row-->
+
+    </section>
+
+    <section class="relative">
+        <div class="container py-16 lg:py-24">
+            <div>
+                <!--Tabs nav-->
+                <div class="text-center lg:w-6/12 mx-auto">
+                  <nav class="nav flex justify-center relative rounded-full mb-7 lg:mb-9 text-xl" role="tablist">
+                    <a href="#feature_tab_1" class="nav-link py-3 px-4 rounded-full shrink-0 active" data-bs-toggle="tab" aria-expanded="true" aria-selected="true" role="tab">
+                      <h6 class="mb-0">Manage</h6>
+                    </a>
+                    <a href="#feature_tab_2" class="nav-link py-3 px-4 rounded-full shrink-0" data-bs-toggle="tab" aria-expanded="false" aria-selected="false" role="tab" tabindex="-1">
+                      <h6 class="mb-0">Integrations</h6>
+                    </a>
+                    <a href="#feature_tab_3" class="nav-link py-3 px-4 rounded-full shrink-0" data-bs-toggle="tab" aria-expanded="false" aria-selected="false" role="tab" tabindex="-1">
+                      <h6 class="mb-0">Support</h6>
+                    </a>
+                     </nav>
+                </div>
+      
+                <!--Tabs content-->
+                <div class="tab-content">
+      
+                  <!--Tab Pane(item)-->
+                  <div class="tab-pane fade active show" id="feature_tab_1" role="tabpanel">
+                    <div class="flex flex-wrap -mx-3 items-center justify-between">
+                        <div class="w-full px-3 lg:w-6/12 mb-9 lg:mb-0">
+                          <div class="relative rounded-xl">
+                            <img class="max-w-full rounded-xl shadow-xl" src="assets/img/960x640/1.jpg" alt="content">
+                          </div>
+                        </div>
+                        <div class="w-full px-3 lg:w-6/12 mr-auto lg:pl-16">
+                          <!--Subtitle-->
+                          <p class="mb-3 font-medium text-indigo-500">Management</p>
+                          <!--Title-->
+                          <h2 class="mb-4 text-4xl lg:text-5xl font-medium">
+                            Manage your business at one place
+                          </h2>
+                          <p class="mb-5 text-lg text-gray-600 dark:text-gray-300">
+                            Ut enim ad minim veniam, quis nostrud ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure dolor in reprehenderit.
+                          </p>
+                          <div class="relative">
+                            <!--Action button-->
+                            <a href="#" class="link-underline capitalize font-medium">
+                              <span>
+                                Get started
+                                <i class="bi bi-arrow-right fs-5 align-middle ms-1"></i></span></a>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+      
+                  <!--Tab Pane(item)-->
+                  <div class="tab-pane fade" id="feature_tab_2" role="tabpanel">
+                    <div class="flex flex-wrap -mx-3 items-center justify-between">
+                        <div class="w-full px-3 lg:w-6/12 mb-9 lg:mb-0 lg:order-last">
+                          <div class="relative rounded-xl">
+                            <img class="max-w-full rounded-xl shadow-xl" src="assets/img/960x640/2.jpg" alt="content">
+                          </div>
+                        </div>
+                        <div class="w-full px-3 lg:w-6/12 mr-auto lg:order-1 lg:pr-16">
+                          <!--Subtitle-->
+                          <p class="mb-3 font-medium text-indigo-500">Integrations</p>
+                          <!--Title-->
+                          <h2 class="mb-4 text-4xl lg:text-5xl font-medium">
+                            Integrations at a glance
+                          </h2>
+                          <p class="mb-5 text-lg text-gray-600 dark:text-gray-300">
+                            Ut enim ad minim veniam, quis nostrud ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure dolor in reprehenderit.
+                          </p>
+                          <div class="relative">
+                            <!--Action button-->
+                            <a href="#" class="link-underline capitalize font-medium">
+                              <span>
+                                Get started
+                                <i class="bi bi-arrow-right fs-5 align-middle ms-1"></i></span></a>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+      
+                  <!--Tab Pane(item)-->
+                  <div class="tab-pane fade" id="feature_tab_3" role="tabpanel">
+                    <div class="flex flex-wrap -mx-3 items-center justify-between">
+                      <div class="w-full px-3 lg:w-6/12 mb-9 lg:mb-0">
+                        <div class="relative rounded-xl">
+                          <img class="max-w-full rounded-xl shadow-xl" src="assets/img/960x640/3.jpg" alt="content">
+                        </div>
+                      </div>
+                      <div class="w-full px-3 lg:w-6/12 mr-auto lg:pl-16">
+                        <!--Subtitle-->
+                        <p class="mb-3 font-medium text-indigo-500">Support</p>
+                        <!--Title-->
+                        <h2 class="mb-4 text-4xl lg:text-5xl font-medium">
+                          24/7 Support
+                        </h2>
+                        <p class="mb-5 text-lg text-gray-600 dark:text-gray-300">
+                          Ut enim ad minim veniam, quis nostrud ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                          irure dolor in reprehenderit.
+                        </p>
+                        <div class="relative">
+                          <!--Action button-->
+                          <a href="#" class="link-underline capitalize font-medium">
+                            <span>
+                              Get started
+                              <i class="bi bi-arrow-right fs-5 align-middle ms-1"></i></span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+
+    <section class="relative overflow-hidden">
+        <!--Container-->
+        <div class="container py-12 lg:py-16 relative z-[1]">
+          <div class="flex flex-wrap -mx-3 justify-between items-center">
+            <div class="w-full lg:w-5/12 px-3 mr-auto mb-7 lg:mb-0">
+  
+              <!--subheading-->
+              <p class="mb-4 font-medium text-gray-400 capitalize">
+                Process
+              </p>
+              <!--Heading-->
+              <h2 class="mb-7 text-4xl lg:text-5xl font-medium">
+                How it work?
+              </h2>
+              <!--Nav-tabs-->
+              <ul class="flex space-y-3 flex-col relative mb-5 mb-lg-0" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link py-3 px-4 rounded-xl bg-gray-50 dark:bg-gray-900 block active" data-bs-toggle="tab" href="#step1" aria-selected="false" role="tab" tabindex="-1">
+                    <div class="flex items-center">
+                      <div class="text-2xl shrink-0 mr-4">
+                        <i class="bi bi-person"></i>
+                      </div>
+                      <div class="flex-grow">
+                        <div class="text-lg font-medium">
+                          01. Create account
+                        </div>
+                        <p class="mb-0 opacity-75">Lorem ipsum dolor sit amet sed</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link py-3 px-4 rounded-xl bg-gray-50 dark:bg-gray-900 block" data-bs-toggle="tab" href="#step2" aria-selected="false" role="tab" tabindex="-1">
+                    <div class="flex items-center">
+                      <div class="text-2xl shrink-0 mr-4">
+                        <i class="bi bi-currency-dollar"></i>
+                      </div>
+                      <div class="flex-grow">
+                        <div class="text-lg font-medium">
+                          02. Choose a plan
+                        </div>
+                        <p class="mb-0 opacity-75">Lorem ipsum dolor sit amet</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link py-3 px-4 rounded-xl bg-gray-50 dark:bg-gray-900 block" data-bs-toggle="tab" href="#step3" aria-selected="true" role="tab">
+                    <div class="flex items-center">
+                      <div class="text-2xl shrink-0 mr-4">
+                        <i class="bi bi-check-circle"></i>
+                      </div>
+                      <div class="flex-grow">
+                        <div class="text-lg font-medium">
+                          03. Start managing
+                        </div>
+                        <p class="mb-0 opacity-75">Ipsum dolor sit amet sed do</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                </ul>
+            </div>
+            <div class="w-full lg:w-6/12 px-3">
+              <!--Tabs content-->
+              <div class="tab-content relative">
+                <div class="tab-pane fade active show" id="step1" role="tabpanel">
+                  <img src="assets/img/960x1140/1.jpg" alt="" class="max-w-full rounded-xl">
+                </div>
+                <div class="tab-pane fade" id="step2" role="tabpanel">
+                  <img src="assets/img/960x1140/2.jpg" alt="" class="max-w-full rounded-xl">
+                </div>
+                <div class="tab-pane fade" id="step3" role="tabpanel">
+                  <img src="assets/img/960x1140/3.jpg" alt="" class="max-w-full rounded-xl">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</main>
+
+   
+    <!--Footer Start-->
+    @@include('./partials/footers/footer-1.html')
+
+    <!-- begin:Back to Top button -->
+    <a href="#"
+        class="toTop fixed rounded-full bg-indigo-500 text-white mr-4 mb-4 w-12 h-12 flex opacity-0 invisible [&.show]:visible [&.show]:opacity-100 items-center justify-center z-50 right-0 bottom-0">
+        <svg class="progress-circle absolute w-14 h-14 text-white" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4"
+                stroke-dasharray="0, 251.2">
+            </circle>
+        </svg>
+        <i class="bi bi-chevron-up"></i>
+    </a>
+     <!-- end:Back to Top button -->
+      <!--:Gsap plugins - required before theme js for animations:-->
+  <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
+  <script src="assets/vendor/node_modules/js/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/node_modules/js/SplitText.min.js"></script>
+  <script src="assets/vendor/node_modules/js/TextPlugin.min.js"></script>
+  <!-- Theme script -->
+  <script src="assets/js/theme.bundle.min.js"></script>
+</body>
+
+</html>

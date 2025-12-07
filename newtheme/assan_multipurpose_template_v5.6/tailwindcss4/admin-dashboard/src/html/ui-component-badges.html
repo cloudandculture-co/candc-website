@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+
+    @@include('./partials/head-includes.html')
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+      @@include('./partials/app-preloader.html')
+
+
+    @@include('./partials/sidebar.html',{"page": "ui-components","components_collapse":
+    "show","component_badges_active": "active"})
+
+    <main class="relative flex flex-col lg:ms-64">
+        @@include('./partials/header-default.html')
+        <!--:Page Header:-->
+        <div class="px-4 lg:px-6 xl:px-12 py-4">
+            <div class="flex flex-wrap items-center">
+                <div class="flex-grow">
+                    <h4 class="text-2xl font-semibold">Badges</h4>
+                </div>
+                <div class="shrink-0">
+                    <!--:Breadcrumb:-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="flex items-center">
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                            </li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active"><a
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                    href="ui-component-alerts.html">Components</a></li>
+                            <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Badges</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content relative px-4 lg:px-6 xl:px-12">
+            <div class="grid grid-cols-1 gap-4 mb-4">
+                <div>
+                    <!--:Card:-->
+                    <div class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+                        <h5 class="text-lg font-semibold mb-4">Badge Examples</h5>
+                       <div class="flex flex-wrap gap-2 items-center">
+                        <!--:Badge:-->
+                        <span class="border rounded-full text-sm inline-block px-3 py-1 leading-[1] border-primary-500/30 bg-primary-500/10 text-primary-700 dark:text-primary-400 font-semibold">Primary</span>
+                         <!--:Badge:-->
+                         <span class="border rounded-full text-sm inline-block px-3 py-1 leading-[1] border-success-500/30 bg-success-500/10 text-success-700 dark:text-success-400 font-semibold">Success</span>
+                         <!--:Badge:-->
+                         <span class="border rounded-full text-sm inline-block px-3 py-1 leading-[1] border-warning-500/30 bg-warning-500/10 text-warning-700 dark:text-warning-400 font-semibold">Warning</span>
+                         <!--:Badge:-->
+                         <span class="border rounded-full text-sm inline-block px-3 py-1 leading-[1] border-danger-500/30 bg-danger-500/10 text-danger-700 dark:text-danger-400 font-semibold">Danger</span>
+                         <!--:Badge:-->
+                         <span class="border rounded-full text-sm inline-block px-3 py-1 leading-[1] border-info-500/30 bg-info-500/10 text-info-700 dark:text-info-400 font-semibold">Info</span>
+                         <!--:Badge:-->
+                         <span class="border rounded-full text-sm inline-block px-3 py-1 leading-[1] border-gray-500/30 bg-gray-500/10 text-gray-700 dark:text-gray-300 font-semibold">Nuetral</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+                        <h5 class="text-lg font-semibold mb-4">Badge Fill</h5>
+                       <div class="flex flex-wrap gap-2 items-center">
+                        <!--:Badge:-->
+                        <span class="rounded-full text-sm inline-block px-3 py-1 leading-[1] bg-primary-500 text-white font-semibold">Primary</span>
+                         <!--:Badge:-->
+                         <span class="rounded-full text-sm inline-block px-3 py-1 leading-[1] bg-success-500 text-white font-semibold">Success</span>
+                         <!--:Badge:-->
+                         <span class="rounded-full text-sm inline-block px-3 py-1 leading-[1]  bg-warning-500 text-white font-semibold">Warning</span>
+                         <!--:Badge:-->
+                         <span class="rounded-full text-sm inline-block px-3 py-1 leading-[1] bg-danger-500 text-white font-semibold">Danger</span>
+                         <!--:Badge:-->
+                         <span class="rounded-full text-sm inline-block px-3 py-1 leading-[1] bg-info-500 text-white font-semibold">Info</span>
+                         <!--:Badge:-->
+                         <span class="rounded-full text-sm inline-block px-3 py-1 leading-[1] bg-gray-500 text-white font-semibold">Nuetral</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+                        <h5 class="text-lg font-semibold mb-4">Badge Button</h5>
+                       <div class="flex flex-wrap gap-2 items-center">
+                       <button type="button" class="btn btn-primary items-center !py-2">
+                        Button Badge  <!--:Badge:-->
+                        <span class="ml-2 rounded-full text-sm inline-flex items-center justify-center w-6 h-6 bg-white/20 text-white font-semibold">6</span>
+                       </button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+                        <h5 class="text-lg font-semibold mb-4">Badge Position</h5>
+                       <div class="flex flex-wrap gap-2 items-center">
+                       <button type="button" class="btn btn-primary items-center relative">
+                        Button Badge  <!--:Badge:-->
+                        <span class="ml-2 absolute right-0 top-0 -mt-3 -mr-3 rounded-full text-sm inline-flex items-center justify-center w-6 h-6 bg-success-500 text-white font-semibold">6</span>
+                       </button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-card border border-gray-200 dark:border-gray-900">
+                        <h5 class="text-lg font-semibold mb-4">Badge Heading</h5>
+                       <div class="flex flex-wrap gap-2 items-center">
+                       <h5 type="button" class="text-xl font-semibold">
+                       Example Headling
+                        <span class="ml-1 rounded-md text-sm inline-flex items-center justify-center w-6 h-6 bg-primary-500 text-white font-semibold">6</span>
+                       </button>
+                    </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>

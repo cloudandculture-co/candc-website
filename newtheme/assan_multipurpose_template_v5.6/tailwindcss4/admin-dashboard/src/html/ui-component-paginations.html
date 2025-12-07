@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assan Tailwindcss Admin</title>
+
+    @@include('./partials/head-includes.html')
+</head>
+
+<body class="h-full bg-gray-50 dark:bg-black text-base text-gray-700 dark:text-gray-300 font-sans font-normal leading-normal">
+      @@include('./partials/app-preloader.html')
+
+
+    @@include('./partials/sidebar.html',{"page": "ui-components","components_collapse":
+    "show","component_paginations_active": "active"})
+
+    <main class="relative flex flex-col lg:ms-64">
+        @@include('./partials/header-default.html')
+        <!--:Page Header:-->
+        <div class="px-4 lg:px-6 xl:px-12 py-4">
+            <div class="flex flex-wrap items-center">
+                <div class="flex-grow">
+                    <h4 class="text-2xl font-semibold">Paginations</h4>
+                </div>
+                <div class="shrink-0">
+                    <!--:Breadcrumb:-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="flex items-center">
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all">Home</a>
+                            </li>
+                             <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active"><a
+                                    class="text-gray-700 dark:text-gray-100 hover:text-primary-500 transition-all"
+                                    href="ui-component-alerts.html">Components</a></li>
+                            <li class="px-2 opacity-20 flex items-center">
+               <span class="icon-[tabler--chevron-right]"></span>
+              </li>
+                            <li class="breadcrumb-item active [&.active]:text-gray-400" aria-current="page">Paginations</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content relative px-4 lg:px-6 xl:px-12">
+            <div class="grid grid-cols-1 gap-4 mb-4">
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="text-lg font-semibold mb-4">Default</h5>
+                        <!--:Pagination:-->
+                        <nav class="flex items-center gap-1" aria-label="Page navigation example">
+                            <button type="button" class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white  [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">Previous</button>
+                            <button type="button" class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white  [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">1</button>
+                            <button type="button" class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white  [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">2</button>
+                            <button type="button" class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white  [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">3</button>
+                            <button type="button" class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white  [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">Next</button>
+                            </nav>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="text-lg font-semibold mb-4">Icon</h5>
+                        <!--:Pagination:-->
+                        <nav class="flex items-center gap-1" aria-label="Page navigation example">
+                            <button type="button" class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">
+                               <span class="icon-[tabler--chevrons-left]"></span>
+                            </button>
+                            <button type="button" class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">1</button>
+                            <button type="button" class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">2</button>
+                            <button type="button" class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">3</button>
+                            <button type="button" class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">
+                                <span class="icon-[tabler--chevrons-right]"></span>
+                            </button>
+                            </nav>
+                    </div>
+                </div>
+                <div>
+                    <!--:Card:-->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-900 rounded-lg shadow-card p-4">
+                        <h5 class="text-lg font-semibold mb-4">Active &amp; Disabled</h5>
+                        <!--:Pagination:-->
+                        <nav class="flex items-center gap-1" aria-label="Page navigation example">
+                            <button disabled="" type="button" class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">
+                               <span class="icon-[tabler--chevrons-left]"></span>
+                            </button>
+                            <button type="button" class="w-9 h-9 active flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">1</button>
+                            <button type="button" class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">2</button>
+                            <button type="button" class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">3</button>
+                            <button type="button" class="w-9 h-9 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 [&amp;.active]:bg-primary-500 [&amp;.active]:text-white [&amp;.active]:pointer-events-none disabled:opacity-50 disabled:pointer-events-none">
+                                <span class="icon-[tabler--chevrons-right]"></span>
+                            </button>
+                            </nav>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!--:Main Script:-->
+    <script src="js/theme.bundle.js"></script>
+</body>
+
+</html>
