@@ -36,16 +36,17 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue:    #528ff0 !default;
-$indigo:  #6354ff !default;
-$purple:  #7d42c1 !default;
+// Cloud and Culture / Pocket Museum color theme
+$blue:    #00559B !default;  // Cobalt blue - primary brand color
+$indigo:  #00559B !default;  // Changed to match primary
+$purple:  #3D73DD !default;  // Lighter blue variant
 $pink:    #d419ae !default;
-$red:     #ef5350 !default;
+$red:     #F25151 !default;  // Bright red - accent color
 $orange:  #ff6500 !default;
-$yellow:  #feaf2c !default;
+$yellow:  #F25151 !default;  // Using accent red
 $green:   #61D066 !default;
-$teal:    #49dab5 !default;
-$cyan:    #5bd6ec !default;
+$teal:    #00DAEB !default;  // Turquoise
+$cyan:    #56CFE2 !default;  // Bright blue
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map

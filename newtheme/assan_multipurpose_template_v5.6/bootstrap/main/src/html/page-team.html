@@ -5,12 +5,14 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Meet the founders behind Pocket Museum - Cloud and Culture Ltd">
+        <meta name="keywords" content="team, founders, pocket museum, cloud and culture">
         <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
         @@include('./partials/head-includes.html')
         <!-- Main CSS -->
         <link href="assets/css/theme.min.css" rel="stylesheet">
 
-        <title>Assan 4</title>
+        <title>Our Team | Pocket Museum</title>
     </head>
 
     <body>
@@ -20,8 +22,8 @@
         <nav class="navbar navbar-expand-lg navbar-light navbar-link-white">
             <div class="container position-relative">
                 <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/logo/logo.svg" alt="" class="img-fluid navbar-brand-sticky">
-                    <img src="assets/img/logo/logo-white.svg" alt="" class="img-fluid navbar-brand-transparent">
+                    <img src="assets/img/logo/logo.png" alt="Cloud & Culture" class="navbar-brand-sticky" style="height: 100px; width: auto; background: white; padding: 2.5px 8px; border-radius: 8px;">
+                    <img src="assets/img/logo/logo.png" alt="Cloud & Culture" class="navbar-brand-transparent" style="height: 100px; width: auto; background: white; padding: 2.5px 8px; border-radius: 8px;">
                 </a>
 
                 <div class="d-flex align-items-center navbar-no-collapse-items order-lg-last">
@@ -33,11 +35,26 @@
                         </span>
                     </button>
                     <div class="nav-item me-3 me-lg-0">
-                        <a href="#" class="btn btn-success btn-sm px-3">Get started</a>
+                        <a href="page-contact-us-1.html" class="btn btn-primary btn-sm px-3">Contact Us</a>
                     </div>
                 </div>
                 <div class="collapse navbar-collapse" id="mainNavbarTheme">
-                    @@include('./partials/headers/default-navbar-items.html',{"page": "pages"})
+                    <!--begin:Navbar items-->
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="page-about.html">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="page-team.html">Team</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="page-support.html">Support Us</a>
+                      </li>
+                    </ul>
+                    <!--end:Navbar items-->
                 </div>
             </div>
         </nav>
@@ -50,13 +67,13 @@
                 <div class="container position-relative z-2 pt-12 pb-12">
                     <div class="row pb-9 pb-lg-12 pt-lg-12">
                            <div class="col-12 col-xl-10">
-                               <h1 class="display-4 mb-3">Meet our challengers</h1>
-                            <p class="mb-0">With our dedicated team of highly skilled, we deliver quality on time </p>
+                               <h1 class="display-4 mb-3">Meet Our Team</h1>
+                            <p class="mb-0">The founders behind Cloud and Culture</p>
                            </div>
                         </div>
                     </div>
                     <!--/.container-->
-                
+
                 <!--divider-->
                 <svg class="position-absolute end-0 bottom-0" style="color: var(--bs-body-bg);" fill="currentColor" width="100%" height="120" preserveAspectRatio="none" viewBox="0 0 1440 150">
                     <path d="M0,139.588931 C152,152.720009 299.666667,139.401344 443,99.6329343 C658,39.9803202 681,66.1486839 905,90.6287661 C1129,115.108848 1222,59.3955578 1293,37.4478979 C1340.33333,22.8161246 1389.33333,16.1567919 1440,17.4698997 L1440,150 L0,150 L0,139.588931 Z"></path>
@@ -67,110 +84,93 @@
             </section>
             <section class="position-relative">
                 <div class="container py-9 py-lg-11">
+
+                    <!-- About Us Section -->
+                    <div class="row mb-9">
+                        <div class="col-lg-8 mx-auto text-center">
+                            <h2 class="display-6 mb-4" data-aos="fade-up">About Us</h2>
+                            <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">Cloud and Culture was founded with a clear vision: to make cultural experiences accessible to everyone, anywhere in the world.</p>
+                            <p data-aos="fade-up" data-aos-delay="150">Our flagship product, Pocket Museum, brings together technology and culture to create immersive digital experiences that connect people with art, history, and heritage. Based in London, our team combines expertise in technology, museum curation, and storytelling to create engaging cultural content for the digital age.</p>
+                        </div>
+                    </div>
+
+                    <!-- Leadership Section -->
                     <div class="row mb-7">
-                        <div class="col-lg-4 mb-7 mt-auto text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                        <div class="col-12 text-center">
+                            <h2 class="display-6 mb-2" data-aos="fade-up">Leadership</h2>
+                            <p class="lead text-body-secondary" data-aos="fade-up" data-aos-delay="100">The directors behind Cloud and Culture</p>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <!-- Dr. Xenia Gleissner -->
+                        <div class="col-lg-5 mb-7 text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
                             <div class="position-relative mb-4 overflow-hidden card-hover rounded-4">
-                                <img src="assets/img/team/1.jpg" alt="" class="img-fluid img-zoom rounded-4">
+                                <img src="assets/img/team/xenia.jpg" alt="Dr. Xenia Gleissner" class="img-fluid img-zoom rounded-4">
                             </div>
-                            
+
                             <div>
                                 <h5 class="mb-1 text-primary">
-                                    Jordy Eubanks
+                                    Dr. Xenia Gleissner
                                 </h5>
-                                <p class="d-block mb-3">Creative director</p>
-                                <p class="w-lg-75 mx-auto mb-2">
-                                    Duis aute irure dolor in velit esse cillum fugiat nulla pariatur.
+                                <p class="d-block mb-3">Co-Founder & CEO</p>
+                                <p class="w-lg-90 mx-auto mb-3">
+                                    Xenia brings over 15 years of experience in cultural heritage. With a Ph.D. in Middle Eastern Studies from the University of Exeter, she has worked as a consultant senior curator in the MENA and UK before founding Cloud and Culture.
                                 </p>
-                                <small class="text-body-secondary">London, UK</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-7 mt-auto text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
-                            <div class="position-relative mb-4 overflow-hidden card-hover rounded-4">
-                                <img src="assets/img/team/2.jpg" alt="" class="img-fluid img-zoom rounded-4">
-                            </div>
-                            <div>
-                                <h5 class="mb-1 text-primary">
-                                    Olive Mathews
-                                </h5>
-                                <p class="d-block mb-3">Visual designer</p>
-                                <p class="w-lg-75 mx-auto mb-2">
-                                    Duis aute irure dolor in velit esse cillum fugiat nulla pariatur.
-                                </p>
-                                <small class="text-body-secondary">Texas, US</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-7 mt-auto text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
-                            <div class="position-relative mb-4 overflow-hidden card-hover rounded-4">
-                                <img src="assets/img/team/3.jpg" alt="" class="img-fluid img-zoom rounded-4">
-                            </div>
-                            <div>
-                                <h5 class="mb-1 text-primary">
-                                    Aarav Lynn
-                                </h5>
-                                <p class="d-block mb-3">Developer</p>
-                                <p class="w-lg-75 mx-auto mb-2">
-                                    Duis aute irure dolor in velit esse cillum fugiat nulla pariatur.
-                                </p>
-                                <small class="text-body-secondary">Wellington, NZ</small>
-                            </div>
-                        </div>
-                        <div class="py-4"></div>
-                        <div class="col-lg-4 mb-7 text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
-                            <div class="position-relative mb-4 overflow-hidden card-hover rounded-4">
-                                <img src="assets/img/team/5.jpg" alt="" class="img-fluid img-zoom rounded-4">
-                            </div>
-                            <div>
-                                <h5 class="mb-1 text-primary">
-                                    Eva Calvert
-                                </h5>
-                                <p class="d-block mb-3">Motion designer</p>
-                                <p class="w-lg-75 mx-auto mb-2">
-                                    Duis aute irure dolor in velit esse cillum fugiat nulla pariatur.
-                                </p>
-                                <small class="text-body-secondary">Paris, FR</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-7 text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
-                            <div class="position-relative mb-4 overflow-hidden card-hover rounded-4">
-                                <img src="assets/img/team/6.jpg" alt="" class="img-fluid img-zoom rounded-4">
-                            </div>
-                            <div>
-                                <h5 class="mb-1 text-primary">
-                                    Amiya Potts
-                                </h5>
-                                <p class="d-block mb-3">Strategist / Copywriter</p>
-                                <p class="w-lg-75 mx-auto mb-2">
-                                    Duis aute irure dolor in velit esse cillum fugiat nulla pariatur.
-                                </p>
-                                <small class="text-body-secondary">California, USA</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="250" data-aos-duration="700">
-                            <div class="position-relative d-flex flex-column h-100">
-                               <div class="position-relative rounded-4 mb-4 w-100 bg-gradient-primary">
-                                <img src="assets/img/team/1.jpg" class="img-fluid rounded-4 opacity-0" alt="">
-                                <div class="h-100 w-100 d-flex align-items-center justify-content-center fs-1 text-white position-absolute start-0 top-0">
-                                 
-                                You
-                                </div>
-                               </div>
-                               <div class="w-100 text-center">
-                                <h4 class="mb-1">
-                                    Join our team?
-                                  </h4>
-                                  <p class="d-block">Become a member of our super team</p>
-                                  
-                                <div class="d-grid">
-                                    <a href="#!" class="btn btn-secondary">View Job Openings
-                                        <i class="bi bi-arrow-right fs-5 align-middle lh-1"></i>
+                                <div class="d-flex justify-content-center">
+                                    <a href="https://uk.linkedin.com/in/xgleissner" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill">
+                                        <i class="bi bi-linkedin me-1"></i> LinkedIn
                                     </a>
                                 </div>
+                            </div>
+                        </div>
+
+                        <!-- Dev Lakhani -->
+                        <div class="col-lg-5 mb-7 text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
+                            <div class="position-relative mb-4 overflow-hidden card-hover rounded-4">
+                                <img src="assets/img/team/dev.jpg" alt="Dev Lakhani" class="img-fluid img-zoom rounded-4">
+                            </div>
+                            <div>
+                                <h5 class="mb-1 text-primary">
+                                    Dev Lakhani
+                                </h5>
+                                <p class="d-block mb-3">Co-Founder & CEO</p>
+                                <p class="w-lg-90 mx-auto mb-3">
+                                    Dev has more than two decades of experience in the software, cloud and technology sector. He has worked with a number of bank, retail and travel companies in the past.
+                                </p>
+                                <div class="d-flex justify-content-center">
+                                    <a href="https://uk.linkedin.com/in/devlakhani" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill">
+                                        <i class="bi bi-linkedin me-1"></i> LinkedIn
+                                    </a>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Mission Section -->
+                    <div class="row mt-7">
+                        <div class="col-lg-10 mx-auto">
+                            <div class="card border-0 shadow-lg rounded-4" data-aos="fade-up" data-aos-delay="100">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <h3 class="h4 mb-4">Our Mission</h3>
+                                            <p>At Cloud and Culture, we believe that cultural experiences should be accessible to everyone, regardless of geographical location, physical ability, or economic means. We're dedicated to breaking down barriers and creating digital pathways to art, history, and cultural heritage.</p>
+                                            <p class="mb-0">Through thoughtful technology and expert curation, we aim to enrich lives, foster understanding, and preserve cultural heritage for future generations.</p>
+                                        </div>
+                                        <div class="col-md-4 text-center mt-4 mt-md-0">
+                                            <img src="assets/img/logo/logo.svg" alt="Pocket Museum Logo" class="img-fluid" style="max-width: 150px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <hr>
-                    <div class="row pt-9">
+                    </div>
+
+                    <hr class="my-9">
+
+                    <!-- Quote Section -->
+                    <div class="row pt-5">
                         <div class="col-lg-10 col-xl-9 mx-auto" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
                             <div class="position-relative">
                                 <h1 class="display-4 font-serif mb-5 text-center">
